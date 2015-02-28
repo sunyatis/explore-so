@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Campus:</strong>
+  <%= @points_transaction.school_id %>
+</p>
+
+<p>
+  <strong>Trans type:</strong>
+  <%= @points_transaction.trans_type %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @points_transaction.points %>
+</p>
+
+<p>
+  <strong>Payment:</strong>
+  <%= @points_transaction.payment %>
+</p>
+
+<p>
+  <strong>Attendee:</strong>
+  <%= @points_transaction.attendee %>
+</p>
+
+<p>
+  <strong>Event start:</strong>
+  <%= @points_transaction.event_start %>
+</p>
+
+<p>
+  <strong>Event end:</strong>
+  <%= @points_transaction.event_end %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @points_transaction.course %>
+</p>
+
+<p>
+  <strong>Approved:</strong>
+  <%= @points_transaction.approved %>
+</p>
+
+<p>
+  <strong>Points type:</strong>
+  <%= @points_transaction.points_type %>
+</p>
+
+<p>
+  <strong>Trans date:</strong>
+  <%= @points_transaction.trans_date %>
+</p>
+
+<%= link_to 'Edit', edit_points_transaction_path(@points_transaction) %> |
+<%= link_to 'Back', points_transactions_path %>

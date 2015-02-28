@@ -1,0 +1,61 @@
+<%= form_for(@points_transaction) do |f| %>
+  <% if @points_transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@points_transaction.errors.count, "error") %> prohibited this points_transaction from being saved:</h2>
+
+      <ul>
+      <% @points_transaction.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :school_id %><br>
+    <%= f.number_field :school_id %>
+  </div>
+  <div class="field">
+    <%= f.label :trans_type %><br>
+    <%= f.text_field :trans_type %>
+  </div>
+  <div class="field">
+    <%= f.label :points %><br>
+    <%= f.number_field :points %>
+  </div>
+  <div class="field">
+    <%= f.label :payment %><br>
+    <%= f.number_field :payment %>
+  </div>
+  <div class="field">
+    <%= f.label :attendee %><br>
+    <%= f.text_field :attendee %>
+  </div>
+  <div class="field">
+    <%= f.label :event_start %><br>
+    <%= f.date_select :event_start %>
+  </div>
+  <div class="field">
+    <%= f.label :event_end %><br>
+    <%= f.date_select :event_end %>
+  </div>
+  <div class="field">
+    <%= f.label :course %><br>
+    <%= f.text_field :course %>
+  </div>
+  <div class="field">
+    <%= f.label :approved %><br>
+    <%= f.text_field :approved %>
+  </div>
+  <div class="field">
+    <%= f.label :points_type %><br>
+    <%= f.text_field :points_type %>
+  </div>
+  <div class="field">
+    <%= f.label :trans_date %><br>
+    <%= f.text_field :trans_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
