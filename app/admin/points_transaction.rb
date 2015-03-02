@@ -25,6 +25,7 @@ ActiveAdmin.register PointsTransaction do
   f.input :event_end, :as => :datepicker
   f.input :course
   f.input :approved, :as => :radio, :collection => ["Approved", "Rejected", "Pending"]
+  f.input :approver_comments, :as => :text
   f.input :points_type,  :as => :select,      :collection => ["CPD", "ITEC"]
   f.input :trans_date, :as => :datepicker
   

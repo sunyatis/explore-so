@@ -13,39 +13,43 @@
 
   <div class="field">
     <%= f.label :school_id %><br>
-    <%= f.number_field :school_id %>
+    <%= @points_transaction.school_id %>
   </div>
   <div class="field">
     <%= f.label :trans_type %><br>
-    <%= f.text_field :trans_type %>
+    <%= @points_transaction.trans_type %>
   </div>
   <div class="field">
     <%= f.label :points %><br>
-    <%= f.number_field :points %>
+    <%= @points_transaction.points %>
   </div>
   <div class="field">
     <%= f.label :payment %><br>
-    <%= f.number_field :payment %>
+    <%= @points_transaction.payment %>
   </div>
   <div class="field">
     <%= f.label :attendee %><br>
-    <%= f.text_field :attendee %>
+    <%= @points_transaction.attendee %>
   </div>
   <div class="field">
     <%= f.label :event_start %><br>
-    <%= f.date_select :event_start %>
+    <%= @points_transaction.event_start %>
   </div>
   <div class="field">
     <%= f.label :event_end %><br>
-    <%= f.date_select :event_end %>
+    <%= @points_transaction.event_end %>
   </div>
   <div class="field">
     <%= f.label :course %><br>
-    <%= f.text_field :course %>
+    <%= @points_transaction.course %>
   </div>
   <div class="field">
-    <%= f.label :approved %><br>
-    <%= f.text_field :approved %>
+    <%= f.radio_button :approved, 'Approved' %>
+    <%= f.label :approved_approved, 'Approved' %><br>
+    <%= f.radio_button :approved, 'Rejected' %>
+    <%= f.label :approved_rejected, 'Rejected' %><br>
+     <%= f.radio_button :approved, 'Pending' %>
+    <%= f.label :approved_prending, 'Pending' %><br>
   </div>
   <div class="field">
     <%= f.label :points_type %><br>
@@ -53,7 +57,7 @@
   </div>
   <div class="field">
     <%= f.label :trans_date %><br>
-    <%= f.text_field :trans_date %>
+    <%= @points_transaction.trans_date %>
   </div>
   <div class="actions">
     <%= f.submit %>
