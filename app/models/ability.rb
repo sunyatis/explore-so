@@ -46,7 +46,8 @@ class Ability
          can :read, PointsTransaction, :school_id => user.school_id, :points_type => "CPD"
          can :update, PointsTransaction, :school_id => user.school_id, :points_type => "CPD"
        elsif user.role == 'ITEC Campus Contact'
-
+          can :read, PointsTransaction, :school_id => user.school_id, :points_type => "ITEC"
+          can :update, PointsTransaction, :school_id => user.school_id, :points_type => "ITEC"
        elsif user.role == 'Campus Administrator'
 
        elsif user.role == 'ITEC Administrator'
