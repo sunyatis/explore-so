@@ -21,7 +21,7 @@ ActiveAdmin.register User do
              f.input :password
              f.input :password_confirmation
              #f.input :role, as: :radio, collection: {None: "none", Administrator: "admin", ADI: "ADI"}
-             f.input :school_id, as: :select, collection: School.all.map{|s| ["#{s.name}", s.id]}
+             f.input :school_id, as: :select, :collection => School.pluck(:name, :id)
              f.input :role, as: :radio, collection: User::ROLES
 
              
