@@ -2,7 +2,7 @@ ActiveAdmin.register User do
 
   # See permitted parameters documentation:
    # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-   permit_params :email, :password, :password_confirmation, :role
+   permit_params :email, :password, :password_confirmation, :role, :school_id
 
      index do
          column :email
@@ -20,7 +20,11 @@ ActiveAdmin.register User do
              f.input :email
              f.input :password
              f.input :password_confirmation
-             f.input :role, as: :radio, collection: {None: "none", Administrator: "admin", ADI: "ADI"}
+             #f.input :role, as: :radio, collection: {None: "none", Administrator: "admin", ADI: "ADI"}
+             f.input :school_id, as: :select, collection: School.all.map{|s| ["#{s.name}", s.id]}
+             f.input :role, as: :radio, collection: User::ROLES
+
+             
          end
          f.actions
      end

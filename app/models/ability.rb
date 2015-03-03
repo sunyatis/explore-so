@@ -29,11 +29,29 @@ class Ability
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
     user ||= User.new # guest user
+    puts user.role
        if user.role == 'admin'
            can :manage, :all
-       elsif user.role == 'ADI'
-           can :read, PointsTransaction, :school_id => 1
-           can :update, PointsTransaction, :school_id => 1
+      elsif user.role == 'System Administrator'
+          can :read, ActiveAdmin::Page, :name => "Dashboard"
+          can :manage, :all
+       elsif user.role == 'Power User'
+          can :read, ActiveAdmin::Page, :name => "Dashboard"
+          can :manage, School
+          can :manage, PointsTransaction
+         
+            #can :read, PointsTransaction, :school_id => user.school_id
+            #can :update, PointsTransaction, :school_id => user.school_id
+       elsif user.role == 'CPD Campus Contact'
+
+       elsif user.role == 'ITEC Campus Contact'
+
+       elsif user.role == 'Campus Administrator'
+
+       elsif user.role == 'ITEC Administrator'
+
+       elsif user.role == 'CPD Administrator'
+           
     end
     
     
