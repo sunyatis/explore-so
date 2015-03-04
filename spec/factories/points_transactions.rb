@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :points_transaction do
-    campus_id 1
+    school_id 1
 trans_type "MyString"
 points 1
 payment 1

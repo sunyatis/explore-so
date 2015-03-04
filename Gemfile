@@ -7,9 +7,12 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'devise'
-gem 'activeadmin', github: 'activeadmin/activeadmin'
-gem 'cancancan'
+gem 'devise' #user management
+gem 'activeadmin', github: 'activeadmin/activeadmin'  #admin dashboard
+gem 'cancancan' #user permissions
+gem "active_admin_import", github: "Fivell/active_admin_import"   #file import for active admin
+#gem 'active_admin_importable'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'

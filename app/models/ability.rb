@@ -29,7 +29,7 @@ class Ability
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
     user ||= User.new # guest user
-    puts user.role
+
        if user.role == 'admin'
            can :manage, :all
       elsif user.role == 'System Administrator'
