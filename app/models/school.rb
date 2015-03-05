@@ -6,7 +6,7 @@ class School < ActiveRecord::Base
 
 
   def self.options_for_select
-    order('LOWER(id)').map { |e| [e.name, e.id] }
+    order('id').map { |e| [e.name, e.id] }
   end
   
 end
