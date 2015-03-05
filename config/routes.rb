@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  get "points_transactions/filters", :to =>"points_transactions#filters"
   resources :points_transactions
 
   resources :schools
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root to: 'visitors#index'
   #devise_for :users
+  
   
   devise_for :users, controllers: {sessions: 'devise/sessions', registrations: 'devise/registrations', passwords: 'devise/passwords'}, path_names: { sign_in: 'login', sign_out: 'logout' }
   devise_scope :user do

@@ -12,6 +12,7 @@ gem 'activeadmin', github: 'activeadmin/activeadmin'  #admin dashboard
 gem 'cancancan' #user permissions
 gem "active_admin_import", github: "Fivell/active_admin_import"   #file import for active admin
 gem 'paper_trail' #version and tracking
+gem 'filterrific' #filtering
 
 group :development, :test do
   gem 'byebug'
