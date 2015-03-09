@@ -24,7 +24,7 @@
   </div>
   <div class="span3 chardin_box">
     <label>Registered after</label>
-    <%= f.text_field(:with_created_at_gte, class: 'js-datepicker') %>
+   
   </div>
   <div class="span3 chardin_box">
     Sorted by
@@ -39,8 +39,8 @@
 
   
 <%= render(
-  partial: 'points_transactions/list',
-  locals: { points_transactions: @points_transactions }
+  partial: 'programs/list',
+  locals: { programs: @programs }
 ) %>
 </div>
 </div>

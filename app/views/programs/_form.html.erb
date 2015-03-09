@@ -1,0 +1,169 @@
+<%= form_for(@program) do |f| %>
+  <% if @program.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@program.errors.count, "error") %> prohibited this program from being saved:</h2>
+
+      <ul>
+      <% @program.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :prog_title %><br>
+    <%= f.text_field :prog_title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :subject_area %><br>
+    <%= f.text_field :subject_area %>
+  </div>
+  <div class="field">
+    <%= f.label :prog_level %><br>
+    <%= f.text_field :prog_level %>
+  </div>
+  <div class="field">
+    <%= f.label :level_abb %><br>
+    <%= f.text_field :level_abb %>
+  </div>
+  <div class="field">
+    <%= f.label :school_id %><br>
+    <%= f.text_field :school_id %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.text_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :delivery_method %><br>
+    <%= f.text_field :delivery_method %>
+  </div>
+  <div class="field">
+    <%= f.label :prerequisites %><br>
+    <%= f.text_area :prerequisites %>
+  </div>
+  <div class="field">
+    <%= f.label :program_url %><br>
+    <%= f.text_field :program_url %>
+  </div>
+  <div class="field">
+    <%= f.label :registration_url %><br>
+    <%= f.text_field :registration_url %>
+  </div>
+  <div class="field">
+    <%= f.label :open_suny %><br>
+    <%= f.text_field :open_suny %>
+  </div>
+  <div class="field">
+    <%= f.label :per_courses_online %><br>
+    <%= f.text_field :per_courses_online %>
+  </div>
+  <div class="field">
+    <%= f.label :synchronous %><br>
+    <%= f.check_box :synchronous %>
+  </div>
+  <div class="field">
+    <%= f.label :synchronous_text %><br>
+    <%= f.text_field :synchronous_text %>
+  </div>
+  <div class="field">
+    <%= f.label :tutoring %><br>
+    <%= f.check_box :tutoring %>
+  </div>
+  <div class="field">
+    <%= f.label :tutoring_name %><br>
+    <%= f.text_field :tutoring_name %>
+  </div>
+  <div class="field">
+    <%= f.label :tutoring_phone %><br>
+    <%= f.text_field :tutoring_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :tutoring_email %><br>
+    <%= f.text_field :tutoring_email %>
+  </div>
+  <div class="field">
+    <%= f.label :tutoring_url %><br>
+    <%= f.text_field :tutoring_url %>
+  </div>
+  <div class="field">
+    <%= f.label :helpdesk %><br>
+    <%= f.check_box :helpdesk %>
+  </div>
+  <div class="field">
+    <%= f.label :helpdesk_phone %><br>
+    <%= f.text_field :helpdesk_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :helpdesk_email %><br>
+    <%= f.text_field :helpdesk_email %>
+  </div>
+  <div class="field">
+    <%= f.label :helpdesk_url %><br>
+    <%= f.text_field :helpdesk_url %>
+  </div>
+  <div class="field">
+    <%= f.label :concierge %><br>
+    <%= f.check_box :concierge %>
+  </div>
+  <div class="field">
+    <%= f.label :concierge_phone %><br>
+    <%= f.text_field :concierge_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :concierge_name %><br>
+    <%= f.text_field :concierge_name %>
+  </div>
+  <div class="field">
+    <%= f.label :concierge_email %><br>
+    <%= f.text_field :concierge_email %>
+  </div>
+  <div class="field">
+    <%= f.label :experiential_learning %><br>
+    <%= f.check_box :experiential_learning %>
+  </div>
+  <div class="field">
+    <%= f.label :experiential_text %><br>
+    <%= f.text_area :experiential_text %>
+  </div>
+  <div class="field">
+    <%= f.label :plas %><br>
+    <%= f.check_box :plas %>
+  </div>
+  <div class="field">
+    <%= f.label :plas_text %><br>
+    <%= f.text_area :plas_text %>
+  </div>
+  <div class="field">
+    <%= f.label :accelerated %><br>
+    <%= f.check_box :accelerated %>
+  </div>
+  <div class="field">
+    <%= f.label :accelerated_text %><br>
+    <%= f.text_area :accelerated_text %>
+  </div>
+  <div class="field">
+    <%= f.label :summary %><br>
+    <%= f.text_area :summary %>
+  </div>
+  <div class="field">
+    <%= f.label :level_expanded %><br>
+    <%= f.text_field :level_expanded %>
+  </div>
+  <div class="field">
+    <%= f.label :sed %><br>
+    <%= f.number_field :sed %>
+  </div>
+  <div class="field">
+    <%= f.label :apply_now_url %><br>
+    <%= f.text_field :apply_now_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

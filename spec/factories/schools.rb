@@ -6,6 +6,10 @@ address2 "MyString"
 city "MyString"
 state "MyString"
 zip "MyString"
+school_url "MyString"
+registration_url "MyString"
+tuition_url "MyString"
+financial_aid_url "MyString"
   end
 
 end

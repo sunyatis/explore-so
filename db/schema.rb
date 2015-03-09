@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150304204341) do
+ActiveRecord::Schema.define(version: 20150307201109) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -46,6 +46,11 @@ ActiveRecord::Schema.define(version: 20150304204341) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
+  create_table "level_abbs", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+  end
+
   create_table "points_transactions", force: :cascade do |t|
     t.integer  "school_id"
     t.string   "trans_type"
@@ -63,6 +68,47 @@ ActiveRecord::Schema.define(version: 20150304204341) do
     t.string   "approver_comments"
   end
 
+  create_table "programs", force: :cascade do |t|
+    t.string  "prog_title"
+    t.text    "description"
+    t.integer "subjectarea_id"
+    t.string  "prog_level"
+    t.integer "levelabb_id"
+    t.integer "school_id"
+    t.string  "duration"
+    t.string  "delivery_method"
+    t.text    "prerequisites"
+    t.string  "program_url"
+    t.string  "registration_url"
+    t.string  "open_suny"
+    t.string  "per_courses_online"
+    t.boolean "synchronous"
+    t.string  "synchronous_text"
+    t.boolean "tutoring"
+    t.string  "tutoring_name"
+    t.string  "tutoring_phone"
+    t.string  "tutoring_email"
+    t.string  "tutoring_url"
+    t.boolean "helpdesk"
+    t.string  "helpdesk_phone"
+    t.string  "helpdesk_email"
+    t.string  "helpdesk_url"
+    t.boolean "concierge"
+    t.string  "concierge_phone"
+    t.string  "concierge_name"
+    t.string  "concierge_email"
+    t.boolean "experiential_learning"
+    t.text    "experiential_text"
+    t.boolean "plas"
+    t.text    "plas_text"
+    t.boolean "accelerated"
+    t.text    "accelerated_text"
+    t.text    "summary"
+    t.string  "level_expanded"
+    t.integer "sed"
+    t.string  "apply_now_url"
+  end
+
   create_table "schools", force: :cascade do |t|
     t.string   "name"
     t.string   "address1"
@@ -70,8 +116,16 @@ ActiveRecord::Schema.define(version: 20150304204341) do
     t.string   "city"
     t.string   "state"
     t.string   "zip"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "school_url"
+    t.string   "registration_url"
+    t.string   "tuition_url"
+    t.string   "financial_aid_url"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "subject_areas", force: :cascade do |t|
+    t.string "name"
   end
 
   create_table "users", force: :cascade do |t|

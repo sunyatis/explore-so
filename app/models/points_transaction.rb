@@ -13,7 +13,7 @@ class PointsTransaction < ActiveRecord::Base
   # default for will_paginate
   #self.per_page = 10
 
-  scope :search_query, lambda { |query|
+  scope :search_query, ->(query){ 
     return nil  if query.blank?
     # condition query, parse into individual keywords
     terms = query.downcase.split(/\s+/)

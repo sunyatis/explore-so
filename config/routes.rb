@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   
-  get "points_transactions/filters", :to =>"points_transactions#filters"
-  resources :points_transactions
+  resources :programs
 
   resources :schools
 
