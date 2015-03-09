@@ -1,7 +1,0 @@
-<% js = escape_javascript(
-  render(
-    :partial => 'points_transactions/list',
-    :locals => { :points_transactions => @points_transactions }
-  )
-) %>
-$("#filterrific_results").html("<%= js %>");
