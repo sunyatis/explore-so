@@ -2,6 +2,7 @@ class School < ActiveRecord::Base
 
     has_many :users
     has_many :programs
+    has_many :courses
 
 
     has_paper_trail

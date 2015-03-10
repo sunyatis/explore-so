@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :courses
+
+  resources :catalogs
+
   get "/programs/my_programs", :to => "programs#my_programs"
   resources :programs
   

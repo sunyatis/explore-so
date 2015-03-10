@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150307201109) do
+ActiveRecord::Schema.define(version: 20150310171122) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -45,6 +45,41 @@ ActiveRecord::Schema.define(version: 20150307201109) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+
+  create_table "catalogs", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.integer  "catalog_id"
+    t.string   "title"
+    t.string   "code"
+    t.text     "description"
+    t.integer  "credit"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "local_course_id"
+    t.string   "prefix"
+    t.string   "section"
+    t.text     "prerequisites"
+    t.text     "corequisites"
+    t.string   "books_url"
+    t.string   "registration_url"
+    t.boolean  "active"
+    t.string   "level"
+    t.integer  "school_id"
+    t.integer  "subjectarea_id"
+    t.string   "course_area"
+    t.string   "general_education"
+    t.string   "instructor"
+    t.string   "course_method"
+    t.integer  "seats_available"
+    t.boolean  "class_full"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
 
   create_table "level_abbs", force: :cascade do |t|
     t.string "name"

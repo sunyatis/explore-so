@@ -1,0 +1,113 @@
+<%= form_for(@course) do |f| %>
+  <% if @course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+      <% @course.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :catalog_id %><br>
+    <%= f.text_field :catalog_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :code %><br>
+    <%= f.text_field :code %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :credit %><br>
+    <%= f.text_field :credit %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br>
+    <%= f.text_field :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br>
+    <%= f.text_field :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :local_course_id %><br>
+    <%= f.text_field :local_course_id %>
+  </div>
+  <div class="field">
+    <%= f.label :prefix %><br>
+    <%= f.text_field :prefix %>
+  </div>
+  <div class="field">
+    <%= f.label :section %><br>
+    <%= f.text_field :section %>
+  </div>
+  <div class="field">
+    <%= f.label :prerequisites %><br>
+    <%= f.text_field :prerequisites %>
+  </div>
+  <div class="field">
+    <%= f.label :corequisites %><br>
+    <%= f.text_field :corequisites %>
+  </div>
+  <div class="field">
+    <%= f.label :books_url %><br>
+    <%= f.text_field :books_url %>
+  </div>
+  <div class="field">
+    <%= f.label :registration_url %><br>
+    <%= f.text_field :registration_url %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br>
+    <%= f.text_field :active %>
+  </div>
+  <div class="field">
+    <%= f.label :level %><br>
+    <%= f.text_field :level %>
+  </div>
+  <div class="field">
+    <%= f.label :school_id %><br>
+    <%= f.text_field :school_id %>
+  </div>
+  <div class="field">
+    <%= f.label :subjectarea_id %><br>
+    <%= f.text_field :subjectarea_id %>
+  </div>
+  <div class="field">
+    <%= f.label :course_area %><br>
+    <%= f.text_field :course_area %>
+  </div>
+  <div class="field">
+    <%= f.label :general_education %><br>
+    <%= f.text_field :general_education %>
+  </div>
+  <div class="field">
+    <%= f.label :instructor %><br>
+    <%= f.text_field :instructor %>
+  </div>
+  <div class="field">
+    <%= f.label :course_method %><br>
+    <%= f.text_field :course_method %>
+  </div>
+  <div class="field">
+    <%= f.label :seats_available %><br>
+    <%= f.text_field :seats_available %>
+  </div>
+  <div class="field">
+    <%= f.label :class_full %><br>
+    <%= f.check_box :class_full %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
