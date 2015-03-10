@@ -1,4 +1,4 @@
-class CatalogsController < InheritedResources::Base
+class CatalogsController < ApplicationController
 
   private
 
