@@ -38,8 +38,8 @@ class Ability
        elsif user.role == 'Campus Contact'
           can [:my_programs, :read], Program, :school_id => user.school_id
           can :update, Program, :school_id => user.school_id
-       #else
-         #can :read, Program
+       else
+         can :read, Program
           
            
     end
