@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
-  ROLES = ['System Administrator', 'Power User', 'CPD Campus Contact', 'ITEC Campus Contact', 'Campus Administrator', 'ITEC Administrator', 'CPD Administrator']
+  ROLES = ['System Administrator', 'Campus Contact']
          
          def role?(r)
            role.include? r.to_s

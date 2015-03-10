@@ -31,7 +31,9 @@ def index
 
 
 
-
+  def my_programs
+    @programs = Program.accessible_by(current_ability, :read)
+  end
 
 
 

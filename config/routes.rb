@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  
+  get "/programs/my_programs", :to => "programs#my_programs"
   resources :programs
-
+  
   resources :schools
 
   #devise_for :admin_users, ActiveAdmin::Devise.config

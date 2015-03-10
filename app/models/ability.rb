@@ -35,24 +35,12 @@ class Ability
       elsif user.role == 'System Administrator'
           can :read, ActiveAdmin::Page, :name => "Dashboard"
           can :manage, :all
-       elsif user.role == 'Power User'
-          can :read, ActiveAdmin::Page, :name => "Dashboard"
-          can :manage, School
-          can :manage, PointsTransaction
-         
-            #can :read, PointsTransaction, :school_id => user.school_id
-            #can :update, PointsTransaction, :school_id => user.school_id
-       elsif user.role == 'CPD Campus Contact'
-         can :read, PointsTransaction, :school_id => user.school_id, :points_type => "CPD"
-         can :update, PointsTransaction, :school_id => user.school_id, :points_type => "CPD"
-       elsif user.role == 'ITEC Campus Contact'
-          can :read, PointsTransaction, :school_id => user.school_id, :points_type => "ITEC"
-          can :update, PointsTransaction, :school_id => user.school_id, :points_type => "ITEC"
-       elsif user.role == 'Campus Administrator'
-
-       elsif user.role == 'ITEC Administrator'
-
-       elsif user.role == 'CPD Administrator'
+       elsif user.role == 'Campus Contact'
+          can [:my_programs, :read], Program, :school_id => user.school_id
+          can :update, Program, :school_id => user.school_id
+       #else
+         #can :read, Program
+          
            
     end
     
