@@ -37,9 +37,12 @@ class Ability
           can :manage, :all
        elsif user.role == 'Campus Contact'
           can [:my_programs, :read], Program, :school_id => user.school_id
+          can [:my_courses, :read], Course, :school_id => user.school_id
           can :update, Program, :school_id => user.school_id
+          can :update, Course, :school_id => user.school_id
        else
          can :read, Program
+         can :read, Course
           
            
     end

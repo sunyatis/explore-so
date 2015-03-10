@@ -1,0 +1,30 @@
+
+<div>
+  <!--%= page_entries_info students # provided by will_paginate %-->
+</div>
+
+
+
+<table class="table table-striped">
+    <tr>
+      <th>Title</th>
+      <th>Code</th>
+      <th>Start date</th>
+      <th>Level</th>
+      <th>School</th>
+      <th>Course method</th>
+      <th>Credit</th>
+    </tr>
+
+    <% @courses.each do |course| %>
+      <tr>
+        <td><%= course.title %></td>
+        <td><%= course.prefix %> <%= course.code %> <%= course.section %></td>
+        <td><%= course.start_date %></td>
+        <td><%= course.level %></td>
+        <td><%= course.school.name %></td>
+        <td><%= course.course_method %></td>
+        <td><%= course.credit %></td>
+      </tr>
+    <% end %>
+</table>

@@ -31,6 +31,9 @@ class CoursesController < ApplicationController
 
 
 
+    def my_programs
+      @courses = Course.accessible_by(current_ability, :read)
+    end
 
 
 
