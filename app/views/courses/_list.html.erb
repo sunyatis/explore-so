@@ -1,0 +1,91 @@
+<div id="filterrific_results">
+  <div class="well well-small">
+  <div class="pull-right" data-intro="Reset the filter settings to defaults." data-position="bottom">
+    <%= link_to('Reset filters', reset_filterrific_url) %>
+
+  </div>
+  <div class="chardin_box" data-intro="will_paginate's entries info works as expected." data-position="bottom">
+  Displaying students <b>1&nbsp;-&nbsp;10</b> of <b>134</b> in total
+  </div>
+  <div class="chardin_box" data-intro="Spinner indicates update." data-position="bottom">
+
+        <span class="filterrific_spinner" style="display:none;">
+          <%= render_filterrific_spinner %>
+        </span>
+
+  </div>
+  </div>
+
+
+
+  <div>
+    <!--%= page_entries_info students # provided by will_paginate %-->
+  </div>
+  
+  
+
+
+
+
+
+  <table>
+      <tr>
+        <th>Catalog</th>
+        <th>Title</th>
+        <th>Code</th>
+        <th>Description</th>
+        <th>Credit</th>
+        <th>Start date</th>
+        <th>End date</th>
+        <th>Local course</th>
+        <th>Prefix</th>
+        <th>Section</th>
+        <th>Prerequisites</th>
+        <th>Corequisites</th>
+        <th>Books url</th>
+        <th>Registration url</th>
+        <th>Active</th>
+        <th>Level</th>
+        <th>School</th>
+        <th>Subjectarea</th>
+        <th>Course area</th>
+        <th>General education</th>
+        <th>Instructor</th>
+        <th>Course method</th>
+        <th>Seats available</th>
+        <th>Class full</th>
+        <th colspan="3"></th>
+      </tr>
+
+      <% @courses.each do |course| %>
+        <tr>
+          <td><%= course.catalog.name %></td>
+          <td><%= course.title %></td>
+          <td><%= course.code %></td>
+          <td><%= course.description %></td>
+          <td><%= course.credit %></td>
+          <td><%= course.start_date %></td>
+          <td><%= course.end_date %></td>
+          <td><%= course.local_course_id %></td>
+          <td><%= course.prefix %></td>
+          <td><%= course.section %></td>
+          <td><%= course.prerequisites %></td>
+          <td><%= course.corequisites %></td>
+          <td><%= course.books_url %></td>
+          <td><%= course.registration_url %></td>
+          <td><%= course.active %></td>
+          <td><%= course.level %></td>
+          <td><%= course.school.name %></td>
+          <td><%= course.subject_area.name %></td>
+          <td><%= course.course_area %></td>
+          <td><%= course.general_education %></td>
+          <td><%= course.instructor %></td>
+          <td><%= course.course_method %></td>
+          <td><%= course.seats_available %></td>
+          <td><%= course.class_full %></td>
+          <td><%= link_to 'Show', course %></td>
+          <td><%= link_to 'Edit', edit_course_path(course) %></td>
+          <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+  </table>
