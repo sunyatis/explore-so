@@ -1,5 +1,4 @@
-class CoursesController < InheritedResources::Base
-
+class CoursesController < ApplicationController
 
 
   def index
