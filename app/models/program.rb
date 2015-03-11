@@ -53,6 +53,8 @@ class Program < ActiveRecord::Base
        order("programs.prog_title #{ direction }")
      when /^prog_level_/
        order("LOWER(programs.level) #{ direction }")
+     when /^school_id_/
+       order("programs.school_id #{ direction }")
      else
        raise(ArgumentError, "Invalid sort option: #{ sort_option.inspect }")
      end
@@ -81,8 +83,9 @@ class Program < ActiveRecord::Base
    
    def self.options_for_sorted_by
      [
-       ['Registration date (newest first)', 'prog_title_desc'],
-       ['Registration date (oldest first)', 'prog_title_asc'],
+       ['Program Tite (A-Z)', 'prog_title_asc'],
+       ['Program Title (Z-A)', 'prog_title_desc'],
+       ['School', 'school_id_asc'],
      ]
    end
    def self.options_for_level
