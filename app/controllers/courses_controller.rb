@@ -7,7 +7,9 @@ class CoursesController < ApplicationController
           params[:filterrific],
    select_options: {
             sorted_by: Course.options_for_sorted_by,
-           with_school_id: School.options_for_select
+           with_school_id: School.options_for_select,
+           with_catalog_id: Catalog.options_for_select,
+           with_general_education: GeneralEducation.options_for_select
          }#,
   #        persistence_id: 'shared_key',
   #              default_filter_params: {},
