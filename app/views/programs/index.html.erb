@@ -39,9 +39,22 @@
     ) %>
     <%# See below for the Country.options_for_select presenter method %>
   </div>
+    <div class="span3 chardin_box">
+      <label>Delivery Method</label>
+    <%= f.select(
+      :with_delivery,
+      @filterrific.select_options[:with_delivery],
+      { include_blank: '- Any -' }
+    ) %>
+    <%# See below for the Country.options_for_select presenter method %>
+  </div>
   <div class="span3 chardin_box">
-    <label>Registered after</label>
-   
+    <label>Open SUNY+</label>
+    <%= f.select(
+      :with_os,
+      @filterrific.select_options[:with_os],
+      { include_blank: '- Any -' }
+    ) %>
   </div>
   <div class="span3 chardin_box">
     Sorted by
@@ -51,7 +64,6 @@
   </div>
   </div>
   <%# add an automated spinner to your form when the list is refreshed %>
-  <%= render_filterrific_spinner %>
 <% end %>
 
   

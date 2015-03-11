@@ -9,7 +9,10 @@ def index
           sorted_by: Program.options_for_sorted_by,
          with_school_id: School.options_for_select,
          with_level: Program.options_for_level,
-         with_subject_area_id: SubjectArea.options_for_select
+         with_subject_area_id: SubjectArea.options_for_select,
+         with_prog_title: Program.options_for_prog_title,
+         with_delivery: Program.options_for_delivery_method,
+         with_os: Program.options_for_os
        }#,
 #        persistence_id: 'shared_key',
 #              default_filter_params: {},

@@ -11,7 +11,10 @@ class Program < ActiveRecord::Base
                  :with_school_id,
                  :with_level,
                  :with_subject,
-                 :with_subject_area_id
+                 :with_subject_area_id,
+                 :with_prog_title,
+                 :with_delivery,
+                 :with_os
                ]
 
    # default for will_paginate
@@ -66,7 +69,16 @@ class Program < ActiveRecord::Base
    scope :with_subject_area_id, lambda { |subjectarea_ids|
      where(:subjectarea_id => [*subjectarea_ids])
    }
-
+    scope :with_prog_title, lambda { |prog_titles|
+      where(:prog_title => [*prog_titles])
+    }
+    scope :with_delivery, lambda { |delivery_methods|
+      where(:delivery_method => [*delivery_methods])
+    }
+    scope :with_os, lambda { |open_sunys|
+      where(:open_suny => [*open_sunys])
+    }
+   
    def self.options_for_sorted_by
      [
        ['Registration date (newest first)', 'prog_title_desc'],
@@ -76,6 +88,20 @@ class Program < ActiveRecord::Base
    def self.options_for_level
      #order('id').map { |e| [e.level_expanded, e.id] }.uniq
      Program.pluck(:level_expanded).uniq
+   end
+   def self.options_for_prog_title
+     #order('id').map { |e| [e.level_expanded, e.id] }.uniq
+     Program.pluck(:prog_title).uniq
+   end
+   def self.options_for_delivery_method
+      #order('id').map { |e| [e.level_expanded, e.id] }.uniq
+     Program.pluck(:delivery_method).uniq
+   end
+   def self.options_for_os
+     [
+      ['Yes', 'Yes'],
+       ['No', 'No'],
+     ]
    end
 
  #  scope :search_query, lambda { |query|
