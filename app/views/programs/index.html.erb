@@ -12,7 +12,24 @@
       class: 'filterrific-periodically-observed'
     ) %>
   </div>
-
+   <div class="span3 chardin_box">
+     <label>Level</label>
+   <%= f.select(
+     :with_level,
+     @filterrific.select_options[:with_level],
+     { include_blank: '- Any -' }
+   ) %>
+   <%# See below for the Country.options_for_select presenter method %>
+ </div>
+ <div class="span3 chardin_box">
+   <label>Subject Area</label>
+ <%= f.select(
+   :with_subject_area_id,
+   @filterrific.select_options[:with_subject_area_id],
+   { include_blank: '- Any -' }
+ ) %>
+ <%# See below for the Country.options_for_select presenter method %>
+</div>
     <div class="span3 chardin_box">
       <label>School</label>
     <%= f.select(

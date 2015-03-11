@@ -8,7 +8,10 @@ class Program < ActiveRecord::Base
                available_filters: [
                  :sorted_by,
                  :search_query,
-                 :with_school_id
+                 :with_school_id,
+                 :with_level,
+                 :with_subject,
+                 :with_subject_area_id
                ]
 
    # default for will_paginate
@@ -57,7 +60,12 @@ class Program < ActiveRecord::Base
    scope :with_created_at_gte, lambda { |ref_date|
      where('points_transactions.created_at >= ?', ref_date)
    }
-
+   scope :with_level, lambda { |level_expandeds|
+     where(:level_expanded => [*level_expandeds])
+   }
+   scope :with_subject_area_id, lambda { |subjectarea_ids|
+     where(:subjectarea_id => [*subjectarea_ids])
+   }
 
    def self.options_for_sorted_by
      [
@@ -65,9 +73,10 @@ class Program < ActiveRecord::Base
        ['Registration date (oldest first)', 'prog_title_asc'],
      ]
    end
-
-
-
+   def self.options_for_level
+     #order('id').map { |e| [e.level_expanded, e.id] }.uniq
+     Program.pluck(:level_expanded).uniq
+   end
 
  #  scope :search_query, lambda { |query|
  #    return nil  if query.blank?

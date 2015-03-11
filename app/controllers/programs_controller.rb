@@ -7,7 +7,9 @@ def index
         params[:filterrific],
  select_options: {
           sorted_by: Program.options_for_sorted_by,
-         with_school_id: School.options_for_select
+         with_school_id: School.options_for_select,
+         with_level: Program.options_for_level,
+         with_subject_area_id: SubjectArea.options_for_select
        }#,
 #        persistence_id: 'shared_key',
 #              default_filter_params: {},
