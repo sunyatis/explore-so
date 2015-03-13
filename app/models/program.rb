@@ -2,6 +2,7 @@ class Program < ActiveRecord::Base
   belongs_to :school, :foreign_key => 'school_id', :class_name => "School"
   belongs_to :level_abb, :foreign_key => 'levelabb_id', :class_name => "LevelAbb"
   belongs_to :subject_area, :foreign_key => 'subjectarea_id' , :class_name => "SubjectArea"
+ 
   
   
    filterrific default_filter_params: { :sorted_by => 'prog_title_asc' },

@@ -306,7 +306,6 @@ DEPENDENCIES
   faker
   filterrific
   jbuilder (~> 2.0)
-  jquery-rails
   launchy
   paper_trail
   pg

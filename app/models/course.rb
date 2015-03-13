@@ -2,6 +2,7 @@ class Course < ActiveRecord::Base
   belongs_to :subject_area, :foreign_key => 'subjectarea_id' , :class_name => "SubjectArea"
   belongs_to :school, :foreign_key => 'school_id', :class_name => "School"
   belongs_to :catalog, :foreign_key => 'catalog_id', :class_name => "Catalog"
+  belongs_to :general_education, :foreign_key => 'general_education' , :class_name => "GeneralEducation"
   
   filterrific default_filter_params: { :sorted_by => 'title_asc' },
                available_filters: [
@@ -62,31 +63,37 @@ class Course < ActiveRecord::Base
    scope :with_catalog_id, lambda { |catalog_ids|
      where(:catalog_id => [*catalog_ids])
    }
-    scope :with_general_education, ->(query){ 
-       return nil  if query.blank?
-       # condition query, parse into individual keywords
-       terms = query.downcase.split(/,/)
-       # replace "*" with "%" for wildcard searches,
-       # append '%', remove duplicate '%'s
-       terms = terms.map { |e|
-         (e.gsub('*', '%') + '%').gsub(/%+/, '%')
-       }
-       # configure number of OR conditions for provision
-       # of interpolation arguments. Adjust this if you
-       # change the number of OR conditions.
-       num_or_conditions = 2
+    scope :with_general_education,  lambda { |general_educations|
+  #  return nil  if general_educations.blank?
+  #  # condition query, parse into individual keywords
+  #  terms = general_educations.downcase.split(/,/)
+  #  # replace "*" with "%" for wildcard searches,
+  #  # append '%', remove duplicate '%'s
+  #  terms = terms.map { |e|
+  #    (e.gsub('*', '%') + '%').gsub(/%+/, '%')
+  #  }
+  #  # configure number of OR conditions for provision
+  #  # of interpolation arguments. Adjust this if you
+  #  # change the number of OR conditions.
+  #  num_or_conditions = 2
+  #
+  #  where(
+  #    terms.map {
+  #      or_clauses = [
+  #        "LOWER(courses.general_education) LIKE ?",
+  #        "LOWER(courses.general_education) LIKE ?"
+  #      ].join(' OR ')
+  #      "(#{ or_clauses })"
+  #    }.join(' AND '),
+  #    *terms.map { |e| [e] * num_or_conditions }.flatten
+  #  )
+  
+  return nil if general_educations == [""]
+    where(general_education: [*general_educations])
 
-       where(
-         terms.map {
-           or_clauses = [
-             "LOWER(courses.general_education) LIKE ?",
-             "LOWER(courses.general_education) LIKE ?"
-           ].join(' OR ')
-           "(#{ or_clauses })"
-         }.join(' AND '),
-         *terms.map { |e| [e] * num_or_conditions }.flatten
-       )
-     }
+     # where(general_education: { name: general_education }).joins(:general_education)
+    }
+
 
 
    def self.options_for_sorted_by
