@@ -1,0 +1,13 @@
+<p class="active_admin_import_hint">
+   <%= raw(@active_admin_import_model.hint) %> 
+</p>
+<%= semantic_form_for @active_admin_import_model, url: {action: :do_import}, html: {multipart: true} do |f| %>
+    <%= f.inputs name: t("active_admin_import.details") do %>
+    <%= select_tag 'cat_download', 
+      options_for_select(Catalog.all.collect{|catalog| [catalog.name, catalog.id, {:name=>catalog.name}] }, {:prompt => 'Catalog'})%>
+        <%= f.input :file, as: :file %>
+    <% end %>
+    <%= f.actions do %>
+        <%= f.action :submit, label: t("active_admin_import.import_btn"), button_html: {data: {disable_with: t("active_admin_import.import_btn_disabled")}} %>
+    <% end %>
+<% end %>

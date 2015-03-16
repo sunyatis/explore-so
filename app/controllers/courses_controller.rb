@@ -9,7 +9,7 @@ class CoursesController < ApplicationController
             sorted_by: Course.options_for_sorted_by,
            with_school_id: School.options_for_select,
            with_catalog_id: Catalog.options_for_select,
-           with_general_education: GeneralEducation.options_for_select
+           with_generaleducation_id: GeneralEducation.options_for_select
          }#,
   #        persistence_id: 'shared_key',
   #              default_filter_params: {},
@@ -45,7 +45,7 @@ class CoursesController < ApplicationController
   private
 
     def course_params
-      params.require(:course).permit(:catalog_id, :title, :code, :description, :credit, :start_date, :end_date, :local_course_id, :prefix, :section, :prerequisites, :corequisites, :books_url, :registration_url, :active, :level, :school_id, :subjectarea_id, :course_area, :general_education, :instructor, :course_method, :seats_available, :class_full)
+      params.require(:course).permit(:catalog_id, :title, :code, :description, :credit, :start_date, :end_date, :local_course_id, :prefix, :section, :prerequisites, :corequisites, :books_url, :registration_url, :active, :level, :school_id, :subjectarea_id, :course_area, :generaleducation_id, :instructor, :course_method, :seats_available, :class_full)
     end
 end
 

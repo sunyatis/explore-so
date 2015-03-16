@@ -2,7 +2,7 @@ class Course < ActiveRecord::Base
   belongs_to :subject_area, :foreign_key => 'subjectarea_id' , :class_name => "SubjectArea"
   belongs_to :school, :foreign_key => 'school_id', :class_name => "School"
   belongs_to :catalog, :foreign_key => 'catalog_id', :class_name => "Catalog"
-  belongs_to :general_education, :foreign_key => 'general_education' , :class_name => "GeneralEducation"
+  belongs_to :general_education, :foreign_key => 'generaleducation_id' , :class_name => "GeneralEducation"
   
   filterrific default_filter_params: { :sorted_by => 'title_asc' },
                available_filters: [
@@ -10,7 +10,7 @@ class Course < ActiveRecord::Base
                  :search_query,
                  :with_school_id,
                  :with_catalog_id,
-                 :with_general_education
+                 :with_generaleducation_id
                ]
 
    # default for will_paginate
@@ -63,7 +63,7 @@ class Course < ActiveRecord::Base
    scope :with_catalog_id, lambda { |catalog_ids|
      where(:catalog_id => [*catalog_ids])
    }
-    scope :with_general_education,  lambda { |general_educations|
+    scope :with_generaleducation_id,  lambda { |generaleducation_ids|
   #  return nil  if general_educations.blank?
   #  # condition query, parse into individual keywords
   #  terms = general_educations.downcase.split(/,/)
@@ -88,8 +88,8 @@ class Course < ActiveRecord::Base
   #    *terms.map { |e| [e] * num_or_conditions }.flatten
   #  )
   
-  return nil if general_educations == [""]
-    where(general_education: [*general_educations])
+    #return nil if generaleducation_ids == [""]
+    where(generaleducation_id: [*generaleducation_ids])
 
      # where(general_education: { name: general_education }).joins(:general_education)
     }
