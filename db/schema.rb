@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150316124151) do
+ActiveRecord::Schema.define(version: 20150316141331) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -72,13 +72,13 @@ ActiveRecord::Schema.define(version: 20150316124151) do
     t.integer  "school_id"
     t.integer  "subjectarea_id"
     t.string   "course_area"
-    t.integer  "generaleducation_id"
     t.string   "instructor"
     t.string   "course_method"
     t.integer  "seats_available"
     t.boolean  "class_full"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.integer  "generaleducation_id"
   end
 
   create_table "general_educations", force: :cascade do |t|
