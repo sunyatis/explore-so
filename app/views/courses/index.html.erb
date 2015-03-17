@@ -37,13 +37,16 @@
            $('.btn-group').on('click', function (e) {
                 $(this).addClass("open");
             });
-      });
-     
+      }); 
   </script>
   <!-div class="span3 chardin_box"-->
     <label>General Education</label>
       <%= f.select(:with_generaleducation_id, @filterrific.select_options[:with_generaleducation_id], { include_hidden: false}, multiple: true)%>
   <!--/div-->
+  <div class="span3 chardin_box">
+     Registered after
+     <%= f.text_field(:with_start_date_gte, class: 'js-datepicker') %>
+   </div>
   <div class="span3 chardin_box">
     Sorted by
     <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by]) %>
@@ -62,6 +65,12 @@
 ) %>
 </div>
 </div>
-
+<script type="text/javascript">
+$('.js-datepicker').datepicker();
+ $('#overlayTrigger').click(function(event) {
+   event.preventDefault();
+   $('body').chardinJs('start');
+ });
+ </script>
 
 

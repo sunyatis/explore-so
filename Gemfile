@@ -14,6 +14,7 @@ gem "active_admin_import", github: "Fivell/active_admin_import"   #file import f
 gem 'paper_trail' #version and tracking
 gem 'filterrific' #filtering
 gem 'chardinjs-rails' #adds js and css
+gem 'bootstrap-datepicker-rails' #datepicker for filterriffc
 
 
 group :development, :test do
