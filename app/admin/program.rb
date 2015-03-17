@@ -1,7 +1,26 @@
 ActiveAdmin.register Program do
 
   	active_admin_import :validate => true,
+  	:template => 'admin/program_import' ,
+     headers_rewrites: { :'subjectarea_id' => :subjectarea_id, :'levelabb_id' => :levelabb_id},
+     before_batch_import: ->(importer) {
+
+                    subject_names = importer.values_at(:subjectarea_id)
+                     # replacing subject area name with subject area id
+                     subjects   = SubjectArea.where(name: subject_names).pluck(:name, :id)
+                     options = Hash[*subjects.flatten] # #{"Jane" => 2, "John" => 1}
+                     importer.batch_replace(:subjectarea_id, options)
+
+                      level_names = importer.values_at(:levelabb_id)
+                      # replacing general education name with general education id
+                      levels  = LevelAbb.where(name: level_names).pluck(:name, :id)
+                      options = Hash[*levels.flatten] # #{"Jane" => 2, "John" => 1}
+                      importer.batch_replace(:levelabb_id, options)
+
+
+                   },
   :template_object => ActiveAdminImport::Model.new(
+  :school_id => nil,
   #:hint => "file will be imported with such header format: 'body','title','author'",
   :csv_headers => ["prog_title", "description", "subjectarea_id", "prog_level", "levelabb_id", "school_id", "duration", "delivery_method", "prerequisites", "program_url", "registration_url",  "open_suny", "per_courses_online", "synchronous", "synchronous_text", "tutoring", "tutoring_name", "tutoring_phone", "tutoring_email", "tutoring_url", "helpdesk", "helpdesk_phone", "helpdesk_email", "helpdesk_url", "concierge", "concierge_phone", "concierge_name", "concierge_email", "experiential_learning", "experiential_text", "plas", "plas_text", "accelerated", "accelerated_text", "summary", "level_expanded", "sed", "apply_now_url"] 
   )

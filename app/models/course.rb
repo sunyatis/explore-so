@@ -130,8 +130,7 @@ class Course < ActiveRecord::Base
  #      *terms.map { |e| [e] * num_or_conditions }.flatten
  #    )
  #  }
-  
-  
+
   
   
   
