@@ -52,7 +52,7 @@ class Program < ActiveRecord::Base
      direction = (sort_option =~ /desc$/) ? 'desc' : 'asc'
      case sort_option.to_s
      when /^prog_title_/
-       order("programs.prog_title #{ direction }")
+       order(" programs.open_suny desc, programs.prog_title #{ direction }")
      when /^prog_level_/
        order("LOWER(programs.level) #{ direction }")
      when /^school_id_/

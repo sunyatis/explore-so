@@ -26,13 +26,14 @@
     <tr>
       <th>Prog title</th>
       <th>Subject area</th>
-      <th>Prog level</th>
+      <th>Level</th>
       <th>Level abb</th>
       <th>School</th>
       <th>Duration</th>
       <th>Delivery method</th>
       <th>Open suny</th>
       <th>Per courses online</th>
+      <% if false %>
       <th>Synchronous</th>
       <th>Tutoring</th>
       <th>Helpdesk</th>
@@ -40,15 +41,16 @@
       <th>Experiential learning</th>
       <th>Plas</th>
       <th>Accelerated</th>
-      <th>Level expanded</th>
+      <th>Prog level</th>
       <th colspan="3"></th>
+       <% end %>
     </tr>
 
     <% @programs.each do |program| %>
       <tr>
         <td><%= program.prog_title %></td>
         <td><%= program.subject_area.name %></td>
-        <td><%= program.prog_level %></td>
+        <td><%= program.level_expanded %></td>
         <td><%= program.level_abb.name %></td>
         <td><%= program.school.name %></td>
         <td><%= program.duration %></td>
@@ -63,6 +65,7 @@
          <% elsif program.per_courses_online == "100" %>  
            <%= image_tag("/assets/10042.png", :alt => "100% online", :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => '100% Online - Percent of Courses Online - Degree programs can range from 100% online to a mix of in-person and online courses.') %>
          <% end %></td>
+         <% if false %>
         <td> <% if program.synchronous == true%>  <%= image_tag("/assets/syn42.png", :alt => "Synchronous Courses", :id => 'sync_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Synchronous Courses - Students learn in real-time while the professor leads the class. Synchronous courses are similar to in-person classes, but from a distance.')%> <% else %>
           <%= image_tag("/assets/asyn42.png", :alt => "Asynchronous Courses", :id => 'async_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Asynchronous Courses - Asynchronous online courses are usually semester or term-based with a start and end date. Within this structure there is flexibility as to when students participate in course learning activities.')%><% end %></td>
         <td> <% if program.tutoring == true%><%= image_tag("/assets/tut42.png", :alt => "Tutoring Available", :id => 'tutoring_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Tutoring - Need tutoring assistance? Students have access to academic tutoring day and night.') %> <% end %></td>
@@ -71,10 +74,11 @@
         <td> <% if program.experiential_learning == true%><%= image_tag("/assets/el42.png", :alt => "Experiential Learning Available", :id => 'ex_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Experiential Learning - Experiential learning connects classroom to career. Students apply their academic knowledge in the real world through field experiences such as internships, clinical placements, and service learning.')%><% end %></td>
         <td><% if program.plas == true%><%= image_tag("/assets/pl42.png", :alt => "PLA's Available", :id => 'pla_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Prior Learning Assessment - Life experience counts. Students can receive credit toward their program based on their existing knowledge.')%> <% end %></td>
         <td> <% if program.accelerated == true%><%= image_tag("/assets/acc42.png", :alt => "Accelerated Degree Completion Available", :id => 'degree_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Accelerated Degree Completion - Looking for the option of early graduation? This program allows students to complete their studies ahead of schedule.')%><% end %></td>
-        <td><%= program.level_expanded %></td>
+        <td><%= program.prog_level %></td>
         <td><%= link_to 'Show', program %></td>
         <td><%= link_to 'Edit', edit_program_path(program) %></td>
         <td><%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
       </tr>
     <% end %>
 </table>
