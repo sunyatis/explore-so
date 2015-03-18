@@ -11,7 +11,9 @@ class Course < ActiveRecord::Base
                  :with_school_id,
                  :with_catalog_id,
                  :with_generaleducation_id,
-                 :with_start_date_gte
+                 :with_start_date_gte,
+                 :with_level,
+                 :with_credit
                ]
 
    # default for will_paginate
@@ -49,6 +51,10 @@ class Course < ActiveRecord::Base
      case sort_option.to_s
      when /^title_/
        order("courses.title #{ direction }")
+     when /^start_date_/
+      order("courses.start_date #{ direction }")
+     when /^credit_/
+      order("courses.credit #{ direction }")
      when /^level_/
        order("LOWER(programs.level) #{ direction }")
      else
@@ -64,21 +70,35 @@ class Course < ActiveRecord::Base
    scope :with_catalog_id, lambda { |catalog_ids|
      where(:catalog_id => [*catalog_ids])
    }
-    scope :with_generaleducation_id,  lambda { |generaleducation_ids|
-
+  scope :with_generaleducation_id,  lambda { |generaleducation_ids|
     where(generaleducation_id: [*generaleducation_ids])
-
-    }
-
+  }
+  scope :with_subject_area_id, lambda { |subjectarea_ids|
+     where(:subjectarea_id => [*subjectarea_ids])
+   }
+  scope :with_level, lambda { |levels|
+    where(:level => [*levels])
+  }
+  scope :with_credit, lambda { |credit|
+    where(:credit => [*credit])
+  }
 
 
    def self.options_for_sorted_by
      [
-       ['Registration date (newest first)', 'title_desc'],
-       ['Registration date (oldest first)', 'title_asc'],
+       ['Start Date DESC', 'start_date_desc'],
+       ['Start Date ASC', 'start_date_asc'],
+       ['Title ASC', 'title_asc'],
+       ['Credits', 'credit_asc'],
      ]
    end
-
+   
+   def self.options_for_level_select
+     Course.pluck(:level).uniq
+   end
+   def self.options_for_credit_select
+      Course.pluck(:credit).uniq
+    end
 
 
  #  scope :search_query, lambda { |query|

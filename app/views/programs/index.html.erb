@@ -19,7 +19,6 @@
      @filterrific.select_options[:with_level],
      { include_blank: '- Any -' }
    ) %>
-   <%# See below for the Country.options_for_select presenter method %>
  </div>
  <div class="span3 chardin_box">
    <label>Subject Area</label>
@@ -28,7 +27,6 @@
    @filterrific.select_options[:with_subject_area_id],
    { include_blank: '- Any -' }
  ) %>
- <%# See below for the Country.options_for_select presenter method %>
 </div>
     <div class="span3 chardin_box">
       <label>School</label>
@@ -37,7 +35,6 @@
       @filterrific.select_options[:with_school_id],
       { include_blank: '- Any -' }
     ) %>
-    <%# See below for the Country.options_for_select presenter method %>
   </div>
     <div class="span3 chardin_box">
       <label>Delivery Method</label>
@@ -46,7 +43,6 @@
       @filterrific.select_options[:with_delivery],
       { include_blank: '- Any -' }
     ) %>
-    <%# See below for the Country.options_for_select presenter method %>
   </div>
   <div class="span3 chardin_box">
     <label>Open SUNY+</label>
@@ -59,7 +55,6 @@
   <div class="span3 chardin_box">
     <label>Sorted by</label>
     <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by]) %>
-    <%# See below for the Student.options_for_sorted_by presenter method %>
   </div>
   </div>
   </div>

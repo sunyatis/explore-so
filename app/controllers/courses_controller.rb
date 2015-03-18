@@ -9,7 +9,10 @@ class CoursesController < ApplicationController
             sorted_by: Course.options_for_sorted_by,
            with_school_id: School.options_for_select,
            with_catalog_id: Catalog.options_for_select,
-           with_generaleducation_id: GeneralEducation.options_for_select
+           with_generaleducation_id: GeneralEducation.options_for_select,
+           with_subject_area_id: SubjectArea.options_for_select,
+           with_level: Course.options_for_level_select,
+           with_credit: Course.options_for_credit_select
          }#,
   #        persistence_id: 'shared_key',
   #              default_filter_params: {},
