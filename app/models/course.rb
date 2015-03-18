@@ -13,6 +13,7 @@ class Course < ActiveRecord::Base
                  :with_catalog_id,
                  :with_generaleducation_id,
                  :with_start_date_gte,
+                 :with_subject_area_id,
                  :with_level,
                  :with_credit
                ]
