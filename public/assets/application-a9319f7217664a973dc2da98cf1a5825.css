@@ -16,8 +16,6 @@
 
 
 
-
-
  */
 @import url(components/chardinjs_overrides.css);
 @import url(chardinjs.css);
@@ -8314,7 +8312,7 @@ section {
   @extend .btn-primary;
   @extend .btn-xs;
 }*/
-/* line 30, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 28, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
   background-color: #fff;
   border: 1px solid #ccc;
@@ -8327,7 +8325,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
   transition: border linear 0.2s,box-shadow linear 0.2s;
 }
 
-/* line 41, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 39, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
   display: inline-block;
   padding: 4px 6px;
@@ -8341,14 +8339,14 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
   vertical-align: middle;
 }
 
-/* line 55, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 53, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
 select {
   width: 220px;
   border: 1px solid #ccc;
   background-color: #fff;
 }
 
-/* line 61, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 59, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
 select, input[type="file"] {
   height: 30px;
   line-height: 30px;
