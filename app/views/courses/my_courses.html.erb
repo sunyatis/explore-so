@@ -1,6 +1,6 @@
 
 <div>
-  <!--%= page_entries_info students # provided by will_paginate %-->
+  <%= page_entries_info @courses, entry_name: "courses" %>
 </div>
 
 
@@ -28,3 +28,4 @@
       </tr>
     <% end %>
 </table>
+<%= paginate @courses %> 

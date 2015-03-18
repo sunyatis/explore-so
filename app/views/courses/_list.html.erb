@@ -5,7 +5,7 @@
 
   </div>
   <div class="chardin_box" data-intro="will_paginate's entries info works as expected." data-position="bottom">
-  Displaying students <b>1&nbsp;-&nbsp;10</b> of <b>134</b> in total
+  <%= page_entries_info @courses, entry_name: "programs" %>
   </div>
   <div class="chardin_box" data-intro="Spinner indicates update." data-position="bottom">
 
@@ -15,18 +15,6 @@
 
   </div>
   </div>
-
-
-
-  <div>
-    <!--%= page_entries_info students # provided by will_paginate %-->
-  </div>
-  
-  
-
-
-
-
 
   <table class="table table-striped table-hover">
       <tr>

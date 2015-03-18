@@ -37,7 +37,7 @@ class CoursesController < ApplicationController
 
 
     def my_courses
-      @courses = Course.accessible_by(current_ability, :read)
+      @courses = Course.accessible_by(current_ability, :read).find.page(params[:page])
     end
 
 

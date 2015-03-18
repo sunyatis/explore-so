@@ -3,7 +3,8 @@ class Program < ActiveRecord::Base
   belongs_to :level_abb, :foreign_key => 'levelabb_id', :class_name => "LevelAbb"
   belongs_to :subject_area, :foreign_key => 'subjectarea_id' , :class_name => "SubjectArea"
  
-  
+  # default for will_paginate
+    paginates_per 10
   
    filterrific default_filter_params: { :sorted_by => 'prog_title_asc' },
                available_filters: [

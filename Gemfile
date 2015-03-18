@@ -16,6 +16,9 @@ gem 'filterrific' #filtering
 gem 'chardinjs-rails' #adds js and css
 gem 'bootstrap-datepicker-rails' #datepicker for filterriffc
 gem 'activerecord-session_store'  #to avoid cookie store
+#gem 'will_paginate', '~> 3.0.5'  # add pages
+#gem 'will_paginate-bootstrap' # add pages
+gem 'kaminari'  #used by active admin for pagination
 
 
 group :development, :test do

@@ -3,6 +3,7 @@ class Course < ActiveRecord::Base
   belongs_to :school, :foreign_key => 'school_id', :class_name => "School"
   belongs_to :catalog, :foreign_key => 'catalog_id', :class_name => "Catalog"
   belongs_to :general_education, :foreign_key => 'generaleducation_id' , :class_name => "GeneralEducation"
+
   
   filterrific default_filter_params: { :sorted_by => 'title_asc' },
                available_filters: [

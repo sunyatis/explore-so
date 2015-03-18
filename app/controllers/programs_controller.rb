@@ -37,7 +37,7 @@ def index
 
 
   def my_programs
-    @programs = Program.accessible_by(current_ability, :read)
+    @programs = Program.page(params[:page]).accessible_by(current_ability, :read)
   end
 
 
