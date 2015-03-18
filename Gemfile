@@ -15,6 +15,7 @@ gem 'paper_trail' #version and tracking
 gem 'filterrific' #filtering
 gem 'chardinjs-rails' #adds js and css
 gem 'bootstrap-datepicker-rails' #datepicker for filterriffc
+gem 'activerecord-session_store'  #to avoid cookie store
 
 
 group :development, :test do

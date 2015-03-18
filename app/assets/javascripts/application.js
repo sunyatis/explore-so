@@ -15,8 +15,12 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require bootstrap3/bootstrap
+//= require bootstrap-datepicker/core
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.js
 //= require filterrific/filterrific-jquery
+//= require chardinjs
 //= require_tree .
 //= require bootstrap3/bootstrap-multiselect
+
 
 

@@ -6,7 +6,7 @@
    
 
             
-              <%=f.input :school_id, as: :select, :collection => School.pluck(:name, :id), :for => [:school_id, @active_admin_import_model.school_id]%>
+              <%=f.input :school_id, as: :select, :collection => School.pluck(:name, :id)%>
             
                <%= f.input :file, as: :file %>
             <% end %>

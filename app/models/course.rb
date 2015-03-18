@@ -58,8 +58,8 @@ class Course < ActiveRecord::Base
    scope :with_school_id, lambda { |school_ids|
      where(:school_id => [*school_ids])
    }
-   scope :with_start_date_gte, lambda { |start_dates|
-     where('courses.start_date = ?', start_dates)
+   scope :with_start_date_gte, lambda { |start_date|
+     where('courses.start_date >= ?', start_date)
    }
    scope :with_catalog_id, lambda { |catalog_ids|
      where(:catalog_id => [*catalog_ids])

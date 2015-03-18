@@ -17,12 +17,14 @@ ActiveAdmin.register Program do
                       options = Hash[*levels.flatten] # #{"Jane" => 2, "John" => 1}
                       importer.batch_replace(:levelabb_id, options)
 
+                       importer.csv_lines.map! { |row| row << importer.model.school_id}
+                       importer.headers.merge!({:'school_id' => :school_id})
 
                    },
   :template_object => ActiveAdminImport::Model.new(
   :school_id => nil,
   #:hint => "file will be imported with such header format: 'body','title','author'",
-  :csv_headers => ["prog_title", "description", "subjectarea_id", "prog_level", "levelabb_id", "school_id", "duration", "delivery_method", "prerequisites", "program_url", "registration_url",  "open_suny", "per_courses_online", "synchronous", "synchronous_text", "tutoring", "tutoring_name", "tutoring_phone", "tutoring_email", "tutoring_url", "helpdesk", "helpdesk_phone", "helpdesk_email", "helpdesk_url", "concierge", "concierge_phone", "concierge_name", "concierge_email", "experiential_learning", "experiential_text", "plas", "plas_text", "accelerated", "accelerated_text", "summary", "level_expanded", "sed", "apply_now_url"] 
+  :csv_headers => ["prog_title", "description", "subjectarea_id", "prog_level", "levelabb_id", "duration", "delivery_method", "prerequisites", "program_url", "registration_url",  "open_suny", "per_courses_online", "synchronous", "synchronous_text", "tutoring", "tutoring_name", "tutoring_phone", "tutoring_email", "tutoring_url", "helpdesk", "helpdesk_phone", "helpdesk_email", "helpdesk_url", "concierge", "concierge_phone", "concierge_name", "concierge_email", "experiential_learning", "experiential_text", "plas", "plas_text", "accelerated", "accelerated_text", "summary", "level_expanded", "sed", "apply_now_url"] 
   )
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

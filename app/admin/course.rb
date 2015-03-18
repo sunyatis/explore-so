@@ -17,12 +17,17 @@ ActiveAdmin.register Course do
                   options = Hash[*geneds.flatten] # #{"Jane" => 2, "John" => 1}
                   importer.batch_replace(:generaleducation_id, options)
                   
-
+                  importer.csv_lines.map! { |row| row << importer.model.catalog_id}
+                  importer.headers.merge!({:'catalog_id' => :catalog_id}) 
+                  
+                  importer.csv_lines.map! { |row| row << importer.model.school_id}
+                  importer.headers.merge!({:'school_id' => :school_id})
                },
  :template_object => ActiveAdminImport::Model.new(
  :catalog_id => nil,
+ :school_id => nil,
  #:hint => "file will be imported with such header format: 'body','title','author'",
- :csv_headers => ["title", "code", "description", "credit", "start_date", "end_date", "local_course_id", "prefix", "section", "prerequisites", "corequisites", "books_url", "registration_url", "active", "level", "school_id", "subjectarea_id", "course_area", "generaleducation_id", "instructor", "course_method", "seats_available", "class_full"] 
+ :csv_headers => ["title", "code", "description", "credit", "start_date", "end_date", "local_course_id", "prefix", "section", "prerequisites", "corequisites", "books_url", "registration_url", "active", "level", "subjectarea_id", "course_area", "generaleducation_id", "instructor", "course_method", "seats_available", "class_full"] 
  )
 
   # See permitted parameters documentation:
