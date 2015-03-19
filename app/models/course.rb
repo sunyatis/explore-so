@@ -13,6 +13,7 @@ class Course < ActiveRecord::Base
                  :with_catalog_id,
                  :with_generaleducation_id,
                  :with_start_date_gte,
+                 :with_start_date,
                  :with_subject_area_id,
                  :with_level,
                  :with_credit
@@ -66,6 +67,8 @@ class Course < ActiveRecord::Base
    scope :with_school_id, lambda { |school_ids|
      where(:school_id => [*school_ids])
    }
+   scope :with_start_date, lambda { |start_date|
+    }
    scope :with_start_date_gte, lambda { |start_date|
      where('courses.start_date >= ?', start_date)
    }

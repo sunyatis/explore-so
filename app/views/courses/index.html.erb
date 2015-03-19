@@ -59,7 +59,9 @@
            $('.btn-group').on('click', function (e) {
                 $(this).addClass("open");
             });
+            
       }); 
+
   </script>
   <!-div class="span3 chardin_box"-->
     <label>General Education</label>
@@ -67,7 +69,8 @@
   <!--/div-->
   <div class="span2 chardin_box">
     <label>Start Date after</label>
-     <%= f.text_field(:with_start_date_gte, class: 'js-datepicker') %>
+     <%= f.text_field(:with_start_date, class: 'js-datepicker') %>
+     <%= f.hidden_field :with_start_date_gte %>
    </div>
   <div class="span3 chardin_box">
     <label>Sorted by</label>
@@ -85,7 +88,10 @@
 </div>
 </div>
 <script type="text/javascript">
-$('.js-datepicker').datepicker();
+$('.js-datepicker').datepicker({"autoclose": true});
+$('.js-datepicker').datepicker().on('changeDate', function(e){
+     $('#filterrific_with_start_date_gte').val(e.format('yyyy-mm-dd'));
+ });
  $('#overlayTrigger').click(function(event) {
    event.preventDefault();
    $('body').chardinJs('start');
