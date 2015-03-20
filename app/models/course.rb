@@ -133,17 +133,17 @@ class Course < ActiveRecord::Base
  #  }
  def self.strptime(str)
    return nil unless str.present?
-   puts str
-   puts "here"
+   #puts str
+   #puts "here"
    if str == "start_date"
-     return nil
+     return "start_date"
    end
    month, day, year = str.to_s.strip.split('/')
    if year.to_s.length == 2
-     puts "here2"
+     #puts "here2"
       Date.strptime(str.to_s.strip, '%m/%d/%y')
    elsif year.to_s.length == 4
-     puts "here4"
+     #puts "here4"
      Date.strptime(str.to_s.strip, '%m/%d/%y')
    end
  end

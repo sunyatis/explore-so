@@ -2,7 +2,7 @@ ActiveAdmin.register Course do
  
  active_admin_import :validate => false,
  :template => 'admin/course_import' ,
- headers_rewrites: { :'subjectarea_id' => :subjectarea_id, :'generaleducation_id' => :generaleducation_id, :'start_date' => :start_date},
+ headers_rewrites: { :'subjectarea_id' => :subjectarea_id, :'generaleducation_id' => :generaleducation_id, :'start_date' => :start_date, :'end_date' => :end_date},
  before_batch_import: ->(importer) {
 
                 subject_names = importer.values_at(:subjectarea_id)
@@ -17,24 +17,20 @@ ActiveAdmin.register Course do
                   # replacing general education name with general education id
                   geneds  = GeneralEducation.where(name: ge_names).pluck(:name, :id)
                   options = Hash[*geneds.flatten] # #{"Jane" => 2, "John" => 1}
+                  puts options
                   importer.batch_replace(:generaleducation_id, options)
-                  
-                 # start_dates = importer.values_at(:start_date)
-                  
-                  #start_date = Hash[*start_dates.flatten]
-                  #date = "#{start_date['start_date']}"
-                  #date = Course.strptime(date).to_s
-                  #date = {"start_date" => "#{date}"}
-                  #date = Hash[*date.flatten]
-                  #date = Course.strptime(start_dates).to_s
-
-                  #importer.csv_lines.map! { |row| row << date}
-                  #importer.headers.merge!({:'start_date' => :start_date})
-
-                  #puts date
-                  
-                  #importer.batch_replace(:start_date, date)
                  
+                  wrong_s_dates = importer.values_at(:start_date)
+                  options = wrong_s_dates.map {|wrong_dates|   {wrong_dates => Course.strptime(wrong_dates).to_s }.flatten } 
+                  options.delete({"start_date"=>"start_date"})
+                  options = Hash[*options.flatten]
+                  importer.batch_replace(:'start_date', options)
+                  
+                  wrong_e_dates = importer.values_at(:end_date)
+                  options = wrong_e_dates.map {|wrong_dates|   {wrong_dates => Course.strptime(wrong_dates).to_s }.flatten } 
+                  options.delete({"start_date"=>"start_date"})
+                  options = Hash[*options.flatten]
+                  importer.batch_replace(:'end_date', options)
                   
                   importer.csv_lines.map! { |row| row << importer.model.catalog_id}
                   importer.headers.merge!({:'catalog_id' => :catalog_id}) 
