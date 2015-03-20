@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-
+load_and_authorize_resource
 
   def index
       @filterrific = initialize_filterrific(
@@ -34,10 +34,17 @@ class CoursesController < ApplicationController
                      #   redirect_to(reset_filterrific_url(format: :html)) and return  
     end
 
-
+    def update
+        course = Course.find(params[:id])
+        if course.update(course_params)
+          redirect_to courses_path
+        else
+          render 'edit'
+        end
+      end
 
     def my_courses
-      @courses = Course.accessible_by(current_ability, :read).find.page(params[:page])
+      @courses = Course.accessible_by(current_ability, :read)
     end
 
 
@@ -45,10 +52,11 @@ class CoursesController < ApplicationController
 
 
 
-  private
+      private
 
     def course_params
       params.require(:course).permit(:catalog_id, :title, :code, :description, :credit, :start_date, :end_date, :local_course_id, :prefix, :section, :prerequisites, :corequisites, :books_url, :registration_url, :active, :level, :school_id, :subjectarea_id, :course_area, :generaleducation_id, :instructor, :course_method, :seats_available, :class_full)
     end
+
 end
 

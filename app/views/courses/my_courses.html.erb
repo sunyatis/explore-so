@@ -1,6 +1,6 @@
 
 <div>
-  <%= page_entries_info @courses, entry_name: "courses" %>
+
 </div>
 
 
@@ -25,7 +25,8 @@
         <td><%= course.school.name %></td>
         <td><%= course.course_method %></td>
         <td><%= course.credit %></td>
+        <td><%= link_to 'Show', course %></td>
+        <td><%= link_to 'Edit', edit_course_path(course) %></td>
       </tr>
     <% end %>
 </table>
-<%= paginate @courses %> 

@@ -10,6 +10,9 @@ class User < ActiveRecord::Base
          
          def role?(r)
            role.include? r.to_s
-         end       
+         end   
+         def admin?
+           self.role == "admin"
+         end    
          
 end

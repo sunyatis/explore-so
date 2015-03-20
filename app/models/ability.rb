@@ -43,7 +43,6 @@ class Ability
        else
          can :read, Program
          can :read, Course
-          
            
     end
     

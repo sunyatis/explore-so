@@ -39,30 +39,21 @@ def index
   def my_programs
     @programs = Program.page(params[:page]).accessible_by(current_ability, :read)
   end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def update
+        program = Program.find(params[:id])
+        if program.update(program_params)
+          redirect_to programs_path
+        else
+          render 'edit'
+        end
+      end
 
 
 
   private
 
     def program_params
-      params.require(:program).permit(:prog_title, :description, :subjectarea_id, :prog_level, :levelabb_id, :school, :duration, :delivery_method, :prerequisites, :program_url, :registration_url, :open_suny, :per_courses_online, :synchronous, :synchronous_text, :tutoring, :tutoring_name, :tutoring_phone, :tutoring_email, :tutoring_url, :helpdesk, :helpdesk_phone, :helpdesk_email, :helpdesk_url, :concierge, :concierge_phone, :concierge_name, :concierge_email, :experiential_learning, :experiential_text, :plas, :plas_text, :accelerated, :accelerated_text, :summary, :level_expanded, :sed, :apply_now_url, :school_attributes[:address1])
+      params.require(:program).permit(:prog_title, :description, :subjectarea_id, :prog_level, :levelabb_id, :school, :duration, :delivery_method, :prerequisites, :program_url, :registration_url, :open_suny, :per_courses_online, :synchronous, :synchronous_text, :tutoring, :tutoring_name, :tutoring_phone, :tutoring_email, :tutoring_url, :helpdesk, :helpdesk_phone, :helpdesk_email, :helpdesk_url, :concierge, :concierge_phone, :concierge_name, :concierge_email, :experiential_learning, :experiential_text, :plas, :plas_text, :accelerated, :accelerated_text, :summary, :level_expanded, :sed, :apply_now_url)
     end
     
    
