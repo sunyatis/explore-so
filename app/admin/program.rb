@@ -21,6 +21,9 @@ ActiveAdmin.register Program do
                        importer.headers.merge!({:'school_id' => :school_id})
 
                    },
+                   after_batch_import: ->(importer) {
+                       Program.where(prog_title: "prog_title").delete_all
+                    },
   :template_object => ActiveAdminImport::Model.new(
   :school_id => nil,
   #:hint => "file will be imported with such header format: 'body','title','author'",
