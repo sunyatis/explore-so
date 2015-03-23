@@ -12,7 +12,7 @@
  *
 
  *= require_self
-*= require_tree .
+
  *= require bootstrap3/bootstrap-multiselect
  *= require bootstrap-datepicker3
  *= require bootstrap3/bootstrap
@@ -23,6 +23,15 @@
 @import 'components/chardinjs_overrides.css.scss';
 @import 'chardinjs.css';
 
+a {
+  color: #00539C;
+  text-decoration: underline !important;
+}
+
+a:visited{
+  color: #fff !important;
+  text-decoration: underline !important;
+}
 
 
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
@@ -60,4 +69,49 @@ select, input[type="file"] {
   height: 30px;
   line-height: 30px;
 }
+.navbar-inverse {
+  background: #034d8f !important;
+  background: -moz-linear-gradient(top, #034d8f 0%, #003c78 100%) !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #034d8f), color-stop(100%, #003c78)) !important;
+  background: -webkit-linear-gradient(top, #034d8f 0%, #003c78 100%) !important;
+  background: -o-linear-gradient(top, #034d8f 0%, #003c78 100%) !important;
+  background: -ms-linear-gradient(top, #034d8f 0%, #003c78 100%) !important;
+  background: linear-gradient(to bottom, #034d8f 0%, #003c78 100%) !important;
+}
 
+.navbar-nav>li {
+border-right: 1px solid #306aa2 !important;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #fff !important;
+}
+
+
+.navbar-inverse .navbar-nav>.open>a{
+	background-color: #01336f !important;
+}
+.service-div{
+  float:left; width:15%;
+}
+
+.icon-div{
+ float:left; 
+ width:85%;
+ padding-left:5px;
+}
+
+.landing-text-1{
+  padding-bottom:25px;
+}
+.iframe{
+  align:center;
+  width:960px;
+  height:363px;
+  max-width:100%;
+  overflow:hidden;
+  border:none;
+  padding:0;
+  display:block;
+  margin:auto;
+}
