@@ -4,6 +4,8 @@ class Course < ActiveRecord::Base
   belongs_to :catalog, :foreign_key => 'catalog_id', :class_name => "Catalog"
   belongs_to :general_education, :foreign_key => 'generaleducation_id' , :class_name => "GeneralEducation"
 
+  has_paper_trail
+  
   
   filterrific default_filter_params: { :sorted_by => 'title_asc' },
                available_filters: [
@@ -148,6 +150,8 @@ class Course < ActiveRecord::Base
    end
  end
   
-  
+  def admin_permalink
+     admin_post_path(self)
+   end
   
 end

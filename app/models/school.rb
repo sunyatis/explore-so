@@ -5,7 +5,7 @@ class School < ActiveRecord::Base
     has_many :courses
 
 
-    has_paper_trail
+    #has_paper_trail
 
 
     def self.options_for_select

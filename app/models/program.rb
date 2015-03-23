@@ -3,6 +3,9 @@ class Program < ActiveRecord::Base
   belongs_to :level_abb, :foreign_key => 'levelabb_id', :class_name => "LevelAbb"
   belongs_to :subject_area, :foreign_key => 'subjectarea_id' , :class_name => "SubjectArea"
  
+  has_paper_trail
+ 
+ 
   # default for will_paginate
     paginates_per 10
   
@@ -135,6 +138,8 @@ class Program < ActiveRecord::Base
  #    )
  #  }
    
-  
+  def admin_permalink
+     admin_post_path(self)
+   end
   
 end
