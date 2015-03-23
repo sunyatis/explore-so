@@ -14,7 +14,13 @@ ActiveAdmin.register_page "Dashboard" do
     section "Recently updated content" do
       table_for PaperTrail::Version.order('id desc').limit(20) do # Use PaperTrail::Version if this throws an error
      #column ("Item") { |v| v.name }
-     column ("Item") { |v| link_to v.item.prog_title, [:admin, v.item] } # Uncomment to display as link
+     column "Item" do |v|
+       if v.item_type.underscore.humanize == "Program"
+          link_to v.item.prog_title, [:admin, v.item]  
+       else    
+          link_to v.item.title, [:admin, v.item] 
+       end
+     end# Uncomment to display as link
      #column ("Type") { |v| v.item.trans_type }
      column ("Record") { |v| v.item_type.underscore.humanize }
      column ("Event") { |v| v.event }
