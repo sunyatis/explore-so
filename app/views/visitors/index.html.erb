@@ -1,2 +1,111 @@
-<h3>Welcome</h3>
-<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+<div class="row banner">
+ 
+<!-- Start WOWSlider.com -->
+<iframe src="http://open.suny.edu/assets/img/wow_slider/index.html" class="iframe" marginheight="0" marginwidth="0"></iframe>
+<!-- End WOWSlider.com -->
+
+</div>
+
+
+<div class="landing-text-1">
+  <h3>Ready to select and start a degree program?</h3>
+  <div style="float:left; width:76%;">
+    <span class="heading6">
+      <p>Welcome to the Open SUNY Navigator, a powerful search tool that will provide you with all of our online offerings here at SUNY. </p> 
+      <p>There's sure to be a degree program in the navigator that matches your interests and needs. So, what are you waiting for? Get started today by clicking the <a href="/programs">Find a Degree</a> button.</p>
+    </span>
+  </div>
+</div>
+<div style="float:left; margin-top:-50px; margin-left: 50px;"><a href="/programs" class="degree_button"><strong>Find a Degree</strong> <i class="fa fa-chevron-right"></i></a></div>
+<br/><br/>
+<div style="clear:both;"></div>
+<div class="ribbon-wrapper">
+	<div class="ribbon-front">
+	<p class="what-is"><%= link_to 'What is Open SUNY+?', 'http://open.suny.edu/about/open-suny+', :target => "_blank"%></p>
+	</div>
+	<div class="ribbon-edge-topleft"></div>
+	<div class="ribbon-edge-topright"></div>
+	<div class="ribbon-edge-bottomleft"></div>
+	<div class="ribbon-edge-bottomright"></div>
+	<div class="ribbon-back-left"></div>
+	<div class="ribbon-back-right"></div>
+</div>
+<div style="float:left;">
+<p><br/><h4>Looking for a degree program with specific features? Use these identifiers to help!</h4></p>
+<br/>
+<div class="row">
+        <div class="col-md-4">
+          <div class="service-div"><%= image_tag("/assets/10042.png", :alt => "Percent of Courses Online", :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Percent of Courses Online - Degree programs can range from 100% online to a mix of in-person and online courses.') %></div>
+            <div class="icon-div">
+              <h4>Percent of Courses Online</h4>
+              <p>Degree programs can range from 100% online to a mix of in-person and online courses.</p><br/>
+              <p><a class="btn btn-default" href="/programs/search?per=100" role="button">View Degrees »</a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-div"><%= image_tag("/assets/hd42.png", :alt => "24/7 HelpDesk", :id => 'helpdesk_icon', :rel => 'tooltip', "data-placement" =>'top', "data-content" =>'some info', :title => '24/7 HelpDesk - Experiencing technical difficulties? Students in this program have access to technical support day and night.')%></div>
+            <div class="icon-div">
+              <h4>24/7 HelpDesk</h4>
+              <p>Experiencing technical difficulties? Students in this program have access to technical support day and night. </p>
+              <p><a class="btn btn-default" href="/programs/search?help=t" role="button">View Degrees »</a></p>
+          </div>
+       </div>
+        <div class="col-md-4">
+          <div class="service-div"><%= image_tag("/assets/sc42.png", :alt => "Concierge Available", :id => 'con_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Concierge - Have questions? Each student has one point of contact for all questions about their program.')%></div>
+            <div class="icon-div">
+              <h4>Concierge</h4>
+              <p>Have questions? Each student has one point of contact for all questions about their program.</p><br/>
+              <p><a class="btn btn-default" href="/programs/search?con=t" role="button">View Degrees »</a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-div"><%= image_tag("/assets/syn42.png", :alt => "Synchronous Courses", :id => 'sync_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Synchronous Courses - Students learn in real-time while the professor leads the class. Synchronous courses are similar to in-person classes, but from a distance.')%></div>
+            <div class="icon-div">
+              <h4>Synchronous Courses</h4>
+              <p>Students learn in real-time while the professor leads the class. Synchronous courses are similar to in-person classes, but from a distance.</p>
+              <p><a class="btn btn-default" href="/programs/search?sync=t" role="button">View Degrees »</a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-div"><%= image_tag("/assets/asyn42.png", :alt => "Asynchronous Courses", :id => 'async_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Asynchronous Courses -  Asynchronous online courses are usually semester or term-based with a start and end date. Within this structure there is flexibility as to when students participate in course learning activities.')%></div>
+            <div class="icon-div">
+              <h4>Asynchronous Courses</h4>
+              <p>Asynchronous online courses are usually semester or term-based with a start and end date. Within this structure there is flexibility as to when students participate in course learning activities.</p>
+              <p><a class="btn btn-default" href="/programs/search?sync=f" role="button">View Degrees »</a></p>
+          </div>
+       </div>
+        <div class="col-md-4">
+          <div class="service-div"><%= image_tag("/assets/el42.png", :alt => "Experiential Learning Available", :id => 'ex_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Experiential Learning - Experiential learning connects classroom to career. Students apply their academic knowledge in the real world through field experiences such as internships, clinical placements, and service learning.')%></div>
+            <div class="icon-div">
+              <h4>Experiential Learning</h4>
+              <p>Experiential learning connects classroom to career. Students apply their academic knowledge in the real world through field experiences such as internships, clinical placements, and service learning.</p>
+              <p><a class="btn btn-default" href="/programs/search?el=t" role="button">View Degrees »</a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-div"><%= image_tag("/assets/pl42.png", :alt => "PLA's Available", :id => 'pla_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Prior Learning Assessment - Life experience counts. Students can receive credit toward their program based on their existing knowledge.')%></div>
+            <div class="icon-div">
+              <h4>Prior Learning Assessment</h4>
+              <p>Life experience counts. Students can receive credit toward their program based on their existing knowledge.</p>
+              <p><a class="btn btn-default" href="/programs/search?pla=t" role="button">View Degrees »</a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-div"><%= image_tag("/assets/acc42.png", :alt => "Accelerated Degree Completion Available", :id => 'degree_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Accelerated Degree Completion - Looking for the option of early graduation? This program allows students to complete their studies ahead of schedule.')%></div>
+            <div class="icon-div">
+              <h4>Accelerated Degree Completion</h4>
+              <p>Looking for the option of early graduation? This program allows students to complete their studies ahead of schedule.</p>
+              <p><a class="btn btn-default" href="/programs/search?acc=t" role="button">View Degrees »</a></p>
+          </div>
+       </div>
+        <div class="col-md-4">
+          <div class="service-div"><%= image_tag("/assets/tut42.png", :alt => "Tutoring Available", :id => 'tutoring_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Tutoring - Need tutoring assistance? Students have access to academic tutoring day and night.') %></div>
+            <div class="icon-div">
+              <h4>Tutoring</h4>
+              <p>Need tutoring assistance? Students have access to academic tutoring day and night. </p><br/>
+              <p><a class="btn btn-default" href="/programs/search?tut=t" role="button">View Degrees »</a></p>
+          </div>
+        </div>
+      </div>
+</div>
+
