@@ -85,6 +85,9 @@ GEM
       railties (>= 3.0)
     bootstrap-sass (3.3.1.0)
       sass (~> 3.2)
+    bootstrap-tooltip-rails (0.1)
+      rails (>= 3.1)
+      thor
     bourbon (4.2.1)
       sass (~> 3.4)
       thor
@@ -303,6 +306,7 @@ DEPENDENCIES
   better_errors
   bootstrap-datepicker-rails
   bootstrap-sass
+  bootstrap-tooltip-rails
   byebug
   cancancan
   capybara
