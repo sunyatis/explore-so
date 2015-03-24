@@ -2,7 +2,7 @@ ActiveAdmin.register Program do
 
   	active_admin_import :validate => true,
   	:template => 'admin/program_import' ,
-     headers_rewrites: { :'subjectarea_id' => :subjectarea_id, :'levelabb_id' => :levelabb_id},
+     headers_rewrites: { :'subjectarea_id' => :subjectarea_id, :'levelabb_id' => :levelabb_id, :'school_id' => :school_id},
      before_batch_import: ->(importer) {
 
                     subject_names = importer.values_at(:subjectarea_id)
@@ -16,9 +16,15 @@ ActiveAdmin.register Program do
                       levels  = LevelAbb.where(name: level_names).pluck(:name, :id)
                       options = Hash[*levels.flatten] # #{"Jane" => 2, "John" => 1}
                       importer.batch_replace(:levelabb_id, options)
+                      
+                       school_names = importer.values_at(:school_id)
+                         # replacing subject area name with subject area id
+                         schools   = School.where(name: school_names).pluck(:name, :id)
+                         options = Hash[*schools.flatten] # #{"Jane" => 2, "John" => 1}
+                         importer.batch_replace(:school_id, options)
 
-                       importer.csv_lines.map! { |row| row << importer.model.school_id}
-                       importer.headers.merge!({:'school_id' => :school_id})
+                      # importer.csv_lines.map! { |row| row << importer.model.school_id}
+                       #importer.headers.merge!({:'school_id' => :school_id})
 
                    },
                    after_batch_import: ->(importer) {
@@ -27,12 +33,12 @@ ActiveAdmin.register Program do
   :template_object => ActiveAdminImport::Model.new(
   :school_id => nil,
   #:hint => "file will be imported with such header format: 'body','title','author'",
-  :csv_headers => ["prog_title", "description", "subjectarea_id", "prog_level", "levelabb_id", "duration", "delivery_method", "prerequisites", "program_url", "registration_url",  "open_suny", "per_courses_online", "synchronous", "synchronous_text", "tutoring", "tutoring_name", "tutoring_phone", "tutoring_email", "tutoring_url", "helpdesk", "helpdesk_phone", "helpdesk_email", "helpdesk_url", "concierge", "concierge_phone", "concierge_name", "concierge_email", "experiential_learning", "experiential_text", "plas", "plas_text", "accelerated", "accelerated_text", "summary", "level_expanded", "sed", "apply_now_url"] 
+  :csv_headers => ["prog_title", "description", "summary", "subjectarea_id", "prog_level", "levelabb_id", "school_id", "duration", "delivery_method", "prerequisites", "program_url", "registration_url",  "open_suny", "per_courses_online", "synchronous", "synchronous_text", "tutoring", "tutoring_name", "tutoring_phone", "tutoring_email", "tutoring_url", "helpdesk", "helpdesk_phone", "helpdesk_email", "helpdesk_url", "concierge", "concierge_phone", "concierge_name", "concierge_email", "experiential_learning", "experiential_text", "plas", "plas_text", "accelerated", "accelerated_text", "level_expanded", "sed", "apply_now_url"] 
   )
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :prog_title, :description, :subjectarea_id, :prog_level, :levelabb_id, :school_id, :duration, :delivery_method, :prerequisites, :program_url, :registration_url, :open_suny, :per_courses_online, :synchronous, :synchronous_text, :tutoring, :tutoring_name, :tutoring_phone, :tutoring_email, :tutoring_url, :helpdesk, :helpdesk_phone, :helpdesk_email, :helpdesk_url, :concierge, :concierge_phone, :concierge_name, :concierge_email, :experiential_learning, :experiential_text, :plas, :plas_text, :accelerated, :accelerated_text, :summary, :level_expanded, :sed, :apply_now_url
+  permit_params :prog_title, :description, :summary, :subjectarea_id, :prog_level, :levelabb_id, :school_id, :duration, :delivery_method, :prerequisites, :program_url, :registration_url, :open_suny, :per_courses_online, :synchronous, :synchronous_text, :tutoring, :tutoring_name, :tutoring_phone, :tutoring_email, :tutoring_url, :helpdesk, :helpdesk_phone, :helpdesk_email, :helpdesk_url, :concierge, :concierge_phone, :concierge_name, :concierge_email, :experiential_learning, :experiential_text, :plas, :plas_text, :accelerated, :accelerated_text, :level_expanded, :sed, :apply_now_url
   #
   # or
   #
