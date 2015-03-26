@@ -5,7 +5,7 @@ ActiveAdmin.register Course do
  headers_rewrites: { :'subjectarea_id' => :subjectarea_id, :'generaleducation_id' => :generaleducation_id, :'start_date' => :start_date, :'end_date' => :end_date, :'code' => :code},
  before_batch_import: ->(importer) {
 
-                subject_names = importer.values_at(:subjectarea_id)
+                 subject_names = importer.values_at(:subjectarea_id)
                  # replacing subject area name with subject area id
                  subjects   = SubjectArea.where(name: subject_names).pluck(:name, :id)
                  options = Hash[*subjects.flatten] # #{"Jane" => 2, "John" => 1}
@@ -41,11 +41,11 @@ ActiveAdmin.register Course do
        #
 
                    
-                  importer.csv_lines.map! { |row| row << importer.model.catalog_id}
-                  importer.headers.merge!({:'catalog_id' => :catalog_id}) 
+                 # importer.csv_lines.map! { |row| row << importer.model.catalog_id}
+                #  importer.headers.merge!({:'catalog_id' => :catalog_id}) 
                   
-                  importer.csv_lines.map! { |row| row << importer.model.school_id}
-                  importer.headers.merge!({:'school_id' => :school_id})
+                 # importer.csv_lines.map! { |row| row << importer.model.school_id}
+                  #importer.headers.merge!({:'school_id' => :school_id})
                },
                after_batch_import: ->(importer) {
                   Course.where(title: "title").delete_all
@@ -54,7 +54,9 @@ ActiveAdmin.register Course do
  :catalog_id => nil,
  :school_id => nil,
  #:hint => "file will be imported with such header format: 'body','title','author'",
- :csv_headers => ["local_course_id", "subjectarea_id", "course_area", "prefix", "code", "section", "title",  "description", "prerequisites", "corequisites", "generaleducation_id", "level", "instructor", "credit", "start_date", "end_date", "books_url", "registration_url", "active", "course_method", "seats_available", "class_full"] 
+ #:csv_headers => ["local_course_id", "subjectarea_id", "course_area", "prefix", "code", "section", "title",  "description", "prerequisites", "corequisites", "generaleducation_id", "level", "instructor", "credit", "start_date", "end_date", "books_url", "registration_url", "active", "course_method", "seats_available", "class_full"]
+  # mass import
+:csv_headers => ["catalog_id", "local_course_id", "subjectarea_id", "school_id", "course_area", "prefix", "code", "section", "title",  "description", "prerequisites", "corequisites", "generaleducation_id", "level", "instructor", "credit", "start_date", "end_date", "books_url", "registration_url", "active", "course_method", "seats_available", "class_full"] 
  )
 
   # See permitted parameters documentation:
