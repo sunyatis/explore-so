@@ -78,17 +78,23 @@ select, input[type="file"] {
   background: linear-gradient(to bottom, #034d8f 0%, #003c78 100%) !important;
 }
 
+.reset_link a{
+  color: #034d8f !important;
+  text-decoration: none !important;
+}
+
 .navbar-nav>li {
-border-right: 1px solid #306aa2 !important;
+  border-right: 1px solid #306aa2 !important;
 }
 
 .navbar-inverse .navbar-nav>li>a {
-	color: #fff !important;
+   color: #fff !important;
+  text-decoration: none !important;
 }
 
 
-.navbar-inverse .navbar-nav>.open>a{
-	background-color: #01336f !important;
+.navbar-inverse .navbar-nav>.open>a{	
+   background-color: #01336f !important;
 }
 .service-div{
   float:left; width:15%;

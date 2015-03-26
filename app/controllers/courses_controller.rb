@@ -11,6 +11,7 @@ load_and_authorize_resource
            with_catalog_id: Catalog.options_for_select,
            with_generaleducation_id: GeneralEducation.options_for_select,
            with_subject_area_id: SubjectArea.options_for_select,
+           with_course_area: Course.options_for_course_area_select,
            with_level: Course.options_for_level_select,
            with_credit: Course.options_for_credit_select
          }#,

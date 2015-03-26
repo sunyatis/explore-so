@@ -17,6 +17,7 @@ class Course < ActiveRecord::Base
                  :with_start_date_gte,
                  :with_start_date,
                  :with_subject_area_id,
+                 :with_course_area,
                  :with_level,
                  :with_credit
                ]
@@ -83,6 +84,9 @@ class Course < ActiveRecord::Base
   scope :with_subject_area_id, lambda { |subjectarea_ids|
      where(:subjectarea_id => [*subjectarea_ids])
    }
+   scope :with_course_area, lambda { |course_areas|
+       where(:course_area => [*course_areas])
+     }
   scope :with_level, lambda { |levels|
     where(:level => [*levels])
   }
@@ -106,6 +110,9 @@ class Course < ActiveRecord::Base
    def self.options_for_credit_select
       Course.pluck(:credit).uniq
     end
+    def self.options_for_course_area_select
+        Course.pluck(:course_area).uniq
+      end
 
 
  #  scope :search_query, lambda { |query|
@@ -133,6 +140,8 @@ class Course < ActiveRecord::Base
  #      *terms.map { |e| [e] * num_or_conditions }.flatten
  #    )
  #  }
+ 
+ #Convert time on import
  def self.strptime(str)
    return nil unless str.present?
    #puts str
@@ -149,9 +158,10 @@ class Course < ActiveRecord::Base
      Date.strptime(str.to_s.strip, '%m/%d/%y')
    end
  end
+
   
-  def admin_permalink
-     admin_post_path(self)
-   end
+ def admin_permalink
+    admin_post_path(self)
+end
   
 end
