@@ -163,5 +163,11 @@ class Course < ActiveRecord::Base
  def admin_permalink
     admin_post_path(self)
 end
+
+# Get Catalog name
+def get_name(id)   
+  @catalog = Catalog.find(:all, :select => "name", :conditions => {:id => id})
+  return @catalog_name = @catalog.map{|c| c.name}.first
+end
   
 end

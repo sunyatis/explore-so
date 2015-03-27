@@ -53,11 +53,14 @@ load_and_authorize_resource
 
 
 
-      private
+
 
     def course_params
       params.require(:course).permit(:catalog_id, :title, :code, :description, :credit, :start_date, :end_date, :local_course_id, :prefix, :section, :prerequisites, :corequisites, :books_url, :registration_url, :active, :level, :school_id, :subjectarea_id, :course_area, :generaleducation_id, :instructor, :course_method, :seats_available, :class_full)
     end
+  
+  
+  private
 
 end
 

@@ -1,8 +1,10 @@
+<% title "#{@course.title} | #{get_catalog_name(@course.catalog_id)}"  %>
+<% description "#{@course.title} | #{get_catalog_name(@course.catalog_id)}"  %>
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Catalog:</strong>
-  <%= @course.catalog_id %>
+  <%= get_catalog_name(@course.catalog_id) %>
 </p>
 
 <p>
