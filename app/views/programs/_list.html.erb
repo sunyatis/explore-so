@@ -48,7 +48,7 @@
 
     <% @programs.each do |program| %>
       <tr>
-        <td><%= program.prog_title %></td>
+        <td><%= link_to program.prog_title, program %></td>
         <td><%= program.subject_area.name %></td>
         <td><%= program.level_expanded %></td>
         <td><%= program.level_abb.name %></td>
@@ -75,9 +75,6 @@
         <td><% if program.plas == true%><%= image_tag("/assets/pl42.png", :alt => "PLA's Available", :id => 'pla_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Prior Learning Assessment - Life experience counts. Students can receive credit toward their program based on their existing knowledge.')%> <% end %></td>
         <td> <% if program.accelerated == true%><%= image_tag("/assets/acc42.png", :alt => "Accelerated Degree Completion Available", :id => 'degree_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Accelerated Degree Completion - Looking for the option of early graduation? This program allows students to complete their studies ahead of schedule.')%><% end %></td>
         <td><%= program.prog_level %></td>
-        <td><%= link_to 'Show', program %></td>
-        <td><%= link_to 'Edit', edit_program_path(program) %></td>
-        <td><%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
       </tr>
     <% end %>

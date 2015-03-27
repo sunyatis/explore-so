@@ -83,10 +83,22 @@ select, input[type="file"] {
   text-decoration: none !important;
 }
 
+a:visited {
+   color: #00539C !important; 
+   text-decoration: none !important; 
+}
+
+a {
+  color: #034d8f !important;
+  text-decoration: none !important;
+}
+
 .navbar-nav>li {
   border-right: 1px solid #306aa2 !important;
 }
-
+.navbar-inverse .navbar-brand {
+ color: #fff !important
+}
 .navbar-inverse .navbar-nav>li>a {
    color: #fff !important;
   text-decoration: none !important;
