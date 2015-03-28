@@ -1,5 +1,5 @@
-<% title "#{@course.title} | #{get_catalog_name(@course.catalog_id)}"  %>
-<% description "#{@course.title} | #{get_catalog_name(@course.catalog_id)}"  %>
+<% title "#{@course.title} | #{@course.catalog.name}"  %>
+<% description "(#{@course.prefix}#{@course.code}-#{@course.section}) #{@course.title} - #{@course.credit} credits | #{@course.school.name}"  %>
 <p id="notice"><%= notice %></p>
 
 <p>

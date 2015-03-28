@@ -13,8 +13,5 @@ module ApplicationHelper
       content_for(:description) {page_meta}
     end
   
-    def get_catalog_name(id)
-      Catalog.find(id).name
-    end
   
 end
