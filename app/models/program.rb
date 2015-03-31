@@ -154,7 +154,7 @@ class Program < ActiveRecord::Base
    end
    
    #friendly id
-   friendly_id :generate_custom_slug, use: :slugged
+   friendly_id :generate_custom_slug, use:  [:slugged, :finders]
 
    def generate_custom_slug
        "#{get_school_name(school_id)}-#{prog_title}-#{get_level_abb_name(levelabb_id)}"
