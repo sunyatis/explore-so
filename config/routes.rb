@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/courses/my_courses", :to => "courses#my_courses"
   resources :courses
 
+
   resources :catalogs
 
   get "/programs/my_programs", :to => "programs#my_programs"
@@ -31,7 +32,6 @@ Rails.application.routes.draw do
   
   
   resources :users
-  
   
   
   

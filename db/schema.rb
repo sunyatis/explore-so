@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150318115757) do
+ActiveRecord::Schema.define(version: 20150328155802) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -79,7 +79,10 @@ ActiveRecord::Schema.define(version: 20150318115757) do
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "generaleducation_id"
+    t.string   "slug"
   end
+
+  add_index "courses", ["slug"], name: "index_courses_on_slug", unique: true
 
   create_table "general_educations", force: :cascade do |t|
     t.string   "name"
@@ -148,7 +151,10 @@ ActiveRecord::Schema.define(version: 20150318115757) do
     t.string  "level_expanded"
     t.integer "sed"
     t.string  "apply_now_url"
+    t.string  "slug"
   end
+
+  add_index "programs", ["slug"], name: "index_programs_on_slug", unique: true
 
   create_table "schools", force: :cascade do |t|
     t.string   "name"
@@ -163,7 +169,10 @@ ActiveRecord::Schema.define(version: 20150318115757) do
     t.string   "financial_aid_url"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.string   "slug"
   end
+
+  add_index "schools", ["slug"], name: "index_schools_on_slug", unique: true
 
   create_table "sessions", force: :cascade do |t|
     t.string   "session_id", null: false

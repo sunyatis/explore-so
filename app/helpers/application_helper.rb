@@ -12,6 +12,7 @@ module ApplicationHelper
     def description(page_meta)
       content_for(:description) {page_meta}
     end
-  
+
+
   
 end

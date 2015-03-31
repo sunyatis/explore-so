@@ -1,4 +1,6 @@
 class Program < ActiveRecord::Base
+  extend FriendlyId
+  
   belongs_to :school, :foreign_key => 'school_id', :class_name => "School"
   belongs_to :level_abb, :foreign_key => 'levelabb_id', :class_name => "LevelAbb"
   belongs_to :subject_area, :foreign_key => 'subjectarea_id' , :class_name => "SubjectArea"
@@ -140,6 +142,22 @@ class Program < ActiveRecord::Base
    
   def admin_permalink
      admin_post_path(self)
+   end
+   
+   # Get School name
+   def get_school_name(id)
+     School.find(id).name
+   end
+   # Get School name
+   def get_level_abb_name(id)
+     LevelAbb.find(id).name
+   end
+   
+   #friendly id
+   friendly_id :generate_custom_slug, use: :slugged
+
+   def generate_custom_slug
+       "#{get_school_name(school_id)}-#{prog_title}-#{get_level_abb_name(levelabb_id)}"
    end
   
 end

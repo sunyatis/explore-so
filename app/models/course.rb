@@ -1,4 +1,6 @@
 class Course < ActiveRecord::Base
+  extend FriendlyId
+  
   belongs_to :subject_area, :foreign_key => 'subjectarea_id' , :class_name => "SubjectArea"
   belongs_to :school, :foreign_key => 'school_id', :class_name => "School"
   belongs_to :catalog, :foreign_key => 'catalog_id', :class_name => "Catalog"
@@ -165,9 +167,20 @@ class Course < ActiveRecord::Base
 end
 
 # Get Catalog name
-def get_name(id)   
-  @catalog = Catalog.find(:all, :select => "name", :conditions => {:id => id})
-  return @catalog_name = @catalog.map{|c| c.name}.first
+def get_catalog_name(id)
+  Catalog.find(id).name
+end
+# Get School name
+def get_school_name(id)
+  School.find(id).name
+end
+
+
+#friendly ids
+friendly_id :generate_custom_slug, use:  [:slugged, :finders]
+
+def generate_custom_slug
+    "#{get_school_name(school_id)}-#{title}-#{code}-#{section}-#{get_catalog_name(catalog_id)}"
 end
   
 end
