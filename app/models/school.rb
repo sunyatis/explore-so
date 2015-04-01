@@ -14,7 +14,7 @@ class School < ActiveRecord::Base
     end
     
     #friendly id
-     friendly_id :generate_custom_slug, use: :slugged
+     friendly_id :generate_custom_slug, use:  [:slugged, :finders]
 
      def generate_custom_slug
          "#{name}"
