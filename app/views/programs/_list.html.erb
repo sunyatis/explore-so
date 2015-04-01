@@ -52,7 +52,7 @@
         <td><%= program.subject_area.name %></td>
         <td><%= program.level_expanded %></td>
         <td><%= program.level_abb.name %></td>
-        <td><%= program.school.name %></td>
+        <td><%= link_to program.school.name, school_path(program.school.slug) %></td>
         <td><%= program.duration %></td>
         <td><%= program.delivery_method %></td>
         <td><% if program.open_suny == 'Yes' %><%= link_to image_tag("/assets/os42.png", :alt => "Powered by Open SUNY+"), 'http://www.open.suny.edu', :target => '_blank' %><% end %></td>
