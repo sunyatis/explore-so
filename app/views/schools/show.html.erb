@@ -1,3 +1,5 @@
 <h3>School</h3>
 <p>Name: <%= @school.name if @school.name %></p>
 
+<%= image_tag @school.image.url(:medium), alt: @school.name, class: "school_logo" %>
+

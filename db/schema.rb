@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150328155802) do
+ActiveRecord::Schema.define(version: 20150401202043) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -79,10 +79,10 @@ ActiveRecord::Schema.define(version: 20150328155802) do
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "generaleducation_id"
-    t.string   "slug"
+    t.text     "slug"
   end
 
-  add_index "courses", ["slug"], name: "index_courses_on_slug", unique: true
+  add_index "courses", ["slug"], name: "index_courses_on_slug"
 
   create_table "general_educations", force: :cascade do |t|
     t.string   "name"
@@ -151,7 +151,7 @@ ActiveRecord::Schema.define(version: 20150328155802) do
     t.string  "level_expanded"
     t.integer "sed"
     t.string  "apply_now_url"
-    t.string  "slug"
+    t.text    "slug"
   end
 
   add_index "programs", ["slug"], name: "index_programs_on_slug", unique: true
@@ -167,9 +167,13 @@ ActiveRecord::Schema.define(version: 20150328155802) do
     t.string   "registration_url"
     t.string   "tuition_url"
     t.string   "financial_aid_url"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "slug"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "schools", ["slug"], name: "index_schools_on_slug", unique: true

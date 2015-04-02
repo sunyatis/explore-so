@@ -21,6 +21,7 @@ gem 'activerecord-session_store'  #to avoid cookie store
 #gem 'will_paginate-bootstrap' # add pages
 gem 'kaminari'  #used by active admin for pagination
 gem 'friendly_id', '~> 5.1.0' #Use friendlyId for SEO-friendly URLS
+gem "paperclip", "~> 4.2" #Upload images
 
 
 group :development, :test do
