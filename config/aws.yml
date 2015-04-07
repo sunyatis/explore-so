@@ -1,3 +1,6 @@
 development:
     access_key_id: "AKIAIG4LD54G4IH7T4AA"
     secret_access_key: "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"
+production:
+    access_key_id: "AKIAIG4LD54G4IH7T4AA"
+    secret_access_key: "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"
