@@ -2,7 +2,12 @@ class SchoolsController < ApplicationController
 load_and_authorize_resource
 
 def show
-   @schools = School.find(params[:id]).order(:name)
+   @schools = School.order(:name)
+ end
+
+
+def show
+   @schools = School.find(params[:id])
  end
 
 

@@ -3,10 +3,12 @@
     <h1>Schools</h1>
           <table>
           <% @schools.in_groups(30, false) do |group| %>
-          <tr>
-            <% group.each do |school| %>
-            <td align="center"><%= image_tag school.image.url(:thumb), alt: school.name %><br/><%= link_to school.name, school %></td>
+            <tr>
+              <% group.each do |school| %>
+              <td align="center"><%= image_tag school.image.url(:thumb), alt: school.name %><br/><%= link_to school.name, school %></td>
+              <% end %>
+            </tr>
             <% end %>
-          </tr>
-          <% end %>
           </table>
+  </div>
+</div>
