@@ -1,14 +1,12 @@
 <div class="container">
   <div class="row">
-    <h3>Schools</h3>
-    <div class="column">
-      
-          <% @schools.each do |school| %>
-
-              <div><%= link_to school.name, school %></div><div><%= image_tag school.image.url(:thumb), alt: school.name %></div>
-
+    <h1>Schools</h1>
+          <table>
+          <% @schools.in_groups(30, false) do |group| %>
+          <tr>
+            <% group.each do |school| %>
+            <td align="center"><%= image_tag school.image.url(:thumb), alt: school.name %><br/><%= link_to school.name, school %></td>
+            <% end %>
+          </tr>
           <% end %>
-
-    </div>
-  </div>
-</div>
+          </table>
