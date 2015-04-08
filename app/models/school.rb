@@ -5,7 +5,7 @@ class School < ActiveRecord::Base
     has_many :programs
     has_many :courses
 
-    has_attached_file :image, :styles => { :medium => "700x900>", :thumb => "120x80>"}, default_url: "/images/:style/missing.png"
+    has_attached_file :image, :styles => { :medium => "700x900>", :thumb => "120x80>"}, default_url: "/assets/images/:style/missing.png"
     validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
     #has_paper_trail
 
