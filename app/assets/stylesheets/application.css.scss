@@ -15,6 +15,7 @@
  *= require bootstrap3/bootstrap-multiselect
  *= require bootstrap-datepicker3
  *= require bootstrap3/bootstrap
+ *= require ribbon
  */
 
 
@@ -131,4 +132,16 @@ a {
   padding:0;
   display:block;
   margin:auto;
+}
+
+#filterrific_with_school_id{
+ width: 250px;
+}
+
+
+.os-logo {
+    float: right;
+    margin-top: -60px;
+    margin-bottom: 0px!important;
+    max-width: 146px;
 }

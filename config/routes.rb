@@ -1,16 +1,20 @@
 Rails.application.routes.draw do
-  resources :general_educations
-
-  get "/courses/my_courses", :to => "courses#my_courses"
-  resources :courses
-
-
-  resources :catalogs
-
-  get "/programs/my_programs", :to => "programs#my_programs"
-  resources :programs
   
+  get "/courses/my_courses", :to => "courses#my_courses"
+  get "/courses/catalogs", :to => "courses#catalogs"
+  get "/courses/course_areas", :to => "courses#course_areas"
+  get "/courses/schools", :to => "courses#schools"
+  get "/programs/my_programs", :to => "programs#my_programs"
+  get "programs/open_suny_programs", :to => "programs#open_suny_programs"
+  get "programs/subject_areas", :to => "programs#subject_areas"
+  get "programs/schools", :to => "programs#schools"
+  get "programs/levels", :to => "programs#levels"
+  resources :programs
+  resources :general_educations
+  resources :courses
   resources :schools
+  resources :catalogs
+  
 
   #devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

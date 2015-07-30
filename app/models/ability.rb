@@ -35,7 +35,7 @@ class Ability
       elsif user.role == 'System Administrator'
           can :read, ActiveAdmin::Page, :name => "Dashboard"
           can :manage, :all
-       elsif user.role == 'Campus Contact'
+      elsif user.role == 'Campus Contact'
           can [:my_programs, :read], Program, :school_id => user.school_id
           can [:my_courses, :read], Course, :school_id => user.school_id
           can :update, Program, :school_id => user.school_id
@@ -43,7 +43,13 @@ class Ability
        else
          can :read, Program
          can :read, Course
-           
+         can [:open_suny_programs, :read], Program
+         can [:subject_areas, :read], Program
+         can [:schools, :read], Program
+         can [:levels, :read], Program
+         can [:catalogs, :read], Course
+         can [:course_areas, :read], Course
+         can [:schools, :read], Course
     end
     
     

@@ -1,0 +1,14 @@
+<h2>All Subject Areas</h2>
+<p>Looking for a degree program in a specific subject area? 
+  SUNY offers programs in most traditional subject areas along with some that you won't find anywhere else. 
+  Choose an area that interests you from the list below to get started!</p>
+<table class="table table-striped table-hover table-bordered">
+  <% @subject_areas.each_slice(2) do |row| %>
+  <tr>
+     <% row.each do |subject_area| %>
+    <td class="subject_areas"><a href="/programs?filterrific[with_subject_area_id]=<%= subject_area.id %>" ><%= subject_area.name %></a></td>
+    <%  end %>
+    </tr>
+  <% end %>
+</table>
+

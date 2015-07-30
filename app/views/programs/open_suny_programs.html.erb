@@ -1,0 +1,22 @@
+<h2>All degrees powered by Open SUNY+</h2>
+<p>In addition to housing nearly 400 online-enabled degrees and 12,000 course sections, 
+  Open SUNY is proud to feature 64 degrees that are powered by <a href="http://open.suny.edu/about/open-suny+/" target="_blank">Open SUNY+</a>.
+  These degrees show that SUNY is an industry leader in online-enabled education. 
+  Current powered by <a href="http://open.suny.edu/about/open-suny+/" target="_blank">Open SUNY+</a> degrees are listed below. Click on a program to learn more!
+
+<p>    <% @schools.each do |school| %>
+     <% #if Point.school_count(event.id, @fy) > 0%>
+        <strong><%= school.name %></strong>
+
+        <table class="table table-striped table-hover table-bordered ">
+        <% school.programs.each do |prog| %>
+        <% if prog.open_suny == 'Yes'%>
+        <tr>
+          <td><%= link_to prog.prog_title, program_path(:id => prog.id) %></td>
+        </tr>
+        <% end %>
+        <% end %>
+        </table>
+    <% #end %>
+<% end %>
+</p>

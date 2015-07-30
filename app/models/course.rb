@@ -113,7 +113,7 @@ class Course < ActiveRecord::Base
       Course.pluck(:credit).uniq
     end
     def self.options_for_course_area_select
-        Course.pluck(:course_area).uniq
+        Course.order(:course_area).pluck(:course_area).uniq
       end
 
 

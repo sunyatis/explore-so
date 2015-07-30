@@ -48,7 +48,15 @@ load_and_authorize_resource
       @courses = Course.accessible_by(current_ability, :read)
     end
 
-
+    def catalogs
+      @catalogs = Catalog.where(:active => true)
+    end
+    def course_areas
+       @course_areas = Course.order(:course_area).pluck(:course_area).uniq
+    end
+    def schools
+      @schools = School.all
+    end
 
 
 

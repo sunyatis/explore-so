@@ -31,7 +31,7 @@
       <th>School</th>
       <th>Duration</th>
       <th>Delivery method</th>
-      <th>Open suny</th>
+      <th>Open SUNY</th>
       <th>Per courses online</th>
       <% if false %>
       <th>Synchronous</th>
@@ -53,7 +53,7 @@
         <td><%= program.level_expanded %></td>
         <td><%= program.level_abb.name %></td>
         <td><%= link_to program.school.name, school_path(program.school.slug) %></td>
-        <td><%= program.duration %></td>
+        <td><%= program.duration %> credits</td>
         <td><%= program.delivery_method %></td>
         <td><% if program.open_suny == 'Yes' %><%= link_to image_tag("/assets/os42.png", :alt => "Powered by Open SUNY+"), 'http://www.open.suny.edu', :target => '_blank' %><% end %></td>
         <td> <% if program.per_courses_online == "25" %>

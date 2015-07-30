@@ -1,5 +1,5 @@
 ActiveAdmin.register Program do
-
+   menu parent: 'Manage Programs', label: 'Programs'
   	active_admin_import :validate => true,
   	:template => 'admin/program_import' ,
      headers_rewrites: { :'subjectarea_id' => :subjectarea_id, :'levelabb_id' => :levelabb_id}, #:'school_id' => :school_id}, mass import

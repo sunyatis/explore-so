@@ -1,0 +1,15 @@
+<h2>All Campuses</h2>
+<p>Interested in signing up for a program at a specific campus? 
+  If you’ve had your mind set on attending a specific SUNY campus, you can use the listing below to see what offerings 
+  are available from the campus that most interests you.</p>
+<table class="table table-striped table-hover table-bordered">
+  
+  <% @schools.each_slice(2) do |row| %>
+  <tr>
+     <% row.each do |school| %>
+    <td align="center" ><a href="/programs?filterrific[with_school_id]=<%=school.id%>" ><%= image_tag(school.image.url(:thumb), :align=> "center") %></a>
+    <td  valign="center" class="campuses"><a href="/programs?filterrific[with_school_id]=<%=school.id%>" ><%= school.name %></a></td>
+    <%  end %>
+    </tr>
+  <% end %>
+</table>

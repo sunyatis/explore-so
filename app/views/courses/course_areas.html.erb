@@ -1,0 +1,14 @@
+<h2>All Course Areas</h2>
+<p>Looking to take a course in a specific subject area? 
+  Finding courses in areas that interest you most has never been easier. 
+  Click a subject area below to see all of the course options available in that area. 
+</p>
+<table class="table table-striped table-hover table-bordered">
+  <% @course_areas.each_slice(2) do |row| %>
+  <tr>
+     <% row.each do |course| %>
+    <td class="course_areas"><a href="/courses?filterrific[with_course_area]=<%=course%>"><%= course %></td>
+    <%  end %>
+    </tr>
+  <% end %>
+</table>

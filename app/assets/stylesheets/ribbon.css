@@ -1,0 +1,138 @@
+/* ribbon style */
+
+ .ribbon-wrapper {
+	position: relative;
+}
+  .ribbon-front {
+	background-color: #004c93;	height: 40px;
+	width: 250px;
+	position: relative;
+	left:-45px;
+	z-index: 2;
+}
+
+	.ribbon-front.suny{
+		width:350px !important;
+	}
+	
+	 @media screen and (max-width: 480px) {
+		.ribbon-front.suny{
+			width:342px !important;
+		}
+		.statetext_ribbon {
+			padding-left:3px !important;
+		}
+
+	}
+
+
+  .ribbon-edge-topleft,
+  .ribbon-edge-topright,
+  .ribbon-edge-bottomleft,
+  .ribbon-edge-bottomright {
+	position: absolute;
+	z-index: 1;
+	border-style:solid;
+	height:0px;
+	width:0px;
+}
+
+  .ribbon-edge-topleft,
+  .ribbon-edge-topright {
+}
+
+  .ribbon-edge-bottomleft,
+  .ribbon-edge-bottomright {
+	top: 40px;
+}
+
+  .ribbon-edge-topleft,
+  .ribbon-edge-bottomleft {
+	left: -45px;
+	border-color: transparent #003c74 transparent transparent;
+}
+
+  .ribbon-edge-topleft {
+	top: 0px;
+	border-width: 0px 20px 0 0;
+}
+  .ribbon-edge-bottomleft {
+	border-width: 0 20px 10px 0;
+}
+
+  .ribbon-edge-topright,
+  .ribbon-edge-bottomright {
+	left: 20px;
+	border-color: transparent transparent transparent #003c74;
+}
+
+  .ribbon-edge-topright {
+	top: 0px;
+	border-width: 0px 0 0 0px;
+}
+  .ribbon-edge-bottomright {
+	border-width: 0 0 0px 0px;
+}
+
+  .ribbon-back-left {
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	width: 0px;
+	height: 40px;
+		z-index: 0;
+}
+
+  .ribbon-back-right {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 0px;
+	height: 40px;
+		z-index: 0;
+}
+
+.suny_ribbon{
+	font-size: 16px;
+	 margin-top: 17px;
+	 padding-left: 24px;
+	  padding-top: 10px;
+}
+
+.sunytext_ribbon{
+	color:#ffffff;
+	float:left;
+	margin-left: -1px;
+}
+
+.statetext_ribbon{
+	 float:right;
+	 height:40px;
+	 margin-top:-10px;
+	 padding-top:10px;
+	 padding-left:5px;
+	padding-right:5px; 
+	background: #ffd41d;
+    color: #034d8f;
+/* margin-left: 80px;*/
+}
+
+.sunytext_ribbon a{
+	color:#ffffff !important;
+}
+.sunytext_ribbon a:hover{
+	color:#ffffff !important;
+}
+.what-is{
+	 font-size: 16px; 
+	margin-top: 17px; 
+	padding-left: 29px; 
+	color:#ffffff !important;
+	padding-top: 10px;
+}
+.what-is a{
+	color:#ffffff !important;
+}
+.what-is a:hover{
+	color:#ffffff !important;
+}

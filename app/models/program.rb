@@ -69,9 +69,6 @@ class Program < ActiveRecord::Base
    scope :with_school_id, lambda { |school_ids|
      where(:school_id => [*school_ids])
    }
-   scope :with_created_at_gte, lambda { |ref_date|
-     where('points_transactions.created_at >= ?', ref_date)
-   }
    scope :with_level, lambda { |level_expandeds|
      where(:level_expanded => [*level_expandeds])
    }

@@ -1,5 +1,5 @@
 ActiveAdmin.register Course do
- 
+ menu parent: 'Manage Courses', label: 'Courses'
  active_admin_import :validate => false,
  :template => 'admin/course_import' ,
  headers_rewrites: { :'subjectarea_id' => :subjectarea_id, :'generaleducation_id' => :generaleducation_id, :'start_date' => :start_date, :'end_date' => :end_date, :'code' => :code},
@@ -58,6 +58,59 @@ ActiveAdmin.register Course do
   # mass import
 #:csv_headers => ["catalog_id", "local_course_id", "subjectarea_id", "school_id", "course_area", "prefix", "code", "section", "title",  "description", "prerequisites", "corequisites", "generaleducation_id", "level", "instructor", "credit", "start_date", "end_date", "books_url", "registration_url", "active", "course_method", "seats_available", "class_full"] 
  )
+
+
+  
+  filter :catalog_id, as: :select, :collection => Catalog.pluck(:name, :id)
+  filter :school_id, as: :select, :collection => School.pluck(:name, :id)
+  filter :subjectarea_id, as: :select, :collection => SubjectArea.pluck(:name, :id)
+  filter :generaleducation_id, as: :select, :collection => GeneralEducation.pluck(:name, :id)
+  filter :title
+  filter :code
+  filter :description
+  filter :start_date
+  filter :end_fate
+  filter :local_course_id
+  filter :prefix
+  filter :section
+  filter :prerequisites
+  filter :corequisites
+  filter :books_url
+  filter :registration_url
+  filter :active
+  filter :level
+  filter :course_area
+  filter :instructor
+  filter :course_method
+  filter :seats_available
+  filter :class_full
+  
+  index do
+    id_column
+    column :catalog_id
+     column :school_id
+     column :subjectarea_id
+     column :generaleducation_id
+     column :title
+     column :code
+     column :start_date
+     column :end_fate
+     column :local_course_id
+     column :prefix
+     column :section
+     column :active
+     column :level
+     column :course_area
+     column :instructor
+     column :course_method
+     column :seats_available
+     column :class_full
+    actions
+  end
+   
+  
+
+
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

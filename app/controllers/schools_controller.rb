@@ -8,7 +8,7 @@ def show
 
 def show
    @schools = School.find(params[:id])
- end
+end
 
 
 

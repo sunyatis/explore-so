@@ -1,0 +1,10 @@
+<h2>All Levels</h2>
+<table class="table table-striped table-hover table-bordered">
+<% @ed_levels.each_slice(2) do |row| %>
+<tr>
+   <% row.each do |ed_level| %>
+  <td class="ed_level"><%= ed_level %> Programs</td>
+  <%  end %>
+  </tr>
+<% end %>
+</table>

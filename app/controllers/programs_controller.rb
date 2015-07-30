@@ -39,14 +39,28 @@ def index
   def my_programs
     @programs = Program.page(params[:page]).accessible_by(current_ability, :read)
   end
-    def update
-        program = Program.find(params[:id])
-        if program.update(program_params)
-          redirect_to programs_path
-        else
-          render 'edit'
-        end
+  def open_suny_programs
+    @schools = School.joins(:programs).where("programs.school_id = schools.id and programs.open_suny = 'Yes'").uniq
+    @programs = Program.where(:open_suny => 'Yes').uniq
+  end
+  def subject_areas
+     @subject_areas = SubjectArea.all
+  end
+  def schools
+    @schools = School.all
+  end
+  def levels
+    @ed_levels = Program.uniq.pluck(:level_expanded).sort
+  end 
+  
+  def update
+    program = Program.find(params[:id])
+      if program.update(program_params)
+        redirect_to programs_path
+      else
+        render 'edit'
       end
+  end
 
 
 

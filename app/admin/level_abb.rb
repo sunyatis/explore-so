@@ -1,4 +1,5 @@
 ActiveAdmin.register LevelAbb do
+  menu parent: 'Manage Programs', label: 'Degree Abbreviations'
   active_admin_import :validate => true,
   :template_object => ActiveAdminImport::Model.new(
   #:hint => "file will be imported with such header format: 'body','title','author'",
