@@ -21,7 +21,9 @@ class Program < ActiveRecord::Base
                  :with_subject_area_id,
                  :with_prog_title,
                  :with_delivery,
-                 :with_os
+                 :with_os,
+                 :with_helpdesk,
+                 :with_concierge
                ]
 
    # default for will_paginate
@@ -84,6 +86,12 @@ class Program < ActiveRecord::Base
     scope :with_os, lambda { |open_sunys|
       where(:open_suny => [*open_sunys])
     }
+    scope :with_helpdesk, lambda { |helpdesks| 
+      where(:helpdesk => [*helpdesks])
+    }
+    scope :with_concierge, lambda { |concierges| 
+      where(:concierge => [*concierges])
+    }
    
    def self.options_for_sorted_by
      [
@@ -110,6 +118,18 @@ class Program < ActiveRecord::Base
        ['No', 'No'],
      ]
    end
+   def self.options_for_helpdesk
+      [
+       ['Yes', 't'],
+        ['No', 'f'],
+      ]
+   end
+   def self.options_for_concierge
+     [
+       ['Yes', 't'],
+       ['No', 'f'],
+     ]
+  end
 
  #  scope :search_query, lambda { |query|
  #    return nil  if query.blank?

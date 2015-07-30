@@ -12,7 +12,9 @@ def index
          with_subject_area_id: SubjectArea.options_for_select,
          with_prog_title: Program.options_for_prog_title,
          with_delivery: Program.options_for_delivery_method,
-         with_os: Program.options_for_os
+         with_os: Program.options_for_os,
+         with_helpdesk: Program.options_for_helpdesk,
+         with_concierge: Program.options_for_concierge
        }#,
 #        persistence_id: 'shared_key',
 #              default_filter_params: {},
