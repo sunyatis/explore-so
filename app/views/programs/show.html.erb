@@ -72,7 +72,7 @@
 <div class="col-md-3 col-md-offset-2">
   <div class="panel panel-default">
       <div class="panel-heading">
-          <h2 class="panel-title" style="text-align:center;"><a href="<%= @program.apply_now_url %>" target="_blank">Apply Now!</a></h2>
+          <h2 class="panel-title" style="text-align:center;" ><a href="<%= @program.apply_now_url %>" class="apply_now" target="_blank">Apply Now!</a></h2>
       </div>
   </div>
 </div>
@@ -110,16 +110,19 @@
 </div>
 
 <div class="col-md-3 col-md-offset-2">
-  <div class="list-group">
-    <strong><a href="#" class="list-group-item active " target="_blank">Important Links</a></strong>
-    <a href="<%= @program.school.school_url %>" class="list-group-item " target="_blank">School Website</a>
-    <a href="<%= @program.program_url %>" class="list-group-item " target="_blank">Program Details</a>
-    <a href="<%= @program.registration_url %>" class="list-group-item" target="_blank">Registration</a>
-    <a href="<%= @program.school.tuition_url %>" class="list-group-item " target="_blank">Cost & Fees</a>
-    <a href="<%= @program.school.financial_aid_url %>" class="list-group-item " target="_blank">Financial Aid</a>
-  </div>
+  <div class="panel panel-default">
+      <div class="panel-heading">
+          <h3 class="panel-title">Important Links</h3>
+      </div>
+      <div class="list-group">
+        <a href="<%= @program.school.school_url %>" class="list-group-item " target="_blank">School Website</a>
+        <a href="<%= @program.program_url %>" class="list-group-item " target="_blank">Program Details</a>
+        <a href="<%= @program.registration_url %>" class="list-group-item" target="_blank">Registration</a>
+        <a href="<%= @program.school.tuition_url %>" class="list-group-item " target="_blank">Cost & Fees</a>
+        <a href="<%= @program.school.financial_aid_url %>" class="list-group-item " target="_blank">Financial Aid</a>
+      </div>
+    </div>
 </div>
-
 
 <div class="col-md-7">
    <p>
