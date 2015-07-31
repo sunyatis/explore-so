@@ -16,7 +16,10 @@ def index
          with_helpdesk: Program.options_for_helpdesk,
          with_concierge: Program.options_for_concierge,
          with_synchronous: Program.options_for_synchronous,
-         with_experiential_learning: Program.options_for_experiential_learning
+         with_experiential_learning: Program.options_for_experiential_learning,
+         with_plas: Program.options_for_plas,
+         with_accelerated: Program.options_for_accelerated,
+         with_tutoring: Program.options_for_tutoring
        }#,
 #        persistence_id: 'shared_key',
 #              default_filter_params: {},

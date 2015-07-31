@@ -25,7 +25,10 @@ class Program < ActiveRecord::Base
                  :with_helpdesk,
                  :with_concierge,
                  :with_synchronous,
-                 :with_experiential_learning
+                 :with_experiential_learning,
+                 :with_plas,
+                 :with_accelerated,
+                 :with_tutoring
                ]
 
    # default for will_paginate
@@ -100,7 +103,15 @@ class Program < ActiveRecord::Base
     scope :with_experiential_learning, lambda { |experiential_learnings| 
       where(:experiential_learning => [*experiential_learnings])
     }
-    
+    scope :with_plas, lambda { |plases| 
+      where(:plas => [*plases])
+    }
+    scope :with_accelerated, lambda { |accelerateds|
+      where(:accelerated => [*accelerateds])
+    }
+    scope :with_tutoring, lambda { |tutorings|
+      where(:tutoring => [*tutorings])
+    }
     
    def self.options_for_sorted_by
      [
@@ -151,7 +162,24 @@ class Program < ActiveRecord::Base
        ['No', 'f'],
      ]
   end
-  
+  def self.options_for_plas
+     [
+       ['Yes', 't'],
+       ['No', 'f'],
+     ]
+  end
+  def self.options_for_accelerated
+    [
+       ['Yes', 't'],
+       ['No', 'f'],
+    ]
+  end
+  def self.options_for_tutoring
+    [
+       ['Yes', 't'],
+       ['No', 'f'],
+    ]
+  end
   
 
  #  scope :search_query, lambda { |query|
