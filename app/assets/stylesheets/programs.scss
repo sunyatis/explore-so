@@ -1,3 +1,13 @@
 // Place all the styles related to the Programs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.open_icons{
+/*float: left;*/
+display: inline-block;
+padding: 5px;
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+    color: #fff !important;
+}

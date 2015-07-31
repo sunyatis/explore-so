@@ -3,7 +3,7 @@
 <% @ed_levels.each_slice(2) do |row| %>
 <tr>
    <% row.each do |ed_level| %>
-  <td class="ed_level"><%= ed_level %> Programs</td>
+  <td class="ed_level"><a href="/programs?filterrific[with_level]=<%= ed_level %>" ><%= ed_level %> Programs</a> </td>level_expanded
   <%  end %>
   </tr>
 <% end %>

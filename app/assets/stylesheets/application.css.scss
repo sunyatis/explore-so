@@ -16,12 +16,13 @@
  *= require bootstrap-datepicker3
  *= require bootstrap3/bootstrap
  *= require ribbon
+ *= require chardinjs
+ *= require programs
  */
 
 
 @import 'components/filterrific_filter';
 @import 'components/chardinjs_overrides.css.scss';
-@import 'chardinjs.css';
 
 a {
   color: #00539C;
