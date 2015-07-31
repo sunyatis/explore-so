@@ -14,7 +14,9 @@ def index
          with_delivery: Program.options_for_delivery_method,
          with_os: Program.options_for_os,
          with_helpdesk: Program.options_for_helpdesk,
-         with_concierge: Program.options_for_concierge
+         with_concierge: Program.options_for_concierge,
+         with_synchronous: Program.options_for_synchronous,
+         with_experiential_learning: Program.options_for_experiential_learning
        }#,
 #        persistence_id: 'shared_key',
 #              default_filter_params: {},

@@ -23,7 +23,9 @@ class Program < ActiveRecord::Base
                  :with_delivery,
                  :with_os,
                  :with_helpdesk,
-                 :with_concierge
+                 :with_concierge,
+                 :with_synchronous,
+                 :with_experiential_learning
                ]
 
    # default for will_paginate
@@ -91,8 +93,15 @@ class Program < ActiveRecord::Base
     }
     scope :with_concierge, lambda { |concierges| 
       where(:concierge => [*concierges])
+    } 
+    scope :with_synchronous, lambda { |synchronouses| 
+      where(:synchronous => [*synchronouses])
     }
-   
+    scope :with_experiential_learning, lambda { |experiential_learnings| 
+      where(:experiential_learning => [*experiential_learnings])
+    }
+    
+    
    def self.options_for_sorted_by
      [
        ['Program Tite (A-Z)', 'prog_title_asc'],
@@ -130,6 +139,20 @@ class Program < ActiveRecord::Base
        ['No', 'f'],
      ]
   end
+   def self.options_for_synchronous
+     [
+       ['Yes', 't'],
+       ['No', 'f'],
+     ]
+  end
+  def self.options_for_experiential_learning
+     [
+       ['Yes', 't'],
+       ['No', 'f'],
+     ]
+  end
+  
+  
 
  #  scope :search_query, lambda { |query|
  #    return nil  if query.blank?
