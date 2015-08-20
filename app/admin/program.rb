@@ -58,7 +58,7 @@ ActiveAdmin.register Program do
   f.input :description
   f.input :subjectarea_id, as: :select, :collection => SubjectArea.pluck(:name, :id)
   f.input :prog_level,  :as => :select,  :collection => ["Undergraduate", "Graduate"]
-  f.input :category, as: :select, :collection => Category.pluck(:name, :id)
+  f.input :cat_id, as: :select, :collection => Category.pluck(:name, :id)
   f.input :levelabb_id
   f.input :school_id, as: :select, :collection => School.pluck(:name, :id)
   f.input :duration

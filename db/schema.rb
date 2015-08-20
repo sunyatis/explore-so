@@ -160,7 +160,6 @@ ActiveRecord::Schema.define(version: 20150820172725) do
     t.integer "sed"
     t.string  "apply_now_url"
     t.text    "slug"
-    t.boolean "dsrip"
     t.integer "cat_id"
   end
 
