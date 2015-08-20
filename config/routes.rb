@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
 
+
   get "/courses/my_courses", :to => "courses#my_courses"
   get "/courses/catalogs", :to => "courses#catalogs"
   get "/courses/course_areas", :to => "courses#course_areas"
@@ -15,15 +16,11 @@ Rails.application.routes.draw do
   resources :courses
   resources :schools
   resources :catalogs
-
+  resources :categories  
   
 
   #devise_for :admin_users, ActiveAdmin::Devise.config
-  begin
-    ActiveAdmin.routes(self)
-  rescue Exception => e
-    puts "ActiveAdmin: #{e.class}: #{e}"
-  end
+  ActiveAdmin.routes(self)
   root to: 'visitors#index'
   #devise_for :users
   
