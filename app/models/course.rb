@@ -5,6 +5,7 @@ class Course < ActiveRecord::Base
   belongs_to :school, :foreign_key => 'school_id', :class_name => "School"
   belongs_to :catalog, :foreign_key => 'catalog_id', :class_name => "Catalog"
   belongs_to :general_education, :foreign_key => 'generaleducation_id' , :class_name => "GeneralEducation"
+  belongs_to :category, :foreign_key => 'cat_id', :class_name => "Category"
 
   has_paper_trail
   
@@ -21,7 +22,8 @@ class Course < ActiveRecord::Base
                  :with_subject_area_id,
                  :with_course_area,
                  :with_level,
-                 :with_credit
+                 :with_credit,
+                 :with_category
                ]
 
    # default for will_paginate
@@ -92,10 +94,12 @@ class Course < ActiveRecord::Base
   scope :with_level, lambda { |levels|
     where(:level => [*levels])
   }
-  scope :with_credit, lambda { |credit|
-    where(:credit => [*credit])
+  scope :with_credit, lambda { |credits|
+    where(:credit => [*credits])
   }
-
+  scope :with_category, lambda { |categories|
+    where(:category => [*categories])
+  }
 
    def self.options_for_sorted_by
      [
@@ -111,11 +115,12 @@ class Course < ActiveRecord::Base
    end
    def self.options_for_credit_select
       Course.pluck(:credit).uniq
-    end
-    def self.options_for_course_area_select
-        Course.order(:course_area).pluck(:course_area).uniq
-      end
+   end
+   def self.options_for_course_area_select
+      Course.order(:course_area).pluck(:course_area).uniq
+   end
 
+  
 
  #  scope :search_query, lambda { |query|
  #    return nil  if query.blank?

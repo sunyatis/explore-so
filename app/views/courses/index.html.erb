@@ -59,6 +59,11 @@
            $('.btn-group').on('click', function (e) {
                 $(this).addClass("open");
             });
+          $('#filterrific_with_category').multiselect({
+          });
+           $('.btn-group').on('click', function (e) {
+                $(this).addClass("open");
+            });
             
       }); 
 
@@ -66,6 +71,8 @@
   <!-div class="span3 chardin_box"-->
     <label>General Education</label>
       <%= f.select(:with_generaleducation_id, @filterrific.select_options[:with_generaleducation_id], { include_hidden: false}, multiple: true)%>
+	<label>Category</label>
+      <%= f.select(:with_category, @filterrific.select_options[:with_category], { include_hidden: false}, multiple: true)%>
   <!--/div-->
   <div class="span2 chardin_box">
     <label>Start Date after</label>

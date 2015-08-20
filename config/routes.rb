@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :categories
+
   get "/courses/my_courses", :to => "courses#my_courses"
   get "/courses/catalogs", :to => "courses#catalogs"
   get "/courses/course_areas", :to => "courses#course_areas"

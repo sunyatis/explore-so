@@ -4,6 +4,7 @@ class Program < ActiveRecord::Base
   belongs_to :school, :foreign_key => 'school_id', :class_name => "School"
   belongs_to :level_abb, :foreign_key => 'levelabb_id', :class_name => "LevelAbb"
   belongs_to :subject_area, :foreign_key => 'subjectarea_id' , :class_name => "SubjectArea"
+  belongs_to :category, :foreign_key => 'cat_id', :class_name => "Category"
  
   has_paper_trail
  
@@ -28,7 +29,8 @@ class Program < ActiveRecord::Base
                  :with_experiential_learning,
                  :with_plas,
                  :with_accelerated,
-                 :with_tutoring
+                 :with_tutoring,
+                 :with_category
                ]
 
    # default for will_paginate
@@ -112,7 +114,11 @@ class Program < ActiveRecord::Base
     scope :with_tutoring, lambda { |tutorings|
       where(:tutoring => [*tutorings])
     }
+    scope :with_category, lambda { |categories|
+      where(:category => [*categories])
+    }
     
+
    def self.options_for_sorted_by
      [
        ['Program Tite (A-Z)', 'prog_title_asc'],
@@ -180,6 +186,7 @@ class Program < ActiveRecord::Base
        ['No', 'f'],
     ]
   end
+
   
 
  #  scope :search_query, lambda { |query|

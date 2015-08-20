@@ -65,6 +65,7 @@ ActiveAdmin.register Course do
   filter :school_id, as: :select, :collection => School.pluck(:name, :id)
   filter :subjectarea_id, as: :select, :collection => SubjectArea.pluck(:name, :id)
   filter :generaleducation_id, as: :select, :collection => GeneralEducation.pluck(:name, :id)
+  filter :cat_id, as: :select, :collection => Category.pluck(:name, :id)
   filter :title
   filter :code
   filter :description
@@ -91,6 +92,7 @@ ActiveAdmin.register Course do
      column :school_id
      column :subjectarea_id
      column :generaleducation_id
+     column :cat_id
      column :title
      column :code
      column :start_date
@@ -115,7 +117,7 @@ ActiveAdmin.register Course do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-   permit_params :catalog_id, :title, :code, :description, :credit, :start_date, :end_date, :local_course_id, :prefix, :section, :prerequisites, :corequisites, :books_url, :registration_url, :active, :level, :school_id, :subjectarea_id, :course_area, :generaleducation_id, :instructor, :course_method, :seats_available, :class_full
+   permit_params :catalog_id, :title, :code, :description, :credit, :start_date, :end_date, :local_course_id, :prefix, :section, :prerequisites, :corequisites, :books_url, :registration_url, :active, :level, :school_id, :subjectarea_id, :course_area, :generaleducation_id, :instructor, :course_method, :seats_available, :class_full, :cat_id
   #
   # or
   #

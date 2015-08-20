@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150730134926) do
+ActiveRecord::Schema.define(version: 20150820172725) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -53,6 +53,12 @@ ActiveRecord::Schema.define(version: 20150730134926) do
     t.boolean  "active",     default: false
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "courses", force: :cascade do |t|
     t.integer  "catalog_id"
     t.string   "title"
@@ -81,6 +87,7 @@ ActiveRecord::Schema.define(version: 20150730134926) do
     t.datetime "updated_at",          null: false
     t.integer  "generaleducation_id"
     t.text     "slug"
+    t.integer  "cat_id"
   end
 
   add_index "courses", ["slug"], name: "index_courses_on_slug"
@@ -153,6 +160,8 @@ ActiveRecord::Schema.define(version: 20150730134926) do
     t.integer "sed"
     t.string  "apply_now_url"
     t.text    "slug"
+    t.boolean "dsrip"
+    t.integer "cat_id"
   end
 
   add_index "programs", ["slug"], name: "index_programs_on_slug", unique: true

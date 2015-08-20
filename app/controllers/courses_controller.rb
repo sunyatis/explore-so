@@ -13,7 +13,8 @@ load_and_authorize_resource
            with_subject_area_id: SubjectArea.options_for_select,
            with_course_area: Course.options_for_course_area_select,
            with_level: Course.options_for_level_select,
-           with_credit: Course.options_for_credit_select
+           with_credit: Course.options_for_credit_select,
+           with_category: Category.options_for_select
          }#,
   #        persistence_id: 'shared_key',
   #              default_filter_params: {},
@@ -64,7 +65,7 @@ load_and_authorize_resource
 
 
     def course_params
-      params.require(:course).permit(:catalog_id, :title, :code, :description, :credit, :start_date, :end_date, :local_course_id, :prefix, :section, :prerequisites, :corequisites, :books_url, :registration_url, :active, :level, :school_id, :subjectarea_id, :course_area, :generaleducation_id, :instructor, :course_method, :seats_available, :class_full)
+      params.require(:course).permit(:catalog_id, :title, :code, :description, :credit, :start_date, :end_date, :local_course_id, :prefix, :section, :prerequisites, :corequisites, :books_url, :registration_url, :active, :level, :school_id, :subjectarea_id, :course_area, :generaleducation_id, :instructor, :course_method, :seats_available, :class_full, :cat_id)
     end
   
   

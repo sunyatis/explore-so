@@ -40,7 +40,7 @@ ActiveAdmin.register Program do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :prog_title, :description, :summary, :subjectarea_id, :prog_level, :levelabb_id, :school_id, :duration, :delivery_method, :prerequisites, :program_url, :registration_url, :open_suny, :per_courses_online, :synchronous, :synchronous_text, :tutoring, :tutoring_name, :tutoring_phone, :tutoring_email, :tutoring_url, :helpdesk, :helpdesk_phone, :helpdesk_email, :helpdesk_url, :concierge, :concierge_phone, :concierge_name, :concierge_email, :experiential_learning, :experiential_text, :plas, :plas_text, :accelerated, :accelerated_text, :level_expanded, :sed, :apply_now_url
+  permit_params :prog_title, :description, :summary, :subjectarea_id, :prog_level, :levelabb_id, :school_id, :duration, :delivery_method, :prerequisites, :program_url, :registration_url, :open_suny, :per_courses_online, :synchronous, :synchronous_text, :tutoring, :tutoring_name, :tutoring_phone, :tutoring_email, :tutoring_url, :helpdesk, :helpdesk_phone, :helpdesk_email, :helpdesk_url, :concierge, :concierge_phone, :concierge_name, :concierge_email, :experiential_learning, :experiential_text, :plas, :plas_text, :accelerated, :accelerated_text, :level_expanded, :sed, :apply_now_url, :cat_id
   #
   # or
   #
@@ -57,7 +57,8 @@ ActiveAdmin.register Program do
   f.input :prog_title
   f.input :description
   f.input :subjectarea_id, as: :select, :collection => SubjectArea.pluck(:name, :id)
-  f.input :prog_level,  :as => :select,  :collection => ["Undergraduate", "Graduate", "Payment"]
+  f.input :prog_level,  :as => :select,  :collection => ["Undergraduate", "Graduate"]
+  f.input :category, as: :select, :collection => Category.pluck(:name, :id)
   f.input :levelabb_id
   f.input :school_id, as: :select, :collection => School.pluck(:name, :id)
   f.input :duration
@@ -92,7 +93,6 @@ ActiveAdmin.register Program do
   f.input :level_expanded
   f.input :sed
   f.input :apply_now_url
-
   end
   f.actions
   end

@@ -19,7 +19,8 @@ def index
          with_experiential_learning: Program.options_for_experiential_learning,
          with_plas: Program.options_for_plas,
          with_accelerated: Program.options_for_accelerated,
-         with_tutoring: Program.options_for_tutoring
+         with_tutoring: Program.options_for_tutoring,
+         with_category: Category.options_for_select
        }#,
 #        persistence_id: 'shared_key',
 #              default_filter_params: {},
@@ -74,7 +75,7 @@ def index
   private
 
     def program_params
-      params.require(:program).permit(:prog_title, :description, :subjectarea_id, :prog_level, :levelabb_id, :school, :duration, :delivery_method, :prerequisites, :program_url, :registration_url, :open_suny, :per_courses_online, :synchronous, :synchronous_text, :tutoring, :tutoring_name, :tutoring_phone, :tutoring_email, :tutoring_url, :helpdesk, :helpdesk_phone, :helpdesk_email, :helpdesk_url, :concierge, :concierge_phone, :concierge_name, :concierge_email, :experiential_learning, :experiential_text, :plas, :plas_text, :accelerated, :accelerated_text, :summary, :level_expanded, :sed, :apply_now_url)
+      params.require(:program).permit(:prog_title, :description, :subjectarea_id, :prog_level, :levelabb_id, :school_id, :duration, :delivery_method, :prerequisites, :program_url, :registration_url, :open_suny, :per_courses_online, :synchronous, :synchronous_text, :tutoring, :tutoring_name, :tutoring_phone, :tutoring_email, :tutoring_url, :helpdesk, :helpdesk_phone, :helpdesk_email, :helpdesk_url, :concierge, :concierge_phone, :concierge_name, :concierge_email, :experiential_learning, :experiential_text, :plas, :plas_text, :accelerated, :accelerated_text, :summary, :level_expanded, :sed, :apply_now_url, :cat_d)
     end
     
    
