@@ -33,7 +33,7 @@ ActiveAdmin.setup do |config|
   #   config.default_namespace = false
   #
   # Default:
-   config.default_namespace = :admin
+   #config.default_namespace = :admin
   #
   # You can customize the settings for each namespace by using
   # a namespace block. For example, to change the site title
@@ -55,7 +55,7 @@ ActiveAdmin.setup do |config|
   # This setting changes the method which Active Admin calls
   # within the application controller.
   #config.authentication_method = :authenticate_admin_user!
-  config.authentication_method = :authenticate_active_admin_user! #3-2-15
+  #config.authentication_method = :authenticate_active_admin_user! #3-2-15
   # == User Authorization
   #
   # Active Admin will automatically call an authorization
@@ -121,7 +121,7 @@ ActiveAdmin.setup do |config|
   # config.comments = false
   #
   # You can disable the menu item for the comments index page:
-  # config.show_comments_in_menu = false
+   config.show_comments_in_menu = false
   #
   # You can change the name under which comments are registered:
   # config.comments_registration_name = 'AdminComment'
