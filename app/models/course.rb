@@ -31,13 +31,15 @@ class Course < ActiveRecord::Base
 
    scope :search_query, ->(query){ 
      return nil  if query.blank?
+     puts query.to_s
      # condition query, parse into individual keywords
      terms = query.downcase.split(/\s+/)
+     puts terms
      # replace "*" with "%" for wildcard searches,
      # append '%', remove duplicate '%'s
-     terms = terms.map { |e|
-       (e.gsub('*', '%') + '%').gsub(/%+/, '%')
-     }
+     #terms = terms.map { |e|
+      # (e.gsub('*', '%') + '%').gsub(/%+/, '%')
+     #}
      # configure number of OR conditions for provision
      # of interpolation arguments. Adjust this if you
      # change the number of OR conditions.
@@ -82,9 +84,31 @@ class Course < ActiveRecord::Base
    scope :with_catalog_id, lambda { |catalog_ids|
      where(:catalog_id => [*catalog_ids])
    }
-  scope :with_generaleducation_id,  lambda { |generaleducation_ids|
-    where(generaleducation_id: [*generaleducation_ids])
-  }
+  scope :with_generaleducation_id , ->(generaleducation_ids){ 
+      return nil  if generaleducation_ids.blank?
+
+      # condition query, parse into individual keywords
+      terms = generaleducation_ids.join(" ").split(/\s+/)
+
+ #    # configure number of OR conditions for provision
+ #    # of interpolation arguments. Adjust this if you
+ #    # change the number of OR conditions.
+     num_or_conditions = 1
+ #
+     where(
+      terms.map { |e|
+        or_clauses = [
+           "courses.generaleducation_id LIKE ?", 
+           "courses.generaleducation_id LIKE \'%, #{e}\'", 
+           "courses.generaleducation_id LIKE \'#{e},%\'", 
+           "courses.generaleducation_id LIKE \'%, #{e},%\'"
+         ].join(' OR ')
+         "(#{ or_clauses })"
+       }.join(' AND '),
+       *terms.map { |e| [e] * num_or_conditions }.flatten
+     )
+   }
+
   scope :with_subject_area_id, lambda { |subjectarea_ids|
      where(:subjectarea_id => [*subjectarea_ids])
    }
@@ -97,8 +121,30 @@ class Course < ActiveRecord::Base
   scope :with_credit, lambda { |credits|
     where(:credit => [*credits])
   }
-  scope :with_category, lambda { |categories|
-    where(:category => [*categories])
+  scope :with_category, ->(categories){ 
+     return nil  if categories.blank?
+
+     # condition query, parse into individual keywords
+     terms = categories.join(" ").split(/\s+/)
+
+#    # configure number of OR conditions for provision
+#    # of interpolation arguments. Adjust this if you
+#    # change the number of OR conditions.
+    num_or_conditions = 1
+  #  Course.where("courses.cat_id IN ('2')")
+
+   where(
+    terms.map { |e|
+      or_clauses = [
+         "courses.cat_id IN ('#{e}')"#, 
+        # "courses.cat_id LIKE \'%, #{e}\'", 
+        # "courses.cat_id LIKE \'#{e},%\'", 
+        # "courses.cat_id LIKE \'%, #{e},%\'"
+       ].join(' OR ')
+       "(#{ or_clauses })"
+     }.join(' AND '),
+     *terms.map { |e| [e] * num_or_conditions }.flatten
+   )
   }
 
    def self.options_for_sorted_by

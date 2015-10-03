@@ -2,7 +2,7 @@
 <% description "#{@program.prog_title} |  #{@program.level_expanded} (#{@program.level_abb}) | #{@program.school.name}"  %>
 <p id="notice"><%= notice %></p>
 <div class="row">
- <div class="col-md-7">
+ <div class="col-md-8">
     <p>
     <h1><%= @program.prog_title %></h1>
     </p>
@@ -10,7 +10,7 @@
       <%= @program.description %>
     </p>
   </div>
-  <div class="col-md-3 col-md-offset-2">
+  <div class="col-md-3 col-md-offset-1">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">Services</h3>
@@ -69,47 +69,55 @@
         </div>
     </div>  
 </div><!--/.open_icons-->
-<div class="col-md-3 col-md-offset-2">
+
+
+<div class="col-md-8">
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Program Details</h3>
+	  </div>
+	  <div class="panel-body">
+	    <p>
+	      <strong>Subject area:</strong>
+	      <%= @program.subject_area.name %>
+	    </p>
+
+	    <p>
+	      <strong>Prog level:</strong>
+	      <%= @program.prog_level %>
+	    </p>
+
+	    <p>
+	      <strong>Level abb:</strong>
+	      <%= @program.level_abb.name %>
+	    </p>
+
+	    <p>
+	      <strong>Duration:</strong>
+	      <%= @program.duration %>
+	    </p>
+
+	    <p>
+	      <strong>Delivery method:</strong>
+	      <%= @program.delivery_method %>
+	    </p>
+
+	    <p>
+	      <strong>Prerequisites:</strong>
+	      <%= @program.prerequisites %>
+	    </p>
+	  </div>
+	</div>
+    
+</div>
+<div class="col-md-3 col-md-offset-1">
   <div class="panel panel-primary">
       <div class="panel-heading">
           <h2 class="panel-title" style="text-align:center;" ><a href="<%= @program.apply_now_url %>" class="apply_now" target="_blank">Apply Now!</a></h2>
       </div>
   </div>
 </div>
-
-<div class="col-md-7">
-    <p>
-      <strong>Subject area:</strong>
-      <%= @program.subject_area.name %>
-    </p>
-
-    <p>
-      <strong>Prog level:</strong>
-      <%= @program.prog_level %>
-    </p>
-
-    <p>
-      <strong>Level abb:</strong>
-      <%= @program.level_abb.name %>
-    </p>
-
-    <p>
-      <strong>Duration:</strong>
-      <%= @program.duration %>
-    </p>
-
-    <p>
-      <strong>Delivery method:</strong>
-      <%= @program.delivery_method %>
-    </p>
-
-    <p>
-      <strong>Prerequisites:</strong>
-      <%= @program.prerequisites %>
-    </p>
-</div>
-
-<div class="col-md-3 col-md-offset-2">
+<div class="col-md-3 col-md-offset-1">
   <div class="panel panel-default">
       <div class="panel-heading">
           <h3 class="panel-title">Important Links</h3>
@@ -124,16 +132,19 @@
     </div>
 </div>
 
-<div class="col-md-7">
-   <p>
-      <h4><%= @program.school.name %></h4>
-      <strong>Address:</strong><br>
-      <%= @program.school.address1 %><br>
-      <%= @program.school.address2 %><br>
-      <%= @program.school.city %>, <%= @program.school.state %> <%= @program.school.zip %>
-    </p>
+<div class="col-md-8">
+	<div class="well">
+
+		      <h4><%= @program.school.name %></h4>
+		      <strong>Address:</strong><br>
+		      <%= @program.school.address1 %><br>
+		      <%= @program.school.address2 %><br>
+		      <%= @program.school.city %>, <%= @program.school.state %> <%= @program.school.zip %>
+	
+	</div>
+   
 </div>
-<div class="col-md-3 col-md-offset-2">
+<div class="col-md-3 col-md-offset-1">
   <div class="panel panel-default">
     <div class="panel-body" style="text-align:center;">
       <a href="<%= @program.school.school_url %>" target="_blank"><%= image_tag(@program.school.image.url(:thumb), :align=> "center") %></a>

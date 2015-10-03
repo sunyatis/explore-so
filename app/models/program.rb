@@ -114,8 +114,29 @@ class Program < ActiveRecord::Base
     scope :with_tutoring, lambda { |tutorings|
       where(:tutoring => [*tutorings])
     }
-    scope :with_category, lambda { |categories|
-      where(:category => [*categories])
+    scope :with_category, ->(categories){ 
+       return nil  if categories.blank?
+
+       # condition query, parse into individual keywords
+       terms = categories.join(" ").split(/\s+/)
+
+  #    # configure number of OR conditions for provision
+  #    # of interpolation arguments. Adjust this if you
+  #    # change the number of OR conditions.
+      num_or_conditions = 1
+  #
+      where(
+       terms.map { |e|
+         or_clauses = [
+            "programs.cat_id LIKE ?", 
+            "programs.cat_id LIKE \'%, #{e}\'", 
+            "programs.cat_id LIKE \'#{e},%\'", 
+            "programs.cat_id LIKE \'%, #{e},%\'"
+          ].join(' OR ')
+          "(#{ or_clauses })"
+        }.join(' AND '),
+        *terms.map { |e| [e] * num_or_conditions }.flatten
+      )
     }
     
 

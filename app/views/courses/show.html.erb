@@ -2,125 +2,151 @@
 <% description "(#{@course.prefix}#{@course.code}-#{@course.section}) #{@course.title} - #{@course.credit} credits | #{@course.school.name}"  %>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Catalog:</strong>
-  <%= @course.catalog.name %>
-</p>
+<div class="row">
+ <div class="col-md-8">
+    <p>
+    <h1><%= @course.prefix %>-<%= @course.code %>-<%= @course.section %>  <%= @course.title %></h1>
+    </p>
+    <p>
+      <%= @course.description %>
+    </p>
+  </div>
+  <div class="col-md-3 col-md-offset-1">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Semester Details</h3>
+        </div>
+        <div class="panel-body">
+			<p>
+			  <strong>Catalog:</strong>
+			  <%= @course.catalog.name %>
+			</p>
+         	<p>
+			  <strong>Start date:</strong>
+			  <%= @course.start_date %>
+			</p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @course.title %>
-</p>
+			<p>
+			  <strong>End date:</strong>
+			  <%= @course.end_date %>
+			</p>
 
-<p>
-  <strong>Code:</strong>
-  <%= @course.code %>
-</p>
+        </div>
+    </div>  
+</div><!--/.open_icons-->
 
-<p>
-  <strong>Description:</strong>
-  <%= @course.description %>
-</p>
 
-<p>
-  <strong>Credit:</strong>
-  <%= @course.credit %>
-</p>
+<div class="col-md-8">
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Course Details</h3>
+	  </div>
+	  <div class="panel-body">
+		<p>
+		  <strong>Local course:</strong>
+		  <%= @course.local_course_id %>
+		</p>
+		
+	
+		
+		<p>
+		  <strong>Level:</strong>
+		  <%= @course.level %>
+		</p>
 
-<p>
-  <strong>Start date:</strong>
-  <%= @course.start_date %>
-</p>
+		<p>
+		  <strong>Subjectarea:</strong>
+		  <%= @course.subjectarea_id %>
+		</p>
 
-<p>
-  <strong>End date:</strong>
-  <%= @course.end_date %>
-</p>
+		<p>
+		  <strong>Course area:</strong>
+		  <%= @course.course_area %>
+		</p>
 
-<p>
-  <strong>Local course:</strong>
-  <%= @course.local_course_id %>
-</p>
+		<p>
+		  <strong>General education:</strong>
+		  <%= @course.general_education %>
+		</p>
 
-<p>
-  <strong>Prefix:</strong>
-  <%= @course.prefix %>
-</p>
+		<p>
+		  <strong>Instructor:</strong>
+		  <%= @course.instructor %>
+		</p>
 
-<p>
-  <strong>Section:</strong>
-  <%= @course.section %>
-</p>
+		<p>
+		  <strong>Course method:</strong>
+		  <%= @course.course_method %>
+		</p>
 
-<p>
-  <strong>Prerequisites:</strong>
-  <%= @course.prerequisites %>
-</p>
+		<p>
+		  <strong>Seats available:</strong>
+		  <%= @course.seats_available %>
+		</p>
 
-<p>
-  <strong>Corequisites:</strong>
-  <%= @course.corequisites %>
-</p>
+		<p>
+		  <strong>Class full:</strong>
+		  <%= @course.class_full %>
+		</p>
+	  </div>
+	</div>
+    
+</div>
+<div class="col-md-3 col-md-offset-1">
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+          <h2 class="panel-title" style="text-align:center;" ><a href="<%= @course.registration_url %>" class="apply_now" target="_blank">Register Now!</a></h2>
+      </div>
+  </div>
+</div>
+<div class="col-md-3 col-md-offset-1">
+  <div class="panel panel-default">
+      <div class="panel-heading">
+          <h3 class="panel-title">Important Links</h3>
+      </div>
+      <div class="list-group">
+        <a href="<%= @course.books_url %>" class="list-group-item " target="_blank">Books & Supplies</a>
+        <a href="<%= @course.registration_url %>" class="list-group-item" target="_blank">Registration</a>
+		<a href="<%= @course.school.tuition_url %>" class="list-group-item " target="_blank">Cost & Fees</a>
+        <a href="<%= @course.school.financial_aid_url %>" class="list-group-item " target="_blank">Financial Aid</a>
+      </div>
+    </div>
+</div>
 
-<p>
-  <strong>Books url:</strong>
-  <%= @course.books_url %>
-</p>
+<div class="col-md-8">
+	<div class="well">
+			<p>
+			  <strong>Credit:</strong>
+			  <%= @course.credit %>
+			</p>
+			<p>
+			  <strong>Prerequisites:</strong>
+			  <%= @course.prerequisites %>
+			</p>
 
-<p>
-  <strong>Registration url:</strong>
-  <%= @course.registration_url %>
-</p>
+			<p>
+			  <strong>Corequisites:</strong>
+			  <%= @course.corequisites %>
+			</p>
+	</div>
+   
+</div>
+<div class="col-md-3 col-md-offset-1">
+  <div class="panel panel-default">
+    <div class="panel-body" style="text-align:center;">
+		<a href="<%= @course.school.school_url %>" target="_blank"><%= image_tag(@course.school.image.url(:thumb), :align=> "center") %></a>
+    </div>
+  </div>
+</div>
+</div>
 
-<p>
-  <strong>Active:</strong>
-  <%= @course.active %>
-</p>
 
-<p>
-  <strong>Level:</strong>
-  <%= @course.level %>
-</p>
+    
 
-<p>
-  <strong>School:</strong>
-  <%= @course.school_id %>
-</p>
 
-<p>
-  <strong>Subjectarea:</strong>
-  <%= @course.subjectarea_id %>
-</p>
 
-<p>
-  <strong>Course area:</strong>
-  <%= @course.course_area %>
-</p>
 
-<p>
-  <strong>General education:</strong>
-  <%= @course.general_education %>
-</p>
 
-<p>
-  <strong>Instructor:</strong>
-  <%= @course.instructor %>
-</p>
 
-<p>
-  <strong>Course method:</strong>
-  <%= @course.course_method %>
-</p>
 
-<p>
-  <strong>Seats available:</strong>
-  <%= @course.seats_available %>
-</p>
 
-<p>
-  <strong>Class full:</strong>
-  <%= @course.class_full %>
-</p>
-
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
