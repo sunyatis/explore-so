@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  
+   belongs_to :school
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -11,8 +11,6 @@ class User < ActiveRecord::Base
          def role?(r)
            role.include? r.to_s
          end   
-         def admin?
-           self.role == "admin"
-         end    
+
          
 end

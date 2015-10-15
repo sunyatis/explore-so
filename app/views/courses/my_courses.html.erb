@@ -1,32 +1,108 @@
+<div class="row">
+<div class="well">
 
-<div>
-
+<%= form_for_filterrific @filterrific do |f| %>
+  <div class="row">
+  <div class="span3 chardin_box">
+        <label>Search</label>
+    <%# give the search field the 'filterrific-periodically-observed' class for live updates %>
+    <%= f.text_field(
+      :search_query,
+      class: 'filterrific-periodically-observed'
+    ) %>
+  </div>
+      <div class="span3 chardin_box">
+        <label>Semester</label>
+      <%= f.select(
+        :with_catalog_id,
+        @filterrific.select_options[:with_catalog_id],
+        { include_blank: '- Any -' }
+      ) %>
+    </div>
+    
+    <div class="span3 chardin_box">
+      <label>School</label>
+    <%= f.select(
+      :with_school_id,
+      @filterrific.select_options[:with_school_id],
+      { include_blank: '- Any -' }
+    ) %>
+  </div>
+  <div class="span3 chardin_box">
+     <label>Course Area</label>
+   <%= f.select(
+     :with_course_area,
+     @filterrific.select_options[:with_course_area],
+     { include_blank: '- Any -' }
+   ) %>
+  </div>
+  <div class="span3 chardin_box">
+    <label>Level</label>
+  <%= f.select(
+    :with_level,
+    @filterrific.select_options[:with_level],
+    { include_blank: '- Any -' }
+  ) %>
 </div>
+  <div class="span3 chardin_box">
+    <label>Credits</label>
+  <%= f.select(
+    :with_credit,
+    @filterrific.select_options[:with_credit],
+    { include_blank: '- Any -' }
+  ) %>
+</div>
+  <script type="text/javascript">
+      $(document).ready(function() {
+          $('#filterrific_with_generaleducation_id').multiselect({
+          });
+           $('.btn-group').on('click', function (e) {
+                $(this).addClass("open");
+            });
+          $('#filterrific_with_category').multiselect({
+          });
+           $('.btn-group').on('click', function (e) {
+                $(this).addClass("open");
+            });
+            
+      }); 
+
+  </script>
+  <!-div class="span3 chardin_box"-->
+    <label>General Education</label>
+      <%= f.select(:with_generaleducation_id, @filterrific.select_options[:with_generaleducation_id], { include_hidden: false}, multiple: true)%>
+	<label>Category</label>
+      <%= f.select(:with_category, @filterrific.select_options[:with_category], { include_hidden: false}, multiple: true)%>
+  <!--/div-->
+  <div class="span2 chardin_box">
+    <label>Start Date after</label>
+     <%= f.text_field(:with_start_date, class: 'js-datepicker') %>
+     <%= f.hidden_field :with_start_date_gte %>
+   </div>
+  <div class="span3 chardin_box">
+    <label>Sorted by</label>
+    <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by]) %>
+  </div>
+  </div>
+  </div>
+<% end %>
+
+  
+<%= render(
+  partial: 'courses/list',
+  locals: { courses: @courses }
+) %>
+</div>
+</div>
+<script type="text/javascript">
+$('.js-datepicker').datepicker({"autoclose": true});
+$('.js-datepicker').datepicker().on('changeDate', function(e){
+     $('#filterrific_with_start_date_gte').val(e.format('yyyy-mm-dd'));
+ });
+ $('#overlayTrigger').click(function(event) {
+   event.preventDefault();
+   $('body').chardinJs('start');
+ });
+ </script>
 
 
-
-<table class="table table-striped">
-    <tr>
-      <th>Title</th>
-      <th>Code</th>
-      <th>Start date</th>
-      <th>Level</th>
-      <th>School</th>
-      <th>Course method</th>
-      <th>Credit</th>
-    </tr>
-
-    <% @courses.each do |course| %>
-      <tr>
-        <td><%= course.title %></td>
-        <td><%= course.prefix %> <%= course.code %> <%= course.section %></td>
-        <td><%= course.start_date %></td>
-        <td><%= course.level %></td>
-        <td><%= course.school.name %></td>
-        <td><%= course.course_method %></td>
-        <td><%= course.credit %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-      </tr>
-    <% end %>
-</table>

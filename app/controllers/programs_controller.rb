@@ -45,7 +45,45 @@ def index
 
 
   def my_programs
-    @programs = Program.page(params[:page]).accessible_by(current_ability, :read)
+    #@programs = Program.page(params[:page]).accessible_by(current_ability, :read)
+     @filterrific = initialize_filterrific(
+          Program,
+          params[:filterrific],
+   select_options: {
+            sorted_by: Program.options_for_sorted_by,
+           with_school_id: School.options_for_select,
+           with_level: Program.options_for_level,
+           with_subject_area_id: SubjectArea.options_for_select,
+           with_prog_title: Program.options_for_prog_title,
+           with_delivery: Program.options_for_delivery_method,
+           with_os: Program.options_for_os,
+           with_helpdesk: Program.options_for_helpdesk,
+           with_concierge: Program.options_for_concierge,
+           with_synchronous: Program.options_for_synchronous,
+           with_experiential_learning: Program.options_for_experiential_learning,
+           with_plas: Program.options_for_plas,
+           with_accelerated: Program.options_for_accelerated,
+           with_tutoring: Program.options_for_tutoring,
+           with_category: Category.options_for_select
+         }#,
+  #        persistence_id: 'shared_key',
+  #              default_filter_params: {},
+  #              available_filters: [],
+                    ) or return
+                    @programs = @filterrific.find.accessible_by(current_ability, :read).page(params[:page])
+                        # Respond to html for initial page load and to js for AJAX filter updates.
+                        respond_to do |format|
+                          format.html
+                          format.js
+                        end
+
+                      # Recover from invalid param sets, e.g., when a filter refers to the
+                      # database id of a record that doesn’t exist any more.
+                      # In this case we reset filterrific and discard all filter params.
+                    #  rescue ActiveRecord::RecordNotFound => e
+                        # There is an issue with the persisted param_set. Reset it.
+                    #    puts "Had to reset filterrific params: #{ e.message }"
+                     #   redirect_to(reset_filterrific_url(format: :html)) and return  
   end
   def open_suny_programs
     @schools = School.joins(:programs).where("programs.school_id = schools.id and programs.open_suny = 'Yes'").uniq

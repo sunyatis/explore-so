@@ -46,7 +46,39 @@ load_and_authorize_resource
       end
 
     def my_courses
-      @courses = Course.accessible_by(current_ability, :read)
+      #@courses = Course.accessible_by(current_ability, :read)
+      @filterrific = initialize_filterrific(
+          Course,
+          params[:filterrific],
+   select_options: {
+            sorted_by: Course.options_for_sorted_by,
+           with_school_id: School.options_for_select,
+           with_catalog_id: Catalog.options_for_select,
+           with_generaleducation_id: GeneralEducation.options_for_select,
+           with_subject_area_id: SubjectArea.options_for_select,
+           with_course_area: Course.options_for_course_area_select,
+           with_level: Course.options_for_level_select,
+           with_credit: Course.options_for_credit_select,
+           with_category: Category.options_for_select
+         }#,
+  #        persistence_id: 'shared_key',
+  #              default_filter_params: {},
+  #              available_filters: [],
+                    ) or return
+                    @courses = @filterrific.find.accessible_by(current_ability, :read).joins(:catalog).where("courses.catalog_id = catalogs.id and catalogs.active = 't' and courses.active='t'").page(params[:page])
+                        # Respond to html for initial page load and to js for AJAX filter updates.
+                        respond_to do |format|
+                          format.html
+                          format.js
+                        end
+
+                      # Recover from invalid param sets, e.g., when a filter refers to the
+                      # database id of a record that doesn’t exist any more.
+                      # In this case we reset filterrific and discard all filter params.
+                    #  rescue ActiveRecord::RecordNotFound => e
+                        # There is an issue with the persisted param_set. Reset it.
+                    #    puts "Had to reset filterrific params: #{ e.message }"
+                     #   redirect_to(reset_filterrific_url(format: :html)) and return
     end
 
     def catalogs
