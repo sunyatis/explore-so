@@ -43,7 +43,7 @@
 	  </div>
 	  <div class="panel-body">
 		<p>
-		  <strong>Local course:</strong>
+		  <strong>Local Course ID:</strong>
 		  <%= @course.local_course_id %>
 		</p>
 		
@@ -55,17 +55,17 @@
 		</p>
 
 		<p>
-		  <strong>Subjectarea:</strong>
+		  <strong>Subject Area:</strong>
 		  <%= @course.subjectarea_id %>
 		</p>
 
 		<p>
-		  <strong>Course area:</strong>
+		  <strong>Course Area:</strong>
 		  <%= @course.course_area %>
 		</p>
 
 		<p>
-		  <strong>General education:</strong>
+		  <strong>General Education:</strong>
 		  <%= @course.general_education %>
 		</p>
 
@@ -75,30 +75,48 @@
 		</p>
 
 		<p>
-		  <strong>Course method:</strong>
+		  <strong>Course Method:</strong>
 		  <%= @course.course_method %>
 		</p>
 
 		<p>
-		  <strong>Seats available:</strong>
+		  <strong>Seats Available:</strong>
 		  <%= @course.seats_available %>
 		</p>
 
 		<p>
-		  <strong>Class full:</strong>
+		  <strong>Class Full:</strong>
 		  <%= @course.class_full %>
 		</p>
 	  </div>
 	</div>
     
 </div>
+
+<% if @course.class_full == true%>
+<div class="col-md-3 col-md-offset-1">
+  <div class="panel panel-danger">
+      <div class="panel-heading">
+          <h2 class="panel-title" style="text-align:center;" >
+	Class Full
+	</h2>
+  </div>
+  </div>
+</div>
+<% else %>
 <div class="col-md-3 col-md-offset-1">
   <div class="panel panel-primary">
       <div class="panel-heading">
-          <h2 class="panel-title" style="text-align:center;" ><a href="<%= @course.registration_url %>" class="apply_now" target="_blank">Register Now!</a></h2>
-      </div>
+          <h2 class="panel-title" style="text-align:center;" >
+	<a href="<%= @course.registration_url %>" class="apply_now" target="_blank">Register Now!</a>
+	</h2>
+  </div>
   </div>
 </div>
+<% end %>
+	
+
+
 <div class="col-md-3 col-md-offset-1">
   <div class="panel panel-default">
       <div class="panel-heading">

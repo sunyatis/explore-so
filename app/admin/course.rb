@@ -67,12 +67,12 @@ ActiveAdmin.register Course do
   filter :generaleducation_id, as: :select, :collection => GeneralEducation.pluck(:name, :id)
   filter :cat_id, as: :select, :collection => Category.pluck(:name, :id)
   filter :title
-  filter :code
   filter :description
   filter :start_date
   filter :end_fate
   filter :local_course_id
   filter :prefix
+  filter :code
   filter :section
   filter :prerequisites
   filter :corequisites
@@ -88,9 +88,10 @@ ActiveAdmin.register Course do
   
   index do
      id_column
-     column :prefix
-     column :code
-     column :section
+     column :local_course_id
+     #column :prefix
+     #column :code
+     #column :section
      column :title
      column :catalog_id do |course|
        course.catalog.name
