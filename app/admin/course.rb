@@ -87,25 +87,33 @@ ActiveAdmin.register Course do
   filter :class_full
   
   index do
-    id_column
-    column :catalog_id
-     column :school_id
-     column :subjectarea_id
-     column :generaleducation_id
-     column :cat_id
-     column :title
-     column :code
-     column :start_date
-     column :end_fate
-     column :local_course_id
+     id_column
      column :prefix
+     column :code
      column :section
+     column :title
+     column :catalog_id do |course|
+       course.catalog.name
+     end
+     column :school_id do |course|
+       course.school.name
+     end
+     #column :subjectarea_id
+     #column :generaleducation_id
+     #column :cat_id
+     
+     
+     #column :start_date
+     #column :end_fate
+     #column :local_course_id
+     
+     
      column :active
-     column :level
-     column :course_area
+     #column :level
+     #column :course_area
      column :instructor
      column :course_method
-     column :seats_available
+     #column :seats_available
      column :class_full
     actions
   end

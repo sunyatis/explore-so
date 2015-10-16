@@ -26,10 +26,18 @@ menu parent: 'Manage Navigator', label: 'School'
       row :city
       row :state
       row :zip
-      row :school_url
-      row :registration_url
-      row :tuition_url
-      row :financial_aid_url
+      row :school_url do |school|
+         link_to school.school_url, school.school_url
+      end
+      row :registration_url  do |school|
+        link_to school.registration_url, school.registration_url
+      end
+      row :tuition_url do |school|
+        link_to school.tuition_url, school.tuition_url
+      end
+      row :financial_aid_url do |school|
+        link_to school.financial_aid_url, school.financial_aid_url
+      end
       row :created_at
       row :updated_at
       row :slug
@@ -42,7 +50,16 @@ menu parent: 'Manage Navigator', label: 'School'
     end
   end
       
-  
+  index do
+      id_column
+      column :name
+      column :city
+      column :school_url do |school|
+        link_to school.school_url, school.school_url
+      end
+
+    actions
+  end
   
   
   
@@ -54,10 +71,10 @@ menu parent: 'Manage Navigator', label: 'School'
      f.input :city
      f.input :state
      f.input :zip
-     f.input :school_url
-     f.input :registration_url
-     f.input :tuition_url
-     f.input :financial_aid_url
+     f.input :school_url 
+     f.input :registration_url 
+     f.input :tuition_url  
+     f.input :financial_aid_url 
      f.input :slug
      f.input :image, as: :file
    end
