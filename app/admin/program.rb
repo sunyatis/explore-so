@@ -97,5 +97,19 @@ ActiveAdmin.register Program do
   f.actions
   end
 
+  index do
+     id_column
+     column :sed
+     column :prog_title
+     column :school_id do |program|
+       program.school.name
+     end
+     column :levelabb_id do |program|
+       program.level_abb.name
+     end
+     column :level_expanded
+    actions
+  end
+
 
 end

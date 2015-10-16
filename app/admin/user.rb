@@ -2,7 +2,7 @@ ActiveAdmin.register User do
 menu parent: 'Manage Navigator', label: 'Users'
   # See permitted parameters documentation:
    # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-   permit_params :email, :password, :password_confirmation, :role, :school_id
+   permit_params :email, :password, :password_confirmation, :role, :school_id, :name
    
    controller do
 
@@ -17,6 +17,10 @@ menu parent: 'Manage Navigator', label: 'Users'
     end
 
      index do
+         column :name
+         column :school do |user|
+           user.school.name
+         end
          column :email
          column :current_sign_in_at
          column :last_sign_in_at
@@ -29,6 +33,7 @@ menu parent: 'Manage Navigator', label: 'Users'
 
      form do |f|
          f.inputs "User Details" do
+             f.input :name
              f.input :email
              f.input :password
              f.input :password_confirmation
