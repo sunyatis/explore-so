@@ -1,9 +1,9 @@
 <div id="filterrific_results">
   <div class="well well-small">
-  <div class="pull-right" data-intro="Reset the filter settings to defaults." data-position="bottom">
-    <%= link_to('Reset filters', reset_filterrific_url, :class => 'reset_link') %>
+  	<div class="pull-right" data-intro="Reset the filter settings to defaults." data-position="bottom">
+    	<%= link_to('Reset filters', reset_filterrific_url, :class => 'reset_link') %>
 
-  </div>
+  	</div>
   <div class="chardin_box" data-intro="will_paginate's entries info works as expected." data-position="bottom">
   <%= page_entries_info @programs, entry_name: "programs" %>
   </div>
@@ -14,13 +14,9 @@
         </span>
 
   </div>
-  </div>
+ </div>
 
 
-
-  <div>
-
-  </div>
 
 <table class="table table-striped table-hover">
     <tr>
@@ -80,4 +76,4 @@
     <% end %>
 </table>
 
-<%= paginate @programs %>   
+<div class="text-center"><%= paginate @programs %></div>
