@@ -35,7 +35,7 @@
           <td><%= course.level %></td>
           <td><%= link_to course.school.name, course.school.school_url, :target => "_blank" %></td>
           <td><%= course.course_method %></td>
-          <td><%= course.credit %></td>
+          <td><span class="label label-primary"><%= course.credit %></span></td>
         </tr>
       <% end %>
   </table>
