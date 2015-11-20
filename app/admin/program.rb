@@ -4,6 +4,7 @@ ActiveAdmin.register Program do
   	:template => 'admin/program_import' ,
      headers_rewrites: { :'subjectarea_id' => :subjectarea_id, :'levelabb_id' => :levelabb_id}, #:'school_id' => :school_id}, mass import
      before_batch_import: ->(importer) {
+                    Program.where(sed: importer.values_at('sed')).delete_all
 
                     subject_names = importer.values_at(:subjectarea_id)
                      # replacing subject area name with subject area id

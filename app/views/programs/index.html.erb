@@ -51,19 +51,7 @@
       { include_blank: '- Any -' }
     ) %>
   </div>
-  <script type="text/javascript">
-      $(document).ready(function() {
-          $('#filterrific_with_category').multiselect({
-          });
-           $('.btn-group').on('click', function (e) {
-                $(this).addClass("open");
-            });
-            
-      }); 
-
-  </script>
-	<label>Category</label>
-    <%= f.select(:with_category, @filterrific.select_options[:with_category], { include_hidden: false}, multiple: true)%>
+ 
   <div class="span3 chardin_box">
     <label>Sorted by</label>
     <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by]) %>
