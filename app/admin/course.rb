@@ -5,12 +5,29 @@ ActiveAdmin.register Course do
  headers_rewrites: { :'subjectarea_id' => :subjectarea_id, :'generaleducation_id' => :generaleducation_id, :'start_date' => :start_date, :'end_date' => :end_date, :'code' => :code},
  before_batch_import: ->(importer) {
                  Course.where(local_course_id: importer.values_at('local_course_id')).delete_all
-
                  subject_names = importer.values_at(:subjectarea_id)
+                 puts subject_names
                  # replacing subject area name with subject area id
-                 subjects   = SubjectArea.where(name: subject_names).pluck(:name, :id)
+                 #subject_names_split = subject_names.map {|subject_names|   {subject_names => subject_names.split(', ')}.flatten } 
+                 #puts subject_names_split
+                 subjects = nil
+                 subject_names.each do |s|
+                   subjects   = SubjectArea.where(name: subject_names).pluck(:name, :id)
+                   puts subjects
+                   #subjects_join = subjects.join(',')
+                   #puts subjects_join
+                   #return subjects_join
+                 end
+                 #puts subjects_join
                  options = Hash[*subjects.flatten] # #{"Jane" => 2, "John" => 1}
+                  #puts options
                  importer.batch_replace(:subjectarea_id, options)
+
+                 
+                 
+                 
+                 
+                 
                  
                   ge_names = importer.values_at(:generaleducation_id)
                   # replacing general education name with general education id
@@ -30,6 +47,12 @@ ActiveAdmin.register Course do
                   options = Hash[*options.flatten]
                   puts options
                   importer.batch_replace(:'end_date', options)
+                  
+
+                  
+                  
+                  
+                  
                   
        #       
        #    codes = importer.values_at(:code)
