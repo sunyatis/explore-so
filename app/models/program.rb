@@ -249,9 +249,10 @@ class Program < ActiveRecord::Base
      LevelAbb.find(id).name
    end
    
-   #friendly id
-   friendly_id :generate_custom_slug, use:  [:slugged, :finders]
 
+   #friendly id
+   friendly_id :generate_custom_slug, use: :slugged
+   
    def generate_custom_slug
        "#{get_school_name(school_id)}-#{prog_title}-#{get_level_abb_name(levelabb_id)}"
    end

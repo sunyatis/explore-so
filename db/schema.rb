@@ -1,233 +1,228 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# Note that this schema.rb definition is the authoritative source for your
-# database schema. If you need to create the application database on another
-# system, you should be using db:schema:load, not running all the migrations
-# from scratch. The latter is a flawed and unsustainable approach (the more migrations
-# you'll amass, the slower it'll run and the greater likelihood for issues).
+# This file is the source Rails uses to define your schema when running `rails
+# db:schema:load`. When creating a new database, `rails db:schema:load` tends to
+# be faster and is potentially less error prone than running all of your
+# migrations from scratch. Old migrations may fail to apply correctly if those
+# migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150820172725) do
+ActiveRecord::Schema.define(version: 2015_08_20_172725) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "active_admin_comments", force: :cascade do |t|
-    t.string   "namespace"
-    t.text     "body"
-    t.string   "resource_id",   null: false
-    t.string   "resource_type", null: false
-    t.integer  "author_id"
-    t.string   "author_type"
+    t.text "namespace"
+    t.text "body"
+    t.text "resource_id"
+    t.text "resource_type"
+    t.bigint "author_id"
+    t.text "author_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["author_type", "author_id"], name: "idx_58344_index_active_admin_comments_on_author_type_and_author"
+    t.index ["namespace"], name: "idx_58344_index_active_admin_comments_on_namespace"
+    t.index ["resource_type", "resource_id"], name: "idx_58344_index_active_admin_comments_on_resource_type_and_reso"
   end
-
-  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
-  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace"
-  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
 
   create_table "admin_users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+    t.text "email", default: ""
+    t.text "encrypted_password", default: ""
+    t.text "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.bigint "sign_in_count", default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+    t.text "current_sign_in_ip"
+    t.text "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["email"], name: "idx_58332_index_admin_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "idx_58332_index_admin_users_on_reset_password_token", unique: true
   end
 
-  add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
-  add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
-
   create_table "catalogs", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.boolean  "active",     default: false
+    t.text "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean "active", default: false
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "courses", force: :cascade do |t|
-    t.integer  "catalog_id"
-    t.string   "title"
-    t.string   "code"
-    t.text     "description"
-    t.integer  "credit"
-    t.date     "start_date"
-    t.date     "end_date"
-    t.string   "local_course_id"
-    t.string   "prefix"
-    t.string   "section"
-    t.text     "prerequisites"
-    t.text     "corequisites"
-    t.string   "books_url"
-    t.string   "registration_url"
-    t.boolean  "active"
-    t.string   "level"
-    t.integer  "school_id"
-    t.integer  "subjectarea_id"
-    t.string   "course_area"
-    t.string   "instructor"
-    t.string   "course_method"
-    t.integer  "seats_available"
-    t.boolean  "class_full"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-    t.integer  "generaleducation_id"
-    t.text     "slug"
-    t.integer  "cat_id"
+    t.bigint "catalog_id"
+    t.text "title"
+    t.text "code"
+    t.text "description"
+    t.bigint "credit"
+    t.date "start_date"
+    t.date "end_date"
+    t.text "local_course_id"
+    t.text "prefix"
+    t.text "section"
+    t.text "prerequisites"
+    t.text "corequisites"
+    t.text "books_url"
+    t.text "registration_url"
+    t.boolean "active"
+    t.text "level"
+    t.bigint "school_id"
+    t.bigint "subjectarea_id"
+    t.text "course_area"
+    t.text "instructor"
+    t.text "course_method"
+    t.bigint "seats_available"
+    t.boolean "class_full"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.bigint "generaleducation_id"
+    t.text "slug"
+    t.bigint "cat_id"
+    t.index ["slug"], name: "idx_58456_index_courses_on_slug"
   end
 
-  add_index "courses", ["slug"], name: "index_courses_on_slug"
-
   create_table "general_educations", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "level_abbs", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
+    t.text "name"
+    t.text "description"
   end
 
   create_table "points_transactions", force: :cascade do |t|
-    t.integer  "school_id"
-    t.string   "trans_type"
-    t.integer  "points"
-    t.integer  "payment"
-    t.string   "attendee"
-    t.date     "event_start"
-    t.date     "event_end"
-    t.string   "course"
-    t.string   "approved"
-    t.string   "points_type"
-    t.string   "trans_date"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.string   "approver_comments"
+    t.bigint "school_id"
+    t.text "trans_type"
+    t.bigint "points"
+    t.bigint "payment"
+    t.text "attendee"
+    t.date "event_start"
+    t.date "event_end"
+    t.text "course"
+    t.text "approved"
+    t.text "points_type"
+    t.text "trans_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text "approver_comments"
   end
 
   create_table "programs", force: :cascade do |t|
-    t.string  "prog_title"
-    t.text    "description"
-    t.integer "subjectarea_id"
-    t.string  "prog_level"
-    t.integer "levelabb_id"
-    t.integer "school_id"
-    t.string  "duration"
-    t.string  "delivery_method"
-    t.text    "prerequisites"
-    t.string  "program_url"
-    t.string  "registration_url"
-    t.string  "open_suny"
-    t.string  "per_courses_online"
+    t.text "prog_title"
+    t.text "description"
+    t.bigint "subjectarea_id"
+    t.text "prog_level"
+    t.bigint "levelabb_id"
+    t.bigint "school_id"
+    t.text "duration"
+    t.text "delivery_method"
+    t.text "prerequisites"
+    t.text "program_url"
+    t.text "registration_url"
+    t.text "open_suny"
+    t.text "per_courses_online"
     t.boolean "synchronous"
-    t.string  "synchronous_text"
+    t.text "synchronous_text"
     t.boolean "tutoring"
-    t.string  "tutoring_name"
-    t.string  "tutoring_phone"
-    t.string  "tutoring_email"
-    t.string  "tutoring_url"
+    t.text "tutoring_name"
+    t.text "tutoring_phone"
+    t.text "tutoring_email"
+    t.text "tutoring_url"
     t.boolean "helpdesk"
-    t.string  "helpdesk_phone"
-    t.string  "helpdesk_email"
-    t.string  "helpdesk_url"
+    t.text "helpdesk_phone"
+    t.text "helpdesk_email"
+    t.text "helpdesk_url"
     t.boolean "concierge"
-    t.string  "concierge_phone"
-    t.string  "concierge_name"
-    t.string  "concierge_email"
+    t.text "concierge_phone"
+    t.text "concierge_name"
+    t.text "concierge_email"
     t.boolean "experiential_learning"
-    t.text    "experiential_text"
+    t.text "experiential_text"
     t.boolean "plas"
-    t.text    "plas_text"
+    t.text "plas_text"
     t.boolean "accelerated"
-    t.text    "accelerated_text"
-    t.text    "summary"
-    t.string  "level_expanded"
-    t.integer "sed"
-    t.string  "apply_now_url"
-    t.text    "slug"
-    t.integer "cat_id"
+    t.text "accelerated_text"
+    t.text "summary"
+    t.text "level_expanded"
+    t.bigint "sed"
+    t.text "apply_now_url"
+    t.text "slug"
+    t.bigint "cat_id"
+    t.index ["slug"], name: "idx_58447_index_programs_on_slug", unique: true
   end
-
-  add_index "programs", ["slug"], name: "index_programs_on_slug", unique: true
 
   create_table "schools", force: :cascade do |t|
-    t.string   "name"
-    t.string   "address1"
-    t.string   "address2"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
-    t.string   "school_url"
-    t.string   "registration_url"
-    t.string   "tuition_url"
-    t.string   "financial_aid_url"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "slug"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-  end
-
-  add_index "schools", ["slug"], name: "index_schools_on_slug", unique: true
-
-  create_table "sessions", force: :cascade do |t|
-    t.string   "session_id", null: false
-    t.text     "data"
+    t.text "name"
+    t.text "address1"
+    t.text "address2"
+    t.text "city"
+    t.text "state"
+    t.text "zip"
+    t.text "school_url"
+    t.text "registration_url"
+    t.text "tuition_url"
+    t.text "financial_aid_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text "slug"
+    t.text "image_file_name"
+    t.text "image_content_type"
+    t.bigint "image_file_size"
+    t.datetime "image_updated_at"
+    t.index ["slug"], name: "idx_58429_index_schools_on_slug", unique: true
   end
 
-  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true
-  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at"
+  create_table "sessions", force: :cascade do |t|
+    t.text "session_id"
+    t.text "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["session_id"], name: "idx_58420_index_sessions_on_session_id", unique: true
+    t.index ["updated_at"], name: "idx_58420_index_sessions_on_updated_at"
+  end
 
   create_table "subject_areas", force: :cascade do |t|
-    t.string "name"
+    t.text "name"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+    t.text "email", default: ""
+    t.text "encrypted_password", default: ""
+    t.text "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.bigint "sign_in_count", default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+    t.text "current_sign_in_ip"
+    t.text "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
-    t.string   "role"
-    t.integer  "school_id"
+    t.text "name"
+    t.text "role"
+    t.bigint "school_id"
   end
 
   create_table "versions", force: :cascade do |t|
-    t.string   "item_type",  null: false
-    t.integer  "item_id",    null: false
-    t.string   "event",      null: false
-    t.string   "whodunnit"
-    t.text     "object"
+    t.text "item_type"
+    t.bigint "item_id"
+    t.text "event"
+    t.text "whodunnit"
+    t.text "object"
     t.datetime "created_at"
+    t.index ["item_type", "item_id"], name: "idx_58374_index_versions_on_item_type_and_item_id"
   end
-
-  add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
 
 end
