@@ -86,6 +86,12 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
      line-height: 1.25rem !important;
 	 max-width: 75px
 }
+.rounded-button.medium {
+     padding: .70rem .625rem !important;
+     font-weight: 400 !important;
+     line-height: 1.25rem !important;
+	 max-width: 150px
+}
    
 select {
   /*width: 220px;*/
@@ -220,7 +226,7 @@ a {
     max-width: 1000px;
     margin-left: auto !important;
     margin-right: auto !important;
-    width: 100%;
+    width: 80%;
     box-sizing: border-box;
     justify-content: center;
 }
