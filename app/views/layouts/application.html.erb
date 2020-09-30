@@ -42,30 +42,14 @@
   </head>
   <body>
     <header class="navbar navbar-static-top bs-docs-nav">
+		<a href="/"><img src="https://online.suny.edu/wp-content/themes/yootheme/cache/SUNY-Online-Logo-Sig-8fc48323.png" width="60px"></a>
       <%= render 'layouts/navigation' %>
     </header>
+	 <%= render 'visitors/header' %>
     <!--main role="main"-->
-		<div class="container">
+		
 			
-			<div class="ribbon-wrapper" style="margin-bottom: 30px;">
-       	<div class="ribbon-front suny">
-       	<div class="suny_ribbon"> 
-       	    <div class="sunytext_ribbon">
-       	      <a href="http://suny.edu" target="_blank">SUNY.edu</a>
-       	    </div> 
-       	    <div class="statetext_ribbon">
-       	      The State University of New York 
-       	    </div> 
-     	    </div>
-       	</div>
-       	<div class="ribbon-edge-topleft"></div>
-       	<div class="ribbon-edge-topright"></div>
-       	<div class="ribbon-edge-bottomleft"></div>
-       	<div class="ribbon-edge-bottomright"></div>
-       	<div class="ribbon-back-left"></div>
-       	<div class="ribbon-back-right"></div>
-       	 <div class="os-logo"> <%= link_to image_tag("/assets/header-logo.png", :alt => "Open SUNY Logo", :width => "100%"), "http://open.suny.edu", :target => "_blank"%></div>
-       </div>
+		
 			
        <%= render 'layouts/messages' %>
        <%= yield %>

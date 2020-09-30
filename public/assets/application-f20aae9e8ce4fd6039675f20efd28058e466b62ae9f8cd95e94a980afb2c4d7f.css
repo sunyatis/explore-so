@@ -19,28 +19,29 @@
 
 
  */
-/* line 1, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/components/_filterrific_filter.scss */
+/* line 1, app/assets/stylesheets/components/_filterrific_filter.scss */
 #filterrific_filter {
   margin-bottom: 0;
 }
 
-/* line 1, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/components/chardinjs_overrides.css.scss */
+/* line 1, app/assets/stylesheets/components/chardinjs_overrides.css.scss */
 .chardinjs-show-element {
   background-color: white;
 }
-/* line 3, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/components/chardinjs_overrides.css.scss */
+
+/* line 3, app/assets/stylesheets/components/chardinjs_overrides.css.scss */
 .chardinjs-show-element > .filterrific_spinner {
   display: inline-block !important;
   padding: 0 5px;
 }
 
-/* line 9, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/components/chardinjs_overrides.css.scss */
+/* line 9, app/assets/stylesheets/components/chardinjs_overrides.css.scss */
 .chardin_box {
   display: inline-block;
   padding: 0 3px;
 }
 
-/* line 29, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 29, app/assets/stylesheets/application.css.scss */
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
   background-color: #fff;
   border: 1px solid #ccc;
@@ -53,7 +54,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
   transition: border linear 0.2s,box-shadow linear 0.2s;
 }
 
-/* line 40, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 40, app/assets/stylesheets/application.css.scss */
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
   display: inline-block;
   padding: 4px 6px;
@@ -67,92 +68,238 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
   vertical-align: middle;
 }
 
-/* line 54, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 52, app/assets/stylesheets/application.css.scss */
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: #fff !important;
+}
+
+/* line 56, app/assets/stylesheets/application.css.scss */
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: #fff !important;
+}
+
+/* line 60, app/assets/stylesheets/application.css.scss */
+.navbar-static-top {
+  margin-left: 30px !important;
+}
+
+/* line 63, app/assets/stylesheets/application.css.scss */
+.navbar-fixed-top {
+  background-color: #ffffff !important;
+}
+
+/* line 66, app/assets/stylesheets/application.css.scss */
+.navbar-collapse {
+  padding: .625rem 0;
+}
+
+@media (min-width: 768px) {
+  /* line 71, app/assets/stylesheets/application.css.scss */
+  .navbar-text {
+    float: right !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+}
+
+/* line 78, app/assets/stylesheets/application.css.scss */
+.rounded-button.green {
+  background-color: #3a8632;
+  border: 1px solid #3a8632;
+  color: #fff !important;
+  border-radius: 3px;
+}
+
+/* line 84, app/assets/stylesheets/application.css.scss */
+.rounded-button.small {
+  padding: .70rem .625rem !important;
+  font-weight: 400 !important;
+  line-height: 1.25rem !important;
+  max-width: 75px;
+}
+
+/* line 91, app/assets/stylesheets/application.css.scss */
 select {
   /*width: 220px;*/
   border: 1px solid #ccc;
   background-color: #fff;
 }
 
-/* line 60, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 97, app/assets/stylesheets/application.css.scss */
 select, input[type="file"] {
   height: 30px;
   line-height: 30px;
 }
 
-/* line 64, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
-.navbar-inverse {
-  background: #034d8f !important;
-  background: -moz-linear-gradient(top, #034d8f 0%, #003c78 100%) !important;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #034d8f), color-stop(100%, #003c78)) !important;
-  background: -webkit-linear-gradient(top, #034d8f 0%, #003c78 100%) !important;
-  background: -o-linear-gradient(top, #034d8f 0%, #003c78 100%) !important;
-  background: -ms-linear-gradient(top, #034d8f 0%, #003c78 100%) !important;
-  background: linear-gradient(to bottom, #034d8f 0%, #003c78 100%) !important;
-}
-
-/* line 74, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 102, app/assets/stylesheets/application.css.scss */
 .reset_link a {
   color: #034d8f !important;
   text-decoration: none !important;
 }
 
-/* line 81, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 107, app/assets/stylesheets/application.css.scss */
 a {
   color: #034d8f !important;
   text-decoration: none !important;
 }
 
-/* line 86, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 112, app/assets/stylesheets/application.css.scss */
 .apply_now {
   color: #fff !important;
 }
 
-/* line 89, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 115, app/assets/stylesheets/application.css.scss */
 .apply_now a:visited {
   color: #fff !important;
 }
 
-/* line 93, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
-.navbar-nav > li {
-  border-right: 1px solid #306aa2 !important;
+/* line 118, app/assets/stylesheets/application.css.scss */
+.jumbotron {
+  color: white;
+  background-image: url("https://sunyonline.edu//media/suny-online-/images/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  flex-direction: column;
+  padding: 9.375rem 0 !important;
 }
 
-/* line 96, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
-.navbar-inverse .navbar-brand {
-  color: #fff !important;
+/* line 128, app/assets/stylesheets/application.css.scss */
+.jumbotron h1 {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #ffffff !important;
+  font-size: 1.75rem !important;
+  font-weight: 600 !important;
+  line-height: 1.5rem !important;
 }
 
-/* line 99, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
-.navbar-inverse .navbar-nav > li > a {
-  color: #fff !important;
-  text-decoration: none !important;
+/* line 136, app/assets/stylesheets/application.css.scss */
+.jumbotron h2 {
+  display: inline-block !important;
+  width: 39.375rem !important;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.125rem !important;
+  font-weight: 300;
+  line-height: 1.5625rem;
+  max-width: 39.375rem;
+  color: #ffffff !important;
 }
 
-/* line 105, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
-.navbar-inverse .navbar-nav > .open > a {
-  background-color: #01336f !important;
+/* line 147, app/assets/stylesheets/application.css.scss */
+.jumbotron form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  flex-basis: auto;
 }
 
-/* line 108, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 155, app/assets/stylesheets/application.css.scss */
+.jumbotron select {
+  margin: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* line 159, app/assets/stylesheets/application.css.scss */
+.jumbotron select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 3.125rem;
+  width: 18%;
+  flex-basis: auto;
+  font-size: .875rem;
+  font-weight: 300;
+  color: #545454;
+  border: 1px solid #a7a7a7;
+  border-right: 0;
+  border-radius: 3px 0 0 3px;
+  display: block;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+  padding: .5rem .75rem;
+  line-height: 1.25rem;
+  background-color: #fff;
+  background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/forms/select_arrow_down.png);
+  background-position: calc(100% - 10px) center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* line 185, app/assets/stylesheets/application.css.scss */
+.jumbotron input {
+  margin: 0 0 5px 0;
+  border-radius: 0;
+}
+
+/* line 189, app/assets/stylesheets/application.css.scss */
+.jumbotron input {
+  height: 3.125rem;
+  width: 50%;
+  flex-basis: auto;
+  border: 1px solid #a7a7a7;
+  border-right: none;
+  padding: .5rem .75rem;
+  font-size: .875rem;
+  font-weight: 300;
+  line-height: 20px;
+  color: #333;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+}
+
+/* line 205, app/assets/stylesheets/application.css.scss */
+.jumbotron button {
+  height: 3.125rem;
+  padding: .5rem .75rem;
+  background-color: #004c93;
+  border: 1px solid #004c93;
+  border-left: 0;
+  border-radius: 0 3px 3px 0;
+  font-size: .875rem;
+  font-weight: 300;
+  color: #fff;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* line 218, app/assets/stylesheets/application.css.scss */
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1000px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+/* line 229, app/assets/stylesheets/application.css.scss */
 .service-div {
   float: left;
   width: 15%;
 }
 
-/* line 112, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 233, app/assets/stylesheets/application.css.scss */
 .icon-div {
   float: left;
   width: 85%;
   padding-left: 5px;
 }
 
-/* line 118, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 239, app/assets/stylesheets/application.css.scss */
 .landing-text-1 {
   padding-bottom: 25px;
 }
 
-/* line 121, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 242, app/assets/stylesheets/application.css.scss */
 .iframe {
   align: center;
   width: 960px;
@@ -165,12 +312,12 @@ a {
   margin: auto;
 }
 
-/* line 133, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 254, app/assets/stylesheets/application.css.scss */
 #filterrific_with_school_id {
   width: 250px;
 }
 
-/* line 138, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/application.css.scss */
+/* line 259, app/assets/stylesheets/application.css.scss */
 .os-logo {
   float: right;
   margin-top: -60px;
@@ -2015,7 +2162,7 @@ th {
           box-sizing: border-box;
 }
 html {
-  font-size: 10px;
+  font-size: 16px;
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -7737,14 +7884,14 @@ button.close {
 
 .chardinjs-relative-position {
   position: relative; }
-/* line 5, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/programs.scss */
+/* line 5, app/assets/stylesheets/programs.scss */
 .open_icons {
   /*float: left;*/
   display: inline-block;
   padding: 5px;
 }
 
-/* line 11, /Users/Amelia/Documents/Code_and_Graphics/Code/Sites/open_suny_navigator_2_0/app/assets/stylesheets/programs.scss */
+/* line 11, app/assets/stylesheets/programs.scss */
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
   color: #fff !important;
 }

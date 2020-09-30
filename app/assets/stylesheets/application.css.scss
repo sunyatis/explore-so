@@ -48,8 +48,45 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
   border-radius: 4px;
   vertical-align: middle;
 }
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: #fff !important; 
+}
 
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: #fff !important;
+}
 
+.navbar-static-top {
+    margin-left: 30px !important;
+}
+.navbar-fixed-top {
+	background-color: #ffffff !important;
+}
+.navbar-collapse {
+	    padding: .625rem 0;
+}
+
+@media (min-width: 768px) {
+ .navbar-text {
+	float: right !important;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	}
+}
+
+.rounded-button.green {
+    background-color: #3a8632;
+    border: 1px solid #3a8632;
+    color: #fff !important;
+	border-radius: 3px;
+}
+.rounded-button.small {
+     padding: .70rem .625rem !important;
+     font-weight: 400 !important;
+     line-height: 1.25rem !important;
+	 max-width: 75px
+}
+   
 select {
   /*width: 220px;*/
   border: 1px solid #ccc;
@@ -60,22 +97,11 @@ select, input[type="file"] {
   height: 30px;
   line-height: 30px;
 }
-.navbar-inverse {
-  background: #034d8f !important;
-  background: -moz-linear-gradient(top, #034d8f 0%, #003c78 100%) !important;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #034d8f), color-stop(100%, #003c78)) !important;
-  background: -webkit-linear-gradient(top, #034d8f 0%, #003c78 100%) !important;
-  background: -o-linear-gradient(top, #034d8f 0%, #003c78 100%) !important;
-  background: -ms-linear-gradient(top, #034d8f 0%, #003c78 100%) !important;
-  background: linear-gradient(to bottom, #034d8f 0%, #003c78 100%) !important;
-}
 
 .reset_link a{
   color: #034d8f !important;
   text-decoration: none !important;
 }
-
-
 
 a {
   color: #034d8f !important;
@@ -88,22 +114,117 @@ a {
 .apply_now a:visited {
   color: #fff !important;
 }
+.jumbotron {
+  color: white;
+  background-image: url("https://sunyonline.edu//media/suny-online-/images/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:500px;
+  flex-direction: column;
+  padding: 9.375rem 0 !important;
+}
+.jumbotron h1 {
+    display: inline-block;
+    margin-bottom: 10px;
+	color: #ffffff !important;
+    font-size: 1.75rem !important;
+    font-weight: 600 !important;
+    line-height: 1.5rem !important;
+}
+.jumbotron h2 {
+    display: inline-block !important;
+    width: 39.375rem !important;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.125rem !important;
+    font-weight: 300;
+    line-height: 1.5625rem;
+    max-width: 39.375rem;
+	color: #ffffff !important;
+}
+.jumbotron form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    flex-basis: auto;
+}
 
-.navbar-nav>li {
-  border-right: 1px solid #306aa2 !important;
+.jumbotron select {
+    margin: 0;
+    border-radius: 3px 0 0 3px;
 }
-.navbar-inverse .navbar-brand {
- color: #fff !important
+.jumbotron select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 3.125rem;
+    width: 18%;
+    flex-basis: auto;
+    font-size: .875rem;
+    font-weight: 300;
+    color: #545454;
+    border: 1px solid #a7a7a7;
+    border-right: 0;
+    border-radius: 3px 0 0 3px;
+	    display: block;
+	    position: relative;
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+	    margin: 0;
+	    padding: .5rem .75rem;
+	    line-height: 1.25rem;
+	    background-color: #fff;
+	    background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/forms/select_arrow_down.png);
+	    background-position: calc(100% - 10px) center;
+	    background-repeat: no-repeat;
+	    cursor: pointer;
 }
-.navbar-inverse .navbar-nav>li>a {
-   color: #fff !important;
-  text-decoration: none !important;
+.jumbotron input {
+    margin: 0 0 5px 0;
+    border-radius: 0;
+}
+.jumbotron  input {
+    height: 3.125rem;
+    width: 50%;
+    flex-basis: auto;
+    border: 1px solid #a7a7a7;
+    border-right: none;
+    padding: .5rem .75rem;
+	font-size: .875rem;
+    font-weight: 300;
+    line-height: 20px;
+    color: #333;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.3);
+    background-color: #fff;
 }
 
-
-.navbar-inverse .navbar-nav>.open>a{	
-   background-color: #01336f !important;
+.jumbotron  button {
+    height: 3.125rem;
+    padding: .5rem .75rem;
+    background-color: #004c93;
+    border: 1px solid #004c93;
+    border-left: 0;
+    border-radius: 0 3px 3px 0;
+    font-size: .875rem;
+    font-weight: 300;
+    color: #fff;
+	 margin: 0;
+    cursor: pointer;
 }
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1000px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
 .service-div{
   float:left; width:15%;
 }

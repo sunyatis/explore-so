@@ -18,22 +18,22 @@
 
   <table class="table table-striped table-hover">
       <tr>
-        <th>Title</th>
+		<th></th>
+        <th>Course</th>
         <th>Code</th>
         <th>Start date</th>
         <th>Level</th>
-        <th>School</th>
         <th>Course method</th>
         <th>Credit</th>
       </tr>
 
       <% @courses.each do |course| %>
         <tr>
-          <td><%= link_to course.title, course %></td>
+		  <td><%= image_tag(course.school.image.url(:thumb), :align=> "center") %></td>	
+          <td><%= link_to course.title, course %> <br> <%= course.school.name %></td>
           <td><%= course.prefix %> <%= course.code %> <%= course.section %></td>
           <td><%= course.start_date.strftime("%m/%d/%y")%></td>
           <td><%= course.level %></td>
-          <td><%= link_to course.school.name, course.school.school_url, :target => "_blank" %></td>
           <td><%= course.course_method %></td>
           <td><span class="label label-primary"><%= course.credit %></span></td>
         </tr>

@@ -23,3 +23,14 @@
 
 
 
+	function myFunction() {
+		var dg = document.getElementById("degree");
+	  var dgchoice = dg.options[dg.selectedIndex].value;
+  var stext = document.getElementById('s').value
+	  if (dgchoice =="" && stext=="")
+	  {
+	  	window.location = "/programs";
+	  }else
+	  window.location = "/programs?" + dgchoice + "&" + "filterrific[search_query]=" + stext;
+	  
+	}
