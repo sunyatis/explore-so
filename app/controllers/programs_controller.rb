@@ -108,6 +108,14 @@ def index
         render 'edit'
       end
   end
+  def show
+      #@school = School.friendly.find(params[:id])
+      # @level = LevelAbb.friendly.find(params[:id]).name
+      @school = School.
+  end
+ # def get_school_name(id)
+  #  School.friendly.find(params[:school_id]).name
+#  end
 
 
 

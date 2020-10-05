@@ -1,8 +1,8 @@
 ActiveAdmin.register Course do
  menu parent: 'Manage Courses', label: 'Courses'
  active_admin_import :validate => false,
- :template => 'admin/course_import' ,
- headers_rewrites: { :'subjectarea_id' => :subjectarea_id, :'generaleducation_id' => :generaleducation_id, :'start_date' => :start_date, :'end_date' => :end_date, :'code' => :code},
+ template: 'admin/course_import' ,
+ headers_rewrites: { :'subjectarea_id' => :subjectarea_id, :'school_id' => :school_id, :'generaleducation_id' => :generaleducation_id, :'start_date' => :start_date, :'end_date' => :end_date, :'code' => :code},
  before_batch_import: ->(importer) {
                  Course.where(local_course_id: importer.values_at('local_course_id')).delete_all
                  subject_names = importer.values_at(:subjectarea_id)
@@ -24,7 +24,12 @@ ActiveAdmin.register Course do
                  importer.batch_replace(:subjectarea_id, options)
 
                  
-                 
+                 school_names = importer.values_at(:school_id)
+                   # replacing subject area name with subject area id
+                   schools   = School.where(name: school_names).pluck(:name, :id)
+                   options = Hash[*schools.flatten] # #{"Jane" => 2, "John" => 1}
+                   importer.batch_replace(:school_id, options)
+                
                  
                  
                  
@@ -54,29 +59,29 @@ ActiveAdmin.register Course do
                   
                   
                   
-       #       
-       #    codes = importer.values_at(:code)
-       #    options_codes = codes.map {|codes|   {codes => codes.split('-').first}.flatten } 
-       #    options_sections = codes.map {|codes| {codes => codes.split('-').last}.flatten }
-       #    options_codes = Hash[*options_codes.flatten]
-       #    options_sections = Hash[*options_sections.flatten]
-       #    importer.batch_replace(:'code', options_codes)
-       #    importer.batch_replace(:'section', options_sections)
-       #
+             
+   #   codes = importer.values_at(:code)
+   #   options_codes = codes.map {|codes|   {codes => codes.split('-').first}.flatten } 
+   #   options_sections = codes.map {|codes| {codes => codes.split('-').last}.flatten }
+   #   options_codes = Hash[*options_codes.flatten]
+   #   options_sections = Hash[*options_sections.flatten]
+   #   importer.batch_replace(:'code', options_codes)
+   #   importer.batch_replace(:'section', options_sections)
+      
 
                    
-                  importer.csv_lines.map! { |row| row << importer.model.catalog_id}
-                  importer.headers.merge!({:'catalog_id' => :catalog_id}) 
+               #   importer.csv_lines.map! { |row| row << importer.model.catalog_id}
+                #  importer.headers.merge!({:'catalog_id' => :catalog_id}) 
                   
-                  importer.csv_lines.map! { |row| row << importer.model.school_id}
-                  importer.headers.merge!({:'school_id' => :school_id})
+                 # importer.csv_lines.map! { |row| row << importer.model.school_id}
+                  #importer.headers.merge!({:'school_id' => :school_id})
                },
                after_batch_import: ->(importer) {
                   Course.where(title: "title").delete_all
                },
  :template_object => ActiveAdminImport::Model.new(
  :catalog_id => nil,
- :school_id => nil,
+ #:school_id => nil,
  #:hint => "file will be imported with such header format: 'body','title','author'",
  #:csv_headers => ["local_course_id", "subjectarea_id", "course_area", "prefix", "code", "section", "title",  "description", "prerequisites", "corequisites", "generaleducation_id", "level", "instructor", "credit", "start_date", "end_date", "books_url", "registration_url", "active", "course_method", "seats_available", "class_full"]
   # mass import

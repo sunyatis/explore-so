@@ -241,20 +241,20 @@ class Program < ActiveRecord::Base
    end
    
    # Get School name
-   def get_school_name(id)
-     School.find(id).name
-   end
+  # def get_school_name(id)
+  #   School.friendly.find(params[:school_id]).name
+  # end
    # Get School name
-   def get_level_abb_name(id)
-     LevelAbb.find(id).name
-   end
+  # def get_level_abb_name(id)
+    # LevelAbb.find(id).name
+  # end
    
 
    #friendly id
-   friendly_id :generate_custom_slug, use: :slugged
-   
-   def generate_custom_slug
-       "#{get_school_name(school_id)}-#{prog_title}-#{get_level_abb_name(levelabb_id)}"
-   end
+   #friendly_id :generate_custom_slug #, use: :slugged
+   friendly_id :name, use: :slugged, slug_column: :prog_title
+   #def generate_custom_slug
+  #     "#{@school}-#{prog_title}-#{@level}"
+  # end
   
 end

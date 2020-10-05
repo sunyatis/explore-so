@@ -25,8 +25,9 @@ ActiveAdmin.register Program do
                    #   importer.batch_replace(:school_id, options)
 
                        importer.csv_lines.map! { |row| row << importer.model.school_id}
-                       importer.headers.merge!({:'school_id' => :school_id})
-
+                       importer.headers.merge!({:"school_id" => :school_id})
+                       
+                       
                    },
                    after_batch_import: ->(importer) {
                        Program.where(prog_title: "prog_title").delete_all

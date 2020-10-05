@@ -42,7 +42,7 @@ menu parent: 'Manage Navigator', label: 'School'
       row :updated_at
       row :slug
       row :image do
-        image_tag school.image.url(:thumb)
+        image_tag school.image.url(:small)
       end
       row :image_file_size
       row :image_content_type
@@ -76,7 +76,7 @@ menu parent: 'Manage Navigator', label: 'School'
      f.input :tuition_url  
      f.input :financial_aid_url 
      f.input :slug
-     f.input :image, as: :file
+     #f.input :image, as: :file
    end
    f.actions
  end
