@@ -23,7 +23,7 @@
 
 
 
-	function myFunction() {
+function myFunction() {
 		var dg = document.getElementById("degree");
 	  var dgchoice = dg.options[dg.selectedIndex].value;
   var stext = document.getElementById('s').value

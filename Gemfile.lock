@@ -109,10 +109,6 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
-    bootstrap (5.0.0.alpha1)
-      autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 1.14.3, < 2)
-      sassc-rails (>= 2.0.0)
     bootstrap-datepicker-rails (1.9.0.1)
       railties (>= 3.0)
     bootstrap-sass (3.4.1)
@@ -238,7 +234,6 @@ GEM
     pg (1.2.3)
     polyamorous (2.3.2)
       activerecord (>= 5.2.1)
-    popper_js (1.16.0)
     public_suffix (4.0.6)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -376,7 +371,6 @@ DEPENDENCIES
   activerecord-session_store
   aws-sdk (< 2.0)
   better_errors
-  bootstrap (~> 5.0.0.alpha1)
   bootstrap-datepicker-rails
   bootstrap-sass
   bootstrap-tooltip-rails
