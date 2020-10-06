@@ -27,12 +27,12 @@
   <table class="table table-hover">
       <tr>
 		<th></th>
-        <th>Course</th>
+        <th><%= filterrific_sorting_link(@filterrific, :title) %></th>
         <th>Code</th>
-        <th>Start date</th>
+        <th><%= filterrific_sorting_link(@filterrific, :start_date) %></th>
         <th>Level</th>
         <th>Course method</th>
-        <th>Credit</th>
+        <th><%= filterrific_sorting_link(@filterrific, :credit) %></th>
       </tr>
 
       <% @courses.each do |course| %>
@@ -50,5 +50,3 @@
   
   </div>
    </div>
-<div class="text-center"><%= paginate @courses %></div>
- 
