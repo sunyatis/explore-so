@@ -353,6 +353,208 @@ a {
   width: 25%;
   margin: auto;
 }
+
+/* line 289, app/assets/stylesheets/application.css.scss */
+body > footer {
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  padding: 2.5rem 0;
+  width: 100%;
+  background-color: #444645;
+  font-size: .875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  color: #c5c5c5;
+}
+
+/* line 301, app/assets/stylesheets/application.css.scss */
+body > footer .navigation {
+  display: flex;
+}
+
+/* line 304, app/assets/stylesheets/application.css.scss */
+body > footer .navigation ul {
+  display: flex;
+  flex-flow: column wrap;
+  list-style-type: none;
+  flex-basis: calc(100% - 300px);
+  width: calc(100% - 300px);
+  height: 6.25rem;
+  padding: 0;
+  margin: 0;
+  order: 1;
+}
+
+/* line 315, app/assets/stylesheets/application.css.scss */
+body > footer .navigation ul li {
+  padding: 0;
+  margin: 0 0 .3125rem 0;
+  line-height: 1.25rem;
+}
+
+/* line 320, app/assets/stylesheets/application.css.scss */
+body > footer .navigation ul li a {
+  font-size: .875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  color: #c5c5c5 !important;
+  text-decoration: none;
+  trasition: color 200ms ease;
+}
+
+/* line 328, app/assets/stylesheets/application.css.scss */
+body > footer .navigation figure {
+  display: flex;
+  position: relative;
+  flex-flow: row nowrap;
+  width: calc(100% - 300px);
+  transform: translateY(-116px);
+  margin-bottom: -4.6875rem;
+  order: 3;
+}
+
+/* line 337, app/assets/stylesheets/application.css.scss */
+figure {
+  margin: 0;
+}
+
+/* line 340, app/assets/stylesheets/application.css.scss */
+body > footer .navigation figure img {
+  width: 9.5625rem;
+  height: 4.6875rem;
+  margin-right: .9375rem;
+}
+
+/* line 345, app/assets/stylesheets/application.css.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 349, app/assets/stylesheets/application.css.scss */
+body > footer .navigation figure figcaption {
+  width: 100%;
+  text-align: left;
+  margin-top: 1.75rem;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+/* line 357, app/assets/stylesheets/application.css.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+/* line 360, app/assets/stylesheets/application.css.scss */
+body > footer aside, body > footer .social-media {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-basis: 15.0625rem;
+  height: 15.0625rem;
+  width: 18.75rem;
+  order: 2;
+}
+
+/* line 368, app/assets/stylesheets/application.css.scss */
+body > footer aside .twitter-feed, body > footer .social-media .twitter-feed {
+  display: flex;
+  align-self: flex-start;
+  order: 1;
+  height: 12.5rem;
+  width: 18.75rem;
+}
+
+/* line 375, app/assets/stylesheets/application.css.scss */
+body > footer aside ul, body > footer .social-media ul {
+  display: flex;
+  list-style-type: none;
+  flex-flow: row nowrap;
+  justify-content: center;
+  order: 2;
+  width: 100%;
+  margin: .9375rem 0 0 0;
+}
+
+/* line 384, app/assets/stylesheets/application.css.scss */
+body > footer .navigation ul {
+  display: flex;
+  flex-flow: column wrap;
+  list-style-type: none;
+  flex-basis: calc(100% - 300px);
+  width: calc(100% - 300px);
+  height: 6.25rem;
+  padding: 0;
+  margin: 0;
+  order: 1;
+}
+
+/* line 395, app/assets/stylesheets/application.css.scss */
+body > footer aside ul li, body > footer .social-media ul li {
+  display: flex;
+  height: 1.625rem;
+  width: 1.625rem;
+  margin: 0 .9375rem 0 0;
+  padding: 0;
+}
+
+/* line 402, app/assets/stylesheets/application.css.scss */
+body > footer aside ul li a, body > footer .social-media ul li a {
+  display: block;
+  height: 1.625rem;
+  width: 1.625rem;
+  border-radius: 50%;
+  background-color: #f6f6f6;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  transition: background-color 200ms ease;
+}
+
+/* line 413, app/assets/stylesheets/application.css.scss */
+body > footer aside .twitter-feed, body > footer .social-media .twitter-feed {
+  display: flex;
+  align-self: flex-start;
+  order: 1;
+  height: 12.5rem;
+  width: 18.75rem;
+}
+
+/* line 420, app/assets/stylesheets/application.css.scss */
+body > footer aside ul li.youtube a, body > footer .social-media ul li.youtube a {
+  background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/youtube/logo.svg);
+  text-indent: -5000px;
+}
+
+/* line 424, app/assets/stylesheets/application.css.scss */
+body > footer aside ul li.facebook a, body > footer .social-media ul li.facebook a {
+  background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/facebook/letter-logo.svg);
+  text-indent: -5000px;
+}
+
+/* line 428, app/assets/stylesheets/application.css.scss */
+body > footer aside ul li.linkedin a, body > footer .social-media ul li.linkedin a {
+  background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/linkedin/letters.svg);
+  text-indent: -5000px;
+}
+
+/* line 432, app/assets/stylesheets/application.css.scss */
+body > footer aside ul li.twitter a, body > footer .social-media ul li.twitter a {
+  background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/twitter/shape.svg);
+  text-indent: -5000px;
+}
+
+/* line 436, app/assets/stylesheets/application.css.scss */
+.nav-row {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
 .multiselect-container{position:absolute;list-style-type:none;margin:0;padding:0}.multiselect-container .input-group{margin:5px}.multiselect-container>li{padding:0}.multiselect-container>li>a.multiselect-all label{font-weight:700}.multiselect-container>li.multiselect-group label{margin:0;padding:3px 20px 3px 20px;height:100%;font-weight:700}.multiselect-container>li.multiselect-group-clickable label{cursor:pointer}.multiselect-container>li>a{padding:0}.multiselect-container>li>a>label{margin:0;height:100%;cursor:pointer;font-weight:400;padding:3px 20px 3px 40px}.multiselect-container>li>a>label.radio,.multiselect-container>li>a>label.checkbox{margin:0}.multiselect-container>li>a>label>input[type=checkbox]{margin-bottom:5px}.btn-group>.btn-group:nth-child(2)>.multiselect.btn{border-top-left-radius:4px;border-bottom-left-radius:4px}.form-inline .multiselect-container label.checkbox,.form-inline .multiselect-container label.radio{padding:3px 20px 3px 40px}.form-inline .multiselect-container li a label.checkbox input[type=checkbox],.form-inline .multiselect-container li a label.radio input[type=radio]{margin-left:-20px;margin-right:0}
 /*!
  * Datepicker for Bootstrap v1.4.0 (https://github.com/eternicode/bootstrap-datepicker)

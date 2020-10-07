@@ -284,3 +284,160 @@ margin-top: 34px;
 	width: 25%;
     margin: auto;
 }
+
+body>footer {
+    display: flex;
+    flex: 1;
+    flex-flow: column nowrap;
+    padding: 2.5rem 0;
+    width: 100%;
+    background-color: #444645;
+    font-size: .875rem;
+    font-weight: 300;
+    line-height: 1.25rem;
+    color: #c5c5c5;
+}
+body>footer .navigation {
+    display: flex;
+}
+body>footer .navigation ul {
+    display: flex;
+    flex-flow: column wrap;
+    list-style-type: none;
+    flex-basis: calc(100% - 300px);
+    width: calc(100% - 300px);
+    height: 6.25rem;
+    padding: 0;
+    margin: 0;
+    order: 1;
+}
+body>footer .navigation ul li {
+    padding: 0;
+    margin: 0 0 .3125rem 0;
+    line-height: 1.25rem;
+}
+body>footer .navigation ul li a {
+    font-size: .875rem;
+    font-weight: 300;
+    line-height: 1.25rem;
+    color: #c5c5c5 !important;
+    text-decoration: none;
+    trasition: color 200ms ease;
+}
+body>footer .navigation figure {
+    display: flex;
+    position: relative;
+    flex-flow: row nowrap;
+    width: calc(100% - 300px);
+    transform: translateY(-116px);
+    margin-bottom: -4.6875rem;
+    order: 3;
+}
+figure {
+    margin: 0;
+}
+body>footer .navigation figure img {
+    width: 9.5625rem;
+    height: 4.6875rem;
+    margin-right: .9375rem;
+}
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+body>footer .navigation figure figcaption {
+    width: 100%;
+    text-align: left;
+    margin-top: 1.75rem;
+    font-size: .75rem;
+    font-weight: 300;
+    line-height: 1.25rem;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+body>footer aside, body>footer .social-media {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-basis: 15.0625rem;
+    height: 15.0625rem;
+    width: 18.75rem;
+    order: 2;
+}
+body>footer aside .twitter-feed, body>footer .social-media .twitter-feed {
+    display: flex;
+    align-self: flex-start;
+    order: 1;
+    height: 12.5rem;
+    width: 18.75rem;
+}
+body>footer aside ul, body>footer .social-media ul {
+    display: flex;
+    list-style-type: none;
+    flex-flow: row nowrap;
+    justify-content: center;
+    order: 2;
+    width: 100%;
+    margin: .9375rem 0 0 0;
+}
+body>footer .navigation ul {
+    display: flex;
+    flex-flow: column wrap;
+    list-style-type: none;
+    flex-basis: calc(100% - 300px);
+    width: calc(100% - 300px);
+    height: 6.25rem;
+    padding: 0;
+    margin: 0;
+    order: 1;
+}
+body>footer aside ul li, body>footer .social-media ul li {
+    display: flex;
+    height: 1.625rem;
+    width: 1.625rem;
+    margin: 0 .9375rem 0 0;
+    padding: 0;
+}
+body>footer aside ul li a, body>footer .social-media ul li a {
+    display: block;
+    height: 1.625rem;
+    width: 1.625rem;
+    border-radius: 50%;
+    background-color: #f6f6f6;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    transition: background-color 200ms ease;
+}
+body>footer aside .twitter-feed, body>footer .social-media .twitter-feed {
+    display: flex;
+    align-self: flex-start;
+    order: 1;
+    height: 12.5rem;
+    width: 18.75rem;
+}
+body>footer aside ul li.youtube a, body>footer .social-media ul li.youtube a {
+    background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/youtube/logo.svg);
+    text-indent: -5000px;
+}
+body>footer aside ul li.facebook a, body>footer .social-media ul li.facebook a {
+    background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/facebook/letter-logo.svg);
+    text-indent: -5000px;
+}
+body>footer aside ul li.linkedin a, body>footer .social-media ul li.linkedin a {
+    background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/linkedin/letters.svg);
+    text-indent: -5000px;
+}
+body>footer aside ul li.twitter a, body>footer .social-media ul li.twitter a {
+    background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/twitter/shape.svg);
+    text-indent: -5000px;
+}
+.nav-row {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    box-sizing: border-box;
+	}
