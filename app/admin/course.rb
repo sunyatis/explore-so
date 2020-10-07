@@ -148,7 +148,11 @@ ActiveAdmin.register Course do
     actions
   end
    
-  
+  controller do
+    def find_resource
+      scoped_collection.friendly.find(params[:id])
+    end
+  end
 
 
 
