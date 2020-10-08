@@ -1,24 +1,48 @@
-<div id="filterrific_results">
-  <div class="well well-small">
-  	<div class="pull-right" data-intro="Reset the filter settings to defaults." data-position="bottom">
+<div id="filterrific_results" class="row">
+  <div class="container">
+  	<div class="pull-right resets"  data-intro="Reset the filter settings to defaults." data-position="bottom">
     	<%= link_to('Reset filters', reset_filterrific_url, :class => 'reset_link') %>
 
   	</div>
-  <div class="chardin_box" data-intro="will_paginate's entries info works as expected." data-position="bottom">
-  <%= page_entries_info @programs, entry_name: "programs" %>
-  </div>
-  <div class="chardin_box" data-intro="Spinner indicates update." data-position="bottom">
+  	<div class="chardin_box resets" data-intro="will_paginate's entries info works as expected." data-position="bottom">
+ 	   <%= page_entries_info @programs, entry_name: "programs" %>
+ 	 </div>
+ 	 <div class="chardin_box resets" data-intro="Spinner indicates update." data-position="bottom">
 
         <span class="filterrific_spinner" style="display:none;">
           <%= render_filterrific_spinner %>
         </span>
-
-  </div>
+	 </div>
  </div>
+ 
+ <div class="row">
+ 	<div class="container results">
 
+  <table class="table table-hover">
+      <tr>
+		<th></th>
+        <th><%= filterrific_sorting_link(@filterrific, :prog_title) %></th>
+        <th>Delivery Mode</th>
+        <th>Degree Type</th>
+        <th><%= filterrific_sorting_link(@filterrific, :duration)%> </th>
+      </tr>
 
+       <% @programs.each do |program| %>
+        <tr>
+		  <td><%= image_tag(program.school.image.url(:small), :align=> "center", :width=> "55px") %></td>	
+          <td><%= link_to program.prog_title, program %> <br> <%= program.school.name %></td>
+          <td><%= program.delivery_method %></td>
+          <td><%= program.level_expanded %></td>
+          <td><span><%= program.duration %></span></td>
+        </tr>
+      <% end %>
+  </table>
+  
+  	</div>
+ </div>
+</div>
 
-<table class="table table-striped table-hover">
+<!--table class="table table-striped table-hover">
     <tr>
       <th>Program</th>
       <th>Subject Area</th>
@@ -74,6 +98,6 @@
       <% end %>
       </tr>
     <% end %>
-</table>
+</table-->
 
 <div class="text-center"><%= paginate @programs %></div>

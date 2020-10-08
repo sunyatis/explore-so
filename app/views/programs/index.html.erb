@@ -1,7 +1,39 @@
+<header class="search-filter" aria-label="Degrees Filter Banner">
+	<nav class="search-row" aria-label="Degrees Filter Navigation">
+		<%= form_for_filterrific @filterrific do |f| %><div class="form-row1">
+		    <%= f.text_field(
+		      :search_query,
+		      class: 'filterrific-periodically-observed',
+				  type: 'text',
+				  name: 'search',
+				  placeholder: 'Search for a Degree',
+				  value: ''
+			 
+		    ) %>
+		    <%= f.select(
+		      :with_level,
+		      @filterrific.select_options[:with_level],
+		      { include_blank: 'All Degree Levels' },
+			  class: 'degree',
+			  #name: 'degree'
+		    ) %>
+		    <%= f.select(
+		      :with_subject_area_id,
+		      @filterrific.select_options[:with_subject_area_id],
+		      { include_blank: 'All Fields of Study' },
+			   class: 'fieldFilter',
+			   #name: 'fieldFilter'
+		    ) %>
+			
+		<% end %>
+	</nav>
+</header>
 
+
+<!--div class="row row-filters">
 <div class="container">
 
-<div class="well">
+
 <%= form_for_filterrific @filterrific do |f| %>
   <div class="row">
   <div class="span3 chardin_box">
@@ -58,15 +90,16 @@
     <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by]) %>
   </div>
   </div>
-  </div>
+
   <%# add an automated spinner to your form when the list is refreshed %>
 <% end %>
 
-  
+  </div-->
+  </div>
+  </div>
 <%= render(
   partial: 'programs/list',
   locals: { programs: @programs }
 ) %>
-</div>
-</div>
+
 

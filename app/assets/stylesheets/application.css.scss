@@ -440,4 +440,124 @@ body>footer aside ul li.twitter a, body>footer .social-media ul li.twitter a {
     margin-right: auto;
     width: 100%;
     box-sizing: border-box;
+}
+.search-filter {
+    background-color: #f1f1f1;
+}	
+.search-row {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+.results{
+  margin-top: 20px;
+}
+.resets{
+  margin-top: 35px;
+}
+.search-filter form {
+    flex-direction: column;
+}
+.search-filter form {
+    /*display: flex;*/
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    flex-basis: auto;
+    padding: 1.25rem 0;
+}
+form {
+    margin: 0;
+}
+
+.search-filter form .form-row1 {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    flex-flow: initial;
+}
+.search-filter input {
+    height: 3.125rem;
+    width: 40%;
+    flex-basis: auto;
+    border: 1px solid #a7a7a7;
+    /*border-right: none;*/
+    padding: .5rem .75rem;
+	margin-right: .9375rem;
+}
+input {
+    display: block;
+    height: 2.5rem;
+    width: 100%;
+    margin: 0;
+    padding: .5rem .75rem;
+    font-size: .875rem;
+    font-weight: 300;
+    line-height: 20px;
+    color: #333;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.3);
+    background-color: #fff;
+}
+.search-filter button {
+    height: 3.125rem;
+    width: 5.625rem;
+    margin: 0 1.5625rem 0 0;
+    padding: .5rem .75rem;
+    background-color: #004c93;
+    border: 1px solid #004c93;
+    border-left: 0;
+    border-radius: 0 3px 3px 0;
+    font-size: .875rem;
+    font-weight: 300;
+    color: #fff;
+    cursor: pointer;
 	}
+	.search-filter select {
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+	    appearance: none;
+	    height: 3.125rem;
+	    width: calc((60% - 130px)/2);
+	    flex-basis: auto;
+	    padding-right: 2.5rem;
+	    margin-right: .9375rem;
+	    font-size: .875rem;
+	    font-weight: 300;
+	    color: #545454;
+	    border: 1px solid #a7a7a7;
+	    border-radius: 3px;
+	    cursor: pointer;
+	}
+	select {
+	    display: block;
+	    position: relative;
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+	    appearance: none;
+	    height: 2.5rem;
+	    width: 100%;
+	    margin: 0;
+	    padding: .5rem .75rem;
+	    font-size: .875rem;
+	    font-weight: 300;
+	    line-height: 1.25rem;
+	    color: #333;
+	    border-radius: 3px;
+	    border: 1px solid rgba(0,0,0,.3);
+	    background-color: #fff;
+	    background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/forms/select_arrow_down.png);
+	    background-position: calc(100% - 10px) center;
+	    background-repeat: no-repeat;
+	    cursor: pointer;
+		}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 0px solid #ddd !important;
+}
