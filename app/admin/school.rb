@@ -72,7 +72,7 @@ menu parent: 'Manage Navigator', label: 'School'
      f.input :city
      f.input :state
      f.input :zip
-     f.input :campus_type, :as => :radio, :as => :select,  :collection => ["Community College", "Technology College", "University"]
+     f.input :campus_type, :as => :select,  :collection => ["Community College", "Technology College", "University"]
      f.input :school_url 
      f.input :registration_url 
      f.input :tuition_url  
