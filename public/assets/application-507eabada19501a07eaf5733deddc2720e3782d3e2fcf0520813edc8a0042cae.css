@@ -9722,7 +9722,7 @@ body > footer .ranku-bar a {
 
 /* line 1071, app/assets/stylesheets/programs.scss */
 .info-block {
-  margin: 0;
+  margin: .9375rem 0 0 0;
   padding: 0 0 0 1.25rem;
   border-left: 5px solid #ffe512;
 }
@@ -10668,27 +10668,27 @@ body > footer .ranku-bar a {
 }
 
 /* line 1790, app/assets/stylesheets/programs.scss */
-#program-display header .actions ul li.bookmark {
+#program-display header .actions ul li.toolbar {
   border-right: 0;
 }
 
 /* line 1793, app/assets/stylesheets/programs.scss */
-#program-display header .actions ul li.bookmark button.active:before, #program-display header .actions ul li.bookmark div.active:before {
+#program-display header .actions ul li.toolbar button.active:before, #program-display header .actions ul li.bookmark div.active:before {
   content: "";
 }
 
 /* line 1796, app/assets/stylesheets/programs.scss */
-#program-display header .actions ul li.bookmark button.active:after, #program-display header .actions ul li.bookmark div.active:after {
+#program-display header .actions ul li.toolbar button.active:after, #program-display header .actions ul li.bookmark div.active:after {
   content: "ed";
 }
 
 /* line 1799, app/assets/stylesheets/programs.scss */
-#program-display header .actions ul li.bookmark button:before, #program-display header .actions ul li.bookmark div:before {
+#program-display header .actions ul li.toolbar button:before, #program-display header .actions ul li.bookmark div:before {
   content: "+ ";
 }
 
 /* line 1802, app/assets/stylesheets/programs.scss */
-#program-display header .actions ul li.bookmark button:after, #program-display header .actions ul li.bookmark div:after {
+#program-display header .actions ul li.toolbar button:after, #program-display header .actions ul li.bookmark div:after {
   content: "";
 }
 
