@@ -8,7 +8,7 @@ menu parent: 'Manage Navigator', label: 'School'
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :name, :address1, :address2, :city, :state, :zip, :school_url, :registration_url, :tuition_url, :financial_aid_url, :image
+  permit_params :name, :address1, :address2, :city, :state, :zip, :school_url, :registration_url, :tuition_url, :financial_aid_url, :image, :campus_type
   #
   # or
   #
@@ -26,6 +26,7 @@ menu parent: 'Manage Navigator', label: 'School'
       row :city
       row :state
       row :zip
+      row :campus_type
       row :school_url do |school|
          link_to school.school_url, school.school_url
       end
@@ -71,6 +72,7 @@ menu parent: 'Manage Navigator', label: 'School'
      f.input :city
      f.input :state
      f.input :zip
+     f.input :campus_type, :as => :radio, :as => :select,  :collection => ["Community College", "Technology College", "University"]
      f.input :school_url 
      f.input :registration_url 
      f.input :tuition_url  
