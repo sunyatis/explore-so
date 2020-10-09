@@ -127,41 +127,62 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 }
 
 /* line 97, app/assets/stylesheets/application.css.scss */
+.rounded-button.green.halo {
+  transition: all 200ms ease;
+}
+
+/* line 101, app/assets/stylesheets/application.css.scss */
+.rounded-button.large {
+  padding: .9375rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+/* line 107, app/assets/stylesheets/application.css.scss */
+.rounded-button {
+  border-radius: 3px;
+  cursor: pointer;
+  border: 0;
+  text-decoration: none;
+}
+
+/* line 114, app/assets/stylesheets/application.css.scss */
 select {
   /*width: 220px;*/
   border: 1px solid #ccc;
   background-color: #fff;
 }
 
-/* line 103, app/assets/stylesheets/application.css.scss */
+/* line 120, app/assets/stylesheets/application.css.scss */
 select, input[type="file"] {
   height: 30px;
   line-height: 30px;
 }
 
-/* line 108, app/assets/stylesheets/application.css.scss */
+/* line 125, app/assets/stylesheets/application.css.scss */
 .reset_link a {
   color: #034d8f !important;
   text-decoration: none !important;
 }
 
-/* line 113, app/assets/stylesheets/application.css.scss */
+/* line 130, app/assets/stylesheets/application.css.scss */
 a {
   color: #034d8f !important;
   text-decoration: none !important;
 }
 
-/* line 118, app/assets/stylesheets/application.css.scss */
+/* line 135, app/assets/stylesheets/application.css.scss */
 .apply_now {
   color: #fff !important;
 }
 
-/* line 121, app/assets/stylesheets/application.css.scss */
+/* line 138, app/assets/stylesheets/application.css.scss */
 .apply_now a:visited {
   color: #fff !important;
 }
 
-/* line 124, app/assets/stylesheets/application.css.scss */
+/* line 141, app/assets/stylesheets/application.css.scss */
 .jumbotron {
   color: white;
   background-image: url("https://sunyonline.edu//media/suny-online-/images/hero.jpg");
@@ -173,7 +194,7 @@ a {
   padding: 9.375rem 0 !important;
 }
 
-/* line 134, app/assets/stylesheets/application.css.scss */
+/* line 151, app/assets/stylesheets/application.css.scss */
 .jumbotron h1 {
   display: inline-block;
   margin-bottom: 10px;
@@ -183,7 +204,7 @@ a {
   line-height: 1.5rem !important;
 }
 
-/* line 142, app/assets/stylesheets/application.css.scss */
+/* line 159, app/assets/stylesheets/application.css.scss */
 .jumbotron h2 {
   display: inline-block !important;
   width: 39.375rem !important;
@@ -196,7 +217,7 @@ a {
   color: #ffffff !important;
 }
 
-/* line 153, app/assets/stylesheets/application.css.scss */
+/* line 170, app/assets/stylesheets/application.css.scss */
 .jumbotron form {
   display: flex;
   flex-direction: row;
@@ -205,13 +226,13 @@ a {
   flex-basis: auto;
 }
 
-/* line 161, app/assets/stylesheets/application.css.scss */
+/* line 178, app/assets/stylesheets/application.css.scss */
 .jumbotron select {
   margin: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* line 165, app/assets/stylesheets/application.css.scss */
+/* line 182, app/assets/stylesheets/application.css.scss */
 .jumbotron select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -239,13 +260,13 @@ a {
   cursor: pointer;
 }
 
-/* line 191, app/assets/stylesheets/application.css.scss */
+/* line 208, app/assets/stylesheets/application.css.scss */
 .jumbotron input {
   margin: 0 0 5px 0;
   border-radius: 0;
 }
 
-/* line 195, app/assets/stylesheets/application.css.scss */
+/* line 212, app/assets/stylesheets/application.css.scss */
 .jumbotron input {
   height: 3.125rem;
   width: 50%;
@@ -262,7 +283,7 @@ a {
   background-color: #fff;
 }
 
-/* line 211, app/assets/stylesheets/application.css.scss */
+/* line 228, app/assets/stylesheets/application.css.scss */
 .jumbotron button {
   height: 3.125rem;
   padding: .5rem .75rem;
@@ -277,7 +298,7 @@ a {
   cursor: pointer;
 }
 
-/* line 224, app/assets/stylesheets/application.css.scss */
+/* line 241, app/assets/stylesheets/application.css.scss */
 .row-search {
   display: flex;
   flex-flow: row wrap;
@@ -289,13 +310,13 @@ a {
   justify-content: center;
 }
 
-/* line 234, app/assets/stylesheets/application.css.scss */
+/* line 251, app/assets/stylesheets/application.css.scss */
 .row-filters {
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
 }
 
-/* line 239, app/assets/stylesheets/application.css.scss */
+/* line 256, app/assets/stylesheets/application.css.scss */
 .well {
   background-color: #ffffff !important;
   border: 0px !important;
@@ -304,25 +325,25 @@ a {
   box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.05) !important;
 }
 
-/* line 248, app/assets/stylesheets/application.css.scss */
+/* line 265, app/assets/stylesheets/application.css.scss */
 .service-div {
   float: left;
   width: 15%;
 }
 
-/* line 252, app/assets/stylesheets/application.css.scss */
+/* line 269, app/assets/stylesheets/application.css.scss */
 .icon-div {
   float: left;
   width: 85%;
   padding-left: 5px;
 }
 
-/* line 258, app/assets/stylesheets/application.css.scss */
+/* line 275, app/assets/stylesheets/application.css.scss */
 .landing-text-1 {
   padding-bottom: 25px;
 }
 
-/* line 261, app/assets/stylesheets/application.css.scss */
+/* line 278, app/assets/stylesheets/application.css.scss */
 .iframe {
   align: center;
   width: 960px;
@@ -335,12 +356,12 @@ a {
   margin: auto;
 }
 
-/* line 273, app/assets/stylesheets/application.css.scss */
+/* line 290, app/assets/stylesheets/application.css.scss */
 #filterrific_with_school_id {
   width: 250px;
 }
 
-/* line 278, app/assets/stylesheets/application.css.scss */
+/* line 295, app/assets/stylesheets/application.css.scss */
 .os-logo {
   float: right;
   margin-top: -60px;
@@ -348,13 +369,13 @@ a {
   max-width: 146px;
 }
 
-/* line 284, app/assets/stylesheets/application.css.scss */
+/* line 301, app/assets/stylesheets/application.css.scss */
 .authform {
   width: 25%;
   margin: auto;
 }
 
-/* line 289, app/assets/stylesheets/application.css.scss */
+/* line 306, app/assets/stylesheets/application.css.scss */
 body > footer {
   display: flex;
   flex: 1;
@@ -368,12 +389,12 @@ body > footer {
   color: #c5c5c5;
 }
 
-/* line 301, app/assets/stylesheets/application.css.scss */
+/* line 318, app/assets/stylesheets/application.css.scss */
 body > footer .navigation {
   display: flex;
 }
 
-/* line 304, app/assets/stylesheets/application.css.scss */
+/* line 321, app/assets/stylesheets/application.css.scss */
 body > footer .navigation ul {
   display: flex;
   flex-flow: column wrap;
@@ -386,14 +407,14 @@ body > footer .navigation ul {
   order: 1;
 }
 
-/* line 315, app/assets/stylesheets/application.css.scss */
+/* line 332, app/assets/stylesheets/application.css.scss */
 body > footer .navigation ul li {
   padding: 0;
   margin: 0 0 .3125rem 0;
   line-height: 1.25rem;
 }
 
-/* line 320, app/assets/stylesheets/application.css.scss */
+/* line 337, app/assets/stylesheets/application.css.scss */
 body > footer .navigation ul li a {
   font-size: .875rem;
   font-weight: 300;
@@ -403,7 +424,7 @@ body > footer .navigation ul li a {
   trasition: color 200ms ease;
 }
 
-/* line 328, app/assets/stylesheets/application.css.scss */
+/* line 345, app/assets/stylesheets/application.css.scss */
 body > footer .navigation figure {
   display: flex;
   position: relative;
@@ -414,25 +435,25 @@ body > footer .navigation figure {
   order: 3;
 }
 
-/* line 337, app/assets/stylesheets/application.css.scss */
+/* line 354, app/assets/stylesheets/application.css.scss */
 figure {
   margin: 0;
 }
 
-/* line 340, app/assets/stylesheets/application.css.scss */
+/* line 357, app/assets/stylesheets/application.css.scss */
 body > footer .navigation figure img {
   width: 9.5625rem;
   height: 4.6875rem;
   margin-right: .9375rem;
 }
 
-/* line 345, app/assets/stylesheets/application.css.scss */
+/* line 362, app/assets/stylesheets/application.css.scss */
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 349, app/assets/stylesheets/application.css.scss */
+/* line 366, app/assets/stylesheets/application.css.scss */
 body > footer .navigation figure figcaption {
   width: 100%;
   text-align: left;
@@ -442,12 +463,12 @@ body > footer .navigation figure figcaption {
   line-height: 1.25rem;
 }
 
-/* line 357, app/assets/stylesheets/application.css.scss */
+/* line 374, app/assets/stylesheets/application.css.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
 }
 
-/* line 360, app/assets/stylesheets/application.css.scss */
+/* line 377, app/assets/stylesheets/application.css.scss */
 body > footer aside, body > footer .social-media {
   display: flex;
   flex-flow: column nowrap;
@@ -457,7 +478,7 @@ body > footer aside, body > footer .social-media {
   order: 2;
 }
 
-/* line 368, app/assets/stylesheets/application.css.scss */
+/* line 385, app/assets/stylesheets/application.css.scss */
 body > footer aside .twitter-feed, body > footer .social-media .twitter-feed {
   display: flex;
   align-self: flex-start;
@@ -466,7 +487,7 @@ body > footer aside .twitter-feed, body > footer .social-media .twitter-feed {
   width: 18.75rem;
 }
 
-/* line 375, app/assets/stylesheets/application.css.scss */
+/* line 392, app/assets/stylesheets/application.css.scss */
 body > footer aside ul, body > footer .social-media ul {
   display: flex;
   list-style-type: none;
@@ -477,7 +498,7 @@ body > footer aside ul, body > footer .social-media ul {
   margin: .9375rem 0 0 0;
 }
 
-/* line 384, app/assets/stylesheets/application.css.scss */
+/* line 401, app/assets/stylesheets/application.css.scss */
 body > footer .navigation ul {
   display: flex;
   flex-flow: column wrap;
@@ -490,7 +511,7 @@ body > footer .navigation ul {
   order: 1;
 }
 
-/* line 395, app/assets/stylesheets/application.css.scss */
+/* line 412, app/assets/stylesheets/application.css.scss */
 body > footer aside ul li, body > footer .social-media ul li {
   display: flex;
   height: 1.625rem;
@@ -499,7 +520,7 @@ body > footer aside ul li, body > footer .social-media ul li {
   padding: 0;
 }
 
-/* line 402, app/assets/stylesheets/application.css.scss */
+/* line 419, app/assets/stylesheets/application.css.scss */
 body > footer aside ul li a, body > footer .social-media ul li a {
   display: block;
   height: 1.625rem;
@@ -512,7 +533,7 @@ body > footer aside ul li a, body > footer .social-media ul li a {
   transition: background-color 200ms ease;
 }
 
-/* line 413, app/assets/stylesheets/application.css.scss */
+/* line 430, app/assets/stylesheets/application.css.scss */
 body > footer aside .twitter-feed, body > footer .social-media .twitter-feed {
   display: flex;
   align-self: flex-start;
@@ -521,31 +542,31 @@ body > footer aside .twitter-feed, body > footer .social-media .twitter-feed {
   width: 18.75rem;
 }
 
-/* line 420, app/assets/stylesheets/application.css.scss */
+/* line 437, app/assets/stylesheets/application.css.scss */
 body > footer aside ul li.youtube a, body > footer .social-media ul li.youtube a {
   background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/youtube/logo.svg);
   text-indent: -5000px;
 }
 
-/* line 424, app/assets/stylesheets/application.css.scss */
+/* line 441, app/assets/stylesheets/application.css.scss */
 body > footer aside ul li.facebook a, body > footer .social-media ul li.facebook a {
   background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/facebook/letter-logo.svg);
   text-indent: -5000px;
 }
 
-/* line 428, app/assets/stylesheets/application.css.scss */
+/* line 445, app/assets/stylesheets/application.css.scss */
 body > footer aside ul li.linkedin a, body > footer .social-media ul li.linkedin a {
   background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/linkedin/letters.svg);
   text-indent: -5000px;
 }
 
-/* line 432, app/assets/stylesheets/application.css.scss */
+/* line 449, app/assets/stylesheets/application.css.scss */
 body > footer aside ul li.twitter a, body > footer .social-media ul li.twitter a {
   background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/twitter/shape.svg);
   text-indent: -5000px;
 }
 
-/* line 436, app/assets/stylesheets/application.css.scss */
+/* line 453, app/assets/stylesheets/application.css.scss */
 .nav-row {
   display: flex;
   flex-flow: row wrap;
@@ -556,12 +577,12 @@ body > footer aside ul li.twitter a, body > footer .social-media ul li.twitter a
   box-sizing: border-box;
 }
 
-/* line 445, app/assets/stylesheets/application.css.scss */
+/* line 462, app/assets/stylesheets/application.css.scss */
 .search-filter {
   background-color: #f1f1f1;
 }
 
-/* line 448, app/assets/stylesheets/application.css.scss */
+/* line 465, app/assets/stylesheets/application.css.scss */
 .search-row {
   display: flex;
   flex-flow: row wrap;
@@ -572,22 +593,22 @@ body > footer aside ul li.twitter a, body > footer .social-media ul li.twitter a
   box-sizing: border-box;
 }
 
-/* line 457, app/assets/stylesheets/application.css.scss */
+/* line 474, app/assets/stylesheets/application.css.scss */
 .results {
   margin-top: 20px;
 }
 
-/* line 460, app/assets/stylesheets/application.css.scss */
+/* line 477, app/assets/stylesheets/application.css.scss */
 .resets {
   margin-top: 35px;
 }
 
-/* line 463, app/assets/stylesheets/application.css.scss */
+/* line 480, app/assets/stylesheets/application.css.scss */
 .search-filter form {
   flex-direction: column;
 }
 
-/* line 466, app/assets/stylesheets/application.css.scss */
+/* line 483, app/assets/stylesheets/application.css.scss */
 .search-filter form {
   /*display: flex;*/
   flex-direction: row;
@@ -597,12 +618,12 @@ body > footer aside ul li.twitter a, body > footer .social-media ul li.twitter a
   padding: 1.25rem 0;
 }
 
-/* line 474, app/assets/stylesheets/application.css.scss */
+/* line 491, app/assets/stylesheets/application.css.scss */
 form {
   margin: 0;
 }
 
-/* line 478, app/assets/stylesheets/application.css.scss */
+/* line 495, app/assets/stylesheets/application.css.scss */
 .search-filter form .form-row1 {
   margin-left: 0;
   margin-right: 0;
@@ -610,7 +631,7 @@ form {
   flex-flow: initial;
 }
 
-/* line 484, app/assets/stylesheets/application.css.scss */
+/* line 501, app/assets/stylesheets/application.css.scss */
 .search-filter input {
   height: 3.125rem;
   width: 40%;
@@ -621,7 +642,7 @@ form {
   margin-right: .9375rem;
 }
 
-/* line 493, app/assets/stylesheets/application.css.scss */
+/* line 510, app/assets/stylesheets/application.css.scss */
 input {
   display: block;
   height: 2.5rem;
@@ -637,7 +658,7 @@ input {
   background-color: #fff;
 }
 
-/* line 507, app/assets/stylesheets/application.css.scss */
+/* line 524, app/assets/stylesheets/application.css.scss */
 .search-filter button {
   height: 3.125rem;
   width: 5.625rem;
@@ -653,7 +674,7 @@ input {
   cursor: pointer;
 }
 
-/* line 521, app/assets/stylesheets/application.css.scss */
+/* line 538, app/assets/stylesheets/application.css.scss */
 .search-filter select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -671,7 +692,7 @@ input {
   cursor: pointer;
 }
 
-/* line 537, app/assets/stylesheets/application.css.scss */
+/* line 554, app/assets/stylesheets/application.css.scss */
 select {
   display: block;
   position: relative;
@@ -695,12 +716,34 @@ select {
   cursor: pointer;
 }
 
-/* line 559, app/assets/stylesheets/application.css.scss */
+/* line 576, app/assets/stylesheets/application.css.scss */
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 0px solid #ddd !important;
+}
+
+/* line 582, app/assets/stylesheets/application.css.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+/* line 585, app/assets/stylesheets/application.css.scss */
+main {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+/* line 589, app/assets/stylesheets/application.css.scss */
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1000px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100%;
+  box-sizing: border-box;
 }
 .multiselect-container{position:absolute;list-style-type:none;margin:0;padding:0}.multiselect-container .input-group{margin:5px}.multiselect-container>li{padding:0}.multiselect-container>li>a.multiselect-all label{font-weight:700}.multiselect-container>li.multiselect-group label{margin:0;padding:3px 20px 3px 20px;height:100%;font-weight:700}.multiselect-container>li.multiselect-group-clickable label{cursor:pointer}.multiselect-container>li>a{padding:0}.multiselect-container>li>a>label{margin:0;height:100%;cursor:pointer;font-weight:400;padding:3px 20px 3px 40px}.multiselect-container>li>a>label.radio,.multiselect-container>li>a>label.checkbox{margin:0}.multiselect-container>li>a>label>input[type=checkbox]{margin-bottom:5px}.btn-group>.btn-group:nth-child(2)>.multiselect.btn{border-top-left-radius:4px;border-bottom-left-radius:4px}.form-inline .multiselect-container label.checkbox,.form-inline .multiselect-container label.radio{padding:3px 20px 3px 40px}.form-inline .multiselect-container li a label.checkbox input[type=checkbox],.form-inline .multiselect-container li a label.radio input[type=radio]{margin-left:-20px;margin-right:0}
 /*!
@@ -8272,4 +8315,2523 @@ button.close {
 /* line 11, app/assets/stylesheets/programs.scss */
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
   color: #fff !important;
+}
+
+/* line 15, app/assets/stylesheets/programs.scss */
+#program-display header {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #f8f8f8;
+}
+
+/* line 21, app/assets/stylesheets/programs.scss */
+#program-display header > div:first-of-type {
+  padding: 2.5rem 0 3.125rem 0;
+}
+
+/* line 25, app/assets/stylesheets/programs.scss */
+#program-display header figure .logo {
+  flex: 1 0 auto;
+  height: 6.25rem;
+  width: 6.25rem;
+  flex-basis: 6.25rem;
+  border: 2px solid rgba(181, 181, 181, 0.42);
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+/* line 34, app/assets/stylesheets/programs.scss */
+#program-display header figure {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 70%;
+  flex-basis: auto;
+  margin: 0 auto 0 0;
+}
+
+/* line 41, app/assets/stylesheets/programs.scss */
+#program-display header figure figcaption {
+  display: flex;
+  flex-flow: column nowrap;
+  box-sizing: border-box;
+  width: calc(100% - 70px);
+  flex-basis: auto;
+  margin: 0 0 0 .625rem;
+  padding: 0;
+}
+
+/* line 50, app/assets/stylesheets/programs.scss */
+#program-display header figure figcaption h1 {
+  margin: 0 0 .5rem 0;
+  padding: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.875rem;
+  color: #545454;
+}
+
+/* line 58, app/assets/stylesheets/programs.scss */
+#program-display header figure figcaption h2 {
+  margin: 0 0 .3125rem 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  color: #545454;
+}
+
+/* line 66, app/assets/stylesheets/programs.scss */
+#program-display header figure figcaption h3 {
+  margin: 0 0 .9375rem 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  color: #545454;
+}
+
+/* line 74, app/assets/stylesheets/programs.scss */
+#program-display header .actions {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 0 0 auto;
+}
+
+/* line 79, app/assets/stylesheets/programs.scss */
+#program-display header .actions ul {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style-type: none;
+  margin: .625rem;
+  padding: 0;
+}
+
+/* line 86, app/assets/stylesheets/programs.scss */
+#program-display header .actions ul li:first-of-type {
+  border-right: 2px solid #ddd;
+}
+
+/* line 89, app/assets/stylesheets/programs.scss */
+#program-display header .actions ul li {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
+
+/* line 97, app/assets/stylesheets/programs.scss */
+#ranku-logo {
+  display: inline-block;
+  margin: 0 1.25rem 0 0;
+  height: 3.125rem;
+  width: 5.625rem;
+  text-indent: -5000px;
+  background: url("//d2brwuimzb4ax4.cloudfront.net/sites/suny/logos/open-suny.png") no-repeat center center;
+  background-size: contain;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 107, app/assets/stylesheets/programs.scss */
+  #ranku-logo {
+    margin-right: 0;
+  }
+}
+
+/* line 111, app/assets/stylesheets/programs.scss */
+body > header {
+  z-index: 4000;
+}
+
+/* line 114, app/assets/stylesheets/programs.scss */
+nav.navbar + section {
+  padding-top: 4.75rem;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 118, app/assets/stylesheets/programs.scss */
+  nav.navbar.open .mobile-nav {
+    transform: translateY(0%);
+  }
+}
+
+/* line 122, app/assets/stylesheets/programs.scss */
+nav.navbar {
+  display: block;
+  width: 100%;
+  margin: auto auto 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+  z-index: 4000;
+}
+
+/* line 130, app/assets/stylesheets/programs.scss */
+nav.navbar .row {
+  position: relative;
+  flex-flow: row nowrap;
+  padding: .625rem 0;
+  z-index: initial;
+  background-color: #fff;
+}
+
+/* line 137, app/assets/stylesheets/programs.scss */
+nav.navbar ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* line 144, app/assets/stylesheets/programs.scss */
+nav.navbar ul li {
+  position: relative;
+}
+
+/* line 147, app/assets/stylesheets/programs.scss */
+nav.navbar ul li a {
+  cursor: pointer;
+}
+
+/* line 150, app/assets/stylesheets/programs.scss */
+nav.navbar ul li a, nav.navbar ul li span {
+  color: #444;
+  text-decoration: none;
+  font-size: .875rem;
+  font-weight: 400;
+  transition: color 200ms ease;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 158, app/assets/stylesheets/programs.scss */
+  nav.navbar ul li a, nav.navbar ul li span {
+    color: #444;
+  }
+}
+
+/* line 162, app/assets/stylesheets/programs.scss */
+nav.navbar ul li a:hover {
+  color: #58adeb;
+}
+
+/* line 165, app/assets/stylesheets/programs.scss */
+nav.navbar ul li a:visited {
+  color: #444;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 169, app/assets/stylesheets/programs.scss */
+  nav.navbar ul li a:visited {
+    color: #f2f2f2;
+  }
+}
+
+/* line 173, app/assets/stylesheets/programs.scss */
+nav.navbar ul li a:hover, nav.navbar ul li a:active {
+  color: #58adeb;
+}
+
+/* line 176, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav {
+  flex-flow: row nowrap;
+  margin-right: auto;
+  transform: translateY(0%);
+}
+
+@media screen and (max-width: 820px) {
+  /* line 182, app/assets/stylesheets/programs.scss */
+  nav.navbar .mobile-nav {
+    position: absolute;
+    flex-flow: column nowrap;
+    z-index: -1;
+    top: 4.375rem;
+    left: 0;
+    width: 100%;
+    background-color: #393939;
+    transform: translateY(-100%);
+    transition: transform 500ms ease;
+  }
+  /* line 193, app/assets/stylesheets/programs.scss */
+  nav.navbar .mobile-nav a {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 1.25rem;
+    color: #f2f2f2;
+  }
+  /* line 200, app/assets/stylesheets/programs.scss */
+  nav.navbar .mobile-nav a:hover, nav.navbar .mobile-nav a.active {
+    color: #f2f2f2;
+  }
+  /* line 203, app/assets/stylesheets/programs.scss */
+  nav.navbar .mobile-nav li {
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.2);
+    padding: .625rem 1.25rem;
+  }
+  /* line 209, app/assets/stylesheets/programs.scss */
+  nav.navbar .mobile-nav li:hover, nav.navbar .mobile-nav li:active {
+    background-color: #4f4c4c;
+  }
+}
+
+/* line 213, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav .nav-user {
+  display: none;
+}
+
+/* line 216, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav .nav-user:hover {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 220, app/assets/stylesheets/programs.scss */
+  nav.navbar .mobile-nav .nav-user {
+    display: flex;
+  }
+}
+
+/* line 224, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav .nav-user figure {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 230, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav .nav-user figure .navbar-user_image {
+  height: 3.125rem;
+  width: 3.125rem;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+/* line 238, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav .nav-user figure figcaption {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  align-content: center;
+}
+
+/* line 246, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav .nav-user figure figcaption img {
+  width: .875rem;
+  height: .875rem;
+  flex-basis: auto;
+  margin: 0 0 0 .375rem;
+}
+
+/* line 252, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav .nav-user figure figcaption h3 {
+  margin: 0 0 .5rem .375rem;
+  padding: 0;
+  width: 100%;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #f2f2f2;
+}
+
+/* line 261, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav .nav-user figure figcaption a {
+  color: #f2f2f2;
+  width: auto;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 270, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav .nav-user figure figcaption a:hover {
+  color: rgba(242, 242, 242, 0.7);
+}
+
+/* line 273, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav .nav-user figure figcaption span {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  margin: 0 0 0 .5rem;
+  padding: 0;
+  width: calc(100% - 20px - 8px);
+}
+
+/* line 284, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav .nav-user-bookmarks {
+  display: none;
+  flex-flow: column nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 290, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav .nav-user-bookmarks:hover {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 294, app/assets/stylesheets/programs.scss */
+  nav.navbar .mobile-nav .nav-user-bookmarks {
+    display: flex;
+  }
+}
+
+/* line 298, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav .nav-user-bookmarks h4 {
+  box-sizing: border-box;
+  width: 100%;
+  flex-basis: auto;
+  margin: 0;
+  padding: .625rem 1.25rem;
+  font-size: .8125rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #f2f2f2;
+}
+
+/* line 309, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav .nav-user-bookmarks a {
+  width: 100%;
+  flex-basis: auto;
+  padding: .3125rem .3125rem .3125rem 1.875rem;
+  color: #f2f2f2;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+/* line 318, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav .nav-user-bookmarks a:hover {
+  background-color: #4f4c4c;
+  color: rgba(242, 242, 242, 0.7);
+}
+
+/* line 322, app/assets/stylesheets/programs.scss */
+nav.navbar .mobile-nav a {
+  margin-right: 1.25rem;
+}
+
+/* line 325, app/assets/stylesheets/programs.scss */
+nav.navbar .right {
+  align-items: center;
+  margin-left: auto;
+}
+
+/* line 329, app/assets/stylesheets/programs.scss */
+nav.navbar .right li:first-of-type, nav.navbar .right li:nth-of-type(2) {
+  margin-right: 1.25rem;
+}
+
+/* line 332, app/assets/stylesheets/programs.scss */
+nav.navbar .right li:first-of-type button, nav.navbar .right li:nth-of-type(2) button {
+  border: 0;
+}
+
+/* line 335, app/assets/stylesheets/programs.scss */
+nav.navbar .right .navbar-user {
+  display: block;
+  position: relative;
+  margin-top: .3125rem;
+  padding-left: 1.25rem;
+  border-left: 1px solid #e3e3e3;
+  text-decoration: none;
+}
+
+/* line 343, app/assets/stylesheets/programs.scss */
+nav.navbar .right .navbar-user .navbar-user_image {
+  display: inline-block;
+  position: relative;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 1.25rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 353, app/assets/stylesheets/programs.scss */
+nav.navbar .right .navbar-user .navbar-user_name {
+  display: inline-block;
+  position: relative;
+  margin-right: .5rem;
+  margin-top: .625rem;
+  vertical-align: top;
+  font-size: .875rem;
+}
+
+/* line 361, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: -10px;
+  width: 17.5rem;
+  border-radius: 3px;
+  background-color: #393939;
+  box-shadow: #000 0 0 .9375rem -.25rem;
+  color: #f2f2f2;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+/* line 375, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav:before {
+  position: absolute;
+  height: .625rem;
+  width: .625rem;
+  right: 0;
+  background-color: #393939;
+  transform: translateY(-50%) translateX(-25px) rotate(45deg);
+  content: '';
+}
+
+/* line 384, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav.open {
+  display: block;
+}
+
+/* line 387, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav h3, nav.navbar .right .desktopNav h4, nav.navbar .right .desktopNav h5 {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 391, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav nav {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  padding: 1.125rem 0 .75rem 1.125rem;
+  align-items: center;
+  border-bottom: 1px solid #f2f2f2;
+  width: 17.5rem;
+}
+
+/* line 401, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav nav h3 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  width: 100%;
+  flex-basis: auto;
+}
+
+/* line 408, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav nav img {
+  margin: .5rem .625rem .5rem 0;
+}
+
+/* line 411, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav nav a {
+  color: #f2f2f2;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+/* line 417, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav nav a:hover {
+  color: rgba(242, 242, 242, 0.7);
+}
+
+/* line 420, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav ul {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0;
+  padding: 0;
+  width: 17.5rem;
+}
+
+/* line 427, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav ul li {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.2);
+  width: 280px;
+}
+
+/* line 436, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav ul li:last-of-type {
+  border-bottom: none;
+}
+
+/* line 439, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav ul li:last-of-type:hover {
+  background-color: #4f4c4c;
+  color: rgba(242, 242, 242, 0.7);
+  border-radius: 0 0 3px 3px;
+}
+
+/* line 444, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav ul li:last-of-type a {
+  padding: .625rem 1.25rem;
+  font-size: .8125rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  border-radius: 0 0 3px 3px;
+}
+
+/* line 451, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav ul li h4 {
+  width: 100%;
+  flex-basis: auto;
+  padding: .625rem 1.25rem;
+  font-size: .8125rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+/* line 459, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav ul li a {
+  width: 100%;
+  flex-basis: auto;
+  padding: .3125rem .3125rem .3125rem 1.875rem;
+  color: #f2f2f2;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+/* line 468, app/assets/stylesheets/programs.scss */
+nav.navbar .right .desktopNav ul li a:hover {
+  background-color: #4f4c4c;
+  color: rgba(242, 242, 242, 0.7);
+}
+
+/* line 472, app/assets/stylesheets/programs.scss */
+.hamburger {
+  width: 1rem;
+  cursor: pointer;
+}
+
+/* line 476, app/assets/stylesheets/programs.scss */
+.hamburger:focus, .hamburger:active, .hamburger:hover, .hamburger:visited {
+  outline: 0;
+  background-color: transparent;
+}
+
+/* line 480, app/assets/stylesheets/programs.scss */
+.hamburger span {
+  display: block;
+  width: 1rem;
+  height: 3px;
+  margin-bottom: 2px;
+  background-color: #545454;
+  transition: transform 500ms ease,opacity 500ms ease;
+}
+
+/* line 488, app/assets/stylesheets/programs.scss */
+.hamburger span:last-of-type {
+  margin-bottom: 0;
+}
+
+/* line 491, app/assets/stylesheets/programs.scss */
+.open .hamburger span:first-of-type {
+  transform: translateY(5px) rotate(45deg);
+}
+
+/* line 494, app/assets/stylesheets/programs.scss */
+.open .hamburger span:nth-of-type(2) {
+  opacity: 0;
+}
+
+/* line 497, app/assets/stylesheets/programs.scss */
+.open .hamburger span:last-of-type {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+/* line 500, app/assets/stylesheets/programs.scss */
+.login h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.875rem;
+  color: #545454;
+}
+
+/* line 508, app/assets/stylesheets/programs.scss */
+.login p, .login span {
+  margin: 0;
+  padding: 0;
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #545454;
+}
+
+/* line 516, app/assets/stylesheets/programs.scss */
+.login fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+/* line 521, app/assets/stylesheets/programs.scss */
+.login .selectInterface {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  align-content: center;
+  padding: 0 1.875rem .9375rem 1.875rem;
+  margin: 0 -1.875rem .9375rem -1.875rem;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.21);
+}
+
+/* line 531, app/assets/stylesheets/programs.scss */
+.login .selectInterface > div {
+  display: inline-block;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: #545454;
+  white-space: nowrap;
+}
+
+/* line 538, app/assets/stylesheets/programs.scss */
+.login .selectInterface > button {
+  display: inline-block;
+  margin-left: .625rem;
+  font-size: .875rem;
+  font-weight: 400;
+}
+
+/* line 544, app/assets/stylesheets/programs.scss */
+.login header {
+  position: relative;
+  margin: 0 0 1.25rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+/* line 549, app/assets/stylesheets/programs.scss */
+.login header > h2 {
+  margin-bottom: .5rem;
+}
+
+/* line 552, app/assets/stylesheets/programs.scss */
+.login header > p {
+  padding-bottom: .9375rem;
+}
+
+/* line 555, app/assets/stylesheets/programs.scss */
+.login header .row {
+  padding: 0 0 .9375rem 0;
+}
+
+@media screen and (max-width: 550px) {
+  /* line 559, app/assets/stylesheets/programs.scss */
+  .login header .row > .rounded-button {
+    margin: 0 auto;
+  }
+}
+
+/* line 563, app/assets/stylesheets/programs.scss */
+.login header .row > .rounded-button + span {
+  display: inline-block;
+  margin: 0 0 0 .9375rem;
+  line-height: 2.5rem;
+}
+
+/* line 568, app/assets/stylesheets/programs.scss */
+.login .signup .error .error {
+  display: block;
+  margin: -.3125rem 0 .3125rem 0;
+  font-size: .8125rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #e71616;
+}
+
+/* line 576, app/assets/stylesheets/programs.scss */
+.login .section {
+  display: none;
+}
+
+/* line 579, app/assets/stylesheets/programs.scss */
+.login .section.visible {
+  display: block;
+}
+
+/* line 582, app/assets/stylesheets/programs.scss */
+.login .note {
+  display: inline-block;
+  margin: 0 0 0 .9375rem;
+  padding: .3125rem 0 0 0;
+  font-size: .8125rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  vertical-align: middle;
+}
+
+/* line 591, app/assets/stylesheets/programs.scss */
+.login .signup .note {
+  height: 3.125rem;
+  width: 50%;
+  color: #545454;
+}
+
+/* line 596, app/assets/stylesheets/programs.scss */
+.login .signup .note .darkGreen {
+  color: #285921;
+}
+
+@media screen and (max-width: 550px) {
+  /* line 600, app/assets/stylesheets/programs.scss */
+  .login .signup .note {
+    width: 100%;
+  }
+}
+
+/* line 604, app/assets/stylesheets/programs.scss */
+.login .email .note {
+  height: 3.125rem;
+  width: 78%;
+  color: #e71616;
+}
+
+@media screen and (max-width: 550px) {
+  /* line 610, app/assets/stylesheets/programs.scss */
+  .login .email .note {
+    width: 100%;
+  }
+}
+
+/* line 614, app/assets/stylesheets/programs.scss */
+.login .social-list {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 0 10px 0;
+}
+
+/* line 620, app/assets/stylesheets/programs.scss */
+.login .social-list li {
+  margin: 10px auto;
+}
+
+@media screen and (max-width: 550px) {
+  /* line 624, app/assets/stylesheets/programs.scss */
+  .login form .full .rounded-button {
+    width: 100%;
+  }
+}
+
+/* line 628, app/assets/stylesheets/programs.scss */
+.rfi fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+/* line 633, app/assets/stylesheets/programs.scss */
+.rfi h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.4375rem;
+  color: #004c93;
+}
+
+/* line 641, app/assets/stylesheets/programs.scss */
+.rfi p {
+  margin: 0;
+  padding: 0;
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #000;
+}
+
+/* line 649, app/assets/stylesheets/programs.scss */
+.rfi header {
+  margin: 0 0 1.25rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+/* line 653, app/assets/stylesheets/programs.scss */
+.rfi header > h1 {
+  margin-bottom: .5rem;
+}
+
+/* line 656, app/assets/stylesheets/programs.scss */
+.rfi header > p {
+  padding-bottom: .9375rem;
+}
+
+/* line 659, app/assets/stylesheets/programs.scss */
+.rfi label:before {
+  content: '>';
+  display: inline-block;
+  width: 0;
+  opacity: 0;
+  padding: 0;
+  transition: opacity 200ms ease,width 200ms ease,padding 200ms ease;
+}
+
+/* line 667, app/assets/stylesheets/programs.scss */
+.rfi .error label:before {
+  opacity: 1;
+  width: auto;
+  padding: 0 .3125rem 0 0;
+}
+
+/* line 672, app/assets/stylesheets/programs.scss */
+.rfi .section {
+  display: none;
+}
+
+/* line 675, app/assets/stylesheets/programs.scss */
+.rfi .section.visible {
+  display: block;
+}
+
+/* line 678, app/assets/stylesheets/programs.scss */
+.rfi ol {
+  list-style: none;
+  counter-reset: item;
+}
+
+/* line 682, app/assets/stylesheets/programs.scss */
+.rfi ol li {
+  counter-increment: item;
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #444;
+}
+
+/* line 689, app/assets/stylesheets/programs.scss */
+.rfi ol li:before {
+  content: counter(item) ".";
+  display: inline-block;
+  width: .9375rem;
+  margin: 0 .9375rem 1.25rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.375rem;
+  color: #004c93;
+}
+
+/* line 699, app/assets/stylesheets/programs.scss */
+.rfi .rfiButtonDiv {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 550px) {
+  /* line 704, app/assets/stylesheets/programs.scss */
+  .rfi form .full .rounded-button {
+    width: 100%;
+  }
+}
+
+/* line 708, app/assets/stylesheets/programs.scss */
+.hasSMSConsent {
+  display: flex;
+  width: 100%;
+}
+
+/* line 712, app/assets/stylesheets/programs.scss */
+.hasSMSConsent input[type=checkbox] {
+  width: 4%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* line 717, app/assets/stylesheets/programs.scss */
+.hasSMSConsent label {
+  margin-left: 10px;
+  margin-right: auto;
+  font-size: 12px;
+  font-weight: 200;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* line 725, app/assets/stylesheets/programs.scss */
+.modals {
+  z-index: 9999;
+}
+
+/* line 728, app/assets/stylesheets/programs.scss */
+.modal {
+  z-index: -1;
+  visibility: hidden;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* line 743, app/assets/stylesheets/programs.scss */
+.modal > .modal-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #000;
+  transition: opacity 300ms ease-out,visibility 300ms ease-out;
+}
+
+/* line 754, app/assets/stylesheets/programs.scss */
+.modal > .modal-container {
+  position: relative;
+  visibility: hidden;
+  transform: translate(0, -10%);
+  background-color: #f5f5f5;
+  border-radius: .1875rem;
+  border-top: 5px solid #ffe512;
+  opacity: 0;
+  transition: opacity 200ms ease-out,transform 200ms ease-out;
+  z-index: 4444;
+}
+
+/* line 765, app/assets/stylesheets/programs.scss */
+.modal > .modal-container.large {
+  align-self: flex-start;
+}
+
+@media screen and (max-width: 550px) {
+  /* line 769, app/assets/stylesheets/programs.scss */
+  .modal > .modal-container {
+    width: 100% !important;
+  }
+}
+
+/* line 773, app/assets/stylesheets/programs.scss */
+.modal .modal-body {
+  padding: 1.875rem;
+}
+
+/* line 776, app/assets/stylesheets/programs.scss */
+.modal .close-modal {
+  position: absolute;
+  right: 10px;
+  top: -5px;
+  display: flex;
+  width: 1.875rem;
+  height: 1.875rem;
+  justify-content: flex-end;
+  align-self: flex-end;
+  transform: rotate(45deg);
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #545454;
+  cursor: pointer;
+}
+
+/* line 791, app/assets/stylesheets/programs.scss */
+.modal .close-modal button {
+  background: 0 0;
+  border: 0;
+}
+
+/* line 795, app/assets/stylesheets/programs.scss */
+.modal.visible {
+  visibility: visible;
+  z-index: 4343;
+}
+
+/* line 799, app/assets/stylesheets/programs.scss */
+.modal.visible > .modal-mask {
+  visibility: visible;
+  opacity: .7;
+  z-index: 4343;
+}
+
+/* line 804, app/assets/stylesheets/programs.scss */
+.modal.visible > .modal-container {
+  visibility: visible;
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+/* line 809, app/assets/stylesheets/programs.scss */
+body > footer {
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  padding: 2.5rem 0;
+  width: 100%;
+  background-color: #444645;
+  font-size: .875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  color: #c5c5c5;
+}
+
+/* line 821, app/assets/stylesheets/programs.scss */
+body > footer a.twitter-timeline {
+  color: #fff important;
+  text-indent: -5000px;
+}
+
+/* line 825, app/assets/stylesheets/programs.scss */
+body > footer .navigation {
+  display: flex;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 829, app/assets/stylesheets/programs.scss */
+  body > footer .navigation {
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+}
+
+/* line 834, app/assets/stylesheets/programs.scss */
+body > footer .navigation ul {
+  display: flex;
+  flex-flow: column wrap;
+  list-style-type: none;
+  flex-basis: calc(100% - 300px);
+  width: calc(100% - 300px);
+  height: 6.25rem;
+  padding: 0;
+  margin: 0;
+  order: 1;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 846, app/assets/stylesheets/programs.scss */
+  body > footer .navigation ul {
+    flex-flow: column nowrap;
+    width: 100%;
+    flex-basis: auto;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    height: auto;
+    align-self: center;
+    order: 1;
+  }
+}
+
+/* line 857, app/assets/stylesheets/programs.scss */
+body > footer .navigation ul li {
+  padding: 0;
+  margin: 0 0 .3125rem 0;
+  line-height: 1.25rem;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 863, app/assets/stylesheets/programs.scss */
+  body > footer .navigation ul li {
+    line-height: 1.75rem;
+  }
+}
+
+/* line 867, app/assets/stylesheets/programs.scss */
+body > footer .navigation ul li a {
+  font-size: .875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  color: #c5c5c5;
+  text-decoration: none;
+  trasition: color 200ms ease;
+}
+
+/* line 875, app/assets/stylesheets/programs.scss */
+body > footer .navigation ul li a:hover {
+  color: #58adeb;
+}
+
+/* line 878, app/assets/stylesheets/programs.scss */
+body > footer .navigation figure {
+  display: flex;
+  position: relative;
+  flex-flow: row nowrap;
+  width: calc(100% - 300px);
+  transform: translateY(-116px);
+  margin-bottom: -4.6875rem;
+  order: 3;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 888, app/assets/stylesheets/programs.scss */
+  body > footer .navigation figure {
+    display: inline-block;
+    flex-flow: none;
+    flex-basis: none;
+    width: 100%;
+    margin: 0;
+    transform: none;
+  }
+}
+
+/* line 897, app/assets/stylesheets/programs.scss */
+body > footer .navigation figure img {
+  width: 9.5625rem;
+  height: 4.6875rem;
+  margin-right: .9375rem;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 903, app/assets/stylesheets/programs.scss */
+  body > footer .navigation figure img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: .9375rem;
+  }
+}
+
+/* line 909, app/assets/stylesheets/programs.scss */
+body > footer .navigation figure figcaption {
+  width: 100%;
+  text-align: left;
+  margin-top: 1.75rem;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 918, app/assets/stylesheets/programs.scss */
+  body > footer .navigation figure figcaption {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+/* line 924, app/assets/stylesheets/programs.scss */
+body > footer aside, body > footer .social-media {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-basis: 15.0625rem;
+  height: 15.0625rem;
+  width: 18.75rem;
+  order: 2;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 933, app/assets/stylesheets/programs.scss */
+  body > footer aside, body > footer .social-media {
+    align-self: center;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* line 938, app/assets/stylesheets/programs.scss */
+body > footer aside .twitter-feed, body > footer .social-media .twitter-feed {
+  display: flex;
+  align-self: flex-start;
+  order: 1;
+  height: 12.5rem;
+  width: 18.75rem;
+}
+
+/* line 945, app/assets/stylesheets/programs.scss */
+body > footer aside ul, body > footer .social-media ul {
+  display: flex;
+  list-style-type: none;
+  flex-flow: row nowrap;
+  justify-content: center;
+  order: 2;
+  width: 100%;
+  margin: .9375rem 0 0 0;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 955, app/assets/stylesheets/programs.scss */
+  body > footer aside ul, body > footer .social-media ul {
+    margin: 1.875rem 0 0 0;
+  }
+}
+
+/* line 959, app/assets/stylesheets/programs.scss */
+body > footer aside ul li, body > footer .social-media ul li {
+  display: flex;
+  height: 1.625rem;
+  width: 1.625rem;
+  margin: 0 .9375rem 0 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 967, app/assets/stylesheets/programs.scss */
+  body > footer aside ul li, body > footer .social-media ul li {
+    margin: 0 1.875rem 0 0;
+  }
+}
+
+/* line 971, app/assets/stylesheets/programs.scss */
+body > footer aside ul li:last-of-type, body > footer .social-media ul li:last-of-type {
+  margin: 0;
+}
+
+/* line 974, app/assets/stylesheets/programs.scss */
+body > footer aside ul li.youtube a, body > footer .social-media ul li.youtube a {
+  background-image: url("//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/youtube/logo.svg");
+  text-indent: -5000px;
+}
+
+/* line 978, app/assets/stylesheets/programs.scss */
+body > footer aside ul li.facebook a, body > footer .social-media ul li.facebook a {
+  background-image: url("//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/facebook/letter-logo.svg");
+  text-indent: -5000px;
+}
+
+/* line 982, app/assets/stylesheets/programs.scss */
+body > footer aside ul li.twitter a, body > footer .social-media ul li.twitter a {
+  background-image: url("//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/twitter/shape.svg");
+  text-indent: -5000px;
+}
+
+/* line 986, app/assets/stylesheets/programs.scss */
+body > footer aside ul li.linkedin a, body > footer .social-media ul li.linkedin a {
+  background-image: url("//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/linkedin/letters.svg");
+  text-indent: -5000px;
+}
+
+/* line 990, app/assets/stylesheets/programs.scss */
+body > footer aside ul li a, body > footer .social-media ul li a {
+  display: block;
+  height: 1.625rem;
+  width: 1.625rem;
+  border-radius: 50%;
+  background-color: #f6f6f6;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  transition: background-color 200ms ease;
+}
+
+/* line 1001, app/assets/stylesheets/programs.scss */
+body > footer aside ul li a:hover, body > footer .social-media ul li a:hover {
+  background-color: #fff;
+}
+
+/* line 1004, app/assets/stylesheets/programs.scss */
+body > footer .ranku-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-basis: 100%;
+  align-self: flex-end;
+  justify-content: center;
+  margin: .9375rem 0 0 0;
+  padding: .9375rem 0 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  order: 4;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1016, app/assets/stylesheets/programs.scss */
+  body > footer .ranku-bar {
+    align-self: auto;
+  }
+}
+
+/* line 1020, app/assets/stylesheets/programs.scss */
+body > footer .ranku-bar span {
+  margin-right: .625rem;
+  margin-top: .375rem;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+/* line 1027, app/assets/stylesheets/programs.scss */
+body > footer .ranku-bar a {
+  height: 3.25rem;
+  width: 4.25rem;
+}
+
+/* line 1031, app/assets/stylesheets/programs.scss */
+.program-content > header {
+  margin: 0;
+  padding: 2.5rem 0 0 0;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+/* line 1037, app/assets/stylesheets/programs.scss */
+.program-content > header nav ul, .program-content > header nav ul li {
+  display: flex;
+}
+
+/* line 1040, app/assets/stylesheets/programs.scss */
+.program-content > header nav {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/* line 1044, app/assets/stylesheets/programs.scss */
+.program-content > header nav ul {
+  flex-direction: row nowrap;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* line 1050, app/assets/stylesheets/programs.scss */
+.program-content > header nav ul li {
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: #545454;
+  text-decoration: none;
+  text-align: center;
+  padding: .4375rem 1.25rem .875rem 1.25rem;
+  border-bottom: 5px solid transparent;
+  cursor: pointer;
+  transition: border-bottom 250ms ease;
+  width: 20%;
+}
+
+/* line 1063, app/assets/stylesheets/programs.scss */
+.program-content > header nav ul li:hover {
+  border-bottom: 5px solid #b1b1b1;
+}
+
+/* line 1066, app/assets/stylesheets/programs.scss */
+.program-content > header nav ul li.selected {
+  color: #545454;
+  border-bottom: 5px solid #ffe512;
+  cursor: default;
+}
+
+/* line 1071, app/assets/stylesheets/programs.scss */
+.info-block {
+  margin: 0;
+  padding: 0 0 0 1.25rem;
+  border-left: 5px solid #ffe512;
+}
+
+/* line 1076, app/assets/stylesheets/programs.scss */
+.info-block ~ .info-block {
+  margin: 1.25rem 0 0 0;
+}
+
+/* line 1079, app/assets/stylesheets/programs.scss */
+.info-block dt {
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #004c93;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1087, app/assets/stylesheets/programs.scss */
+.info-block dd {
+  font-size: .8125rem;
+  font-weight: 300;
+  line-height: 1.125rem;
+  color: #545454;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1095, app/assets/stylesheets/programs.scss */
+.program-overview {
+  padding: 2.5rem 0;
+}
+
+/* line 1098, app/assets/stylesheets/programs.scss */
+.program-overview.showLocation .school-card .wrap {
+  left: calc(-100% - 20px);
+}
+
+/* line 1101, app/assets/stylesheets/programs.scss */
+.program-overview .degree-card {
+  display: flex;
+  flex: 0 1 60%;
+  flex-flow: column nowrap;
+  order: 1;
+  width: 60%;
+  padding: 0 1.25rem 0 0;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1110, app/assets/stylesheets/programs.scss */
+  .program-overview .degree-card {
+    flex: 0 1 100%;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* line 1116, app/assets/stylesheets/programs.scss */
+.program-overview .degree-card h2 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.4375rem;
+  color: #004c93;
+  margin: 0 0 .1875rem 0;
+  padding: 0;
+}
+
+/* line 1124, app/assets/stylesheets/programs.scss */
+.program-overview .degree-card h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  color: #545454;
+  margin: 0 0 .9375rem 0;
+  padding: 0;
+}
+
+/* line 1132, app/assets/stylesheets/programs.scss */
+.program-overview .degree-card .description {
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #545454;
+  margin: 0;
+  padding: 0 0 .9375rem 0;
+}
+
+/* line 1140, app/assets/stylesheets/programs.scss */
+.program-overview .degree-card p, .program-overview .degree-card span {
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #545454;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1148, app/assets/stylesheets/programs.scss */
+.program-overview .school-card {
+  display: flex;
+  flex: 0 1 40%;
+  flex-flow: column wrap;
+  order: 2;
+  width: 40%;
+  margin: 0;
+  padding: 0 0 0 1.25rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1159, app/assets/stylesheets/programs.scss */
+  .program-overview .school-card {
+    flex: 0 1 100%;
+    width: 100%;
+    padding: 0;
+    margin: 1.25rem 0 0 0;
+  }
+}
+
+/* line 1166, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  left: 0;
+  transition: left 200ms ease;
+}
+
+/* line 1173, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .wrap.one {
+  width: 100%;
+}
+
+/* line 1176, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .wrap.two {
+  width: 200%;
+}
+
+/* line 1179, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 0 0 3px 3px;
+}
+
+/* line 1186, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+/* line 1191, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 3px 3px 0 0;
+}
+
+/* line 1196, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure figcaption {
+  margin: 0;
+  padding: 1.5625rem;
+}
+
+/* line 1200, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure h4 {
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #545454;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1208, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure p {
+  font-size: .8125rem;
+  font-weight: 300;
+  line-height: 1.125rem;
+  color: #545454;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1216, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure .campus-location {
+  display: block;
+  font-size: .8125rem;
+  font-weight: 500;
+  line-height: 1.125rem;
+  margin: 1.25rem 0 0 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* line 1225, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure .campus-location:hover {
+  text-decoration: underline;
+}
+
+/* line 1228, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure.accreditation {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0 0 0 0;
+  margin: 1.25rem 0 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+/* line 1235, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure.accreditation img {
+  width: 55px;
+  height: 55px;
+  flex: 0 1 55px;
+  order: 1;
+}
+
+/* line 1241, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure.accreditation figcaption {
+  display: flex;
+  flex-flow: column nowrap;
+  order: 2;
+  width: calc(100% -55px);
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1249, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure.accreditation figcaption dl {
+  margin: 0;
+  padding: .75rem 0 0 .625rem;
+}
+
+/* line 1253, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure.accreditation figcaption dl dt {
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #545454;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1261, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure.accreditation figcaption dl dd {
+  font-size: .8125rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.125rem;
+  color: #545454;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1270, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure.yellow-ribbon {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0 0 0 0;
+  margin: 1.25rem 0 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+/* line 1277, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure.yellow-ribbon img {
+  width: 55px;
+  height: 55px;
+  flex: 0 1 55px;
+  order: 1;
+}
+
+/* line 1283, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure.yellow-ribbon figcaption {
+  display: flex;
+  flex-flow: column nowrap;
+  order: 2;
+  width: calc(100% -55px);
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1291, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure.yellow-ribbon figcaption dl {
+  margin: 0;
+  padding: .625rem 0 0 .625rem;
+}
+
+/* line 1295, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure.yellow-ribbon figcaption dl dt {
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #545454;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1303, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .info figure.yellow-ribbon figcaption dl dd {
+  font-size: .8125rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.125rem;
+  color: #545454;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1312, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .location {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 0 0 3px 3px;
+}
+
+/* line 1319, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .location figure {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+/* line 1324, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .location figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 3px 3px 0 0;
+}
+
+/* line 1329, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .location figure figcaption {
+  margin: 0;
+  padding: 1.5625rem;
+}
+
+/* line 1333, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .location figure p {
+  font-size: .8125rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.375rem;
+  white-space: pre;
+  color: #545454;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1344, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .location figure .campus-info {
+  display: block;
+  font-size: .8125rem;
+  font-weight: 500;
+  line-height: 1.125rem;
+  margin: 1.25rem 0 0 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* line 1353, app/assets/stylesheets/programs.scss */
+.program-overview .school-card .location figure .campus-info:hover {
+  text-decoration: underline;
+}
+
+/* line 1356, app/assets/stylesheets/programs.scss */
+.online-learning {
+  padding: 2.5rem 0;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* line 1360, app/assets/stylesheets/programs.scss */
+.online-learning h2 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.4375rem;
+  color: #004c93;
+  margin: 0 0 .1875rem 0;
+  padding: 0;
+}
+
+/* line 1368, app/assets/stylesheets/programs.scss */
+.online-learning h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  color: #545454;
+  margin: 0 0 .9375rem 0;
+  padding: 0;
+}
+
+/* line 1376, app/assets/stylesheets/programs.scss */
+.online-learning ul {
+  display: flex;
+  list-style-type: none;
+  flex: 0 1 50%;
+  flex-flow: column nowrap;
+  order: 1;
+  width: 50%;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1385, app/assets/stylesheets/programs.scss */
+  .online-learning ul {
+    flex: 0 1 100%;
+    width: 100%;
+  }
+}
+
+/* line 1390, app/assets/stylesheets/programs.scss */
+.online-learning ul li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1394, app/assets/stylesheets/programs.scss */
+.online-learning ul li > [data-rfi-button] {
+  display: inline-block;
+  margin: .9375rem 0 0 2.5rem;
+}
+
+/* line 1398, app/assets/stylesheets/programs.scss */
+.online-learning ul dl {
+  position: relative;
+  padding: 0 0 0 2.5rem;
+}
+
+/* line 1402, app/assets/stylesheets/programs.scss */
+.online-learning ul dl:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* line 1410, app/assets/stylesheets/programs.scss */
+.online-learning ul dl.fully-online:before {
+  background: url("//d2brwuimzb4ax4.cloudfront.net/sites/suny/logos/100_online_blue.svg") no-repeat top left;
+  background-size: contain;
+}
+
+/* line 1414, app/assets/stylesheets/programs.scss */
+.online-learning ul dl.synchronous:before {
+  background: url("//d2brwuimzb4ax4.cloudfront.net/sites/suny/logos/synchronous_blue.svg") no-repeat top left;
+  background-size: contain;
+}
+
+/* line 1418, app/assets/stylesheets/programs.scss */
+.online-learning ul dl.asynchronus:before {
+  background: url("//d2brwuimzb4ax4.cloudfront.net/sites/suny/logos/asynchronus_blue.svg") no-repeat top left;
+  background-size: contain;
+}
+
+/* line 1422, app/assets/stylesheets/programs.scss */
+.online-learning ul dl.same-faculty:before {
+  background: url("//d2brwuimzb4ax4.cloudfront.net/sites/suny/logos/faculty_blue.svg") no-repeat top left;
+  background-size: contain;
+}
+
+/* line 1426, app/assets/stylesheets/programs.scss */
+.online-learning ul dl.concierge:before {
+  background: url("//d2brwuimzb4ax4.cloudfront.net/sites/suny/logos/concierge_blue.svg") no-repeat top left;
+  background-size: contain;
+}
+
+/* line 1430, app/assets/stylesheets/programs.scss */
+.online-learning ul dl.experimental-learning:before {
+  background: url("//d2brwuimzb4ax4.cloudfront.net/sites/suny/logos/experimental_learning_blue.svg") no-repeat top left;
+  background-size: contain;
+}
+
+/* line 1434, app/assets/stylesheets/programs.scss */
+.online-learning ul dl.prior-learning:before {
+  background: url("//d2brwuimzb4ax4.cloudfront.net/sites/suny/logos/prior_learning_assessment_blue.svg") no-repeat top left;
+  background-size: contain;
+}
+
+/* line 1438, app/assets/stylesheets/programs.scss */
+.online-learning ul dl.accelerated-degree:before {
+  background: url("//d2brwuimzb4ax4.cloudfront.net/sites/suny/logos/accelerated_degree_blue.svg") no-repeat top left;
+  background-size: contain;
+  fill: #00f;
+}
+
+/* line 1443, app/assets/stylesheets/programs.scss */
+.online-learning ul dl.tutoring:before {
+  background: url("//d2brwuimzb4ax4.cloudfront.net/sites/suny/logos/tutoring_blue.svg") no-repeat top left;
+  background-size: contain;
+}
+
+/* line 1447, app/assets/stylesheets/programs.scss */
+.online-learning ul dl.open-suny-plus:before {
+  background: url("//banku.s3.amazonaws.com/sites/suny/logos/Blue_Ribbon.svg") no-repeat top left;
+  background-size: contain;
+}
+
+/* line 1451, app/assets/stylesheets/programs.scss */
+.online-learning ul dt {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  color: #545454;
+  margin: 0 0 .3125rem 0;
+  padding: 0;
+}
+
+/* line 1459, app/assets/stylesheets/programs.scss */
+.online-learning ul dd {
+  font-size: .875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  color: #545454;
+  margin: 0 0 .9375rem 0;
+  padding: 0;
+}
+
+/* line 1467, app/assets/stylesheets/programs.scss */
+.online-learning aside {
+  display: flex;
+  flex: 0 1 50%;
+  flex-flow: column nowrap;
+  order: 2;
+  width: 50%;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1475, app/assets/stylesheets/programs.scss */
+  .online-learning aside {
+    flex: 0 1 100%;
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+}
+
+/* line 1481, app/assets/stylesheets/programs.scss */
+.online-learning aside img {
+  width: 100%;
+}
+
+/* line 1484, app/assets/stylesheets/programs.scss */
+.online-learning aside blockquote {
+  margin: 2.1875rem .625rem .9375rem .625rem;
+  padding: 0 0 0 1.25rem;
+  border-left: 5px solid #ffe512;
+}
+
+/* line 1489, app/assets/stylesheets/programs.scss */
+.online-learning aside q {
+  font-size: .875rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.25rem;
+  color: #545454;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1498, app/assets/stylesheets/programs.scss */
+.online-learning aside cite {
+  font-size: .875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  color: #545454;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1506, app/assets/stylesheets/programs.scss */
+.online-learning aside cite:before {
+  content: ' -- ';
+  display: inline;
+}
+
+/* line 1510, app/assets/stylesheets/programs.scss */
+.apply-overview {
+  padding: 2.5rem 0;
+}
+
+/* line 1513, app/assets/stylesheets/programs.scss */
+.apply-overview > .row {
+  flex-flow: row wrap;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1517, app/assets/stylesheets/programs.scss */
+  .apply-overview > .row {
+    flex-flow: column nowrap;
+  }
+}
+
+/* line 1521, app/assets/stylesheets/programs.scss */
+.apply-overview h2 {
+  order: 1;
+  width: 100%;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.4375rem;
+  color: #004c93;
+  margin: 0 0 .1875rem 0;
+  padding: 0;
+}
+
+/* line 1531, app/assets/stylesheets/programs.scss */
+.apply-overview .header-top {
+  order: 0;
+}
+
+/* line 1534, app/assets/stylesheets/programs.scss */
+.apply-overview h3 {
+  order: 2;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  color: #545454;
+  margin: 0 0 .9375rem 0;
+  padding: 0;
+}
+
+/* line 1544, app/assets/stylesheets/programs.scss */
+.apply-overview ol {
+  display: flex;
+  list-style-type: none;
+  counter-reset: apply-list;
+  flex-flow: column nowrap;
+  order: 3;
+  width: 50%;
+  width: 50%;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1554, app/assets/stylesheets/programs.scss */
+  .apply-overview ol {
+    width: 100%;
+  }
+}
+
+/* line 1558, app/assets/stylesheets/programs.scss */
+.apply-overview ol li {
+  counter-increment: apply-list;
+  position: relative;
+  margin: 0 0 1.25rem 0;
+  padding: 0 0 0 1.5625rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  color: #545454;
+}
+
+/* line 1568, app/assets/stylesheets/programs.scss */
+.apply-overview ol li.info:before {
+  content: ' ';
+}
+
+/* line 1571, app/assets/stylesheets/programs.scss */
+.apply-overview ol li:before {
+  content: counter(apply-list) ".";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: .9375rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.375rem;
+  color: #004c93;
+}
+
+/* line 1582, app/assets/stylesheets/programs.scss */
+.apply-overview aside {
+  display: flex;
+  flex-flow: column nowrap;
+  order: 4;
+  width: 50%;
+  margin: 0;
+  padding: 1.5625rem;
+  background-color: #f5f5f5;
+  border-top: 5px solid #ffe512;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1594, app/assets/stylesheets/programs.scss */
+  .apply-overview aside {
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+}
+
+/* line 1599, app/assets/stylesheets/programs.scss */
+.apply-overview aside h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  color: #004c93;
+  margin: 0 0 .3125rem 0;
+  padding: 0;
+}
+
+/* line 1607, app/assets/stylesheets/programs.scss */
+.apply-overview aside p {
+  font-size: .8125rem;
+  font-weight: 300;
+  line-height: 1.125rem;
+  color: #545454;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1615, app/assets/stylesheets/programs.scss */
+.apply-overview aside ul {
+  display: flex;
+  list-style-type: none;
+  flex-flow: row wrap;
+  margin: 0 -.9375rem 0 -.9375rem;
+  padding: 0;
+}
+
+/* line 1622, app/assets/stylesheets/programs.scss */
+.apply-overview aside ul li {
+  flex: 0 1 calc(50% - 30px);
+  margin: .9375rem .9375rem 0 .9375rem;
+  width: calc(50% - 30px);
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1628, app/assets/stylesheets/programs.scss */
+  .apply-overview aside ul li {
+    flex: 0 1 100%;
+    width: calc(100% - 30px);
+  }
+}
+
+/* line 1633, app/assets/stylesheets/programs.scss */
+.apply-overview aside ul li button {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  font-size: .875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  color: #545454;
+  text-align: center;
+  background-color: #fff;
+  transform: translate(0, 0);
+  transition: translate 200ms ease,background-color 200ms ease,border 200ms ease,color 200ms ease;
+}
+
+/* line 1646, app/assets/stylesheets/programs.scss */
+.apply-overview aside ul li button:hover {
+  border-color: #88c7f3;
+  background-color: rgba(116, 183, 231, 0.14);
+  transform: translate(0, -3px);
+  color: #004c93;
+}
+
+/* line 1652, app/assets/stylesheets/programs.scss */
+#program-display header {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #f8f8f8;
+}
+
+/* line 1657, app/assets/stylesheets/programs.scss */
+#program-display header > div:first-of-type {
+  padding: 2.5rem 0 3.125rem 0;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1661, app/assets/stylesheets/programs.scss */
+  #program-display header > div:first-of-type {
+    padding-top: 1.25rem;
+  }
+}
+
+/* line 1665, app/assets/stylesheets/programs.scss */
+#program-display header a {
+  cursor: pointer;
+}
+
+/* line 1668, app/assets/stylesheets/programs.scss */
+#program-display header figure {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 70%;
+  flex-basis: auto;
+  margin: 0 auto 0 0;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1676, app/assets/stylesheets/programs.scss */
+  #program-display header figure {
+    flex-flow: column nowrap;
+    justify-content: center;
+    flex-basis: auto;
+    width: 100%;
+  }
+}
+
+/* line 1683, app/assets/stylesheets/programs.scss */
+#program-display header figure .logo {
+  flex: 1 0 auto;
+  height: 6.25rem;
+  width: 6.25rem;
+  flex-basis: 6.25rem;
+  border: 2px solid rgba(181, 181, 181, 0.42);
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1693, app/assets/stylesheets/programs.scss */
+  #program-display header figure .logo {
+    align-self: center;
+  }
+}
+
+/* line 1697, app/assets/stylesheets/programs.scss */
+#program-display header figure .logo img {
+  width: 5.375rem;
+  height: 5.375rem;
+  margin: 5px;
+}
+
+/* line 1702, app/assets/stylesheets/programs.scss */
+#program-display header figure figcaption {
+  display: flex;
+  flex-flow: column nowrap;
+  box-sizing: border-box;
+  width: calc(100% - 70px);
+  flex-basis: auto;
+  margin: 0 0 0 .625rem;
+  padding: 0;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1712, app/assets/stylesheets/programs.scss */
+  #program-display header figure figcaption {
+    flex-basis: auto;
+    width: 100%;
+    margin: .625rem 0;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* line 1720, app/assets/stylesheets/programs.scss */
+#program-display header figure figcaption h1 {
+  margin: 0 0 .5rem 0;
+  padding: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.875rem;
+  color: #545454;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1729, app/assets/stylesheets/programs.scss */
+  #program-display header figure figcaption h1 {
+    text-align: center;
+  }
+}
+
+/* line 1733, app/assets/stylesheets/programs.scss */
+#program-display header figure figcaption h2 {
+  margin: 0 0 .3125rem 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  color: #545454;
+}
+
+/* line 1741, app/assets/stylesheets/programs.scss */
+#program-display header figure figcaption h3 {
+  margin: 0 0 .9375rem 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  color: #545454;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1750, app/assets/stylesheets/programs.scss */
+  #program-display header figure figcaption h3 h1, #program-display header figure figcaption h3 h2, #program-display header figure figcaption h3 h3 {
+    align-self: center;
+    text-align: center;
+  }
+}
+
+/* line 1755, app/assets/stylesheets/programs.scss */
+#program-display header .actions {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 0 0 auto;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1761, app/assets/stylesheets/programs.scss */
+  #program-display header .actions {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+  }
+}
+
+/* line 1768, app/assets/stylesheets/programs.scss */
+#program-display header .actions button[data-rfi-button] {
+  margin: .625rem 0 0 0;
+  padding: .9375rem;
+  font-size: 1rem;
+}
+
+/* line 1773, app/assets/stylesheets/programs.scss */
+#program-display header .actions ul {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style-type: none;
+  margin: .625rem;
+  padding: 0;
+}
+
+/* line 1780, app/assets/stylesheets/programs.scss */
+#program-display header .actions ul li {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
+
+/* line 1787, app/assets/stylesheets/programs.scss */
+#program-display header .actions ul li:first-of-type {
+  border-right: 2px solid #ddd;
+}
+
+/* line 1790, app/assets/stylesheets/programs.scss */
+#program-display header .actions ul li.bookmark {
+  border-right: 0;
+}
+
+/* line 1793, app/assets/stylesheets/programs.scss */
+#program-display header .actions ul li.bookmark button.active:before, #program-display header .actions ul li.bookmark div.active:before {
+  content: "";
+}
+
+/* line 1796, app/assets/stylesheets/programs.scss */
+#program-display header .actions ul li.bookmark button.active:after, #program-display header .actions ul li.bookmark div.active:after {
+  content: "ed";
+}
+
+/* line 1799, app/assets/stylesheets/programs.scss */
+#program-display header .actions ul li.bookmark button:before, #program-display header .actions ul li.bookmark div:before {
+  content: "+ ";
+}
+
+/* line 1802, app/assets/stylesheets/programs.scss */
+#program-display header .actions ul li.bookmark button:after, #program-display header .actions ul li.bookmark div:after {
+  content: "";
+}
+
+/* line 1805, app/assets/stylesheets/programs.scss */
+#program-display header .actions ul li button, #program-display header .actions ul li a {
+  margin: 0;
+  padding: 0 .625rem;
+  font-size: .9375rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  color: #295c23 !important;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 1816, app/assets/stylesheets/programs.scss */
+#program-display header .actions ul li button:hover, #program-display header .actions ul li a:hover {
+  color: #87ce7f;
+  text-decoration: underline;
+}
+
+/* line 1820, app/assets/stylesheets/programs.scss */
+#program-display header .stats {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  background-color: #004c93;
+  padding: 1.5625rem 0;
+  border-bottom: 2px solid #004c93;
+}
+
+/* line 1828, app/assets/stylesheets/programs.scss */
+#program-display header .stats ul {
+  flex-flow: row nowrap;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1837, app/assets/stylesheets/programs.scss */
+  #program-display header .stats ul {
+    flex-flow: column nowrap;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+/* line 1843, app/assets/stylesheets/programs.scss */
+#program-display header .stats ul li {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0 .75rem 0 1.5625rem;
+  flex-grow: 1;
+  border-right: 1px solid rgba(255, 255, 255, 0.33);
+}
+
+@media screen and (max-width: 820px) {
+  /* line 1851, app/assets/stylesheets/programs.scss */
+  #program-display header .stats ul li {
+    border: 0;
+    margin: .625rem 0;
+    padding: 0;
+  }
+}
+
+/* line 1857, app/assets/stylesheets/programs.scss */
+#program-display header .stats ul li:first-of-type {
+  padding-left: 0;
+}
+
+/* line 1860, app/assets/stylesheets/programs.scss */
+#program-display header .stats ul li:last-of-type {
+  border-right: 0;
+  padding-right: 0;
+}
+
+/* line 1864, app/assets/stylesheets/programs.scss */
+#program-display header .stats dl, #program-display header .stats dt, #program-display header .stats dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1868, app/assets/stylesheets/programs.scss */
+#program-display header .stats dt {
+  font-size: .875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  color: #fff;
+}
+
+/* line 1874, app/assets/stylesheets/programs.scss */
+#program-display header .stats dd {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: #fff;
+}
+
+/* line 1880, app/assets/stylesheets/programs.scss */
+#program-display .rfi-banner {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 2.5rem 0;
+  color: #fff;
+  background-color: #004c93;
+}
+
+/* line 1890, app/assets/stylesheets/programs.scss */
+#program-display .rfi-banner h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 .8125rem 0;
+  padding: 0;
+}
+
+/* line 1899, app/assets/stylesheets/programs.scss */
+.skip-to-content {
+  padding-bottom: .3125rem;
+}
+
+/* line 1902, app/assets/stylesheets/programs.scss */
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+}
+
+/* line 1909, app/assets/stylesheets/programs.scss */
+.element-invisible.element-focusable:active, .element-invisible.element-focusable:focus {
+  position: static !important;
+  clip: auto;
+  overflow: visible;
+  height: auto;
 }

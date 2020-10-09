@@ -1,3 +1,208 @@
+<main><section id="program-display">
+	<header aria-label="program-page-banner">
+		<div class="row">
+			<figure>
+				<div class="logo">
+					<%= image_tag(@course.school.image.url(:small), :align=> "center") %>
+				</div>
+				<figcaption>
+					<h1><%= @course.title %></h1>
+					<h2><%= @course.prefix %>-<%= @course.code %>-<%= @course.section %></h2>
+					<h3><%= @course.school.name %></h3>
+				</figcaption></figure>
+					<div class="actions">
+						<button class="rounded-button large green halo" data-program="1470329454961">Request Information</button>
+						<ul>
+							<li><a href="<%= @course.registration_url %>" class="apply_now" target="_blank" rel="noopener" title="Register for <%= @course.title %> ">Register Now</a>
+							</li>
+							<li class="bookmark">
+								<button title="Add Business Administration to your bookmarks" data-program="1470329454961" data-name="Business Administration" data-string="rockland-community-college-business-business-administration-associate-associate-of-applied-science-1470329454961">Bookmark</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="stats" id="testimonial-content">
+					<ul class="row">
+						<!--li><dl><dt>Designated As</dt><dd>Open SUNY+</dd></dl></li-->
+							<li><dl><dt>Delivery Mode</dt><dd>100% <%= @course.course_method %></dd></dl></li>
+							<li><dl><dt>Total Credits</dt><dd><%= @course.credit %></dd></dl></li>
+							<li><dl><dt>Degree Level</dt><dd>Associate of Applied Science</dd></dl></li>
+							<li><dl><dt>Contact Us</dt><dd>800-342-3811</dd></dl></li></ul>
+						</div>
+					</header>
+					
+					
+					<section class="program-content">
+						<header role="program-navigation-banner" id="program-navigation-banner" aria-label="Program Details Navigation Banner">
+							<nav class="row" aria-label="Program Details Navigation Bar">
+								<ul class="hide-mobile" id="program-navigation-list">
+									<li class="selected">Program Overview</li>
+									<li>Online Learning</li>
+									<li>How To Apply</li>
+								</ul>
+							</nav>
+						</header>
+						<div class="program-overview row">
+							<section class="degree-card">
+								<h2>Earn your associate of applied science degree online</h2>
+								<h3>You will earn the same diploma as our on-campus students</h3>
+								<div class="description"> <%= @course.description.html_safe %></div>
+								<dl class="info-block">
+									<dt>What's an associate of applied science degree?</dt>
+									<dd>An associate of applied science degree generally has more of a vocational focus and prepares students for work in a specific job or industry. It typically contains less general education classes than other degrees.</dd>
+								</dl>
+							</section>
+							<aside class="school-card" aria-label="University Details">
+								<div class="wrap one">
+									<div class="info">
+										<figure>
+											<%= image_tag(@course.school.image.url(:large), :align=> "center" ) %>
+											<figcaption>
+												<h4>About our Community College</h4>
+												<p>As a SUNY Community College, we respond to the educational need of all people and their local, state, and global communities. We offer certificate programs and associate degrees, as well as transfer and career services. You will benefit from flexible course scheduling and affordable career exploration.</p>
+												<figure class="accreditation"><img src="//d2brwuimzb4ax4.cloudfront.net/sites/suny/logos/regionally_accredited.png" alt="Middle States Commission on Higher Education">
+													<figcaption>
+														<dl><dt>Regionally Accredited</dt>
+															<dd>We are regionally accredited by the Middle States Commission on Higher Education</dd>
+														</dl>
+													</figcaption>
+												</figure>
+											</figcaption>
+										</figure>
+									</div>
+								</div>
+							</aside>
+						</div>
+						<div class="online-learning">
+							<div class="row">
+								<ul>
+									<li>
+										<h2>What's it like to earn this degree online?</h2>
+										<h3>Let's put your mind at ease about online learning</h3>
+									</li>
+									<li>
+										<dl class="fully-online">
+											<dt>100% Online</dt>
+											<dd>This program is presented 100% online. You will not be expected to attend any classes on campus.</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="asynchronus">
+											<dt>Classes on your schedule</dt>
+											<dd>Courses are semester based and classwork can be completed around your work and family commitments. There is no set time where you are required to log in to attend class.</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="same-faculty">
+											<dt>Same faculty as on-campus</dt>
+											<dd>The faculty that teach online classes are the same faculty that students learn from on-campus.</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="concierge">
+											<dt>Personal concierge</dt>
+											<dd>You will have one person who acts as a single point of contact for any and all questions you may have.</dd>
+										</dl>
+									</li>
+									<li>
+									<dl class="experimental-learning">
+										<dt>Learn by doing</dt>
+										<dd>Participate in field experiences such as internships, clinical placements, and service learning to apply your academic knowledge in the world.</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="open-suny-plus">
+										<dt>Powered by Open SUNY+</dt>
+										<dd>In addition to the features listed above, this Open SUNY+ degree includes 24/7 support, incorporates industry-leading teaching practices, and targets an area of high employer demand in New York State and beyond.</dd>
+									</dl>
+								</li>
+								<li><a class="rounded-button small green halo" data-program="1470329454961">Request Program Information</a></li>
+							</ul>
+							<aside aria-label="Student Feedback">
+								<img src="//d2brwuimzb4ax4.cloudfront.net/sites/suny/content/suny-computer.png" alt="Open SUNY Computer">
+								<blockquote>
+									<q>I was a bit apprehensive at first because I knew online classes require that you motivate yourself, but after this experience, I will always choose online if possible. I think there are so many benefits.</q>
+									<cite>Kimberly Lane</cite>
+								</blockquote>
+							</aside>
+						</div>
+					</div>
+					<div class="apply-overview">
+						<section class="row">
+							<h2>How do I enroll?</h2>
+							<h3>Follow these steps to start your application</h3>
+							<ol>
+								<li>Go to the online application</li>
+								<li>Create an account</li>
+								<li>Complete the forms or save for later</li>
+								<li>Pay the application fee</li>
+								<li>Submit any supplemental materials, if required</li>
+								<li>Send in your academic records</li>
+								<li class="info"><a href="http://www.sunyrockland.edu/admissions/apply" class="rounded-button small green" title="Apply to Rockland Community College now!">Enroll Now</a></li>
+							</ol>
+							<aside aria-labelledby="anyQuestions" aria-describedby="anyQuestionsDiscription">
+								<h3 id="anyQuestions" class="header-top">Do you have questions about any of the following topics?</h3>
+								<p id="anyQuestionsDiscription">We'll connect you with someone who can answer all your questions</p>
+								<ul>
+									<li>
+										<button class="rounded-button" title="Ask SUNY about Previous or Transfer Credits" data-program="1470329454961" data-topic="transfer_credits">Previous or Transfer Credits</button>
+									</li>
+									<li>
+										<button class="rounded-button" title="Ask SUNY about Admission Requirements" data-program="1470329454961" data-topic="admission_requirements">Admission Requirements</button>
+									</li>
+									<li>
+										<button class="rounded-button" title="Ask SUNY about Tuition or Financial Aid" data-program="1470329454961" data-topic="tuition_financial_aid">Tuition or Financial Aid</button>
+									</li>
+									<li>
+										<button class="rounded-button" title="Ask SUNY about General Program Information" data-program="1470329454961" data-topic="general_program_info">General Program Information</button>
+									</li>
+									<li>
+										<button class="rounded-button" title="Ask SUNY about Taking Online Classes" data-program="1470329454961" data-topic="online_classes">Taking Online Classes</button>
+									</li>
+									<li>
+										<button class="rounded-button" title="Ask SUNY about Something Not Listed" data-program="1470329454961" data-topic="other">Something Not Listed</button>
+									</li>
+								</ul>
+							</aside>
+						</section>
+					</div>
+				</section>
+				<section class="related-programs">
+					
+				</section><section class="rfi-banner">
+					<h4>Interested in learning more about this program?</h4>
+					<button class="rounded-button large white blue-halo" data-program="1470329454961">Request More Information</button>
+				</section>
+			</section>
+		</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <% title "#{@course.title} | #{@course.catalog.name}"  %>
 <% description "(#{@course.prefix}#{@course.code}-#{@course.section}) #{@course.title} - #{@course.credit} credits | #{@course.school.name}"  %>
 <p id="notice"><%= notice %></p>
