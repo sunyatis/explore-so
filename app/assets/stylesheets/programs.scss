@@ -1663,7 +1663,8 @@ body>footer .ranku-bar a{
     }
 }
 #program-display header a{
-    cursor:pointer
+    cursor:pointer;
+	color: #545454 !important;
 }
 #program-display header figure{
     display:flex;

@@ -12,31 +12,31 @@
       <%= f.select(
         :with_catalog_id,
         @filterrific.select_options[:with_catalog_id],
-        { include_blank: '- Any -' }
+        { include_blank: 'Semester' }
       ) %>
 
     <%= f.select(
       :with_school_id,
       @filterrific.select_options[:with_school_id],
-      { include_blank: '- Any -' }
+      { include_blank: 'Campus' }
     ) %>
 
    <%= f.select(
      :with_course_area,
      @filterrific.select_options[:with_course_area],
-     { include_blank: '- Any -' }
+     { include_blank: 'Subject Area' }
    ) %>
 
   <%= f.select(
     :with_level,
     @filterrific.select_options[:with_level],
-    { include_blank: '- Any -' }
+    { include_blank: 'Level' }
   ) %>
 
   <%= f.select(
     :with_credit,
     @filterrific.select_options[:with_credit],
-    { include_blank: '- Any -' }
+    { include_blank: 'Credits' }
   ) %>
 
   <script type="text/javascript">
