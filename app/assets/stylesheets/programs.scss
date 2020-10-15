@@ -1069,7 +1069,7 @@ body>footer .ranku-bar a{
     cursor:default
 }
  .info-block{
-    margin: .9375rem 0 0 0 ;
+    margin:0;
     padding:0 0 0 1.25rem;
     border-left:5px solid #ffe512
 }
@@ -1787,19 +1787,19 @@ body>footer .ranku-bar a{
 #program-display header .actions ul li:first-of-type{
     border-right:2px solid #ddd
 }
-#program-display header .actions ul li.toolbar{
+#program-display header .actions ul li.bookmark{
     border-right:0
 }
-#program-display header .actions ul li.toolbar button.active:before,#program-display header .actions ul li.bookmark div.active:before{
+#program-display header .actions ul li.bookmark button.active:before,#program-display header .actions ul li.bookmark div.active:before{
     content:""
 }
-#program-display header .actions ul li.toolbar button.active:after,#program-display header .actions ul li.bookmark div.active:after{
+#program-display header .actions ul li.bookmark button.active:after,#program-display header .actions ul li.bookmark div.active:after{
     content:"ed"
 }
-#program-display header .actions ul li.toolbar button:before,#program-display header .actions ul li.bookmark div:before{
+#program-display header .actions ul li.bookmark button:before,#program-display header .actions ul li.bookmark div:before{
     content:"+ "
 }
-#program-display header .actions ul li.toolbar button:after,#program-display header .actions ul li.bookmark div:after{
+#program-display header .actions ul li.bookmark button:after,#program-display header .actions ul li.bookmark div:after{
     content:""
 }
 #program-display header .actions ul li button,#program-display header .actions ul li a{

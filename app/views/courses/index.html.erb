@@ -6,37 +6,38 @@
     <%# give the search field the 'filterrific-periodically-observed' class for live updates %>
     <%= f.text_field(
       :search_query,
-      class: 'filterrific-periodically-observed'
+      class: 'filterrific-periodically-observed',
+	  placeholder: 'Search for a course'
     ) %>
 
       <%= f.select(
         :with_catalog_id,
         @filterrific.select_options[:with_catalog_id],
-        { include_blank: '- Any -' }
+        { include_blank: '- Semester -' }
       ) %>
 
     <%= f.select(
       :with_school_id,
       @filterrific.select_options[:with_school_id],
-      { include_blank: '- Any -' }
+      { include_blank: '- School -' }
     ) %>
 
    <%= f.select(
      :with_course_area,
      @filterrific.select_options[:with_course_area],
-     { include_blank: '- Any -' }
+     { include_blank: '- Sbuject Area -' }
    ) %>
 
   <%= f.select(
     :with_level,
     @filterrific.select_options[:with_level],
-    { include_blank: '- Any -' }
+    { include_blank: '- Level -' }
   ) %>
 
   <%= f.select(
     :with_credit,
     @filterrific.select_options[:with_credit],
-    { include_blank: '- Any -' }
+    { include_blank: '- Credits -' }
   ) %>
 
   <script type="text/javascript">
@@ -51,10 +52,10 @@
   </script>
   <!-div class="span3 chardin_box"-->
 
-      <%= f.select(:with_generaleducation_id, @filterrific.select_options[:with_generaleducation_id], { include_hidden: false}, multiple: true)%>
+      <%= f.select(:with_generaleducation_id, @filterrific.select_options[:with_generaleducation_id], { include_hidden: false}, title: 'Gen Ed', multiple: true)%>
+	  
 
-
-     <%= f.text_field(:with_start_date, class: 'js-datepicker') %>
+     <%= f.text_field(:with_start_date, class: 'js-datepicker', placeholder: 'Start After' ) %>
      <%= f.hidden_field :with_start_date_gte %>
 
   <!--div class="span3 chardin_box">

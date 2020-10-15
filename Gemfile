@@ -24,6 +24,8 @@ gem 'kaminari'  #used by active admin for pagination
 gem 'friendly_id', '~> 5.1.0' #Use friendlyId for SEO-friendly URLS
 gem "paperclip", "~> 4.2" #Upload images
 gem 'aws-sdk', '< 2.0' # amazon connection for images
+gem 'active_admin_theme'
+gem 'active_admin_flat_skin', github: 'ayann/active_admin_flat_skin'
 
 
 group :development, :test do

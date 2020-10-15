@@ -18,11 +18,17 @@
  *= require ribbon
  *= require chardinjs
  *= require programs
+ *= require courses
  */
 
 
 @import 'components/filterrific_filter';
 @import 'components/chardinjs_overrides.css.scss';
+
+html {
+   font-size: 16px !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
 
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
@@ -108,6 +114,20 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     cursor: pointer;
     border: 0;
     text-decoration: none;
+}
+.rounded-button.white.blue-halo {
+    transition: all 200ms ease;
+}
+.rounded-button.white.blue-halo:hover {
+    color: #fff;
+    background-color: rgba(255,255,255,.25);
+    box-shadow: 0 0 0.9375rem 0 rgba(0,0,0,.32);
+    border: 1px solid rgba(255,255,255,.25);
+}
+.rounded-button.white {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #004c93;
 }
    
 select {
@@ -495,7 +515,7 @@ form {
     margin-left: 0;
     margin-right: 0;
     display: flex;
-    flex-flow: initial;
+    flex-flow: wrap;
 }
 .search-filter input {
     height: 3.125rem;

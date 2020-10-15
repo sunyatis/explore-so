@@ -8,8 +8,24 @@
 // $sidebar-width: 242px;
 
 // Active Admin's got SASS!
+$panelBorder: #babdc5;
+$skinActiveColor: #004c93;
+$bodyColor: rgba(236, 240, 241, 0.48);
+$skinBlack: rgb(55, 71, 79);
+$panelHeaderBck: $skinBlack;
+$skinBlackLight: rgb(69, 90, 100);
+$textGray: rgb(174, 179, 181);
+$skinTextColor: #1e2a33;
+$skinTextActiveColor: white;
+$skinTextTable: #7f8c8d;
+$skinHeaderBck: #1e2a33;
+
+
 @import "active_admin/mixins";
 @import "active_admin/base";
+//@import "wigu/active_admin_theme";
+@import "active_admin_flat_skin";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
 // Overriding any non-variable SASS must be done after the fact.
 // For example, to change the default status-tag color:
@@ -24,4 +40,25 @@
 
 a {
 color: #ffffff;
+}
+
+form fieldset > ol > li >textarea {
+height: 12px;
+}
+form fieldset > ol > li > select {
+height: 25px;
+}
+
+.panel h3, .sidebar_section.panel h3 {
+    color: #ffffff !important;
+
+}
+
+.col-actions{
+width: 15%;
+}
+
+#filters_sidebar_section {
+  max-height: 80%;
+  overflow-y: scroll;
 }

@@ -142,9 +142,9 @@ ActiveAdmin.register Course do
      #column :level
      #column :course_area
      column :instructor
-     column :course_method
+     #column :course_method
      #column :seats_available
-     column :class_full
+     #column :class_full
     actions
   end
    

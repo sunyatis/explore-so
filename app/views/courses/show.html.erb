@@ -1,5 +1,6 @@
-<main><section id="program-display">
-	<header aria-label="program-page-banner">
+
+<main><section id="course-display">
+	<header aria-label="course-page-banner">
 		<div class="row">
 			<figure>
 				<div class="logo">
@@ -26,55 +27,41 @@
 						<!--li><dl><dt>Designated As</dt><dd>Open SUNY+</dd></dl></li-->
 							<li><dl><dt>Semester</dt><dd> <%= @course.catalog.name %></dd></dl></li>
 							<li><dl><dt>Instructor</dt><dd>  <%= @course.instructor %></dd></dl></li>
-							<li><dl><dt>Delivery Mode</dt><dd>100% <%= @course.course_method %></dd></dl></li>
+							<li><dl><dt>Start Date</dt><dd> <%= @course.start_date %></dd></dl></li>
 							<li><dl><dt>Total Credits</dt><dd><%= @course.credit %></dd></dl></li>
 							<li><dl><dt>Contact Us</dt><dd>800-342-3811</dd></dl></li></ul>
 						</div>
+						
 					</header>
 					
 					
-					<section class="program-content">
-						<header role="program-navigation-banner" id="program-navigation-banner" aria-label="Program Details Navigation Banner">
-							<nav class="row" aria-label="Program Details Navigation Bar">
-								<ul class="hide-mobile" id="program-navigation-list">
+					<section class="course-content">
+						<header role="course-navigation-banner" id="course-navigation-banner" aria-label="Course Details Navigation Banner">
+							<nav class="row" aria-label="Course Details Navigation Bar">
+								<ul class="hide-mobile" id="course-navigation-list">
 									<li class="selected">Course Overview</li>
-									<li>Online Learning</li>
-									<li>How To Register</li>
+									<!--li><a href="#onlinelearning">Online Learning</a></li>
+									<li><a href="#register">How To Register</a></li-->
 								</ul>
 							</nav>
 						</header>
-						<div class="program-overview row">
+						<div class="course-overview row">
 							<section class="degree-card">
 								<h2>Take your class online with SUNY</h2>
 								<h3>You will learn the same cirriculum as our on-campus students</h3>
 								<div class="description"> <%= @course.description.html_safe %></div>
-								<div class="prereq"><strong>Prerequisites:</strong>
-			  <%= @course.prerequisites %></div>
-								<div class="corereq"><strong>Corequisites:</strong>
-			    <%= @course.corequisites %></div>
-								<div class= ""><strong>Dates:</strong>
-			  <%= @course.start_date %> - <%= @course.end_date %>
-			  <p>
-			  		  <strong>Level:</strong>
-			  		  <%= @course.level %>
-			  		</p>
+				  				<div class="prereq"><strong class="course_data_label">Prerequisites:</strong>
+				  			  <%= @course.prerequisites %></div>
+				  				<div class="corereq"><strong class="course_data_label">Corequisites:</strong>
+				  			    <%= @course.corequisites %></div>
+								<% if @course.general_education != ""%>
+						  		<div class="gened"><strong class="course_data_label">General Education Area(s):</strong> <%= @course.general_education.name %></div>
+								<% end %>
+						  		<div class="course_area"><strong class="course_data_label">Course Area:</strong> <%= @course.course_area %></div>
+								<div class="level"> <strong class="course_data_label">Level:</strong> <%= @course.level %></div>
+								<div class="dates">	<strong class="course_data_label">Dates:</strong> <%= @course.start_date.strftime('%m-%d-%Y') %> - <%= @course.end_date.strftime('%m-%d-%Y') %></div>
+								
 
-			  		<p>
-			  		  <strong>Subject Area:</strong>
-			  		  <%= @course.subjectarea_id %>
-			  		</p>
-
-			  		<p>
-			  		  <strong>Course Area:</strong>
-			  		  <%= @course.course_area %>
-			  		</p>
-
-			  		<p>
-			  		  <strong>General Education:</strong>
-			  		  <%= @course.general_education %>
-			  		</p>
-		
-		  		  </div>
 								<dl class="info-block">
 									<dt>Find books for your online class</dt>
 									<dd>  <strong>Instructor: </strong>
@@ -106,7 +93,7 @@
 										
 										
 										
-												<figure class="accreditation"><img src="//d2brwuimzb4ax4.cloudfront.net/sites/suny/logos/regionally_accredited.png" alt="Middle States Commission on Higher Education">
+												<figure class="accreditation" id="onlinelearning"><img src="//d2brwuimzb4ax4.cloudfront.net/sites/suny/logos/regionally_accredited.png" alt="Middle States Commission on Higher Education">
 													<figcaption>
 														<dl><dt>Regionally Accredited</dt>
 															<dd>We are regionally accredited by the Middle States Commission on Higher Education</dd>
@@ -119,7 +106,7 @@
 								</div>
 							</aside>
 						</div>
-						<div class="online-learning">
+						<!--div  class="online-learning">
 							<div class="row">
 								<ul>
 									<li>
@@ -172,11 +159,11 @@
 								</blockquote>
 							</aside>
 						</div>
-					</div>
-					<div class="apply-overview">
+					</div-->
+					<!--div class="apply-overview">
 						<section class="row">
-							<h2>How do I enroll?</h2>
-							<h3>Follow these steps to start your application</h3>
+							<h2>How do I Register?</h2>
+							<h3>Follow these steps to start your registration</h3>
 							<ol>
 								<li>Go to the online application</li>
 								<li>Create an account</li>
@@ -184,7 +171,7 @@
 								<li>Pay the application fee</li>
 								<li>Submit any supplemental materials, if required</li>
 								<li>Send in your academic records</li>
-								<li class="info"><a href="http://www.sunyrockland.edu/admissions/apply" class="rounded-button small green" title="Apply to Rockland Community College now!">Enroll Now</a></li>
+								<li class="info"><a href="<%= @course.registration_url %>" class="rounded-button small green" title="Register for a '<%= @course.school.name %>' course now.">Register Now</a></li>
 							</ol>
 							<aside aria-labelledby="anyQuestions" aria-describedby="anyQuestionsDiscription">
 								<h3 id="anyQuestions" class="header-top">Do you have questions about any of the following topics?</h3>
@@ -211,48 +198,16 @@
 								</ul>
 							</aside>
 						</section>
-					</div>
+					</div-->
 				</section>
-				<section class="related-programs">
+				<section class="related-courses">
 					
 				</section><section class="rfi-banner">
-					<h4>Interested in learning more about this program?</h4>
-					<button class="rounded-button large white blue-halo" data-program="1470329454961">Request More Information</button>
+					<h4>Interested in registering for this class?</h4>
+					<button class="rounded-button large white blue-halo" data-program="1470329454961" onclick="window.location.href= '<%= @course.registration_url %>'">Register Now</button>
 				</section>
 			</section>
 		</main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
 
 
 

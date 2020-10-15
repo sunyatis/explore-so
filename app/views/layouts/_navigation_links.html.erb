@@ -1,43 +1,8 @@
 <%# add navigation links to this file %>
 
-  <!--li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Online Programs<span class="caret"></span></a>
-  <ul class="dropdown-menu" role="menu">
-    <li><%= link_to 'Search Programs', programs_path %></li>
-    <li><%= link_to 'Open SUNY Programs', programs_open_suny_programs_path %></li>
-    <li><%= link_to 'Subject Areas', programs_subject_areas_path %></li>
-    <li><%= link_to 'Campuses', programs_schools_path %></li>
-    <li><%= link_to 'Education Levels', programs_levels_path %></li>
-  </ul>
-</li>
- <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Online Courses<span class="caret"></span></a>
-  <ul class="dropdown-menu" role="menu">
-    <li><%= link_to 'Search Courses', courses_path %></li>
-    <li><%= link_to 'Catalogs', courses_catalogs_path %></li>
-    <li><%= link_to 'Subjects Areas', courses_course_areas_path %></li>
-    <li><%= link_to 'Campuses', courses_schools_path %></li>
-  </ul>
-</li>
- <li><a href="https://online.suny.edu/help/" target="_blank" role="button" aria-expanded="true">Current Student Support</a>
 
-<% if user_signed_in? %> 
-<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">My Account<span class="caret"></span></a>
-  <ul class="dropdown-menu" role="menu">
-	<% if current_user.role == 'admin' %>
-	  <li><%= link_to 'Admin', admin_dashboard_path %></li>
-	<% else %>	
-    <li><%= link_to 'My Programs', programs_my_programs_path %></li>
-    <li><%= link_to 'My Courses', courses_my_courses_path %></li>
-	<% end %>
-    <li class="divider"></li>
-    <li><%= link_to 'Edit account', edit_user_registration_path %></li>
-    <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
-  </ul>
-</li-->
-<% else %>
-  <li></li>
-<% end %>
+ <li><%= link_to 'Online Programs', "https://open.suny.edu/degrees" %></li>
 
- <li><%= link_to 'Online Programs', programs_path %></li>
  <li><%= link_to 'Online Courses', courses_path %></li>
  <li><a href="https://online.suny.edu/help/" target="_blank" role="button" aria-expanded="true">Current Student Support</a>
 
@@ -54,6 +19,7 @@
     <li><%= link_to 'Edit account', edit_user_registration_path %></li>
     <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
   </ul>
+
 </li>
 <% else %>
   <li></li>

@@ -8,7 +8,7 @@ menu parent: 'Manage Navigator', label: 'School'
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :name, :address1, :address2, :city, :state, :zip, :school_url, :registration_url, :tuition_url, :financial_aid_url, :image, :campus_type
+  permit_params :name, :address1, :address2, :city, :state, :zip, :school_url, :registration_url, :tuition_url, :financial_aid_url, :image, :campus_type, :registrar_phone
   #
   # or
   #
@@ -26,7 +26,7 @@ menu parent: 'Manage Navigator', label: 'School'
       row :city
       row :state
       row :zip
-      row :campus_type
+      row :registrar_phone
       row :school_url do |school|
          link_to school.school_url, school.school_url
       end
@@ -66,18 +66,19 @@ menu parent: 'Manage Navigator', label: 'School'
   
  form html: { enctype: "multipart/form-data" } do |f|
    f.inputs "School Details" do
-     f.input :name
-     f.input :address1
-     f.input :address2
-     f.input :city
-     f.input :state
-     f.input :zip
+     f.input :name, :input_html => { :class => 'single_line'}
+     f.input :address1, :input_html => { :class => 'single_line'}
+     f.input :address2, :input_html => { :class => 'single_line'}
+     f.input :city, :input_html => { :class => 'single_line'}
+     f.input :state, :input_html => { :class => 'single_line'}
+     f.input :zip, :input_html => { :class => 'single_line'}
+     f.input :registrar_phone, :input_html => { :class => 'single_line'}
      f.input :campus_type, :as => :select,  :collection => ["Community College", "Technology College", "University"]
-     f.input :school_url 
-     f.input :registration_url 
-     f.input :tuition_url  
-     f.input :financial_aid_url 
-     f.input :slug
+     f.input :school_url, :input_html => { :class => 'single_line'}
+     f.input :registration_url, :input_html => { :class => 'single_line'}
+     f.input :tuition_url, :input_html => { :class => 'single_line'}  
+     f.input :financial_aid_url, :input_html => { :class => 'single_line'} 
+     f.input :slug, :input_html => { :class => 'single_line'}
      #f.input :image, as: :file
    end
    f.actions
