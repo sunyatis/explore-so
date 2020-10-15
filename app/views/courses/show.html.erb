@@ -54,7 +54,7 @@
 				  			  <%= @course.prerequisites %></div>
 				  				<div class="corereq"><strong class="course_data_label">Corequisites:</strong>
 				  			    <%= @course.corequisites %></div>
-								<% if @course.general_education != ""%>
+								<% if @course.general_education.name != ""%>
 						  		<div class="gened"><strong class="course_data_label">General Education Area(s):</strong> <%= @course.general_education.name %></div>
 								<% end %>
 						  		<div class="course_area"><strong class="course_data_label">Course Area:</strong> <%= @course.course_area %></div>
