@@ -50,10 +50,14 @@
 								<h2>Take your class online with SUNY</h2>
 								<h3>You will learn the same cirriculum as our on-campus students</h3>
 								<div class="description"> <%= @course.description.html_safe %></div>
-				  				<div class="prereq"><strong class="course_data_label">Prerequisites:</strong>
+				  				<% if @course.prerequisites != ""%>
+								<div class="prereq"><strong class="course_data_label">Prerequisites:</strong>
 				  			  <%= @course.prerequisites %></div>
+							  <% end %>
+							  <% if @course.corequisites != ""%>
 				  				<div class="corereq"><strong class="course_data_label">Corequisites:</strong>
 				  			    <%= @course.corequisites %></div>
+								<% end %>
 								<% if @course.general_education!= ""%>
 						  		<div class="gened"><strong class="course_data_label">General Education Area(s):</strong> <%= @course.general_education %></div>
 								<% end %>
