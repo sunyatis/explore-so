@@ -84,30 +84,33 @@ class Course < ActiveRecord::Base
    scope :with_catalog_id, lambda { |catalog_ids|
      where(:catalog_id => [*catalog_ids])
    }
-  scope :with_generaleducation_id , ->(generaleducation_ids){ 
-      return nil  if generaleducation_ids.blank?
-
-      # condition query, parse into individual keywords
-      terms = generaleducation_ids.join(" ").split(/\s+/)
-
- #    # configure number of OR conditions for provision
- #    # of interpolation arguments. Adjust this if you
- #    # change the number of OR conditions.
-     num_or_conditions = 1
- #
-     where(
-      terms.map { |e|
-        or_clauses = [
-           "courses.generaleducation_id LIKE ?", 
-           "courses.generaleducation_id LIKE \'%, #{e}\'", 
-           "courses.generaleducation_id LIKE \'#{e},%\'", 
-           "courses.generaleducation_id LIKE \'%, #{e},%\'"
-         ].join(' OR ')
-         "(#{ or_clauses })"
-       }.join(' AND '),
-       *terms.map { |e| [e] * num_or_conditions }.flatten
-     )
-   }
+   scope :with_generaleducation_id, lambda { |generaleducation_ids|
+      where(:generaleducation_id => [*generaleducation_ids])
+    }
+# scope :with_generaleducation_id , ->(generaleducation_ids){ 
+#     return nil  if generaleducation_ids.blank?
+#
+#     # condition query, parse into individual keywords
+#     terms = generaleducation_ids.join(" ").split(/\s+/)
+#
+##    # configure number of OR conditions for provision
+##    # of interpolation arguments. Adjust this if you
+##    # change the number of OR conditions.
+#    num_or_conditions = 1
+##
+#    where(
+#     terms.map { |e|
+#       or_clauses = [
+#          "courses.generaleducation_id LIKE ?", 
+#          "courses.generaleducation_id LIKE \'%, #{e}\'", 
+#          "courses.generaleducation_id LIKE \'#{e},%\'", 
+#          "courses.generaleducation_id LIKE \'%, #{e},%\'"
+#        ].join(' OR ')
+#        "(#{ or_clauses })"
+#      }.join(' AND '),
+#      *terms.map { |e| [e] * num_or_conditions }.flatten
+#    )
+#  }
 
   scope :with_subject_area_id, lambda { |subjectarea_ids|
      where(:subjectarea_id => [*subjectarea_ids])

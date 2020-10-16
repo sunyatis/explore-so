@@ -21,6 +21,11 @@
       @filterrific.select_options[:with_school_id],
       { include_blank: '- School -' }
     ) %>
+    <%= f.select(
+      :with_credit,
+      @filterrific.select_options[:with_credit],
+      { include_blank: '- Credits -' }
+    ) %>
 
    <%= f.select(
      :with_course_area,
@@ -34,25 +39,27 @@
     { include_blank: '- Level -' }
   ) %>
 
-  <%= f.select(
-    :with_credit,
-    @filterrific.select_options[:with_credit],
-    { include_blank: '- Credits -' }
-  ) %>
+ 
 
   <script type="text/javascript">
-      $(document).ready(function() {
+      /*$(document).ready(function() {
           $('#filterrific_with_generaleducation_id').multiselect({
           });
            $('.btn-group').on('click', function (e) {
                 $(this).addClass("open");
             });           
-      }); 
+      }); */
 
   </script>
   <!-div class="span3 chardin_box"-->
 
-      <%= f.select(:with_generaleducation_id, @filterrific.select_options[:with_generaleducation_id], { include_hidden: false}, title: 'Gen Ed', multiple: true)%>
+  <%= f.select(
+    :with_generaleducation_id,
+    @filterrific.select_options[:with_generaleducation_id],
+    { include_blank: '- Gen Ed -' }
+  ) %>
+
+      <!--%= f.select(:with_generaleducation_id, @filterrific.select_options[:with_generaleducation_id], { include_hidden: false}, title: 'Gen Ed', multiple: true)%-->
 	  
 
      <%= f.text_field(:with_start_date, class: 'js-datepicker', placeholder: 'Start After' ) %>
