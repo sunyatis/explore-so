@@ -12161,5 +12161,15 @@ body > footer .ranku-bar a {
 
 /* line 992, app/assets/stylesheets/courses.scss */
 #filterrific_with_level {
-  width: 20%;
+  width: 25%;
+}
+
+/* line 995, app/assets/stylesheets/courses.scss */
+#filterrific_with_catalog_id {
+  width: 25%;
+}
+
+/* line 998, app/assets/stylesheets/courses.scss */
+#filterrific_search_query {
+  width: 30% !important;
 }
