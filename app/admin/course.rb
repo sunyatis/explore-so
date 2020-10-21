@@ -2,33 +2,35 @@ ActiveAdmin.register Course do
  menu parent: 'Manage Courses', label: 'Courses'
  active_admin_import :validate => false,
  template: 'admin/course_import' ,
- headers_rewrites: { :'subjectarea_id' => :subjectarea_id, :'school_id' => :school_id, :'generaleducation_id' => :generaleducation_id, :'start_date' => :start_date, :'end_date' => :end_date, :'code' => :code},
+ headers_rewrites: { :'generaleducation_id' => :generaleducation_id, :'start_date' => :start_date, :'end_date' => :end_date, :'code' => :code}, #'school_id' => :school_id, :'subjectarea_id' => :subjectarea_id
  before_batch_import: ->(importer) {
                  Course.where(local_course_id: importer.values_at('local_course_id')).delete_all
-                 subject_names = importer.values_at(:subjectarea_id)
-                 puts subject_names
+                 
+                 
+                 #subject_names = importer.values_at(:subjectarea_id)
+                 #puts subject_names
                  # replacing subject area name with subject area id
                  #subject_names_split = subject_names.map {|subject_names|   {subject_names => subject_names.split(', ')}.flatten } 
                  #puts subject_names_split
-                 subjects = nil
-                 subject_names.each do |s|
-                   subjects   = SubjectArea.where(name: subject_names).pluck(:name, :id)
-                   puts subjects
-                   #subjects_join = subjects.join(',')
-                   #puts subjects_join
-                   #return subjects_join
-                 end
+                 #subjects = nil
+                 #subject_names.each do |s|
+                #subjects   = SubjectArea.where(name: subject_names).pluck(:name, :id)
+                #puts subjects
+                     #subjects_join = subjects.join(',')
+                     #puts subjects_join
+                     #return subjects_join
+                 #end
                  #puts subjects_join
-                 options = Hash[*subjects.flatten] # #{"Jane" => 2, "John" => 1}
+                 #options = Hash[*subjects.flatten] # #{"Jane" => 2, "John" => 1}
                   #puts options
-                 importer.batch_replace(:subjectarea_id, options)
+                 #importer.batch_replace(:subjectarea_id, options)
 
                  
-                 school_names = importer.values_at(:school_id)
+                # school_names = importer.values_at(:school_id)
                    # replacing subject area name with subject area id
-                   schools   = School.where(name: school_names).pluck(:name, :id)
-                   options = Hash[*schools.flatten] # #{"Jane" => 2, "John" => 1}
-                   importer.batch_replace(:school_id, options)
+                 #  schools   = School.where(name: school_names).pluck(:name, :id)
+                  # options = Hash[*schools.flatten] # #{"Jane" => 2, "John" => 1}
+                  # importer.batch_replace(:school_id, options)
                 
                  
                  
@@ -70,22 +72,22 @@ ActiveAdmin.register Course do
       
 
                    
-               #   importer.csv_lines.map! { |row| row << importer.model.catalog_id}
-                #  importer.headers.merge!({:'catalog_id' => :catalog_id}) 
+               importer.csv_lines.map! { |row| row << importer.model.catalog_id}
+               importer.headers.merge!({:'catalog_id' => :catalog_id}) 
                   
-                 # importer.csv_lines.map! { |row| row << importer.model.school_id}
-                  #importer.headers.merge!({:'school_id' => :school_id})
+                  importer.csv_lines.map! { |row| row << importer.model.school_id}
+                  importer.headers.merge!({:'school_id' => :school_id})
                },
                after_batch_import: ->(importer) {
                   Course.where(title: "title").delete_all
                },
  :template_object => ActiveAdminImport::Model.new(
  :catalog_id => nil,
- #:school_id => nil,
+ :school_id => nil,
  #:hint => "file will be imported with such header format: 'body','title','author'",
- #:csv_headers => ["local_course_id", "subjectarea_id", "course_area", "prefix", "code", "section", "title",  "description", "prerequisites", "corequisites", "generaleducation_id", "level", "instructor", "credit", "start_date", "end_date", "books_url", "registration_url", "active", "course_method", "seats_available", "class_full"]
+ :csv_headers => ["local_course_id", "course_area", "prefix", "code",  "section", "title",  "description", "prerequisites", "corequisites", "generaleducation_id", "level", "instructor", "credit", "start_date", "end_date", "books_url", "registration_url", "active", "course_method"]
   # mass import
-:csv_headers => ["catalog_id", "local_course_id", "subjectarea_id", "school_id", "course_area", "prefix", "code", "section", "title",  "description", "prerequisites", "corequisites", "generaleducation_id", "level", "instructor", "credit", "start_date", "end_date", "books_url", "registration_url", "active", "course_method", "seats_available", "class_full"] 
+#:csv_headers => ["catalog_id", "local_course_id", "subjectarea_id", "school_id", "course_area", "prefix", "code", "section", "title",  "description", "prerequisites", "corequisites", "generaleducation_id", "level", "instructor", "credit", "start_date", "end_date", "books_url", "registration_url", "active", "course_method", "seats_available", "class_full"] 
  )
 
 
