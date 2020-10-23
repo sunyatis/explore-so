@@ -998,3 +998,54 @@ width:25%;
 #filterrific_search_query{
 width:30% !important;
 }
+
+div.coursetable {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}  
+.divTable.coursetable .divTableCell, .divTable.coursetable .divTableHead {
+  	  padding-top: 13px;
+      padding-right: 2px;
+      padding-bottom: 13px;
+      padding-left: 2px;
+}
+.divTable.coursetable .divTableBody .divTableCell {
+  font-size: 15px;
+}
+.divTable.coursetable .divTableHeading {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+}
+.divTable.coursetable .divTableHeading .divTableHead {
+  font-size: 19px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.coursetable .tableFootStyle {
+  font-size: 14px;
+}
+/* DivTable.com */
+.divTable{ display: table; }
+.divTableRow { display: table-row; }
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableFoot { display: table-footer-group;}
+.divTableBody { display: table-row-group;}
+
+.divTableHead {
+font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    color: #757575;
+}
+
+.subject_area_cell{
+ display:none;
+}
+.school_image img{
+width: 3.125rem;
+}

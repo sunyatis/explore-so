@@ -19,28 +19,32 @@
  <div class="row">
  	<div class="container results">
 
-  <table class="table table-hover">
-      <tr>
-		<th></th>
-        <th><%= filterrific_sorting_link(@filterrific, :title) %></th>
-        <th>Code</th>
-		<th><%= filterrific_sorting_link(@filterrific, :subject_area) %></th>
-        <th><%= filterrific_sorting_link(@filterrific, :start_date) %></th>
-        <th><%= filterrific_sorting_link(@filterrific, :credit) %></th>
-      </tr>
-
-      <% @courses.each do |course| %>
-        <tr>
-		  <td><%= image_tag(course.school.image.url(:small), :align=> "center", :width=> "55px") %></td>
-          <td><%= link_to course.title, course %> <br> <%= course.school.name %></td>
-          <td><%= course.prefix %> <%= course.code %> <%= course.section %></td>
-		  <td><%= course.course_area %></td>
-          <td><%= course.start_date.strftime("%m/%d/%y")%></td>
-          <td><span><%= course.credit %></span></td>
-        </tr>
-      <% end %>
-  </table>
+  <div class="divTable coursetable">
+  <div class="divTableBody">
+  <div class="divTableRow resultheader">
+  <div class="divTableHead"></div>
+  <div class="divTableHead"><%= filterrific_sorting_link(@filterrific, :title) %></div>
+  <div class="divTableHead">Code</div>
+  <div class="divTableHead subject_area_cell"><%= filterrific_sorting_link(@filterrific, :subject_area) %></div>
+  <div class="divTableHead"><%= filterrific_sorting_link(@filterrific, :start_date) %></div>
+  <div class="divTableHead"><%= filterrific_sorting_link(@filterrific, :credit) %></div>
+  </div>
+   <% @courses.each do |course| %>
+  <div class="divTableRow result">
+  <div class="divTableCell school_image"><%= image_tag(course.school.image.url(:small), :align=> "center", :width=> "55px") %></div>
+  <div class="divTableCell"><h2><%= link_to course.title, course %></h2><h3><%= course.school.name %></h3></div>
+  <div class="divTableCell"><%= course.prefix %> <%= course.code %> <%= course.section %></div>
+  <div class="divTableCell subject_area_cell"><%= course.course_area %></div>
+  <div class="divTableCell"><%= course.start_date.strftime('%m-%d-%Y') %></div>
+  <div class="divTableCell"><span><%= course.credit %></span></div>
+  </div>
+    <% end %>
+  </div>
+  </div>
   
   	</div>
  </div>
 </div>
+
+
+

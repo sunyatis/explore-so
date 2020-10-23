@@ -41,11 +41,12 @@
 
   </head>
   <body>
+   
     <header class="navbar navbar-static-top bs-docs-nav">
-		<a href="https://open.suny.edu/"><img src="https://online.suny.edu/wp-content/themes/yootheme/cache/SUNY-Online-Logo-Sig-8fc48323.png" width="60px"></a>
+		
       <%= render 'layouts/navigation' %>
     </header>
-	 <%= render 'visitors/header' %>
+	<main>
     <!--main role="main"-->
 		
 			
@@ -54,9 +55,10 @@
        <%= render 'layouts/messages' %>
        <%= yield %>
     <!--/main-->
-		</div>
+		</main>
+<%= render 'layouts/footer' %>
   </body>
-  <%= render 'layouts/footer' %>
+  
 </html>
 
 

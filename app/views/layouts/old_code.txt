@@ -36,3 +36,38 @@
 <% else %>
   <li></li>
 <% end %>
+
+
+
+
+
+
+
+
+
+<div class="navbar  navbar-fixed-top">
+<div class="navbar-inner">
+  <div class="container">
+	
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+    <div class="collapse navbar-collapse">
+		 <a href="https://open.suny.edu/"> <img src="https://online.suny.edu/wp-content/themes/yootheme/cache/SUNY-Online-Logo-Sig-8fc48323.png" width="60px" style="float:left;"></a>
+      <ul class="nav navbar-nav">
+        <%= render 'layouts/navigation_links' %>
+      </ul>
+	  <span class="navbar-text">
+	        <button type="button" title="Have questions about a specific Open SUNY program? Request information here!" class="rounded-button medium green" tabindex="0">Request Info</a>
+	  </span>
+    </div>
+	
+  </div>
+  </div>
+</div>

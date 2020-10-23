@@ -19,6 +19,7 @@
  *= require chardinjs
  *= require programs
  *= require courses
+ *= require scaffolds
  */
 
 
@@ -71,6 +72,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 .navbar-collapse {
 	    padding: .625rem 0;
 }
+
 
 @media (min-width: 768px) {
  .navbar-text {
@@ -614,3 +616,52 @@ main {
     width: 100%;
     box-sizing: border-box;
 }
+h2, .h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 1.125rem !important;
+    line-height: 1.5rem !important;
+    font-weight: 600 !important;
+    color: #545454 !important;
+}
+h3, .h3 {
+       margin: 0 !important;
+       padding: 0 !important;
+       font-size: 1rem !important;
+       line-height: 1.25rem !important;
+       font-weight: 300 !important;
+       color: #545454 !important;
+ 
+}
+.result-header {
+    margin-top: 3px !important;
+    padding: 1.25rem !important;
+    background-color: #fff !important;
+    border-bottom: 1px solid #f5f5f5 !important;
+}
+.result {
+    margin-top: 3px !important;
+    padding: 1.25rem !important;
+    background-color: #fff !important;
+    border-bottom: 1px solid #f5f5f5 !important;
+}
+.result:hover {
+    background-color: #f5f5f5 !important;;
+    transform: translate(0,-3px);
+}
+
+.result h2 a{
+	color: #545454 !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+.main{
+padding-right: 5px !important;
+padding-left: 5px !important;
+} 
+.results {
+	padding-right: 5px !important;
+	padding-left: 5px !important;
+}
+   }
