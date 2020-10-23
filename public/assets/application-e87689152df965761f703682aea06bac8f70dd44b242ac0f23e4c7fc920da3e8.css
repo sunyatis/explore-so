@@ -12319,12 +12319,14 @@ div.coursetable {
   color: #757575;
 }
 
-/* line 1046, app/assets/stylesheets/courses.scss */
-.subject_area_cell {
-  display: none;
+@media screen and (max-width: 600px) {
+  /* line 1046, app/assets/stylesheets/courses.scss */
+  .subject_area_cell {
+    display: none;
+  }
 }
 
-/* line 1049, app/assets/stylesheets/courses.scss */
+/* line 1050, app/assets/stylesheets/courses.scss */
 .school_image img {
   width: 3.125rem;
 }
