@@ -12,7 +12,7 @@
 					<h3><%= @course.school.name %></h3>
 				</figcaption></figure>
 					<div class="actions">
-						<button class="rounded-button large green halo" data-program="<%= @course.id %>" onclick="window.location.href= '<%= @course.registration_url %>'" >Register Now</button>
+						<button class="rounded-button large blue halo" data-program="<%= @course.id %>" onclick="window.location.href= '<%= @course.registration_url %>'" >Register Now</button>
 						<ul>
 							<li><a href="<%= @course.school.tuition_url %>" class="apply_now" target="_blank" rel="noopener" title="Costs for <%= @course.title %> ">Cost & Fees</a>
 							</li>

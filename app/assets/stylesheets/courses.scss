@@ -866,7 +866,7 @@
     font-size:.9375rem;
     font-weight:500;
     line-height:1.25rem;
-    color:#295c23 !important;
+    color:#004c93 !important;
     text-decoration:none;
     background-color:transparent;
     border:0
@@ -879,9 +879,11 @@
     display:flex;
     flex-flow:column nowrap;
     width:100%;
-    background-color:#004c93;
+    /*background-color:#004c93;*/
+	 background-color:#3a8632;
     padding:1.5625rem 0;
-    border-bottom:2px solid #004c93
+    /*border-bottom:2px solid #004c93*/
+	 border-bottom:2px solid #3a8632;
 }
 #course-display header .stats ul{
     flex-flow:row nowrap;
@@ -943,7 +945,8 @@
     align-items:center;
     padding:2.5rem 0;
     color:#fff;
-    background-color:#004c93
+	background-color:#3a8632;
+    /*background-color:#004c93*/
 }
 #course-display .rfi-banner h4{
     font-size:1rem;
@@ -1017,7 +1020,7 @@ width:30% !important;
    margin-bottom: 10px;
    }
    #filterrific_search_query{
-   width:50% !important;
+   width:43% !important;
    
    }
    #filterrific_with_school_id {
@@ -1050,6 +1053,7 @@ div.coursetable {
 }
 .divTable.coursetable .divTableBody .divTableCell {
   font-size: 15px;
+  vertical-align: top;
 }
 .divTable.coursetable .divTableHeading {
   background: #1C6EA4;
@@ -1087,4 +1091,8 @@ font-size: .875rem;
 }
 .school_image img{
 width: 3.125rem;
+}
+
+.credits_cells{
+text-align:right;
 }
