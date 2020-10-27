@@ -60,7 +60,7 @@
 				  			    <%= @course.corequisites %></div>
 								<% end %>
 								
-								<% if !@course.general_education.name.blank? %>
+								<% if !@course.general_education.blank? %>
 						  		<div class="gened"><strong class="course_data_label">General Education Area(s):</strong> 
 								<%= @course.general_education.name %></div>
 								<% end %>
