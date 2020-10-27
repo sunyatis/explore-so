@@ -34,3 +34,21 @@ function myFunction() {
 	  window.location = "/programs?" + dgchoice + "&" + "filterrific[search_query]=" + stext;
 	  
 	}
+	
+	function togglemenu (){
+	   var w = $(window).width();
+	   if (w <= 1199) {
+	      $('#menu-list').removeClass('in');
+	   } else {
+	      $('#menu-list').addClass('collapse in');
+	   }
+	}
+
+	$(window).resize(function(){
+	     togglemenu();
+	});
+	$(window).load(function(){
+	     togglemenu();
+	});
+
+	togglemenu();
