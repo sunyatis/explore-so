@@ -92,6 +92,7 @@ ActiveAdmin.register Course do
 
 
   
+ filter :id
   filter :catalog_id, as: :select, :collection => Catalog.pluck(:name, :id)
   filter :school_id, as: :select, :collection => School.pluck(:name, :id)
   filter :subjectarea_id, as: :select, :collection => SubjectArea.pluck(:name, :id)
@@ -116,6 +117,7 @@ ActiveAdmin.register Course do
   filter :course_method
   filter :seats_available
   filter :class_full
+  
   
   index do
      id_column

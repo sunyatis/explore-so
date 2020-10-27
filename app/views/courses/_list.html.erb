@@ -1,19 +1,21 @@
 <div id="filterrific_results" class="row">
-  <div class="container">
+  <!--div class="container"-->
 	  
+  
+  <div class="chardin_box resets" data-intro="will_paginate's entries info works as expected." data-position="bottom">
+  <%= page_entries_info @courses, entry_name: "courses" %>
+  </div>
   <div class="pull-right resets" data-intro="Reset the filter settings to defaults." data-position="bottom">
     <%= link_to('Reset filters', reset_filterrific_url, :class => 'reset_link') %>
 
-  </div>
-  <div class="chardin_box resets" data-intro="will_paginate's entries info works as expected." data-position="bottom">
-  <%= page_entries_info @courses, entry_name: "courses" %>
   </div>
   <div class="chardin_box resets" data-intro="Spinner indicates update." data-position="bottom">
 
         <span class="filterrific_spinner" style="display:none;">
           <%= render_filterrific_spinner %>
         </span>
-	 </div>
+	</div>
+	 <!--/div-->
  </div>
  
  <div class="row">
