@@ -32,7 +32,8 @@ class Ability
 
        if user.role == 'admin'
            can :manage, :all
-      elsif user.role == 'System Administrator'
+       end
+       if user.role == 'System Administrator'
           can :read, ActiveAdmin::Page, :name => "Dashboard"
           can :manage, :all
       elsif user.role == 'Campus Contact'
@@ -40,6 +41,9 @@ class Ability
           can [:my_courses, :read], Course, :school_id => user.school_id
           can :update, Program, :school_id => user.school_id
           can :update, Course, :school_id => user.school_id
+      elsif user.role == 'Course Editor'
+          can :read, ActiveAdmin::Page, :name => "Dashboard"
+          can :manage, Course
        else
          can :read, Program
          can :read, Course
