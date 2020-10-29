@@ -160,10 +160,10 @@ class Course < ActiveRecord::Base
    end
    
    def self.options_for_level_select
-     Course.pluck(:level).uniq
+     Course.order(:level).pluck(:level).uniq
    end
    def self.options_for_credit_select
-      Course.pluck(:credit).uniq
+      Course.order(:credit).pluck(:credit).uniq
    end
    def self.options_for_course_area_select
       Course.order(:course_area).pluck(:course_area).uniq
