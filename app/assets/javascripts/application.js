@@ -37,7 +37,7 @@ function myFunction() {
 	
 	function togglemenu (){
 	   var w = $(window).width();
-	   if (w <= 1199) {
+	   if (w <= 820) {
 	      $('#menu-list').removeClass('in');
 	   } else {
 	      $('#menu-list').addClass('collapse in');
