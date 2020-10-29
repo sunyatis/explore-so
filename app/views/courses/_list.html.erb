@@ -9,7 +9,7 @@
     <%= link_to('Reset filters', reset_filterrific_url, :class => 'reset_link') %>
 
   </div>
-  <div class="chardin_box resets" data-intro="Spinner indicates update." data-position="bottom">
+  	<div class="chardin_box resets" data-intro="Spinner indicates update." data-position="bottom">
 
         <span class="filterrific_spinner" style="display:none;">
           <%= render_filterrific_spinner %>
@@ -19,35 +19,36 @@
  
  
 
- 	<div class="container results">
+ <div class="container results">
 
   <div class="divTable coursetable">
   <div class="divTableBody">
-  <div class="divTableRow resultheader">
-  <div class="divTableHead"></div>
-  <div class="divTableHead"><%= filterrific_sorting_link(@filterrific, :title) %></div>
-  <div class="divTableHead">Code</div>
-  <div class="divTableHead subject_area_cell"><%= filterrific_sorting_link(@filterrific, :subject_area) %></div>
-  <div class="divTableHead"><%= filterrific_sorting_link(@filterrific, :start_date) %></div>
-  <div class="divTableHead"><%= filterrific_sorting_link(@filterrific, :credit) %></div>
-  </div>
+	 <div class="divTableRow resultheader">
+	 	<div class="divTableHead"></div>
+	 	<div class="divTableHead"><%= filterrific_sorting_link(@filterrific, :title) %></div>
+	 	<div class="divTableHead">Code</div>
+	 	<div class="divTableHead subject_area_cell"><%= filterrific_sorting_link(@filterrific, :subject_area) %></div>
+	 	<div class="divTableHead"><%= filterrific_sorting_link(@filterrific, :start_date) %></div>
+	 	<div class="divTableHead"><%= filterrific_sorting_link(@filterrific, :credit) %></div>
+	 </div>
    <% @courses.each do |course| %>
-  <div class="divTableRow result">
-  <div class="divTableCell school_image"><%= image_tag(course.school.image.url(:small), :align=> "center", :width=> "55px") %></div>
-  <div class="divTableCell"><h2><%= link_to course.title, course %></h2><h3><%= course.school.name %></h3></div>
-  <div class="divTableCell"><%= course.prefix %> <%= course.code %> <%= course.section %></div>
-  <div class="divTableCell subject_area_cell"><%= course.course_area %></div>
-  <div class="divTableCell"><%= course.start_date.strftime('%m-%d-%Y') %></div>
-  <div class="divTableCell credits_cells"><span><%= course.credit %></span></div>
-  </div>
+	 <div class="divTableRow result">
+	 <div class="divTableCell school_image"><%= image_tag(course.school.image.url(:small), :align=> "center", :width=> "55px") %></div>
+	 <div class="divTableCell"><h2><%= link_to course.title, course %></h2><h3><%= course.school.name %></h3></div>
+	 <div class="divTableCell"><%= course.prefix %> <%= course.code %> <%= course.section %></div>
+	 <div class="divTableCell subject_area_cell"><%= course.course_area %></div>
+	 <div class="divTableCell"><%= course.start_date.strftime('%m-%d-%Y') %></div>
+	 <div class="divTableCell credits_cells"><span><%= course.credit %></span></div>
+	 </div>
     <% end %>
-  </div>
-  </div>
-  
-  	</div>
  </div>
- <div class="text-center"><%= paginate @courses %></div>
-</div>
+ </div>
+  
+ </div>
+  <div class="text-center"><%= paginate @courses %></div>
+ </div>
+
+
 
 
 
