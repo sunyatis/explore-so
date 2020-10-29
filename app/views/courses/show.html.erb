@@ -52,12 +52,12 @@
 								<div class="description"> <%= @course.description.html_safe %></div>
   				  			   <% if !@course.prerequisites.blank? %>
 								<div class="prereq"><strong class="course_data_label">Prerequisites:</strong>
-				  			  <%= @course.prerequisites %></div>
+				  			  <%= @course.prerequisites.html_safe %></div>
 							  <% end %>
 							
 							  <% if !@course.corequisites.blank? %>
 							  <strong class="course_data_label">Corequisites:</strong>
-				  			    <%= @course.corequisites %></div>
+				  			    <%= @course.corequisites.html_safe %></div>
 								<% end %>
 								
 								<% if !@course.general_education.blank? %>
@@ -212,7 +212,9 @@
 					
 				</section><section class="rfi-banner">
 					<h4>Interested in registering for this class?</h4>
-					<button class="rounded-button large white blue-halo" data-program="1470329454961" onclick="window.location.href= '<%= @course.registration_url %>' target='_blank'">Register Now</button>
+					<button class="rounded-button large white blue-halo" data-program="<%= @course.id %>" onclick="window.location.href= '<%= @course.registration_url %>' target='_blank'">Register Now</button>
+					
+					
 				</section>
 			</section>
 		</main>
