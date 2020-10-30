@@ -56,7 +56,7 @@
 							  <% end %>
 							
 							  <% if !@course.corequisites.blank? %>
-							  <strong class="course_data_label">Corequisites:</strong>
+							 <div class="core"> <strong class="course_data_label">Corequisites:</strong></div>
 				  			    <%= @course.corequisites.html_safe %></div>
 								<% end %>
 								
