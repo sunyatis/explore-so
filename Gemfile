@@ -23,7 +23,7 @@ gem 'activerecord-session_store'  #to avoid cookie store
 gem 'kaminari'  #used by active admin for pagination
 gem 'friendly_id', '~> 5.1.0' #Use friendlyId for SEO-friendly URLS
 gem "paperclip", "~> 4.2" #Upload images
-gem 'aws-sdk', '< 2.0' # amazon connection for images
+gem 'aws-sdk', '~> 3' # amazon connection for images
 gem 'active_admin_theme'
 gem 'active_admin_flat_skin', github: 'ayann/active_admin_flat_skin'
 gem 'high_voltage', '~> 3.1'

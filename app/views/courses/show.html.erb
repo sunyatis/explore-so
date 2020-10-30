@@ -1,11 +1,12 @@
 
-<main><section id="course-display">
-	<header aria-label="course-page-banner">
-		<div class="row">
-			<figure>
-				<div class="logo">
-					<%= image_tag(@course.school.image.url(:small), :align=> "center") %>
-				</div>
+<main>
+	<section id="course-display">
+		<header aria-label="course-page-banner">
+			<div class="row">
+				<figure>
+					<div class="logo">
+						<%= image_tag(@course.school.image.url(:small), :align=> "center") %>
+					</div>
 				<figcaption>
 					<h1><%= @course.title %></h1>
 					<h2><%= @course.prefix %>-<%= @course.code %>-<%= @course.section %></h2>
@@ -21,19 +22,19 @@
 							</li>
 						</ul>
 					</div>
-				</div>
-				<div class="stats" id="testimonial-content">
-					<ul class="row">
-						<!--li><dl><dt>Designated As</dt><dd>Open SUNY+</dd></dl></li-->
-							<li><dl><dt>Semester</dt><dd> <%= @course.catalog.name %></dd></dl></li>
-							<li><dl><dt>Instructor</dt><dd>  <%= @course.instructor %></dd></dl></li>
-							<li><dl><dt>Start Date</dt><dd> <%= @course.start_date.strftime('%m-%d-%Y') %></dd></dl></li>
-							<li><dl><dt>Total Credits</dt><dd><%= @course.credit %></dd></dl></li>
-							<li><dl><dt>Call to Register</dt><dd><%= @course.school.registrar_phone %></dd></dl></li></ul>
-						</div>
+			</div>
+			<div class="stats" id="testimonial-content">
+				<ul class="row">
+					<!--li><dl><dt>Designated As</dt><dd>Open SUNY+</dd></dl></li-->
+						<li><dl><dt>Semester</dt><dd> <%= @course.catalog.name %></dd></dl></li>
+						<li><dl><dt>Instructor</dt><dd>  <%= @course.instructor %></dd></dl></li>
+						<li><dl><dt>Start Date</dt><dd> <%= @course.start_date.strftime('%m-%d-%Y') %></dd></dl></li>
+						<li><dl><dt>Total Credits</dt><dd><%= @course.credit %></dd></dl></li>
+						<li><dl><dt>Call to Register</dt><dd><%= @course.school.registrar_phone %></dd></dl></li>
+				</ul>
+			</div>
 						
-					</header>
-					
+	</header>
 					
 					<section class="course-content">
 						<header role="course-navigation-banner" id="course-navigation-banner" aria-label="Course Details Navigation Banner">
@@ -56,7 +57,7 @@
 							  <% end %>
 							
 							  <% if !@course.corequisites.blank? %>
-							 <div class="core"> <strong class="course_data_label">Corequisites:</strong></div>
+							 <div class="core"> <strong class="course_data_label">Corequisites:</strong>
 				  			    <%= @course.corequisites.html_safe %></div>
 								<% end %>
 								
@@ -90,11 +91,11 @@
 											<p>As a SUNY Community College, we respond to the educational need of all people and their local, state, and global communities. We offer certificate programs and associate degrees, as well as transfer and career services. You will benefit from flexible course scheduling and affordable career exploration.</p>
 										<% end%>
 										<% if @course.school.campus_type == "Technology College"%>	
-										<h4>About our Technolog College</h4>
+										<h4>About our Technology College</h4>
 											<p>Cutting-edge, hands-on training for in-demand careers is the focus of our technology college. We offer academic programs and degrees in technical, as well as traditional, disciplines. Excellent support services complement the classroom instruction. Internships and on-the-job training provide students with hands-on experience that is sought after by employers.</p>
 										<% end%>
 										<% if @course.school.campus_type == "University"%>	
-										<h4>About our Technolog College</h4>
+										<h4>About our University</h4>
 											<p>Our university college is a leader in undergraduate instruction. We provide bachelor’s and master’s degrees in liberal arts and sciences and professional disciplines. Student success is our primary focus as evidenced by faculty and staff interactions through honors programs, independent study opportunities, research and study abroad.</p>
 										<% end%>
 										
@@ -114,99 +115,7 @@
 								</div>
 							</aside>
 						</div>
-						<!--div  class="online-learning">
-							<div class="row">
-								<ul>
-									<li>
-										<h2>What's it like to learn online with SUNY?</h2>
-										<h3>Let's put your mind at ease about online learning</h3>
-									</li>
-									<li>
-										<dl class="fully-online">
-											<dt>100% Online</dt>
-											<dd>This program is presented 100% online. You will not be expected to attend any classes on campus.</dd>
-										</dl>
-									</li>
-									<li>
-										<dl class="asynchronus">
-											<dt>Classes on your schedule</dt>
-											<dd>Courses are semester based and classwork can be completed around your work and family commitments. There is no set time where you are required to log in to attend class.</dd>
-										</dl>
-									</li>
-									<li>
-										<dl class="same-faculty">
-											<dt>Same faculty as on-campus</dt>
-											<dd>The faculty that teach online classes are the same faculty that students learn from on-campus.</dd>
-										</dl>
-									</li>
-									<li>
-										<dl class="concierge">
-											<dt>Personal concierge</dt>
-											<dd>You will have one person who acts as a single point of contact for any and all questions you may have.</dd>
-										</dl>
-									</li>
-									<li>
-									<dl class="experimental-learning">
-										<dt>Learn by doing</dt>
-										<dd>Participate in field experiences such as internships, clinical placements, and service learning to apply your academic knowledge in the world.</dd>
-									</dl>
-								</li>
-								<li>
-									<dl class="open-suny-plus">
-										<dt>Powered by Open SUNY+</dt>
-										<dd>In addition to the features listed above, this Open SUNY+ degree includes 24/7 support, incorporates industry-leading teaching practices, and targets an area of high employer demand in New York State and beyond.</dd>
-									</dl>
-								</li>
-								<li><a class="rounded-button small green halo" data-program="1470329454961">Request Program Information</a></li>
-							</ul>
-							<aside aria-label="Student Feedback">
-								<img src="//d2brwuimzb4ax4.cloudfront.net/sites/suny/content/suny-computer.png" alt="Open SUNY Computer">
-								<blockquote>
-									<q>I was a bit apprehensive at first because I knew online classes require that you motivate yourself, but after this experience, I will always choose online if possible. I think there are so many benefits.</q>
-									<cite>Kimberly Lane</cite>
-								</blockquote>
-							</aside>
-						</div>
-					</div-->
-					<!--div class="apply-overview">
-						<section class="row">
-							<h2>How do I Register?</h2>
-							<h3>Follow these steps to start your registration</h3>
-							<ol>
-								<li>Go to the online application</li>
-								<li>Create an account</li>
-								<li>Complete the forms or save for later</li>
-								<li>Pay the application fee</li>
-								<li>Submit any supplemental materials, if required</li>
-								<li>Send in your academic records</li>
-								<li class="info"><a href="<%= @course.registration_url %>" class="rounded-button small green" title="Register for a '<%= @course.school.name %>' course now.">Register Now</a></li>
-							</ol>
-							<aside aria-labelledby="anyQuestions" aria-describedby="anyQuestionsDiscription">
-								<h3 id="anyQuestions" class="header-top">Do you have questions about any of the following topics?</h3>
-								<p id="anyQuestionsDiscription">We'll connect you with someone who can answer all your questions</p>
-								<ul>
-									<li>
-										<button class="rounded-button" title="Ask SUNY about Previous or Transfer Credits" data-program="1470329454961" data-topic="transfer_credits">Previous or Transfer Credits</button>
-									</li>
-									<li>
-										<button class="rounded-button" title="Ask SUNY about Admission Requirements" data-program="1470329454961" data-topic="admission_requirements">Admission Requirements</button>
-									</li>
-									<li>
-										<button class="rounded-button" title="Ask SUNY about Tuition or Financial Aid" data-program="1470329454961" data-topic="tuition_financial_aid">Tuition or Financial Aid</button>
-									</li>
-									<li>
-										<button class="rounded-button" title="Ask SUNY about General Program Information" data-program="1470329454961" data-topic="general_program_info">General Program Information</button>
-									</li>
-									<li>
-										<button class="rounded-button" title="Ask SUNY about Taking Online Classes" data-program="1470329454961" data-topic="online_classes">Taking Online Classes</button>
-									</li>
-									<li>
-										<button class="rounded-button" title="Ask SUNY about Something Not Listed" data-program="1470329454961" data-topic="other">Something Not Listed</button>
-									</li>
-								</ul>
-							</aside>
-						</section>
-					</div-->
+
 				</section>
 				<section class="related-courses">
 					
