@@ -289,7 +289,7 @@ nav.navbar .mobile-nav .nav-user-bookmarks a:hover{
 }
 nav.navbar .mobile-nav a{
    /* margin-right:1.25rem*/
-   color: #ffff !important;
+   /*color: #ffff !important;*/
 }
 nav.navbar .right{
     align-items:center;
@@ -1231,7 +1231,10 @@ dropdown a:visted{
 
 }
 .dropdown a{
-	 color:#fff !important;
+	 color:#444 !important;
+}
+dropdown-toggle{
+	color:#444 !important;
 }
 .text-center {
   text-align: center;

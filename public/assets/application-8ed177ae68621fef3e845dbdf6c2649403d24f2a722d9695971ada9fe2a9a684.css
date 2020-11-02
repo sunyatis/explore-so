@@ -385,7 +385,7 @@ nav.navbar .mobile-nav .nav-user-bookmarks a:hover {
 /* line 291, app/assets/stylesheets/application.css.scss */
 nav.navbar .mobile-nav a {
   /* margin-right:1.25rem*/
-  color: #ffff !important;
+  /*color: #ffff !important;*/
 }
 
 /* line 295, app/assets/stylesheets/application.css.scss */
@@ -1586,10 +1586,15 @@ h3, .h3 {
 
 /* line 1234, app/assets/stylesheets/application.css.scss */
 .dropdown a {
-  color: #fff !important;
+  color: #444 !important;
 }
 
 /* line 1237, app/assets/stylesheets/application.css.scss */
+dropdown-toggle {
+  color: #444 !important;
+}
+
+/* line 1240, app/assets/stylesheets/application.css.scss */
 .text-center {
   text-align: center;
   width: 100% !important;
