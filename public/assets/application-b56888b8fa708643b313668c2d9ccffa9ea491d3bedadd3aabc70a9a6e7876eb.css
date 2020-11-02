@@ -236,21 +236,27 @@ nav.navbar .mobile-nav {
   nav.navbar .mobile-nav li:hover, nav.navbar .mobile-nav li:active {
     background-color: #4f4c4c;
   }
+  /* line 177, app/assets/stylesheets/application.css.scss */
+  .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > li > a:visited {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #444;
+  }
 }
 
-/* line 179, app/assets/stylesheets/application.css.scss */
+/* line 185, app/assets/stylesheets/application.css.scss */
 nav.navbar .mobile-nav .nav-user:hover {
   background-color: transparent;
 }
 
 @media screen and (max-width: 820px) {
-  /* line 183, app/assets/stylesheets/application.css.scss */
+  /* line 189, app/assets/stylesheets/application.css.scss */
   nav.navbar .mobile-nav .nav-user {
     display: flex;
   }
 }
 
-/* line 187, app/assets/stylesheets/application.css.scss */
+/* line 193, app/assets/stylesheets/application.css.scss */
 nav.navbar .mobile-nav .nav-user figure {
   display: flex;
   flex-flow: row nowrap;
@@ -258,7 +264,7 @@ nav.navbar .mobile-nav .nav-user figure {
   padding: 0;
 }
 
-/* line 193, app/assets/stylesheets/application.css.scss */
+/* line 199, app/assets/stylesheets/application.css.scss */
 nav.navbar .mobile-nav .nav-user figure .navbar-user_image {
   height: 3.125rem;
   width: 3.125rem;
@@ -268,7 +274,7 @@ nav.navbar .mobile-nav .nav-user figure .navbar-user_image {
   background-size: contain;
 }
 
-/* line 201, app/assets/stylesheets/application.css.scss */
+/* line 207, app/assets/stylesheets/application.css.scss */
 nav.navbar .mobile-nav .nav-user figure figcaption {
   display: flex;
   flex-flow: row wrap;
@@ -278,7 +284,7 @@ nav.navbar .mobile-nav .nav-user figure figcaption {
   align-content: center;
 }
 
-/* line 209, app/assets/stylesheets/application.css.scss */
+/* line 215, app/assets/stylesheets/application.css.scss */
 nav.navbar .mobile-nav .nav-user figure figcaption img {
   width: .875rem;
   height: .875rem;
@@ -286,7 +292,7 @@ nav.navbar .mobile-nav .nav-user figure figcaption img {
   margin: 0 0 0 .375rem;
 }
 
-/* line 215, app/assets/stylesheets/application.css.scss */
+/* line 221, app/assets/stylesheets/application.css.scss */
 nav.navbar .mobile-nav .nav-user figure figcaption h3 {
   margin: 0 0 .5rem .375rem;
   padding: 0;
@@ -297,7 +303,7 @@ nav.navbar .mobile-nav .nav-user figure figcaption h3 {
   color: #f2f2f2;
 }
 
-/* line 224, app/assets/stylesheets/application.css.scss */
+/* line 230, app/assets/stylesheets/application.css.scss */
 nav.navbar .mobile-nav .nav-user figure figcaption a {
   color: #f2f2f2;
   width: auto;
@@ -308,12 +314,12 @@ nav.navbar .mobile-nav .nav-user figure figcaption a {
   padding: 0;
 }
 
-/* line 233, app/assets/stylesheets/application.css.scss */
+/* line 239, app/assets/stylesheets/application.css.scss */
 nav.navbar .mobile-nav .nav-user figure figcaption a:hover {
   color: rgba(242, 242, 242, 0.7);
 }
 
-/* line 236, app/assets/stylesheets/application.css.scss */
+/* line 242, app/assets/stylesheets/application.css.scss */
 nav.navbar .mobile-nav .nav-user figure figcaption span {
   display: flex;
   flex-flow: row nowrap;
@@ -326,7 +332,7 @@ nav.navbar .mobile-nav .nav-user figure figcaption span {
   width: calc(100% - 20px - 8px);
 }
 
-/* line 247, app/assets/stylesheets/application.css.scss */
+/* line 253, app/assets/stylesheets/application.css.scss */
 nav.navbar .mobile-nav .nav-user-bookmarks {
   display: none;
   flex-flow: column nowrap;
@@ -334,19 +340,19 @@ nav.navbar .mobile-nav .nav-user-bookmarks {
   padding: 0;
 }
 
-/* line 253, app/assets/stylesheets/application.css.scss */
+/* line 259, app/assets/stylesheets/application.css.scss */
 nav.navbar .mobile-nav .nav-user-bookmarks:hover {
   background-color: transparent;
 }
 
 @media screen and (max-width: 820px) {
-  /* line 257, app/assets/stylesheets/application.css.scss */
+  /* line 263, app/assets/stylesheets/application.css.scss */
   nav.navbar .mobile-nav .nav-user-bookmarks {
     display: flex;
   }
 }
 
-/* line 261, app/assets/stylesheets/application.css.scss */
+/* line 267, app/assets/stylesheets/application.css.scss */
 nav.navbar .mobile-nav .nav-user-bookmarks h4 {
   box-sizing: border-box;
   width: 100%;
@@ -359,7 +365,7 @@ nav.navbar .mobile-nav .nav-user-bookmarks h4 {
   color: #f2f2f2;
 }
 
-/* line 272, app/assets/stylesheets/application.css.scss */
+/* line 278, app/assets/stylesheets/application.css.scss */
 nav.navbar .mobile-nav .nav-user-bookmarks a {
   width: 100%;
   flex-basis: auto;
@@ -370,37 +376,37 @@ nav.navbar .mobile-nav .nav-user-bookmarks a {
   line-height: 1.25rem;
 }
 
-/* line 281, app/assets/stylesheets/application.css.scss */
+/* line 287, app/assets/stylesheets/application.css.scss */
 nav.navbar .mobile-nav .nav-user-bookmarks a:hover {
   background-color: #4f4c4c;
   color: #ffffff;
 }
 
-/* line 285, app/assets/stylesheets/application.css.scss */
+/* line 291, app/assets/stylesheets/application.css.scss */
 nav.navbar .mobile-nav a {
   /* margin-right:1.25rem*/
   color: #ffff !important;
 }
 
-/* line 289, app/assets/stylesheets/application.css.scss */
+/* line 295, app/assets/stylesheets/application.css.scss */
 nav.navbar .right {
   align-items: center;
   margin-left: auto;
   display: flex;
 }
 
-/* line 294, app/assets/stylesheets/application.css.scss */
+/* line 300, app/assets/stylesheets/application.css.scss */
 nav.navbar .right li:first-of-type, nav.navbar .right li:nth-of-type(2) {
   margin-right: 1.25rem;
 }
 
-/* line 297, app/assets/stylesheets/application.css.scss */
+/* line 303, app/assets/stylesheets/application.css.scss */
 nav.navbar .right li:first-of-type button, nav.navbar .right li:nth-of-type(2) button {
   border: 0;
   background-color: #ffffff !important;
 }
 
-/* line 301, app/assets/stylesheets/application.css.scss */
+/* line 307, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .navbar-user {
   display: block;
   position: relative;
@@ -410,7 +416,7 @@ nav.navbar .right .navbar-user {
   text-decoration: none;
 }
 
-/* line 309, app/assets/stylesheets/application.css.scss */
+/* line 315, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .navbar-user .navbar-user_image {
   display: inline-block;
   position: relative;
@@ -422,7 +428,7 @@ nav.navbar .right .navbar-user .navbar-user_image {
   background-size: cover;
 }
 
-/* line 319, app/assets/stylesheets/application.css.scss */
+/* line 325, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .navbar-user .navbar-user_name {
   display: inline-block;
   position: relative;
@@ -432,7 +438,7 @@ nav.navbar .right .navbar-user .navbar-user_name {
   font-size: .875rem;
 }
 
-/* line 327, app/assets/stylesheets/application.css.scss */
+/* line 333, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav {
   display: none;
   position: absolute;
@@ -448,7 +454,7 @@ nav.navbar .right .desktopNav {
   line-height: 1.25rem;
 }
 
-/* line 341, app/assets/stylesheets/application.css.scss */
+/* line 347, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav:before {
   position: absolute;
   height: .625rem;
@@ -459,18 +465,18 @@ nav.navbar .right .desktopNav:before {
   content: '';
 }
 
-/* line 350, app/assets/stylesheets/application.css.scss */
+/* line 356, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav.open {
   display: block;
 }
 
-/* line 353, app/assets/stylesheets/application.css.scss */
+/* line 359, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav h3, nav.navbar .right .desktopNav h4, nav.navbar .right .desktopNav h5 {
   margin: 0;
   padding: 0;
 }
 
-/* line 357, app/assets/stylesheets/application.css.scss */
+/* line 363, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav nav {
   box-sizing: border-box;
   display: flex;
@@ -482,7 +488,7 @@ nav.navbar .right .desktopNav nav {
   width: 17.5rem;
 }
 
-/* line 367, app/assets/stylesheets/application.css.scss */
+/* line 373, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav nav h3 {
   font-size: 1.125rem;
   font-weight: 400;
@@ -491,12 +497,12 @@ nav.navbar .right .desktopNav nav h3 {
   flex-basis: auto;
 }
 
-/* line 374, app/assets/stylesheets/application.css.scss */
+/* line 380, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav nav img {
   margin: .5rem .625rem .5rem 0;
 }
 
-/* line 377, app/assets/stylesheets/application.css.scss */
+/* line 383, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav nav a {
   color: #f2f2f2;
   font-size: .75rem;
@@ -504,12 +510,12 @@ nav.navbar .right .desktopNav nav a {
   line-height: 1.25rem;
 }
 
-/* line 383, app/assets/stylesheets/application.css.scss */
+/* line 389, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav nav a:hover {
   color: rgba(242, 242, 242, 0.7);
 }
 
-/* line 386, app/assets/stylesheets/application.css.scss */
+/* line 392, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav ul {
   display: flex;
   flex-flow: column nowrap;
@@ -518,7 +524,7 @@ nav.navbar .right .desktopNav ul {
   width: 17.5rem;
 }
 
-/* line 393, app/assets/stylesheets/application.css.scss */
+/* line 399, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav ul li {
   box-sizing: border-box;
   display: flex;
@@ -529,19 +535,19 @@ nav.navbar .right .desktopNav ul li {
   width: 280px;
 }
 
-/* line 402, app/assets/stylesheets/application.css.scss */
+/* line 408, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav ul li:last-of-type {
   border-bottom: none;
 }
 
-/* line 405, app/assets/stylesheets/application.css.scss */
+/* line 411, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav ul li:last-of-type:hover {
   background-color: #4f4c4c;
   color: rgba(242, 242, 242, 0.7);
   border-radius: 0 0 3px 3px;
 }
 
-/* line 410, app/assets/stylesheets/application.css.scss */
+/* line 416, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav ul li:last-of-type a {
   padding: .625rem 1.25rem;
   font-size: .8125rem;
@@ -550,7 +556,7 @@ nav.navbar .right .desktopNav ul li:last-of-type a {
   border-radius: 0 0 3px 3px;
 }
 
-/* line 417, app/assets/stylesheets/application.css.scss */
+/* line 423, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav ul li h4 {
   width: 100%;
   flex-basis: auto;
@@ -560,7 +566,7 @@ nav.navbar .right .desktopNav ul li h4 {
   line-height: 1.25rem;
 }
 
-/* line 425, app/assets/stylesheets/application.css.scss */
+/* line 431, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav ul li a {
   width: 100%;
   flex-basis: auto;
@@ -571,32 +577,25 @@ nav.navbar .right .desktopNav ul li a {
   line-height: 1.25rem;
 }
 
-/* line 434, app/assets/stylesheets/application.css.scss */
+/* line 440, app/assets/stylesheets/application.css.scss */
 nav.navbar .right .desktopNav ul li a:hover {
   background-color: #4f4c4c;
   color: rgba(242, 242, 242, 0.7);
 }
 
-/* line 438, app/assets/stylesheets/application.css.scss */
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > li > a:visited {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #444;
-}
-
-/* line 444, app/assets/stylesheets/application.css.scss */
+/* line 445, app/assets/stylesheets/application.css.scss */
 .hamburger {
   width: 1rem;
   cursor: pointer;
 }
 
-/* line 448, app/assets/stylesheets/application.css.scss */
+/* line 449, app/assets/stylesheets/application.css.scss */
 .hamburger:focus, .hamburger:active, .hamburger:hover, .hamburger:visited {
   outline: 0;
   background-color: transparent;
 }
 
-/* line 452, app/assets/stylesheets/application.css.scss */
+/* line 453, app/assets/stylesheets/application.css.scss */
 .hamburger span {
   display: block;
   width: 1rem;
@@ -606,27 +605,27 @@ nav.navbar .right .desktopNav ul li a:hover {
   transition: transform 500ms ease,opacity 500ms ease;
 }
 
-/* line 460, app/assets/stylesheets/application.css.scss */
+/* line 461, app/assets/stylesheets/application.css.scss */
 .hamburger span:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 463, app/assets/stylesheets/application.css.scss */
+/* line 464, app/assets/stylesheets/application.css.scss */
 .open .hamburger span:first-of-type {
   transform: translateY(5px) rotate(45deg);
 }
 
-/* line 466, app/assets/stylesheets/application.css.scss */
+/* line 467, app/assets/stylesheets/application.css.scss */
 .open .hamburger span:nth-of-type(2) {
   opacity: 0;
 }
 
-/* line 469, app/assets/stylesheets/application.css.scss */
+/* line 470, app/assets/stylesheets/application.css.scss */
 .open .hamburger span:last-of-type {
   transform: translateY(-5px) rotate(-45deg);
 }
 
-/* line 472, app/assets/stylesheets/application.css.scss */
+/* line 473, app/assets/stylesheets/application.css.scss */
 .login h2 {
   margin: 0;
   padding: 0;
@@ -636,7 +635,7 @@ nav.navbar .right .desktopNav ul li a:hover {
   color: #545454;
 }
 
-/* line 480, app/assets/stylesheets/application.css.scss */
+/* line 481, app/assets/stylesheets/application.css.scss */
 .login p, .login span {
   margin: 0;
   padding: 0;
@@ -646,14 +645,14 @@ nav.navbar .right .desktopNav ul li a:hover {
   color: #545454;
 }
 
-/* line 488, app/assets/stylesheets/application.css.scss */
+/* line 489, app/assets/stylesheets/application.css.scss */
 .login fieldset {
   padding: 0;
   border: 0;
   margin: 0;
 }
 
-/* line 493, app/assets/stylesheets/application.css.scss */
+/* line 494, app/assets/stylesheets/application.css.scss */
 .login .selectInterface {
   position: relative;
   display: flex;
@@ -665,7 +664,7 @@ nav.navbar .right .desktopNav ul li a:hover {
   border-bottom: 1px solid rgba(112, 112, 112, 0.21);
 }
 
-/* line 503, app/assets/stylesheets/application.css.scss */
+/* line 504, app/assets/stylesheets/application.css.scss */
 .login .selectInterface > div {
   display: inline-block;
   font-size: 1.0625rem;
@@ -674,7 +673,7 @@ nav.navbar .right .desktopNav ul li a:hover {
   white-space: nowrap;
 }
 
-/* line 510, app/assets/stylesheets/application.css.scss */
+/* line 511, app/assets/stylesheets/application.css.scss */
 .login .selectInterface > button {
   display: inline-block;
   margin-left: .625rem;
@@ -682,43 +681,43 @@ nav.navbar .right .desktopNav ul li a:hover {
   font-weight: 400;
 }
 
-/* line 516, app/assets/stylesheets/application.css.scss */
+/* line 517, app/assets/stylesheets/application.css.scss */
 .login header {
   position: relative;
   margin: 0 0 1.25rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.18);
 }
 
-/* line 521, app/assets/stylesheets/application.css.scss */
+/* line 522, app/assets/stylesheets/application.css.scss */
 .login header > h2 {
   margin-bottom: .5rem;
 }
 
-/* line 524, app/assets/stylesheets/application.css.scss */
+/* line 525, app/assets/stylesheets/application.css.scss */
 .login header > p {
   padding-bottom: .9375rem;
 }
 
-/* line 527, app/assets/stylesheets/application.css.scss */
+/* line 528, app/assets/stylesheets/application.css.scss */
 .login header .row {
   padding: 0 0 .9375rem 0;
 }
 
 @media screen and (max-width: 550px) {
-  /* line 531, app/assets/stylesheets/application.css.scss */
+  /* line 532, app/assets/stylesheets/application.css.scss */
   .login header .row > .rounded-button {
     margin: 0 auto;
   }
 }
 
-/* line 535, app/assets/stylesheets/application.css.scss */
+/* line 536, app/assets/stylesheets/application.css.scss */
 .login header .row > .rounded-button + span {
   display: inline-block;
   margin: 0 0 0 .9375rem;
   line-height: 2.5rem;
 }
 
-/* line 540, app/assets/stylesheets/application.css.scss */
+/* line 541, app/assets/stylesheets/application.css.scss */
 .login .signup .error .error {
   display: block;
   margin: -.3125rem 0 .3125rem 0;
@@ -728,17 +727,17 @@ nav.navbar .right .desktopNav ul li a:hover {
   color: #e71616;
 }
 
-/* line 548, app/assets/stylesheets/application.css.scss */
+/* line 549, app/assets/stylesheets/application.css.scss */
 .login .section {
   display: none;
 }
 
-/* line 551, app/assets/stylesheets/application.css.scss */
+/* line 552, app/assets/stylesheets/application.css.scss */
 .login .section.visible {
   display: block;
 }
 
-/* line 554, app/assets/stylesheets/application.css.scss */
+/* line 555, app/assets/stylesheets/application.css.scss */
 .login .note {
   display: inline-block;
   margin: 0 0 0 .9375rem;
@@ -749,26 +748,26 @@ nav.navbar .right .desktopNav ul li a:hover {
   vertical-align: middle;
 }
 
-/* line 563, app/assets/stylesheets/application.css.scss */
+/* line 564, app/assets/stylesheets/application.css.scss */
 .login .signup .note {
   height: 3.125rem;
   width: 50%;
   color: #545454;
 }
 
-/* line 568, app/assets/stylesheets/application.css.scss */
+/* line 569, app/assets/stylesheets/application.css.scss */
 .login .signup .note .darkGreen {
   color: #285921;
 }
 
 @media screen and (max-width: 550px) {
-  /* line 572, app/assets/stylesheets/application.css.scss */
+  /* line 573, app/assets/stylesheets/application.css.scss */
   .login .signup .note {
     width: 100%;
   }
 }
 
-/* line 576, app/assets/stylesheets/application.css.scss */
+/* line 577, app/assets/stylesheets/application.css.scss */
 .login .email .note {
   height: 3.125rem;
   width: 78%;
@@ -776,13 +775,13 @@ nav.navbar .right .desktopNav ul li a:hover {
 }
 
 @media screen and (max-width: 550px) {
-  /* line 582, app/assets/stylesheets/application.css.scss */
+  /* line 583, app/assets/stylesheets/application.css.scss */
   .login .email .note {
     width: 100%;
   }
 }
 
-/* line 586, app/assets/stylesheets/application.css.scss */
+/* line 587, app/assets/stylesheets/application.css.scss */
 .login .social-list {
   list-style-type: none;
   display: flex;
@@ -790,20 +789,20 @@ nav.navbar .right .desktopNav ul li a:hover {
   margin: 0 0 10px 0;
 }
 
-/* line 592, app/assets/stylesheets/application.css.scss */
+/* line 593, app/assets/stylesheets/application.css.scss */
 .login .social-list li {
   margin: 10px auto;
 }
 
 @media screen and (max-width: 550px) {
-  /* line 596, app/assets/stylesheets/application.css.scss */
+  /* line 597, app/assets/stylesheets/application.css.scss */
   .login form .full .rounded-button {
     width: 100%;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 602, app/assets/stylesheets/application.css.scss */
+  /* line 603, app/assets/stylesheets/application.css.scss */
   .navbar-text {
     float: right !important;
     margin-top: 0px !important;
@@ -812,7 +811,7 @@ nav.navbar .right .desktopNav ul li a:hover {
   }
 }
 
-/* line 610, app/assets/stylesheets/application.css.scss */
+/* line 611, app/assets/stylesheets/application.css.scss */
 .rounded-button.green {
   background-color: #3a8632;
   border: 1px solid #3a8632;
@@ -820,7 +819,7 @@ nav.navbar .right .desktopNav ul li a:hover {
   border-radius: 3px;
 }
 
-/* line 616, app/assets/stylesheets/application.css.scss */
+/* line 617, app/assets/stylesheets/application.css.scss */
 .rounded-button.blue {
   background-color: #004c93;
   border: 1px solid #004c93;
@@ -828,7 +827,7 @@ nav.navbar .right .desktopNav ul li a:hover {
   border-radius: 3px;
 }
 
-/* line 622, app/assets/stylesheets/application.css.scss */
+/* line 623, app/assets/stylesheets/application.css.scss */
 .rounded-button.small {
   padding: .70rem .625rem !important;
   font-weight: 400 !important;
@@ -836,7 +835,7 @@ nav.navbar .right .desktopNav ul li a:hover {
   max-width: 75px;
 }
 
-/* line 628, app/assets/stylesheets/application.css.scss */
+/* line 629, app/assets/stylesheets/application.css.scss */
 .rounded-button.medium {
   padding: .70rem .625rem !important;
   font-weight: 400 !important;
@@ -844,12 +843,12 @@ nav.navbar .right .desktopNav ul li a:hover {
   max-width: 150px;
 }
 
-/* line 635, app/assets/stylesheets/application.css.scss */
+/* line 636, app/assets/stylesheets/application.css.scss */
 .rounded-button.green.halo {
   transition: all 200ms ease;
 }
 
-/* line 639, app/assets/stylesheets/application.css.scss */
+/* line 640, app/assets/stylesheets/application.css.scss */
 .rounded-button.large {
   padding: .9375rem 1.25rem;
   font-size: 1rem;
@@ -857,7 +856,7 @@ nav.navbar .right .desktopNav ul li a:hover {
   line-height: 1.25rem;
 }
 
-/* line 645, app/assets/stylesheets/application.css.scss */
+/* line 646, app/assets/stylesheets/application.css.scss */
 .rounded-button {
   border-radius: 3px;
   cursor: pointer;
@@ -865,12 +864,12 @@ nav.navbar .right .desktopNav ul li a:hover {
   text-decoration: none;
 }
 
-/* line 651, app/assets/stylesheets/application.css.scss */
+/* line 652, app/assets/stylesheets/application.css.scss */
 .rounded-button.white.blue-halo {
   transition: all 200ms ease;
 }
 
-/* line 654, app/assets/stylesheets/application.css.scss */
+/* line 655, app/assets/stylesheets/application.css.scss */
 .rounded-button.white.blue-halo:hover {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.25);
@@ -878,49 +877,49 @@ nav.navbar .right .desktopNav ul li a:hover {
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-/* line 660, app/assets/stylesheets/application.css.scss */
+/* line 661, app/assets/stylesheets/application.css.scss */
 .rounded-button.white {
   background-color: #fff;
   border: 1px solid #fff;
   color: #004c93;
 }
 
-/* line 666, app/assets/stylesheets/application.css.scss */
+/* line 667, app/assets/stylesheets/application.css.scss */
 select {
   /*width: 220px;*/
   border: 1px solid #ccc;
   background-color: #fff;
 }
 
-/* line 672, app/assets/stylesheets/application.css.scss */
+/* line 673, app/assets/stylesheets/application.css.scss */
 select, input[type="file"] {
   height: 30px;
   line-height: 30px;
 }
 
-/* line 677, app/assets/stylesheets/application.css.scss */
+/* line 678, app/assets/stylesheets/application.css.scss */
 .reset_link a {
   color: #034d8f !important;
   text-decoration: none !important;
 }
 
-/* line 682, app/assets/stylesheets/application.css.scss */
+/* line 683, app/assets/stylesheets/application.css.scss */
 a {
   color: #034d8f !important;
   text-decoration: none !important;
 }
 
-/* line 687, app/assets/stylesheets/application.css.scss */
+/* line 688, app/assets/stylesheets/application.css.scss */
 .apply_now {
   color: #fff !important;
 }
 
-/* line 690, app/assets/stylesheets/application.css.scss */
+/* line 691, app/assets/stylesheets/application.css.scss */
 .apply_now a:visited {
   color: #fff !important;
 }
 
-/* line 693, app/assets/stylesheets/application.css.scss */
+/* line 694, app/assets/stylesheets/application.css.scss */
 .jumbotron {
   color: white;
   background-image: url("https://sunyonline.edu//media/suny-online-/images/hero.jpg");
@@ -932,7 +931,7 @@ a {
   padding: 9.375rem 0 !important;
 }
 
-/* line 703, app/assets/stylesheets/application.css.scss */
+/* line 704, app/assets/stylesheets/application.css.scss */
 .jumbotron h1 {
   display: inline-block;
   margin-bottom: 10px;
@@ -942,7 +941,7 @@ a {
   line-height: 1.5rem !important;
 }
 
-/* line 711, app/assets/stylesheets/application.css.scss */
+/* line 712, app/assets/stylesheets/application.css.scss */
 .jumbotron h2 {
   display: inline-block !important;
   width: 39.375rem !important;
@@ -955,7 +954,7 @@ a {
   color: #ffffff !important;
 }
 
-/* line 722, app/assets/stylesheets/application.css.scss */
+/* line 723, app/assets/stylesheets/application.css.scss */
 .jumbotron form {
   display: flex;
   flex-direction: row;
@@ -964,13 +963,13 @@ a {
   flex-basis: auto;
 }
 
-/* line 730, app/assets/stylesheets/application.css.scss */
+/* line 731, app/assets/stylesheets/application.css.scss */
 .jumbotron select {
   margin: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* line 734, app/assets/stylesheets/application.css.scss */
+/* line 735, app/assets/stylesheets/application.css.scss */
 .jumbotron select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -998,13 +997,13 @@ a {
   cursor: pointer;
 }
 
-/* line 760, app/assets/stylesheets/application.css.scss */
+/* line 761, app/assets/stylesheets/application.css.scss */
 .jumbotron input {
   margin: 0 0 5px 0;
   border-radius: 0;
 }
 
-/* line 764, app/assets/stylesheets/application.css.scss */
+/* line 765, app/assets/stylesheets/application.css.scss */
 .jumbotron input {
   height: 3.125rem;
   width: 50%;
@@ -1021,7 +1020,7 @@ a {
   background-color: #fff;
 }
 
-/* line 780, app/assets/stylesheets/application.css.scss */
+/* line 781, app/assets/stylesheets/application.css.scss */
 .jumbotron button {
   height: 3.125rem;
   padding: .5rem .75rem;
@@ -1036,7 +1035,7 @@ a {
   cursor: pointer;
 }
 
-/* line 793, app/assets/stylesheets/application.css.scss */
+/* line 794, app/assets/stylesheets/application.css.scss */
 .row-search {
   display: flex;
   flex-flow: row wrap;
@@ -1048,13 +1047,13 @@ a {
   justify-content: center;
 }
 
-/* line 803, app/assets/stylesheets/application.css.scss */
+/* line 804, app/assets/stylesheets/application.css.scss */
 .row-filters {
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
 }
 
-/* line 808, app/assets/stylesheets/application.css.scss */
+/* line 809, app/assets/stylesheets/application.css.scss */
 .well {
   background-color: #ffffff !important;
   border: 0px !important;
@@ -1063,25 +1062,25 @@ a {
   box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.05) !important;
 }
 
-/* line 817, app/assets/stylesheets/application.css.scss */
+/* line 818, app/assets/stylesheets/application.css.scss */
 .service-div {
   float: left;
   width: 15%;
 }
 
-/* line 821, app/assets/stylesheets/application.css.scss */
+/* line 822, app/assets/stylesheets/application.css.scss */
 .icon-div {
   float: left;
   width: 85%;
   padding-left: 5px;
 }
 
-/* line 827, app/assets/stylesheets/application.css.scss */
+/* line 828, app/assets/stylesheets/application.css.scss */
 .landing-text-1 {
   padding-bottom: 25px;
 }
 
-/* line 830, app/assets/stylesheets/application.css.scss */
+/* line 831, app/assets/stylesheets/application.css.scss */
 .iframe {
   align: center;
   width: 960px;
@@ -1094,24 +1093,24 @@ a {
   margin: auto;
 }
 
-/* line 842, app/assets/stylesheets/application.css.scss */
+/* line 843, app/assets/stylesheets/application.css.scss */
 #filterrific_with_school_id {
   width: 250px;
 }
 
-/* line 846, app/assets/stylesheets/application.css.scss */
+/* line 847, app/assets/stylesheets/application.css.scss */
 .main-logo {
   float: left;
   padding: .625rem 0;
 }
 
-/* line 851, app/assets/stylesheets/application.css.scss */
+/* line 852, app/assets/stylesheets/application.css.scss */
 .authform {
   width: 25%;
   margin: auto;
 }
 
-/* line 856, app/assets/stylesheets/application.css.scss */
+/* line 857, app/assets/stylesheets/application.css.scss */
 body > footer {
   display: flex;
   flex: 1;
@@ -1125,12 +1124,12 @@ body > footer {
   color: #c5c5c5;
 }
 
-/* line 868, app/assets/stylesheets/application.css.scss */
+/* line 869, app/assets/stylesheets/application.css.scss */
 body > footer .navigation {
   display: flex;
 }
 
-/* line 871, app/assets/stylesheets/application.css.scss */
+/* line 872, app/assets/stylesheets/application.css.scss */
 body > footer .navigation ul {
   display: flex;
   flex-flow: column wrap;
@@ -1143,14 +1142,14 @@ body > footer .navigation ul {
   order: 1;
 }
 
-/* line 882, app/assets/stylesheets/application.css.scss */
+/* line 883, app/assets/stylesheets/application.css.scss */
 body > footer .navigation ul li {
   padding: 0;
   margin: 0 0 .3125rem 0;
   line-height: 1.25rem;
 }
 
-/* line 887, app/assets/stylesheets/application.css.scss */
+/* line 888, app/assets/stylesheets/application.css.scss */
 body > footer .navigation ul li a {
   font-size: .875rem;
   font-weight: 300;
@@ -1160,7 +1159,7 @@ body > footer .navigation ul li a {
   trasition: color 200ms ease;
 }
 
-/* line 895, app/assets/stylesheets/application.css.scss */
+/* line 896, app/assets/stylesheets/application.css.scss */
 body > footer .navigation figure {
   display: flex;
   position: relative;
@@ -1171,25 +1170,25 @@ body > footer .navigation figure {
   order: 3;
 }
 
-/* line 904, app/assets/stylesheets/application.css.scss */
+/* line 905, app/assets/stylesheets/application.css.scss */
 figure {
   margin: 0;
 }
 
-/* line 907, app/assets/stylesheets/application.css.scss */
+/* line 908, app/assets/stylesheets/application.css.scss */
 body > footer .navigation figure img {
   width: 9.5625rem;
   height: 4.6875rem;
   margin-right: .9375rem;
 }
 
-/* line 912, app/assets/stylesheets/application.css.scss */
+/* line 913, app/assets/stylesheets/application.css.scss */
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 916, app/assets/stylesheets/application.css.scss */
+/* line 917, app/assets/stylesheets/application.css.scss */
 body > footer .navigation figure figcaption {
   width: 100%;
   text-align: left;
@@ -1199,12 +1198,12 @@ body > footer .navigation figure figcaption {
   line-height: 1.25rem;
 }
 
-/* line 924, app/assets/stylesheets/application.css.scss */
+/* line 925, app/assets/stylesheets/application.css.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
 }
 
-/* line 927, app/assets/stylesheets/application.css.scss */
+/* line 928, app/assets/stylesheets/application.css.scss */
 body > footer aside, body > footer .social-media {
   display: flex;
   flex-flow: column nowrap;
@@ -1214,7 +1213,7 @@ body > footer aside, body > footer .social-media {
   order: 2;
 }
 
-/* line 935, app/assets/stylesheets/application.css.scss */
+/* line 936, app/assets/stylesheets/application.css.scss */
 body > footer aside .twitter-feed, body > footer .social-media .twitter-feed {
   display: flex;
   align-self: flex-start;
@@ -1223,7 +1222,7 @@ body > footer aside .twitter-feed, body > footer .social-media .twitter-feed {
   width: 18.75rem;
 }
 
-/* line 942, app/assets/stylesheets/application.css.scss */
+/* line 943, app/assets/stylesheets/application.css.scss */
 body > footer aside ul, body > footer .social-media ul {
   display: flex;
   list-style-type: none;
@@ -1234,7 +1233,7 @@ body > footer aside ul, body > footer .social-media ul {
   margin: .9375rem 0 0 0;
 }
 
-/* line 951, app/assets/stylesheets/application.css.scss */
+/* line 952, app/assets/stylesheets/application.css.scss */
 body > footer .navigation ul {
   display: flex;
   flex-flow: column wrap;
@@ -1247,7 +1246,7 @@ body > footer .navigation ul {
   order: 1;
 }
 
-/* line 962, app/assets/stylesheets/application.css.scss */
+/* line 963, app/assets/stylesheets/application.css.scss */
 body > footer aside ul li, body > footer .social-media ul li {
   display: flex;
   height: 1.625rem;
@@ -1256,7 +1255,7 @@ body > footer aside ul li, body > footer .social-media ul li {
   padding: 0;
 }
 
-/* line 969, app/assets/stylesheets/application.css.scss */
+/* line 970, app/assets/stylesheets/application.css.scss */
 body > footer aside ul li a, body > footer .social-media ul li a {
   display: block;
   height: 1.625rem;
@@ -1269,7 +1268,7 @@ body > footer aside ul li a, body > footer .social-media ul li a {
   transition: background-color 200ms ease;
 }
 
-/* line 980, app/assets/stylesheets/application.css.scss */
+/* line 981, app/assets/stylesheets/application.css.scss */
 body > footer aside .twitter-feed, body > footer .social-media .twitter-feed {
   display: flex;
   align-self: flex-start;
@@ -1278,31 +1277,31 @@ body > footer aside .twitter-feed, body > footer .social-media .twitter-feed {
   width: 18.75rem;
 }
 
-/* line 987, app/assets/stylesheets/application.css.scss */
+/* line 988, app/assets/stylesheets/application.css.scss */
 body > footer aside ul li.youtube a, body > footer .social-media ul li.youtube a {
   background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/youtube/logo.svg);
   text-indent: -5000px;
 }
 
-/* line 991, app/assets/stylesheets/application.css.scss */
+/* line 992, app/assets/stylesheets/application.css.scss */
 body > footer aside ul li.facebook a, body > footer .social-media ul li.facebook a {
   background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/facebook/letter-logo.svg);
   text-indent: -5000px;
 }
 
-/* line 995, app/assets/stylesheets/application.css.scss */
+/* line 996, app/assets/stylesheets/application.css.scss */
 body > footer aside ul li.linkedin a, body > footer .social-media ul li.linkedin a {
   background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/linkedin/letters.svg);
   text-indent: -5000px;
 }
 
-/* line 999, app/assets/stylesheets/application.css.scss */
+/* line 1000, app/assets/stylesheets/application.css.scss */
 body > footer aside ul li.twitter a, body > footer .social-media ul li.twitter a {
   background-image: url(//d2brwuimzb4ax4.cloudfront.net/global/shared/icons/twitter/shape.svg);
   text-indent: -5000px;
 }
 
-/* line 1003, app/assets/stylesheets/application.css.scss */
+/* line 1004, app/assets/stylesheets/application.css.scss */
 .nav-row {
   display: flex;
   flex-flow: row wrap;
@@ -1313,12 +1312,12 @@ body > footer aside ul li.twitter a, body > footer .social-media ul li.twitter a
   box-sizing: border-box;
 }
 
-/* line 1012, app/assets/stylesheets/application.css.scss */
+/* line 1013, app/assets/stylesheets/application.css.scss */
 .search-filter {
   background-color: #f1f1f1;
 }
 
-/* line 1015, app/assets/stylesheets/application.css.scss */
+/* line 1016, app/assets/stylesheets/application.css.scss */
 .search-row {
   display: flex;
   flex-flow: row wrap;
@@ -1329,23 +1328,23 @@ body > footer aside ul li.twitter a, body > footer .social-media ul li.twitter a
   box-sizing: border-box;
 }
 
-/* line 1024, app/assets/stylesheets/application.css.scss */
+/* line 1025, app/assets/stylesheets/application.css.scss */
 .results {
   margin-top: 20px;
 }
 
-/* line 1027, app/assets/stylesheets/application.css.scss */
+/* line 1028, app/assets/stylesheets/application.css.scss */
 .resets {
   margin-top: 35px;
   font-size: 16px !important;
 }
 
-/* line 1031, app/assets/stylesheets/application.css.scss */
+/* line 1032, app/assets/stylesheets/application.css.scss */
 .search-filter form {
   flex-direction: column;
 }
 
-/* line 1034, app/assets/stylesheets/application.css.scss */
+/* line 1035, app/assets/stylesheets/application.css.scss */
 .search-filter form {
   /*display: flex;*/
   flex-direction: row;
@@ -1355,12 +1354,12 @@ body > footer aside ul li.twitter a, body > footer .social-media ul li.twitter a
   padding: 1.25rem 0;
 }
 
-/* line 1042, app/assets/stylesheets/application.css.scss */
+/* line 1043, app/assets/stylesheets/application.css.scss */
 form {
   margin: 0;
 }
 
-/* line 1046, app/assets/stylesheets/application.css.scss */
+/* line 1047, app/assets/stylesheets/application.css.scss */
 .search-filter form .form-row1 {
   margin-left: 0;
   margin-right: 0;
@@ -1368,7 +1367,7 @@ form {
   flex-flow: wrap;
 }
 
-/* line 1052, app/assets/stylesheets/application.css.scss */
+/* line 1053, app/assets/stylesheets/application.css.scss */
 .search-filter input {
   height: 3.125rem;
   width: 40%;
@@ -1379,7 +1378,7 @@ form {
   margin-right: .9375rem;
 }
 
-/* line 1061, app/assets/stylesheets/application.css.scss */
+/* line 1062, app/assets/stylesheets/application.css.scss */
 input {
   display: block;
   height: 2.5rem;
@@ -1395,7 +1394,7 @@ input {
   background-color: #fff;
 }
 
-/* line 1075, app/assets/stylesheets/application.css.scss */
+/* line 1076, app/assets/stylesheets/application.css.scss */
 .search-filter button {
   height: 3.125rem;
   width: 5.625rem;
@@ -1411,7 +1410,7 @@ input {
   cursor: pointer;
 }
 
-/* line 1089, app/assets/stylesheets/application.css.scss */
+/* line 1090, app/assets/stylesheets/application.css.scss */
 .search-filter select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1429,7 +1428,7 @@ input {
   cursor: pointer;
 }
 
-/* line 1105, app/assets/stylesheets/application.css.scss */
+/* line 1106, app/assets/stylesheets/application.css.scss */
 select {
   display: block;
   position: relative;
@@ -1453,18 +1452,18 @@ select {
   cursor: pointer;
 }
 
-/* line 1128, app/assets/stylesheets/application.css.scss */
+/* line 1129, app/assets/stylesheets/application.css.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
 }
 
-/* line 1131, app/assets/stylesheets/application.css.scss */
+/* line 1132, app/assets/stylesheets/application.css.scss */
 main {
   flex: 1 0 auto;
   width: 100%;
 }
 
-/* line 1135, app/assets/stylesheets/application.css.scss */
+/* line 1136, app/assets/stylesheets/application.css.scss */
 .row {
   display: flex;
   flex-flow: row wrap;
@@ -1477,14 +1476,14 @@ main {
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 1146, app/assets/stylesheets/application.css.scss */
+  /* line 1147, app/assets/stylesheets/application.css.scss */
   .row {
     padding-left: 1.25rem !important;
     padding-right: 1.25rem !important;
   }
 }
 
-/* line 1151, app/assets/stylesheets/application.css.scss */
+/* line 1152, app/assets/stylesheets/application.css.scss */
 h2, .h2 {
   margin: 0 !important;
   padding: 0 !important;
@@ -1494,7 +1493,7 @@ h2, .h2 {
   color: #545454 !important;
 }
 
-/* line 1159, app/assets/stylesheets/application.css.scss */
+/* line 1160, app/assets/stylesheets/application.css.scss */
 h3, .h3 {
   margin: 0 !important;
   padding: 0 !important;
@@ -1504,7 +1503,7 @@ h3, .h3 {
   color: #545454 !important;
 }
 
-/* line 1168, app/assets/stylesheets/application.css.scss */
+/* line 1169, app/assets/stylesheets/application.css.scss */
 .result-header {
   margin-top: 3px !important;
   padding: 1.25rem !important;
@@ -1512,7 +1511,7 @@ h3, .h3 {
   border-bottom: 1px solid #f5f5f5 !important;
 }
 
-/* line 1174, app/assets/stylesheets/application.css.scss */
+/* line 1175, app/assets/stylesheets/application.css.scss */
 .result {
   margin-top: 3px !important;
   padding: 1.25rem !important;
@@ -1520,31 +1519,31 @@ h3, .h3 {
   border-bottom: 1px solid #f5f5f5 !important;
 }
 
-/* line 1180, app/assets/stylesheets/application.css.scss */
+/* line 1181, app/assets/stylesheets/application.css.scss */
 .result:hover {
   background-color: #f5f5f5 !important;
   transform: translate(0, -3px);
 }
 
-/* line 1185, app/assets/stylesheets/application.css.scss */
+/* line 1186, app/assets/stylesheets/application.css.scss */
 .result h2 a {
   color: #545454 !important;
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1191, app/assets/stylesheets/application.css.scss */
+  /* line 1192, app/assets/stylesheets/application.css.scss */
   .main {
     padding-right: 5px !important;
     padding-left: 5px !important;
   }
-  /* line 1195, app/assets/stylesheets/application.css.scss */
+  /* line 1196, app/assets/stylesheets/application.css.scss */
   .results {
     padding-right: 5px !important;
     padding-left: 5px !important;
   }
 }
 
-/* line 1201, app/assets/stylesheets/application.css.scss */
+/* line 1202, app/assets/stylesheets/application.css.scss */
 .pull-right {
   float: right !important;
   display: flex !important;
@@ -1554,43 +1553,43 @@ h3, .h3 {
   display: flex !important;
 }
 
-/* line 1210, app/assets/stylesheets/application.css.scss */
+/* line 1211, app/assets/stylesheets/application.css.scss */
 .dropdown-menu {
   z-index: 10000 !important;
 }
 
 @media screen and (min-width: 820px) {
-  /* line 1214, app/assets/stylesheets/application.css.scss */
+  /* line 1215, app/assets/stylesheets/application.css.scss */
   .mobile-menu {
     display: none !important;
   }
-  /* line 1217, app/assets/stylesheets/application.css.scss */
+  /* line 1218, app/assets/stylesheets/application.css.scss */
   dropdown a:visted {
     color: #fff !important;
   }
 }
 
 @media screen and (max-width: 600px) {
-  /* line 1222, app/assets/stylesheets/application.css.scss */
+  /* line 1223, app/assets/stylesheets/application.css.scss */
   .dropdown a {
     color: #fff !important;
   }
-  /* line 1225, app/assets/stylesheets/application.css.scss */
+  /* line 1226, app/assets/stylesheets/application.css.scss */
   .nav > li > a:hover, .nav > li > a:focus {
     background-color: #444 !important;
   }
-  /* line 1228, app/assets/stylesheets/application.css.scss */
+  /* line 1229, app/assets/stylesheets/application.css.scss */
   .caret {
     color: #fff !important;
   }
 }
 
-/* line 1233, app/assets/stylesheets/application.css.scss */
+/* line 1234, app/assets/stylesheets/application.css.scss */
 .dropdown a {
   color: #fff !important;
 }
 
-/* line 1236, app/assets/stylesheets/application.css.scss */
+/* line 1237, app/assets/stylesheets/application.css.scss */
 .text-center {
   text-align: center;
   width: 100% !important;

@@ -173,6 +173,12 @@ nav.navbar .mobile-nav{
     nav.navbar .mobile-nav li:hover,nav.navbar .mobile-nav li:active{
         background-color:#4f4c4c
     }
+	.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > li > a:visited
+	{
+	    color: #ffffff;
+	    text-decoration: none;
+		background-color: #444; 
+	}
 }
 
 nav.navbar .mobile-nav .nav-user:hover{
@@ -434,12 +440,7 @@ nav.navbar .right .desktopNav ul li a:hover{
     background-color:#4f4c4c;
     color:rgba(242,242,242,.7)
 }
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > li > a:visited
-{
-    color: #ffffff;
-    text-decoration: none;
-	background-color: #444; 
-}
+
 .hamburger{
     width:1rem;
     cursor:pointer
