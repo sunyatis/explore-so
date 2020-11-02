@@ -1,13 +1,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
   <head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <head>
+		  <meta charset="UTF-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		  <meta property="og:title" content="Online Degrees and Courses from the State University of New York">
+		  <meta property="og:description" content="With over 470 online degrees at Open SUNY to choose from, you can advance your career on your own schedule right from home.">
+		  <meta name="description" content="With over 470 online degrees at Open SUNY to choose from, you can advance your career on your own schedule right from home.">
+		  <meta name="keywords" content="SUNY Online, Online SUNY, Open SUNY, OpenSUNY, SLN, SUNY Learning Network, SUNY Online Learning, State University of New York, online learning, online course, online classes, online degree, online degrees, Online Degree Programs, Open SUNY+, OpenSUNY+, Online College Courses, Online Bachelor Degrees, Online Master Degrees, Online Associate Degrees, online course catalog">
+		  <meta name="DC.type" content="http://purl.org/dc/dcmitype/Service">
+		  <meta name="DC.description" content="Online Degrees, Certificates and Endorsements from the State University of New York">
+		  <title><%= content_for?(:title) ? yield(:title) : "Explore Online Degrees and Courses" %> | SUNY Online</title>
+	  
+	  
 		<link rel="shortcut icon" href="/assets/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Open SUNY Navigator" %> | Open SUNY</title>
-		<meta name="keywords" content="SUNY Learning Network, Online Courses, Online Degree, Online Certificate, SUNY Online, Online Masters, Online Bachelors, Online Associate, Online Certicate, Online Course Catalog, Online Course info, Online Degree Info, online degree registration, online course registration, online education" />
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Devise" %>">
+
+   
 		<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" type="text/css" rel="stylesheet">
 	  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -20,13 +30,13 @@
 		  <![endif]-->
 
 		   <!--Start of Zopim Live Chat Script-->
-		  <script type="text/javascript">
+		  <!script type="text/javascript">
 		  window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
 		  d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
 		  _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
 		  $.src='//v2.zopim.com/?MyyHIkMnvFw4osDLwQHwHWndKvGDq7uD';z.t=+new Date;$.
 		  type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-		  </script>
+		  <!--/script-->
 		  <!--End of Zopim Live Chat Script-->
 
 		  <!-- Google Tag Manager -->
@@ -38,6 +48,16 @@
 			'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 			})(window,document,'script','dataLayer','GTM-WM98TB');</script>
 			<!-- End Google Tag Manager -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-44103522-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-44103522-2');
+</script>
+
 
   </head>
   <body>
