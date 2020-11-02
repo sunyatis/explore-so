@@ -159,10 +159,10 @@ nav.navbar .mobile-nav{
         box-sizing:border-box;
         width:100%;
         line-height:1.25rem;
-        color:#f2f2f2
+        color:#ffffff !important;
     }
     nav.navbar .mobile-nav a:hover,nav.navbar .mobile-nav a.active{
-        color:#f2f2f2
+        color:#ffffff
     }
     nav.navbar .mobile-nav li{
         box-sizing:border-box;
@@ -279,11 +279,11 @@ nav.navbar .mobile-nav .nav-user-bookmarks a{
 }
 nav.navbar .mobile-nav .nav-user-bookmarks a:hover{
     background-color:#4f4c4c;
-    color:rgba(242,242,242,.7)
+    color:
 }
 nav.navbar .mobile-nav a{
    /* margin-right:1.25rem*/
-   color: #444 !important;
+   color: #ffff !important;
 }
 nav.navbar .right{
     align-items:center;
@@ -433,6 +433,12 @@ nav.navbar .right .desktopNav ul li a{
 nav.navbar .right .desktopNav ul li a:hover{
     background-color:#4f4c4c;
     color:rgba(242,242,242,.7)
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > li > a:visited
+{
+    color: #ffffff;
+    text-decoration: none;
+	background-color: #444; 
 }
 .hamburger{
     width:1rem;
