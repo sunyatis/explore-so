@@ -38,7 +38,8 @@ class Course < ActiveRecord::Base
      # replace "*" with "%" for wildcard searches,
      # append '%', remove duplicate '%'s
      terms = terms.map { |e|
-       (e.gsub('*', '%') + '%').gsub(/%+/, '%')
+       #(e.gsub('*', '%') + '%').gsub(/%+/, '%')
+       ('%' + e.gsub('*', '%') + '%').gsub(/%+/, '%')
      }
      # configure number of OR conditions for provision
      # of interpolation arguments. Adjust this if you
