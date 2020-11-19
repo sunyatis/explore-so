@@ -7414,7 +7414,7 @@ html .ui-datepicker table.ui-datepicker-calendar tbody {
 
 /* line 691, ../../../../.rvm/gems/ruby-2.6.1/bundler/gems/active_admin_flat_skin-89692041059b/vendor/assets/stylesheets/active_admin_skin.scss */
 html .ui-datepicker table.ui-datepicker-calendar tbody a {
-  color: #aeb3b5;
+  color: #ffffff;
 }
 
 /* line 694, ../../../../.rvm/gems/ruby-2.6.1/bundler/gems/active_admin_flat_skin-89692041059b/vendor/assets/stylesheets/active_admin_skin.scss */
@@ -7481,7 +7481,7 @@ body #wrapper {
 #header.header #tabs.header-item.tabs li a {
   height: 35px;
   line-height: 35px;
-  color: #aeb3b5 !important;
+  color: #ffffff !important;
   font-size: 14px;
   transition: all .3s;
 }
@@ -11717,43 +11717,53 @@ body #wrapper {
   clip: auto;
 }
 
-/* line 34, app/assets/stylesheets/active_admin.css.scss */
+/* line 35, app/assets/stylesheets/active_admin.css.scss */
 .pagination > li {
   display: inline  !important;
 }
 
-/* line 37, app/assets/stylesheets/active_admin.css.scss */
+/* line 38, app/assets/stylesheets/active_admin.css.scss */
 .pagination {
   display: inline-flex  !important;
 }
 
-/* line 41, app/assets/stylesheets/active_admin.css.scss */
+/* line 42, app/assets/stylesheets/active_admin.css.scss */
 a {
   color: #ffffff;
 }
 
-/* line 45, app/assets/stylesheets/active_admin.css.scss */
+/* line 46, app/assets/stylesheets/active_admin.css.scss */
 form fieldset > ol > li > textarea {
   height: 12px;
 }
 
-/* line 48, app/assets/stylesheets/active_admin.css.scss */
+/* line 49, app/assets/stylesheets/active_admin.css.scss */
 form fieldset > ol > li > select {
   height: 25px;
 }
 
-/* line 52, app/assets/stylesheets/active_admin.css.scss */
+/* line 53, app/assets/stylesheets/active_admin.css.scss */
 .panel h3, .sidebar_section.panel h3 {
   color: #ffffff !important;
 }
 
-/* line 57, app/assets/stylesheets/active_admin.css.scss */
+/* line 58, app/assets/stylesheets/active_admin.css.scss */
 .col-actions {
   width: 15%;
 }
 
-/* line 61, app/assets/stylesheets/active_admin.css.scss */
+/* line 62, app/assets/stylesheets/active_admin.css.scss */
 #filters_sidebar_section {
   max-height: 80%;
   overflow-y: scroll;
+}
+
+/* line 67, app/assets/stylesheets/active_admin.css.scss */
+#header.header #tabs.header-item.tabs li.has_nested ul.slided_down li:hover a {
+  color: #ffffff !important;
+}
+
+/* line 71, app/assets/stylesheets/active_admin.css.scss */
+#header.header #tabs.header-item.tabs li.current.has_nested .slided_down .current a {
+  color: #009EE0 !important;
 }
