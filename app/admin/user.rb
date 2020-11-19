@@ -38,7 +38,7 @@ menu parent: 'Manage Navigator', label: 'Users'
              f.input :password
              f.input :password_confirmation
              #f.input :role, as: :radio, collection: {None: "none", Administrator: "admin", ADI: "ADI"}
-             f.input :school_id, as: :select, :collection => School.pluck(:name, :id)
+             f.input :school_id, as: :select, :collection => School.pluck(:name, :id).sort
              f.input :role, as: :radio, collection: User::ROLES
 
              

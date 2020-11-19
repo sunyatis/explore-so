@@ -14,11 +14,12 @@ $bodyColor: rgba(236, 240, 241, 0.48);
 $skinBlack: rgb(55, 71, 79);
 $panelHeaderBck: $skinBlack;
 $skinBlackLight: rgb(69, 90, 100);
-$textGray: rgb(174, 179, 181);
+$textGray: #ffffff;
 $skinTextColor: #1e2a33;
 $skinTextActiveColor: white;
 $skinTextTable: #7f8c8d;
 $skinHeaderBck: #1e2a33;
+
 
 
 @import "active_admin/mixins";
@@ -61,4 +62,12 @@ width: 15%;
 #filters_sidebar_section {
   max-height: 80%;
   overflow-y: scroll;
+}
+
+#header.header #tabs.header-item.tabs li.has_nested ul.slided_down li:hover a {
+    color: #ffffff !important;
+}
+
+#header.header #tabs.header-item.tabs li.current.has_nested .slided_down .current a {
+    color:#009EE0!important;
 }

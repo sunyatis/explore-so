@@ -5,6 +5,7 @@ ActiveAdmin.register Course do
  headers_rewrites: { :'generaleducation_id' => :generaleducation_id, :'start_date' => :start_date, :'end_date' => :end_date, :'code' => :code}, #'school_id' => :school_id, :'subjectarea_id' => :subjectarea_id
  before_batch_import: ->(importer) {
                  Course.where(local_course_id: importer.values_at('local_course_id')).delete_all
+
                  
                  
                  #subject_names = importer.values_at(:subjectarea_id)
@@ -79,7 +80,8 @@ ActiveAdmin.register Course do
                   importer.headers.merge!({:'school_id' => :school_id})
                },
                after_batch_import: ->(importer) {
-                  Course.where(title: "title").delete_all
+                  Course.where(local_course_id: "Course ID").delete_all
+                  Course.where(local_course_id: nil).delete_all
                },
  :template_object => ActiveAdminImport::Model.new(
  :catalog_id => nil,
@@ -94,14 +96,14 @@ ActiveAdmin.register Course do
   
  filter :id
   filter :catalog_id, as: :select, :collection => Catalog.pluck(:name, :id)
-  filter :school_id, as: :select, :collection => School.pluck(:name, :id)
-  filter :subjectarea_id, as: :select, :collection => SubjectArea.pluck(:name, :id)
+  filter :school_id, as: :select, :collection => School.pluck(:name, :id).sort
+  #filter :subjectarea_id, as: :select, :collection => SubjectArea.pluck(:name, :id)
   filter :generaleducation_id, as: :select, :collection => GeneralEducation.pluck(:name, :id)
   filter :cat_id, as: :select, :collection => Category.pluck(:name, :id)
   filter :title
   filter :description
   filter :start_date
-  filter :end_fate
+  filter :end_date
   filter :local_course_id
   filter :prefix
   filter :code
@@ -150,6 +152,33 @@ ActiveAdmin.register Course do
      #column :seats_available
      #column :class_full
     actions
+  end
+  
+  form do |f|
+  f.inputs "Course Details" do
+  f.input :catalog_id, as: :select, :collection => Catalog.pluck(:name, :id)
+  f.input :school_id, as: :select, :collection => School.pluck(:name, :id).sort
+  f.input :local_course_id
+  f.input :title
+  f.input :description
+  f.input :course_area, :as => :select, :collection => Course.order(:course_area).pluck(:course_area).uniq
+  f.input :level,  :as => :select,  :collection => ["Lower Level Undergraduate", "Upper Level Undergraduate", "Graduate"]
+  f.input :generaleducation_id, as: :select, :collection => GeneralEducation.pluck(:name, :id)
+  f.input :prefix
+  f.input :code
+  f.input :section
+  f.input :instructor
+  f.input :prerequisites
+  f.input :corequisites
+  f.input :credit 
+  f.input :start_date
+  f.input :end_date
+  f.input :books_url
+  f.input :registration_url
+  f.input :active
+  f.input :course_method,  :as => :select,  :collection => ["Online", "Hybrid"]
+  end
+  f.actions
   end
    
   controller do

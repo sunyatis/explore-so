@@ -1240,3 +1240,14 @@ dropdown-toggle{
   text-align: center;
   width: 100% !important;
 }
+.checkbox input[type="checkbox"]{
+	height: 1rem !important;
+}
+
+#user_remember_me{
+	width: 35% !important;
+	padding-right: 10px;
+}
+#remember_me{
+	display: inline !important;
+}

@@ -231,10 +231,11 @@ end
 
 
 #friendly ids
-friendly_id :generate_custom_slug, use:  [:slugged, :finders]
+#friendly_id :generate_custom_slug, use:  [:slugged, :finders]
+friendly_id :generate_custom_slug, use: :slugged
 
 def generate_custom_slug
-    "{get_school_name(school_id)}-{title}-{code}-{section}-{get_catalog_name(catalog_id)}"
+    "#{get_school_name(school_id)}-#{title}-#{code}-#{section}-#{get_catalog_name(catalog_id)}"
 end
   
 end
