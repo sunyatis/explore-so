@@ -208,11 +208,13 @@ class Course < ActiveRecord::Base
    end
    month, day, year = str.to_s.strip.split('/')
    if year.to_s.length == 2
-     #puts "here2"
-      Date.strptime(str.to_s.strip, '%m/%d/%y')
+     puts "here2"
+      #Date.strptime(str.to_s.strip, '%m/%d/%Y')
+      Date.strptime(str, '%m/%d/%Y')
    elsif year.to_s.length == 4
-     #puts "here4"
-     Date.strptime(str.to_s.strip, '%m/%d/%y')
+     puts "here4"
+     puts "new date" 
+     Date.strptime(str, '%m/%d/%Y')
    end
  end
 

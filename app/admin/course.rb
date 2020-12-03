@@ -54,7 +54,7 @@ ActiveAdmin.register Course do
                   
                   wrong_e_dates = importer.values_at(:end_date)
                   options = wrong_e_dates.map {|wrong_dates|   {wrong_dates => Course.strptime(wrong_dates).to_s }.flatten } 
-                  options.delete({"start_date"=>"start_date"})
+                  options.delete({"end_date"=>"end_date"})
                   options = Hash[*options.flatten]
                   puts options
                   importer.batch_replace(:'end_date', options)
