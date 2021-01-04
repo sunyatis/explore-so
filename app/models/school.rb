@@ -21,6 +21,8 @@ class School < ActiveRecord::Base
          "#{name}"
      end
   
-  
+     def self.options_for_school_select
+        School.where("courses.school_id = schools.id").order(:id).pluck(:id).uniq
+     end
   
 end

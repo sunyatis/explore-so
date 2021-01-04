@@ -7,7 +7,7 @@ load_and_authorize_resource
           params[:filterrific],
    select_options: {
             sorted_by: Course.options_for_sorted_by,
-           with_school_id: School.options_for_select,
+           with_school_id: Course.options_for_school_select,
            with_catalog_id: Catalog.options_for_select,
            with_generaleducation_id: GeneralEducation.options_for_select,
            with_subject_area_id: SubjectArea.options_for_select,
@@ -52,7 +52,7 @@ load_and_authorize_resource
           params[:filterrific],
    select_options: {
             sorted_by: Course.options_for_sorted_by,
-           with_school_id: School.options_for_select,
+           with_school_id: Course.options_for_school_select,
            with_catalog_id: Catalog.options_for_select,
            with_generaleducation_id: GeneralEducation.options_for_select,
            with_subject_area_id: SubjectArea.options_for_select,

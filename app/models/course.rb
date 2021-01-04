@@ -171,7 +171,9 @@ class Course < ActiveRecord::Base
       Course.order(:course_area).pluck(:course_area).uniq
    end
 
-  
+   def self.options_for_school_select
+      Course.joins(:school).select('schools.name').pluck(:name, :school_id).uniq
+   end
 
  #  scope :search_query, lambda { |query|
  #    return nil  if query.blank?
