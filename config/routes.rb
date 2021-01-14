@@ -6,17 +6,7 @@ Rails.application.routes.draw do
      root to: 'sunyonline#index'
    end
 
-constraints host: 'explore-test.suny.edu' do
 
-  resources :programs
-  resources :general_educations
-  resources :courses
-  resources :schools
-  resources :catalogs
-  resources :categories  
-  #root to: 'courses#index'
-end
-  
 
   get "/courses/my_courses", :to => "courses#my_courses"
   get "/courses/catalogs", :to => "courses#catalogs"
@@ -32,8 +22,8 @@ end
   get "content/tuition-financial-aid", :to => "content#tuition"
   get "content/transfer", :to => "content#transfer"
  #get "sunyonline", :to => "sunyonline#index"
-# get "/sunyonline/*id" => 'sunyonline#show', as: :page, format: false
- # get "/sunyonline", :to  => "sunyonline#index"
+ get "/sunyonline/*id" => 'sunyonline#show', as: :page, format: false
+  get "/sunyonline", :to  => "sunyonline#index"
 
   
   resources :programs
@@ -42,7 +32,8 @@ end
   resources :schools
   resources :catalogs
   resources :categories  
-  #resources :sunyonline, path: '/sunyonline/'
+  resources :sunyonline, path: '/sunyonline/'
+
 
   #devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -67,6 +58,6 @@ end
   
   resources :users
   
-
+ 
   
 end
