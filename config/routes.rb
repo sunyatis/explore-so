@@ -8,6 +8,16 @@ Rails.application.routes.draw do
 
 constraints host: 'explore-test.suny.edu' do
 
+  resources :programs
+  resources :general_educations
+  resources :courses
+  resources :schools
+  resources :catalogs
+  resources :categories  
+  root to: 'courses#index'
+end
+  
+
   get "/courses/my_courses", :to => "courses#my_courses"
   get "/courses/catalogs", :to => "courses#catalogs"
   get "/courses/course_areas", :to => "courses#course_areas"
@@ -33,7 +43,6 @@ constraints host: 'explore-test.suny.edu' do
   resources :catalogs
   resources :categories  
   #resources :sunyonline, path: '/sunyonline/'
- end
 
   #devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
