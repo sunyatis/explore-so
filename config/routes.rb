@@ -6,6 +6,7 @@ Rails.application.routes.draw do
      root to: 'sunyonline#index'
    end
 
+constraints host: 'explore-test.suny.edu' do
 
   get "/courses/my_courses", :to => "courses#my_courses"
   get "/courses/catalogs", :to => "courses#catalogs"
@@ -57,6 +58,6 @@ Rails.application.routes.draw do
   
   resources :users
   
- 
+ end
   
 end
