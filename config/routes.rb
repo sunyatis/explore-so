@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :courses
      # root to: 'sunyonline#index'
      get "/", :to => "content#index"
+     resources :programs
     end
 
 
