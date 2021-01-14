@@ -33,7 +33,7 @@ constraints host: 'explore-test.suny.edu' do
   resources :catalogs
   resources :categories  
   #resources :sunyonline, path: '/sunyonline/'
-
+ end
 
   #devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -58,6 +58,6 @@ constraints host: 'explore-test.suny.edu' do
   
   resources :users
   
- end
+
   
 end
