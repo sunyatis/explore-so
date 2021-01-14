@@ -14,7 +14,7 @@ constraints host: 'explore-test.suny.edu' do
   resources :schools
   resources :catalogs
   resources :categories  
-  root to: 'courses#index'
+  #root to: 'courses#index'
 end
   
 
