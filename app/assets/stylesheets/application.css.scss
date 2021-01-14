@@ -20,6 +20,7 @@
  *= require programs
  *= require courses
  *= require scaffolds
+ *= require content
  */
 
 
@@ -29,8 +30,17 @@
 html {
    font-size: 16px !important;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	
+}
+html, button, input, select, textarea {
+    font-family: "proxima-nova",sans-serif !important;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "proxima-nova",sans-serif !important;
+    margin: 0;
+    padding: 0;
+}
 
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
   background-color: #fff;
@@ -94,7 +104,7 @@ nav.navbar{
 nav.navbar .row{
     position:relative;
     flex-flow:row nowrap;
-    padding:.625rem 0;
+    /*padding:.625rem 0;*/
     z-index:initial;
     background-color:#fff
 }
