@@ -22,8 +22,8 @@ constraints host: 'explore-test.suny.edu' do
   get "content/tuition-financial-aid", :to => "content#tuition"
   get "content/transfer", :to => "content#transfer"
  #get "sunyonline", :to => "sunyonline#index"
- get "/sunyonline/*id" => 'sunyonline#show', as: :page, format: false
-  get "/sunyonline", :to  => "sunyonline#index"
+# get "/sunyonline/*id" => 'sunyonline#show', as: :page, format: false
+ # get "/sunyonline", :to  => "sunyonline#index"
 
   
   resources :programs
@@ -32,7 +32,7 @@ constraints host: 'explore-test.suny.edu' do
   resources :schools
   resources :catalogs
   resources :categories  
-  resources :sunyonline, path: '/sunyonline/'
+  #resources :sunyonline, path: '/sunyonline/'
 
 
   #devise_for :admin_users, ActiveAdmin::Devise.config
