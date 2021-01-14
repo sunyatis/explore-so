@@ -5,9 +5,9 @@ Rails.application.routes.draw do
      resources :sunyonline
      root to: 'sunyonline#index'
    end
-   constraints host: 'explore-test1.suny.edu' do
-      resources :sunyonline
-      root to: 'sunyonline#index'
+   constraints host: 'explore-test.suny.edu' do
+      resources :courses
+     # root to: 'sunyonline#index'
     end
 
 
