@@ -7,7 +7,6 @@ constraints host: 'explore-test1.suny.edu' do
    get "/sunyonline/:page" => "sunyonline#show"
    end
    #root to: 'sunyonline#index'
- end
  constraints host: 'explore-test.suny.edu' do
    get "/", :to => "content#index"
    
