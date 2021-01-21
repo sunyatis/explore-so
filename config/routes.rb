@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 constraints host: 'explore-test1.suny.edu' do
    resources :sunyonline
    get "/", :to  => "sunyonline#index"
-    get "/*id" => "sunyonline#show", as: :page, format: false
+   get "/sunyonline/:page" => "sunyonline#show"
+   end
    #root to: 'sunyonline#index'
  end
  constraints host: 'explore-test.suny.edu' do
