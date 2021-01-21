@@ -8,15 +8,18 @@ class SunyonlineController < ApplicationController
 
     private
 
-    def layout_for_page
-      case params[:id]
-      when 'media'
-        'media'
-      else
-        'application'
-      end
-    end
+#   def layout_for_page
+#     case params[:id]
+#     when 'media'
+#       'media'
+#     else
+#       'application'
+#     end
+#   end
   
+    def show
+        render template: "sunyonline/#{params[:page]}"
+      end
   
   
 end
