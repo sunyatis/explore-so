@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 constraints host: 'explore-test1.suny.edu' do
    resources :sunyonline
    get "/", :to  => "sunyonline#index"
-    get "/*id" => 'sunyonline#show', as: :page, format: false
+    get "/*id" => "sunyonline#show", as: :page, format: false
    #root to: 'sunyonline#index'
  end
  constraints host: 'explore-test.suny.edu' do
@@ -27,7 +27,7 @@ constraints host: 'explore-test1.suny.edu' do
   get "content/tuition-financial-aid", :to => "content#tuition"
   get "content/transfer", :to => "content#transfer"
  #get "sunyonline", :to => "sunyonline#index"
- get "/sunyonline/*id" => 'sunyonline#show', as: :page, format: false
+ #get "/sunyonline/*id" => 'sunyonline#show', as: :page, format: false
   get "/sunyonline", :to  => "sunyonline#index"
 
   
