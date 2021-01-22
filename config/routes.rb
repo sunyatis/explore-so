@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
   
  
-#constraints host: 'explore-test1.suny.edu' do
-#   resources :sunyonline
-#   get "/", :to  => "sunyonline#index"
-#   get "/:page" => "sunyonline#show"
-#   end
-#   #root to: 'sunyonline#index'
-# constraints host: 'explore-test.suny.edu' do
-#   get "/", :to => "content#index"
+constraints host: 'explore-test1.suny.edu' do
+   resources :sunyonline
+   get "/", :to  => "sunyonline#index"
+   get "/:page" => "sunyonline#show"
+   get "/:page/:page" => "sunyonline#show"
+   end
+   #root to: 'sunyonline#index'
+ constraints host: 'explore-test.suny.edu', 'localhost:3000' do
+   get "/", :to => "content#index"
    
 
 
@@ -42,7 +43,7 @@ Rails.application.routes.draw do
 
   #devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root to: 'content#index'
+  #root to: 'content#index'
   #root to: 'courses#index'
   #devise_for :users
   
@@ -63,6 +64,6 @@ Rails.application.routes.draw do
   
   resources :users
   
-  # end
+   end
   
 end
