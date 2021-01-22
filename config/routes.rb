@@ -5,10 +5,10 @@ constraints host: 'explore-test1.suny.edu' do
    resources :sunyonline
    get "/", :to  => "sunyonline#index"
    get "/:page" => "sunyonline#show"
-   get "/:page/:page" => "sunyonline#show"
+ #  get "/:page/:page" => "sunyonline#show"
    end
    #root to: 'sunyonline#index'
- constraints host: 'explore-test.suny.edu', 'localhost:3000' do
+ constraints host: 'explore-test.suny.edu' do
    get "/", :to => "content#index"
    
 
