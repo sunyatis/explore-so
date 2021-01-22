@@ -17,9 +17,16 @@ class SunyonlineController < ApplicationController
 #     end
 #   end
   
-  #  def show
-   #     render template: "sunyonline/#{params[:page]}"
-  #  end
+    def show
+      case params[:page1]
+          when 'contact'
+            render template: "sunyonline/contact/#{params[:page]}"
+         else
+            'application'
+          end
+      
+        render template: "sunyonline/#{params[:page]}"
+    end
   
   
 end
