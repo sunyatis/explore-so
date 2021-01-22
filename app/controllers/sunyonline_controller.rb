@@ -18,11 +18,10 @@ class SunyonlineController < ApplicationController
 #   end
   
     def show
-      case params[:page1]
-          when :page1
+      if (params.has_key?(:page1))
             render template: "sunyonline/#{params[:page1]}/#{params[:page]}"
          else
-            'degree-programs'
+            
           end
       
        # render template: "sunyonline/#{params[:page]}"
