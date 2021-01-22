@@ -25,7 +25,7 @@ class SunyonlineController < ApplicationController
             'application'
           end
       
-        render template: "sunyonline/#{params[:page]}"
+       # render template: "sunyonline/#{params[:page]}"
     end
   
   
