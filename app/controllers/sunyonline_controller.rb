@@ -19,10 +19,10 @@ class SunyonlineController < ApplicationController
   
     def show
       case params[:page1]
-          when 'contact'
-            render template: "sunyonline/contact/#{params[:page]}"
+          when :page1
+            render template: "sunyonline/#{params[:page1]}/#{params[:page]}"
          else
-            'application'
+            'degree-programs'
           end
       
        # render template: "sunyonline/#{params[:page]}"
