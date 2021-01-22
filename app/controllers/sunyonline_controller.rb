@@ -24,6 +24,12 @@ class SunyonlineController < ApplicationController
          else
             
           end
+          if (params.has_key?(:page2))
+            puts "#{params[:page2]}"
+                render template: "sunyonline/#{params[:page2]}/#{params[:page1]}/#{params[:page]}"
+             else
+            
+              end
       
        # render template: "sunyonline/#{params[:page]}"
     end
