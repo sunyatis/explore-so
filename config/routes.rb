@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   
  
-constraints host: 'explore-test1.suny.edu' do
-   resources :sunyonline
-   get "/", :to  => "sunyonline#index"
-   get "/:page" => "sunyonline#show"
-   end
-   #root to: 'sunyonline#index'
- constraints host: 'explore-test.suny.edu' do
-   get "/", :to => "content#index"
+#constraints host: 'explore-test1.suny.edu' do
+#   resources :sunyonline
+#   get "/", :to  => "sunyonline#index"
+#   get "/:page" => "sunyonline#show"
+#   end
+#   #root to: 'sunyonline#index'
+# constraints host: 'explore-test.suny.edu' do
+#   get "/", :to => "content#index"
    
 
 
@@ -63,6 +63,6 @@ constraints host: 'explore-test1.suny.edu' do
   
   resources :users
   
-   end
+  # end
   
 end
