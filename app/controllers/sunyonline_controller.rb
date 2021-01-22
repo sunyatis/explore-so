@@ -21,7 +21,7 @@ class SunyonlineController < ApplicationController
       if (params.has_key?(:page3))
         puts "#{params[:page3]}"
             render template: "#{params[:page3]}/#{params[:page2]}/#{params[:page1]}/#{params[:page]}"
-         elsif (!params.nil?(:page3)) && (params.has_key?(:page2))
+         elsif (!params.has_key?(:page3)) && (params.has_key?(:page2))
              puts "#{params[:page2]}"
                  render template: "#{params[:page2]}/#{params[:page1]}/#{params[:page]}"
               elsif (params.has_key?(:page1))
