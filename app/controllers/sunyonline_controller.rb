@@ -6,7 +6,7 @@ class SunyonlineController < ApplicationController
 
    layout :false
 
-    private
+    #private
 
 #   def layout_for_page
 #     case params[:id]
@@ -19,7 +19,7 @@ class SunyonlineController < ApplicationController
   
     def show
         render template: "sunyonline/#{params[:page]}"
-      end
+    end
   
   
 end
