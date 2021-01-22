@@ -19,7 +19,7 @@ class SunyonlineController < ApplicationController
   
     def show
       if (params.has_key?(:page1))
-        puts "#{params[:page1]"
+        puts "#{params[:page1]}"
             render template: "sunyonline/#{params[:page1]}/#{params[:page]}"
          else
             
