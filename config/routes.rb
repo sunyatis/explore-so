@@ -8,6 +8,7 @@ constraints host: 'explore-test1.suny.edu' do
    get "/:page1/:page" => "sunyonline#show"
    get "/:page2/:page1/:page" => "sunyonline#show"
     get "/:page3/:page2/:page1/:page" => "sunyonline#show"
+    get "/:page4/:page3/:page2/:page1/:page" => "sunyonline#show"
    end
    #root to: 'sunyonline#index'
  constraints host: 'explore-test.suny.edu' do
