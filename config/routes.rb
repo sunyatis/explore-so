@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
   
  
-constraints host: 'explore-test1.suny.edu' do
-   resources :sunyonline
-   get "/", :to  => "sunyonline#index"
-   get "/:page" => "sunyonline#show"
-   get "/:page1/:page" => "sunyonline#show"
-   get "/:page2/:page1/:page" => "sunyonline#show"
-    get "/:page3/:page2/:page1/:page" => "sunyonline#show"
-    get "/:page4/:page3/:page2/:page1/:page" => "sunyonline#show"
-   end
-   #root to: 'sunyonline#index'
- constraints host: 'explore-test.suny.edu' do
-   get "/", :to => "content#index"
+#constraints host: 'explore-test1.suny.edu' do
+#   resources :sunyonline
+#   get "/", :to  => "sunyonline#index"
+#   get "/:page" => "sunyonline#show"
+#   get "/:page1/:page" => "sunyonline#show"
+#   get "/:page2/:page1/:page" => "sunyonline#show"
+#    get "/:page3/:page2/:page1/:page" => "sunyonline#show"
+#    get "/:page4/:page3/:page2/:page1/:page" => "sunyonline#show"
+#   end
+#   #root to: 'sunyonline#index'
+# constraints host: 'explore-test.suny.edu' do
+#   get "/", :to => "content#index"
    
 
 
@@ -46,9 +46,9 @@ constraints host: 'explore-test1.suny.edu' do
 
   #devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  #root to: 'content#index'
-  #root to: 'courses#index'
-  #devise_for :users
+  root to: 'content#index'
+          #root to: 'courses#index'
+          #devise_for :users
   
   
   devise_for :users, controllers: {sessions: 'devise/sessions', passwords: 'devise/passwords'}, path_names: { sign_in: 'login', sign_out: 'logout' }
@@ -67,6 +67,6 @@ constraints host: 'explore-test1.suny.edu' do
   
   resources :users
   
-   end
+  # end
   
 end

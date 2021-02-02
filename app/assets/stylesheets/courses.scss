@@ -1048,11 +1048,19 @@ div.coursetable {
   border-collapse: collapse;
 }  
 .divTable.coursetable .divTableCell, .divTable.coursetable .divTableHead {
-  	  padding-top: 13px;
+  	  padding-top: 15px;
       padding-right: 2px;
-      padding-bottom: 13px;
+      padding-bottom: 15px;
       padding-left: 2px;
 }
+
+.divTableCell
+{
+padding-top: 20px !important;
+ padding-right: 10px !important;
+padding-bottom: 20px !important;
+padding-left: 10px !important;
+	  }
 .divTable.coursetable .divTableBody .divTableCell {
   font-size: 15px;
   vertical-align: top;
