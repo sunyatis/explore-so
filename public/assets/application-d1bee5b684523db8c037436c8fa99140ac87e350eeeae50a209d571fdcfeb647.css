@@ -12683,7 +12683,7 @@ nav.navbar .row {
 
 /* line 135, app/assets/stylesheets/content.scss */
 nav.navbar ul {
-  display: flex;
+ /* display: flex;*/
   list-style-type: none;
   margin: 0;
   padding: 0;
