@@ -67,6 +67,6 @@ constraints host: 'explore-test.suny.edu' do
   
   resources :users
   
-  # end
+   end
   
 end
