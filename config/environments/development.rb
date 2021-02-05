@@ -59,6 +59,7 @@ Rails.application.configure do
   #AWS S3 config
   config.paperclip_defaults = {
     :storage => :s3,
+    :s3_protocol => :https,
     :s3_credentials => "#{Rails.root}/config/aws.yml",
     :bucket         => 'navigator-storage',
     :path           => ':attachment/:id/:style.:extension'

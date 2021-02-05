@@ -122,12 +122,14 @@
 						<h2>What's it like to earn this degree online?</h2>
 						<h3>Let's put your mind at ease about online learning</h3>
 					</li>
+					<% if @program.school.campus_type == "Community College"%>	
 					<li>
 						<dl class="fully-online">
 							<dt>100% Online</dt>
 							<dd>This program is presented 100% online. You will not be expected to attend any classes on campus.</dd>
 						</dl>
 					</li>
+					<% end %>
 					<li>
 						<dl class="open-suny-plus">
 							<dt>Powered by Open SUNY+</dt>
