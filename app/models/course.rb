@@ -118,7 +118,9 @@ class Course < ActiveRecord::Base
      where(:subjectarea_id => [*subjectarea_ids])
    }
    scope :with_course_area, lambda { |course_areas|
-       where(:course_area => [*course_areas])
+     puts clean_course_area(course_areas)
+     
+       where(:course_area => [clean_course_area(*course_areas)])
      }
   scope :with_level, lambda { |levels|
     where(:level => [*levels])
@@ -235,6 +237,9 @@ def get_school_name(id)
   School.find(id).name
 end
 
+def self.clean_course_area(my_course_area)
+  return my_course_area.gsub(/&amp;/,'&')
+end
 
 #friendly ids
 #friendly_id :generate_custom_slug, use:  [:slugged, :finders]
