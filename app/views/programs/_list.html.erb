@@ -4,44 +4,125 @@
     	<%= link_to('Reset filters', reset_filterrific_url, :class => 'reset_link') %>
 
   	</div>
-  	<div class="chardin_box resets" data-intro="will_paginate's entries info works as expected." data-position="bottom">
- 	   <%= page_entries_info @programs, entry_name: "programs" %>
+  	<div class="chardin_box" data-intro="will_paginate's entries info works as expected." data-position="bottom">
+ 	   <h1> <%= page_entries_info @programs, entry_name: "programs" %></h1>
  	 </div>
- 	 <div class="chardin_box resets" data-intro="Spinner indicates update." data-position="bottom">
+ 	 <div class="chardin_box" data-intro="Spinner indicates update." data-position="bottom">
 
         <span class="filterrific_spinner" style="display:none;">
           <%= render_filterrific_spinner %>
         </span>
 	 </div>
- </div>
- 
+   </div>
+<section class="degree-results row">
 
- <div class="container results">
+	<ul class="results">
+		<div class="info-title">
+			<dl>
+				<dt>
+					<%= image_tag('/assets/Blue_Ribbon.svg', :alt => "SUNY Online Signature Programs", :width => '19px', :height => '27px', :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'SUNY Online Signature Programs') %> 
+					<a href="/content/about">
+						<span>Signature Program</span>
+					</a>
+				</dt>
+				<dd>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="delivery-mode-extra">Delivery Mode</dt>
+				<dd>	
+				</dd>
+			</dl>
+			<dl>
+				<dt class="degree-type-extra">Degree Type</dt>
+				<dd>
+					
+				</dd>
+			</dl>
+			<dl>
+				<dt class="credit-type-extra">Credits</dt>
+				<dd>	
+				</dd>
+			</dl>
+		</div>
+		 <% @programs.each do |programs| %>
+		<li class="full-width">
+			<div class="result">
+				<div class="program">
+						<figure>
+							<div class="logo">
+								<%= link_to image_tag(programs.school.image.url(:small), :align=> "center"), programs %>
+							</div>
+							<figcaption>
+								<h2><%= link_to programs.prog_title, programs%></h2>
+								<h3><%= programs.school.name %></h3>
+							</figcaption>
+						</figure>
 
-  <div class="divTable coursetable">
+					<div class="info">
+						<dl>
+							<dt>
+								
+							</dt>
+							<dd>
+						   	 <% if programs.open_suny == "Open SUNY" %>
+						          <%= image_tag('/assets/Blue_Ribbon.svg', :alt => "SUNY Online Signature Programs", :width => '20px', :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'SUNY Online Signature Programs') %> 
+						   	   <% elsif programs.open_suny == "SUNY Online" %>
+						   	    <%= image_tag('/assets/Blue_Ribbon_SO.svg', :alt => "SUNY Online Degree at Scale", :width => '20px', :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'SUNY Online Degree at Scale') %> 
+						   	       <% end %>
+							</dd>
+						</dl>
+						<dl>
+							<dt>Delivery Mode</dt>
+							<dd class="extra-margin-delivery"><%= programs.per_courses_online %>% Online</dd>
+						</dl>
+						<dl>
+							<dt>Degree Type</dt>
+							<dd class="extra-margin-degree"><%= programs.level_expanded  %></dd>
+						</dl>
+						<dl>
+							<dt>Credits</dt>
+							<dd class="extra-margin">12</dd>
+						</dl>
+					</div>
+				</div>
+
+			</div>
+
+	</li> <% end %>
+</ul>
+
+</section> 
+
+ <!--div class="container results">
+
+  <div class="divTable programtable">
   <div class="divTableBody">
 	 <div class="divTableRow resultheader">
 	 	<div class="divTableHead"></div>
 	 	<div class="divTableHead"><%= filterrific_sorting_link(@filterrific, :prog_title) %></div>
-		<div class="divTableHead"><%= filterrific_sorting_link(@filterrific, :open_suny)%> </div>
-	 	<div class="divTableHead">Delivery Mode</div>
-	 	<div class="divTableHead subject_area_cell">Degree Type</div>
-	 	<div class="divTableHead">Credits</div>
+		<div class="divTableHead featured"><a href="/content/about">Signature Program</a></div>
+	 	<div class="divTableHead delivery_mode">Delivery Mode</div>
+	 	<div class="divTableHead degree_type">Degree Type</div>
+	 	<div class="divTableHead credits">Credits</div>
 	 </div>
    <% @programs.each do |programs| %>
 	 <div class="divTableRow result">
 	 <div class="divTableCell school_image"><%= image_tag(programs.school.image.url(:small), :align=> "center", :width=> "55px") %></div>
-	 <div class="divTableCell"><h2><%= link_to programs.prog_title, programs%></h2><h3><%= programs.school.name %></h3></div>
-     <div class="divTableCell">
-	 <% if programs.open_suny == "Yes" %>
-       <%= image_tag("https://online.suny.edu/wp-content/themes/yootheme/cache/SUNY-Online-Logo-Sig-8fc48323.png", :alt => "SUNY Online Degree at Scale", :width => "40px", :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'SUNY Online Degree at Scale') %>     <% end %>
+	 <div class="divTableCell prog_title"><h2><%= link_to programs.prog_title, programs%></h2><h3><%= programs.school.name %></h3></div>
+     <div class="divTableCell ribbon">
+	 <% if programs.open_suny == "Open SUNY" %>
+       <%= image_tag('/assets/Blue_Ribbon.svg', :alt => "SUNY Online Signature Programs", :width => '20px', :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'SUNY Online Signature Programs') %> 
+	   <% elsif programs.open_suny == "SUNY Online" %>
+	    <%= image_tag('/assets/Blue_Ribbon_SO.svg', :alt => "SUNY Online Degree at Scale", :width => '20px', :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'SUNY Online Degree at Scale') %> 
+	       <% end %>
 	  </div>
-	 <div class="divTableCell subject_area_cell"><%= programs.delivery_method %></div>
-	 <div class="divTableCell"><%= programs.level_expanded  %></div>
-	 <div class="divTableCell credits_cells"><span><%= programs.duration %></span></div>
+	 <div class="divTableCell delivery_mode"><%= programs.per_courses_online %>% Online</div>
+	 <div class="divTableCell degree_type"><%= programs.level_expanded  %></div>
+	 <div class="divTableCell credits"><span><%= programs.duration %></span></div>
 	 </div>
     <% end %>
- </div>
+ </div-->
  </div>
   
  </div>

@@ -240,8 +240,16 @@ end
 #friendly_id :generate_custom_slug, use:  [:slugged, :finders]
 friendly_id :generate_custom_slug, use: :slugged
 
-def generate_custom_slug
-    "#{get_school_name(school_id)}-#{title}-#{code}-#{section}-#{get_catalog_name(catalog_id)}"
+def should_generate_new_friendly_id?
+  new_record? || slug.blank?
 end
+
+def generate_custom_slug
+    "#{get_school_name(school_id)}-#{title}-#{local_course_id}-#{get_catalog_name(catalog_id)}-#{id}"
+end
+
+#def to_param
+#    "#{id}-#{title.parameterize}-#{local_course_id.parameterize}"
+#end
   
 end

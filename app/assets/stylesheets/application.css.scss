@@ -12,14 +12,15 @@
  *
 
  *= require_self
- *= require bootstrap3/bootstrap-multiselect
- *= require bootstrap-datepicker3
- *= require bootstrap3/bootstrap
  *= require ribbon
  *= require chardinjs
  *= require programs
  *= require courses
+ *= require content
  *= require scaffolds
+ *= require bootstrap3/bootstrap-multiselect
+ *= require bootstrap-datepicker3
+ *= require bootstrap3/bootstrap
  
  */
 
@@ -28,7 +29,8 @@
 @import 'components/chardinjs_overrides.css.scss';
 
 html {
-   font-size: 16px !important;
+   font-size: 100% !important;
+   font-family: "proxima-nova",sans-serif !important;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	
 }
@@ -122,7 +124,7 @@ nav.navbar ul li a{
     cursor:pointer
 }
 nav.navbar ul li a,nav.navbar ul li span{
-    color:#444;
+    color:#444 !important;
     text-decoration:none;
     font-size:.875rem;
     font-weight:400;
@@ -169,6 +171,9 @@ nav.navbar .mobile-nav{
         box-sizing:border-box;
         width:100%;
         line-height:1.25rem;
+        color:#ffffff !important;
+    }
+    nav.navbar .mobile-nav a:visited{
         color:#ffffff !important;
     }
     nav.navbar .mobile-nav a:hover,nav.navbar .mobile-nav a.active{
@@ -702,7 +707,7 @@ a {
 }
 .jumbotron {
   color: white;
-  background-image: url("https://sunyonline.edu//media/suny-online-/images/hero.jpg");
+  background-image: url("https://sunyonline.edu/media/suny-online-/images/hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1031,9 +1036,7 @@ body>footer aside ul li.twitter a, body>footer .social-media ul li.twitter a {
     width: 100%;
     box-sizing: border-box;
 }
-.results{
-  margin-top: 20px;
-}
+
 .resets{
   margin-top: 35px;
   font-size: 16px !important;
@@ -1067,6 +1070,8 @@ form {
     /*border-right: none;*/
     padding: .5rem .75rem;
 	margin-right: .9375rem;
+	margin-bottom: 0;
+		
 }
 input {
     display: block;

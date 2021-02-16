@@ -5,7 +5,7 @@
 			<div class="row">
 				<figure>
 					<div class="logo">
-						<img src="//d2brwuimzb4ax4.cloudfront.net/schools/196060/logo/small.png" alt="University at Albany">
+						<%= image_tag(@program.school.image.url(:small), :align=> "center", :alt => '@program.school.name') %>
 					</div>
 					<figcaption>
 						<h1><%= @program.prog_title %></h1>
@@ -14,7 +14,7 @@
 					</figcaption>
 				</figure>
 				<div class="actions">
-					<button class="rounded-button large green halo" data-program="1499269361225">Request Information</button>
+					<button class="rounded-button large green halo" data-program="">Request Information</button>
 					<ul>
 						<li>
 							<a href="<%= @program.apply_now_url %>" class="apply_now" target="_blank">Apply Now!</a>
@@ -25,7 +25,14 @@
 			</div>
 			<div class="stats" id="testimonial-content">
 				<ul class="row">
-					<% if @program.open_suny == "Yes" %>
+					<% if @program.open_suny == "Open SUNY" %>
+					<li>
+						<dl>
+							<dt>Designated As</dt>
+							<dd>Open SUNY</dd>
+						</dl>
+					</li>
+					<% elsif @program.open_suny == "SUNY Online" %>
 					<li>
 						<dl>
 							<dt>Designated As</dt>
@@ -73,7 +80,7 @@
 			<section class="degree-card">
 				<h2>Earn your advanced certificate degree online</h2>
 				<h3>You will earn the same diploma as our on-campus students</h3>
-				<div class="description">The Certificate in Computer Education (CCE) is designed to address the needs of teachers who seek to deliver effective and engaging curricula in computer science and/or introduce the new literacy of computational thinking to K-12 students. The CCE program provides teachers the knowledge, skills and competencies to teach introductory computer science courses such as Exploring Computer Science and Computer Science Principles. The program will also help teachers to develop their own developmentally appropriate curricula in computing for students in K-s settings. This Certificate of Graduate Study provides a competitive advantage for teachers with interests in the rapidly growing area of computer science and information technology. All courses in the CCE program are also applicable to the Master's Degree in Curriculum Development and Instructional Technology.</div>
+				<div class="description"><%=@program.description %></div>
 				<dl class="info-block">
 					<dt>What's a advanced certificate?</dt>
 					<dd>Advanced, or graduate, certificates are designed to provide focused study to support a particular career interest. They vary in number of credits and typically require students to have a bachelor’s degree.</dd>
@@ -102,7 +109,7 @@
 						
 						
 						
-								<figure class="accreditation" id="onlinelearning"><img src="//d2brwuimzb4ax4.cloudfront.net/sites/suny/logos/regionally_accredited.png" alt="Middle States Commission on Higher Education">
+								<figure class="accreditation" id="onlinelearning"><img src="/assets/regionally_accredited.png" alt="Middle States Commission on Higher Education">
 									<figcaption>
 										<dl><dt>Regionally Accredited</dt>
 											<dd>We are regionally accredited by the Middle States Commission on Higher Education</dd>
@@ -122,7 +129,7 @@
 						<h2>What's it like to earn this degree online?</h2>
 						<h3>Let's put your mind at ease about online learning</h3>
 					</li>
-					<% if @program.school.campus_type == "Community College"%>	
+					<% if @program.per_courses_online == '100' %>	
 					<li>
 						<dl class="fully-online">
 							<dt>100% Online</dt>
@@ -130,18 +137,68 @@
 						</dl>
 					</li>
 					<% end %>
+					<% if @program.synchronous == TRUE %>	
 					<li>
-						<dl class="open-suny-plus">
-							<dt>Powered by Open SUNY+</dt>
-							<dd>In addition to the features listed above, this Open SUNY+ degree includes 24/7 support, incorporates industry-leading teaching practices, and targets an area of high employer demand in New York State and beyond.</dd>
+						<dl class="asynchronus">
+							<dt>Classes on your schedule</dt>
+							<dd>Courses are semester based and classwork can be completed around your work and family commitments. There is no set time where you are required to log in to attend class.</dd>
 						</dl>
 					</li>
+					<% end %>
+					<% if @program.plas == TRUE %>	
+					<li>
+						<dl class="same-faculty">
+							<dt>Same faculty as on-campus</dt>
+							<dd>The faculty that teach online classes are the same faculty that students learn from on-campus.</dd>
+						</dl>
+					</li>
+					<% end %>
+					<% if @program.concierge == TRUE %>	
+					<li>
+						<dl class="concierge">
+							<dt>Personal concierge</dt>
+							<dd>You will have one person who acts as a single point of contact for any and all questions you may have.</dd>
+						</dl>
+					</li>
+					<% end %>
+					<% if @program.experiential_learning == TRUE %>	
+					<li>
+						<dl class="experimental-learning">
+							<dt>Learn by doing</dt>
+							<dd>Participate in field experiences such as internships, clinical placements, and service learning to apply your academic knowledge in the world.</dd>
+						</dl>
+					</li>
+					<% end %>
+					<% if @program.tutoring == TRUE %>	
+					<li>
+						<dl class="tutoring">
+							<dt>Access to a personal tutor</dt>
+							<dd>You will have access to a tutor when you need assistance with any of your classes.</dd>
+						</dl>
+					</li>
+					<% end %>
+					<% if @program.open_suny == "Open SUNY" %>
+					<li>
+						<dl class="open-suny-plus">
+							<dt>Powered by SUNY Online Signature Programs</dt>
+							<dd>In addition to the features listed above, this SUNY Online Signature Program includes 24/7 support, incorporates industry-leading teaching practices, and targets an area of high employer demand in New York State and beyond.</dd>
+						</dl>
+					</li>
+					<% end %>
+					<% if @program.open_suny == "SUNY Online" %>
+					<li>
+						<dl class="suny-online">
+							<dt>SUNY Online Degree at Scale</dt>
+							<dd>In addition to the features listed above, this SUNY Online Degree at Scale includes 24/7 support, incorporates industry-leading teaching practices, and targets an area of high employer demand in New York State and beyond.</dd>
+						</dl>
+					</li>
+					<% end %>
 					<li>
 						<a class="rounded-button small green halo" data-program="1499269361225">Request Program Information</a>
 					</li>
 				</ul>
 				<aside aria-label="Student Feedback">
-					<img src="//d2brwuimzb4ax4.cloudfront.net/sites/suny/content/suny-computer.png" alt="Open SUNY Computer">
+					<img src="/assets/suny-computer.png" alt="SUNY Online Computer">
 					<blockquote>
 						<q>I was a bit apprehensive at first because I knew online classes require that you motivate yourself, but after this experience, I will always choose online if possible. I think there are so many benefits.</q>
 						<cite>Kimberly Lane</cite>
@@ -161,7 +218,7 @@
 					<li>Submit any supplemental materials, if required</li>
 					<li>Send in your academic records</li>
 					<li class="info">
-						<a href="http://www.albany.edu/graduate/apply-now.php" class="rounded-button small green" title="Apply to University at Albany now!">Apply Now</a>
+						<a href="<%= @program.apply_now_url %>" class="rounded-button small green" title="Apply to <%= @program.school.name %> now!">Apply Now</a>
 					</li>
 				</ol>
 				<aside aria-labelledby="anyQuestions" aria-describedby="anyQuestionsDiscription">
@@ -197,174 +254,8 @@
 		<button class="rounded-button large white blue-halo" data-program="1499269361225">Request More Information</button>
 	</section>
 </section>
+		</main>
 
 
 
 
-
-<% title "#{@program.prog_title}"  %>
-<% description "#{@program.prog_title} |  #{@program.level_expanded} (#{@program.level_abb}) | #{@program.school.name}"  %>
-<p id="notice"><%= notice %></p>
-<div class="row">
- <div class="col-md-8">
-    <p>
-    <h1><%= @program.prog_title %></h1>
-    </p>
-    <p>
-      <%= @program.description.html_safe %>
-    </p>
-  </div>
-  <div class="col-md-3 col-md-offset-1">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Services</h3>
-        </div>
-        <div class="panel-body">
-          <div class="open_icons">
-           <% if @program.per_courses_online == "25" %>
-              <%= image_tag("/assets/2542.png", :alt => "25% online", :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => '25% Online - Percent of Courses Online - Degree programs can range from 100% online to a mix of in-person and online courses.') %>
-            <% elsif @program.per_courses_online == "50" %>  
-              <%= image_tag("/assets/5042.png", :alt => "50% online", :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => '50% Online - Percent of Courses Online - Degree programs can range from 100% online to a mix of in-person and online courses.') %>
-            <% elsif @program.per_courses_online == "75" %>  
-              <%= image_tag("/assets/7542.png", :alt => "75% online", :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => '75% Online - Percent of Courses Online - Degree programs can range from 100% online to a mix of in-person and online courses.') %>
-            <% elsif @program.per_courses_online == "100" %>  
-              <%= image_tag("/assets/10042.png", :alt => "100% online", :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => '100% Online - Percent of Courses Online - Degree programs can range from 100% online to a mix of in-person and online courses.') %>
-            <% end %>
-            </div><!--/.open_icons-->
-         <% if @program.helpdesk == true%>      
-            <div class="open_icons">
-              <%= image_tag("/assets/hd42.png", :alt => "HelpDesk Available", :id => 'helpdesk_icon', :rel => 'tooltip', "data-placement" =>'top', :title => '24/7 HelpDesk - Experiencing technical difficulties? Students in this program have access to technical support day and night.')%>    
-            </div><!--/.open_icons-->
-         <% end %>
-         <% if @program.concierge == true%>
-           <div class="open_icons">
-              <%= image_tag("/assets/sc42.png", :alt => "Concierge Available", :id => 'con_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Concierge - Have questions? Each student has one point of contact for all questions about their program.')%>
-           </div><!--/.open_icons-->
-         <% end %>
-         <% if @program.synchronous == true%>
-          <div class="open_icons">
-           <%= image_tag("/assets/syn42.png", :alt => "Synchronous Courses", :id => 'sync_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Synchronous Courses - Students learn in real-time while the professor leads the class. Synchronous courses are similar to in-person classes, but from a distance.')%>
-          </div>
-          <% elsif %>
-          <div class="open_icons">
-           <%= image_tag("/assets/asyn42.png", :alt => "Asynchronous Courses", :id => 'async_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Asynchronous Courses - Asynchronous online courses are usually semester or term-based with a start and end date. Within this structure there is flexibility as to when students participate in course learning activities.')%>
-         </div><!--/.open_icons-->  
-         <% end %> 
-         <% if @program.experiential_learning == true%>
-         <div class="open_icons">
-            <%= image_tag("/assets/el42.png", :alt => "Experiential Learning Available", :id => 'ex_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Experiential Learning - Experiential learning connects classroom to career. Students apply their academic knowledge in the real world through field experiences such as internships, clinical placements, and service learning.')%>
-         </div><!--/.open_icons-->
-          <% end %>
-          <% if @program.plas == true%>
-         <div class="open_icons">
-            <%= image_tag("/assets/pl42.png", :alt => "PLA's Available", :id => 'pla_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Prior Learning Assessment - Life experience counts. Students can receive credit toward their program based on their existing knowledge.')%>
-         </div><!--/.open_icons-->
-         <% end %>
-         <% if @program.accelerated == true%>
-         <div class="open_icons">
-            <%= image_tag("/assets/acc42.png", :alt => "Accelerated Degree Completion Available", :id => 'degree_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Accelerated Degree Completion - Looking for the option of early graduation? This program allows students to complete their studies ahead of schedule.')%>     
-         </div><!--/.open_icons-->
-          <% end %>
-          <% if @program.tutoring == true%>
-         <div class="open_icons">
-              <%= image_tag("/assets/tut42.png", :alt => "Tutoring Available", :id => 'tutoring_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Tutoring - Need tutoring assistance? Students have access to academic tutoring day and night.') %>
-         </div><!--/.open_icons-->
-         <% end %>
-        </div>
-    </div>  
-</div><!--/.open_icons-->
-
-
-<div class="col-md-8">
-	<div class="panel panel-default">
-	  <div class="panel-heading">
-	    <h3 class="panel-title">Program Details</h3>
-	  </div>
-	  <div class="panel-body">
-	    <p>
-	      <strong>Subject area:</strong>
-	      <%= @program.subject_area.name %>
-	    </p>
-
-	    <p>
-	      <strong>Prog level:</strong>
-	      <%= @program.prog_level %>
-	    </p>
-
-	    <p>
-	      <strong>Level abb:</strong>
-	      <%= @program.level_abb.name %>
-	    </p>
-
-	    <p>
-	      <strong>Duration:</strong>
-	      <%= @program.duration %>
-	    </p>
-
-	    <p>
-	      <strong>Delivery method:</strong>
-	      <%= @program.delivery_method %>
-	    </p>
-
-	    <p>
-	      <strong>Prerequisites:</strong>
-	      <%= @program.prerequisites %>
-	    </p>
-	  </div>
-	</div>
-    
-</div>
-<div class="col-md-3 col-md-offset-1">
-  <div class="panel panel-primary">
-      <div class="panel-heading">
-          <h2 class="panel-title" style="text-align:center;" ><a href="<%= @program.apply_now_url %>" class="apply_now" target="_blank">Apply Now!</a></h2>
-      </div>
-  </div>
-</div>
-<div class="col-md-3 col-md-offset-1">
-  <div class="panel panel-default">
-      <div class="panel-heading">
-          <h3 class="panel-title">Important Links</h3>
-      </div>
-      <div class="list-group">
-        <a href="<%= @program.school.school_url %>" class="list-group-item " target="_blank">School Website</a>
-        <a href="<%= @program.program_url %>" class="list-group-item " target="_blank">Program Details</a>
-        <a href="<%= @program.registration_url %>" class="list-group-item" target="_blank">Registration</a>
-        <a href="<%= @program.school.tuition_url %>" class="list-group-item " target="_blank">Cost & Fees</a>
-        <a href="<%= @program.school.financial_aid_url %>" class="list-group-item " target="_blank">Financial Aid</a>
-      </div>
-    </div>
-</div>
-
-<div class="col-md-8">
-	<div class="well">
-
-		      <h4><%= @program.school.name %></h4>
-		      <strong>Address:</strong><br>
-		      <%= @program.school.address1 %><br>
-		      <%= @program.school.address2 %><br>
-		      <%= @program.school.city %>, <%= @program.school.state %> <%= @program.school.zip %>
-	
-	</div>
-   
-</div>
-<div class="col-md-3 col-md-offset-1">
-  <div class="panel panel-default">
-    <div class="panel-body" style="text-align:center;">
-      <a href="<%= @program.school.school_url %>" target="_blank"><%= image_tag(@program.school.image.url(:thumb), :align=> "center") %></a>
-    </div>
-  </div>
-</div>
-</div>
-
-
-    
-
-
-
-
-
-
-
-
-</div>

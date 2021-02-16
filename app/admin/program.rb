@@ -68,7 +68,7 @@ ActiveAdmin.register Program do
   f.input :prerequisites
   f.input :program_url
   f.input :registration_url
-  f.input :open_suny, :as => :radio, :collection => [["Yes", true], ["No", false]]
+  f.input :open_suny, :as => :radio, :collection => ["Open SUNY", "SUNY Online", "No"]
   f.input :per_courses_online
   f.input :synchronous, :as => :radio, :collection => [["Yes", true], ["No", false]]
   f.input :synchronous_text

@@ -66,7 +66,7 @@ class Program < ActiveRecord::Base
      direction = (sort_option =~ /desc$/) ? 'desc' : 'asc'
      case sort_option.to_s
      when /^prog_title_/
-       order(" programs.open_suny desc, programs.prog_title #{ direction }")
+       order("programs.open_suny desc, programs.prog_title asc ")
      when /^prog_level_/
        order("LOWER(programs.level) #{ direction }")
      when /^school_id_/
@@ -252,9 +252,15 @@ class Program < ActiveRecord::Base
 
    #friendly id
    #friendly_id :generate_custom_slug #, use: :slugged
-   friendly_id :name, use: :slugged, slug_column: :prog_title
-   #def generate_custom_slug
-  #     "#{@school}-#{prog_title}-#{@level}"
-  # end
+   friendly_id :generate_custom_slug, use: :slugged
+   
+   def should_generate_new_friendly_id?
+     new_record? || slug.blank?
+   end
+
+
+  def generate_custom_slug
+      "#{prog_title}-#{id}"
+  end
   
 end
