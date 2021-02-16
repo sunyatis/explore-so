@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 # constraints host: 'explore-test.suny.edu' do
 #   get "/", :to => "content#index"
    
-constraints host: 'localhost' do
+#constraints host: 'localhost' do
 
 
   get "/courses/my_courses", :to => "courses#my_courses"
@@ -68,6 +68,6 @@ constraints host: 'localhost' do
   
   resources :users
   
-   end
+#   end
   
 end
