@@ -1390,7 +1390,7 @@ form {
   /*border-right: none;*/
   padding: .5rem .75rem;
   margin-right: .9375rem;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 /* line 1077, app/assets/stylesheets/application.css.scss */
