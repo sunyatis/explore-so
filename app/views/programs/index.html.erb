@@ -4,22 +4,22 @@
 		    <%= f.text_field(
 		      :search_query,
 		      class: 'prog_search',
-				  type: 'text',
-				  name: 'search',
+				  #type: 'text',
+				 # name: 'search',
 				  placeholder: 'Search for a Degree',
-				  value: ''
+				 # value: ''
 			 
 		    ) %>
 		    <%= f.select(
-		      :with_level,
-		      @filterrific.select_options[:with_level],
+		      :with_prog_level,
+		      @filterrific.select_options[:with_prog_level],
 		      { include_blank: 'All Degree Levels' },
-			  class: 'degree',
+			  class: 'degree_search',
 			  #name: 'degree'
 		    ) %>
 		    <%= f.select(
-		      :with_subject_area_id,
-		      @filterrific.select_options[:with_subject_area_id],
+		      :with_subject_area,
+		      @filterrific.select_options[:with_subject_area],
 		      { include_blank: 'All Fields of Study' },
 			   class: 'fieldFilter',
 			   #name: 'fieldFilter'
@@ -30,71 +30,6 @@
 </header>
 
 
-<!--div class="row row-filters">
-<div class="container">
-
-
-<%= form_for_filterrific @filterrific do |f| %>
-  <div class="row">
-  <div class="span3 chardin_box">
-        <label>Search</label>
-    <%# give the search field the 'filterrific-periodically-observed' class for live updates %>
-    <%= f.text_field(
-      :search_query,
-      class: 'filterrific-periodically-observed'
-    ) %>
-  </div>
-   <div class="span3 chardin_box">
-     <label>Level</label>
-   <%= f.select(
-     :with_level,
-     @filterrific.select_options[:with_level],
-     { include_blank: '- Any -' }
-   ) %>
- </div>
- <div class="span3 chardin_box">
-   <label>Subject Area</label>
- <%= f.select(
-   :with_subject_area_id,
-   @filterrific.select_options[:with_subject_area_id],
-   { include_blank: '- Any -' }
- ) %>
-</div>
-    <div class="span3 chardin_box">
-      <label>School</label>
-    <%= f.select(
-      :with_school_id,
-      @filterrific.select_options[:with_school_id],
-      { include_blank: '- Any -' }
-    ) %>
-  </div>
-    <div class="span3 chardin_box">
-      <label>Delivery Method</label>
-    <%= f.select(
-      :with_delivery,
-      @filterrific.select_options[:with_delivery],
-      { include_blank: '- Any -' }
-    ) %>
-  </div>
-  <div class="span3 chardin_box">
-    <label>Open SUNY+</label>
-    <%= f.select(
-      :with_os,
-      @filterrific.select_options[:with_os],
-      { include_blank: '- Any -' }
-    ) %>
-  </div>
- 
-  <div class="span3 chardin_box">
-    <label>Sorted by</label>
-    <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by]) %>
-  </div>
-  </div>
-
-  <%# add an automated spinner to your form when the list is refreshed %>
-<% end %>
-
-  </div-->
   </div>
   </div>
 <%= render(

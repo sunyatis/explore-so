@@ -27,12 +27,14 @@ gem 'aws-sdk', '~> 3' # amazon connection for images
 gem 'active_admin_theme'
 gem 'active_admin_flat_skin', github: 'ayann/active_admin_flat_skin'
 gem 'high_voltage', '~> 3.1'
-
+gem 'activeadmin_froala_editor'
+gem 'owlcarousel-rails'
+gem "mixitup-rails"
 
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
-  gem 'spring'
+ # gem 'spring'
 end
 gem 'bootstrap-sass'
 
@@ -40,7 +42,7 @@ group :development do
   gem 'better_errors'
 #  gem 'quiet_assets'
   gem 'rails_layout'
-  gem 'spring-commands-rspec'
+  #gem 'spring-commands-rspec'
 end
 group :development, :test do
   gem 'factory_girl_rails'

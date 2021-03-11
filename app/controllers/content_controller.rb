@@ -11,5 +11,8 @@ class ContentController < ApplicationController
   def transfer
     render 'transfer'
   end
-  
+  def index
+    @schools = School.joins(:programs).where("programs.school_id = schools.id and programs.open_suny = 'Open SUNY'").uniq
+    @programs = Program.where(:open_suny => 'Open SUNY').uniq
+  end
 end

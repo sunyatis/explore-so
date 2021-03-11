@@ -1,4 +1,8 @@
-
+<style>
+	#top_rfi{
+		display:none;
+	}
+	</style>
 <main>
 	<section id="program-display">
 		<header aria-label="program-page-banner">
@@ -14,7 +18,7 @@
 					</figcaption>
 				</figure>
 				<div class="actions">
-					<button class="rounded-button large green halo" data-program="">Request Information</button>
+					<button class="rounded-button large green halo" data-program="" data-toggle="modal" data-target="#progModal">Request Information</button>
 					<ul>
 						<li>
 							<a href="<%= @program.apply_now_url %>" class="apply_now" target="_blank">Apply Now!</a>
@@ -29,21 +33,21 @@
 					<li>
 						<dl>
 							<dt>Designated As</dt>
-							<dd>Open SUNY</dd>
+							<dd>Plus Program</dd>
 						</dl>
 					</li>
 					<% elsif @program.open_suny == "SUNY Online" %>
 					<li>
 						<dl>
 							<dt>Designated As</dt>
-							<dd>SUNY Online</dd>
+							<dd>Signature Program</dd>
 						</dl>
 					</li>
 					<%end%>
 					<li>
 						<dl>
 							<dt>Delivery Mode</dt>
-							<dd><%= @program.per_courses_online %>% Online</dd>
+							<dd><%= @program.delivery_method %></dd>
 						</dl>
 					</li>
 					<li>
@@ -71,8 +75,8 @@
 			<header role="program-navigation-banner" id="program-navigation-banner" aria-label="Program Details Navigation Banner">
 				<nav class="row" aria-label="Program Details Navigation Bar"><ul class="hide-mobile" id="program-navigation-list">
 					<li class="selected">Program Overview</li>
-					<li>Online Learning</li>
-					<li>How To Apply</li>
+					<li><a href="#online">Online Learning</a></li>
+					<li><a href="#apply">How To Apply</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -80,7 +84,7 @@
 			<section class="degree-card">
 				<h2>Earn your advanced certificate degree online</h2>
 				<h3>You will earn the same diploma as our on-campus students</h3>
-				<div class="description"><%=@program.description %></div>
+				<div class="description"><%=raw @program.description %></div>
 				<dl class="info-block">
 					<dt>What's a advanced certificate?</dt>
 					<dd>Advanced, or graduate, certificates are designed to provide focused study to support a particular career interest. They vary in number of credits and typically require students to have a bachelor’s degree.</dd>
@@ -107,7 +111,7 @@
 						<% end%>
 						
 						
-						
+<a name="online">				
 						
 								<figure class="accreditation" id="onlinelearning"><img src="/assets/regionally_accredited.png" alt="Middle States Commission on Higher Education">
 									<figcaption>
@@ -122,14 +126,16 @@
 				</div>
 			</aside>
 		</div>
+		
 		<div class="online-learning">
 			<div class="row">
+				<% if @program.open_suny == "Open SUNY" %>
 				<ul>
 					<li>
 						<h2>What's it like to earn this degree online?</h2>
 						<h3>Let's put your mind at ease about online learning</h3>
 					</li>
-					<% if @program.per_courses_online == '100' %>	
+					<% if @program.delivery_method == '100% Online'%>	
 					<li>
 						<dl class="fully-online">
 							<dt>100% Online</dt>
@@ -137,7 +143,7 @@
 						</dl>
 					</li>
 					<% end %>
-					<% if @program.synchronous == TRUE %>	
+					<% if @program.synchronous == TRUE%>	
 					<li>
 						<dl class="asynchronus">
 							<dt>Classes on your schedule</dt>
@@ -145,15 +151,13 @@
 						</dl>
 					</li>
 					<% end %>
-					<% if @program.plas == TRUE %>	
 					<li>
 						<dl class="same-faculty">
 							<dt>Same faculty as on-campus</dt>
 							<dd>The faculty that teach online classes are the same faculty that students learn from on-campus.</dd>
 						</dl>
 					</li>
-					<% end %>
-					<% if @program.concierge == TRUE %>	
+					<% if @program.concierge == TRUE%>	
 					<li>
 						<dl class="concierge">
 							<dt>Personal concierge</dt>
@@ -161,7 +165,7 @@
 						</dl>
 					</li>
 					<% end %>
-					<% if @program.experiential_learning == TRUE %>	
+					<% if @program.experiential_learning == TRUE%>	
 					<li>
 						<dl class="experimental-learning">
 							<dt>Learn by doing</dt>
@@ -169,7 +173,15 @@
 						</dl>
 					</li>
 					<% end %>
-					<% if @program.tutoring == TRUE %>	
+					<% if @program.plas == TRUE%>	
+					<li>
+						<dl class="prior-learning">
+							<dt>Credit for prior knowledge</dt>
+							<dd>Get college credit for experience that you have already gained at school or in the workforce.</dd>
+						</dl>
+					</li>
+					<% end %>
+					<% if @program.tutoring == TRUE%>	
 					<li>
 						<dl class="tutoring">
 							<dt>Access to a personal tutor</dt>
@@ -180,23 +192,82 @@
 					<% if @program.open_suny == "Open SUNY" %>
 					<li>
 						<dl class="open-suny-plus">
-							<dt>Powered by SUNY Online Signature Programs</dt>
-							<dd>In addition to the features listed above, this SUNY Online Signature Program includes 24/7 support, incorporates industry-leading teaching practices, and targets an area of high employer demand in New York State and beyond.</dd>
+							<dt>SUNY Online Plus Program</dt>
+							<dd>In addition to the features listed above, this SUNY Online Plus Program includes 24/7 support, incorporates industry-leading teaching practices, and targets an area of high employer demand in New York State and beyond.</dd>
 						</dl>
 					</li>
 					<% end %>
-					<% if @program.open_suny == "SUNY Online" %>
+					<% if @program.open_suny == "SUNY Online"%>
 					<li>
-						<dl class="suny-online">
+						<dl class="open-suny-plus">
 							<dt>SUNY Online Degree at Scale</dt>
 							<dd>In addition to the features listed above, this SUNY Online Degree at Scale includes 24/7 support, incorporates industry-leading teaching practices, and targets an area of high employer demand in New York State and beyond.</dd>
 						</dl>
 					</li>
 					<% end %>
 					<li>
-						<a class="rounded-button small green halo" data-program="1499269361225">Request Program Information</a>
+						<a class="rounded-button small green halo" data-program="<%=@program.ranku_id%>" data-toggle="modal" data-target="#progModal">Request Program Information</a>
 					</li>
 				</ul>
+				
+<% elsif @program.open_suny == "SUNY Online" %>
+				<ul>
+					<li>
+						<h2>What's it like to earn this degree online?</h2>
+						<h3>Let's put your mind at ease about online learning</h3>
+					</li>	
+					<li>
+						<dl class="fully-online">
+							<dt>100% Online</dt>
+							<dd>This program is presented 100% online. You will not be expecrted to attend any classes on campus.</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class="same-faculty">
+							<dt>Same faculty as on-campus</dt>
+							<dd>The faculty that teach online classes are the same faculty that students learn from on-campus.</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class="tutoring">
+							<dt>SUNY Online Success Coach</dt>
+							<dd>Success Coaches are available for onboarding, networking, and success webinars with coaches and peers. One-on-one application support is available (no application fee).</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class="concierge">
+							<dt>Personal assistance</dt>
+							<dd>Tutoring support is available as well as additional support from our 7-day-a-week helpdesk.</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class="open-suny-plus-diploma">
+							<dt>Program elements</dt>
+							<dd>This program has been identified as a high-need areas and has received regional accreditation. Articulation agreements are in place for easy transfer.</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class="experimental-learning">
+							<dt>Additional elements for specific programs</dt>
+							<dd>-Experiential learning opportunities <br>
+-Industry accreditation</dd>
+						</dl>
+					</li>	
+					
+					
+
+					<li>
+						<dl class="open-suny-plus">
+							<dt>SUNY Online Signature Program</dt>
+							<dd>In addition to the features listed above, this SUNY Online Signature Program includes 24/7 support, incorporates industry-leading teaching practices, and targets an area of high employer demand in New York State and beyond.</dd>
+						</dl>
+					</li>
+					<li>
+						<a class="rounded-button small green halo" data-program="<%=@program.ranku_id%>" data-toggle="modal" data-target="#progModal">Request Program Information</a>
+					</li>
+				</ul>
+				
+				<% end %>
 				<aside aria-label="Student Feedback">
 					<img src="/assets/suny-computer.png" alt="SUNY Online Computer">
 					<blockquote>
@@ -206,9 +277,11 @@
 				</aside>
 			</div>
 		</div>
+		
+<a name="apply"></a>		
 		<div class="apply-overview">
 			<section class="row">
-				<h2>How do I apply?</h2>
+				<h2>How do I enroll?</h2>
 				<h3>Follow these steps to start your application</h3>
 				<ol>
 					<li>Go to the online application</li>
@@ -226,22 +299,22 @@
 					<p id="anyQuestionsDiscription">We'll connect you with someone who can answer all your questions</p>
 					<ul>
 						<li>
-							<button class="rounded-button" title="Ask SUNY about Previous or Transfer Credits" data-program="1499269361225" data-topic="transfer_credits">Previous or Transfer Credits</button>
+							<button class="rounded-button a-unique-class" title="Ask SUNY about Previous or Transfer Credits" data-program="<%=@program.ranku_id%>" data-topic="admission_requirements" data-toggle="modal" data-target="#progModal" value="2" >Previous or Transfer Credits</button>
+	</li>
+						<li>
+							<button class="rounded-button" title="Ask SUNY about Admission Requirements" data-program="<%=@program.ranku_id%>" data-topic="admission_requirements" data-toggle="modal" data-target="#progModal" value="4">Admission Requirements</button>
 						</li>
 						<li>
-							<button class="rounded-button" title="Ask SUNY about Admission Requirements" data-program="1499269361225" data-topic="admission_requirements">Admission Requirements</button>
+							<button class="rounded-button" title="Ask SUNY about Tuition or Financial Aid" data-program="<%=@program.ranku_id%>" data-topic="tuition_financial_aid" data-toggle="modal" data-target="#progModal" value="3">Tuition or Financial Aid</button>
 						</li>
 						<li>
-							<button class="rounded-button" title="Ask SUNY about Tuition or Financial Aid" data-program="1499269361225" data-topic="tuition_financial_aid">Tuition or Financial Aid</button>
+							<button class="rounded-button" title="Ask SUNY about General Program Information" data-program="<%=@program.ranku_id%>" data-topic="general_program_info" data-toggle="modal" data-target="#progModal" value="1">General Program Information</button>
 						</li>
 						<li>
-							<button class="rounded-button" title="Ask SUNY about General Program Information" data-program="1499269361225" data-topic="general_program_info">General Program Information</button>
+							<button class="rounded-button" title="Ask SUNY about Taking Online Classes" data-program="<%=@program.ranku_id%>" data-topic="online_classes" data-toggle="modal" data-target="#progModal" value="5">Taking Online Classes</button>
 						</li>
 						<li>
-							<button class="rounded-button" title="Ask SUNY about Taking Online Classes" data-program="1499269361225" data-topic="online_classes">Taking Online Classes</button>
-						</li>
-						<li>
-							<button class="rounded-button" title="Ask SUNY about Something Not Listed" data-program="1499269361225" data-topic="other">Something Not Listed</button>
+							<button class="rounded-button" title="Ask SUNY about Something Not Listed" data-program="<%=@program.ranku_id%>" data-topic="other" data-toggle="modal" data-target="#progModal" value="6">Something Not Listed</button>
 						</li>
 					</ul>
 				</aside>
@@ -251,11 +324,14 @@
 	<section class="related-programs"></section>
 	<section class="rfi-banner">
 		<h4>Interested in learning more about this program?</h4>
-		<button class="rounded-button large white blue-halo" data-program="1499269361225">Request More Information</button>
+		<button class="rounded-button large white blue-halo" data-program="<%=@program.ranku_id%>" data-toggle="modal" data-target="#progModal">Request More Information</button>
 	</section>
 </section>
 		</main>
+		
 
-
-
+<%= render(
+  partial: 'programs/prog_modal'#,
+ #:locals => {:questions => @questions }
+) %>
 

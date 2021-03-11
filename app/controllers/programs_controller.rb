@@ -8,8 +8,9 @@ def index
  select_options: {
           sorted_by: Program.options_for_sorted_by,
          with_school_id: School.options_for_select,
-         with_level: Program.options_for_level,
-         with_subject_area_id: SubjectArea.options_for_select,
+         with_prog_level: Program.options_for_prog_level,
+        # with_subject_area_id: SubjectArea.options_for_select,
+         with_subject_area: Program.options_for_subject_area,
          with_prog_title: Program.options_for_prog_title,
          with_delivery: Program.options_for_delivery_method,
          with_os: Program.options_for_os,
@@ -26,7 +27,7 @@ def index
 #              default_filter_params: {},
 #              available_filters: [],
                   ) or return
-                  @programs = @filterrific.find.page(params[:page])
+                  @programs = @filterrific.find.order("programs.open_suny desc, programs.prog_title asc ").page(params[:page])
                       # Respond to html for initial page load and to js for AJAX filter updates.
                       respond_to do |format|
                         format.html
@@ -40,6 +41,8 @@ def index
                       # There is an issue with the persisted param_set. Reset it.
                   #    puts "Had to reset filterrific params: #{ e.message }"
                    #   redirect_to(reset_filterrific_url(format: :html)) and return  
+                   
+  
   end
 
 
@@ -52,8 +55,8 @@ def index
    select_options: {
             sorted_by: Program.options_for_sorted_by,
            with_school_id: School.options_for_select,
-           with_level: Program.options_for_level,
-           with_subject_area_id: SubjectArea.options_for_select,
+           with_prog_level: Program.options_for_prog_level,
+          # with_subject_area_id: SubjectArea.options_for_select,
            with_prog_title: Program.options_for_prog_title,
            with_delivery: Program.options_for_delivery_method,
            with_os: Program.options_for_os,
@@ -87,7 +90,7 @@ def index
   end
   def open_suny_programs
     @schools = School.joins(:programs).where("programs.school_id = schools.id and programs.open_suny = 'Yes'").uniq
-    @programs = Program.where(:open_suny => 'Yes').uniq
+    @programs = Program.where(:open_suny => 'Open SUNY').uniq
   end
   def subject_areas
      @subject_areas = SubjectArea.all
@@ -108,7 +111,15 @@ def index
         render 'edit'
       end
   end
-  def show
+  
+
+  def show   
+    puts "hello"
+    puts params[:question]
+    @question = params[:question]
+
+    return  @question
+
 
   end
  # def get_school_name(id)
@@ -120,7 +131,7 @@ def index
   private
 
     def program_params
-      params.require(:program).permit(:prog_title, :description, :subjectarea_id, :prog_level, :levelabb_id, :school_id, :duration, :delivery_method, :prerequisites, :program_url, :registration_url, :open_suny, :per_courses_online, :synchronous, :synchronous_text, :tutoring, :tutoring_name, :tutoring_phone, :tutoring_email, :tutoring_url, :helpdesk, :helpdesk_phone, :helpdesk_email, :helpdesk_url, :concierge, :concierge_phone, :concierge_name, :concierge_email, :experiential_learning, :experiential_text, :plas, :plas_text, :accelerated, :accelerated_text, :summary, :level_expanded, :sed, :apply_now_url, :cat_d)
+      params.require(:program).permit(:prog_title, :description, :subject_area, :subject_area_2, :subject_area_3, :prog_level, :levelabb_id, :school_id, :duration, :delivery_method, :prerequisites, :program_url, :registration_url, :open_suny, :per_courses_online, :synchronous, :synchronous_text, :tutoring, :tutoring_name, :tutoring_phone, :tutoring_email, :tutoring_url, :helpdesk, :helpdesk_phone, :helpdesk_email, :helpdesk_url, :concierge, :concierge_phone, :concierge_name, :concierge_email, :experiential_learning, :experiential_text, :plas, :plas_text, :accelerated, :accelerated_text, :summary, :level_expanded, :sed, :apply_now_url, :cat_id)
     end
     
    

@@ -15,5 +15,7 @@ class ApplicationController < ActionController::Base
   def user_for_paper_trail    #paper_trail gem
     user_signed_in? ? current_user.try(:id) : 'Unknown user'
   end
+  
+
 
 end

@@ -3,23 +3,24 @@ class Program < ActiveRecord::Base
   
   belongs_to :school, :foreign_key => 'school_id', :class_name => "School"
   belongs_to :level_abb, :foreign_key => 'levelabb_id', :class_name => "LevelAbb"
-  belongs_to :subject_area, :foreign_key => 'subjectarea_id' , :class_name => "SubjectArea"
+  #belongs_to :subject_area, :foreign_key => 'subjectarea_id' , :class_name => "SubjectArea"
   belongs_to :category, :foreign_key => 'cat_id', :class_name => "Category"
  
   has_paper_trail
  
  
   # default for will_paginate
-    paginates_per 10
+   paginates_per 700
   
    filterrific default_filter_params: { :sorted_by => 'prog_title_asc' },
                available_filters: [
                  :sorted_by,
                  :search_query,
                  :with_school_id,
-                 :with_level,
+                 :with_prog_level,
                  :with_subject,
-                 :with_subject_area_id,
+                 #:with_subject_area_id,
+                 :with_subject_area,
                  :with_prog_title,
                  :with_delivery,
                  :with_os,
@@ -43,17 +44,18 @@ class Program < ActiveRecord::Base
      # replace "*" with "%" for wildcard searches,
      # append '%', remove duplicate '%'s
      terms = terms.map { |e|
-       (e.gsub('*', '%') + '%').gsub(/%+/, '%')
+       ('%' + e.gsub('*', '%') + '%').gsub(/%+/, '%')
      }
      # configure number of OR conditions for provision
      # of interpolation arguments. Adjust this if you
      # change the number of OR conditions.
-     num_or_conditions = 1
+     num_or_conditions = 2
 
      where(
        terms.map {
          or_clauses = [
-           "LOWER(programs.prog_title) LIKE ?"
+           "LOWER(programs.prog_title) LIKE ?",
+           "LOWER(programs.description) LIKE ?"
          ].join(' OR ')
          "(#{ or_clauses })"
        }.join(' AND '),
@@ -78,12 +80,12 @@ class Program < ActiveRecord::Base
    scope :with_school_id, lambda { |school_ids|
      where(:school_id => [*school_ids])
    }
-   scope :with_level, lambda { |level_expandeds|
-     where(:level_expanded => [*level_expandeds])
+   scope :with_prog_level, lambda { |prog_levels|
+     where(:prog_level => [*prog_levels])
    }
-   scope :with_subject_area_id, lambda { |subjectarea_ids|
-     where(:subjectarea_id => [*subjectarea_ids])
-   }
+#   scope :with_subject_area_id, lambda { |subjectarea_ids|
+#     where(:subjectarea_id => [*subjectarea_ids])
+#   }
     scope :with_prog_title, lambda { |prog_titles|
       where(:prog_title => [*prog_titles])
     }
@@ -114,6 +116,34 @@ class Program < ActiveRecord::Base
     scope :with_tutoring, lambda { |tutorings|
       where(:tutoring => [*tutorings])
     }
+    scope :with_subject_area, ->(subjectarea){ 
+       return nil  if subjectarea.blank?
+       puts subjectarea
+       # condition query, parse into individual keywords
+       terms = subjectarea.split(/\s+/)
+       puts terms
+  #    # configure number of OR conditions for provision
+  #    # of interpolation arguments. Adjust this if you
+  #    # change the number of OR conditions.
+      num_or_conditions = 3
+      
+      terms = terms.map { |e|
+        (e.gsub('*', '%') + '%').gsub(/%+/, '%')
+      }
+  puts terms
+      where(
+       terms.map { |e|
+         or_clauses = [
+            "programs.subject_area LIKE ?", 
+             "programs.subject_area_2 LIKE ?", 
+             "programs.subject_area_3 LIKE ?"
+          ].join(' OR ')
+          "(#{ or_clauses })"
+        }.join(' AND '),
+        *terms.map { |e| [e] * num_or_conditions }.flatten
+      )
+    }
+    
     scope :with_category, ->(categories){ 
        return nil  if categories.blank?
 
@@ -147,9 +177,9 @@ class Program < ActiveRecord::Base
        ['School', 'school_id_asc'],
      ]
    end
-   def self.options_for_level
+   def self.options_for_prog_level
      #order('id').map { |e| [e.level_expanded, e.id] }.uniq
-     Program.pluck(:level_expanded).uniq
+     Program.pluck(:prog_level).uniq
    end
    def self.options_for_prog_title
      #order('id').map { |e| [e.level_expanded, e.id] }.uniq
@@ -207,6 +237,54 @@ class Program < ActiveRecord::Base
        ['No', 'f'],
     ]
   end
+  def self.options_for_subject_area
+    [
+       ['Arts & Humanities', 'arts'],
+       ['Behavioral Science', 'behavioral_science'],
+       ['Business', 'business'],
+       ['Computer Science', 'computer-science'],
+       ['Criminal Justice & Law', 'criminal-justice-law'],
+       ['Education', 'education'],
+       ['General Studies', 'bachelor-of-general-studies'],
+       ['Health Sciences', 'health-sciences'],
+       ['IT & Technology', 'information_technology'],
+       ['Journalism & Communications', 'journalism--communications'],
+       ['Liberal Arts', 'arts.liberal'],
+       ['Public Administration & Community Service', 'public-admin--community-service'],
+       ['Science & Technology', 'science--technology'],
+       ['Social Sciences', 'social-sciences'],
+       ['Travel & Tourism', 'travel--tourism'],
+       
+    ]
+    end
+    def self.options_for_prog_level
+      [
+         ['Advanced Certificate', 'advanced-certificate'],
+         ['Associate', 'associate'],
+         ['Bachelor', 'bachelor'],
+         ['Certificate', 'certificate'],
+         ['Doctorate', 'doctorate'],
+         ['Master', 'master'],     
+      ]
+    end
+      def self.options_for_delivery_method
+        [
+           ['100%', '100% Online'],
+           ['75%', '75% Online'],
+           ['50', '50% Online'],
+        ]
+      
+  end
+    def self.options_for_open_suny
+      [
+         ['SO Signature', 'SUNY Online'],
+         ['SO Plus', 'Open SUNY'],
+         ['No', 'No'],
+      ]
+    
+
+    
+end
 
   
 

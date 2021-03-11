@@ -1,3 +1,9 @@
+<style>
+	#top_rfi{
+		display:none;
+	}
+	</style>
+
 <header class="search-filter" aria-label="Degrees Filter Banner">
 	<nav class="search-row" aria-label="Degrees Filter Navigation">
 
@@ -13,30 +19,35 @@
       <%= f.select(
         :with_catalog_id,
         @filterrific.select_options[:with_catalog_id],
-        { include_blank: '- Semester -' }
+        { include_blank: '- Semester -' },
+		class: 'cat_search course_select'
       ) %>
 
     <%= f.select(
       :with_school_id,
       @filterrific.select_options[:with_school_id],
-      { include_blank: '- School -' }
+      { include_blank: '- School -' },
+	  class: 'school_search course_select'
     ) %>
     <%= f.select(
       :with_credit,
       @filterrific.select_options[:with_credit],
-      { include_blank: '- Credits -' }
+      { include_blank: '- Credits -' },
+	  class: 'credit_search course_select'
     ) %>
 
    <%= f.select(
      :with_course_area,
      @filterrific.select_options[:with_course_area],
-     { include_blank: '- Subject Area -' }
+     { include_blank: '- Subject Area -' },
+	 class: 'sub_search course_select'
    ) %>
 
   <%= f.select(
     :with_level,
     @filterrific.select_options[:with_level],
-    { include_blank: '- Level -' }
+    { include_blank: '- Level -' },
+	class: 'level_search course_select'
   ) %>
 
  
@@ -56,13 +67,14 @@
   <%= f.select(
     :with_generaleducation_id,
     @filterrific.select_options[:with_generaleducation_id],
-    { include_blank: '- Gen Ed -' }
+    { include_blank: '- Gen Ed -' },
+	class: 'gen_search course_select'
   ) %>
 
       <!--%= f.select(:with_generaleducation_id, @filterrific.select_options[:with_generaleducation_id], { include_hidden: false}, title: 'Gen Ed', multiple: true)%-->
 	  
 
-     <%= f.text_field(:with_start_date, class: 'js-datepicker', placeholder: 'Start After' ) %>
+     <%= f.text_field(:with_start_date, class: 'js-datepicker', placeholder: 'Start After', class: 'date_search'  ) %>
      <%= f.hidden_field :with_start_date_gte %>
 
   <!--div class="span3 chardin_box">

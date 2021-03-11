@@ -1,0 +1,222 @@
+		<div class="jumbotron jumbotron-fluid">
+
+			   <section class="row-search">
+		   <h1>Advance your career with an online degree from SUNY</h1>
+		   <h2>With over 500 online degrees to choose from, SUNY provides access to a quality education in flexible formats for working adults like you. Start searching now.</h2>
+		   
+		   
+		   <form action="<%= '/programs' %>">
+			   <select aria-label="Search Degree Filter" id="degree">
+				   <option value="" selected="">Degree Level</option>
+				   <option value="filterrific[with_prog_level]=certificate">Certificate</option>
+				   <option value="filterrific[with_prog_level]=associate">Associate</option>
+				   <option value="filterrific[with_prog_level]=bachelor">Bachelor's</option>
+				   <option value="filterrific[with_prog_level]=master">Master's</option>
+				   <option value="filterrific[with_prog_level]=advanced-certificate">Advanced Certificate</option>
+				   <option value="filterrific[with_prog_level]=doctorate">Doctorate</option>
+			   </select>
+			   <input type="text" id="s" placeholder="What do you want to learn?" aria-label="Search Open SUNY Degree Programs">
+			   <input type="button" onclick="myFunction()" class="home rounded-button green rounded-button small" value="Search">
+		   </form>
+		  </section>
+
+		  </div>
+
+
+<section id="home">
+<div class="row carousel">
+
+<h2 class="owl">Choose from among the 64 institutions of The State University of New York</h2>
+	
+	<div id="owl-demo" class="owl-carousel owl-theme">
+		
+		<% @schools.each do |school| %>
+		 <div class="item"><%= link_to image_tag(school.image.url(:large), :align=> "center" ), "/programs?filterrific[with_school_id]=#{school.id}"  %></div>
+<%end%>
+	</div>
+</div>
+<div class="field-grid">
+<div class="row" id="field-grid-list">
+	<select id="level_filter" class="show-mobile" aria-label="Filter Degree Fields By Degree Level">
+	<option value="all" selected="">All Degrees</option>
+	<option value=".certificate">Certificate</option>
+	<option value=".associate">Associate</option>
+	<option value=".bachelor">Bachelor's</option>
+	<option value=".master">Master's</option>'
+	<option value=".advanced-certificate">Advanced Certificate</option>
+	<option value=".doctorate">Doctorate</option>
+	</select>
+	
+<label></label>
+<div class="hide-mobile" style="width: 100%;">  
+  <button class="filter" data-filter="all">All Degrees</button>
+  <button class="filter" data-filter=".certificate">Certificate</button>
+  <button class="filter" data-filter=".associate">Associate</button>
+  <button class="filter" data-filter=".bachelor">Bachelor's</button>
+  <button class="filter" data-filter=".master">Master's</button>
+  <button class="filter adv" data-filter=".advanced-certificate">Advanced Certificate</button>
+  <button class="filter" data-filter=".doctorate">Doctorate</button>
+</div>  
+  
+</div>
+<div class="row">
+<ul id="Container" class="grid">
+  <li class="mix level master associate bachelor advanced-certificate" data-myorder="1"><a title="Explore more SUNY Online Programs in Arts &amp; Humanities" data-field="arts" tabindex="0" href="/programs?filterrific[with_subject_area]=arts">
+			<figure>
+				<img src="/assets/fieldgrid/54b8256269549982c41c6f5c.svg" alt="Arts &amp; Humanities Degrees">
+				<figcaption>Arts &amp; Humanities</figcaption>
+			</figure>
+		</a></li>
+  <li class="mix level bachelor associate master advanced-certificate certificate" data-myorder="2"><a title="Explore more SUNY Online Programs in Behavioral Science" data-field="behavioral_science" tabindex="0" href="/programs?filterrific[with_subject_area]=behavioral_science">
+			<figure>
+				<img src="/assets/fieldgrid/53d9ad137a3adc03002d1108.svg" alt="Behavioral Science Degrees">
+				<figcaption>Behavioral Science</figcaption>
+			</figure>
+		</a></li>
+		<li class="mix level bachelor associate master advanced-certificate certificate" style="display: inline-block;" data-bound="">
+			<a title="Explore more SUNY Online Programs in Business" data-field="business" tabindex="0" href="/programs?filterrific[with_subject_area]=business">
+				<figure>
+					<img src="/assets/fieldgrid/53d9ad137a3adc03002d1106.svg" alt="Business Degrees">
+					<figcaption>Business</figcaption>
+				</figure>
+			</a>
+		</li>
+		<li class="mix level doctorate associate master advanced-certificate bachelor" style="display: inline-block;" data-bound="">
+			<a title="Explore more SUNY Online Programs in Computer Science" data-field="computer-science" tabindex="0" href="/programs?filterrific[with_subject_area]=computer-science">
+				<figure>
+					<img src="/assets/fieldgrid/53d9ad137a3adc03002d1104.svg" alt="Computer Science Degrees">
+					<figcaption>Computer Science</figcaption>
+				</figure>
+			</a>
+		</li>
+		<li class="mix level certificate associate advanced-certificate bachelor" style="display: inline-block;" data-bound="">
+			<a title="Explore more SUNY Online Programs in Criminal Justice &amp; Law" data-field="criminal-justice-law" tabindex="0" href="/programs?filterrific[with_subject_area]=criminal-justice-law">
+				<figure>
+					<img src="/assets/fieldgrid/53d9ad137a3adc03002d110a.svg" alt="Criminal Justice &amp; Law Degrees">
+					<figcaption>Criminal Justice &amp; Law</figcaption>
+				</figure>
+			</a>
+		</li>
+		<li class="mix level doctorate certificate associate master bachelor advanced-certificate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Education" data-field="education" tabindex="0" href="/programs?filterrific[with_subject_area]=education"><figure><img src="/assets/fieldgrid/53d9ad137a3adc03002d1107.svg" alt="Education Degrees"><figcaption>Education</figcaption></figure></a></li>
+		
+		<li class="mix level advanced-certificate certificate associate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in General Studies" data-field="bachelor-of-general-studies" tabindex="0" href="/programs?filterrific[with_subject_area]=bachelor-of-general-studies"><figure><img src="/assets/fieldgrid/55020b8cc78f7cd2b39725c7.svg" alt="General Studies Degrees"><figcaption>General Studies</figcaption></figure></a></li>
+		
+		<li class="mix level doctorate associate master bachelor advanced-certificate certificate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Health Sciences" data-field="health-sciences" tabindex="0" href="/programs?filterrific[with_subject_area]=health-sciences"><figure><img src="/assets/fieldgrid/55020b8cc78f7cd2b39725cb.svg" alt="Health Sciences Degrees"><figcaption>Health Sciences</figcaption></figure></a></li>
+		
+		<li class="mix level doctorate certificate associate master bachelor advanced-certificate" style="display: inline-block;" data-bound=""><a title="Explore more Open SUNY Programs in IT &amp; Technology" data-field="information_technology" tabindex="0" href="/programs?filterrific[with_subject_area]=information_technology"><figure><img src="/assets/fieldgrid/53d9ad137a3adc03002d1102.svg" alt="IT &amp; Technology Degrees"><figcaption>IT &amp; Technology</figcaption></figure></a></li>
+		
+		<li class="mix level bachelor advanced-certificate master associate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Journalism &amp; Communications" data-field="journalism--communications" tabindex="0" href="/programs?filterrific[with_subject_area]=journalism--communications"><figure><img src="/assets/fieldgrid/55020b8cc78f7cd2b39725cc.svg" alt="Journalism &amp; Communications Degrees"><figcaption>Journalism &amp; Communications</figcaption></figure></a></li>
+		
+		<li class="mix level certificate bachelor master associate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Liberal Arts" data-field="arts.liberal" tabindex="0" href="/programs?filterrific[with_subject_area]=arts.liberal"><figure><img src="/assets/fieldgrid/53d9ad137a3adc03002d1101.svg" alt="Liberal Arts Degrees"><figcaption>Liberal Arts</figcaption></figure></a></li>
+		
+		<li class="mix level certificate associate master bachelor advanced-certificate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Public Administration &amp; Community Service" data-field="public-admin--community-service" tabindex="0" href="/programs?filterrific[with_subject_area]=public-admin--community-service">
+				<figure>
+					<img src="/assets/fieldgrid/55020b8cc78f7cd2b39725ce.svg" alt="Public Administration &amp; Community Service Degrees"><figcaption>Public Administration &amp; Community Service</figcaption></figure></a></li>
+					
+					<li class="mix level doctorate associate master advanced-certificate bachelor" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Science &amp; Technology" data-field="science--technology" tabindex="0" href="/programs?filterrific[with_subject_area]=science--technology"><figure><img src="/assets/fieldgrid/57a371f09cdfdde903f52645.svg" alt="Science &amp; Technology Degrees"><figcaption>Science &amp; Technology</figcaption></figure></a></li>
+					
+					<li class="mix level certificate bachelor advanced-certificate associate master" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Social Sciences" data-field="social-sciences" tabindex="0" href="/programs?filterrific[with_subject_area]=social-sciences"><figure><img src="/assets/fieldgrid/55020b8cc78f7cd2b39725cf.svg" alt="Social Sciences Degrees"><figcaption>Social Sciences</figcaption></figure></a></li>
+					
+					<li class="mix level bachelor certificate associate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Travel &amp; Tourism" data-field="travel--tourism" tabindex="0" href="/programs?filterrific[with_subject_area]=travel--tourism"><figure><img src="/assets/fieldgrid/57a371f09cdfdde903f52644.svg" alt="Travel &amp; Tourism Degrees"><figcaption>Travel &amp; Tourism</figcaption></figure></a></li>
+		
+
+  <div class="gap"></div>
+  <div class="gap"></div>
+</ul>		
+</div>
+</div>		
+	
+
+		
+		<section class="info-block row">
+			<h2 class="info-block-h2">Are you a working adult with kids or a tight schedule?</h2>
+			<h3 class="info-block-h3">If so, online learning is perfect for you</h3>
+			<ul>
+				<li>
+					<figure>
+						<img src="/assets/synchronous.png" alt="Synchronous Classes">
+						<figcaption>
+							<h2>Take classes on your schedule</h2>
+							<p>We know you're busy and that's why many of our classes can be taken whenever and wherever you are. There is no need to change your work schedule to attend most courses.</p>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="/assets/faculty.png" alt="Same Faculty">
+						<figcaption>
+							<h2>Learn from on-campus faculty</h2>
+							<p>The faculty teaching online courses at Open SUNY schools are the exact same award winning professors that teach classes to our on-campus students.</p>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="/assets/prior_learning_assessment.png" alt="Prior Learning Assessment">
+						<figcaption>
+							<h2>Credit for Prior Knowledge</h2>
+							<p>Many of our degrees offer credit based on your existing knowledge because we believe you should get credit for experience that you have already gained at school or in the workforce.</p>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
+		</section>
+		<section class="large-testimonial">
+			<section class="row">
+				<div id="owl-demo2" class="owl-carousel owl-theme">
+			<!--div class="item">
+				<figure>
+					<img src="//d2brwuimzb4ax4.cloudfront.net/sites/suny/testimonials/kimberly_lane.png" alt="Kimberly Lane">
+					<figcaption>
+						<blockquote>
+							<p>I was a bit apprehensive at first because I knew online classes require that you motivate yourself, but after this experience, I will always choose online if possible. I think there are so many benefits.</p>
+							<footer>
+								<cite>Kimberly Lane, Clinical Laboratory Technician Online Program, Class of 2013</cite>
+							</footer>
+						</blockquote>
+					</figcaption>
+				</figure>
+			</div-->
+			<!--div class="item">
+				<figure>
+					<img src="/assets/mitkish.png" alt="Christine Mitkish">
+					<figcaption>
+						<blockquote>
+							<p>I recently returned to college after a 30-year absence, and I’ll admit it was pretty scary. I have a fulltime job and a son in school, so I had a lot on my plate. </p>
+							<footer>
+								<cite>Christine Mitkish, Online Program, 2020?</cite>
+							</footer>
+						</blockquote>
+					</figcaption>
+				</figure>
+			</div-->
+			<div class="item">
+				<figure>
+					<img src="/assets/alexis.png" alt="Alexis Iglesias- Ortiz">
+					<figcaption>
+						<blockquote>
+							<p>Knowing that I have someone in my corner who gets back to me as soon as possible, has really helped me deal with the difficulties surrounding not only being in college but pursuing my degree online.</p>
+							<footer>
+								<cite>Alexis Iglesias- Ortiz, Online Program, 2020?</cite>
+							</footer>
+						</blockquote>
+					</figcaption>
+				</figure>
+			</div>
+			<!--div class="item">
+				<figure>
+					<img src="/assets/lila.png" alt="Lila Ijaz">
+					<figcaption>
+						<blockquote>
+							<p>About a year ago I decided that I wanted to go for my MBA degree. I was so confused, and I didn’t want to waste my time applying to the wrong ones. Thankfully I came across SUNY Online...I am so glad and grateful that I took that step. </p>
+							<footer>
+								<cite>Lila Ijaz, MBA student SUNY Oswego, 2020?</cite>
+							</footer>
+						</blockquote>
+					</figcaption>
+				</figure>
+			</div>
+			</div-->
+			</section>
+		</section>
+	</section>

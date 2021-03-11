@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_15_143744) do
+ActiveRecord::Schema.define(version: 2021_02_24_160621) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -119,47 +119,39 @@ ActiveRecord::Schema.define(version: 2020_10_15_143744) do
     t.text "approver_comments"
   end
 
+  create_table "program_subjectareas", id: false, force: :cascade do |t|
+    t.bigint "program_id"
+    t.bigint "subject_area_id"
+    t.index ["program_id"], name: "index_program_subjectareas_on_program_id"
+    t.index ["subject_area_id"], name: "index_program_subjectareas_on_subject_area_id"
+  end
+
   create_table "programs", force: :cascade do |t|
     t.text "prog_title"
     t.text "description"
-    t.bigint "subjectarea_id"
+    t.text "subjectarea_id"
     t.text "prog_level"
-    t.bigint "levelabb_id"
     t.bigint "school_id"
     t.text "duration"
     t.text "delivery_method"
-    t.text "prerequisites"
-    t.text "program_url"
-    t.text "registration_url"
     t.text "open_suny"
-    t.text "per_courses_online"
     t.boolean "synchronous"
-    t.text "synchronous_text"
     t.boolean "tutoring"
-    t.text "tutoring_name"
-    t.text "tutoring_phone"
-    t.text "tutoring_email"
-    t.text "tutoring_url"
-    t.boolean "helpdesk"
-    t.text "helpdesk_phone"
-    t.text "helpdesk_email"
-    t.text "helpdesk_url"
     t.boolean "concierge"
-    t.text "concierge_phone"
-    t.text "concierge_name"
-    t.text "concierge_email"
     t.boolean "experiential_learning"
-    t.text "experiential_text"
     t.boolean "plas"
-    t.text "plas_text"
     t.boolean "accelerated"
-    t.text "accelerated_text"
-    t.text "summary"
     t.text "level_expanded"
     t.bigint "sed"
     t.text "apply_now_url"
     t.text "slug"
     t.bigint "cat_id"
+    t.text "ranku_id"
+    t.boolean "active", default: true
+    t.boolean "asynchronous"
+    t.string "subject_area"
+    t.string "subject_area_2"
+    t.string "subject_area_3"
     t.index ["slug"], name: "idx_58447_index_programs_on_slug", unique: true
   end
 
@@ -182,6 +174,7 @@ ActiveRecord::Schema.define(version: 2020_10_15_143744) do
     t.bigint "image_file_size"
     t.datetime "image_updated_at"
     t.string "campus_type"
+    t.text "registrar_phone"
     t.index ["slug"], name: "idx_58429_index_schools_on_slug", unique: true
   end
 
@@ -196,6 +189,7 @@ ActiveRecord::Schema.define(version: 2020_10_15_143744) do
 
   create_table "subject_areas", force: :cascade do |t|
     t.text "name"
+    t.index ["name"], name: "index_subject_areas_on_name"
   end
 
   create_table "users", force: :cascade do |t|

@@ -2,7 +2,7 @@
 
 <nav class="navbar" aria-label="Main Navigation Bar">
 	<div class="row">
-		 <a href="https://open.suny.edu/"> <img src="https://online.suny.edu/wp-content/themes/yootheme/cache/SUNY-Online-Logo-Sig-8fc48323.png" width="65px" class="main-logo" title="State University of New York System"></a>
+		 <a href="https://open.suny.edu/"> <img src="/assets/SO_logo.png" width="65px" class="main-logo" title="State University of New York System"></a>
 	    <div id="navbar" class="collapse navbar-collapse in" >		
 	      <ul id="menu-list" class="nav navbar-nav mobile-nav collapse in">
 	        <%= render 'layouts/navigation_links' %>
@@ -10,13 +10,21 @@
 	    </div>
 		<ul class="right navbar-container" id="desktop-header-nav">
 		
-			<!--li><a href="https://open.suny.edu" title="Have questions about a specific Open SUNY program? Request information here!" class="rounded-button small green" tabindex="0">Request Info</a></li-->
+			<li><!-- Trigger the modal with a button -->
+<button type="button" id="top_rfi" class="rounded-button small green" data-toggle="modal" data-target="#myModal">Request Info</button>
+			</li>
+
 			<li class="mobile-menu">
-		        <button type="button" class="hamburger" data-toggle="collapse" data-target=".mobile-nav">
-		          <span class="sr-only">Toggle navigation</span>
+		        <button type="button"  data-toggle="collapse" data-target=".mobile-nav" id="ChangeToggle">
+		           <div id="navbar-hamburger" >
+				  <span class="sr-only">Toggle navigation</span>
 		          <span class="icon-bar"></span>
 		          <span class="icon-bar"></span>
 		          <span class="icon-bar"></span>
+				   </div>
+				  <div id="navbar-close" class="hidden">
+				      <span class="glyphicon glyphicon-remove"></span>
+				  </div>
 		        </button>
 			</li>
 		</ul>

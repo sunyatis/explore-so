@@ -1,4 +1,8 @@
-
+<style>
+	#top_rfi{
+		display:none;
+	}
+	</style>
 <main>
 	<section id="course-display">
 		<header aria-label="course-page-banner">
@@ -9,7 +13,7 @@
 					</div>
 				<figcaption>
 					<h1><%= @course.title %></h1>
-					<h2><%= @course.prefix %>-<%= @course.code %>-<%= @course.section %></h2>
+					<h2 class="codeh2"><%= @course.prefix %>-<%= @course.code %>-<%= @course.section %></h2>
 					<h3><%= @course.school.name %></h3>
 				</figcaption></figure>
 					<div class="actions">
@@ -82,7 +86,7 @@
 							</section>
 							<aside class="school-card" aria-label="University Details">
 								<div class="wrap one">
-									<div class="info">
+									<div class="course-info">
 										<figure>
 											<%= image_tag(@course.school.image.url(:large), :align=> "center" ) %>
 											<figcaption>

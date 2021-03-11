@@ -1,5 +1,6 @@
-<div id="filterrific_results" class="row">
-  <div class="container">
+<div id="filterrific_results">
+
+<section class="degree-results row">
   	<div class="pull-right resets"  data-intro="Reset the filter settings to defaults." data-position="bottom">
     	<%= link_to('Reset filters', reset_filterrific_url, :class => 'reset_link') %>
 
@@ -13,16 +14,13 @@
           <%= render_filterrific_spinner %>
         </span>
 	 </div>
-   </div>
-<section class="degree-results row">
-
 	<ul class="results">
 		<div class="info-title">
 			<dl>
 				<dt>
-					<%= image_tag('/assets/Blue_Ribbon.svg', :alt => "SUNY Online Signature Programs", :width => '19px', :height => '27px', :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'SUNY Online Signature Programs') %> 
+					<%= image_tag('/assets/Blue_Ribbon.png', :alt => "SUNY Online Signature Programs", :width => '19px', :height => '27px', :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'SUNY Online Signature Programs') %> 
 					<a href="/content/about">
-						<span>Signature Program</span>
+						<span>Featured</span>
 					</a>
 				</dt>
 				<dd>
@@ -62,19 +60,19 @@
 					<div class="info">
 						<dl>
 							<dt>
-								
+							
 							</dt>
 							<dd>
 						   	 <% if programs.open_suny == "Open SUNY" %>
-						          <%= image_tag('/assets/Blue_Ribbon.svg', :alt => "SUNY Online Signature Programs", :width => '20px', :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'SUNY Online Signature Programs') %> 
+						          <%= image_tag('/assets/Blue_Ribbon_bl.png', :alt => "SUNY Online Plus", :width => '20px', :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'SUNY Online Plus') %> 
 						   	   <% elsif programs.open_suny == "SUNY Online" %>
-						   	    <%= image_tag('/assets/Blue_Ribbon_SO.svg', :alt => "SUNY Online Degree at Scale", :width => '20px', :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'SUNY Online Degree at Scale') %> 
+						   	    <%= image_tag('/assets/Blue_Ribbon_yw.png', :alt => "SUNY Online Signature Program", :width => '20px', :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'SUNY Online Signature Program') %> 
 						   	       <% end %>
 							</dd>
 						</dl>
 						<dl>
 							<dt>Delivery Mode</dt>
-							<dd class="extra-margin-delivery"><%= programs.per_courses_online %>% Online</dd>
+							<dd class="extra-margin-delivery"><%= programs.delivery_method %></dd>
 						</dl>
 						<dl>
 							<dt>Degree Type</dt>
@@ -86,7 +84,13 @@
 						</dl>
 					</div>
 				</div>
-
+<div class="mobile-logo">
+  	 <% if programs.open_suny == "Open SUNY" %>
+         <%= image_tag('/assets/Blue_Ribbon.svg', :alt => "SUNY Online Plus", :width => '20px', :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'SUNY Online Plus') %> <span>SUNY Online Plus</span>
+  	   <% elsif programs.open_suny == "SUNY Online" %>
+  	    <%= image_tag('/assets/Blue_Ribbon_SO.svg', :alt => "SUNY Online Signature Program", :width => '20px', :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'SUNY Online Signature Program') %> <span>SUNY Online Signature Program</span>
+  	       <% end %>
+	   </div>
 			</div>
 
 	</li> <% end %>
@@ -94,103 +98,11 @@
 
 </section> 
 
- <!--div class="container results">
 
-  <div class="divTable programtable">
-  <div class="divTableBody">
-	 <div class="divTableRow resultheader">
-	 	<div class="divTableHead"></div>
-	 	<div class="divTableHead"><%= filterrific_sorting_link(@filterrific, :prog_title) %></div>
-		<div class="divTableHead featured"><a href="/content/about">Signature Program</a></div>
-	 	<div class="divTableHead delivery_mode">Delivery Mode</div>
-	 	<div class="divTableHead degree_type">Degree Type</div>
-	 	<div class="divTableHead credits">Credits</div>
-	 </div>
-   <% @programs.each do |programs| %>
-	 <div class="divTableRow result">
-	 <div class="divTableCell school_image"><%= image_tag(programs.school.image.url(:small), :align=> "center", :width=> "55px") %></div>
-	 <div class="divTableCell prog_title"><h2><%= link_to programs.prog_title, programs%></h2><h3><%= programs.school.name %></h3></div>
-     <div class="divTableCell ribbon">
-	 <% if programs.open_suny == "Open SUNY" %>
-       <%= image_tag('/assets/Blue_Ribbon.svg', :alt => "SUNY Online Signature Programs", :width => '20px', :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'SUNY Online Signature Programs') %> 
-	   <% elsif programs.open_suny == "SUNY Online" %>
-	    <%= image_tag('/assets/Blue_Ribbon_SO.svg', :alt => "SUNY Online Degree at Scale", :width => '20px', :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'SUNY Online Degree at Scale') %> 
-	       <% end %>
-	  </div>
-	 <div class="divTableCell delivery_mode"><%= programs.per_courses_online %>% Online</div>
-	 <div class="divTableCell degree_type"><%= programs.level_expanded  %></div>
-	 <div class="divTableCell credits"><span><%= programs.duration %></span></div>
-	 </div>
-    <% end %>
- </div-->
  </div>
   
  </div>
-  <div class="text-center"><%= paginate @programs %></div>
+
  </div>
 
 
-
-
-
-
-
-<!--table class="table table-striped table-hover">
-    <tr>
-      <th>Program</th>
-      <th>Subject Area</th>
-      <th>Level</th>
-      <th>Level abb</th>
-      <th>School</th>
-      <th>Duration</th>
-      <th>Delivery</th>
-      <th>Open SUNY</th>
-      <th>% courses online</th>
-      <% if false %>
-      <th>Synchronous</th>
-      <th>Tutoring</th>
-      <th>Helpdesk</th>
-      <th>Concierge</th>
-      <th>Experiential learning</th>
-      <th>Plas</th>
-      <th>Accelerated</th>
-      <th>Prog level</th>
-      <th colspan="3"></th>
-       <% end %>
-    </tr>
-
-    <% @programs.each do |program| %>
-      <tr>
-        <td><%= link_to program.prog_title, program %></td>
-        <td><%= program.subject_area.name %></td>
-        <td><%= program.level_expanded %></td>
-        <td><%= program.level_abb.name %></td>
-        <td><%= link_to program.school.name, program.school.school_url, :target => "_blank" %></td>
-        <td><%= program.duration %> credits</td>
-        <td><%= program.delivery_method %></td>
-        <td><% if program.open_suny == 'Yes' %><%= link_to image_tag("/assets/os42.png", :alt => "Powered by Open SUNY+"), 'http://www.open.suny.edu', :target => '_blank' %><% end %></td>
-        <td> <% if program.per_courses_online == "25" %>
-           <%= image_tag("/assets/2542.png", :alt => "25% online", :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => '25% Online - Percent of Courses Online - Degree programs can range from 100% online to a mix of in-person and online courses.') %>
-         <% elsif program.per_courses_online == "50" %>  
-           <%= image_tag("/assets/5042.png", :alt => "50% online", :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => '50% Online - Percent of Courses Online - Degree programs can range from 100% online to a mix of in-person and online courses.') %>
-         <% elsif program.per_courses_online == "75" %>  
-           <%= image_tag("/assets/7542.png", :alt => "75% online", :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => '75% Online - Percent of Courses Online - Degree programs can range from 100% online to a mix of in-person and online courses.') %>
-         <% elsif program.per_courses_online == "100" %>  
-           <%= image_tag("/assets/10042.png", :alt => "100% online", :id => 'per_icon', :rel => 'tooltip', "data-placement" =>'top', :title => '100% Online - Percent of Courses Online - Degree programs can range from 100% online to a mix of in-person and online courses.') %>
-         <% end %></td>
-         <% if false %>
-        <td> <% if program.synchronous == true%>  <%= image_tag("/assets/syn42.png", :alt => "Synchronous Courses", :id => 'sync_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Synchronous Courses - Students learn in real-time while the professor leads the class. Synchronous courses are similar to in-person classes, but from a distance.')%> <% else %>
-          <%= image_tag("/assets/asyn42.png", :alt => "Asynchronous Courses", :id => 'async_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Asynchronous Courses - Asynchronous online courses are usually semester or term-based with a start and end date. Within this structure there is flexibility as to when students participate in course learning activities.')%><% end %></td>
-        <td> <% if program.tutoring == true%><%= image_tag("/assets/tut42.png", :alt => "Tutoring Available", :id => 'tutoring_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Tutoring - Need tutoring assistance? Students have access to academic tutoring day and night.') %> <% end %></td>
-        <td> <% if program.helpdesk == true%> <%= image_tag("/assets/hd42.png", :alt => "HelpDesk Available", :id => 'helpdesk_icon', :rel => 'tooltip', "data-placement" =>'top', "data-content" =>'some info', :title => '24/7 HelpDesk - Experiencing technical difficulties? Students in this program have access to technical support day and night.')%><% end %></td>
-        <td> <% if program.concierge == true%> <%= image_tag("/assets/sc42.png", :alt => "Concierge Available", :id => 'con_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Concierge - Have questions? Each student has one point of contact for all questions about their program.')%><% end %></td>
-        <td> <% if program.experiential_learning == true%><%= image_tag("/assets/el42.png", :alt => "Experiential Learning Available", :id => 'ex_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Experiential Learning - Experiential learning connects classroom to career. Students apply their academic knowledge in the real world through field experiences such as internships, clinical placements, and service learning.')%><% end %></td>
-        <td><% if program.plas == true%><%= image_tag("/assets/pl42.png", :alt => "PLA's Available", :id => 'pla_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Prior Learning Assessment - Life experience counts. Students can receive credit toward their program based on their existing knowledge.')%> <% end %></td>
-        <td> <% if program.accelerated == true%><%= image_tag("/assets/acc42.png", :alt => "Accelerated Degree Completion Available", :id => 'degree_icon', :rel => 'tooltip', "data-placement" =>'top', :title => 'Accelerated Degree Completion - Looking for the option of early graduation? This program allows students to complete their studies ahead of schedule.')%><% end %></td>
-        <td><%= program.prog_level %></td>
-      <% end %>
-      </tr>
-    <% end %>
-</table-->
-
-<div class="text-center"><%= paginate @programs %></div>

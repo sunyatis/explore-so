@@ -1,53 +1,99 @@
-<div id="filterrific_results" class="row">
-  <!--div class="container"-->
-	  
-  
-  <div class="chardin_box resets" data-intro="will_paginate's entries info works as expected." data-position="bottom">
-  <%= page_entries_info @courses, entry_name: "courses" %>
-  </div>
-  <div class="pull-right resets" data-intro="Reset the filter settings to defaults." data-position="bottom">
-    <%= link_to('Reset filters', reset_filterrific_url, :class => 'reset_link') %>
 
-  </div>
-  	<div class="chardin_box resets" data-intro="Spinner indicates update." data-position="bottom">
+<div id="filterrific_results">
+
+<section class="degree-results row">
+  	<div class="pull-right resets"  data-intro="Reset the filter settings to defaults." data-position="bottom">
+    	<%= link_to('Reset filters', reset_filterrific_url, :class => 'reset_link') %>
+
+  	</div>
+  	<div class="chardin_box" data-intro="will_paginate's entries info works as expected." data-position="bottom">
+ 	   <h1> <%= page_entries_info @courses, entry_name: "courses" %></h1>
+ 	 </div>
+ 	 <div class="chardin_box" data-intro="Spinner indicates update." data-position="bottom">
 
         <span class="filterrific_spinner" style="display:none;">
           <%= render_filterrific_spinner %>
         </span>
-	</div>
-	 <!--/div-->
- 
- 
-
- <div class="container results">
-
-  <div class="divTable coursetable">
-  <div class="divTableBody">
-	 <div class="divTableRow resultheader">
-	 	<div class="divTableHead"></div>
-	 	<div class="divTableHead"><%= filterrific_sorting_link(@filterrific, :title) %></div>
-	 	<div class="divTableHead">Code</div>
-	 	<div class="divTableHead subject_area_cell"><%= filterrific_sorting_link(@filterrific, :subject_area) %></div>
-	 	<div class="divTableHead"><%= filterrific_sorting_link(@filterrific, :start_date) %></div>
-	 	<div class="divTableHead"><%= filterrific_sorting_link(@filterrific, :credit) %></div>
 	 </div>
-   <% @courses.each do |course| %>
-	 <div class="divTableRow result">
-	 <div class="divTableCell school_image"><%= image_tag(course.school.image.url(:small), :align=> "center", :width=> "55px") %></div>
-	 <div class="divTableCell"><h2><%= link_to course.title, course %></h2><h3><%= course.school.name %></h3></div>
-	 <div class="divTableCell"><%= course.prefix %> <%= course.code %> <%= course.section %></div>
-	 <div class="divTableCell subject_area_cell"><%= course.course_area %></div>
-	 <div class="divTableCell"><%= course.start_date.strftime('%m-%d-%Y') %></div>
-	 <div class="divTableCell credits_cells"><span><%= course.credit %></span></div>
-	 </div>
-    <% end %>
- </div>
- </div>
-  
- </div>
-  <div class="text-center"><%= paginate @courses %></div>
- </div>
+	<ul class="results">
+		<div class="course-info-title">
+			<dl class="course-title">
+				<dt><%= filterrific_sorting_link(@filterrific, :title) %></dt>
+				<dd>	
+				</dd>
+			</dl>
+			<dl class="course-code">
+				<dt class="delivery-mode-extra">Code</dt>
+				<dd>	
+				</dd>
+			</dl>
+			<dl class="course-area">
+				<dt class="delivery-mode-extra"><%= filterrific_sorting_link(@filterrific, :course_area) %></dt>
+				<dd>	
+				</dd>
+			</dl>
+			<dl class="course-start-date">
+				<dt class="degree-type-extra"><%= filterrific_sorting_link(@filterrific, :start_date) %></dt>
+				<dd>
+					
+				</dd>
+			</dl>
+			<dl class="course-credit">
+				<dt class="credit-type-extra"><%= filterrific_sorting_link(@filterrific, :credit) %></dt>
+				<dd>	
+				</dd>
+			</dl>
+		</div>
+		   <% @courses.each do |course| %>
+		<li class="full-width">
+			<div class="result">
+				<div class="course">
+						<figure>
+							<div class="logo">
+								<%= image_tag(course.school.image.url(:small), :align=> "center", :width=> "55px") %>
+							</div>
+							<figcaption>
+								<h2 class="coursesh2"><%= link_to course.title, course %></h2>
+								<h3><%= course.school.name %></h3>
+							</figcaption>
+						</figure>
 
+					<div class="course-info">
+						<dl>
+							<dt>
+							Code
+							</dt>
+							<dd>
+						   	 <%= course.prefix %> <%= course.code %> <%= course.section %>
+							</dd>
+						</dl>
+						<dl>
+							<dt>Subject Area</dt>
+							<dd class="extra-margin-delivery"><%= course.course_area %></dd>
+						</dl>
+						<dl>
+							<dt>Start Date</dt>
+							<dd class="extra-margin-degree"><%= course.start_date.strftime('%m-%d-%Y') %></dd>
+						</dl>
+						<dl>
+							<dt>Credits</dt>
+							<dd class="extra-margin"><%= course.credit %></dd>
+						</dl>
+					</div>
+				</div>
+
+			</div>
+
+	</li> <% end %>
+</ul>
+
+</section> 
+
+ 
+ </div>
+ 
+
+<div class="text-center"><%= paginate @courses %></div>
 
 
 

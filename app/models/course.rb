@@ -67,6 +67,8 @@ class Course < ActiveRecord::Base
        order("courses.title #{ direction }")
      when /^start_date_/
       order("courses.start_date #{ direction }")
+    when /^course_area_/
+     order("courses.course_area #{ direction }")
      when /^credit_/
       order("courses.credit #{ direction }")
      when /^level_/
@@ -160,6 +162,7 @@ class Course < ActiveRecord::Base
        ['Start Date ASC', 'start_date_asc'],
        ['Title ASC', 'title_asc'],
        ['Credits', 'credit_asc'],
+       ['Course Area', 'course_area_asc'],
      ]
    end
    

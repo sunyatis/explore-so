@@ -20,6 +20,8 @@
 //= require filterrific/filterrific-jquery
 //= require chardinjs
 //= require bootstrap3/bootstrap-multiselect
+//= require owl.carousel
+//= require mixitup
 
 
 
@@ -50,5 +52,139 @@ function myFunction() {
 	$(window).load(function(){
 	     togglemenu();
 	});
-
 	togglemenu();
+	
+	$(function() {
+	  $('#ChangeToggle').click(function() {
+	    $('#navbar-hamburger').toggleClass('hidden');
+	    $('#navbar-close').toggleClass('hidden');  
+	  });
+	});
+	
+	$(function() {
+	      $('select.show-mobile').on('change',function() {
+	            window.location.href = $(this).val();
+	      });
+	});
+	
+
+	
+	$(document).ready(function() {
+		var owl = $('#owl-demo');
+		owl.owlCarousel({
+		    items:3,
+		    dots: false,
+		    mouseDrag: true,
+		    responsiveClass: true,
+		    responsive: {
+		        0:{
+		          items: 1
+		        },
+		        480:{
+		          items: 3
+		        },
+		        769:{
+		          items: 3
+		        }
+		    },
+		    onInitialize : function(element){
+		        owl.children().sort(function(){
+		            return Math.round(Math.random()) - 0.5;
+		        }).each(function(){
+		            $(this).appendTo(owl);
+		        });
+		    },
+			
+			
+		});
+
+		
+ 
+	});
+	
+	
+	$(document).ready(function() {
+		var owl = $('#owl-demo2');
+		owl.owlCarousel({
+		    items: 1,
+		    dots: false,
+		    mouseDrag: true,
+		    responsiveClass: true,
+		    responsive: {
+		        0:{
+		          items: 1
+		        },
+		        480:{
+		          items: 1
+		        },
+		        769:{
+		          items: 1
+		        }
+		    },
+		    onInitialize : function(element){
+		        owl.children().sort(function(){
+		            return Math.round(Math.random()) - 0.5;
+		        }).each(function(){
+		            $(this).appendTo(owl);
+		        });
+		    },
+			
+			
+		});
+
+		
+ 
+	});
+	
+	
+	
+	$(function(){
+	  $('#Container').on('mixLoad', function() {
+	    console.log('[event-handler] MixItUp Loaded');
+	  });
+  
+	  $('#Container').on('mixStart', function() {
+	    console.log('[event-handler] Animation Started')
+	  });
+  
+	  $('#Container').on('mixEnd', function() {
+	    console.log('[event-handler] Animation Ended')
+	  });
+  
+	  $('#Container').mixItUp({
+	    callbacks: {
+	      onMixLoad: function() {
+	        console.log('[callback] MixItUp Loaded');
+	      },
+	      onMixStart: function() {
+	        console.log('[callback] Animation Started');
+	      },
+	      onMixEnd: function() {
+	        console.log('[callback] Animation Ended');
+	      }
+	    }
+	  });
+	});
+	
+	// BEGIN area and rating filter
+	$('#level_filter').on('change', function() {
+	    $('#Container').mixItUp('filter', this.value);
+
+	    // <-- removed from here
+
+	});
+	// END area and rating filter
+	$(function(){
+	  var $filterSelect = $('#level_filter'),
+	      $container = $('#Container');
+  
+	  $container.mixItUp();
+  
+	  $filterSelect.on('change', function(){
+	    $container.mixItUp('filter', this.value);
+	  });
+
+	});
+	
+
+	
