@@ -194,8 +194,12 @@ ActiveAdmin.setup do |config|
      menu.add label: 'Manage Courses', priority: 1
      menu.add label: 'Manage Programs', priority: 2
      menu.add label: 'Manage Navigator', priority: 3
+     menu.add label: "View Site", url: "/", priority: 4
     end
   end
+
+ 
+
 
   # == Download Links
   #
