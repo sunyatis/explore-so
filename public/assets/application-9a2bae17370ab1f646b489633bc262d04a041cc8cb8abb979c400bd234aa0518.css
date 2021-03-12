@@ -4380,7 +4380,7 @@ ol {
 
 /* line 1589, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/programs.scss */
 ul {
-  padding-inline-start: 0px !important;
+  /*padding-inline-start: 0px !important;*/
 }
 /* line 5, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/courses.scss */
 .course-info-title {
@@ -5843,13 +5843,19 @@ a.green {
   border-bottom: 1px solid rgba(0, 0, 0, 0.09);
 }
 
-/* line 36, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 34, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+.content ul {
+  margin: 0 0 .625rem 0;
+  padding: 0 0 0 2.5rem;
+}
+
+/* line 39, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content {
   display: flex;
   flex-flow: column nowrap;
 }
 
-/* line 40, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 43, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content .row section h2 {
   width: 100%;
   font-size: 1.125rem !important;
@@ -5861,13 +5867,13 @@ a.green {
   border-bottom: 1px solid #e6e6e6;
 }
 
-/* line 49, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 52, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #faq dl {
   padding: 0 0 0 1.875rem;
   counter-reset: question-counter;
 }
 
-/* line 52, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 55, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 section h2 {
   width: 100%;
   font-size: 1.125rem;
@@ -5879,7 +5885,7 @@ section h2 {
   /*border-bottom: 1px solid #e6e6e6;*/
 }
 
-/* line 62, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 65, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content > header nav ul li a {
   font-size: 1rem;
   line-height: 1.75rem;
@@ -5890,18 +5896,42 @@ section h2 {
   height: 100%;
 }
 
-/* line 73, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 74, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+.content ul dt:after {
+  content: "\00a0";
+  display: inline;
+}
+
+/* line 78, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+.content ul dd {
+  display: inline;
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #333;
+}
+
+/* line 85, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+.content ul dt {
+  display: inline;
+  font-size: .9375rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+  color: #333;
+}
+
+/* line 92, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content section {
   padding: 0 0 1.875rem 0;
 }
 
-/* line 76, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 95, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content section.row {
   flex-flow: column nowrap;
   padding: 0;
 }
 
-/* line 81, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 100, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content h1 {
   font-size: 1.75rem;
   font-weight: 600;
@@ -5911,18 +5941,18 @@ section h2 {
   padding: 0;
 }
 
-/* line 89, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 108, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content {
   display: flex;
   flex-flow: column nowrap;
 }
 
-/* line 93, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 112, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content section {
   padding: 0 0 1.875rem 0;
 }
 
-/* line 97, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 116, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #tuition .table {
   margin: 1.25rem 0 0 0;
   padding: 1.5625rem;
@@ -5931,26 +5961,26 @@ section h2 {
   background-color: #f5f5f5;
 }
 
-/* line 104, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 123, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #tuition .half {
   display: inline-block;
   padding: 0 1.25rem 0 0;
   width: 49%;
 }
 
-/* line 110, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 129, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #tuition .table table {
   width: 100%;
 }
 
-/* line 114, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 133, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #tuition .table caption {
   margin: 0 0 .625rem 0;
   padding: 0;
   text-align: left;
 }
 
-/* line 120, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 139, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #tuition .table thead {
   font-size: 1rem;
   font-weight: 600;
@@ -5958,19 +5988,19 @@ section h2 {
   color: #333;
 }
 
-/* line 126, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 145, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #tuition .table tr td:first-child, #tuition .table tr th:first-child {
   text-align: left;
 }
 
-/* line 130, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 149, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #tuition .table td, #tuition .table th {
   padding: .5rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.09);
   text-align: right;
 }
 
-/* line 136, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 155, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .hamburger span {
   display: block;
   width: 1rem;
@@ -5980,34 +6010,34 @@ section h2 {
   transition: transform 500ms ease,opacity 500ms ease;
 }
 
-/* line 138, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 157, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .hamburger span:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 140, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 159, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .open .hamburger span:first-of-type {
   transform: translateY(5px) rotate(45deg);
 }
 
-/* line 142, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 161, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .open .hamburger span:nth-of-type(2) {
   opacity: 0;
 }
 
-/* line 142, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 161, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .open .hamburger span:last-of-type {
   transform: translateY(-5px) rotate(-45deg);
 }
 
-/* line 145, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 164, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .rfi fieldset {
   padding: 0;
   border: 0;
   margin: 0;
 }
 
-/* line 147, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 166, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .rfi h1 {
   margin: 0;
   padding: 0;
@@ -6017,7 +6047,7 @@ section h2 {
   color: #004c93;
 }
 
-/* line 149, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 168, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .rfi p {
   margin: 0;
   padding: 0;
@@ -6027,23 +6057,23 @@ section h2 {
   color: #000;
 }
 
-/* line 151, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 170, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .rfi header {
   margin: 0 0 1.25rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.18);
 }
 
-/* line 153, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 172, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .rfi header > h1 {
   margin-bottom: .5rem;
 }
 
-/* line 155, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 174, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .rfi header > p {
   padding-bottom: .9375rem;
 }
 
-/* line 157, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 176, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .rfi label:before {
   content: '>';
   display: inline-block;
@@ -6053,30 +6083,30 @@ section h2 {
   transition: opacity 200ms ease,width 200ms ease,padding 200ms ease;
 }
 
-/* line 159, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 178, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .rfi .error label:before {
   opacity: 1;
   width: auto;
   padding: 0 .3125rem 0 0;
 }
 
-/* line 159, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 178, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .rfi .section {
   display: none;
 }
 
-/* line 161, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 180, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .rfi .section.visible {
   display: block;
 }
 
-/* line 163, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 182, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .rfi ol {
   list-style: none;
   counter-reset: item;
 }
 
-/* line 165, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 184, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .rfi ol li {
   counter-increment: item;
   font-size: .9375rem;
@@ -6085,7 +6115,7 @@ section h2 {
   color: #444;
 }
 
-/* line 167, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 186, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .rfi ol li:before {
   content: counter(item) ".";
   display: inline-block;
@@ -6097,32 +6127,32 @@ section h2 {
   color: #004c93;
 }
 
-/* line 168, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 187, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .rfi .rfiButtonDiv {
   display: flex;
   justify-content: center;
 }
 
 @media screen and (max-width: 550px) {
-  /* line 168, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 187, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .rfi form .full .rounded-button {
     width: 100%;
   }
 }
-/* line 168, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 187, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .hasSMSConsent {
   display: flex;
   width: 100%;
 }
 
-/* line 170, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 189, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .hasSMSConsent input[type=checkbox] {
   width: 4%;
   margin-top: auto;
   margin-bottom: auto;
 }
 
-/* line 170, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 189, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .hasSMSConsent label {
   margin-left: 10px;
   margin-right: auto;
@@ -6132,7 +6162,7 @@ section h2 {
   margin-bottom: auto;
 }
 
-/* line 174, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 193, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 body > footer {
   display: flex;
   flex: 1;
@@ -6146,13 +6176,13 @@ body > footer {
   color: #c5c5c5;
 }
 
-/* line 174, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 193, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 body > footer a.twitter-timeline {
   color: #fff important;
   text-indent: -5000px;
 }
 
-/* line 176, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 195, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .ranku-bar span {
   margin-right: .625rem;
   margin-top: .375rem;
@@ -6161,13 +6191,13 @@ body > footer a.twitter-timeline {
   line-height: 1.25rem;
 }
 
-/* line 176, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 195, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 body > footer .ranku-bar a {
   height: 3.25rem;
   width: 4.25rem;
 }
 
-/* line 178, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 197, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content > header {
   margin: 0 0 2.5rem 0;
   padding: 2.5rem 0 0 0;
@@ -6176,23 +6206,23 @@ body > footer .ranku-bar a {
 }
 
 @media screen and (max-width: 820px) {
-  /* line 178, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 197, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .content > header {
     padding: 1.25rem 0;
   }
 }
-/* line 178, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 197, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content > header nav ul, .content > header nav ul li {
   display: flex;
 }
 
-/* line 180, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 199, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content > header nav {
   display: flex;
   flex-flow: row nowrap;
 }
 
-/* line 180, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 199, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content > header nav ul {
   flex-direction: row nowrap;
   padding: 0;
@@ -6200,7 +6230,7 @@ body > footer .ranku-bar a {
   width: 100%;
 }
 
-/* line 182, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 201, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content > header nav ul li {
   justify-content: center;
   padding: .4375rem 1.25rem .875rem 1.25rem;
@@ -6210,24 +6240,24 @@ body > footer .ranku-bar a {
   width: 20%;
 }
 
-/* line 182, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 201, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content > header nav ul li:first-child {
   width: 10%;
 }
 
-/* line 184, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 203, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content > header nav ul li:hover {
   border-bottom: 5px solid #b1b1b1;
 }
 
-/* line 186, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 205, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content > header nav ul li.selected {
   color: #545454;
   border-bottom: 5px solid #ffe512;
   cursor: default;
 }
 
-/* line 188, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 207, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content > header nav ul li a {
   font-size: 1rem;
   line-height: 1.75rem;
@@ -6238,12 +6268,12 @@ body > footer .ranku-bar a {
   height: 100%;
 }
 
-/* line 190, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 209, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content > header nav ul li a:hover {
   text-decoration: none;
 }
 
-/* line 192, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 211, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .content .row section h2 {
   width: 100%;
   font-size: 1.125rem;
@@ -6255,13 +6285,13 @@ body > footer .ranku-bar a {
   border-bottom: 1px solid #e6e6e6;
 }
 
-/* line 192, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 211, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #faq dl {
   padding: 0 0 0 1.875rem;
   counter-reset: question-counter;
 }
 
-/* line 194, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 213, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #faq dl dt:before {
   content: counter(question-counter) ".";
   counter-increment: question-counter;
@@ -6277,7 +6307,7 @@ body > footer .ranku-bar a {
   padding: 0 0 .9375rem 0;
 }
 
-/* line 196, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 215, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #faq dl dt {
   font-size: 1rem;
   font-weight: 500;
@@ -6286,7 +6316,7 @@ body > footer .ranku-bar a {
   padding: 0 0 .3125rem 0;
 }
 
-/* line 196, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 215, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #faq dl dd {
   font-size: .9375rem;
   font-weight: 400;
@@ -6295,17 +6325,17 @@ body > footer .ranku-bar a {
   padding: 0 0 .9375rem 0;
 }
 
-/* line 196, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 215, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #faq dl a {
   text-decoration: underline;
 }
 
-/* line 198, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 217, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .skip-to-content {
   padding-bottom: .3125rem;
 }
 
-/* line 198, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 217, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .element-invisible {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -6314,7 +6344,7 @@ body > footer .ranku-bar a {
   height: 1px;
 }
 
-/* line 200, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 219, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .element-invisible.element-focusable:active, .element-invisible.element-focusable:focus {
   position: static !important;
   clip: auto;
@@ -6323,18 +6353,18 @@ body > footer .ranku-bar a {
 }
 
 @media screen and (max-width: 820px) {
-  /* line 202, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 221, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .hide-mobile {
     display: none !important;
   }
 }
 @media screen and (min-width: 820px) {
-  /* line 202, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 221, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .show-mobile {
     display: none !important;
   }
 }
-/* line 204, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 223, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .hero-image {
   display: flex;
   position: relative;
@@ -6346,12 +6376,12 @@ body > footer .ranku-bar a {
   justify-content: center;
 }
 
-/* line 206, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 225, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .hero-image > .row {
   z-index: 2;
 }
 
-/* line 208, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 227, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .hero-image:after {
   content: ' ';
   position: absolute;
@@ -6363,19 +6393,19 @@ body > footer .ranku-bar a {
   z-index: 1;
 }
 
-/* line 211, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 230, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .hero-image h1, .hero-image h2, .hero-image h3, .hero-image h4, .hero-image span, .hero-image p {
   color: #fff;
 }
 
-/* line 213, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 232, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .hero-image h1 {
   font-size: 1.75rem;
   font-weight: 600;
   line-height: 1.5rem;
 }
 
-/* line 215, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 234, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .hero-image h2 {
   font-size: 1.125rem;
   font-weight: 300;
@@ -6383,24 +6413,24 @@ body > footer .ranku-bar a {
   max-width: 39.375rem;
 }
 
-/* line 219, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 238, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid {
   display: flex;
   flex-flow: column nowrap;
   padding: 1.25rem 0 2.5rem 0;
 }
 
-/* line 221, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 240, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid nav ul, .field-grid nav ul li, .field-grid .grid, .field-grid .grid li, .field-grid .grid div, .field-grid .grid a, .field-grid .grid figure {
   display: flex;
 }
 
-/* line 223, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 242, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid nav select {
   margin: 0 auto;
 }
 
-/* line 225, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 244, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid nav ul {
   flex-direction: row;
   justify-content: center;
@@ -6409,7 +6439,7 @@ body > footer .ranku-bar a {
   width: 100%;
 }
 
-/* line 227, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 246, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid nav ul li {
   justify-content: center;
   padding: .4375rem 1.25rem .875rem 1.25rem;
@@ -6421,19 +6451,19 @@ body > footer .ranku-bar a {
   transition: border-bottom-width 250ms ease;
 }
 
-/* line 229, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 248, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid nav ul li:hover {
   border-bottom: 5px solid #b1b1b1;
 }
 
-/* line 231, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 250, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid nav ul li.selected {
   color: #545454;
   border-bottom: 5px solid #ffe512;
   cursor: default;
 }
 
-/* line 233, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 252, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid .grid {
   flex-flow: row wrap;
   align-items: stretch;
@@ -6443,7 +6473,7 @@ body > footer .ranku-bar a {
   border-collapse: collapse;
 }
 
-/* line 235, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 254, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid .grid li {
   box-sizing: border-box;
   flex-wrap: wrap;
@@ -6458,17 +6488,17 @@ body > footer .ranku-bar a {
   transition: background-color 500ms ease;
 }
 
-/* line 237, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 256, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid .grid li:hover {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
-/* line 239, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 258, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid .grid li.level {
   display: none;
 }
 
-/* line 241, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 260, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid .grid li.level a {
   display: flex;
   flex-flow: column nowrap;
@@ -6482,20 +6512,20 @@ body > footer .ranku-bar a {
   cursor: pointer;
 }
 
-/* line 243, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 262, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid .grid li.level figure {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
 
-/* line 245, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 264, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid .grid li.level figure > img, .field-grid .grid li.level figure > div {
   width: 3.125rem;
   height: 3.125rem;
 }
 
-/* line 247, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 266, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid .grid li.level figcaption, .field-grid .grid li.level h3, .field-grid .grid li.level h4, .field-grid .grid li.level h5 {
   display: flex;
   flex-wrap: wrap;
@@ -6510,7 +6540,7 @@ body > footer .ranku-bar a {
   max-width: 100%;
 }
 
-/* line 249, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 268, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .school-carousel {
   padding: 3.75rem 0 3.125rem 0;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.9), #fff);
@@ -6518,12 +6548,12 @@ body > footer .ranku-bar a {
   background-size: auto,cover;
 }
 
-/* line 251, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 270, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .school-carousel .row {
   justify-content: center;
 }
 
-/* line 251, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 270, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .school-carousel h2 {
   display: inline-block;
   margin: 0 0 .3125rem 0;
@@ -6535,7 +6565,7 @@ body > footer .ranku-bar a {
   text-align: center;
 }
 
-/* line 253, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 272, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .school-carousel img {
   flex: 1;
   max-width: calc(33% - 20px);
@@ -6548,70 +6578,70 @@ body > footer .ranku-bar a {
 }
 
 @media screen and (max-width: 820px) {
-  /* line 253, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 272, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .school-carousel img {
     max-width: 100%;
     margin: .625rem 0;
   }
 }
-/* line 255, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 274, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .school-carousel .images {
   margin: 1.5625rem 0;
 }
 
-/* line 257, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 276, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .school-carousel .show {
   display: inline;
 }
 
-/* line 259, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 278, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .school-carousel .hide {
   display: none;
 }
 
-/* line 261, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 280, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .school-carousel .lazyload, .school-carousel .lazyloading {
   opacity: 0;
 }
 
-/* line 261, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 280, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .school-carousel .lazyloaded {
   opacity: 1;
   transition: opacity 300ms;
 }
 
-/* line 263, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 282, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .hero-image {
   flex-direction: column;
   padding: 9.375rem 0;
 }
 
 @media screen and (max-width: 820px) {
-  /* line 265, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 284, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .hero-image {
     padding: 1.875rem 0 3.125rem 0;
   }
 }
-/* line 267, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 286, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .hero-image .row {
   justify-content: center;
 }
 
-/* line 267, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 286, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .hero-image h1 {
   display: inline-block;
   margin-bottom: 10px;
 }
 
 @media screen and (max-width: 820px) {
-  /* line 269, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 288, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .hero-image h1 {
     font-size: 1.625rem;
     line-height: 2.375rem;
     text-align: center;
   }
 }
-/* line 271, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 290, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .hero-image h2 {
   display: inline-block;
   width: 39.375rem;
@@ -6620,7 +6650,7 @@ body > footer .ranku-bar a {
 }
 
 @media screen and (max-width: 820px) {
-  /* line 273, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 292, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .hero-image h2 {
     flex-basis: auto;
     width: 100%;
@@ -6629,32 +6659,32 @@ body > footer .ranku-bar a {
   }
 }
 @media screen and (max-width: 820px) {
-  /* line 276, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 295, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .field-grid {
     flex-basis: auto;
     width: 100%;
   }
 }
 @media screen and (max-width: 820px) {
-  /* line 278, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 297, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .field-grid nav {
     margin-bottom: 1.25rem;
   }
 }
 @media screen and (max-width: 820px) {
-  /* line 280, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 299, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .field-grid > .row {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
 }
-/* line 280, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 299, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid .grid {
   min-height: 9.375rem;
 }
 
 @media screen and (max-width: 820px) {
-  /* line 282, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 301, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .field-grid .grid li {
     min-height: 9.375rem;
     flex-basis: auto;
@@ -6663,14 +6693,14 @@ body > footer .ranku-bar a {
     border-right: 0;
   }
 }
-/* line 284, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 303, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .info-block {
   align-items: center;
   padding-top: 2.5rem !important;
   padding-bottom: 2.5rem !important;
 }
 
-/* line 286, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 305, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .info-block .info-block-h2 {
   font-size: 1.375rem !important;
   font-weight: 600 !important;
@@ -6680,12 +6710,12 @@ body > footer .ranku-bar a {
 }
 
 @media screen and (max-width: 820px) {
-  /* line 288, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 307, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .info-block .info-block-h2 {
     text-align: center;
   }
 }
-/* line 290, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 309, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .info-block .info-block-h3 {
   font-size: 1rem;
   font-weight: 300;
@@ -6694,12 +6724,12 @@ body > footer .ranku-bar a {
   margin: 0 0 .375rem 0;
 }
 
-/* line 292, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 311, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .info-block.row {
   flex-flow: column nowrap;
 }
 
-/* line 294, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 313, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .info-block h1 {
   font-size: 1.375rem;
   font-weight: 600;
@@ -6709,12 +6739,12 @@ body > footer .ranku-bar a {
 }
 
 @media screen and (max-width: 820px) {
-  /* line 296, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 315, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .info-block h1 {
     text-align: center;
   }
 }
-/* line 298, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 317, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .info-block h2 {
   font-size: 1rem !important;
   font-weight: 600 !important;
@@ -6724,7 +6754,7 @@ body > footer .ranku-bar a {
   margin: .625rem 0 .3125rem 0 !important;
 }
 
-/* line 300, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 319, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .info-block h4 {
   font-size: 1rem;
   font-weight: 300;
@@ -6733,7 +6763,7 @@ body > footer .ranku-bar a {
   margin: 0 0 .375rem 0;
 }
 
-/* line 302, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 321, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .info-block p {
   font-size: .875rem;
   font-weight: 300;
@@ -6744,7 +6774,7 @@ body > footer .ranku-bar a {
   padding: 0;
 }
 
-/* line 304, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 323, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .info-block ul {
   display: flex;
   list-style-type: none;
@@ -6752,12 +6782,12 @@ body > footer .ranku-bar a {
 }
 
 @media screen and (max-width: 820px) {
-  /* line 306, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 325, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .info-block ul {
     flex-flow: column;
   }
 }
-/* line 308, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 327, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .info-block ul li {
   display: inline;
   width: calc((100%/3) - 2px);
@@ -6765,19 +6795,19 @@ body > footer .ranku-bar a {
   border-right: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-/* line 310, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 329, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .info-block ul li:last-child {
   border-right: 0;
 }
 
 @media screen and (max-width: 820px) {
-  /* line 310, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 329, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .info-block ul li {
     width: 100%;
     border: 0;
   }
 }
-/* line 312, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 331, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .info-block ul figure {
   display: flex;
   flex-flow: column nowrap;
@@ -6786,14 +6816,14 @@ body > footer .ranku-bar a {
   padding: 0;
 }
 
-/* line 314, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 333, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .info-block ul figure img {
   flex: 1;
   width: 2.5rem;
   height: 2.5rem;
 }
 
-/* line 316, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 335, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .large-testimonial {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -6801,24 +6831,24 @@ body > footer .ranku-bar a {
 }
 
 @media screen and (min-width: 820px) {
-  /* line 319, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 338, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .large-testimonial {
     max-height: 205px !important;
   }
 }
-/* line 323, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 342, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .large-testimonial figure {
   display: flex;
   flex-flow: row nowrap;
 }
 
 @media screen and (max-width: 820px) {
-  /* line 325, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 344, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .large-testimonial figure {
     flex-flow: column nowrap;
   }
 }
-/* line 327, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 346, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .large-testimonial figure img {
   align-self: center;
   flex: 1 0 auto;
@@ -6830,32 +6860,32 @@ body > footer .ranku-bar a {
 }
 
 @media screen and (max-width: 820px) {
-  /* line 329, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 348, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .large-testimonial figure img {
     margin: 0 0 3.125rem 0;
   }
 }
-/* line 331, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 350, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .large-testimonial figure figcaption {
   padding: 0 0 0 1.25rem;
   border-left: 5px solid #ffe512;
 }
 
 @media screen and (max-width: 820px) {
-  /* line 333, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 352, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .large-testimonial figure figcaption {
     padding: 1.25rem 0 0 0;
     border-left: 0;
     border-top: 5px solid #ffe512;
   }
 }
-/* line 335, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 354, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .large-testimonial blockquote {
   margin: 0;
   padding: 0;
 }
 
-/* line 337, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 356, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .large-testimonial blockquote p {
   margin: 0;
   font-size: 1.5625rem;
@@ -6865,17 +6895,17 @@ body > footer .ranku-bar a {
   color: #004c93;
 }
 
-/* line 339, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 358, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .large-testimonial blockquote p:before {
   content: '\201C';
 }
 
-/* line 341, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 360, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .large-testimonial blockquote p:after {
   content: '\201D';
 }
 
-/* line 343, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 362, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .large-testimonial blockquote cite {
   margin: .625rem 0 .3125rem 0;
   font-size: .875rem;
@@ -6886,12 +6916,12 @@ body > footer .ranku-bar a {
   opacity: .7;
 }
 
-/* line 345, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 364, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .skip-to-content {
   padding-bottom: .3125rem;
 }
 
-/* line 347, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 366, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .element-invisible {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -6900,7 +6930,7 @@ body > footer .ranku-bar a {
   height: 1px;
 }
 
-/* line 349, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 368, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .element-invisible.element-focusable:active, .element-invisible.element-focusable:focus {
   position: static !important;
   clip: auto;
@@ -6908,23 +6938,23 @@ body > footer .ranku-bar a {
   height: auto;
 }
 
-/* line 351, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 370, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .owl-carousel .owl-item img {
   width: 97% !important;
 }
 
-/* line 355, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 374, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #owl-demo2 img {
   width: 7.8125rem !important;
 }
 
 @media all and (max-width: 640px) {
-  /* line 360, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 379, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .owl-carousel .owl-item img {
     width: 100% !important;
   }
 }
-/* line 365, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 384, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .owl {
   display: inline-block !important;
   margin: 0 0 .3125rem 0 !important;
@@ -6936,17 +6966,17 @@ body > footer .ranku-bar a {
   text-align: center !important;
 }
 
-/* line 376, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 395, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .owl-carousel.owl-loaded {
   /*margin: 1.5625rem 0;*/
 }
 
-/* line 380, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 399, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .row.carousel {
   padding: 2.5rem 0 3.125rem 0 !important;
 }
 
-/* line 384, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 403, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #owl-demo .item {
   display: block;
   /*padding: 30px 0px;*/
@@ -6958,7 +6988,7 @@ body > footer .ranku-bar a {
   text-align: left;
 }
 
-/* line 394, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 413, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #owl-demo2 .item {
   display: block;
   /*padding: 30px 0px;*/
@@ -6970,69 +7000,69 @@ body > footer .ranku-bar a {
   text-align: left;
 }
 
-/* line 404, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 423, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .owl-theme .owl-controls .owl-buttons div {
   padding: 5px 9px;
 }
 
-/* line 408, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 427, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .owl-theme .owl-buttons i {
   margin-top: 2px;
 }
 
-/* line 411, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 430, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .owl-theme .owl-dots {
   display: none;
 }
 
-/* line 417, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 436, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .owl-theme .owl-controls .owl-buttons div {
   position: absolute;
 }
 
-/* line 421, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 440, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .owl-theme .owl-controls .owl-buttons .owl-prev {
   left: -45px;
   top: 55px;
 }
 
-/* line 426, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 445, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .owl-theme .owl-controls .owl-buttons .owl-next {
   right: -45px;
   top: 55px;
 }
 
-/* line 430, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 449, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .owl-nav.disabled {
   display: none;
 }
 
-/* line 434, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 453, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 440, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 459, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 body, button {
   font-family: 'Helvetica Neue', arial, sans-serif;
 }
 
-/* line 444, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 463, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .controls {
   padding: 2%;
   background: #333;
   color: #eee;
 }
 
-/* line 450, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 469, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 label {
   font-weight: 300;
   margin: 0 .4em 0 0;
 }
 
-/* line 455, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 474, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 button {
   display: inline-block;
   padding: .4em .8em;
@@ -7044,17 +7074,17 @@ button {
   cursor: pointer;
 }
 
-/* line 467, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 486, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 button:focus {
   outline: 0 none;
 }
 
-/* line 471, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 490, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 button + label {
   margin-left: 1em;
 }
 
-/* line 475, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 494, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .container {
   padding: 2% 2% 0;
   text-align: justify;
@@ -7063,21 +7093,21 @@ button + label {
   -webkit-backface-visibility: hidden;
 }
 
-/* line 484, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 503, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .container:after {
   content: '';
   display: inline-block;
   width: 100%;
 }
 
-/* line 490, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 509, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .container .mix,
 .container .gap {
   display: inline-block;
   width: 49%;
 }
 
-/* line 496, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 515, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .container .mix {
   text-align: left;
   background: #03899c;
@@ -7085,17 +7115,17 @@ button + label {
   display: none;
 }
 
-/* line 503, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 522, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .container .mix.category-1 {
   border-top: 2px solid limegreen;
 }
 
-/* line 507, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 526, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .container .mix.category-2 {
   border-top: 2px solid yellow;
 }
 
-/* line 511, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 530, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .container .mix:after {
   content: attr(data-myorder);
   color: white;
@@ -7106,7 +7136,7 @@ button + label {
   font-weight: 700;
 }
 
-/* line 521, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 540, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .container .mix:before {
   content: '';
   display: inline-block;
@@ -7114,20 +7144,20 @@ button + label {
 }
 
 @media all and (min-width: 420px) {
-  /* line 528, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 547, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .container .mix,
   .container .gap {
     width: 32%;
   }
 }
 @media all and (min-width: 640px) {
-  /* line 535, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+  /* line 554, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
   .container .mix,
   .container .gap {
     width: 23.5%;
   }
 }
-/* line 541, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 560, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .field-grid button {
   justify-content: center;
   padding: .4375rem 1.25rem .875rem 1.25rem;
@@ -7141,23 +7171,23 @@ button + label {
   padding-bottom: 31px;
 }
 
-/* line 553, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 572, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 button.active {
   border-bottom: 5px solid #ffe512;
 }
 
-/* line 556, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 575, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 #field-grid-list {
   margin-left: 19px;
   height: 75px;
 }
 
-/* line 560, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 579, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .filter.adv.active {
   padding-bottom: 4px !important;
 }
 
-/* line 564, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 583, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .info-block {
   align-items: center;
   padding-top: 2.5rem;
@@ -7167,20 +7197,31 @@ button.active {
   border-left: 0px solid #ffe512;
 }
 
-/* line 573, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 592, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 .home.rounded-button.small {
   width: 10%;
 }
 
-/* line 577, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 596, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 blockquote {
   border-left: 0px solid #eee !important;
 }
 
-/* line 581, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+/* line 600, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
 button:focus {
   background-color: #ffffff !important;
   color: #000000 !important;
+}
+
+/* line 605, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+dl, menu, ol, ul {
+  margin: 0;
+}
+
+/* line 608, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/content.scss */
+dl {
+  margin-top: 0;
+  margin-bottom: 0px !important;
 }
 /* line 1, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/modal.scss */
 .modals {
