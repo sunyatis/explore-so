@@ -58,9 +58,6 @@ ActiveAdmin.register Program do
       f.li "<li><div class='aa_label'><h3>Which school is this program for?</h3</div></li>".html_safe 
       f.input :school_id, as: :select, :collection => School.pluck(:name, :id)
       f.hr
-      f.li "<li><div class='aa_label_level'><h3>What degree level is this from?</h3</div></li>".html_safe 
-     f.input :prog_level,  :as => :select,  collection: Program.options_for_prog_level
-     f.hr
      f.li "<li><div class='aa_label'><h3>What type of degree is this?</h3</div></li>".html_safe
     f.input :level_expanded, :as => :select, :collection => ["Advanced Certificate","Associate of Applied Science","Associate of Arts","Associate of Science","Bachelor of Arts","Bachelor of Business", "Bachelor of Business Administration","Bachelor of Nursing","Bachelor of Professional Studies","Bachelor of Science","Bachelor of Technology","Certificate","Doctor of Nursing Practice","Doctor of Philosophy","Doctorate","Master of Arts","Master of Arts in Teaching","Master of Business Administration","Master of Education","Master of Engineering","Master of Music","Master of Public Health","Master of Science","Master of Science in Education","Master of Social Work","Masters of Arts in Teaching","Undergraduate Certificate"]
     f.hr
@@ -70,7 +67,7 @@ ActiveAdmin.register Program do
     f.input :subject_area_2, as: :select, collection: Program.options_for_subject_area
     f.input :subject_area_3, as: :select, collection: Program.options_for_subject_area
     f.hr
-    f.li "<li><div class='aa_label_level'><h3>What degree level is this from?</h3</div></li>".html_safe 
+    f.li "<li><div class='aa_label_level'><h3>What degree level is this program?</h3</div></li>".html_safe 
    f.input :prog_level,  :as => :select,  collection: Program.options_for_prog_level
    f.hr
    f.li "<li><div class='aa_label_level'><h3>What format are the classes in?</h3</div></li>".html_safe 
