@@ -129,7 +129,7 @@
 		
 		<div class="online-learning">
 			<div class="row">
-				<% if @program.open_suny == "Open SUNY" %>
+
 				<ul>
 					<li>
 						<h2>What's it like to earn this degree online?</h2>
@@ -210,7 +210,7 @@
 					</li>
 				</ul>
 				
-<% elsif @program.open_suny == "SUNY Online" %>
+<% if @program.open_suny == "SUNY Online" %>
 				<ul>
 					<li>
 						<h2>What's it like to earn this degree online?</h2>

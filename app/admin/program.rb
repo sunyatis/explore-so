@@ -93,6 +93,10 @@ ActiveAdmin.register Program do
          f.li "<li><div class='aa_label_level'><h3>Featured Programs</h3</div></li>".html_safe 
          f.li "<li><div class='aa_label_level'><h4>Is this a featured degree program, certificate, or endorsement?</h4</div></li>".html_safe 
          f.input :open_suny, :as => :radio, collection: Program.options_for_open_suny
+         if f.program.open_suny == "SUNY Online"
+           f.input :headline_text
+           f.input :button_text
+         end
          f.hr
          f.li "<li><div class='aa_label_level'><h3>Personal Concierge</h3</div></li>".html_safe 
          f.li "<li><div class='aa_label_level'><h4>Will this degree program have one person who acts as a signle point of contact for any and all questions?</h4</div></li>".html_safe 
