@@ -45,6 +45,9 @@ class Ability
           can :read, ActiveAdmin::Page, :name => "Dashboard"
           can :manage, Course
           can :manage, Catalog
+      elsif user.role == 'Program Editor'
+          can :read, ActiveAdmin::Page, :name => "Dashboard"
+          can :manage, Program
        else
          can :read, Program
          can :read, Course
