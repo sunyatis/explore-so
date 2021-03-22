@@ -85,13 +85,17 @@
 
 		
 <%= render 'layouts/footer' %>
+<input id="reloadValue" type="hidden" name="reloadValue" value="" />
   </body>
   
 </html>
 
-
 <script>
     $(document).ready(function () {
         $('.dropdown-toggle').dropdown();
+			
     });
+	$(window).on('popstate', function(event) {
+	 location.reload();
+	});
 </script>
