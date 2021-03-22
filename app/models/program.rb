@@ -259,12 +259,13 @@ class Program < ActiveRecord::Base
     end
     def self.options_for_prog_level
       [
-         ['Advanced Certificate', 'advanced-certificate'],
+        ['Certificate', 'certificate'],
          ['Associate', 'associate'],
          ['Bachelor', 'bachelor'],
-         ['Certificate', 'certificate'],
-         ['Doctorate', 'doctorate'],
          ['Master', 'master'],     
+         ['Advanced Certificate', 'advanced-certificate'],
+         ['Doctorate', 'doctorate']
+
       ]
     end
       def self.options_for_delivery_method
