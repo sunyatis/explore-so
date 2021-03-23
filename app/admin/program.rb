@@ -100,7 +100,7 @@ ActiveAdmin.register Program do
          f.hr
          f.li "<li><div class='aa_label_level'><h3>Online Tutoring</h3</div></li>".html_safe 
          f.li "<li><div class='aa_label_level'><h4>Do students in this program have access to online tutoring support?</h4</div></li>".html_safe 
-           f.input :turtoring, :as => :radio, :collection => [["Yes", true], ["No", false]]
+           f.input :tutoring, :as => :radio, :collection => [["Yes", true], ["No", false]]
            f.hr
          f.hr
          f.li "<li><div class='aa_label_level'><h3>Personal Concierge</h3</div></li>".html_safe 
