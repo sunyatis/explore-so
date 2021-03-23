@@ -23827,7 +23827,9 @@ jQuery(document).on('ready page:load', function() {
 
 
 
-
+	if(performance.navigation.type == 2){
+	   location.reload(true);
+	}
 
 function myFunction() {
 		var dg = document.getElementById("degree");
@@ -23971,7 +23973,7 @@ function myFunction() {
 	});
 	
 	// BEGIN area and rating filter
-	$('#level_filter').on('change', function() {
+	$('#level_filter').on('click', function() {
 	    $('#Container').mixItUp('filter', this.value);
 
 	    // <-- removed from here
