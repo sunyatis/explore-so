@@ -2978,7 +2978,7 @@ body > header {
 
 /* line 596, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/programs.scss */
 .online-learning ul dl.synchronous:before {
-  background: url("/assets/logos/synchronous_blue.svg") no-repeat top left;
+  background: url("/assets/synchronous_blue.svg") no-repeat top left;
   background-size: contain;
 }
 

@@ -145,6 +145,14 @@
 					<% end %>
 					<% if @program.synchronous == TRUE%>	
 					<li>
+						<dl class="synchronous">
+							<dt>Live classes</dt>
+							<dd>You will learn in real-time while the instructor leads the class. Courses are similar to in-person classes, but you participate online.</dd>
+						</dl>
+					</li>
+					<% end %>
+					<% if @program.asynchronous == TRUE%>	
+					<li>
 						<dl class="asynchronus">
 							<dt>Classes on your schedule</dt>
 							<dd>Courses are semester based and classwork can be completed around your work and family commitments. There is no set time where you are required to log in to attend class.</dd>
