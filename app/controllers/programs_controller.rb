@@ -22,8 +22,8 @@ def index
          with_accelerated: Program.options_for_accelerated,
          with_tutoring: Program.options_for_tutoring,
          with_category: Category.options_for_select
-       }#,
-#        persistence_id: 'shared_key',
+       },
+        persistence_id: false,
 #              default_filter_params: {},
 #              available_filters: [],
                   ) or return
