@@ -21,7 +21,7 @@ class School < ActiveRecord::Base
          "#{name}"
      end
      
-     def campus_type(id)
+     def find_campus_type(id)
        @campus = School.where(id: id).pluck(:campus_type)
        result = @campus.join(" ").downcase.parameterize 
        return result

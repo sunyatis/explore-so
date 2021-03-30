@@ -23,7 +23,7 @@
 	<% @schools.each do |school| %>
 	
 <% if school.any_progs(school.id) != 0 %>
-<li id="institution-row" class="mix level <%=school.campus_type(school.id)%>" data-myorder="1"><a title="Explore more SUNY Online Programs at <%=school.name%>" data-field="arts" tabindex="0" href="/programs?filterrific[with_subject_area]=arts">
+<li id="institution-row" class="mix level <%=school.find_campus_type(school.id)%>" data-myorder="1"><a title="Explore more SUNY Online Programs at <%=school.name%>" data-field="arts" tabindex="0" href="/programs?filterrific[with_subject_area]=arts">
 		<figure>
 			<a href="/programs?filterrific[with_school_id]=<%=school.id%>" title="Explore more degrees from <%=school.name%>">
 				<%=image_tag(school.image.url(:small), :align=> "center",  :alt =>  "#{school.name} Logo")%></a>
