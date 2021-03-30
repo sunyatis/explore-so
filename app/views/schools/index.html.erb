@@ -35,33 +35,33 @@
 					<ul class="degrees">
 						<% if school.advanced_certificate(school.id) != 0 %>
 						<li class="prog_type">
-							<a href="/programs?filterrific[with_school_id]=<%=school.id%>&[with_prog_level]=advanced-certificate" title="Explore more Advanced Certificate degree programs from <%=school.name%>" class="rounded-button-adv">Advanced Certificate</a>
+							<a href="/programs?filterrific[with_school_id]=<%=school.id%>&filterrific[with_prog_level]=advanced-certificate" title="Explore more Advanced Certificate degree programs from <%=school.name%>" class="rounded-button-adv">Advanced Certificate</a>
 						</li>
 						<% end %>
 						
 						<% if school.associate(school.id) != 0 %>
 						<li class="prog_type">
-							<a href="/programs?filterrific[with_school_id]=<%=school.id%>&[with_prog_level]=associate" title="Explore more Associate degree programs from <%=school.name%>" class="rounded-button">Associate</a>
+							<a href="/programs?filterrific[with_school_id]=<%=school.id%>&filterrific[with_prog_level]=associate" title="Explore more Associate degree programs from <%=school.name%>" class="rounded-button">Associate</a>
 						</li>
 						<% end %>
 						<% if school.bachelor(school.id) != 0 %>
 						<li class="prog_type">
-							<a href="/programs?filterrific[with_school_id]=<%=school.id%>&[with_prog_level]=bachelor" title="Explore more Bachelor's degree programs from <%=school.name%>" class="rounded-button">Bachelor's</a>
+							<a href="/programs?filterrific[with_school_id]=<%=school.id%>&filterrific[with_prog_level]=bachelor" title="Explore more Bachelor's degree programs from <%=school.name%>" class="rounded-button">Bachelor's</a>
 						</li>
 						<% end %>
 						
 						<% if school.certificate(school.id) != 0 %>
-						<li class="prog_type"><a href="/programs?filterrific[with_school_id]=<%=school.id%>&[with_prog_level]=certificate" title="Explore more Certificate degree programs from <%=school.name%>" class="rounded-button">Certificate</a></li>
+						<li class="prog_type"><a href="/programs?filterrific[with_school_id]=<%=school.id%>&filterrific[with_prog_level]=certificate" title="Explore more Certificate degree programs from <%=school.name%>" class="rounded-button">Certificate</a></li>
 						<% end %>
 						
 						<% if school.doctorate(school.id) != 0 %>
 						<li class="prog_type">
-							<a href="/programs?filterrific[with_school_id]=<%=school.id%>&[with_prog_level]=doctorate" title="Explore more Doctorate degree programs from <%=school.name%>" class="rounded-button">Doctorate</a>
+							<a href="/programs?filterrific[with_school_id]=<%=school.id%>&filterrific[with_prog_level]=doctorate" title="Explore more Doctorate degree programs from <%=school.name%>" class="rounded-button">Doctorate</a>
 						</li>
 						<% end %>
 						<% if school.master(school.id) != 0 %>
 						<li class="prog_type">
-							<a href="/programs?filterrific[with_school_id]=<%=school.id%>&[with_prog_level]= master" title="Explore more Master's degree programs from <%=school.name%>" class="rounded-button">Master's</a>
+							<a href="/programs?filterrific[with_school_id]=<%=school.id%>&filterrific[with_prog_level]= master" title="Explore more Master's degree programs from <%=school.name%>" class="rounded-button">Master's</a>
 						</li>
 						<% end %>
 
