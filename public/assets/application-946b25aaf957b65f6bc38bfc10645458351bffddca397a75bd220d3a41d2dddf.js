@@ -23992,5 +23992,54 @@ function myFunction() {
 
 	});
 	
+//schools	
+	$(function(){
+	  $('#Container-schools').on('mixLoad', function() {
+	    console.log('[event-handler] MixItUp Loaded');
+	  });
+  
+	  $('#Container-schools').on('mixStart', function() {
+	    console.log('[event-handler] Animation Started')
+	  });
+  
+	  $('#Container-schools').on('mixEnd', function() {
+	    console.log('[event-handler] Animation Ended')
+	  });
+  
+	  $('#Container-schools').mixItUp({
+	    callbacks: {
+	      onMixLoad: function() {
+	        console.log('[callback] MixItUp Loaded');
+	      },
+	      onMixStart: function() {
+	        console.log('[callback] Animation Started');
+	      },
+	      onMixEnd: function() {
+	        console.log('[callback] Animation Ended');
+	      }
+	    }
+	  });
+	});
+	
+	// BEGIN area and rating filter
+	$('#school_filter').on('click', function() {
+	    $('#Container-schools').mixItUp('filter', this.value);
 
+	    // <-- removed from here
+
+	});
+	// END area and rating filter
+	$(function(){
+	  var $filterSelect = $('#school_filter'),
+	      $container = $('#Container-schools');
+  
+	  $container.mixItUp();
+  
+	  $filterSelect.on('change', function(){
+	    $container.mixItUp('filter', this.value);
+	  });
+
+	});
+	
+	
 	

@@ -34,6 +34,7 @@ Rails.application.routes.draw do
  #get "sunyonline", :to => "sunyonline#index"
  #get "/sunyonline/*id" => 'sunyonline#show', as: :page, format: false
   get "/sunyonline", :to  => "sunyonline#index"
+  get "/schools", :to => "schools#index"
 
   
   resources :programs
@@ -47,8 +48,8 @@ Rails.application.routes.draw do
 
   #devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  #root to: 'content#index'
-          root to: 'courses#index'
+  root to: 'content#index'
+          #root to: 'courses#index'
           #devise_for :users
   
   

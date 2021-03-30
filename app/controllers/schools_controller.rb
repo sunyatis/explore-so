@@ -10,6 +10,11 @@ def show
    @schools = School.find(params[:id])
 end
 
+def index
+  @schools = School.order(:name)
+end
+
+
 
 
   #private
