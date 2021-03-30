@@ -40,7 +40,7 @@ Rails.application.routes.draw do
   resources :programs
   resources :general_educations
   resources :courses
-  #resources :schools
+  resources :schools
   resources :catalogs
   resources :categories  
   resources :sunyonline, path: '/sunyonline/'
