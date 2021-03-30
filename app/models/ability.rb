@@ -58,6 +58,7 @@ class Ability
          can [:catalogs, :read], Course
          can [:course_areas, :read], Course
          can [:schools, :read], Course
+         can [:schools, :read], School
     end
     
     
