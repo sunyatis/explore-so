@@ -73,7 +73,7 @@
 						</dl>
 						<dl>
 							<dt>Start Date</dt>
-							<dd class="extra-margin-degree"></dd>
+							<dd class="extra-margin-degree"><% if course.start_date.strftime('%m-%d-%Y') != "" %><%= course.start_date.strftime('%m-%d-%Y') %><% end %></dd>
 						</dl>
 						<dl>
 							<dt>Credits</dt>
