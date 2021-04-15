@@ -91,6 +91,36 @@
 					<dd>Advanced, or graduate, certificates are designed to provide focused study to support a particular career interest. They vary in number of credits and typically require students to have a bachelor’s degree.</dd>
 				</dl>
 					<% end %>
+				<% if @program.prog_level == "associate" %>
+				<dl class="info-block">
+					<dt>What's an associate degree?</dt>
+					<dd>An associate degree usually takes two years of study and prepares students for employment or transfer to a bachelor’s program at a four-year university.</dd>
+				</dl>
+					<% end %>
+				<% if @program.prog_level == "bachelor" %>
+				<dl class="info-block">
+					<dt>What's a bachelor's degree?</dt>
+					<dd>A bachelor’s degree usually takes four years to complete as a full-time student and mixes general education courses with specific courses tied to your major.</dd>
+				</dl>
+					<% end %>
+				<% if @program.prog_level == "master" %>
+				<dl class="info-block">
+					<dt>What's a master's degree?</dt>
+					<dd>A master's degree is an advanced degree that usually takes two years to complete and typically requires students to have a bachelor’s degree in a related field of study.</dd>
+				</dl>
+					<% end %>
+				<% if @program.prog_level == "doctorate" %>
+				<dl class="info-block">
+					<dt>What's a doctorate degree?</dt>
+					<dd>A doctorate degree usually takes four or more years to complete, unless you already have a master's degree. Doctorate degrees are very specific to a particular area of study.</dd>
+				</dl>
+					<% end %>
+				<% if @program.prog_level == "certificate" %>
+				<dl class="info-block">
+					<dt>What's a certificate?</dt>
+					<dd>Certificates are usually one year in length and lead directly to employment. They consist of a focused series of courses and are typically found at Community Colleges.</dd>
+				</dl>
+					<% end %>
 				</section>
 			<aside class="school-card" aria-label="University Details">
 				<div class="wrap one">
