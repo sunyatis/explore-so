@@ -48,6 +48,32 @@ ActiveAdmin.register Program do
   
   #filter :school_id, as: :select, :collection => School.pluck(:name, :id)
 
+  filter :ranku_id
+  filter :prog_title
+  filter :description
+   filter :school_id, as: :select, :collection => School.pluck(:name, :id).sort
+   filter :open_suny, :as => :select, collection: Program.options_for_open_suny
+   filter :level_expanded, :as => :select, :collection => ["Advanced Certificate","Associate of Applied Science","Associate of Arts","Associate of Science","Bachelor of Arts","Bachelor of Business", "Bachelor of Business Administration","Bachelor of Nursing","Bachelor of Professional Studies","Bachelor of Science","Bachelor of Technology","Certificate","Doctor of Nursing Practice","Doctor of Philosophy","Doctorate","Master of Arts","Master of Arts in Teaching","Master of Business Administration","Master of Education","Master of Engineering","Master of Music","Master of Public Health","Master of Science","Master of Science in Education","Master of Social Work","Masters of Arts in Teaching","Undergraduate Certificate"]
+   filter :subject_area, as: :select, collection: Program.options_for_subject_area
+   filter :subject_area_2, as: :select, collection: Program.options_for_subject_area
+   filter :subject_area_3, as: :select, collection: Program.options_for_subject_area
+   filter :prog_level
+   filter :synchronous
+   filter :asynchronous
+   filter :delivery_method, :as => :select, collection: Program.options_for_delivery_method
+   filter :active
+   filter :duration
+   filter :tutoring, :as => :select, :collection => [["Yes", true], ["No", false]]
+   filter :concierge, :as => :select, :collection => [["Yes", true], ["No", false]]
+   filter :experiential_learning, :as => :select, :collection => [["Yes", true], ["No", false]]
+   filter :accelerated, :as => :select, :collection => [["Yes", true], ["No", false]]
+   filter :plas, :as => :select, :collection => [["Yes", true], ["No", false]]
+   filter :sed
+   
+   
+   
+
+
   form do |f|
   f.inputs "Program Details" do
     tabs do
