@@ -22,7 +22,7 @@
 	  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
     <%= csrf_meta_tags %>
 
 		  <!--[if lt IE 9]>
@@ -86,6 +86,7 @@
 		
 <%= render 'layouts/footer' %>
 <input id="reloadValue" type="hidden" name="reloadValue" value="" />
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </body>
   
 </html>
@@ -98,4 +99,16 @@
 	$(window).on('popstate', function(event) {
 	 location.reload();
 	});
+	
+	var input = document.getElementById("s");
+
+	// Execute a function when the user releases a key on the keyboard
+	input.addEventListener("keyup", function(event) {
+	  // Number 13 is the "Enter" key on the keyboard
+	  if (event.keyCode === 13) {
+	    // Cancel the default action, if needed
+	    event.preventDefault();
+	    // Trigger the button element with a click
+	    document.getElementById("searchButton").click();
+	  }	});
 </script>

@@ -33,11 +33,14 @@ function myFunction() {
   var stext = document.getElementById('s').value
 	  if (dgchoice =="" && stext=="")
 	  {
-	  	window.location = "/programs";
+	  	window.location =  "/programs?" + dgchoice + "&" + "filterrific[search_query]=" + stext;
 	  }else
 	  window.location = "/programs?" + dgchoice + "&" + "filterrific[search_query]=" + stext;
 	  
 	}
+	
+
+
 	
 	function togglemenu (){
 	   var w = $(window).width();
