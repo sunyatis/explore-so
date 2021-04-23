@@ -20,7 +20,7 @@ load_and_authorize_resource
   #              default_filter_params: {},
   #              available_filters: [],
                     ) or return
-                    @courses = @filterrific.find.joins(:catalog).where("courses.catalog_id = catalogs.id and catalogs.active = 't' and courses.active='t'").order("courses.name title ").page(params[:page])
+                    @courses = @filterrific.find.joins(:catalog).where("courses.catalog_id = catalogs.id and catalogs.active = 't' and courses.active='t'").order("courses.title").page(params[:page])
                         # Respond to html for initial page load and to js for AJAX filter updates.
                         respond_to do |format|
                           format.html
