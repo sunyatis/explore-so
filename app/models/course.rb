@@ -240,6 +240,11 @@ def get_school_name(id)
   School.find(id).name
 end
 
+def self.num_campuses(id)
+  @num_campuses = Course.where(:catalog_id => id).pluck(:school_id).uniq.count
+end
+
+
 def self.clean_course_area(my_course_area)
   return my_course_area.gsub(/&amp;/,'&')
 end

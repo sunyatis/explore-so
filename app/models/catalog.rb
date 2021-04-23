@@ -8,6 +8,8 @@ class Catalog < ActiveRecord::Base
     order('id').map { |e| [e.name, e.id] }
   end
   
-  
-  
+  def num_courses
+    courses.count
+  end
+
 end

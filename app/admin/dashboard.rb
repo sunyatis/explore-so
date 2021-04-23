@@ -1,52 +1,81 @@
 ActiveAdmin.register_page "Dashboard" do
+  menu priority: 1
 
-# menu priority: 1, label: proc{ I18n.t("active_admin.dashboard") }
-#
-# content title: proc{ I18n.t("active_admin.dashboard") } do
-#   div class: "blank_slate_container", id: "dashboard_default_message" do
-#     span class: "blank_slate" do
-#       span I18n.t("active_admin.dashboard_welcome.welcome")
-#       small I18n.t("active_admin.dashboard_welcome.call_to_action")
-#     end
-#   end
-#   
-#   #PAPER TRAIL
-#   section "Recently updated content" do
-#     table_for PaperTrail::Version.order('id desc').limit(20) do # Use PaperTrail::Version if this throws an error
-#    #column ("Item") { |v| v.name }
-#    column "Item" do |v|
-#      if v.item != nil && v.item_type.underscore.humanize == "Program"
-#         link_to v.item.prog_title, [:admin, v.item]  
-#      elsif  v.item != nil &&  v.item_type.underscore.humanize == "Course"  
-#         link_to v.item.title, [:admin, v.item] 
-#      end
-#    end# Uncomment to display as link
-#    #column ("Type") { |v| v.item.trans_type }
-#    column ("Record") { |v| v.item_type.underscore.humanize }
-#    column ("Event") { |v| v.event }
-#    column ("Modified at") { |v| v.created_at.to_s :long }
-#       column ("Admin") { |v| link_to User.find(v.whodunnit).email, [:admin, User.find(v.whodunnit)] }
-#     end
-#   end
+  
 
-    # Here is an example of a simple dashboard with columns and panels.
+  content title: proc { I18n.t("active_admin.dashboard") } do
+
+    columns do
+      column do
+        panel "Recent Updates" do
+          #table_for Order.complete.order("id desc").limit(10) do
+          #  column("State") { |order| status_tag(order.state) }
+          #  column("Customer") { |order| link_to(order.user.email, admin_user_path(order.user)) }
+          #  column("Total")   { |order| number_to_currency order.total_price }
+          #end
+        end
+      end
+
+      column do
+        panel "Program Statistics" do
+         # table_for User.order("id desc").limit(10).each do |_user|
+           # column(:email)    { |user| link_to(user.email, admin_user_path(user)) }
+         # end
+        end
+      end
+    end # columns
+
+    columns do
+      column do
+        div do
+          br
+          #text_node %{<iframe src="https://rpm.newrelic.com/public/charts/6VooNO2hKWB"
+                             # width="500" height="300" scrolling="no" frameborder="no">
+                     # </iframe>}.html_safe
+        end
+      end
+
+      column do
+        panel "Course Statistics" do
+          div do
+            render("/admin/course_stats", model: "course")
+          end
+        end
+      end
+    end # columns
+
+    # Define your dashboard sections here. Each block will be
+    # rendered on the dashboard in the context of the view. So just
+    # return the content which you would like to display.
+
+    # The dashboard is organized in rows and columns, where each row
+    # divides the space for its child columns equally.
+
+    # To start a new row, open a new 'columns' block, and to start a
+    # new column, open a new 'colum' block. That way, you can exactly
+    # define the position for each content div.
+
+    # == Simple Dashboard Column
+    # Here is an example of a simple dashboard column
     #
-    # columns do
     #   column do
     #     panel "Recent Posts" do
-    #       ul do
-    #         Post.recent(5).map do |post|
-    #           li link_to(post.title, admin_post_path(post))
-    #         end
+    #       content_tag :ul do
+    #         Post.recent(5).collect do |post|
+    #           content_tag(:li, link_to(post.title, admin_post_path(post)))
+    #         end.join.html_safe
     #       end
     #     end
     #   end
 
+    # == Render Partials
+    # The block is rendererd within the context of the view, so you can
+    # easily render a partial rather than build content in ruby.
+    #
     #   column do
-    #     panel "Info" do
-    #       para "Welcome to ActiveAdmin."
+    #     panel "Recent Posts" do
+    #       render 'recent_posts' # => this will render /app/views/admin/dashboard/_recent_posts.html.erb
     #     end
     #   end
-    # end
-    #end # content
+  end # content
 end

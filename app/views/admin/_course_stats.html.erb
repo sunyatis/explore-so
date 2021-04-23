@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2">
+      Number of Courses
+	  <br> <%= Course.all.count %>
+    </div>
+    <div class="col-sm-2">
+      Number of Semesters
+	  <br> <%= Catalog.all.count %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      Number of Campus with Courses
+	  <br> <%= Course.distinct.count(:school_id)%>
+    </div>
+    <div class="col-sm-2">
+      
+    </div>
+  </div>
+</div>
+<table class="stats">
+  <tr>
+    <th>Catalog</th>
+    <th>Courses</th>
+    <th>Campuses</th>
+  </tr>
+  <% Catalog.all.each do |catalog| %>
+    <tr>    
+      <td class="catalog"><%= catalog.name %></td>
+      <td class="catalog"><%= catalog.num_courses %></td>
+      <td class="catalog"><%= Course.num_campuses(catalog.id) %></td>
+    </tr>  
+  <% end %> 
+</table>
