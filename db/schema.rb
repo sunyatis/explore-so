@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_24_160621) do
+ActiveRecord::Schema.define(version: 2021_05_21_144708) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -119,13 +119,6 @@ ActiveRecord::Schema.define(version: 2021_02_24_160621) do
     t.text "approver_comments"
   end
 
-  create_table "program_subjectareas", id: false, force: :cascade do |t|
-    t.bigint "program_id"
-    t.bigint "subject_area_id"
-    t.index ["program_id"], name: "index_program_subjectareas_on_program_id"
-    t.index ["subject_area_id"], name: "index_program_subjectareas_on_subject_area_id"
-  end
-
   create_table "programs", force: :cascade do |t|
     t.text "prog_title"
     t.text "description"
@@ -175,6 +168,7 @@ ActiveRecord::Schema.define(version: 2021_02_24_160621) do
     t.datetime "image_updated_at"
     t.string "campus_type"
     t.text "registrar_phone"
+    t.string "abbv"
     t.index ["slug"], name: "idx_58429_index_schools_on_slug", unique: true
   end
 

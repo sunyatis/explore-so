@@ -166,6 +166,7 @@ class Course < ActiveRecord::Base
      ]
    end
    
+   
    def self.options_for_level_select
      Course.order(:level).pluck(:level).uniq
    end
@@ -179,6 +180,9 @@ class Course < ActiveRecord::Base
    def self.options_for_school_select
       Course.joins(:school).select('schools.name').order(:name).pluck(:name, :school_id).uniq
    end
+   def self.options_for_catalog_id_select
+      Course.joins(:catalog).select('catalogs.name').where('catalogs.active = TRUE').order(:name).pluck(:name, :catalog_id).uniq
+      end
 
  #  scope :search_query, lambda { |query|
  #    return nil  if query.blank?

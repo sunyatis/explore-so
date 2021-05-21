@@ -8,7 +8,7 @@ load_and_authorize_resource
    select_options: {
             sorted_by: Course.options_for_sorted_by,
            with_school_id: Course.options_for_school_select,
-           with_catalog_id: Catalog.options_for_select,
+           with_catalog_id: Course.options_for_catalog_id_select,
            with_generaleducation_id: GeneralEducation.options_for_select,
            with_subject_area_id: SubjectArea.options_for_select,
            with_course_area: Course.options_for_course_area_select,
@@ -34,6 +34,7 @@ load_and_authorize_resource
                         # There is an issue with the persisted param_set. Reset it.
                     #    puts "Had to reset filterrific params: #{ e.message }"
                      #   redirect_to(reset_filterrific_url(format: :html)) and return  
+
     end
 
     def update
@@ -53,7 +54,7 @@ load_and_authorize_resource
    select_options: {
             sorted_by: Course.options_for_sorted_by,
            with_school_id: Course.options_for_school_select,
-           with_catalog_id: Catalog.options_for_select,
+           with_catalog_id: Catalog.options_for_catalog_id_select,
            with_generaleducation_id: GeneralEducation.options_for_select,
            with_subject_area_id: SubjectArea.options_for_select,
            with_course_area: Course.options_for_course_area_select,
@@ -92,7 +93,10 @@ load_and_authorize_resource
     end
 
 
-
+    def show
+      
+    
+    end
 
 
     def course_params

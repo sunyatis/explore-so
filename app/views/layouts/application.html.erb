@@ -11,11 +11,13 @@
 		  <meta name="keywords" content="SUNY Online, Online SUNY, Open SUNY, OpenSUNY, SLN, SUNY Learning Network, SUNY Online Learning, State University of New York, online learning, online course, online classes, online degree, online degrees, Online Degree Programs, Open SUNY+, OpenSUNY+, Online College Courses, Online Bachelor Degrees, Online Master Degrees, Online Associate Degrees, online course catalog">
 		  <meta name="DC.type" content="http://purl.org/dc/dcmitype/Service">
 		  <meta name="DC.description" content="Online Degrees, Certificates and Endorsements from the State University of New York">
-		  <title><%= content_for?(:title) ? yield(:title) : "Explore Online Degrees and Courses" %> | SUNY Online</title>
+		  
 	  
 	  
 		<link rel="shortcut icon" href="/assets/favicon.ico">
-    <title><%= content_for?(:title) ? yield(:title) : "Explore Online Degrees and Courses" %> | SUNY Online</title>
+<title><%= yield_or_default(:title, "Search for Online Programs and Courses") %> | SUNY Online</title>
+</title>
+
 
    
 		<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" type="text/css" rel="stylesheet">
