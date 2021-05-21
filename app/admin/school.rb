@@ -79,6 +79,7 @@ menu parent: 'Manage Navigator', label: 'School'
      f.input :tuition_url, :input_html => { :class => 'single_line'}  
      f.input :financial_aid_url, :input_html => { :class => 'single_line'} 
      f.input :slug, :input_html => { :class => 'single_line'}
+     f.input :abbv, :input_html => { :class => 'single_line'}
      #f.input :image, as: :file
    end
    f.actions

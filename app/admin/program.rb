@@ -106,6 +106,8 @@ ActiveAdmin.register Program do
       tab 'Program Description', {class: 'ui-tabs-active'} do
         f.li "<li><div class='aa_label_level'><h3>Briefly summarize this program</h3</div></li>".html_safe 
         f.input :description, as: :froala_editor
+        f.li "<li><div class='aa_label_level'><h3>Metadata</h3</div></li>".html_safe 
+        f.input :meta
       end
       tab 'Application Information', {class: 'ui-tabs-active'} do
         f.li "<li><div class='aa_label_level'><h3>What is the application URL?</h3</div></li>".html_safe 
