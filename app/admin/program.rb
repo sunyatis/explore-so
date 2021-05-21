@@ -36,7 +36,7 @@ ActiveAdmin.register Program do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :prog_title, :description, :subjectarea_id, :prog_level, :school_id, :duration, :delivery_method,  :open_suny, :synchronous, :tutoring, :concierge, :experiential_learning, :plas, :accelerated, :level_expanded, :sed, :apply_now_url, :slug, :cat_id, :ranku_id, :active, :asynchronous, :subject_area, :subject_area_2, :subject_area_3
+  permit_params :prog_title, :description, :subjectarea_id, :prog_level, :school_id, :duration, :delivery_method,  :open_suny, :synchronous, :tutoring, :concierge, :experiential_learning, :plas, :accelerated, :level_expanded, :sed, :apply_now_url, :slug, :cat_id, :ranku_id, :active, :asynchronous, :subject_area, :subject_area_2, :subject_area_3, :meta
   #
   # or
   #
