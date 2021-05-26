@@ -73,7 +73,7 @@ menu parent: 'Manage Navigator', label: 'School'
      f.input :state, :input_html => { :class => 'single_line'}
      f.input :zip, :input_html => { :class => 'single_line'}
      f.input :registrar_phone, :input_html => { :class => 'single_line'}
-     f.input :campus_type, :as => :select,  :collection => ["Community College", "Technology College", "University"]
+     f.input :campus_type, :as => :select,  :collection => ["Community College", "Technology College", "University Center", "University College"]
      f.input :school_url, :input_html => { :class => 'single_line'}
      f.input :registration_url, :input_html => { :class => 'single_line'}
      f.input :tuition_url, :input_html => { :class => 'single_line'}  

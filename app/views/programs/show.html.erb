@@ -1,4 +1,5 @@
 <% title "#{@program.prog_title} - #{@program.prog_level.titleize} - #{@program.school.abbv}"  %>
+<% meta_key "#{@program.meta_keywords}" %>
 <style>
 	#top_rfi{
 		display:none;
@@ -138,8 +139,12 @@
 						<h4>About our Technology College</h4>
 							<p>Cutting-edge, hands-on training for in-demand careers is the focus of our technology college. We offer academic programs and degrees in technical, as well as traditional, disciplines. Excellent support services complement the classroom instruction. Internships and on-the-job training provide students with hands-on experience that is sought after by employers.</p>
 						<% end%>
-						<% if @program.school.campus_type == "University"%>	
-						<h4>About our University</h4>
+						<% if @program.school.campus_type == "University Center"%>	
+						<h4>About our University Center</h4>
+							<p>Undergraduate teaching, research and advanced graduate and professional studies are top priorities for the University Centers and Doctoral Degree Granting Institutions. All campuses are research institutions and offer bachelor's, master's and doctoral degrees through a broad range of academic programs. Undergraduate research and honors programs provide students with opportunities to interact one-on-one with renowned national and international faculty.</p>
+						<% end%>
+						<% if @program.school.campus_type == "University College"%>	
+						<h4>About our University College</h4>
 							<p>Our university college is a leader in undergraduate instruction. We provide bachelor’s and master’s degrees in liberal arts and sciences and professional disciplines. Student success is our primary focus as evidenced by faculty and staff interactions through honors programs, independent study opportunities, research and study abroad.</p>
 						<% end%>
 						

@@ -36,7 +36,7 @@ ActiveAdmin.register Program do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :prog_title, :description, :subjectarea_id, :prog_level, :school_id, :duration, :delivery_method,  :open_suny, :synchronous, :tutoring, :concierge, :experiential_learning, :plas, :accelerated, :level_expanded, :sed, :apply_now_url, :slug, :cat_id, :ranku_id, :active, :asynchronous, :subject_area, :subject_area_2, :subject_area_3, :meta
+  permit_params :prog_title, :description, :subjectarea_id, :prog_level, :school_id, :duration, :delivery_method,  :open_suny, :synchronous, :tutoring, :concierge, :experiential_learning, :plas, :accelerated, :level_expanded, :sed, :apply_now_url, :slug, :cat_id, :ranku_id, :active, :asynchronous, :subject_area, :subject_area_2, :subject_area_3, :meta_keywords, :meta_desc
   #
   # or
   #
@@ -106,8 +106,11 @@ ActiveAdmin.register Program do
       tab 'Program Description', {class: 'ui-tabs-active'} do
         f.li "<li><div class='aa_label_level'><h3>Briefly summarize this program</h3</div></li>".html_safe 
         f.input :description, as: :froala_editor
-        f.li "<li><div class='aa_label_level'><h3>Metadata</h3</div></li>".html_safe 
-        f.input :meta
+        f.hr
+        f.li "<li><div class='aa_label_level'><h3>Metadata Keywords</h3</div></li>".html_safe 
+        f.input :meta_keywords
+        f.li "<li><div class='aa_label_level'><h3>Metadata Description</h3</div></li>".html_safe 
+        f.input :meta_desc
       end
       tab 'Application Information', {class: 'ui-tabs-active'} do
         f.li "<li><div class='aa_label_level'><h3>What is the application URL?</h3</div></li>".html_safe 
