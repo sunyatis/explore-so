@@ -185,7 +185,40 @@ ActiveAdmin.register Program do
 
 #filter :school_id, as: :select, :collection => School.pluck(:name, :id).sort
 
+csv do
+    column :id
+    column :ranku_id
+    column :school_id do |program|
+      if program.school_id?
+        School.get_name(program.school_id)
+      else
+        "No school listed"
+      end
+    end
+    column :prog_title
+    column :description
+    column :open_suny
+    column :level_expanded
 
+    column :subject_area
+    column :subject_area_2
+    column :subject_area_3
+    
+    column :prog_level
+    column :synchronous
+    column :asynchronous
+    column :delivery_method
+    column :active
+    column :duration
+    column :tutoring
+    column :concierge
+    column :experiential_learning
+    column :accelerated
+    column :plas
+    column :sed
+
+end    
+  
 
   index do
      id_column

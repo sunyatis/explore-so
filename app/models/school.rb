@@ -56,5 +56,11 @@ class School < ActiveRecord::Base
      def self.options_for_school_select
         School.where("courses.school_id = schools.id").order(:id).pluck(:id).uniq
      end
+     
+     #get school name
+     def self.get_name(id)
+        School.find(id).name
+     end
+  
   
 end
