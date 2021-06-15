@@ -1002,11 +1002,14 @@ figure {
 
 body>footer{display:flex;flex:1;flex-flow:column nowrap;padding:2.5rem 0;width:100%;background-color:#444645;font-size:.875rem;font-weight:300;line-height:1.25rem;color:#c5c5c5}body>footer a.twitter-timeline{color:#fff important;text-indent:-5000px}
 
-body>footer .navigation{display:flex}@media screen and (max-width:820px){body>footer .navigation{flex-flow:column nowrap;width:100%}}body>footer .navigation ul{display:flex;flex-flow:column wrap;list-style-type:none;flex-basis:calc(100% - 300px);width:calc(100% - 300px);height:6.25rem;padding:0;margin:0;order:1}@media screen and (max-width:820px){body>footer .navigation ul{flex-flow:column nowrap;width:100%;flex-basis:auto;margin-bottom:2.5rem;text-align:center;height:auto;align-self:center;order:1}}
+body>footer .navigation{display:flex}@media screen and (max-width:820px){body>footer .navigation{flex-flow:column nowrap;width:100%}}
+
+
+@media screen and (max-width:820px){body>footer .navigation ul{flex-flow:column nowrap;width:100%;flex-basis:auto;margin-bottom:2.5rem;text-align:center;height:auto;align-self:center;order:1}}
 
 body>footer .navigation ul li{padding:0;margin:0 0 .3125rem 0;line-height:1.25rem}@media screen and (max-width:820px){body>footer .navigation ul li{line-height:1.75rem}}body>footer .navigation ul li a{font-size:.875rem;font-weight:300;line-height:1.25rem;color:#c5c5c5;text-decoration:none;trasition:color 200ms ease}body>footer .navigation ul li a:hover{color:#58adeb}
 
-body>footer .navigation figure{display:flex;position:relative;flex-flow:row nowrap;width:calc(100% - 300px);transform:translateY(-116px);margin-bottom:-4.6875rem;order:3}@media screen and (max-width:820px){body>footer .navigation figure{display:inline-block;flex-flow:none;flex-basis:none;width:100%;margin:0;transform:none}}
+@media screen and (max-width:820px){body>footer .navigation figure{display:inline-block;flex-flow:none;flex-basis:none;width:100%;margin:0;transform:none}}
 
 body>footer .navigation figure img{width:9.5625rem;height:4.6875rem;margin-right:.9375rem}@media screen and (max-width:820px){body>footer .navigation figure img{display:block;margin:0 auto;margin-bottom:.9375rem}}
 
