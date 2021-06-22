@@ -31,6 +31,8 @@ gem 'activeadmin_froala_editor'
 gem 'owlcarousel-rails'
 gem "mixitup-rails"
 
+###commnet
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
