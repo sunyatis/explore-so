@@ -16,19 +16,21 @@ class SunyonlineController < ApplicationController
 #       'application'
 #     end
 #   end
+
+
   
     def show
       if (params.has_key?(:page4))
-        render template: "#{params[:page4]}/#{params[:page3]}/#{params[:page2]}/#{params[:page1]}/#{params[:page]}"
+        render template: "sunyonline/#{params[:page4]}/#{params[:page3]}/#{params[:page2]}/#{params[:page1]}/#{params[:page]}"
     elsif (!params.has_key?(:page4)) && (params.has_key?(:page3))
         puts "#{params[:page3]}"
-            render template: "#{params[:page3]}/#{params[:page2]}/#{params[:page1]}/#{params[:page]}"
+            render template: "sunyonline/#{params[:page3]}/#{params[:page2]}/#{params[:page1]}/#{params[:page]}"
          elsif (!params.has_key?(:page3)) && (params.has_key?(:page2))
              puts "#{params[:page2]}"
-                 render template: "#{params[:page2]}/#{params[:page1]}/#{params[:page]}"
+                 render template: "sunyonline/#{params[:page2]}/#{params[:page1]}/#{params[:page]}"
               elsif (!params.has_key?(:page2)) && (params.has_key?(:page1))
         puts "#{params[:page1]}"
-            render template: "#{params[:page1]}/#{params[:page]}"
+            render template: "sunyonline/#{params[:page1]}/#{params[:page]}"
          else
             
           end
