@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 # constraints host: 'explore-test.suny.edu' do
 #   get "/", :to => "content#index"
    
-constraints host: 'localhost' do
+#constraints host: 'localhost' do
 
 
   get "/courses/my_courses", :to => "courses#my_courses"
@@ -32,7 +32,7 @@ constraints host: 'localhost' do
   get "content/transfer", :to => "content#transfer"
   get "content/about", :to => "content#about"
  get "sunyonline", :to => "sunyonline#index"
- #get "/sunyonline/*id" => 'sunyonline#show', as: :page, format: false
+ get "/sunyonline/*id" => 'sunyonline#show', as: :page, format: false
   get "/schools", :to => "schools#index"
   get "sunyonline/", :to  => "sunyonline#index"
    get "sunyonline/:page" => "sunyonline#show"
@@ -47,7 +47,7 @@ constraints host: 'localhost' do
   resources :schools
   resources :catalogs
   resources :categories  
-  resources :sunyonline#, path: '/sunyonline/'
+  resources :sunyonline, path: '/sunyonline/'
 
 
   #devise_for :admin_users, ActiveAdmin::Devise.config
@@ -73,6 +73,6 @@ constraints host: 'localhost' do
   
   resources :users
   
-   end
+ #  end
   
 end
