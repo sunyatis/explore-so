@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
   
  
-constraints host: 'explore-test1.suny.edu' do
-   resources :sunyonline
-   get "/", :to  => "sunyonline#index"
-   get "/:page" => "sunyonline#show"
-   get "/:page1/:page" => "sunyonline#show"
-   get "/:page2/:page1/:page" => "sunyonline#show"
-    get "/:page3/:page2/:page1/:page" => "sunyonline#show"
-    get "/:page4/:page3/:page2/:page1/:page" => "sunyonline#show"
-   end
-   #root to: 'sunyonline#index'
- constraints host: 'explore-test.suny.edu' do
-   get "/", :to => "content#index"
+#constraints host: 'explore-test1.suny.edu' do
+#   resources :sunyonline
+#   get "/", :to  => "sunyonline#index"
+#   get "/:page" => "sunyonline#show"
+#   get "/:page1/:page" => "sunyonline#show"
+#   get "/:page2/:page1/:page" => "sunyonline#show"
+#    get "/:page3/:page2/:page1/:page" => "sunyonline#show"
+#    get "/:page4/:page3/:page2/:page1/:page" => "sunyonline#show"
+#   end
+#   #root to: 'sunyonline#index'
+# constraints host: 'explore-test.suny.edu' do
+#   get "/", :to => "content#index"
    
 #constraints host: 'localhost' do
 
@@ -31,8 +31,8 @@ constraints host: 'explore-test1.suny.edu' do
   get "content/tuition-financial-aid", :to => "content#tuition"
   get "content/transfer", :to => "content#transfer"
   get "content/about", :to => "content#about"
- get "sunyonline", :to => "sunyonline#index"
- get "/sunyonline/*id" => 'sunyonline#show', as: :page, format: false
+ #get "sunyonline", :to => "sunyonline#index"
+ #get "/sunyonline/*id" => 'sunyonline#show', as: :page, format: false
   get "/sunyonline", :to  => "sunyonline#index"
   get "/schools", :to => "schools#index"
 
@@ -69,6 +69,6 @@ constraints host: 'explore-test1.suny.edu' do
   
   resources :users
   
-   end
+#   end
   
 end
