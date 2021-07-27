@@ -101,6 +101,7 @@ def index
   def levels
     @ed_levels = Program.uniq.pluck(:level_expanded).sort
   end 
+  
 
   
   def update

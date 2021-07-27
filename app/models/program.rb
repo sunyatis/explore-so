@@ -5,6 +5,7 @@ class Program < ActiveRecord::Base
   belongs_to :level_abb, :foreign_key => 'levelabb_id', :class_name => "LevelAbb"
   #belongs_to :subject_area, :foreign_key => 'subjectarea_id' , :class_name => "SubjectArea"
   belongs_to :category, :foreign_key => 'cat_id', :class_name => "Category"
+  belongs_to :pathway, :foreign_key => 'pathway_id'
  
   has_paper_trail
  

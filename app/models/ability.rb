@@ -59,6 +59,7 @@ class Ability
          can [:course_areas, :read], Course
          can [:schools, :read], Course
          can [:schools, :read], School
+         can [:accounting, :read], Pathway
     end
     
     

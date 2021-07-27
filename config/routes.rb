@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   get "programs/subject_areas", :to => "programs#subject_areas"
   get "programs/schools", :to => "programs#schools"
   get "programs/levels", :to => "programs#levels"
+  get "pathways/accounting", :to => "pathways#accounting"
   get "content/faq", :to => "content#faq" 
   get "content/military", :to => "content#military"
   get "content/tuition-financial-aid", :to => "content#tuition"
@@ -48,6 +49,7 @@ Rails.application.routes.draw do
   resources :catalogs
   resources :categories  
   resources :sunyonline#, path: '/sunyonline/'
+  resources :pathways
 
 
   #devise_for :admin_users, ActiveAdmin::Devise.config
