@@ -36,7 +36,7 @@ ActiveAdmin.register Program do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :prog_title, :description, :subjectarea_id, :prog_level, :school_id, :duration, :delivery_method,  :open_suny, :synchronous, :tutoring, :concierge, :experiential_learning, :plas, :accelerated, :level_expanded, :sed, :apply_now_url, :slug, :cat_id, :ranku_id, :active, :asynchronous, :subject_area, :subject_area_2, :subject_area_3, :meta_keywords, :meta_desc
+  permit_params :prog_title, :description, :subjectarea_id, :prog_level, :school_id, :duration, :delivery_method,  :open_suny, :synchronous, :tutoring, :concierge, :experiential_learning, :plas, :accelerated, :level_expanded, :sed, :apply_now_url, :slug, :cat_id, :ranku_id, :active, :asynchronous, :subject_area, :subject_area_2, :subject_area_3, :meta_keywords, :meta_desc, :das_area
   #
   # or
   #
@@ -57,6 +57,7 @@ ActiveAdmin.register Program do
    filter :subject_area, as: :select, collection: Program.options_for_subject_area
    filter :subject_area_2, as: :select, collection: Program.options_for_subject_area
    filter :subject_area_3, as: :select, collection: Program.options_for_subject_area
+   filter :das_area, as: :select, collection: Program.options_for_das_area
    filter :prog_level
    filter :synchronous
    filter :asynchronous
@@ -93,6 +94,9 @@ ActiveAdmin.register Program do
     f.input :subject_area_2, as: :select, collection: Program.options_for_subject_area
     f.input :subject_area_3, as: :select, collection: Program.options_for_subject_area
     f.hr
+     f.li "<li><div class='aa_label'><h3>What is the DAS area?</h3</div></li>".html_safe
+     f.input :das_area, as: :select, collection: Program.options_for_das_area
+     f.hr
     f.li "<li><div class='aa_label_level'><h3>What degree level is this program?</h3</div></li>".html_safe 
    f.input :prog_level,  :as => :select,  collection: Program.options_for_prog_level
    f.hr

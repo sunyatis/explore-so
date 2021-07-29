@@ -32,7 +32,8 @@ class Program < ActiveRecord::Base
                  :with_plas,
                  :with_accelerated,
                  :with_tutoring,
-                 :with_category
+                 :with_category,
+                 :with_das_area,
                ]
 
    # default for will_paginate
@@ -117,6 +118,9 @@ class Program < ActiveRecord::Base
     scope :with_tutoring, lambda { |tutorings|
       where(:tutoring => [*tutorings])
     }
+    scope :with_das_area, lambda { |das_areas|
+      where(:das_area => [*das_areas])
+    }
     scope :with_subject_area, ->(subjectarea){ 
        return nil  if subjectarea.blank?
        puts subjectarea
@@ -194,6 +198,11 @@ class Program < ActiveRecord::Base
      [
       ['Yes', 'Yes'],
        ['No', 'No'],
+     ]
+   end
+   def self.options_for_das_area
+     [
+      ['Accounting', 'Accouting'],
      ]
    end
    def self.options_for_helpdesk

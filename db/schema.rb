@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_21_144708) do
+ActiveRecord::Schema.define(version: 2021_07_29_144836) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -145,6 +145,9 @@ ActiveRecord::Schema.define(version: 2021_05_21_144708) do
     t.string "subject_area"
     t.string "subject_area_2"
     t.string "subject_area_3"
+    t.text "meta_keywords"
+    t.text "meta_desc"
+    t.string "das_area"
     t.index ["slug"], name: "idx_58447_index_programs_on_slug", unique: true
   end
 
