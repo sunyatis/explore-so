@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   get "programs/schools", :to => "programs#schools"
   get "programs/levels", :to => "programs#levels"
   get "pathways/accounting", :to => "pathways#accounting"
+  get "pathways/accounting1", :to => "pathways#accounting1"
+  get "pathways/accounting2", :to => "pathways#accounting2"
   get "content/faq", :to => "content#faq" 
   get "content/military", :to => "content#military"
   get "content/tuition-financial-aid", :to => "content#tuition"
