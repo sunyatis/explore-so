@@ -152,6 +152,28 @@ p { font-size:30px; }
 .cta__blue {
     background-color: #009EE0;
 }
+.cta__blue_1 {
+    background-color: #009EE0;
+    min-width: 200px;
+    text-align: center;
+    font-size: 27px;
+}
+[class*="cta__blue_1"], .filter > li > a, .pagination > li > a {
+    padding: 0 20px;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+    color: white;
+    border: none;
+    display: inline-block;
+    min-width: 200px;
+    text-align: center;
+    font-size: 22px;
+    margin: 1em 0;
+    text-transform: uppercase;
+    height: 75px;
+    line-height: 75px;
+    font-family: 'AauxBold';
+}
 
 .cta__blue:hover {
     background-color: #006b98;
@@ -243,6 +265,10 @@ p { font-size:30px; }
 .SO_grey {
     background:#2E2E2E;
     color:#FFFFFF;
+}
+.SO_grey_lite {
+    background:#EEEEEE;
+    color:#000000;
 }
 
 .SO_blue {
@@ -1563,8 +1589,16 @@ footer h4 {
 
 /* Featured Programs Styling */
 
+
+
+
+
 #featuredPrograms {
     background-color: #2E2E2E;
+    color:white;
+}
+#featuredPrograms_1 {
+    background-color: #EEEEEE;
     color:white;
 }
 #featuredPrograms p {
@@ -1579,6 +1613,8 @@ footer h4 {
     justify-content: space-between;
 }
 
+
+
 .featured_program__box {
     background-color: white;
     color: black;
@@ -1588,6 +1624,8 @@ footer h4 {
     width:100%;
     max-width:450px;
     display:inline-block;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1), -2px -2px 5px rgba(0,0,0,0.1), 2px -2px 5px rgba(0,0,0,0.1), -2px 2px 5px rgba(0,0,0,0.1);
 }
 
 .featured_program__box:hover {
@@ -1599,7 +1637,7 @@ footer h4 {
 }
 
 .featured_program__box h4 {
-    background-color: #009EE0;
+    background-color: #002b54;
     color: white;
     text-align: center;
     font-size:22px;
@@ -1713,7 +1751,7 @@ footer h4 {
 }
   
   .single__program_box h4 {
-  	background-color: #002b54;
+  	background-color: #009EE0;
     color: white;
     text-align: center;
     font-size: 14px !important;
@@ -1731,7 +1769,7 @@ footer h4 {
 }
 
 .single__program_box h4 {
-    background-color: #002b54;
+    background-color: #009EE0;
     color: white;
     text-align: center;
     font-size:16px;

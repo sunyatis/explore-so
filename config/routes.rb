@@ -29,6 +29,19 @@ Rails.application.routes.draw do
   get "pathways/accounting", :to => "pathways#accounting"
   get "pathways/accounting1", :to => "pathways#accounting1"
   get "pathways/accounting2", :to => "pathways#accounting2"
+  get "pathways/business", :to => "pathways#business"
+  get "pathways/computerscience_it", :to => "pathways#computerscience_it"
+  get "pathways/criminal_justice", :to => "pathways#criminal_justice"
+  get "pathways/data_science", :to => "pathways#data_science"
+  get "pathways/education", :to => "pathways#education"
+  get "pathways/engineering", :to => "pathways#engineering"
+  
+  get "pathways/general_studies", :to => "pathways#general_studies"
+  get "pathways/graduate_degrees", :to => "pathways#graduate_degrees"
+  get "pathways/healthcare", :to => "pathways#healthcare"
+  get "pathways/psychology", :to => "pathways#psychology"
+  get "pathways/security_studies", :to => "pathways#security_studies"
+
   get "content/faq", :to => "content#faq" 
   get "content/military", :to => "content#military"
   get "content/tuition-financial-aid", :to => "content#tuition"
@@ -36,6 +49,7 @@ Rails.application.routes.draw do
   get "content/about", :to => "content#about"
  get "sunyonline", :to => "sunyonline#index"
  #get "/sunyonline/*id" => 'sunyonline#show', as: :page, format: false
+
   get "/schools", :to => "schools#index"
   get "sunyonline/", :to  => "sunyonline#index"
    get "sunyonline/:page" => "sunyonline#show"
