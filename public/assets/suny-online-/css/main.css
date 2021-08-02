@@ -269,11 +269,29 @@ p { font-size:30px; }
 .SO_grey_lite {
     background:#EEEEEE;
     color:#000000;
+	border-top: 5px solid rgb(0, 158, 224);
 }
 
 .SO_blue {
     background:#004C93;
     color:#FFFFFF;
+}
+
+[class*="cta__blue_1"], .filter > li > a, .pagination > li > a {
+    padding: 0 20px;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+    color: white;
+    border: none;
+    display: inline-block;
+    min-width: 320px;
+    text-align: center;
+    font-size: 27px;
+    margin: 1em 0;
+    text-transform: uppercase;
+    height: 75px;
+    line-height: 75px;
+    font-family: 'AauxBold';
 }
 
 /* Metadata Styling */
