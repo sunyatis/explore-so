@@ -1588,7 +1588,10 @@ footer h4 {
 }
 
 /* Featured Programs Styling */
-
+#featuredPrograms_1 {
+    background-color: #EEEEEE;
+    color: white;
+}
 #featuredPrograms {
     background-color: #2E2E2E;
     color:white;
