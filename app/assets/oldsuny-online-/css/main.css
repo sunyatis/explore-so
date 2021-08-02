@@ -265,6 +265,11 @@ p { font-size:30px; }
     background:#2E2E2E;
     color:#FFFFFF;
 }
+.SO_grey_lite {
+    background:#EEEEEE;
+    color:#000000;
+	border-top: 5px solid rgb(0, 158, 224);
+}
 
 .SO_blue {
     background:#004C93;
