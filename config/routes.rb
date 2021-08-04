@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   get "pathways/data_science", :to => "pathways#data_science"
   get "pathways/education", :to => "pathways#education"
   get "pathways/engineering", :to => "pathways#engineering"
-  
+  get "pathways/index", :to => "pathways#index"
   get "pathways/general_studies", :to => "pathways#general_studies"
   get "pathways/graduate_degrees", :to => "pathways#graduate_degrees"
   get "pathways/healthcare", :to => "pathways#healthcare"

@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-N5FTJCX');</script>
+        <!-- End Google Tag Manager -->
+      
+      <!-- Facebook Pixel Code -->
+      <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '659208210936055');
+        fbq('track', 'PageView');
+      </script>
+      <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=659208210936055&amp;ev=PageView&amp;noscript=1"
+      /></noscript>
+      <!-- End Facebook Pixel Code -->
+      <meta name="facebook-domain-verification" content="1fmpdbpfrkd8un4mbuhm1rpmzzj8y4" />
+      
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="SUNY Online">
+      	<meta name="bot token" content=''>
+        <meta name="description" content="SUNY Online delivers nationally ranked and accredited degrees online in Accounting, Business, Data Science, Digital Security, Engineering, Healthcare Management, Mathematics, and Psychology.">
+    		<meta name="keywords" content="suny online, online education, college, degree, study online, distance learning, open suny, state university of new york">
+
+        <title>SUNY Online | SUNY Online</title>
+      
+      	<script>
+          var idCounter = 0;
+          function uniqid(prefix) {
+            var id = '' + ++idCounter;
+            return prefix ? prefix + id : id;
+          };
+      </script>
+      
+        <link rel="stylesheet" type="text/css" media="" href="assets/suny-online-/css/fonts.css" />
+        <link rel="stylesheet" type="text/css" media="" href="assets/suny-online-/css/main.css" />
+      	<link rel="stylesheet" type="text/css" media="" href="assets/suny-online-/css/triangle.css" />
+      	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+      
+				
+        <script type="text/javascript" src="assets/suny-online-/js/jquery.js"></script>
+        <script type="text/javascript" src="assets/suny-online-/js/main.js"></script>
+				<script type="text/javascript" src="assets/suny-online-/js/waypoint.js"></script>
+				<script type="text/javascript" src="assets/suny-online-/js/counterup2-1.0.1.min.js"></script>
+				<script type="text/javascript" src="assets/suny-online-/js/list.js"></script>
+      
+      	<!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154550921-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-154550921-1');
+        </script> 
+      
+      
+    </head>
+    <body data-page="SUNY Online">  
+       
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5FTJCX"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+      
+      	<div style="display:none;" data-home="/" id="homeTag"></div>
+
+        <!-- Header -->
+        <header class="tri full">
+           <div class="tri">
+                <div class="ang le-full md-3" id="navLogo">
+                    <a class="SO__logo" href="index.html"><img id="headIMG" src="assets/suny-online-/images/SUNYOnline-logowhite-silo.png" alt="Suny Logo"></a>
+                  	<a href="#" class="mobile_menu__toggle"><i class="fas fa-bars"></i></a>
+               </div>
+                <div class="ang le-full md-21 hide-sm" id="navLinks">
+                    <ul class="navigation__bar">
+                        <!--<li><a href="/programs/">Explore Online Degrees</a></li>-->
+                        <li><a href="contact-us/index.html" alt="Request Information">Request Info</a></li>
+                        <li><a href="tuition-at-suny/index.html" alt="Affordable Tuition">Affordable Tuition</a></li>
+												<li><a href="transfer/index.html" alt="Transfer">Transfer</a></li>
+                         <li><a href="programs/index.html" alt="Programs">Programs</a></li>
+                        <li><a href="faq/index.html" alt="FAQ">FAQs</a></li>
+                        
+                    </ul>
+                </div>
+            </div>                
+        </header><!-- TWITTER CARD INFO -->
+<meta name='twitter:card' content='summary_large_image'>
+<meta name='twitter:site' content='@suny'>
+<meta name='twitter:title' content='SUNY Online - Your degree on your time'>
+<meta name='twitter:description' content='Whether you want to complete your degree, pursue graduate school, or start a new career, SUNY Online is designed to help you succeed on your schedule.'>
+<meta name='twitter:image' content='https://www.suny.edu/assets/suny/content-assets/images/online/SUNY-online-femalesmile-card.jpg'>
+<meta name='twitter:image:alt' content='Female looks up smiling behind laptop with SUNY Online logo on top.' /><style>#hero_filter__program[data-industry="na"] .hero_filter__trigger {
+    background-color:#949494;
+  	visibility: hidden;
+  position: absolute;
+}
+  #formAbout {
+  background-color: white;
+  }
+</style>
+<div class="tri full" id="hero" style="background-image:url('assets/suny-online-/images/hero.jpg');background-position: center;" alt="Suny hero image">
+    <div class="tri" id="SO_hero__home">
+        <div class="ang le-full md-third-2">
+            <h1>SUNY Online</h1>
+            <p>Learn your way with SUNY. This is your degree, on your time. 100% online!</p>
+            
+            <div class="program_filter__list"><ul><li><a href="programs/index.html">Programs</a><ul><li><a href="programs/accounting/index.html">Accounting</a><ul><li><a href="programs/business/business-administration-as/index.html">Business Administration AS</a></li><li><a href="programs/accounting/accounting-bs/index.html">Accounting BS</a></li></ul></li><li><a href="programs/business/index.html">Business</a><ul><li><a href="programs/business/business-administration-as/index.html">Business Administration AS</a></li><li><a href="programs/business/business-administration-bs/index.html">Business Administration BS</a></li><li><a href="programs/business/management-bs/index.html">Management BS</a></li><li><a href="programs/graduate-degrees/business-administration-mba/index.html">Business Administration MBA</a></li><li><a href="programs/graduate-degrees/business-management-mba/index.html">Business Management MBA</a></li></ul></li><li><a href="programs/computerscience-it/index.html">Computer Science and IT</a><ul><li><a href="programs/security-studies/networking-and-cybersecurity-aas/index.html">Networking and Cybersecurity AAS</a></li><li><a href="programs/computerscience-it/computer-science-as/index.html">Computer Science AS</a></li><li><a href="programs/data-science/informatics-bs/index.html">Informatics BS</a></li><li><a href="programs/computerscience-it/cybersecurity-bs/index.html">Cybersecurity BS</a></li><li><a href="programs/graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li><li><a href="programs/criminal-justice/index.html">Criminal Justice</a><ul><li><a href="programs/criminal-justice/crime-and-intelligence-analysis-aas/index.html">CJ: Crime and Intelligence Analysis AAS</a></li><li><a href="programs/criminal-justice/crime-analysis-bs/index.html">Crime Analysis BS</a></li></ul></li><li><a href="programs/data-science/index.html">Data and Information Science</a><ul><li><a href="programs/data-science/mathematics-as/index.html">Mathematics AS</a></li><li><a href="programs/data-science/informatics-bs/index.html">Informatics BS</a></li><li><a href="programs/graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li><li><a href="programs/education/index.html">Education</a><ul><li><a href="programs/education/teaching-assistant-certificate/index.html">Teaching Assistant Certificate</a></li></ul></li><li><a href="programs/engineering/index.html">Engineering</a><ul><li><a href="programs/engineering/engineering-science-as/index.html">Engineering Science AS</a></li><li><a href="programs/data-science/mathematics-as/index.html">Mathematics AS</a></li><li><a href="programs/engineering/electrical-engineering-bs/index.html">Electrical Engineering BS</a></li><li><a href="programs/graduate-degrees/industrial-engineering-meng/index.html">Industrial Engineering MEng</a></li></ul></li><li><a href="programs/general-studies/index.html">General Studies</a><ul><li><a href="programs/general-studies/individual-studies-as/index.html">Individual Studies AS</a></li></ul></li><li><a href="programs/healthcare/index.html">Healthcare</a><ul><li><a href="programs/healthcare/health-care-studies-as/index.html">Health Care Studies AS</a></li><li><a href="programs/healthcare/healthcare-management-bs/index.html">Healthcare Management BS</a></li><li><a href="programs/healthcare/healthcare-management-btech/index.html">Healthcare Management BTech</a></li><li><a href="programs/graduate-degrees/healthcare-leadership-mba/index.html">Healthcare Leadership MBA</a></li><li><a href="programs/graduate-degrees/health-services-administration-mba/index.html">Health Services Administration MBA</a></li></ul></li><li><a href="programs/psychology/index.html">Psychology</a><ul><li><a href="programs/psychology/psychology-as/index.html">Psychology AS</a></li><li><a href="programs/psychology/psychology-ba/index.html">Psychology BA</a></li></ul></li><li><a href="programs/security-studies/index.html">Security Studies</a><ul><li><a href="programs/security-studies/networking-and-cybersecurity-aas/index.html">Networking and Cybersecurity AAS</a></li>
+				<li><a href="programs/security-studies/cybersecurity-and-digital-forensics-as/index.html">Cybersecurity and Digital Forensics AS</a></li><li><a href="programs/security-studies/homeland-security-as/index.html">Homeland Security AS</a></li><li><a href="programs/data-science/informatics-bs/index.html">Informatics BS</a></li><li><a href="programs/security-studies/security-studies-bs/index.html">Security Studies BS</a></li><li><a href="programs/graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li><li><a href="programs/graduate-degrees/index.html">Graduate Studies</a><ul><li><a href="programs/graduate-degrees/business-administration-mba/index.html">Business Administration MBA</a></li><li><a href="programs/graduate-degrees/business-management-mba/index.html">Business Management MBA</a></li><li><a href="programs/graduate-degrees/healthcare-leadership-mba/index.html">Healthcare Leadership MBA</a></li><li><a href="programs/graduate-degrees/health-services-administration-mba/index.html">Health Services Administration MBA</a></li><li><a href="programs/graduate-degrees/industrial-engineering-meng/index.html">Industrial Engineering MEng</a></li><li><a href="programs/graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li></ul></li></ul></div>
+            
+            <div class="loading" id="hero_filter">
+                <div class="hero_filter__box">
+                    <div id="hero_filter__industry" class="hero_filter" tabindex="0">
+                        <div class="hero_filter__select">
+                            <div class="hero_filter__trigger">
+                                <span>Choose Program</span>
+                                <i class="fas fa-chevron-right"></i>
+                                <i class="fas fa-circle-notch fa-spin"></i>
+                            </div>
+                            <div class="hero_filter__options">
+                                <span class="selected" data-value="na">Choose Program</span>
+                            </div> 
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="hero_filter__box">
+                    <div id="hero_filter__program" data-industry="na" class="hero_filter" tabindex="0">
+                        <div class="hero_filter__select">
+                            <div class="hero_filter__trigger">
+                                <span>Choose Degree</span>
+                                <i class="fas fa-chevron-right"></i>
+                                <i class="fas fa-circle-notch fa-spin"></i>
+                            </div>
+                            <div class="hero_filter__options">
+                                <span class="selected" data-href="na" data-industry="na">Choose Degree</span> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ang le-full md-half">
+            <a href="#form__anchor" class="scroll__me cta__ghost hide-md hide-lg" alt="contact us">Contact Us For More Info <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</div>
+
+<style>
+	
+</style>
+
+<script>    
+	var filterList = $('.program_filter__list > ul > li > ul > li'), filterList_count = filterList.length, i = 0;
+    
+    filterList.each(function() {
+        
+        var indid = $("a:first", this).text(), indurl = $("a:first", this).attr('href'), indslug = indid.replace(/\s+/g, '_').toLowerCase();
+        
+        $('#hero_filter__industry > .hero_filter__select > .hero_filter__options').append(
+            '<span data-value="'+indslug+'" tabindex="0">'+indid+'</span>'
+        );
+        
+        $(this).find('li').each(function() {
+            var url = $(this).find('a').attr('href'), name = $(this).find('a').text();
+            $('#hero_filter__program > .hero_filter__select > .hero_filter__options').append(
+                '<span data-href="'+url+'" data-industry="'+indslug+'" tabindex="0" class="heroItems">'+name+'</span>'
+            );
+        }).promise().done( function(){
+          $('#hero_filter__program > .hero_filter__select > .hero_filter__options').append(
+              '<span data-href="'+indurl+'" data-industry="'+indslug+'" tabindex="0">View All Programs</span>'
+          );
+        });
+        
+        i++; if (i == filterList_count) { $('#hero_filter').removeClass('loading'); }
+    });
+  
+   $(document).on("click", ".hero_filter__options span", function (e) {
+     setTimeout(function(){
+	  	$( ".hero_filter__select" ).last().addClass( "open" ); 
+     }, 300);
+     e.stopPropagation();
+ 	});
+</script><div class="tri full content SO_grey" id="">
+    <div class="tri">
+        <div class="ang le-full txtC">
+            <p><em><img src="assets/suny-online-/images/achievements/industryAcheive3-31x39.png" alt="industry Page achievement Image(s)" style="width : 31px; height : 39px;     " /></em><strong>Congrats to the Online Programs at&nbsp;SUNY&nbsp;Ranked&nbsp;</strong><strong>Best in the U.S.</strong></p>
+<p><em>source:&nbsp;<a href="https://www.usnews.com/education/online-education/bachelors/rankings?school-name=SUNY">US News and World Report</a></em></p>
+        </div>
+    </div>
+</div>
+
+<style>
+  
+</style><div class="tri full" id="formAbout">
+    <div class="tri no__overlap">
+        <div class="ang le-full md-10 about__desc hide-sm" style="background-color: #54B948;">
+            <h3>Why SUNY Online?</h3>
+<p>Learn your way. No SAT. No application fee.</p>
+<p>Whether you want to complete your degree, pursue graduate school, or start a new career, SUNY Online is designed to help you succeed on your schedule.</p>
+<p>Get a Success Coach to help&nbsp;you from the moment of&nbsp;application&nbsp;through graduation from a SUNY Online program.</p>
+<p>Online degrees from SUNY are accredited&nbsp;and respected around&nbsp;the world. Degree programs and online certifications provide students with affordable tuition options.</p>
+<p>Learn from faculty experts.</p>
+<p>Request information and meet <strong>YOUR</strong> SUNY Online Coach.</p>
+          <a class="cta__blue scroll_me" id="about__desc" href="#single__program_list" data-title="SUNY Online" alt="scroll to form"> <i class="fas fa-chevron-down"></i></a>
+        </div>
+        <div class="ang le-full md-14 about__form">
+        	<a href="#" id="form__anchor" alt="form anchor"></a>
+            <h3>GET STARTED TODAY</h3>
+            <div id="form_b2ea9f6c-cd4a-491c-869d-4fb0c6a586a9">Loading...</div><script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src = 'https://engage.suny.edu/register/?id=b2ea9f6c-cd4a-491c-869d-4fb0c6a586a9&output=embed&div=form_b2ea9f6c-cd4a-491c-869d-4fb0c6a586a9' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</script>
+        </div>
+        <div class="ang le-full md-10 about__desc hide-md hide-lg">
+            <h3>Why SUNY Online?</h3>
+<p>Learn your way. No SAT. No application fee.</p>
+<p>Whether you want to complete your degree, pursue graduate school, or start a new career, SUNY Online is designed to help you succeed on your schedule.</p>
+<p>Get a Success Coach to help&nbsp;you from the moment of&nbsp;application&nbsp;through graduation from a SUNY Online program.</p>
+<p>Online degrees from SUNY are accredited&nbsp;and respected around&nbsp;the world. Degree programs and online certifications provide students with affordable tuition options.</p>
+<p>Learn from faculty experts.</p>
+<p>Request information and meet <strong>YOUR</strong> SUNY Online Coach.</p>
+            <a alt="contact us" href="" class="cta__blue"> <i class="fas fa-chevron-down"></i></a>
+        </div>
+    </div>
+</div><div class="tri full" id="testimonial">
+    <div class="testimonial__container">
+        <div class="testimonial__photo" style="background-image:url('assets/suny-online-/images/studentphotos/travell-resize.png');" alt="student image"></div>
+        
+        <div class="testimonial__quote">
+            <img src="assets/suny-online-/images/quote_mark.png" alt="student image"/>
+        </div>
+        
+        <div class="tri testimonial__content">
+            <div class="ang le-full txtC">
+                <h3>Travell, Empire State, Psychology
+
+</h3>
+                <p>
+                	&quot;SUNY online was unfamiliar to me but I had an amazing mentor who has literally been here for me every step of the way. I have an amazing success coach who has checked in on me academically, and giving me  friendly reminders...&quot;
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="testimonial__background"></div>
+</div><div class="tri full SO_white">
+    <div class="tri">
+        <div class="ang le-full txtC">
+            <h2>Achievements</h2>            
+            <p>With SUNY Online, our degree programs provide access to a quality education at a value you can afford. Take the next step today toward advancing your career and enhancing your earning potential by requesting information.</p>
+        </div>
+        <div class="tri">
+            <style>@media screen and (max-width: 48em){
+  .acheve{
+  	padding-top: 12.5%;
+  } 
+}
+</style>
+<div class="ang le-half md-third lg-fifth txtC">
+  <div class="counter__image">
+  	<img src="assets/suny-online-/images/achievements/achievement_01.png" alt="Suny online achievements"/>
+  </div>
+  <div class="counter__description acheve" style="">
+  </div>
+  <div class="counter__container">
+  
+  	<span class="pre__counter"></span><span class="counter">3</span><span class="post__counter"></span>
+  </div>
+  <div class="counter__description">Million Alumni</div>
+</div><style>@media screen and (max-width: 48em){
+  .acheve{
+  	padding-top: 12.5%;
+  } 
+}
+</style>
+<div class="ang le-half md-third lg-fifth txtC">
+  <div class="counter__image">
+  	<img src="assets/suny-online-/images/achievements/Group-713@2x.png" alt="Suny online achievements"/>
+  </div>
+  <div class="counter__description acheve" style="">Students From
+  </div>
+  <div class="counter__container">
+  
+  	<span class="pre__counter"></span><span class="counter">180</span><span class="post__counter"></span>
+  </div>
+  <div class="counter__description">Nations Around the World</div>
+</div><style>@media screen and (max-width: 48em){
+  .acheve{
+  	padding-top: 12.5%;
+  } 
+}
+</style>
+<div class="ang le-half md-third lg-fifth txtC">
+  <div class="counter__image">
+  	<img src="assets/suny-online-/images/achievements/Group-575@2x.png" alt="Suny online achievements"/>
+  </div>
+  <div class="counter__description acheve" style="">
+  </div>
+  <div class="counter__container">
+  
+  	<span class="pre__counter"></span><span class="counter">1.3</span><span class="post__counter"></span>
+  </div>
+  <div class="counter__description">Million Students</div>
+</div><style>@media screen and (max-width: 48em){
+  .acheve{
+  	padding-top: 12.5%;
+  } 
+}
+</style>
+<div class="ang le-half md-third lg-fifth txtC">
+  <div class="counter__image">
+  	<img src="assets/suny-online-/images/achievements/Group-580@2x.png" alt="Suny online achievements"/>
+  </div>
+  <div class="counter__description acheve" style="">
+  </div>
+  <div class="counter__container">
+  
+  	<span class="pre__counter"></span><span class="counter">45</span><span class="post__counter">%</span>
+  </div>
+  <div class="counter__description">of All Students Graduate with Zero Debt</div>
+</div><style>@media screen and (max-width: 48em){
+  .acheve{
+  	padding-top: 12.5%;
+  } 
+}
+</style>
+<div class="ang le-half md-third lg-fifth txtC">
+  <div class="counter__image">
+  	<img src="assets/suny-online-/images/achievements/Group-577@2x.png" alt="Suny online achievements"/>
+  </div>
+  <div class="counter__description acheve" style="">
+  </div>
+  <div class="counter__container">
+  
+  	<span class="pre__counter"></span><span class="counter">50,000+</span><span class="post__counter"></span>
+  </div>
+  <div class="counter__description">Expert Faculty</div>
+</div>        </div>
+        <div class="tri txtC">
+            <div class="ang le-full txtC">
+                <p>
+                <a class="cta__blue" href="#formAbout" alt="contact us">
+                        Contact Us <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    jQuery( document ).ready( function($) {
+        "use strict";
+        var counterUp = window.counterUp["default"];
+        var $counters = $(".counter");
+        $counters.each(function (ignore, counter) {
+			var waypoint = new Waypoint( {
+				element: $(this), 
+				handler: function() { 
+                    var txt = $(counter).text(),
+                        num = parseInt(txt,10),
+                        dur = 3000, delay = 16;
+                    if (num < 10) { dur = 2000; delay = 8; }
+					counterUp(counter, {
+						duration: dur,
+						delay: delay
+					}); 
+					this.destroy();
+				},
+				offset: 'bottom-in-view',
+			} );
+		});
+	});
+</script>					<footer class="tri full"> 
+            <img id="footerArrow" src="assets/suny-online-/images/toTopArrow.png" alt="Scroll To Top" />
+            <div class="tri">
+                <div class="ang le-full">
+                  <div class="phone__number hide-md hide-lg">
+                    <a href="tel:+518-445-4140"><img src="assets/suny-online-/images/phone.png" alt="An icon depiction a telephone" style="width : 27px; height : 27px;     " />Call 518-445-4140</a>
+										<a href="mailto: studyonline@suny.edu" alt="email us">studyonline@suny.edu</a>
+                  </div>
+                  <h3><a href="http://suny.edu/">suny.edu</a></h3>
+                </div>
+                <div class="ang le-full md-half">
+                    <div class="tri">
+                        <div class="le-full md-third">
+                            <ul class="footer__list">
+                                <li><a href="http://www.suny.edu/contact/" alt="Contact us">Contact Us</a></li>
+                                <li><a href="http://www.suny.edu/careers/" alt="Careers at Suny">Careers at SUNY</a></li>
+                                <li><a href="https://www.suny.edu/attend/" alt="Attend Suny">Attend SUNY</a></li>
+                                <li><a href="http://www.suny.edu/about/" alt="What is Suny?">What is SUNY?</a></li>
+                                <li><a href="http://www.suny.edu/impact/" alt="Why does Suny Matter?">Why does SUNY Matter?</a></li>
+                            </ul>
+                        </div>
+                        <div class="le-full md-third">
+                            <ul class="footer__list">
+                                <li><a href="http://www.suny.edu/news/" alt="News">News</a></li>
+                                <li><a href="http://www.suny.edu/privacy-policy/" alt="Privacy Policy">Privacy Policy</a></li>
+                                <li><a href="http://www.suny.edu/web-accessibility/" alt="Web Accessibility">Web Accessibility</a></li>
+                                <li><a href="https://www.suny.edu/templates/sunymain/modules/domainredirect.cfm?domain=public&amp;path=about/leadership/board-of-trustees/" alt="Board of Trustees">Board of Trustees</a></li>
+                                <li><a href="http://www.suny.edu/health-alert/" alt="Health Alert">Health Alert</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="ang le-full md-quarter">
+                  	<div class="phone__number hide-sm">
+                      <a href="tel:+518-445-4140" alt="Call us"><img src="assets/suny-online-/images/phone.png" alt="An icon depiction a telephone" style="width : 27px; height : 27px;     " />Call 518-445-4140</a>
+                      <ul class="footer__list">
+                        <li style="color: white;"><a href="mailto: studyonline@suny.edu" alt="email us">studyonline@suny.edu</a></li>
+                      </ul>
+                  	</div>
+                  
+                    <h4>Follow us:</h4> 
+                    <ul class="social__list">
+                        <li><a href="http://www.instagram.com/suny" target="_blank" alt="Instagram link, opens in new window" ><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="http://www.twitter.com/SUNY" target="_blank" alt="twitter, opens in new window"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="http://www.facebook.com/generationSUNY" target="_blank" alt="facebook, opens in new window"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="http://www.linkedin.com/company/state-university-of-new-york" target="_blank" alt="linkedin, opens in new window"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="http://www.youtube.com/generationsuny" target="_blank" alt="youtube, opens in new window"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="ang le-full md-quarter">
+                    <a href="https://www.suny.edu/" alt="suny logo"><img id="footerImage" src="assets/suny-online-/images/logo-suny_footer.png" alt="Suny Logo"></a>
+                    <span class="copyright">Copyright &copy; <span id="cr-date">2020</span> SUNY. All Rights Reserved.</span>
+                </div>
+            </div>
+            
+        </footer>
+
+				<div class="mobile_menu__container">
+          <div class="tri">
+            <div class="ang le-full">
+              <a class="SO__logo" href="index.html"><img id="headIMG" src="assets/suny-online-/images/SUNY-Online-Logo-Final-01.png" alt="Suny Logo"></a>
+              <a href="#" class="mobile_menu__close" style="display: inline;"><i class="fa fa-times" aria-hidden="true"></i></a>
+            </div>
+            <div class="ang le-full">
+              <ul class="navigation__bar">
+                <li><a href="index.html" alt="Home">Home</a></li>
+                <!--<li><a href="/programs/">Explore Online Programs</a></li>-->
+                <li><a href="contact-us/index.html" alt="Request Info">Request Info</a></li>
+                <li><a href="tuition-at-suny/index.html">Affordable Tuition</a></li>
+								<li><a href="faq/index.html">FAQs</a></li>
+              </ul>
+            </div>
+            <div class="ang le-full">
+              <h4>Follow us:</h4> 
+              <ul class="social__list">
+                <li><a href="http://www.instagram.com/suny" target="_blank" alt="Instagram, opens in new window"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="http://www.twitter.com/SUNY" target="_blank" alt="Twitter, opens in new window"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="http://www.facebook.com/generationSUNY" target="_blank" alt="Facebook, opens in new window"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="http://www.linkedin.com/company/state-university-of-new-york" target="framename" alt="Linkedin, opens in new window"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="http://www.youtube.com/generationsuny" target="_blank" alt="Request Info, opens in new window"><i class="fab fa-youtube" ></i></a></li>
+              </ul>
+              <div class="phone__number">
+                <a href="tel:+518-445-4140"><img src="assets/suny-online-/images/phone.png" alt="An icon depiction a telephone" style="width : 27px; height : 27px;     " />Call 518-445-4140</a>
+              </div>
+            </div>
+          </div>
+				</div>
+			
+                
+
+    </body>
+</html>

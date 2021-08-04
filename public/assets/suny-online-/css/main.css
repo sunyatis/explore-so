@@ -284,9 +284,9 @@ p { font-size:30px; }
     color: white;
     border: none;
     display: inline-block;
-	min-width: 200px;
-	text-align: center;
-	font-size: 20px;
+    min-width: 200px;
+    text-align: center;
+    font-size: 22px;
     margin: 1em 0;
     text-transform: uppercase;
     height: 75px;

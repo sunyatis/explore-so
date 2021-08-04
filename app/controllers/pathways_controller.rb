@@ -1,5 +1,9 @@
 class PathwaysController < ApplicationController
 
+  def index
+    render 'index', layout: false
+    #@programs = Program.where(:open_suny => 'Open SUNY').uniq
+  end
 
 def accounting 
   render 'accounting', layout: false
