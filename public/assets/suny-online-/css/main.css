@@ -91,9 +91,9 @@ a:hover { text-decoration:underline;
     text-align:right !important;
 }
 
-h1 { font-size:80px;  }
-h2 { font-size:55px;  }
-h3 { font-size:45px;  }
+h1 { font-size:59px;  }
+h2 { font-size:55px;  } /*55px*/
+h3 { font-size:42px;  } /*45px*/
 h4 { font-size:35px; }
 
 p { font-size:30px; }
