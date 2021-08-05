@@ -75,8 +75,9 @@
       <!--%= f.select(:with_generaleducation_id, @filterrific.select_options[:with_generaleducation_id], { include_hidden: false}, title: 'Gen Ed', multiple: true)%-->
 	  
 
-     <%= f.text_field(:with_start_date, class: 'js-datepicker', placeholder: 'Start After', class: 'date_search'  ) %>
+     <%= f.text_field(:with_start_date, class: 'js-datepicker date_search', placeholder: 'Start After' ) %>
      <%= f.hidden_field :with_start_date_gte %>
+	 
 
   <!--div class="span3 chardin_box">
     <label>Sorted by</label>
