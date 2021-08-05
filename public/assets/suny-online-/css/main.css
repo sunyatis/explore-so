@@ -1379,7 +1379,7 @@ footer h4 {
 .about__desc h3,
 .about__form h3,
 .SO__general_form h3{
-  font-size: 45px;
+  font-size: 42px; /*45px*/
 }
 
 .about__desc h3{
