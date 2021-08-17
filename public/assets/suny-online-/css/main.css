@@ -2029,7 +2029,7 @@ li.quote__container {
     background-color: #54b948;
     padding: 0 2em;
     border-radius: 8px;
-    text-align: justify;
+    /*text-align: justify;*/
 }
 
 .quote__container p {
