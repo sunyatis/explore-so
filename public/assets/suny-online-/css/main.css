@@ -452,7 +452,7 @@ footer h4 {
 
 .mobile_menu__container {
   position: fixed;
-    top: -100vh; /*-100vh;*/
+    top: -110vh; /*-100vh;*/
     left: 0;
     width: 100vw;
     height: auto;
