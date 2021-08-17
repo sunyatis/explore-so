@@ -168,7 +168,7 @@ p { font-size: 28px; /*30px;*/ }
     min-width: 200px;
     text-align: center;
     font-size: 22px;
-    margin: 1em 0;
+    margin: .01em 0;  /*1em*/
     text-transform: uppercase;
     height: 75px;
     line-height: 75px;
@@ -452,7 +452,7 @@ footer h4 {
 
 .mobile_menu__container {
   position: fixed;
-    top: -110vh; /*-100vh;*/
+    top: -100vh; /*-100vh;*/
     left: 0;
     width: 100vw;
     height: auto;
