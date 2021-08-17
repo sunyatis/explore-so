@@ -96,7 +96,7 @@ h2 { font-size:55px;  } /*55px*/
 h3 { font-size:40px;  } /*45px*/
 h4 { font-size:35px; }
 
-p { font-size:30px; }
+p { font-size: 28px; /*30px;*/ }
 
 
 
@@ -125,9 +125,9 @@ p { font-size:30px; }
     color:white;
     border: none;
     display:inline-block;
-    min-width:320px;
+    min-width: 300px; /*320px;*/
     text-align:center;
-  	font-size:27px;
+  	font-size: 23px; /*27px;*/
   	margin:1em 0;
   	text-transform:uppercase;
     height:75px;
@@ -452,7 +452,7 @@ footer h4 {
 
 .mobile_menu__container {
   position: fixed;
-    top: -100vh;
+    top: -110vh; /*-100vh;*/
     left: 0;
     width: 100vw;
     height: auto;
@@ -1393,7 +1393,7 @@ footer h4 {
 
 .about__desc p{
   color: white;
-  font-size: 25px;
+  font-size: 23px; /*25px*/
 }
 
 .about__desc {
@@ -1424,8 +1424,8 @@ footer h4 {
 
 .SO__general_form input[type=text], .SO__general_form input[type="email"], .SO__general_form input[type="tel"],
 .about__form input[type=text], .about__form input[type="email"], .about__form input[type="tel"] {
-  width: 100%;
-  height: 70px;
+  width: 96%; /*100%;*/
+  height: 63px; /*70px;*/
   line-height:50px;
   padding: 10px 20px;
   margin: 5px 0px;
@@ -1433,7 +1433,7 @@ footer h4 {
   border: 1px solid #edeff6;
   background-color: #edeff6;
   border-radius: 8px;
-  font-size:22px;
+  font-size: 20px; /*22px;*/
 }
 
 .SO__general_form select,
@@ -1531,10 +1531,10 @@ footer h4 {
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
   color: white;
-  font-size: 27px;
+  font-size: 23px; /*27px;*/
   border: none;
   display: inline-block;
-  min-width: 320px;
+  min-width: 300px; /*320px;*/
   text-align: center;
   background-color: #009EE0;
   cursor:pointer;
@@ -1600,7 +1600,7 @@ footer h4 {
   .SO__general_form .action button, .about__form .action button {
 	min-width:auto;
     width:100%;
-    max-width:320px;
+    min-width: 300px; /*320px;*/
     font-size:20px;
   }
 }
@@ -2033,7 +2033,7 @@ li.quote__container {
 }
 
 .quote__container p {
-    font-size: 24px;
+    font-size: 22px; /*24px;*/
 }
 
 .quote__container span {
