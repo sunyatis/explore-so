@@ -194,7 +194,143 @@
      }, 300);
      e.stopPropagation();
  	});
-</script><div class="tri full content SO_grey" id="">
+</script>
+	
+	<div class="industry__list"><t4 type="navigation" name="SO_ProgramList" id="853" /></div>
+
+	<div class="tri full" id="category_list">
+	    <div class="tri">
+	        <div class="ang le-full">
+	            <ul class="category_list__ul"></ul>
+	        </div>
+	    </div>
+	</div>
+
+
+
+	<style>
+	.program__list > ul { display:none; }
+	</style>
+
+	<div class="program__list" id="single__program_list"></div>
+	<div class="tri" id="single__program_output" >
+	    <div class="ang le-third-2 hide-sm"></div>
+	    <div class="ang le-full md-third program__search_box" style="position:relative;">
+	      <fieldset style="border: none;">
+	      <label style="display: none;" for="search">Search Box</label>
+	        <input type="text" class="search" placeholder="Search" id="search"/>
+	        <i class="fas fa-search"></i>
+	        </fieldset>
+	    </div>
+	    <div class="ang le-full">
+	        <ul class="filter">
+	        	<li><a href="#" class="active" data-filter="">View All</a></li>
+	        </ul>
+	    </div>
+	    <div class="ang le-full">
+	        <ul class="list"></ul>
+	    </div>
+	    <div class="ang le-full txtC">
+	        <ul class="pagination"></ul><br>
+	    	<a href='#formAbout' class="cta__blue scrollme">Contact Us</a>
+	    </div>
+	</div>
+
+	<script>
+
+
+	jQuery(document).ready( function($) {
+    
+	    var options = {
+	        valueNames: [
+	            'filter__program_title',
+	            'filter__program_credits',
+	            'filter__program_cost',
+	            { name: 'filter__degree', attr: 'data-degree' },
+	            { name: 'filter__campus', attr: 'data-campus' }
+	        ],
+	        pagination: true,
+	        page: 6
+	    };
+
+	    var hackerList = new List('single__program_output', options),
+	    	degrees = [];
+    
+	    var index = 0, current = $('#single__program_output').attr('data-industry');
+	    $('#single__program_list > ul > li > ul > li').each(function() {
+	    	console.log(current + ' - ' + $('> a', this).text());
+	    	if (current == $('> a', this).text()) {
+	          $('> ul', this).find('li').each(function() {
+	              index ++; 
+	              var url = $('> a', this).attr('href'),
+	                  output = '<li id="single_program__'+index+'" class="single__program_box"><i class="fas fa-circle-notch fa-spin"></i></li>';
+				  $('#single__program_output ul.list').attr('data-num', index);
+	              $('#single__program_output ul.list').append(output);
+	              $('#single_program__'+index).load(url + ' #program__metadata', function(){
+	                  $(this).addClass('loaded');
+	                  $('> #program__metadata', this).attr('id', 'program__metadata_'+uniqid('id'));
+	                  $(this).append('<a href="'+url+'" class="program__link"></a>');
+	                  var deg = $('> div', this).attr('data-degree');
+	                  if ($('.filter a[data-filter="'+deg+'"]').length) {
+	                  	// Do Nothing
+	                  } else {
+                    
+	                    $('.filter').append('<li><a href="#" data-filter="'+deg+'">'+deg+'</a></li>');
+                   
+	                  }
+	                  hackerList.reIndex()
+	                  //see function sorter
+					sorter();
+  
+	              });
+	          });
+	        }
+		});
+  
+	  //Alphabetical sorter for labels above program lists (industry pages, accounting etc..)
+	  function sorter(){
+	    var parent = $('.filter');
+	    var listitems = parent.children('li').get();
+	    listitems.sort(function(a, b) {
+	      return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+	    })
+    
+	    $.each(listitems, function(idx, itm) { parent.append(itm); });//reappend li to the ul in the new sortedform 
+    
+	  }
+   
+	    hackerList.on('updated', function(){
+	    	var search = $('#single__program_output .search').val();
+	        if (search) {
+	        	$('#single__program_output ul.list:not(.searched)').addClass('searched');
+	        } else {
+	        	$('#single__program_output ul.list.searched').removeClass('searched');
+	        }
+	    });
+
+		$(document).on('click', '.filter > li > a', function(e) {
+	    	e.preventDefault();
+	        var search = $(this).attr('data-filter');
+	        if (!$(this).hasClass('active')) {
+	          $('.filter a.active').removeClass('active');
+	          $(this).addClass('active');
+	        }
+
+	        if (!search || search == 'all') {
+	        	$('#single__program_output ul.list.filtered').removeClass('filtered');
+				hackerList.filter();
+	        } else {
+	        	hackerList.filter(function(item) {
+	        		$('#single__program_output ul.list:not(.filtered)').addClass('filtered');
+	            	return (item.values().filter__degree == search);
+	          	});
+			}
+	    });
+	});
+
+	</script>
+	
+	<div class="tri full content SO_grey" id="">
     <div class="tri">
         <div class="ang le-full txtC">
             <p><em><img src="/assets/suny-online-/images/achievements/industryAcheive3-31x39.png" alt="industry Page achievement Image(s)" style="width : 31px; height : 39px;     " /></em><strong>Congrats to the Online Programs at&nbsp;SUNY&nbsp;Ranked&nbsp;</strong><strong>Best in the U.S.</strong></p>
