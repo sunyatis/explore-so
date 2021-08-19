@@ -16,7 +16,7 @@ Rails.application.routes.draw do
    
 #constraints host: 'localhost' do
 
-
+get '/robots.:format', to: 'home#robots'
   get "/courses/my_courses", :to => "courses#my_courses"
   get "/courses/catalogs", :to => "courses#catalogs"
   get "/courses/course_areas", :to => "courses#course_areas"
