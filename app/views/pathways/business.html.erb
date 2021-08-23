@@ -123,7 +123,7 @@
     <div class="tri" id="BC">
         <div class="ang le-full md-third-2">
             <h1><%= pathway.title %></h1>
-            <p><%= pathway.headline %></p>
+            <p><%=raw pathway.headline %></p>
             
 
 	      </div>
@@ -135,7 +135,7 @@
     <div class="tri has__overlap">
         <div class="ang le-full md-10 about__desc hide-sm" style="background-color: #54B948;">
             <h3><strong>About <%= pathway.title %></strong></h3>
-<p><%= pathway.description %></p>
+<p><%=raw pathway.description %></p>
           <a class="cta__blue scroll_me" id="about__desc" href="#single__program_list" data-title="Accounting" alt="scroll to form">See All Programs <i class="fas fa-chevron-down"></i></a>
         </div>
         <div class="ang le-full md-14 about__form">
@@ -145,7 +145,7 @@
         </div>
         <div class="ang le-full md-10 about__desc hide-md hide-lg">
             <h3><strong>About <%= pathway.title %></strong></h3>
-<p><%= pathway.description %></p>
+<p><%=raw pathway.description %></p>
             <a alt="contact us" href="#program__list" class="cta__blue">See All Programs <i class="fas fa-chevron-down"></i></a>
         </div>
     </div>
