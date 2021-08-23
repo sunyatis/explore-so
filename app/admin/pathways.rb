@@ -63,10 +63,11 @@ f.hr
       end
 
   end    
+  f.actions
     end
   
   
   
 end
-f.actions
+
 end
