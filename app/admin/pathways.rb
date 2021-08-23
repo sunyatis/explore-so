@@ -68,5 +68,5 @@ f.hr
   
   
 end
-
+f.actions
 end
