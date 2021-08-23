@@ -51,6 +51,7 @@ class Ability
        else
          can :read, Program
          can :read, Course
+         can :read, Pathway
          can [:open_suny_programs, :read], Program
          can [:subject_areas, :read], Program
          can [:schools, :read], Program
@@ -60,6 +61,7 @@ class Ability
          can [:schools, :read], Course
          can [:schools, :read], School
          can [:accounting, :read], Pathway
+         can [:business, :read], Pathway
     end
     
     

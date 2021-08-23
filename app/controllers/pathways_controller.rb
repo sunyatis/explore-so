@@ -18,8 +18,9 @@ def accounting1
   #@programs = Program.where(:open_suny => 'Open SUNY').uniq
 end
 def business
+  @pathways = Pathway.all
   render 'business', layout: false
-  #@programs = Program.where(:open_suny => 'Open SUNY').uniq
+  
 end
 
 def computerscience_it
@@ -63,12 +64,11 @@ end
   private
 
     def pathway_params
-      params.require(:pathway).permit(:name)
+      params.require(:pathway).permit(:title, :headline, :description, :learn_your_way_text, :best_fit_link_1, :best_fit_link_2, :best_fit_link_3, :meta_description, :meta_keywords, :page_title, :pathway_title)
     end
     
-    @pathways = Pathway.all
-    
-    
+
+
     
 end
 

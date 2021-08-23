@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_29_144836) do
+ActiveRecord::Schema.define(version: 2021_08_19_164838) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -100,6 +100,19 @@ ActiveRecord::Schema.define(version: 2021_07_29_144836) do
   create_table "level_abbs", force: :cascade do |t|
     t.text "name"
     t.text "description"
+  end
+
+  create_table "pathways", force: :cascade do |t|
+    t.string "title"
+    t.string "headline"
+    t.string "description"
+    t.string "learn_your_way_text"
+    t.string "best_fit_link_1"
+    t.string "best_fit_link_2"
+    t.string "best_fit_link_3"
+    t.string "meta_description"
+    t.string "meta_keywords"
+    t.string "page_title"
   end
 
   create_table "points_transactions", force: :cascade do |t|
