@@ -18,7 +18,7 @@ def accounting1
   #@programs = Program.where(:open_suny => 'Open SUNY').uniq
 end
 def business
-  @pathways = Pathway.all
+  @pathways = Pathway.where(:landing_page => 'business').uniq
   render 'business', layout: false
   
 end
