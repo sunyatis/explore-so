@@ -64,7 +64,7 @@ end
   private
 
     def pathway_params
-      params.require(:pathway).permit(:title, :headline, :description, :learn_your_way_text, :best_fit_link_1, :best_fit_link_2, :best_fit_link_3, :meta_description, :meta_keywords, :page_title, :pathway_title)
+      params.require(:pathway).permit(:title, :headline, :description, :learn_your_way_text, :best_fit_link_1, :best_fit_link_2, :best_fit_link_3, :meta_description, :meta_keywords, :page_title, :pathway_title, :landing_page)
     end
     
 

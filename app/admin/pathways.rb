@@ -6,7 +6,7 @@ ActiveAdmin.register Pathway do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :title, :headline, :description, :learn_your_way_text, :best_fit_link_1, :best_fit_link_2, :best_fit_link_3, :meta_description, :meta_keywords, :page_title
+  permit_params :title, :headline, :description, :learn_your_way_text, :best_fit_link_1, :best_fit_link_2, :best_fit_link_3, :meta_description, :meta_keywords, :page_title, :landing_page
   #
   # or
   #
@@ -22,6 +22,9 @@ ActiveAdmin.register Pathway do
     tabs do
       
       tab 'Pathway Page Content', {class: 'ui-tabs-active'} do
+        f.li "<li><div class='aa_label'><h3>Which pathway landing page is this for??</h3</div></li>".html_safe 
+        f.input :landing_page, :as => :select, :collection => ["accounting","business","computerscience_it","data_science","education", "engineering","general_studies","graduate_degrees","healthcare", "psychology", "security_studies"]
+        
         f.li "<li><div class='aa_label'><h3>What is the name of the pathway?</h3</div></li>".html_safe  
      f.input :title
      f.hr
