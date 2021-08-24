@@ -12,6 +12,7 @@ class CreatePathways < ActiveRecord::Migration[6.0]
       t.string :meta_keywords
       t.string :page_title 
       t.string :pathway_title
+      t.string :landing_page
     end
   end
 end

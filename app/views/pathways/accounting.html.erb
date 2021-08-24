@@ -1,3 +1,7 @@
+<% @pathways.each do |pathway| %>
+	
+
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -32,10 +36,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="SUNY Online">
       	<meta name="bot token" content=''>
-        <meta name="description" content="A degree in Accounting or Business from SUNY Online can open doors to new careers in many industries. A career in business is versatile.">
-    		<meta name="keywords" content="suny online, education, college degree, accounting, business, finance, CPA, business management, study online, distance learning, master&rsquo;s, bachelor&rsquo;s, associate">
+        <meta name="description" content="<%=pathway.meta_description%>">
+    		<meta name="keywords" content="<%=pathway.meta_keywords%>">
 
-        <title>Accounting | SUNY Online</title>
+        <title><%= pathway.page_title %> | SUNY Online</title>
       
       	<script>
           var idCounter = 0;
@@ -45,17 +49,17 @@
           };
       </script>
       
-        <link rel="stylesheet" type="text/css" assets="" href="../../assets/suny-online-/css/fonts.css" />
-        <link rel="stylesheet" type="text/css" assets="" href="../../assets/suny-online-/css/main.css" />
-      	<link rel="stylesheet" type="text/css" assets="" href="../../assets/suny-online-/css/triangle.css" />
+        <link rel="stylesheet" type="text/css" assets="" href="/assets/suny-online-/css/fonts.css" />
+        <link rel="stylesheet" type="text/css" assets="" href="/assets/suny-online-/css/main.css" />
+      	<link rel="stylesheet" type="text/css" assets="" href="/assets/suny-online-/css/triangle.css" />
       	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
       
 				
-        <script type="text/javascript" src="../../assets/suny-online-/js/jquery.js"></script>
-        <script type="text/javascript" src="../../assets/suny-online-/js/main.js"></script>
-				<script type="text/javascript" src="../../assets/suny-online-/js/waypoint.js"></script>
-				<script type="text/javascript" src="../../assets/suny-online-/js/counterup2-1.0.1.min.js"></script>
-				<script type="text/javascript" src="../../assets/suny-online-/js/list.js"></script>
+        <script type="text/javascript" src="/assets/suny-online-/js/jquery.js"></script>
+        <script type="text/javascript" src="/assets/suny-online-/js/main.js"></script>
+				<script type="text/javascript" src="/assets/suny-online-/js/waypoint.js"></script>
+				<script type="text/javascript" src="/assets/suny-online-/js/counterup2-1.0.1.min.js"></script>
+				<script type="text/javascript" src="/assets/suny-online-/js/list.js"></script>
       
       	<!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154550921-1"></script>
@@ -69,7 +73,7 @@
       
       
     </head>
-    <body data-page="Accounting">  
+    <body data-page="<%= pathway.title %>">  
        
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5FTJCX"
@@ -82,17 +86,17 @@
         <header class="tri full">
            <div class="tri">
                 <div class="ang le-full md-3" id="navLogo">
-                    <a class="SO__logo" href="../../index.html"><img id="headIMG" src="../../assets/suny-online-/images/SUNYOnline-logowhite-silo.png" alt="Suny Logo"></a>
+                    <a class="SO__logo" href="../../index.html"><img id="headIMG" src="/assets/suny-online-/images/SUNYOnline-logowhite-silo.png" alt="Suny Logo"></a>
                   	<a href="#" class="mobile_menu__toggle"><i class="fas fa-bars"></i></a>
                </div>
                 <div class="ang le-full md-21 hide-sm" id="navLinks">
                     <ul class="navigation__bar">
                         <!--<li><a href="/programs/">Explore Online Degrees</a></li>-->
-                        <li><a href="../../contact-us/index.html" alt="Request Information">Request Info</a></li>
+                        <!--li><a href="../../contact-us/index.html" alt="Request Information">Request Info</a></li>
                         <li><a href="../../tuition-at-suny/index.html" alt="Affordable Tuition">Affordable Tuition</a></li>
 												<li><a href="../../transfer/index.html" alt="Transfer">Transfer</a></li>
                          <li><a href="../index.html" alt="Programs">Programs</a></li>
-                        <li><a href="../../faq/index.html" alt="FAQ">FAQs</a></li>
+                        <li><a href="../../faq/index.html" alt="FAQ">FAQs</a></li-->
                         
                     </ul>
                 </div>
@@ -102,7 +106,7 @@
     <img class="icon__home" alt="industry icon" src="../../assets/suny-online-/images/industries/Group-559@2x.png" />
     <img class="icon__list" alt="industry icon list" src="../../assets/suny-online-/images/industries/Group-649.png" />
     <img class="icon__program" alt="industry program" src="../../assets/suny-online-/images/industries/Group-649.png" />
-    <strong>Accounting</strong>
+    <strong><%= pathway.title %></strong>
     <p>
     	Gain the skills and earn the degree to sit for the CPA exam or work in business.
     </p>
@@ -118,93 +122,20 @@
 <div class="tri full" id="hero" style="background-image:url('../../assets/suny-online-/images/industries/accounting-hero-compress.jpeg');background-position: center;" alt="Suny hero image">
     <div class="tri" id="BC">
         <div class="ang le-full md-third-2">
-            <h1>Accounting</h1>
-            <p>Make a career change or jump back on the path toward a bachelor's degree in accounting to sit for the CPA exam. No SAT. 100% Online. Learn your way at SUNY.</p>
+            <h1><%= pathway.title %></h1>
+            <p><%=raw pathway.headline %></p>
             
-            <div class="program_filter__list"><ul><li><a href="../index.html">Programs</a><ul><li><a href="index.html">Accounting</a><ul><li><a href="../business/business-administration-as/index.html">Business Administration AS</a></li><li><a href="accounting-bs/index.html">Accounting BS</a></li></ul></li><li><a href="../business/index.html">Business</a><ul><li><a href="../business/business-administration-as/index.html">Business Administration AS</a></li><li><a href="../business/business-administration-bs/index.html">Business Administration BS</a></li><li><a href="../business/management-bs/index.html">Management BS</a></li><li><a href="../graduate-degrees/business-administration-mba/index.html">Business Administration MBA</a></li><li><a href="../graduate-degrees/business-management-mba/index.html">Business Management MBA</a></li></ul></li><li><a href="../computerscience-it/index.html">Computer Science and IT</a><ul><li><a href="../security-studies/networking-and-cybersecurity-aas/index.html">Networking and Cybersecurity AAS</a></li><li><a href="../computerscience-it/computer-science-as/index.html">Computer Science AS</a></li><li><a href="../data-science/informatics-bs/index.html">Informatics BS</a></li><li><a href="../computerscience-it/cybersecurity-bs/index.html">Cybersecurity BS</a></li><li><a href="../graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li><li><a href="../criminal-justice/index.html">Criminal Justice</a><ul><li><a href="../criminal-justice/crime-and-intelligence-analysis-aas/index.html">CJ: Crime and Intelligence Analysis AAS</a></li><li><a href="../criminal-justice/crime-analysis-bs/index.html">Crime Analysis BS</a></li></ul></li><li><a href="../data-science/index.html">Data and Information Science</a><ul><li><a href="../data-science/mathematics-as/index.html">Mathematics AS</a></li><li><a href="../data-science/informatics-bs/index.html">Informatics BS</a></li><li><a href="../graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li><li><a href="../education/index.html">Education</a><ul><li><a href="../education/teaching-assistant-certificate/index.html">Teaching Assistant Certificate</a></li></ul></li><li><a href="../engineering/index.html">Engineering</a><ul><li><a href="../engineering/engineering-science-as/index.html">Engineering Science AS</a></li><li><a href="../data-science/mathematics-as/index.html">Mathematics AS</a></li><li><a href="../engineering/electrical-engineering-bs/index.html">Electrical Engineering BS</a></li><li><a href="../graduate-degrees/industrial-engineering-meng/index.html">Industrial Engineering MEng</a></li></ul></li><li><a href="../general-studies/index.html">General Studies</a><ul><li><a href="../general-studies/individual-studies-as/index.html">Individual Studies AS</a></li></ul></li><li><a href="../healthcare/index.html">Healthcare</a><ul><li><a href="../healthcare/health-care-studies-as/index.html">Health Care Studies AS</a></li><li><a href="../healthcare/healthcare-management-bs/index.html">Healthcare Management BS</a></li><li><a href="../healthcare/healthcare-management-btech/index.html">Healthcare Management BTech</a></li><li><a href="../graduate-degrees/healthcare-leadership-mba/index.html">Healthcare Leadership MBA</a></li><li><a href="../graduate-degrees/health-services-administration-mba/index.html">Health Services Administration MBA</a></li></ul></li><li><a href="../psychology/index.html">Psychology</a><ul><li><a href="../psychology/psychology-as/index.html">Psychology AS</a></li><li><a href="../psychology/psychology-ba/index.html">Psychology BA</a></li></ul></li><li><a href="../security-studies/index.html">Security Studies</a><ul><li><a href="../security-studies/networking-and-cybersecurity-aas/index.html">Networking and Cybersecurity AAS</a></li><li><a href="../security-studies/cybersecurity-and-digital-forensics-as/index.html">Cybersecurity and Digital Forensics AS</a></li><li><a href="../security-studies/homeland-security-as/index.html">Homeland Security AS</a></li><li><a href="../data-science/informatics-bs/index.html">Informatics BS</a></li><li><a href="../security-studies/security-studies-bs/index.html">Security Studies BS</a></li><li><a href="../graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li><li><a href="../graduate-degrees/index.html">Graduate Studies</a><ul><li><a href="../graduate-degrees/business-administration-mba/index.html">Business Administration MBA</a></li><li><a href="../graduate-degrees/business-management-mba/index.html">Business Management MBA</a></li><li><a href="../graduate-degrees/healthcare-leadership-mba/index.html">Healthcare Leadership MBA</a></li><li><a href="../graduate-degrees/health-services-administration-mba/index.html">Health Services Administration MBA</a></li><li><a href="../graduate-degrees/industrial-engineering-meng/index.html">Industrial Engineering MEng</a></li><li><a href="../graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li></ul></li></ul></div>
-            
-            <div class="loading" id="hero_filter">
-                <div class="hero_filter__box">
-                    <div id="hero_filter__industry" class="hero_filter" tabindex="0">
-                        <div class="hero_filter__select">
-                            <div class="hero_filter__trigger">
-                                <span>Choose Program</span>
-                                <i class="fas fa-chevron-right"></i>
-                                <i class="fas fa-circle-notch fa-spin"></i>
-                            </div>
-                            <div class="hero_filter__options">
-                                <span class="selected" data-value="na">Choose Program</span>
-                            </div> 
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="hero_filter__box">
-                    <div id="hero_filter__program" data-industry="na" class="hero_filter" tabindex="0">
-                        <div class="hero_filter__select">
-                            <div class="hero_filter__trigger">
-                                <span>Choose Degree</span>
-                                <i class="fas fa-chevron-right"></i>
-                                <i class="fas fa-circle-notch fa-spin"></i>
-                            </div>
-                            <div class="hero_filter__options">
-                                <span class="selected" data-href="na" data-industry="na">Choose Degree</span> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="ang le-full md-half">
-            <a href="#form__anchor" class="scroll__me cta__ghost hide-md hide-lg" alt="contact us">Contact Us For More Info <i class="fas fa-chevron-right"></i></a>
-        </div>
+
+	      </div>
+	  </div>
     </div>
 </div>
-
-<style>
-	
-</style>
-
-<script>    
-	var filterList = $('.program_filter__list > ul > li > ul > li'), filterList_count = filterList.length, i = 0;
-    
-    filterList.each(function() {
-        
-        var indid = $("a:first", this).text(), indurl = $("a:first", this).attr('href'), indslug = indid.replace(/\s+/g, '_').toLowerCase();
-        
-        $('#hero_filter__industry > .hero_filter__select > .hero_filter__options').append(
-            '<span data-value="'+indslug+'" tabindex="0">'+indid+'</span>'
-        );
-        
-        $(this).find('li').each(function() {
-            var url = $(this).find('a').attr('href'), name = $(this).find('a').text();
-            $('#hero_filter__program > .hero_filter__select > .hero_filter__options').append(
-                '<span data-href="'+url+'" data-industry="'+indslug+'" tabindex="0" class="heroItems">'+name+'</span>'
-            );
-        }).promise().done( function(){
-          $('#hero_filter__program > .hero_filter__select > .hero_filter__options').append(
-              '<span data-href="'+indurl+'" data-industry="'+indslug+'" tabindex="0">View All Programs</span>'
-          );
-        });
-        
-        i++; if (i == filterList_count) { $('#hero_filter').removeClass('loading'); }
-    });
-  
-   $(document).on("click", ".hero_filter__options span", function (e) {
-     setTimeout(function(){
-	  	$( ".hero_filter__select" ).last().addClass( "open" ); 
-     }, 300);
-     e.stopPropagation();
- 	});
-</script><div class="tri full" id="formAbout">
+</div>
+<div class="tri full" id="formAbout">
     <div class="tri has__overlap">
         <div class="ang le-full md-10 about__desc hide-sm" style="background-color: #54B948;">
-            <h3><strong>About Accounting</strong></h3>
-<p>A career in&nbsp;accounting&nbsp;is versatile. The demand for accountants and auditors is expected to increase by 4% by 2029.&nbsp;You need a bachelor's degree to sit for the CPA exam, but employment opportunities exist for employees at all levels. Graduates pursue careers as bookkeepers, accountants, auditing clerks, auditors, and advisors.</p>
-<p>Finish an associate degree or transfer your credits to the 4-year completion program in accounting.&nbsp;</p>
-<p>The <a href="https://www.bls.gov/ooh/office-and-administrative-support/bookkeeping-accounting-and-auditing-clerks.htm">median salary for entry-level positions</a>&nbsp;without a 4-year degree is $42,410.</p>
-<p>The median<a href="https://www.bls.gov/ooh/business-and-financial/accountants-and-auditors.htm">&nbsp;pay for accountants</a>&nbsp;with a 4-year degree is $73,560.</p>
-<p>Accountants work in nearly every sector - private and government.</p>
+            <h3><strong>About <%= pathway.title %></strong></h3>
+<p><%=raw pathway.description %></p>
           <a class="cta__blue scroll_me" id="about__desc" href="#single__program_list" data-title="Accounting" alt="scroll to form">See All Programs <i class="fas fa-chevron-down"></i></a>
         </div>
         <div class="ang le-full md-14 about__form">
@@ -213,34 +144,30 @@
             <div id="form_52074dac-c921-4714-a80a-0c1a9bdf15d7">Loading...</div><script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src = 'https://engage.suny.edu/register/?id=52074dac-c921-4714-a80a-0c1a9bdf15d7&output=embed&div=form_52074dac-c921-4714-a80a-0c1a9bdf15d7' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</script>
         </div>
         <div class="ang le-full md-10 about__desc hide-md hide-lg">
-            <h3><strong>About Accounting</strong></h3>
-<p>A career in&nbsp;accounting&nbsp;is versatile. The demand for accountants and auditors is expected to increase by 4% by 2029.&nbsp;You need a bachelor's degree to sit for the CPA exam, but employment opportunities exist for employees at all levels. Graduates pursue careers as bookkeepers, accountants, auditing clerks, auditors, and advisors.</p>
-<p>Finish an associate degree or transfer your credits to the 4-year completion program in accounting.&nbsp;</p>
-<p>The <a href="https://www.bls.gov/ooh/office-and-administrative-support/bookkeeping-accounting-and-auditing-clerks.htm">median salary for entry-level positions</a>&nbsp;without a 4-year degree is $42,410.</p>
-<p>The median<a href="https://www.bls.gov/ooh/business-and-financial/accountants-and-auditors.htm">&nbsp;pay for accountants</a>&nbsp;with a 4-year degree is $73,560.</p>
-<p>Accountants work in nearly every sector - private and government.</p>
+            <h3><strong>About <%= pathway.title %></strong></h3>
+<p><%=raw pathway.description %></p>
             <a alt="contact us" href="#program__list" class="cta__blue">See All Programs <i class="fas fa-chevron-down"></i></a>
-        </div>
-    </div>
-</div><div class="tri full content SO_grey" id="BC">
-    <div class="tri">
-        <div class="ang le-full txtC">
-            <h3>Featured Accounting Programs</h3>
         </div>
     </div>
 </div>
 
 <style>
   
-</style><style>.featured_program__list > ul { display:none; }
+</style><style>.program__list > ul { display:none; }
 </style>
 
+<div class="program__list" id="single__program_list"><ul><li><a href="../index.html">Programs</a></div>
 
 
-<div class="tri full scroll_me" id="featuredPrograms">
-    <div class="featured_program__list" data-title="Accounting"><ul><li><a href="../index.html">Programs</a><ul><li><a href="index.html">Accounting</a><ul><li><a href="../business/business-administration-as/index.html">Business Administration AS</a></li><li><a href="accounting-bs/index.html">Accounting BS</a></li></ul></li><li><a href="../business/index.html">Business</a><ul><li><a href="../business/business-administration-as/index.html">Business Administration AS</a></li><li><a href="../business/business-administration-bs/index.html">Business Administration BS</a></li><li><a href="../business/management-bs/index.html">Management BS</a></li><li><a href="../graduate-degrees/business-administration-mba/index.html">Business Administration MBA</a></li><li><a href="../graduate-degrees/business-management-mba/index.html">Business Management MBA</a></li></ul></li><li><a href="../computerscience-it/index.html">Computer Science and IT</a><ul><li><a href="../security-studies/networking-and-cybersecurity-aas/index.html">Networking and Cybersecurity AAS</a></li><li><a href="../computerscience-it/computer-science-as/index.html">Computer Science AS</a></li><li><a href="../data-science/informatics-bs/index.html">Informatics BS</a></li><li><a href="../computerscience-it/cybersecurity-bs/index.html">Cybersecurity BS</a></li><li><a href="../graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li><li><a href="../criminal-justice/index.html">Criminal Justice</a><ul><li><a href="../criminal-justice/crime-and-intelligence-analysis-aas/index.html">CJ: Crime and Intelligence Analysis AAS</a></li><li><a href="../criminal-justice/crime-analysis-bs/index.html">Crime Analysis BS</a></li></ul></li><li><a href="../data-science/index.html">Data and Information Science</a><ul><li><a href="../data-science/mathematics-as/index.html">Mathematics AS</a></li><li><a href="../data-science/informatics-bs/index.html">Informatics BS</a></li><li><a href="../graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li><li><a href="../education/index.html">Education</a><ul><li><a href="../education/teaching-assistant-certificate/index.html">Teaching Assistant Certificate</a></li></ul></li><li><a href="../engineering/index.html">Engineering</a><ul><li><a href="../engineering/engineering-science-as/index.html">Engineering Science AS</a></li><li><a href="../data-science/mathematics-as/index.html">Mathematics AS</a></li><li><a href="../engineering/electrical-engineering-bs/index.html">Electrical Engineering BS</a></li><li><a href="../graduate-degrees/industrial-engineering-meng/index.html">Industrial Engineering MEng</a></li></ul></li><li><a href="../general-studies/index.html">General Studies</a><ul><li><a href="../general-studies/individual-studies-as/index.html">Individual Studies AS</a></li></ul></li><li><a href="../healthcare/index.html">Healthcare</a><ul><li><a href="../healthcare/health-care-studies-as/index.html">Health Care Studies AS</a></li><li><a href="../healthcare/healthcare-management-bs/index.html">Healthcare Management BS</a></li><li><a href="../healthcare/healthcare-management-btech/index.html">Healthcare Management BTech</a></li><li><a href="../graduate-degrees/healthcare-leadership-mba/index.html">Healthcare Leadership MBA</a></li><li><a href="../graduate-degrees/health-services-administration-mba/index.html">Health Services Administration MBA</a></li></ul></li><li><a href="../psychology/index.html">Psychology</a><ul><li><a href="../psychology/psychology-as/index.html">Psychology AS</a></li><li><a href="../psychology/psychology-ba/index.html">Psychology BA</a></li></ul></li><li><a href="../security-studies/index.html">Security Studies</a><ul><li><a href="../security-studies/networking-and-cybersecurity-aas/index.html">Networking and Cybersecurity AAS</a></li><li><a href="../security-studies/cybersecurity-and-digital-forensics-as/index.html">Cybersecurity and Digital Forensics AS</a></li><li><a href="../security-studies/homeland-security-as/index.html">Homeland Security AS</a></li><li><a href="../data-science/informatics-bs/index.html">Informatics BS</a></li><li><a href="../security-studies/security-studies-bs/index.html">Security Studies BS</a></li><li><a href="../graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li><li><a href="../graduate-degrees/index.html">Graduate Studies</a><ul><li><a href="../graduate-degrees/business-administration-mba/index.html">Business Administration MBA</a></li><li><a href="../graduate-degrees/business-management-mba/index.html">Business Management MBA</a></li><li><a href="../graduate-degrees/healthcare-leadership-mba/index.html">Healthcare Leadership MBA</a></li><li><a href="../graduate-degrees/health-services-administration-mba/index.html">Health Services Administration MBA</a></li><li><a href="../graduate-degrees/industrial-engineering-meng/index.html">Industrial Engineering MEng</a></li><li><a href="../graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li></ul></li></ul></div>
-    <div id="featured_program__output" class="featured_programs tri">
-		<div data-list="/programs/business/business-administration-as/" id="featured_program__0" class="featured_program__box"><div id="program__metadata_id1" class="filter__program filter__degree filter__campus" data-degree="Associate Degree " data-campus="Monroe Community College">
+<div class="tri full content SO_grey" id="single__program_output" data-industry="Accounting">
+	<div class="tri">
+    <div class="ang le-full txtC">
+        <h3>Featured <%= pathway.title %> Programs</h3>
+    </div>
+    <div class="ang le-third-2 hide-sm"></div>
+ 
+    <div class="ang le-full">
+		<ul class="list" data-num="2"><li id="single_program__1" class="single__program_box loaded"><div id="program__metadata_id4" class="filter__program filter__degree filter__campus" data-degree="Associate Degree " data-campus="Monroe Community College">
 		  <div class="featured_program__image" style="background-image:url('/assets/suny-online-/images/campus/college_0003_MonroeCC-icon-1000.jpg');"></div>
 		  <h4 class="filter__program_title">Business Administration AS</h4>
 		  <h5 class="filter__program_online">100% Online</h5>
@@ -252,28 +179,28 @@
 		      <p>Cost per credit: <span class="filter__program_cost">$196</span></p>
 		    </div>
 		  </div>
-		</div></div>
-		<div data-list="/programs/accounting/accounting-bs/" id="featured_program__1" class="featured_program__box"><div id="program__metadata_id2" class="filter__program filter__degree filter__campus" data-degree="Bachelor of Science" data-campus="Plattsburgh University">
+		</div><a href="https://explore.suny.edu/programs/monroe-community-college-business-business-administration-associate-associate-of-science-1470329453128" class="program__link"></a></li><li id="single_program__2" class="single__program_box loaded"><div id="program__metadata_id5" class="filter__program filter__degree filter__campus" data-degree="Bachelor of Science" data-campus="Plattsburgh University">
 		  <div class="featured_program__image" style="background-image:url('/assets/suny-online-/images/campus/college_0001_Plattsburgh-icon-1000.jpg');"></div>
 		  <h4 class="filter__program_title">Accounting BS</h4>
 		  <h5 class="filter__program_online">100% Online</h5>
 		  <div class="tri">
 		    <div class="ang le-half">
-		      <p>Credits: <span class="filter__program_credits">60 w/an associate degree</span></p>
+		      <p>Credits: <span class="filter__program_credits">60 w/an AS Degree</span></p>
 		    </div>
 		    <div class="ang le-half" id="CostCredits">
 		      <p>Cost per credit: <span class="filter__program_cost">$295</span></p>
 		    </div>
 		  </div>
-		</div></div>
-		<div data-list="undefined" id="featured_program__2" class="featured_program__box"></div>
+		</div><a href="https://explore.suny.edu/programs/state-university-college-at-plattsburgh-accounting-bachelor-bachelor-of-science-1488217427966" class="program__link"></a></li></ul>
     </div>
-    <div class="tri">
-        <div class="ang le-full txtC">
-            <a href="#single__program_list" class="cta__blue" alt="See All Accounting Programs" title="See All Accounting Programs">See All Programs</a>
-        </div>
-    </div>
+    <!--div class="ang le-full txtC">
+        <ul class="pagination"></ul><br>
+   	
+    </div-->
+		</div> 
 </div>
+
+
 
 <script>
 function shuffle(array) {
@@ -355,29 +282,29 @@ function shuffle(array) {
       <div class="ang le-full">
           <ul class="quotes__list">
               <li class="quote__container" 
-                  data-content="&ldquo;Taking classes online is great as it provides me the ability to make a schedule of my own while maintaining a sense of balance between school and work.&rdquo; ">
+                  data-content="&ldquo;I have an amazing success coach who has checked in on me academically, and friendly reminders about registrations, events, etc.&rdquo; ">
                 <p>
-                    &ldquo;Taking classes online is great as it provides me the ability to make a schedule of my own while maintaining a sense of balance between school and work.&rdquo; 
+                    &ldquo;I have an amazing success coach who has checked in on me academically, and friendly reminders about registrations, events, etc.&rdquo; 
                     <span class="quote__name">
-                        - Taijah P
+                        - Travell, Empire State College
                     </span>
                 </p>
               </li>
               <li class="quote__container" 
-                  data-content="&ldquo;SUNY adapts to a constantly changing average student life. While studying online I was able continue employment which furthered my experience in my field of study&quot;">
+                  data-content="&ldquo;Between learning so much from my teachers from their online lectures and the activities available to me, most would have no clue that I am an online-only student.&quot;">
                 <p>
-                    &ldquo;SUNY adapts to a constantly changing average student life. While studying online I was able continue employment which furthered my experience in my field of study&quot;
+                    &ldquo;Between learning so much from my teachers from their online lectures and the activities available to me, most would have no clue that I am an online-only student.&quot;
                     <span class="quote__name">
-                        - Jahad H
+                        - Monica, SUNY Canton 
                     </span>
                 </p>
               </li>
               <li class="quote__container" 
-                  data-content="&ldquo;With online study, I&rsquo;ve been able to personally connect with my professors both online and over the phone to receive the one-on-one support that I need without having to rush my questions during a short class period.&rdquo; ">
+                  data-content="&ldquo;One of the reasons I choose SUNY ESC was the flexibility it provided me to continue working full time and finish my degree.  It was one of the best decisions I have made in a long time.&rdquo; ">
                 <p>
-                    &ldquo;With online study, I&rsquo;ve been able to personally connect with my professors both online and over the phone to receive the one-on-one support that I need without having to rush my questions during a short class period.&rdquo; 
+                    &ldquo;One of the reasons I choose SUNY ESC was the flexibility it provided me to continue working full time and finish my degree.  It was one of the best decisions I have made in a long time.&rdquo; 
                     <span class="quote__name">
-                        - Taryn R
+                        - Nicole, Empire State College 
                     </span>
                 </p>
               </li>
@@ -385,7 +312,7 @@ function shuffle(array) {
       </div>
 	</div>
       
-      <div class="quotes__background" style="background-image:url('../../assets/suny-online-/images/gradsSayIMG.png');"></div>
+      <div class="quotes__background" style="background-image:url('../../assets/suny-online-/images/amanda.jpg');"></div> <!--gradsSayIMG.png-->
 </div>
   
 <style>
@@ -395,7 +322,7 @@ function shuffle(array) {
         padding-bottom: 5%;
 	}
 </style>
-<!--div class="tri full SO_grey " id="industry_achievements">
+<div class="tri full SO_grey " id="industry_achievements">
     <div class="tri">
         <div class="ang le-full txtC">
             <h2>Our Achievements</h2>            
@@ -489,7 +416,7 @@ function shuffle(array) {
   <div class="counter__description">Awards</div>
 </div>        </div>
     </div>
-</div-->
+</div>
 
 <script>
     jQuery( document ).ready( function($) {
@@ -514,161 +441,125 @@ function shuffle(array) {
 			} );
 		});
 	});
-</script><div class="tri full content SO_white_grey" id="BC">
-    <div class="tri">
-        <div class="ang le-full txtC">
-            <h3>Accounting Degree Pathway - Learn Your Way</h3>
-<p>Whether it's an associate, bachelor's, or graduate degree, a SUNY degree in accounting opens doors. Students can attend full-time or part-time. Explore the opportunities that will help you earn your SUNY accounting&nbsp;degree online and on your terms.&nbsp;</p>
-        </div>
-    </div>
-</div>
+</script>
+	
+	<div class="tri full content SO_white_grey" id="BC">
+	    <div class="tri">
+	        <div class="ang le-full txtC">
+	            <h3><%= pathway.title %> Degree Pathway - Learn Your Way</h3>
+	<p><%=raw pathway.learn_your_way_text %></p>
+	        </div>
+       
+	    </div>
+	</div>
+	<div class="tri full content">
+	    <div class="tri">
+	        <div class="ang le-full txtC">
+		<a href='#formAbout' class="cta__blue scrollme">Contact Us</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="tri full content SO_grey_lite" id="BC">
+	    <div class="tri">
+	        <div class="ang le-full txtC">
+	            <h3>Find the Best Fit for You.</h3>
+	        </div>
+	    </div>
+	</div>
 
-<style>
+	<style>
   
-</style><style>.program__list > ul { display:none; }
+	</style><style>.featured_program__list > ul { display:none; }
+	</style>
+
+
+
+<div class="tri full scroll_me" id="featuredPrograms_1">
+	    <div class="featured_program__list" data-title="Accounting"></div>
+	 
+	  <div id="featured_program__output" class="featured_programs tri">
+			<div id="featured_program__0" class="featured_program__box"><div id="program__metadata_id1" class="filter__program filter__degree filter__campus" data-degree="Associate Degree " data-campus="Monroe Community College"><div class="featured_program__image" style="background-image:url('/assets/suny-online-/images/111.png');"></div>
+			  
+			  <h4 class="filter__program_title">Business Degrees</h4>
+			  <h5 class="filter__program_online">100% Online</h5>
+			  <div class="tri">
+		        <div class="ang le-full txtC">
+		            <a href="https://sunyonline.edu/programs/business/" class="cta__blue_1" alt="See All Accounting Programs" title="See All Accounting Programs">Learn More</a>
+		        </div>
+			  </div>
+			</div></div>
+			<div id="featured_program__1" class="featured_program__box"><div id="program__metadata_id1" class="filter__program filter__degree filter__campus" data-degree="Associate Degree " data-campus="Monroe Community College"><div class="featured_program__image" style="background-image:url('/assets/suny-online-/images/94.png');"></div>
+			  
+			  <h4 class="filter__program_title">Finance Degrees</h4>
+			  <h5 class="filter__program_online">100% Online</h5>
+			  <div class="tri">
+		        <div class="ang le-full txtC">
+		            <a href="<%= pathway.best_fit_link_1%>" class="cta__blue_1" alt="See All Accounting Programs" title="See All Accounting Programs">Learn More</a>
+		        </div>
+			  </div>
+			</div></div>
+			<div id="featured_program__2" class="featured_program__box"><div id="program__metadata_id1" class="filter__program filter__degree filter__campus" data-degree="Associate Degree " data-campus="Monroe Community College"><div class="featured_program__image" style="background-image:url('/assets/suny-online-/images/148.png');"></div>
+			  
+			  <h4 class="filter__program_title">Graduate Degrees in Accounting</h4>
+			  <h5 class="filter__program_online">100% Online</h5>
+			  <div class="tri">
+		        <div class="ang le-full txtC">
+		            <a href="pathway.best_fit_link_2" class="cta__blue_1" alt="See All Accounting Programs" title="See All Accounting Programs">Learn More</a>
+		        </div>
+			  </div>
+			</div></div>
+			
+	
+	    </div>
+	    <div class="tri">
+	        <div class="ang le-full txtC">
+	            <a href="pathway.best_fit_link_3" class="cta__blue" alt="See All Accounting Programs" title="See All Accounting Programs">See All Programs</a>
+	        </div>
+	    </div>
+	</div>
+	
+	
+	
+
+</div>
+<style>
+	
 </style>
 
-<div class="program__list" id="single__program_list"><ul><li><a href="../index.html">Programs</a><ul><li><a href="index.html">Accounting</a><ul><li><a href="../business/business-administration-as/index.html">Business Administration AS</a></li><li><a href="accounting-bs/index.html">Accounting BS</a></li></ul></li><li><a href="../business/index.html">Business</a><ul><li><a href="../business/business-administration-as/index.html">Business Administration AS</a></li><li><a href="../business/business-administration-bs/index.html">Business Administration BS</a></li><li><a href="../business/management-bs/index.html">Management BS</a></li><li><a href="../graduate-degrees/business-administration-mba/index.html">Business Administration MBA</a></li><li><a href="../graduate-degrees/business-management-mba/index.html">Business Management MBA</a></li></ul></li><li><a href="../computerscience-it/index.html">Computer Science and IT</a><ul><li><a href="../security-studies/networking-and-cybersecurity-aas/index.html">Networking and Cybersecurity AAS</a></li><li><a href="../computerscience-it/computer-science-as/index.html">Computer Science AS</a></li><li><a href="../data-science/informatics-bs/index.html">Informatics BS</a></li><li><a href="../computerscience-it/cybersecurity-bs/index.html">Cybersecurity BS</a></li><li><a href="../graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li><li><a href="../criminal-justice/index.html">Criminal Justice</a><ul><li><a href="../criminal-justice/crime-and-intelligence-analysis-aas/index.html">CJ: Crime and Intelligence Analysis AAS</a></li><li><a href="../criminal-justice/crime-analysis-bs/index.html">Crime Analysis BS</a></li></ul></li><li><a href="../data-science/index.html">Data and Information Science</a><ul><li><a href="../data-science/mathematics-as/index.html">Mathematics AS</a></li><li><a href="../data-science/informatics-bs/index.html">Informatics BS</a></li><li><a href="../graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li><li><a href="../education/index.html">Education</a><ul><li><a href="../education/teaching-assistant-certificate/index.html">Teaching Assistant Certificate</a></li></ul></li><li><a href="../engineering/index.html">Engineering</a><ul><li><a href="../engineering/engineering-science-as/index.html">Engineering Science AS</a></li><li><a href="../data-science/mathematics-as/index.html">Mathematics AS</a></li><li><a href="../engineering/electrical-engineering-bs/index.html">Electrical Engineering BS</a></li><li><a href="../graduate-degrees/industrial-engineering-meng/index.html">Industrial Engineering MEng</a></li></ul></li><li><a href="../general-studies/index.html">General Studies</a><ul><li><a href="../general-studies/individual-studies-as/index.html">Individual Studies AS</a></li></ul></li><li><a href="../healthcare/index.html">Healthcare</a><ul><li><a href="../healthcare/health-care-studies-as/index.html">Health Care Studies AS</a></li><li><a href="../healthcare/healthcare-management-bs/index.html">Healthcare Management BS</a></li><li><a href="../healthcare/healthcare-management-btech/index.html">Healthcare Management BTech</a></li><li><a href="../graduate-degrees/healthcare-leadership-mba/index.html">Healthcare Leadership MBA</a></li><li><a href="../graduate-degrees/health-services-administration-mba/index.html">Health Services Administration MBA</a></li></ul></li><li><a href="../psychology/index.html">Psychology</a><ul><li><a href="../psychology/psychology-as/index.html">Psychology AS</a></li><li><a href="../psychology/psychology-ba/index.html">Psychology BA</a></li></ul></li><li><a href="../security-studies/index.html">Security Studies</a><ul><li><a href="../security-studies/networking-and-cybersecurity-aas/index.html">Networking and Cybersecurity AAS</a></li><li><a href="../security-studies/cybersecurity-and-digital-forensics-as/index.html">Cybersecurity and Digital Forensics AS</a></li><li><a href="../security-studies/homeland-security-as/index.html">Homeland Security AS</a></li><li><a href="../data-science/informatics-bs/index.html">Informatics BS</a></li><li><a href="../security-studies/security-studies-bs/index.html">Security Studies BS</a></li><li><a href="../graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li><li><a href="../graduate-degrees/index.html">Graduate Studies</a><ul><li><a href="../graduate-degrees/business-administration-mba/index.html">Business Administration MBA</a></li><li><a href="../graduate-degrees/business-management-mba/index.html">Business Management MBA</a></li><li><a href="../graduate-degrees/healthcare-leadership-mba/index.html">Healthcare Leadership MBA</a></li><li><a href="../graduate-degrees/health-services-administration-mba/index.html">Health Services Administration MBA</a></li><li><a href="../graduate-degrees/industrial-engineering-meng/index.html">Industrial Engineering MEng</a></li><li><a href="../graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li></ul></li></ul></div>
-<div class="tri" id="single__program_output" data-industry="Accounting">
-    <div class="ang le-third-2 hide-sm"></div>
-    <div class="ang le-full md-third program__search_box" style="position:relative;">
-      <fieldset style="border: none;">
-      <label style="display: none;" for="search">Search Box</label>
-        <input type="text" class="search" placeholder="Search" id="search"/>
-        <i class="fas fa-search"></i>
-        </fieldset>
-    </div>
-    <div class="ang le-full">
-        <ul class="filter">
-        	<li><a href="#" class="active" data-filter="">View All</a></li>
-        </ul>
-    </div>
-    <div class="ang le-full">
-		<ul class="list" data-num="2"><li id="single_program__1" class="single__program_box loaded"><div id="program__metadata_id4" class="filter__program filter__degree filter__campus" data-degree="Associate Degree " data-campus="Monroe Community College">
-		  <div class="featured_program__image" style="background-image:url('/assets/suny-online-/images/campus/college_0003_MonroeCC-icon-1000.jpg');"></div>
-		  <h4 class="filter__program_title">Business Administration AS</h4>
-		  <h5 class="filter__program_online">100% Online</h5>
-		  <div class="tri">
-		    <div class="ang le-half">
-		      <p>Credits: <span class="filter__program_credits">62</span></p>
-		    </div>
-		    <div class="ang le-half" id="CostCredits">
-		      <p>Cost per credit: <span class="filter__program_cost">$196</span></p>
-		    </div>
-		  </div>
-		</div><a href="/programs/business/business-administration-as/" class="program__link"></a></li><li id="single_program__2" class="single__program_box loaded"><div id="program__metadata_id5" class="filter__program filter__degree filter__campus" data-degree="Bachelor of Science" data-campus="Plattsburgh University">
-		  <div class="featured_program__image" style="background-image:url('/assets/suny-online-/images/campus/college_0001_Plattsburgh-icon-1000.jpg');"></div>
-		  <h4 class="filter__program_title">Accounting BS</h4>
-		  <h5 class="filter__program_online">100% Online</h5>
-		  <div class="tri">
-		    <div class="ang le-half">
-		      <p>Credits: <span class="filter__program_credits">60 w/an associate degree</span></p>
-		    </div>
-		    <div class="ang le-half" id="CostCredits">
-		      <p>Cost per credit: <span class="filter__program_cost">$295</span></p>
-		    </div>
-		  </div>
-		</div><a href="/programs/accounting/accounting-bs/" class="program__link"></a></li></ul>
-    </div>
-    <div class="ang le-full txtC">
-        <ul class="pagination"></ul><br>
-    	<a href='#formAbout' class="cta__blue scrollme">Contact Us</a>
-    </div>
-</div>
-
-<script>
-
-
-jQuery(document).ready( function($) {
+<script>    
+	var filterList = $('.program_filter__list > ul > li > ul > li'), filterList_count = filterList.length, i = 0;
     
-    var options = {
-        valueNames: [
-            'filter__program_title',
-            'filter__program_credits',
-            'filter__program_cost',
-            { name: 'filter__degree', attr: 'data-degree' },
-            { name: 'filter__campus', attr: 'data-campus' }
-        ],
-        pagination: true,
-        page: 6
-    };
-
-    var hackerList = new List('single__program_output', options),
-    	degrees = [];
-    
-    var index = 0, current = $('#single__program_output').attr('data-industry');
-    $('#single__program_list > ul > li > ul > li').each(function() {
-    	console.log(current + ' - ' + $('> a', this).text());
-    	if (current == $('> a', this).text()) {
-          $('> ul', this).find('li').each(function() {
-              index ++; 
-              var url = $('> a', this).attr('href'),
-                  output = '<li id="single_program__'+index+'" class="single__program_box"><i class="fas fa-circle-notch fa-spin"></i></li>';
-			  $('#single__program_output ul.list').attr('data-num', index);
-              $('#single__program_output ul.list').append(output);
-              $('#single_program__'+index).load(url + ' #program__metadata', function(){
-                  $(this).addClass('loaded');
-                  $('> #program__metadata', this).attr('id', 'program__metadata_'+uniqid('id'));
-                  $(this).append('<a href="'+url+'" class="program__link"></a>');
-                  var deg = $('> div', this).attr('data-degree');
-                  if ($('.filter a[data-filter="'+deg+'"]').length) {
-                  	// Do Nothing
-                  } else {
-                    
-                    $('.filter').append('<li><a href="#" data-filter="'+deg+'">'+deg+'</a></li>');
-                   
-                  }
-                  hackerList.reIndex()
-                  //see function sorter
-				sorter();
-  
-              });
-          });
-        }
-	});
-  
-  //Alphabetical sorter for labels above program lists (industry pages, accounting etc..)
-  function sorter(){
-    var parent = $('.filter');
-    var listitems = parent.children('li').get();
-    listitems.sort(function(a, b) {
-      return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
-    })
-    
-    $.each(listitems, function(idx, itm) { parent.append(itm); });//reappend li to the ul in the new sortedform 
-    
-  }
-   
-    hackerList.on('updated', function(){
-    	var search = $('#single__program_output .search').val();
-        if (search) {
-        	$('#single__program_output ul.list:not(.searched)').addClass('searched');
-        } else {
-        	$('#single__program_output ul.list.searched').removeClass('searched');
-        }
+    filterList.each(function() {
+        
+        var indid = $("a:first", this).text(), indurl = $("a:first", this).attr('href'), indslug = indid.replace(/\s+/g, '_').toLowerCase();
+        
+        $('#hero_filter__industry > .hero_filter__select > .hero_filter__options').append(
+            '<span data-value="'+indslug+'" tabindex="0">'+indid+'</span>'
+        );
+        
+        $(this).find('li').each(function() {
+            var url = $(this).find('a').attr('href'), name = $(this).find('a').text();
+            $('#hero_filter__program > .hero_filter__select > .hero_filter__options').append(
+                '<span data-href="'+url+'" data-industry="'+indslug+'" tabindex="0" class="heroItems">'+name+'</span>'
+            );
+        }).promise().done( function(){
+          $('#hero_filter__program > .hero_filter__select > .hero_filter__options').append(
+              '<span data-href="'+indurl+'" data-industry="'+indslug+'" tabindex="0">View All Programs</span>'
+          );
+        });
+        
+        i++; if (i == filterList_count) { $('#hero_filter').removeClass('loading'); }
     });
-
-	$(document).on('click', '.filter > li > a', function(e) {
-    	e.preventDefault();
-        var search = $(this).attr('data-filter');
-        if (!$(this).hasClass('active')) {
-          $('.filter a.active').removeClass('active');
-          $(this).addClass('active');
-        }
-
-        if (!search || search == 'all') {
-        	$('#single__program_output ul.list.filtered').removeClass('filtered');
-			hackerList.filter();
-        } else {
-        	hackerList.filter(function(item) {
-        		$('#single__program_output ul.list:not(.filtered)').addClass('filtered');
-            	return (item.values().filter__degree == search);
-          	});
-		}
-    });
-});
-
-</script>					<footer class="tri full"> 
+  
+   $(document).on("click", ".hero_filter__options span", function (e) {
+     setTimeout(function(){
+	  	$( ".hero_filter__select" ).last().addClass( "open" ); 
+     }, 300);
+     e.stopPropagation();
+ 	});
+</script>	
+				<footer class="tri full"> 
             <img id="footerArrow" src="../../assets/suny-online-/images/toTopArrow.png" alt="Scroll To Top" />
             <div class="tri">
                 <div class="ang le-full">
@@ -762,3 +653,6 @@ jQuery(document).ready( function($) {
 
     </body>
 </html>
+
+
+<%end%>

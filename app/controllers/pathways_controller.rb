@@ -1,6 +1,7 @@
 class PathwaysController < ApplicationController
 
   def index
+    @pathways = Pathway.where(:landing_page => 'index').uniq
     render 'index', layout: false
     #@programs = Program.where(:open_suny => 'Open SUNY').uniq
   end
