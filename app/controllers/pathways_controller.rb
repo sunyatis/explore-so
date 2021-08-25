@@ -63,7 +63,9 @@ def security_studies
   render 'security_studies', layout: false
 end
 
-
+def show
+  
+end
 
 
   private

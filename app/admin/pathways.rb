@@ -69,7 +69,13 @@ f.hr
   f.actions
     end
   
-  
+    index do
+        id_column
+        column :title
+        column :page_title
+        column :pathway_url do |pathway|
+          link_to pathway.pathway_url, pathway.pathway_url
+        end  
   
 end
 
