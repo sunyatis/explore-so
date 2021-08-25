@@ -20,6 +20,7 @@ ActiveAdmin.register Pathway do
       id_column
       column :title
       column :page_title
+      column :landing_page
     end
   
   
