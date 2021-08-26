@@ -31,7 +31,7 @@ ActiveAdmin.register Pathway do
       
       tab 'Pathway Page Content', {class: 'ui-tabs-active'} do
         f.li "<li><div class='aa_label'><h3>Which pathway landing page is this for??</h3</div></li>".html_safe 
-        f.input :landing_page, :as => :select, :collection => ["accounting","business","computerscience_it","data_science","education", "engineering","general_studies","graduate_degrees","healthcare", "psychology", "security_studies", "index"]
+        f.input :landing_page, :as => :select, :collection => ["accounting","business","computerscience_it","criminal_justice","education", "engineering","general_studies","graduate_degrees","healthcare", "psychology", "security_studies", "index"]
         
         f.li "<li><div class='aa_label'><h3>What is the name of the pathway?</h3</div></li>".html_safe  
      f.input :title
