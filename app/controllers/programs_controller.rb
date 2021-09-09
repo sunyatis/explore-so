@@ -117,6 +117,7 @@ def index
   
 
   def show   
+
     puts "hello"
     puts params[:question]
     @question = params[:question]
