@@ -202,7 +202,17 @@ class Program < ActiveRecord::Base
    end
    def self.options_for_das_area
      [
-      ['Accounting', 'Accouting'],
+      ['Accounting', 'accouting'],
+      ['Business', 'business'],
+      ['Computer Science & IT', 'computerscience_it'],
+      ['Education', 'Education'],
+      ['Engineering', 'engineering'],
+      ['General Studies', 'general_studies'],
+      ['Graduate Degrees', 'graduate_degrees'],
+      ['Healthcare', 'healthcare'],
+      ['Psychology', 'psychology'],
+      ['Security Studies', 'security_studies'],
+      
      ]
    end
    def self.options_for_helpdesk
