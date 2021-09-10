@@ -19,7 +19,7 @@
 					<button class="rounded-button large green halo" data-program="" data-toggle="modal" data-target="#progModal">Request Information</button>
 					<ul>
 						<li>
-							<a href="<%= @program.apply_now_url %>" class="apply_now" target="_blank">Apply Now!</a>
+							<a href="<%= @program.apply_now_url %>" class="apply_now" target="_blank">Apply Now!</a> | <a href="#progModal" class="apply_now" data-toggle="modal" data-target="#progModal">Make an Appointment</a>
 						</li>
 						
 					</ul>
@@ -73,7 +73,9 @@
 			<header role="program-navigation-banner" id="program-navigation-banner" aria-label="Program Details Navigation Banner">
 				<nav class="row" aria-label="Program Details Navigation Bar"><ul class="hide-mobile" id="program-navigation-list">
 					<li class="selected">Program Overview</li>
+					<li><a href="#online">Courses</a></li>
 					<li><a href="#online">Online Learning</a></li>
+					<li><a href="#online">Tution & Financial Aid</a></li>
 					<li><a href="#apply">How To Apply</a></li>
 				</ul>
 			</nav>
@@ -235,13 +237,12 @@
 <a name="apply"></a>		
 		<div class="apply-overview">
 			<section class="row">
-				<h2>How do I enroll?</h2>
+				<h2>How do I apply?</h2>
 				<h3>Follow these steps to start your application</h3>
 				<ol>
 					<li>Go to the online application</li>
 					<li>Create an account</li>
 					<li>Complete the forms or save for later</li>
-					<li>Pay the application fee (if applicable)</li>
 					<li>Submit any supplemental materials, if required</li>
 					<li>Send in your academic records</li>
 					<li class="info">
