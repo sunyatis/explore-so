@@ -75,11 +75,11 @@
 					<li class="selected">Program Overview</li>
 					<li><a href="#online">Courses</a></li>
 					<li><a href="#online">Online Learning</a></li>
-					<li><a href="#online">Tution & Financial Aid</a></li>
 					<li><a href="#apply">How To Apply</a></li>
 				</ul>
 			</nav>
 		</header>
+		
 		<div class="program-overview row">
 			<section class="degree-card">
 				<h2>Earn your <%= @program.prog_level %> degree online</h2>
@@ -147,7 +147,7 @@
 						<% end%>
 						
 						
-<a name="online">				
+<a name="online"></a>				
 						
 								<figure class="accreditation" id="onlinelearning"><img src="/assets/regionally_accredited.png" alt="Middle States Commission on Higher Education">
 									<figcaption>
@@ -162,6 +162,50 @@
 				</div>
 			</aside>
 		</div>
+		
+				<div class="dasprogram-overview">
+					<div class="row">
+					<section class="degree-card">
+						<h2><%= @program.das_area.titleize %> courses you will take online	</h2>
+						<!--h3>You will earn the same diploma as our on-campus students</h3-->
+						<div class="description"><%=raw @program.prog_courses %></div>
+						
+						</section>
+					<aside class="tuition-card" aria-label="University Details">
+						<div class="wrap one">
+							<div class="info">
+								<figure>
+								
+									<figcaption>
+								<figure class="accreditation1"><img src="/assets/suny-online-/images/programs/icons/checkbox.png" alt="Middle States Commission on Higher Education">
+									
+									<figcaption>
+								
+							
+								<h3>Cost per Credit:</h3>
+									
+										<p>
+										<strong>New York Residents:</strong> $295 <br> 
+										<strong>Out of State:</strong> $353</p>
+							
+								
+						
+						
+		<a name="online"></a>				
+						
+										
+									</figcaption>
+								</figure>
+									</figcaption>
+								</figure>
+							</div>
+						</div>
+					</aside>
+				</div>
+				</div>
+		
+		
+		
 		
 		<div class="online-learning">
 			<div class="row">

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_19_164838) do
+ActiveRecord::Schema.define(version: 2021_09_11_005438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -113,6 +113,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_164838) do
     t.string "meta_description"
     t.string "meta_keywords"
     t.string "page_title"
+    t.text "landing_page"
   end
 
   create_table "points_transactions", force: :cascade do |t|
@@ -161,6 +162,9 @@ ActiveRecord::Schema.define(version: 2021_08_19_164838) do
     t.text "meta_keywords"
     t.text "meta_desc"
     t.string "das_area"
+    t.string "prog_courses"
+    t.string "prog_cost_inst"
+    t.string "prog_cost_outst"
     t.index ["slug"], name: "idx_58447_index_programs_on_slug", unique: true
   end
 

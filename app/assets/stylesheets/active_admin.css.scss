@@ -164,16 +164,19 @@ color: #50b79a !important;
    float:left;
    width:26%;
    margin-right:5px;
+       margin-bottom: 25px;
 }
 #program_subject_area_2_input select{
 
    width: 95%;
    margin-right: 5px;
+   
 }
 #program_subject_area_3_input {
    float:left;
    width:26%;
    margin-right:5px;
+       margin-bottom: 25px;
  
 }
 #program_subject_area_3_input select{
@@ -289,6 +292,12 @@ color: #50b79a !important;
 #pathway_page_title_input legend label{
 	display: none !important;
 }
+#program_prog_courses_input label{
+	display: none !important;
+}
+#program_das_area_input label{
+	display: none !important;
+}
 
 
 
@@ -344,6 +353,7 @@ hr {
     margin-top: 30px;
     margin-bottom: 30px;
 	border: 0; border-top: 1px solid #e7e7e7;
+	clear:both;
 }
 .fr-toolbar .fr-command.fr-btn, .fr-popup .fr-command.fr-btn, .fr-modal .fr-command.fr-btn {
 	height:40px;
