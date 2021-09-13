@@ -1,30 +1,9 @@
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('.rounded-button').click(function() {
-			var question;
-			question = $(this).attr("value");
-		    if (question == "1"){
-			$( "div.modal-body").html( "<div id='form_218b5a64-6afc-4cbe-b601-64c26a5e2fa2'>Loading...</div><script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src ='https://engage.suny.edu/register/?id=218b5a64-6afc-4cbe-b601-64c26a5e2fa2&program_in=<%=@program.ranku_id%>&questions=1&output=embed&div=form_218b5a64-6afc-4cbe-b601-64c26a5e2fa2' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</" +"script></"+"div>" );}
-            
-			    if (question == "2"){
-				$( "div.modal-body").html( "<div id='form_218b5a64-6afc-4cbe-b601-64c26a5e2fa2'>Loading...</div><script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src ='https://engage.suny.edu/register/?id=218b5a64-6afc-4cbe-b601-64c26a5e2fa2&program_in=<%=@program.ranku_id%>&questions=2&output=embed&div=form_218b5a64-6afc-4cbe-b601-64c26a5e2fa2' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</" +"script></"+"div>" );}
-			    if (question == "3"){
-				$( "div.modal-body").html( "<div id='form_218b5a64-6afc-4cbe-b601-64c26a5e2fa2'>Loading...</div><script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src ='https://engage.suny.edu/register/?id=218b5a64-6afc-4cbe-b601-64c26a5e2fa2&program_in=<%=@program.ranku_id%>&questions=3&output=embed&div=form_218b5a64-6afc-4cbe-b601-64c26a5e2fa2' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</" +"script></"+"div>" );}
-			    if (question == "4"){
-				$( "div.modal-body").html( "<div id='form_218b5a64-6afc-4cbe-b601-64c26a5e2fa2'>Loading...</div><script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src ='https://engage.suny.edu/register/?id=218b5a64-6afc-4cbe-b601-64c26a5e2fa2&program_in=<%=@program.ranku_id%>&questions=4&output=embed&div=form_218b5a64-6afc-4cbe-b601-64c26a5e2fa2' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</" +"script></"+"div>" );}
-			    if (question == "5"){
-				$( "div.modal-body").html( "<div id='form_218b5a64-6afc-4cbe-b601-64c26a5e2fa2'>Loading...</div><script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src ='https://engage.suny.edu/register/?id=218b5a64-6afc-4cbe-b601-64c26a5e2fa2&program_in=<%=@program.ranku_id%>&questions=5&output=embed&div=form_218b5a64-6afc-4cbe-b601-64c26a5e2fa2' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</" +"script></"+"div>" );}
-			    if (question == "6"){
-				$( "div.modal-body").html( "<div id='form_218b5a64-6afc-4cbe-b601-64c26a5e2fa2'>Loading...</div><script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src ='https://engage.suny.edu/register/?id=218b5a64-6afc-4cbe-b601-64c26a5e2fa2&program_in=<%=@program.ranku_id%>&questions=6&output=embed&div=form_218b5a64-6afc-4cbe-b601-64c26a5e2fa2' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</" +"script></"+"div>" );}
-				
-    });
-	});
-</script>
+
 
 <!-- Modal Program RFI -->
 
 		
-<div id="progModal" class="modal fade rfi" role="dialog">
+<div id="dasprogModal" class="modal fade rfi" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -36,7 +15,7 @@
       </div>
       <div class="modal-body">
 		  <%if @program.das_area == "accounting"%>
-		  <div id="form_52074dac-c921-4714-a80a-0c1a9bdf15d7">Loading...</div><script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src = 'https://engage.suny.edu/register/?id=52074dac-c921-4714-a80a-0c1a9bdf15d7&output=embed&div=form_52074dac-c921-4714-a80a-0c1a9bdf15d7&next_step=2' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</script>   </div>
+		  <div id="form_52074dac-c921-4714-a80a-0c1a9bdf15d7">Loading...</div><script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src = 'https://engage.suny.edu/register/?id=52074dac-c921-4714-a80a-0c1a9bdf15d7&output=embed&div=form_52074dac-c921-4714-a80a-0c1a9bdf15d7' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</script>   </div>
 		  <%elsif @program.das_area == "business"%>
 		  <div id="form_d6868379-cef9-48b3-8ca6-f7c4a58ac184">Loading...</div><script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src = 'https://engage.suny.edu/register/?id=d6868379-cef9-48b3-8ca6-f7c4a58ac184&output=embed&div=form_d6868379-cef9-48b3-8ca6-f7c4a58ac184' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</script></div>      
  <%elsif @program.das_area == "computerscience_it"%>
@@ -64,7 +43,8 @@
   </div>
   
   <%elsif @program.das_area == "security_studies"%>
- 
+  <div id="form_395be976-cfd7-4d0d-82c1-b64db97528eb">Loading...</div><script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src = 'https://engage.suny.edu/register/?id=395be976-cfd7-4d0d-82c1-b64db97528eb&output=embed&div=form_395be976-cfd7-4d0d-82c1-b64db97528eb' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</script>
+  </div>
  <%end%>
 
   </div>

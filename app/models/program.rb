@@ -205,6 +205,7 @@ class Program < ActiveRecord::Base
       ['Accounting', 'accouting'],
       ['Business', 'business'],
       ['Computer Science & IT', 'computerscience_it'],
+      ['Criminal Justice', 'criminal_justice'], 
       ['Education', 'Education'],
       ['Engineering', 'engineering'],
       ['General Studies', 'general_studies'],
