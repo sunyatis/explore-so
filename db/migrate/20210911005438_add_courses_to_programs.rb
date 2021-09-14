@@ -1,4 +1,4 @@
-class AddCoursesToPrograms < ActiveRecord::Migration[6.0]
+class AddApptToPrograms < ActiveRecord::Migration[6.0]
   def change
 
       add_column :programs, :prog_courses, :string

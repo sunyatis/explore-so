@@ -16,10 +16,10 @@
 				</figure>
 				<div class="actions">
 					
-					<button class="rounded-button large green halo" data-program="" data-toggle="modal" data-target="#dasprogModal">Request Information</button>
+					<button class="rounded-button large green halo" data-program="" data-toggle="modal" data-target="#progModal">Request Information</button>
 					<ul>
 						<li>
-							<a href="<%= @program.apply_now_url %>" class="apply_now" target="_blank">Apply Now!</a> | <a href="#dasprogModal" class="apply_now" data-toggle="modal" data-target="#dasprogModal">Make an Appointment</a>
+							<a href="<%= @program.apply_now_url %>" class="apply_now" target="_blank">Apply Now!</a> | <a href="<%=@program.prog_appt_link%>" class="apply_now">Make an Appointment</a>
 						</li>
 						
 					</ul>
@@ -185,8 +185,8 @@
 								<h3>Cost per Credit:</h3>
 									
 										<p>
-										<strong>New York Residents:</strong> $295 <br> 
-										<strong>Out of State:</strong> $353</p>
+										<strong>New York Residents:</strong> $ <%=@program.prog_cost_inst%> <br> 
+										<strong>Out of State:</strong> $ <%=@program.prog_cost_outst%></p>
 							
 								
 						
@@ -263,7 +263,7 @@
 						</dl>
 					</li>
 					<li>
-						<a class="rounded-button small green halo" data-program="<%=@program.ranku_id%>" data-toggle="modal" data-target="#dasprogModal">Request Program Information</a>
+						<a class="rounded-button small green halo" data-program="<%=@program.ranku_id%>" data-toggle="modal" data-target="#progModal">Request Program Information</a>
 					</li>
 				</ul>
 				
@@ -298,22 +298,22 @@
 					<p id="anyQuestionsDiscription">We'll connect you with someone who can answer all your questions</p>
 					<ul>
 						<li>
-							<button class="rounded-button a-unique-class" title="Ask SUNY about Previous or Transfer Credits" data-program="<%=@program.ranku_id%>" data-topic="admission_requirements" data-toggle="modal" data-target="#dasprogModal" value="2" >Previous or Transfer Credits</button>
+							<button class="rounded-button a-unique-class" title="Ask SUNY about Previous or Transfer Credits" onclick=" window.open('<%=@program.prog_appt_link%>','_blank')" >Previous or Transfer Credits</button>
 	</li>
 						<li>
-							<button class="rounded-button" title="Ask SUNY about Admission Requirements" data-program="<%=@program.ranku_id%>" data-topic="admission_requirements" data-toggle="modal" data-target="#dasprogModal" value="4">Admission Requirements</button>
+							<button class="rounded-button" title="Ask SUNY about Admission Requirements" onclick=" window.open('<%=@program.prog_appt_link%>','_blank')">Admission Requirements</button>
 						</li>
 						<li>
-							<button class="rounded-button" title="Ask SUNY about Tuition or Financial Aid" data-program="<%=@program.ranku_id%>" data-topic="tuition_financial_aid" data-toggle="modal" data-target="#dasprogModal" value="3">Tuition or Financial Aid</button>
+							<button class="rounded-button" title="Ask SUNY about Tuition or Financial Aid" onclick=" window.open('<%=@program.prog_appt_link%>','_blank')">Tuition or Financial Aid</button>
 						</li>
 						<li>
-							<button class="rounded-button" title="Ask SUNY about General Program Information" data-program="<%=@program.ranku_id%>" data-topic="general_program_info" data-toggle="modal" data-target="#dasprogModal" value="1">General Program Information</button>
+							<button class="rounded-button" title="Ask SUNY about General Program Information" onclick=" window.open('<%=@program.prog_appt_link%>','_blank')">General Program Information</button>
 						</li>
 						<li>
-							<button class="rounded-button" title="Ask SUNY about Taking Online Classes" data-program="<%=@program.ranku_id%>" data-topic="online_classes" data-toggle="modal" data-target="#dasprogModal" value="5">Taking Online Classes</button>
+							<button class="rounded-button" title="Ask SUNY about Taking Online Classes" onclick=" window.open('<%=@program.prog_appt_link%>','_blank')">Taking Online Classes</button>
 						</li>
 						<li>
-							<button class="rounded-button" title="Ask SUNY about Something Not Listed" data-program="<%=@program.ranku_id%>" data-topic="other" data-toggle="modal" data-target="#dasprogModal" value="6">Something Not Listed</button>
+							<button class="rounded-button" title="Ask SUNY about Something Not Listed" onclick=" window.open('<%=@program.prog_appt_link%>','_blank')">Something Not Listed</button>
 						</li>
 					</ul>
 				</aside>
@@ -323,15 +323,15 @@
 	<section class="related-programs"></section>
 	<section class="rfi-banner">
 		<h4>Interested in learning more about this program?</h4>
-		<button class="rounded-button large white blue-halo" data-program="<%=@program.ranku_id%>" data-toggle="modal" data-target="#dasprogModal">Request More Information</button>
+		<button class="rounded-button large white blue-halo" data-program="<%=@program.ranku_id%>" data-toggle="modal" data-target="#progModal">Request More Information</button>
 	</section>
 </section>
 		</main>
 		
 
-<%= render(
-  partial: 'programs/dasprog_modal'#,
- #:locals => {:questions => @questions }
-) %>
 
+<%= render(
+  partial: 'programs/dasprog_modal'
+
+) %>
 
