@@ -202,7 +202,7 @@ class Program < ActiveRecord::Base
    end
    def self.options_for_das_area
      [
-      ['Accounting', 'accouting'],
+      ['Accounting', 'accounting'],
       ['Business', 'business'],
       ['Computer Science & IT', 'computerscience_it'],
       ['Criminal Justice', 'criminal_justice'], 
