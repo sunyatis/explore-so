@@ -1,3 +1,5 @@
+
+
 jQuery(document).ready( function($) {
   	// UID function
   $("body > img:not([alt])").attr("alt", "<YOURALTTEXT>");
@@ -237,6 +239,35 @@ jQuery(document).ready( function($) {
 });
 
 
+$(document).ready(function() {
+		var owl = $('.owl-carousel');
+		owl.owlCarousel({
+		    items: 1,
+		    dots: false,
+		    mouseDrag: true,
+		    responsiveClass: true,
+		    responsive: {
+		        0:{
+		          items: 1
+		        },
+		        480:{
+		          items: 1
+		        },
+		        769:{
+		          items: 5
+		        }
+		    },
+		    onInitialize : function(element){
+		        owl.children().sort(function(){
+		            return Math.round(Math.random()) - 0.5;
+		        }).each(function(){
+		            $(this).appendTo(owl);
+		        });
+		    },
+			
+			
+		});
 
-
-
+		
+ 
+	});

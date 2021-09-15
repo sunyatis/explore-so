@@ -48,10 +48,13 @@
         <link rel="stylesheet" type="text/css" media="" href="/assets/suny-online-/css/fonts.css" />
         <link rel="stylesheet" type="text/css" media="" href="/assets/suny-online-/css/main.css" />
       	<link rel="stylesheet" type="text/css" media="" href="/assets/suny-online-/css/triangle.css" />
+		<link rel="stylesheet" type="text/css" media="" href="/assets/suny-online-/css/owl.carousel.min.css" />
+		<link rel="stylesheet" type="text/css" media="" href="/assets/suny-online-/css/owl.theme.default.min.css" />
       	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
       
-				
+		
         <script type="text/javascript" src="/assets/suny-online-/js/jquery.js"></script>
+		<script type="text/javascript" src="/assets/suny-online-/js/owl.carousel.js"></script>
         <script type="text/javascript" src="/assets/suny-online-/js/main.js"></script>
 				<script type="text/javascript" src="/assets/suny-online-/js/waypoint.js"></script>
 				<script type="text/javascript" src="/assets/suny-online-/js/counterup2-1.0.1.min.js"></script>
@@ -159,257 +162,83 @@
     </div>
 </div>
 
-<style>
-	
-</style>
 
-<script>    
-	var filterList = $('.program_filter__list > ul > li > ul > li'), filterList_count = filterList.length, i = 0;
-    
-    filterList.each(function() {
-        
-        var indid = $("a:first", this).text(), indurl = $("a:first", this).attr('href'), indslug = indid.replace(/\s+/g, '_').toLowerCase();
-        
-        $('#hero_filter__industry > .hero_filter__select > .hero_filter__options').append(
-            '<span data-value="'+indslug+'" tabindex="0">'+indid+'</span>'
-        );
-        
-        $(this).find('li').each(function() {
-            var url = $(this).find('a').attr('href'), name = $(this).find('a').text();
-            $('#hero_filter__program > .hero_filter__select > .hero_filter__options').append(
-                '<span data-href="'+url+'" data-industry="'+indslug+'" tabindex="0" class="heroItems">'+name+'</span>'
-            );
-        }).promise().done( function(){
-          $('#hero_filter__program > .hero_filter__select > .hero_filter__options').append(
-              '<span data-href="'+indurl+'" data-industry="'+indslug+'" tabindex="0">View All Programs</span>'
-          );
-        });
-        
-        i++; if (i == filterList_count) { $('#hero_filter').removeClass('loading'); }
-    });
-  
-   $(document).on("click", ".hero_filter__options span", function (e) {
-     setTimeout(function(){
-	  	$( ".hero_filter__select" ).last().addClass( "open" ); 
-     }, 300);
-     e.stopPropagation();
- 	});
-</script>
-	
-	<div class="industry__list"><t4 type="navigation" name="SO_ProgramList" id="853" /></div>
+	<div class="tri full content" id="" >
 
-	<div class="tri full" id="category_list">
-	    <div class="tri">
-	        <div class="ang le-full">
-	            <ul class="category_list__ul"></ul>
-	        </div>
-	    </div>
-	</div>
-
-
-
-	<style>
-	.program__list > ul { display:none; }
-	</style>
-
-	<div class="program__list" id="single__program_list"></div>
-	<div class="tri" id="single__program_output" >
-	    <div class="ang le-third-2 hide-sm"></div>
 		<div class="ang le-full">
 			
-			<section class="row">
-				<div id="owl-demo3" class="owl-carousel owl-theme">
-			
-			<div class="item">
-				<figure>
-					<img src="/assets/alexis.png" alt="Alexis Iglesias- Ortiz">
-					<figcaption>
-						<blockquote>
-							<p>Knowing that I have someone in my corner who gets back to me as soon as possible, has really helped me deal with the difficulties surrounding not only being in college but pursuing my degree online.</p>
-							<footer>
-								<cite>Alexis Iglesias-Ortiz, Business Administration, SUNY Oswego, 2020</cite>
-							</footer>
-						</blockquote>
-					</figcaption>
-				</figure>
-			</div>
-			<div class="item">
-				<figure>
-					<img src="/assets/lila.png" alt="Lila Ijaz">
-					<figcaption>
-						<blockquote>
-							<p>I love that I signed up with SUNY Online! The success coaches really help you so much before the college application process, and after you get accepted.</p>
-							<footer>
-								<cite>Lila Ijaz, MBA, SUNY Oswego, 2021</cite>
-							</footer>
-						</blockquote>
-					</figcaption>
-				</figure>
-			</div>
-			</div>
+		<section>
+			<div id="owl-carousel" class="owl-carousel owl-theme">
+			    <div class="item">
+					<a alt="Accounting" title="Accounting" class="full__link" href="/pathways/accounting"></a>
+			      <img src="/assets/suny-online-/images/Group-559@2x.png"  alt="Group 559@2x">
+				 <p> <strong>ACCOUNTING</strong></p>
+			    </div>
+			    <div class="item">
+					<a alt="Business" title="Business" class="full__link" href="/pathways/business"></a>
+			      <img src="/assets/suny-online-/images/Group-559@2x.png"  alt="Group 559@2x">
+				 <p> <strong>BUSINESS</strong></p>
+			    </div>
+		    <div class="item">
+				<a alt="Computer Science and IT" title="Computer Science and IT" class="full__link" href="/pathways/Computerscience_it"></a>
+		      <img src="/assets/suny-online-/images/Group-555@2x.png"  alt="Group 555@2x">
+			 <p> <strong>COMPUTER SCIENCE AND IT</strong></p>
+		    </div>
+			    <div class="item">
+					<a alt="Criminal Justice" title="Criminal Justice" class="full__link" href="/pathways/criminal_justice"></a>
+			      <img src="/assets/suny-online-/images/Group-555@2x.png"  alt="Group 555@2x">
+				 <p> <strong>CRIMINAL JUSTICE</strong></p>
+			    </div>
+		    <div class="item">
+				<a alt="Education" title="Education" class="full__link" href="/pathways/education"></a>
+		      <img src="/assets/suny-online-/images/Group 671.png"  alt="Group 671x">
+			 <p> <strong>EDUCATION</strong></p>
+		    </div>
+			    <div class="item">
+					<a alt="Engineering" title="Engineering" class="full__link" href="/pathways/engineering"></a>
+			      <img src="/assets/suny-online-/images/Group 668.png"  alt="Group 668">
+				 <p> <strong>ENGINEERING</strong></p>
+			    </div>
+				    <div class="item">
+						<a alt="General Studies" title="General Studies" class="full__link" href="/pathways/general_studies"></a>
+				      <img src="/assets/suny-online-/images/Group-559@2x.png"  alt="Group 559@2x">
+					 <p> <strong>GENERAL STUDIES</strong></p>
+				    </div>
+				    <div class="item">
+						<a alt="Graduate Degrees" title="Graduate Degrees" class="full__link" href="/pathways/graduate_degrees"></a>
+				      <img src="/assets/suny-online-/images/Group-559@2x.png"  alt="Group 559@2x">
+					 <p> <strong>GRADUATE DEGREES</strong></p>
+				    </div>
+			    <div class="item">
+					<a alt="Healthcare" title="Healthcare" class="full__link" href="/pathways/healthcare"></a>
+			      <img src="/assets/suny-online-/images/Group-555@2x.png"  alt="Group 555@2x">
+				 <p> <strong>HEALTHCARE</strong></p>
+			    </div>
+				    <div class="item">
+						<a alt="Psychology" title="Psychology" class="full__link" href="/pathways/psychology"></a>
+				      <img src="/assets/suny-online-/images/Group-555@2x.png"  alt="Group 555@2x">
+					 <p> <strong>PSYCHOLOGY</strong></p>
+				    </div>
+			    <div class="item">
+					<a alt="Security Studies" title="Security Studies" class="full__link" href="/pathways/security_studies"></a>
+			      <img src="/assets/suny-online-/images/Group 671.png"  alt="Group 671x">
+				 <p> <strong>SECURITY STUDIES</strong></p>
+			    </div>
+	
+				
+	 </div>
+			   
 			</section>
 			
-			
-			
+	
+	    </div>
 
-			
-			
-		            <ul class="category_list__ul"><li id="industry__1" class="loaded"><i class="fas fa-circle-notch fa-spin"></i><div class="category_list__link"><a alt="Accounting" title="Accounting" class="full__link" href="https://t4.suny.edu/terminalfour/preview/17/en/12038"></a><div class="category_list__ajax"><div id="industry__metadataid1">
-		    <a href="#" alt="list close" class="category_list__close"><i class="fa fa-times" aria-hidden="true"></i></a>
-		    <img class="icon__home" alt="industry icon" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=7a6cef5f18c265b56e2170809d5627f9104e3ec3">
-		    <img class="icon__list" alt="industry icon list" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=b4020cb08855090a0c1e37001455f7e40b85e9e5">
-		    <img class="icon__program" alt="industry program" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=b4020cb08855090a0c1e37001455f7e40b85e9e5">
-		    <strong>Accounting</strong>
-		    <p>
-		    	Gain the skills and earn the degree to sit for the CPA exam or work in business.
-		    </p>
-		</div></div><a class="category_list__button" href="https://t4.suny.edu/terminalfour/preview/17/en/12038">MORE INFO <i class="fas fa-chevron-right"></i></a></div></li><li id="industry__2" class="loaded"><i class="fas fa-circle-notch fa-spin"></i><div class="category_list__link"><a alt="Business" title="Business" class="full__link" href="https://t4.suny.edu/terminalfour/preview/17/en/13640"></a><div class="category_list__ajax"><div id="industry__metadataid2">
-		    <a href="#" alt="list close" class="category_list__close"><i class="fa fa-times" aria-hidden="true"></i></a>
-		    <img class="icon__home" alt="industry icon" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=7a6cef5f18c265b56e2170809d5627f9104e3ec3">
-		    <img class="icon__list" alt="industry icon list" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=b4020cb08855090a0c1e37001455f7e40b85e9e5">
-		    <img class="icon__program" alt="industry program" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=b4020cb08855090a0c1e37001455f7e40b85e9e5">
-		    <strong>Business</strong>
-		    <p>
-		    	Gain the skills that add up to professional success in business.
-		    </p>
-		</div></div><a class="category_list__button" href="https://t4.suny.edu/terminalfour/preview/17/en/13640">MORE INFO <i class="fas fa-chevron-right"></i></a></div></li><li id="industry__3" class="loaded"><i class="fas fa-circle-notch fa-spin"></i><div class="category_list__link"><a alt="Computer Science and IT" title="Computer Science and IT" class="full__link" href="https://t4.suny.edu/terminalfour/preview/17/en/12036"></a><div class="category_list__ajax"><div id="industry__metadataid3">
-		    <a href="#" alt="list close" class="category_list__close"><i class="fa fa-times" aria-hidden="true"></i></a>
-		    <img class="icon__home" alt="industry icon" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=9b553455844d37e512738567a95ad3ffca2f61db">
-		    <img class="icon__list" alt="industry icon list" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=2a57dce5d5a47139dd37fad4d8a84286f12a22d6">
-		    <img class="icon__program" alt="industry program" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=2a57dce5d5a47139dd37fad4d8a84286f12a22d6">
-		    <strong>Computer Science and IT</strong>
-		    <p>
-		    	Computer Science and IT professionals are needed in every industry.
-		    </p>
-		</div></div><a class="category_list__button" href="https://t4.suny.edu/terminalfour/preview/17/en/12036">MORE INFO <i class="fas fa-chevron-right"></i></a></div></li><li id="industry__4" class="loaded"><i class="fas fa-circle-notch fa-spin"></i><div class="category_list__link"><a alt="Criminal Justice" title="Criminal Justice" class="full__link" href="https://t4.suny.edu/terminalfour/preview/17/en/13625"></a><div class="category_list__ajax"><div id="industry__metadataid6">
-		    <a href="#" alt="list close" class="category_list__close"><i class="fa fa-times" aria-hidden="true"></i></a>
-		    <img class="icon__home" alt="industry icon" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=9b553455844d37e512738567a95ad3ffca2f61db">
-		    <img class="icon__list" alt="industry icon list" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=2a57dce5d5a47139dd37fad4d8a84286f12a22d6">
-		    <img class="icon__program" alt="industry program" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=2a57dce5d5a47139dd37fad4d8a84286f12a22d6">
-		    <strong>Criminal Justice</strong>
-		    <p>
-		    	Keep people, communities and companies safe - online or on the streets..
-		    </p>
-		</div></div><a class="category_list__button" href="https://t4.suny.edu/terminalfour/preview/17/en/13625">MORE INFO <i class="fas fa-chevron-right"></i></a></div></li><li id="industry__5" class="loaded"><i class="fas fa-circle-notch fa-spin"></i><div class="category_list__link"><a alt="Education" title="Education" class="full__link" href="https://t4.suny.edu/terminalfour/preview/17/en/13647"></a><div class="category_list__ajax"><div id="industry__metadataid5">
-		    <a href="#" alt="list close" class="category_list__close"><i class="fa fa-times" aria-hidden="true"></i></a>
-		    <img class="icon__home" alt="industry icon" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=a7785e48560a8aa2f51f10df6fe2f5dcdd21ac48">
-		    <img class="icon__list" alt="industry icon list" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=ab5439b0a108ce4a9237d77662dc0977d24acb25">
-		    <img class="icon__program" alt="industry program" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=ab5439b0a108ce4a9237d77662dc0977d24acb25">
-		    <strong>Education</strong>
-		    <p>
-		    	Take the first step toward a degree in education.
-		    </p>
-		</div></div><a class="category_list__button" href="https://t4.suny.edu/terminalfour/preview/17/en/13647">MORE INFO <i class="fas fa-chevron-right"></i></a></div></li><li id="industry__6" class="loaded"><i class="fas fa-circle-notch fa-spin"></i><div class="category_list__link"><a alt="Engineering" title="Engineering" class="full__link" href="https://t4.suny.edu/terminalfour/preview/17/en/12039"></a><div class="category_list__ajax"><div id="industry__metadataid4">
-		    <a href="#" alt="list close" class="category_list__close"><i class="fa fa-times" aria-hidden="true"></i></a>
-		    <img class="icon__home" alt="industry icon" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=26d5c093eb814435120e53ccecda74449073e70d">
-		    <img class="icon__list" alt="industry icon list" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=b658afb49cc73e3a8edabc37d693771d01d279cd">
-		    <img class="icon__program" alt="industry program" src="https://t4.suny.edu/terminalfour/SiteManager?ctfn=download&amp;fnno=60&amp;ceid=b658afb49cc73e3a8edabc37d693771d01d279cd">
-		    <strong>Engineering</strong>
-		    <p>
-		    	Become an engineer and build the machines and structures of the future.
-		    </p>
-		</div></div><a class="category_list__button" href="https://t4.suny.edu/terminalfour/preview/17/en/12039">MORE INFO <i class="fas fa-chevron-right"></i></a></div></li></ul>
-		        </div>
-	    
-	    <div class="ang le-full txtC">
-	        <ul class="pagination"></ul><br>
+	    <div class="ang le-full txtC" style="padding-top: 42px;">
 	    	<a href='#formAbout' class="cta__blue scrollme">Contact Us</a>
 	    </div>
 	</div>
 
-	<script>
 
-
-	jQuery(document).ready( function($) {
-    
-	    var options = {
-	        valueNames: [
-	            'filter__program_title',
-	            'filter__program_credits',
-	            'filter__program_cost',
-	            { name: 'filter__degree', attr: 'data-degree' },
-	            { name: 'filter__campus', attr: 'data-campus' }
-	        ],
-	        pagination: true,
-	        page: 6
-	    };
-
-	    var hackerList = new List('single__program_output', options),
-	    	degrees = [];
-    
-	    var index = 0, current = $('#single__program_output').attr('data-industry');
-	    $('#single__program_list > ul > li > ul > li').each(function() {
-	    	console.log(current + ' - ' + $('> a', this).text());
-	    	if (current == $('> a', this).text()) {
-	          $('> ul', this).find('li').each(function() {
-	              index ++; 
-	              var url = $('> a', this).attr('href'),
-	                  output = '<li id="single_program__'+index+'" class="single__program_box"><i class="fas fa-circle-notch fa-spin"></i></li>';
-				  $('#single__program_output ul.list').attr('data-num', index);
-	              $('#single__program_output ul.list').append(output);
-	              $('#single_program__'+index).load(url + ' #program__metadata', function(){
-	                  $(this).addClass('loaded');
-	                  $('> #program__metadata', this).attr('id', 'program__metadata_'+uniqid('id'));
-	                  $(this).append('<a href="'+url+'" class="program__link"></a>');
-	                  var deg = $('> div', this).attr('data-degree');
-	                  if ($('.filter a[data-filter="'+deg+'"]').length) {
-	                  	// Do Nothing
-	                  } else {
-                    
-	                    $('.filter').append('<li><a href="#" data-filter="'+deg+'">'+deg+'</a></li>');
-                   
-	                  }
-	                  hackerList.reIndex()
-	                  //see function sorter
-					sorter();
-  
-	              });
-	          });
-	        }
-		});
-  
-	  //Alphabetical sorter for labels above program lists (industry pages, accounting etc..)
-	  function sorter(){
-	    var parent = $('.filter');
-	    var listitems = parent.children('li').get();
-	    listitems.sort(function(a, b) {
-	      return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
-	    })
-    
-	    $.each(listitems, function(idx, itm) { parent.append(itm); });//reappend li to the ul in the new sortedform 
-    
-	  }
-   
-	    hackerList.on('updated', function(){
-	    	var search = $('#single__program_output .search').val();
-	        if (search) {
-	        	$('#single__program_output ul.list:not(.searched)').addClass('searched');
-	        } else {
-	        	$('#single__program_output ul.list.searched').removeClass('searched');
-	        }
-	    });
-
-		$(document).on('click', '.filter > li > a', function(e) {
-	    	e.preventDefault();
-	        var search = $(this).attr('data-filter');
-	        if (!$(this).hasClass('active')) {
-	          $('.filter a.active').removeClass('active');
-	          $(this).addClass('active');
-	        }
-
-	        if (!search || search == 'all') {
-	        	$('#single__program_output ul.list.filtered').removeClass('filtered');
-				hackerList.filter();
-	        } else {
-	        	hackerList.filter(function(item) {
-	        		$('#single__program_output ul.list:not(.filtered)').addClass('filtered');
-	            	return (item.values().filter__degree == search);
-	          	});
-			}
-	    });
-	});
-
-	</script>
 	
 	<div class="tri full content SO_grey" id="">
     <div class="tri">

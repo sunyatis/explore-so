@@ -23889,17 +23889,32 @@ form fieldset > ol > li > select {
 }
 
 /* line 298, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
+#program_prog_appt_link_input label {
+  display: none !important;
+}
+
+/* line 301, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
 #program_das_area_input label {
   display: none !important;
 }
 
-/* line 305, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
+/* line 304, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
+#program_prog_cost_inst_input label {
+  display: none !important;
+}
+
+/* line 307, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
+#program_prog_cost_outst_input label {
+  display: none !important;
+}
+
+/* line 314, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
 form fieldset ol > li {
   padding-top: 0px;
   padding-bottom: 0px;
 }
 
-/* line 311, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
+/* line 320, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -23925,7 +23940,7 @@ select {
   cursor: pointer;
 }
 
-/* line 336, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
+/* line 345, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
 html form input[type=text], html form input[type=password], html form input[type=email], html form input[type=number], html form input[type=url], html form input[type=tel], html form textarea {
   height: 30px !important;
   width: 40%;
@@ -23942,7 +23957,7 @@ html form input[type=text], html form input[type=password], html form input[type
   color: #545454;
 }
 
-/* line 352, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
+/* line 361, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
 hr {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -23951,24 +23966,24 @@ hr {
   clear: both;
 }
 
-/* line 358, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
+/* line 367, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
 .fr-toolbar .fr-command.fr-btn, .fr-popup .fr-command.fr-btn, .fr-modal .fr-command.fr-btn {
   height: 40px;
 }
 
-/* line 362, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
+/* line 371, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
 html div#filters_sidebar_section div.panel_contents div.input.optional.stringish.filter_form_field input {
   width: 48%;
   float: left;
 }
 
-/* line 367, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
+/* line 376, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
 html div#filters_sidebar_section div.panel_contents div.input.optional.stringish.filter_form_field select {
   width: 25%;
   float: left;
 }
 
-/* line 371, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
+/* line 380, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local/app/assets/stylesheets/active_admin.css.scss */
 html .sidebar_section.panel form .buttons {
   background: #37474f;
   margin: 60px -15px -15px;
