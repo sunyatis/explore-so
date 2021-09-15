@@ -251,7 +251,7 @@ $(document).ready(function() {
 		          items: 1
 		        },
 		        480:{
-		          items: 1
+					items: 2
 		        },
 		        769:{
 		          items: 5
