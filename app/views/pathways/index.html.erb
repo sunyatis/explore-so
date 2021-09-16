@@ -1,3 +1,7 @@
+<% @pathways.each do |pathway| %>
+
+
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -32,10 +36,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="SUNY Online">
       	<meta name="bot token" content=''>
-        <meta name="description" content="SUNY Online delivers nationally ranked and accredited degrees online in Accounting, Business, Data Science, Digital Security, Engineering, Healthcare Management, Mathematics, and Psychology.">
-    		<meta name="keywords" content="suny online, online education, college, degree, study online, distance learning, open suny, state university of new york">
-
-        <title>SUNY Online | SUNY Online</title>
+        <meta name="description" content="<%=pathway.meta_description%>">
+    		<meta name="keywords" content="<%=pathway.meta_keywords%>">
+			
+          <title><%= pathway.page_title %> | SUNY Online</title>
       
       	<script>
           var idCounter = 0;
@@ -118,8 +122,8 @@
 <div class="tri full" id="hero" style="background-image:url('/assets/suny-online-/images/hero.jpg');background-position: center;" alt="Suny hero image">
     <div class="tri" id="SO_hero__home">
         <div class="ang le-full md-third-2">
-            <h1>SUNY Online</h1>
-            <p>Learn your way with SUNY. This is your degree, on your time. 100% online!</p>
+            <h1><%= pathway.title %></h1>
+            <p><%=raw pathway.headline %></p>
             
             <!--div class="program_filter__list"><ul><li><a href="programs/index.html">Programs</a><ul><li><a href="programs/accounting/index.html">Accounting</a><ul><li><a href="programs/business/business-administration-as/index.html">Business Administration AS</a></li><li><a href="programs/accounting/accounting-bs/index.html">Accounting BS</a></li></ul></li><li><a href="programs/business/index.html">Business</a><ul><li><a href="programs/business/business-administration-as/index.html">Business Administration AS</a></li><li><a href="programs/business/business-administration-bs/index.html">Business Administration BS</a></li><li><a href="programs/business/management-bs/index.html">Management BS</a></li><li><a href="programs/graduate-degrees/business-administration-mba/index.html">Business Administration MBA</a></li><li><a href="programs/graduate-degrees/business-management-mba/index.html">Business Management MBA</a></li></ul></li><li><a href="programs/computerscience-it/index.html">Computer Science and IT</a><ul><li><a href="programs/security-studies/networking-and-cybersecurity-aas/index.html">Networking and Cybersecurity AAS</a></li><li><a href="programs/computerscience-it/computer-science-as/index.html">Computer Science AS</a></li><li><a href="programs/data-science/informatics-bs/index.html">Informatics BS</a></li><li><a href="programs/computerscience-it/cybersecurity-bs/index.html">Cybersecurity BS</a></li><li><a href="programs/graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li><li><a href="programs/criminal-justice/index.html">Criminal Justice</a><ul><li><a href="programs/criminal-justice/crime-and-intelligence-analysis-aas/index.html">CJ: Crime and Intelligence Analysis AAS</a></li><li><a href="programs/criminal-justice/crime-analysis-bs/index.html">Crime Analysis BS</a></li></ul></li><li><a href="programs/data-science/index.html">Data and Information Science</a><ul><li><a href="programs/data-science/mathematics-as/index.html">Mathematics AS</a></li><li><a href="programs/data-science/informatics-bs/index.html">Informatics BS</a></li><li><a href="programs/graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li><li><a href="programs/education/index.html">Education</a><ul><li><a href="programs/education/teaching-assistant-certificate/index.html">Teaching Assistant Certificate</a></li></ul></li><li><a href="programs/engineering/index.html">Engineering</a><ul><li><a href="programs/engineering/engineering-science-as/index.html">Engineering Science AS</a></li><li><a href="programs/data-science/mathematics-as/index.html">Mathematics AS</a></li><li><a href="programs/engineering/electrical-engineering-bs/index.html">Electrical Engineering BS</a></li><li><a href="programs/graduate-degrees/industrial-engineering-meng/index.html">Industrial Engineering MEng</a></li></ul></li><li><a href="programs/general-studies/index.html">General Studies</a><ul><li><a href="programs/general-studies/individual-studies-as/index.html">Individual Studies AS</a></li></ul></li><li><a href="programs/healthcare/index.html">Healthcare</a><ul><li><a href="programs/healthcare/health-care-studies-as/index.html">Health Care Studies AS</a></li><li><a href="programs/healthcare/healthcare-management-bs/index.html">Healthcare Management BS</a></li><li><a href="programs/healthcare/healthcare-management-btech/index.html">Healthcare Management BTech</a></li><li><a href="programs/graduate-degrees/healthcare-leadership-mba/index.html">Healthcare Leadership MBA</a></li><li><a href="programs/graduate-degrees/health-services-administration-mba/index.html">Health Services Administration MBA</a></li></ul></li><li><a href="programs/psychology/index.html">Psychology</a><ul><li><a href="programs/psychology/psychology-as/index.html">Psychology AS</a></li><li><a href="programs/psychology/psychology-ba/index.html">Psychology BA</a></li></ul></li><li><a href="programs/security-studies/index.html">Security Studies</a><ul><li><a href="programs/security-studies/networking-and-cybersecurity-aas/index.html">Networking and Cybersecurity AAS</a></li>
 				<li><a href="programs/security-studies/cybersecurity-and-digital-forensics-as/index.html">Cybersecurity and Digital Forensics AS</a></li><li><a href="programs/security-studies/homeland-security-as/index.html">Homeland Security AS</a></li><li><a href="programs/data-science/informatics-bs/index.html">Informatics BS</a></li><li><a href="programs/security-studies/security-studies-bs/index.html">Security Studies BS</a></li><li><a href="programs/graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li><li><a href="programs/graduate-degrees/index.html">Graduate Studies</a><ul><li><a href="programs/graduate-degrees/business-administration-mba/index.html">Business Administration MBA</a></li><li><a href="programs/graduate-degrees/business-management-mba/index.html">Business Management MBA</a></li><li><a href="programs/graduate-degrees/healthcare-leadership-mba/index.html">Healthcare Leadership MBA</a></li><li><a href="programs/graduate-degrees/health-services-administration-mba/index.html">Health Services Administration MBA</a></li><li><a href="programs/graduate-degrees/industrial-engineering-meng/index.html">Industrial Engineering MEng</a></li><li><a href="programs/graduate-degrees/information-science-ms/index.html">Information Science MS</a></li></ul></li></ul></li></ul></div-->
@@ -255,13 +259,8 @@
 </style><div class="tri full" id="formAbout">
     <div class="tri no__overlap">
         <div class="ang le-full md-10 about__desc hide-sm" style="background-color: #54B948;">
-            <h3>Why SUNY Online?</h3>
-<p>Learn your way. No SAT. No application fee.</p>
-<p>Whether you want to complete your degree, pursue graduate school, or start a new career, SUNY Online is designed to help you succeed on your schedule.</p>
-<p>Get a Success Coach to help&nbsp;you from the moment of&nbsp;application&nbsp;through graduation from a SUNY Online program.</p>
-<p>Online degrees from SUNY are accredited&nbsp;and respected around&nbsp;the world. Degree programs and online certifications provide students with affordable tuition options.</p>
-<p>Learn from faculty experts.</p>
-<p>Request information and meet <strong>YOUR</strong> SUNY Online Coach.</p>
+			<h3><strong>About <%= pathway.title %></strong></h3>
+			<p><%=raw pathway.description %></p>
           <a class="cta__blue scroll_me" id="about__desc" href="#single__program_list" data-title="SUNY Online" alt="scroll to form"> <i class="fas fa-chevron-down"></i></a>
         </div>
         <div class="ang le-full md-14 about__form">
@@ -270,13 +269,8 @@
             <div id="form_b2ea9f6c-cd4a-491c-869d-4fb0c6a586a9">Loading...</div><script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src = 'https://engage.suny.edu/register/?id=b2ea9f6c-cd4a-491c-869d-4fb0c6a586a9&output=embed&div=form_b2ea9f6c-cd4a-491c-869d-4fb0c6a586a9' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</script>
         </div>
         <div class="ang le-full md-10 about__desc hide-md hide-lg">
-            <h3>Why SUNY Online?</h3>
-<p>Learn your way. No SAT. No application fee.</p>
-<p>Whether you want to complete your degree, pursue graduate school, or start a new career, SUNY Online is designed to help you succeed on your schedule.</p>
-<p>Get a Success Coach to help&nbsp;you from the moment of&nbsp;application&nbsp;through graduation from a SUNY Online program.</p>
-<p>Online degrees from SUNY are accredited&nbsp;and respected around&nbsp;the world. Degree programs and online certifications provide students with affordable tuition options.</p>
-<p>Learn from faculty experts.</p>
-<p>Request information and meet <strong>YOUR</strong> SUNY Online Coach.</p>
+			<h3><strong>About <%= pathway.title %></strong></h3>
+			<p><%=raw pathway.description %></p>
             <a alt="contact us" href="" class="cta__blue"> <i class="fas fa-chevron-down"></i></a>
         </div>
     </div>
@@ -522,3 +516,5 @@
 
     </body>
 </html>
+
+<%end%>
