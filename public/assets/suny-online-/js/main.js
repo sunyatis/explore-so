@@ -243,7 +243,8 @@ $(document).ready(function() {
 		var owl = $('.owl-carousel');
 		owl.owlCarousel({
 		    items: 1,
-		    dots: false,
+			/*nav: true,*/
+		    dots: true,
 		    mouseDrag: true,
 		    responsiveClass: true,
 		    responsive: {
@@ -257,6 +258,7 @@ $(document).ready(function() {
 		          items: 5
 		        }
 		    },
+			
 		    onInitialize : function(element){
 		        owl.children().sort(function(){
 		            return Math.round(Math.random()) - 0.5;

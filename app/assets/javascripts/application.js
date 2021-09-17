@@ -20,7 +20,7 @@
 //= require filterrific/filterrific-jquery
 //= require chardinjs
 //= require bootstrap3/bootstrap-multiselect
-
+//= require owl.carousel
 //= require mixitup
 
 	if(performance.navigation.type == 2){
