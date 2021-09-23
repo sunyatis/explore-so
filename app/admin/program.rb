@@ -115,7 +115,7 @@ ActiveAdmin.register Program do
         f.input :meta_desc
       end
       tab 'Program Courses', {class: 'ui-tabs-active'} do
-        f.li "<li><div class='aa_label_level'><h3>List program couses</h3</div></li>".html_safe 
+        f.li "<li><div class='aa_label_level'><h3>List program courses</h3</div></li>".html_safe 
         f.input :prog_courses, as: :froala_editor
       end
       tab 'DaS Information', {class: 'ui-tabs-active'} do
