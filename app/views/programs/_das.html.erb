@@ -19,7 +19,7 @@
 					<button class="rounded-button large green halo" data-program="" data-toggle="modal" data-target="#progModal">Request Information</button>
 					<ul>
 						<li>
-							<a href="<%= @program.apply_now_url %>" class="apply_now" target="_blank">Apply Now!</a> | <a href="<%=@program.prog_appt_link%>" class="apply_now">Make an Appointment</a>
+							<a href="<%= @program.apply_now_url %>" class="apply_now" target="_blank">Apply Now!</a> | <a href="<%=@program.prog_appt_link%>" class="apply_now" target="_blank">Make an Appointment</a>
 						</li>
 						
 					</ul>
@@ -73,7 +73,7 @@
 			<header role="program-navigation-banner" id="program-navigation-banner" aria-label="Program Details Navigation Banner">
 				<nav class="row" aria-label="Program Details Navigation Bar"><ul class="hide-mobile" id="program-navigation-list">
 					<li class="selected">Program Overview</li>
-					<li><a href="#online">Courses</a></li>
+					<li><a href="#courses">Courses</a></li>
 					<li><a href="#online">Online Learning</a></li>
 					<li><a href="#apply">How To Apply</a></li>
 				</ul>
@@ -162,6 +162,8 @@
 				</div>
 			</aside>
 		</div>
+		
+		<a name="courses"></a>
 		<hr>
 				<div class="dasprogram-overview">
 					<div class="row">
