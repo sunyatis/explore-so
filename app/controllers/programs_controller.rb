@@ -104,8 +104,6 @@ def index
     @ed_levels = Program.uniq.pluck(:level_expanded).sort
   end 
   
-
-  
   def update
     program = Program.friendly.find(params[:id])
       if program.update(program_params)
