@@ -16,7 +16,7 @@
 				</figure>
 				<div class="actions">
 					
-					<button class="rounded-button large green halo" data-program="" data-toggle="modal" data-target="#progModal" id="top_rfi_1">Request Information</button>
+					<button class="rounded-button large green halo" data-program="" data-toggle="modal" data-target="#progModal" id="top_rfi_1" type="button">Request Information</button>
 					<ul>
 						<li>
 							<a href="<%= @program.apply_now_url %>" class="apply_now" target="_blank">Apply Now!</a> | <a href="<%=@program.prog_appt_link%>" class="apply_now" target="_blank">Make an Appointment</a>
@@ -325,7 +325,7 @@
 	<section class="related-programs"></section>
 	<section class="rfi-banner">
 		<h4>Interested in learning more about this program?</h4>
-		<button id="bottom_rfi" class="rounded-button large white blue-halo" data-program="<%=@program.ranku_id%>" data-toggle="modal" data-target="#progModal">Request More Information</button>
+		<button id="bottom_rfi" class="rounded-button large white blue-halo" data-program="<%=@program.ranku_id%>" data-toggle="modal" data-target="#progModal" type="button">Request More Information</button>
 	</section>
 </section>
 		</main>
