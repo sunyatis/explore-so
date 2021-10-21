@@ -23945,14 +23945,7 @@ function myFunction() {
  
 	});
 	
-	$('#owl-demo3').owlCarousel({
-	    loop: true,
-	    margin: 30,
-	    dots: true,
-	    nav: true,
-	    items: 5,
-	})
-	
+
 	
 	$(function(){
 	  $('#Container').on('mixLoad', function() {
