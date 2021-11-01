@@ -318,3 +318,11 @@ Disallow: /courses?filterrific[sorted_by]=title_desc&amp;page=6
 Disallow: /courses?filterrific[sorted_by]=title_desc&amp;page=7
 Disallow: /courses?filterrific[sorted_by]=title_desc&amp;page=8
 Disallow: /courses?filterrific[sorted_by]=title_desc&amp;page=9
+Disallow: /programs?filterrific[with_subject_area]=science--technology 
+Disallow: /programs?filterrific[with_school_id]=54 
+Disallow: /programs?filterrific[with_school_id]=10 
+Disallow: /programs?filterrific[with_school_id]=41 
+Disallow: /programs?filterrific[with_subject_area]=social-sciences 
+Disallow: /programs?filterrific[with_school_id]=49 
+Disallow: /programs?filterrific[with_school_id]=8 
+Disallow: /programs?filterrific[with_school_id]=52
