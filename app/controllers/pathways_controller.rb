@@ -8,7 +8,7 @@ class PathwaysController < ApplicationController
 
 def accounting 
   @pathways = Pathway.where(:landing_page => 'accounting').uniq
-  render 'accounting', layout: false
+  render 'accounting'#, layout: false
   #@programs = Program.where(:open_suny => 'Open SUNY').uniq
 end
 
