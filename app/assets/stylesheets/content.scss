@@ -345,11 +345,11 @@ body>footer{display:flex;flex:1;flex-flow:column nowrap;padding:2.5rem 0;width:1
 
 @media screen and (max-width:820px){.large-testimonial figure{flex-flow:column nowrap}}
 
-.large-testimonial figure img{align-self:center;flex:1 0 auto;height:7.8125rem;width:7.8125rem;border-radius:100px;border:5px solid #ffe512;margin:0 3.125rem 0 0}
+.large-testimonial figure img{align-self:center;flex:1 0 auto;height:7.8125rem;width:7.8125rem;border-radius:100px;border:5px solid #D44572;margin:0 3.125rem 0 0}
 
 @media screen and (max-width:820px){.large-testimonial figure img{margin:0 0 3.125rem 0}}
 
-.large-testimonial figure figcaption{padding:0 0 0 1.25rem;border-left:5px solid #ffe512}
+.large-testimonial figure figcaption{padding:0 0 0 1.25rem;border-left:5px solid #D44572}
 
 @media screen and (max-width:820px){.large-testimonial figure figcaption{padding:1.25rem 0 0 0;border-left:0;border-top:5px solid #ffe512}}
 
@@ -413,6 +413,16 @@ body>footer{display:flex;flex:1;flex-flow:column nowrap;padding:2.5rem 0;width:1
   text-align: left;
 }
 #owl-demo2 .item{
+  display: block;
+  /*padding: 30px 0px;*/
+  margin: 5px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: left;
+}
+#owl-demo3 .item{
   display: block;
   /*padding: 30px 0px;*/
   margin: 5px;
@@ -573,7 +583,7 @@ button + label{
 	padding-bottom:31px;
 }
 button.active {
-   border-bottom: 5px solid #ffe512;
+   border-bottom: 5px solid #D44572;
 }
 #field-grid-list {
     margin-left: 19px;

@@ -43,6 +43,10 @@ html, button, input, select, textarea {
     font-family: "proxima-nova",sans-serif !important;
 }
 
+body {
+    font: 'Gotham Book', Gotham-Book, Arial, sans-serif !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "proxima-nova",sans-serif !important;
     margin: 0;
@@ -633,6 +637,18 @@ nav.navbar .right .desktopNav ul li a:hover{
     color: #fff !important;
 	border-radius: 3px;
 }
+.rounded-button.dkblue {
+    background-color: #02235C;
+    border: 1px solid #02235C;
+    color: #fff !important;
+	border-radius: 3px;
+}
+.rounded-button.pink {
+    background-color: #D44572;
+    border: 1px solid #D44572;
+    color: #fff !important;
+	border-radius: 3px;
+}
 .rounded-button.blue {
     background-color: #004c93;
     border: 1px solid #004c93;
@@ -712,7 +728,7 @@ a {
 }
 .jumbotron {
   color: white;
-  background-image: url("https://explore.suny.edu/assets/suny-online-/images/hero.jpg");
+  background-image: url("/assets/suny-online-/images/SUNY_Online_Header_12_2000x500.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

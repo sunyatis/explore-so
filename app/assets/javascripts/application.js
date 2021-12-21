@@ -141,6 +141,39 @@ function myFunction() {
  
 	});
 	
+	$(document).ready(function() {
+		var owl = $('#owl-demo3');
+		owl.owlCarousel({
+		    items:3,
+		    dots: false,
+		    mouseDrag: true,
+		    responsiveClass: true,
+		    responsive: {
+		        0:{
+		          items: 1
+		        },
+		        480:{
+		          items: 3
+		        },
+		        769:{
+		          items: 3
+		        }
+		    },
+		    onInitialize : function(element){
+		        owl.children().sort(function(){
+		            return Math.round(Math.random()) - 0.5;
+		        }).each(function(){
+		            $(this).appendTo(owl);
+		        });
+		    },
+			
+			
+		});
+
+		
+ 
+	});
+	
 
 	
 	$(function(){

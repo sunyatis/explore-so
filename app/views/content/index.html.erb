@@ -16,7 +16,7 @@
 				   <option value="filterrific[with_prog_level]=doctorate">Doctorate</option>
 			   </select>
 			   <input type="text" id="s" placeholder="What do you want to learn?" aria-label="Search SUNY Online Degree Programs">
-			   <input id="searchButton" type="button" onclick="myFunction()" class="home rounded-button green rounded-button small" value="Search">
+			   <input id="searchButton" type="button" onclick="myFunction()" class="home rounded-button pink rounded-button small" value="Search">
 		   </form>
 		  </section>
 
@@ -25,14 +25,23 @@
 
 <section id="home">
 <div class="row carousel">
-
-<h2 class="owl">Choose from among the 64 institutions of The State University of New York</h2>
 	
-	<div id="owl-demo" class="owl-carousel owl-theme">
+	<div id="owl-demo3" class="owl-carousel owl-theme">
 		
-		<% @schools.each do |school| %>
-		 <div class="item"><%= link_to image_tag(school.image.url(:large), :align=> "center" ), "/programs?filterrific[with_school_id]=#{school.id}"  %></div>
-<%end%>
+	
+<div class="item"><%= link_to image_tag("/assets/pathways/Accounting@2x.png" , :align=> "center" ), "/pathways/accounting"  %></div>
+<div class="item"><%= link_to image_tag("/assets/pathways/Business@2x.png", :align=> "center" ), "/pathways/business"  %></div>
+<div class="item"><%= link_to image_tag("/assets/pathways/CompSciIT@2x.png", :align=> "center" ), "/pathways/computerscience_it"  %></div>
+<div class="item"><%= link_to image_tag("/assets/pathways/CriminalJustice@2x.png", :align=> "center"), "/pathways/computerscience_it"  %></div>
+<div class="item"><%= link_to image_tag("/assets/pathways/Education@2x.png", :align=> "center"), "/pathways/education"  %></div>
+<div class="item"><%= link_to image_tag("/assets/pathways/Engineering@2x.png", :align=> "center" ), "/pathways/engineering"  %></div>
+<div class="item"><%= link_to image_tag("/assets/pathways/GenStudies@2x.png", :align=> "center" ), "/pathways/engineering"  %></div>
+<div class="item"><%= link_to image_tag("/assets/pathways/GradDegrees@2x.png", :align=> "center" ), "/pathways/graduate_degrees"  %></div>
+<div class="item"><%= link_to image_tag("/assets/pathways/Healthcare@2x.png", :align=> "center" ), "/pathways/graduate_degrees"  %></div>
+<div class="item"><%= link_to image_tag("/assets/pathways/Psychology@2x.png", :align=> "center" ), "/pathways/graduate_degrees"  %></div>
+<div class="item"><%= link_to image_tag("/assets/pathways/SecurityStudies@2x.png", :align=> "center" ), "/pathways/graduate_degrees"  %></div>
+		
+
 	</div>
 </div>
 <div class="field-grid">
@@ -63,20 +72,20 @@
 <ul id="Container" class="grid">
   <li class="mix level master associate bachelor advanced-certificate" data-myorder="1"><a title="Explore more SUNY Online Programs in Arts &amp; Humanities" data-field="arts" tabindex="0" href="/programs?filterrific[with_subject_area]=arts">
 			<figure>
-				<img src="/assets/fieldgrid/54b8256269549982c41c6f5c.svg" alt="Arts &amp; Humanities Degrees">
+				<img src="/assets/fieldgrid/Arts_Humanities@2x.png" alt="Arts &amp; Humanities Degrees">
 				<figcaption>Arts &amp; Humanities</figcaption>
 			</figure>
 		</a></li>
   <li class="mix level bachelor associate master advanced-certificate certificate" data-myorder="2"><a title="Explore more SUNY Online Programs in Behavioral Science" data-field="behavioral_science" tabindex="0" href="/programs?filterrific[with_subject_area]=behavioral_science">
 			<figure>
-				<img src="/assets/fieldgrid/53d9ad137a3adc03002d1108.svg" alt="Behavioral Science Degrees">
+				<img src="/assets/fieldgrid/Behavioral_Science@2x.png" alt="Behavioral Science Degrees">
 				<figcaption>Behavioral Science</figcaption>
 			</figure>
 		</a></li>
 		<li class="mix level bachelor associate master advanced-certificate certificate" style="display: inline-block;" data-bound="">
 			<a title="Explore more SUNY Online Programs in Business" data-field="business" tabindex="0" href="/programs?filterrific[with_subject_area]=business">
 				<figure>
-					<img src="/assets/fieldgrid/53d9ad137a3adc03002d1106.svg" alt="Business Degrees">
+					<img src="/assets/fieldgrid/Business@2x.png" alt="Business Degrees">
 					<figcaption>Business</figcaption>
 				</figure>
 			</a>
@@ -84,7 +93,7 @@
 		<li class="mix level doctorate associate master advanced-certificate bachelor" style="display: inline-block;" data-bound="">
 			<a title="Explore more SUNY Online Programs in Computer Science" data-field="computer-science" tabindex="0" href="/programs?filterrific[with_subject_area]=computer-science">
 				<figure>
-					<img src="/assets/fieldgrid/53d9ad137a3adc03002d1104.svg" alt="Computer Science Degrees">
+					<img src="/assets/fieldgrid/Computer_Science@2x.png" alt="Computer Science Degrees">
 					<figcaption>Computer Science</figcaption>
 				</figure>
 			</a>
@@ -92,32 +101,32 @@
 		<li class="mix level certificate associate advanced-certificate bachelor" style="display: inline-block;" data-bound="">
 			<a title="Explore more SUNY Online Programs in Criminal Justice &amp; Law" data-field="criminal-justice-law" tabindex="0" href="/programs?filterrific[with_subject_area]=criminal-justice-law">
 				<figure>
-					<img src="/assets/fieldgrid/53d9ad137a3adc03002d110a.svg" alt="Criminal Justice &amp; Law Degrees">
+					<img src="/assets/fieldgrid/Justice_Law@2x.png" alt="Criminal Justice &amp; Law Degrees">
 					<figcaption>Criminal Justice &amp; Law</figcaption>
 				</figure>
 			</a>
 		</li>
-		<li class="mix level doctorate certificate associate master bachelor advanced-certificate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Education" data-field="education" tabindex="0" href="/programs?filterrific[with_subject_area]=education"><figure><img src="/assets/fieldgrid/53d9ad137a3adc03002d1107.svg" alt="Education Degrees"><figcaption>Education</figcaption></figure></a></li>
+		<li class="mix level doctorate certificate associate master bachelor advanced-certificate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Education" data-field="education" tabindex="0" href="/programs?filterrific[with_subject_area]=education"><figure><img src="/assets/fieldgrid/Education@2x.png" alt="Education Degrees"><figcaption>Education</figcaption></figure></a></li>
 		
-		<li class="mix level advanced-certificate certificate associate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in General Studies" data-field="bachelor-of-general-studies" tabindex="0" href="/programs?filterrific[with_subject_area]=bachelor-of-general-studies"><figure><img src="/assets/fieldgrid/55020b8cc78f7cd2b39725c7.svg" alt="General Studies Degrees"><figcaption>General Studies</figcaption></figure></a></li>
+		<li class="mix level advanced-certificate certificate associate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in General Studies" data-field="bachelor-of-general-studies" tabindex="0" href="/programs?filterrific[with_subject_area]=bachelor-of-general-studies"><figure><img src="/assets/fieldgrid/General_Studies@2x.png" alt="General Studies Degrees"><figcaption>General Studies</figcaption></figure></a></li>
 		
-		<li class="mix level doctorate associate master bachelor advanced-certificate certificate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Health Sciences" data-field="health-sciences" tabindex="0" href="/programs?filterrific[with_subject_area]=health-sciences"><figure><img src="/assets/fieldgrid/55020b8cc78f7cd2b39725cb.svg" alt="Health Sciences Degrees"><figcaption>Health Sciences</figcaption></figure></a></li>
+		<li class="mix level doctorate associate master bachelor advanced-certificate certificate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Health Sciences" data-field="health-sciences" tabindex="0" href="/programs?filterrific[with_subject_area]=health-sciences"><figure><img src="/assets/fieldgrid/Health_Sciences@2x.png" alt="Health Sciences Degrees"><figcaption>Health Sciences</figcaption></figure></a></li>
 		
-		<li class="mix level doctorate certificate associate master bachelor advanced-certificate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in IT &amp; Technology" data-field="information_technology" tabindex="0" href="/programs?filterrific[with_subject_area]=information_technology"><figure><img src="/assets/fieldgrid/53d9ad137a3adc03002d1102.svg" alt="IT &amp; Technology Degrees"><figcaption>IT &amp; Technology</figcaption></figure></a></li>
+		<li class="mix level doctorate certificate associate master bachelor advanced-certificate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in IT &amp; Technology" data-field="information_technology" tabindex="0" href="/programs?filterrific[with_subject_area]=information_technology"><figure><img src="/assets/fieldgrid/IT_Tech@2x.png" alt="IT &amp; Technology Degrees"><figcaption>IT &amp; Technology</figcaption></figure></a></li>
 		
-		<li class="mix level bachelor advanced-certificate master associate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Journalism &amp; Communications" data-field="journalism--communications" tabindex="0" href="/programs?filterrific[with_subject_area]=journalism--communications"><figure><img src="/assets/fieldgrid/55020b8cc78f7cd2b39725cc.svg" alt="Journalism &amp; Communications Degrees"><figcaption>Journalism &amp; Communications</figcaption></figure></a></li>
+		<li class="mix level bachelor advanced-certificate master associate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Journalism &amp; Communications" data-field="journalism--communications" tabindex="0" href="/programs?filterrific[with_subject_area]=journalism--communications"><figure><img src="assets/fieldgrid/Journalism_Comm@2x.png" alt="Journalism &amp; Communications Degrees"><figcaption>Journalism &amp; Communications</figcaption></figure></a></li>
 		
-		<li class="mix level certificate bachelor master associate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Liberal Arts" data-field="arts.liberal" tabindex="0" href="/programs?filterrific[with_subject_area]=arts.liberal"><figure><img src="/assets/fieldgrid/53d9ad137a3adc03002d1101.svg" alt="Liberal Arts Degrees"><figcaption>Liberal Arts</figcaption></figure></a></li>
+		<li class="mix level certificate bachelor master associate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Liberal Arts" data-field="arts.liberal" tabindex="0" href="/programs?filterrific[with_subject_area]=arts.liberal"><figure><img src="/assets/fieldgrid/Liberal_Arts@2x.png" alt="Liberal Arts Degrees"><figcaption>Liberal Arts</figcaption></figure></a></li>
 		
 		<li class="mix level certificate associate master bachelor advanced-certificate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Public Administration &amp; Community Service" data-field="public-admin--community-service" tabindex="0" href="/programs?filterrific[with_subject_area]=public-admin--community-service">
 				<figure>
-					<img src="/assets/fieldgrid/55020b8cc78f7cd2b39725ce.svg" alt="Public Administration &amp; Community Service Degrees"><figcaption>Public Administration &amp; Community Service</figcaption></figure></a></li>
+					<img src="/assets/fieldgrid/Public_Admin@2x.png" alt="Public Administration &amp; Community Service Degrees"><figcaption>Public Administration &amp; Community Service</figcaption></figure></a></li>
 					
-					<li class="mix level doctorate associate master advanced-certificate bachelor" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Science &amp; Technology" data-field="science--technology" tabindex="0" href="/programs?filterrific[with_subject_area]=science--technology"><figure><img src="/assets/fieldgrid/57a371f09cdfdde903f52645.svg" alt="Science &amp; Technology Degrees"><figcaption>Science &amp; Technology</figcaption></figure></a></li>
+					<li class="mix level doctorate associate master advanced-certificate bachelor" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Science &amp; Technology" data-field="science--technology" tabindex="0" href="/programs?filterrific[with_subject_area]=science--technology"><figure><img src="/assets/fieldgrid/Science@2x.png" alt="Science &amp; Technology Degrees"><figcaption>Science &amp; Technology</figcaption></figure></a></li>
 					
-					<li class="mix level certificate bachelor advanced-certificate associate master" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Social Sciences" data-field="social-sciences" tabindex="0" href="/programs?filterrific[with_subject_area]=social-sciences"><figure><img src="/assets/fieldgrid/55020b8cc78f7cd2b39725cf.svg" alt="Social Sciences Degrees"><figcaption>Social Sciences</figcaption></figure></a></li>
+					<li class="mix level certificate bachelor advanced-certificate associate master" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Social Sciences" data-field="social-sciences" tabindex="0" href="/programs?filterrific[with_subject_area]=social-sciences"><figure><img src="/assets/fieldgrid/Social_Studies@2x.png" alt="Social Sciences Degrees"><figcaption>Social Sciences</figcaption></figure></a></li>
 					
-					<li class="mix level bachelor certificate associate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Travel &amp; Tourism" data-field="travel--tourism" tabindex="0" href="/programs?filterrific[with_subject_area]=travel--tourism"><figure><img src="/assets/fieldgrid/57a371f09cdfdde903f52644.svg" alt="Travel &amp; Tourism Degrees"><figcaption>Travel &amp; Tourism</figcaption></figure></a></li>
+					<li class="mix level bachelor certificate associate" style="display: inline-block;" data-bound=""><a title="Explore more SUNY Online Programs in Travel &amp; Tourism" data-field="travel--tourism" tabindex="0" href="/programs?filterrific[with_subject_area]=travel--tourism"><figure><img src="/assets/fieldgrid/Travel@2x.png" alt="Travel &amp; Tourism Degrees"><figcaption>Travel &amp; Tourism</figcaption></figure></a></li>
 		
 
   <div class="gap"></div>
@@ -125,7 +134,17 @@
 </ul>		
 </div>
 </div>		
+<div class="row carousel">
 
+<h2 class="owl">Choose from among the 64 institutions of The State University of New York</h2>
+	
+	<div id="owl-demo" class="owl-carousel owl-theme">
+		
+		<% @schools.each do |school| %>
+		 <div class="item"><%= link_to image_tag(school.image.url(:large), :align=> "center" ), "/programs?filterrific[with_school_id]=#{school.id}"  %></div>
+<%end%>
+	</div>
+</div>
 		<section class="info-block row">
 			<h2 class="info-block-h2">Are you a working adult with kids or a tight schedule?</h2>
 			<h3 class="info-block-h3">If so, online learning is perfect for you</h3>
