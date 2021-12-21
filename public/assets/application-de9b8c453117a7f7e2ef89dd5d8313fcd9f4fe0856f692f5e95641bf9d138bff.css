@@ -1985,6 +1985,20 @@ dropdown-toggle {
 #remember_me {
   display: inline !important;
 }
+
+/* line 1391, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+.pathways {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px;
+  color: #ffff;
+}
+
+/* line 1399, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+.pathways h2 {
+  color: #ffffff !important;
+}
 /* ribbon style */
 
 
