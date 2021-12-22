@@ -23949,7 +23949,8 @@ function myFunction() {
 		var owl = $('#owl-demo3');
 		owl.owlCarousel({
 		    items:3,
-		    dots: false,
+		    dots: true,
+			/*nav: true,*/
 		    mouseDrag: true,
 		    responsiveClass: true,
 		    responsive: {
