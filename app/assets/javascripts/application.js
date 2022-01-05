@@ -112,7 +112,7 @@ function myFunction() {
 		var owl = $('#owl-demo2');
 		owl.owlCarousel({
 		    items: 1,
-		    dots: false,
+		    dots: true,
 		    mouseDrag: true,
 		    responsiveClass: true,
 		    responsive: {
