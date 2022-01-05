@@ -237,7 +237,7 @@ body>footer{display:flex;flex:1;flex-flow:column nowrap;padding:2.5rem 0;width:1
 
 
 
-.field-grid{display:flex;flex-flow:column nowrap;padding:1.25rem 0 2.5rem 0}
+.field-grid{display:flex;flex-flow:column nowrap;padding:7.25rem 0 2.5rem 0}
 
 .field-grid nav ul,.field-grid nav ul li,.field-grid .grid,.field-grid .grid li,.field-grid .grid div,.field-grid .grid a,.field-grid .grid figure{display:flex}
 
@@ -370,7 +370,7 @@ body>footer{display:flex;flex:1;flex-flow:column nowrap;padding:2.5rem 0;width:1
 .element-invisible.element-focusable:active,.element-invisible.element-focusable:focus{position:static!important;clip:auto;overflow:visible;height:auto}
 
 .owl-carousel .owl-item img {
-    width: 97% !important;
+    width: 100% !important;
 }
 
 #owl-demo2 img {
@@ -393,6 +393,9 @@ body>footer{display:flex;flex:1;flex-flow:column nowrap;padding:2.5rem 0;width:1
   color: #545454 !important;
   text-align: center !important;
 
+}
+#owl-demo{
+	margin: 1.5625rem 0;
 }
 .owl-carousel.owl-loaded {
     /*margin: 1.5625rem 0;*/
@@ -425,7 +428,7 @@ body>footer{display:flex;flex:1;flex-flow:column nowrap;padding:2.5rem 0;width:1
 #owl-demo3 .item{
   display: block;
   /*padding: 30px 0px;*/
-  margin: 5px;
+  margin: 0px;
   color: #FFF;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
