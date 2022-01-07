@@ -974,7 +974,7 @@ a {
   display: inline-block;
   margin-bottom: 10px;
   color: #ffffff !important;
-  font-size: 1.625rem !important;
+  font-size: 1.825rem !important;
   line-height: 2.375rem;
   text-align: center;
   font-weight: 500;
@@ -1994,11 +1994,16 @@ dropdown-toggle {
   left: 10px;
   padding: 5px;
   color: #ffff;
+  font-size: 1.125rem;
+  margin-right: 80px;
 }
 
-/* line 1400, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1403, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .pathways h2 {
   color: #ffffff !important;
+  font-size: 1.8rem !important;
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
 }
 /* ribbon style */
 
