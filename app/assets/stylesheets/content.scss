@@ -263,7 +263,7 @@ body>footer{display:flex;flex:1;flex-flow:column nowrap;padding:2.5rem 0;width:1
 
 .field-grid .grid li.level figure{display:flex;flex-flow:column nowrap;align-items:center}
 
-.field-grid .grid li.level figure>img,.field-grid .grid li.level figure>div{width:3.125rem;height:3.125rem}
+.field-grid .grid li.level figure>img,.field-grid .grid li.level figure>div{width:4.125rem;height:4.125rem}
 
 .field-grid .grid li.level figcaption,.field-grid .grid li.level h3,.field-grid .grid li.level h4,.field-grid .grid li.level h5{display:flex;flex-wrap:wrap;flex:1 1 auto;padding:0;margin:.3125rem 0 0 0;font-size:.9375rem;font-weight:400;line-height:1.375rem;color:#545454;text-align:center;max-width:100%}
 
@@ -578,8 +578,8 @@ button + label{
     padding: .4375rem 1.25rem .875rem 1.25rem;
     border-bottom-width: 0;
     cursor: pointer;
-    font-size: 1rem;
-    line-height: 1.75rem;
+    font-size: .85rem;
+    line-height: 1.3rem;
     color: #545454;
     transition: border-bottom-width 250ms ease;
 	width: calc( 96% / 7 );
@@ -590,7 +590,7 @@ button.active {
 }
 #field-grid-list {
     margin-left: 19px;
-    height: 75px;
+    height: 68px;
 }
 #level_filter{
 	margin-left: 10px;
