@@ -146,7 +146,8 @@ function myFunction() {
 		owl.owlCarousel({
 		    items:3,
 		    dots: true,
-			/*nav: true,*/
+			nav: true,
+			navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
 		    mouseDrag: true,
 		    responsiveClass: true,
 		    responsive: {

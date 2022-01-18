@@ -332,7 +332,7 @@ body>footer{display:flex;flex:1;flex-flow:column nowrap;padding:2.5rem 0;width:1
 
 .info-block ul figure{display:flex;flex-flow:column nowrap;align-items:center;margin:0;padding:0}
 
-.info-block ul figure img{flex:1;width:2.5rem;height:2.5rem}
+.info-block ul figure img{flex:1;width:2.8rem;height:2.8rem}
 
 .large-testimonial{padding-top:2.5rem;padding-bottom:2.5rem;background-color:#f5f5f5}
 
@@ -465,6 +465,70 @@ body>footer{display:flex;flex:1;flex-flow:column nowrap;padding:2.5rem 0;width:1
 .owl-nav.disabled{
 	display: none;
 }
+.carousel-wrap {
+    width: 1000px;
+    margin: auto;
+    position: relative;
+  }
+  .owl-carousel .owl-nav{
+    overflow: hidden;
+    height: 0px;
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span, 
+  .owl-theme .owl-dots .owl-dot:hover span {
+      background: #2caae1;
+  }
+
+
+  .owl-carousel .item {
+      text-align: center;
+  }
+  .owl-carousel .nav-btn{
+      height: 47px;
+      position: absolute;
+      width: 26px;
+      cursor: pointer;
+      top: 100px !important;
+  }
+
+  .owl-carousel .owl-prev.disabled,
+  .owl-carousel .owl-next.disabled{
+    pointer-events: none;
+    opacity: 0.2;
+  }
+
+  .owl-carousel .prev-slide{
+      background: url(nav-icon.png) no-repeat scroll 0 0;
+      left: -33px;
+  }
+  .owl-carousel .next-slide{
+      background: url(nav-icon.png) no-repeat scroll -24px 0px;
+      right: -33px;
+  }
+  .owl-carousel .prev-slide:hover{
+     background-position: 0px -53px;
+  }
+  .owl-carousel .next-slide:hover{
+    background-position: -24px -53px;
+  }
+
+  span.img-text {
+    text-decoration: none;
+    outline: none;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    cursor: pointer;
+    width: 100%;
+    font-size: 23px;
+    display: block;
+    text-transform: capitalize;
+  }
+  span.img-text:hover {
+    color: #2caae1;
+  }
 
 *{
   -webkit-box-sizing: border-box;
@@ -608,7 +672,11 @@ padding-bottom:4px !important;
     padding: 0;
     border-left: 0px solid #ffe512;
  }
- 
+ .campuses {
+ 	padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    background-color: #f5f5f5;
+}
  .home.rounded-button.small {
 	width:10%
  }
