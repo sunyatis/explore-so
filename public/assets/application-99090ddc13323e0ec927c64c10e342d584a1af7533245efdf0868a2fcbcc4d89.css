@@ -7916,32 +7916,31 @@ button.active {
 /* line 675, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .campuses {
   padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
   background-color: #f5f5f5;
 }
 
-/* line 680, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 679, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .home.rounded-button.small {
   width: 10%;
 }
 
-/* line 684, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 683, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 blockquote {
   border-left: 0px solid #eee !important;
 }
 
-/* line 688, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 687, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 button:focus {
   background-color: #ffffff !important;
   color: #000000 !important;
 }
 
-/* line 693, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 692, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 dl, menu, ol, ul {
   margin: 0;
 }
 
-/* line 696, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 695, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 dl {
   margin-top: 0;
   margin-bottom: 0px !important;
