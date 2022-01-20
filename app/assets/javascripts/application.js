@@ -155,7 +155,7 @@ function myFunction() {
 		          items: 1
 		        },
 		        480:{
-		          items: 3
+		          items: 1
 		        },
 		        769:{
 		          items: 3
