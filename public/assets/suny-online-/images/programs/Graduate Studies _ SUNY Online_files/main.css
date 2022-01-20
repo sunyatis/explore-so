@@ -1023,8 +1023,8 @@ footer h4 {
 }
 
 #hero h1 {
-    font-size:68px;
-    color:white;
+    font-size:70px;
+    color:#99F8D4;
     margin-bottom:10px;
  	margin-top:0;
   	font-family: AauxMedium;
@@ -2228,7 +2228,7 @@ div.form_question {
   font-size: 22px; 
 }
 ul {
-  font-size: 22px; 
+  font-size: .875rem; 
 }
 
 .infobox_section {

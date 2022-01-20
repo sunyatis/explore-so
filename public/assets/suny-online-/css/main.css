@@ -5,49 +5,6 @@
 
 .tri { max-width: 1587px; } /* Change to match website width */
 
-/* Fonts */
-
-.AauxBold {
-  font-family: AauxBold;
-  font-weight: normal;
-  font-style: normal; }
-
-.AauxBoldItalic {
-  font-family: AauxBoldItalic;
-  font-weight: normal;
-  font-style: normal; }
-
-.AauxLight {
-  font-family: AauxLight;
-  font-weight: normal;
-  font-style: normal; }
-
-.AauxLightItalic {
-  font-family: AauxLightItalic;
-  font-weight: normal;
-  font-style: normal; }
-
-.AauxMedium {
-  font-family: AauxMedium;
-  font-weight: normal;
-  font-style: normal; }
-
-.AauxMediumItalic {
-  font-family: AauxMediumItalic;
-  font-weight: normal;
-  font-style: normal; }
-
-.AauxRegular {
-  font-family: AauxRegular;
-  font-weight: normal;
-  font-style: normal; } 
-
-.AauxRegularItalic {
-  font-family: AauxRegularItalic;
-  font-weight: normal;
-  font-style: normal; }
-
-html, body { font-family: AauxRegular; margin:0; padding:0; }
 
  a:link, a:active, a:visited {text-decoration:none;
    /*color:#0089e0;*/ }
@@ -96,7 +53,7 @@ h2 { font-size:55px;  } /*55px*/
 h3 { font-size:40px;  } /*45px*/
 h4 { font-size:35px; }
 
-p { font-size: 28px; /*30px;*/ }
+/*p { font-size: 28px; /*30px;*/ }*/
 
 
 
@@ -113,7 +70,7 @@ p { font-size: 28px; /*30px;*/ }
 
 [class*="cta__"],
 .filter > li > a {
-    border-radius: 8px;
+    border-radius: 3px;
 }
 
 [class*="cta__"],
@@ -122,7 +79,7 @@ p { font-size: 28px; /*30px;*/ }
     padding:0 20px;
     -webkit-transition: 0.3s all;
     transition:0.3s all;
-    color:white;
+    color:white !important;
     border: none;
     display:inline-block;
     min-width: 300px; /*320px;*/
@@ -150,10 +107,10 @@ p { font-size: 28px; /*30px;*/ }
 }
 
 .cta__blue {
-    background-color: #009EE0;
+    background-color: #034d8f;
 }
 .cta__blue_1 {
-    background-color: #009EE0;
+    background-color: #034d8f;
     min-width: 200px;
     text-align: center;
     font-size: 27px;
@@ -252,6 +209,7 @@ p { font-size: 28px; /*30px;*/ }
 .SO_white, .SO_white_grey {
     background:white;
     color:#2E2E2E;
+	padding-top: 84px;
 }
 .SO_white h2 {
     color:#004C93;
@@ -263,7 +221,7 @@ p { font-size: 28px; /*30px;*/ }
 }
 
 .SO_grey {
-    background:#2E2E2E;
+    background:#f5f5f5;
     color:#FFFFFF;
 }
 .SO_grey_lite {
@@ -306,13 +264,13 @@ p { font-size: 28px; /*30px;*/ }
 
 /* Header */
 
-header {
+/*header {
     position:absolute;
     top:0;
     left:0;
     height:calc(108px + 2em);
     padding:1em 0;
-}
+}*/
 
 .navigation__bar {
     list-style-type:none;
@@ -424,115 +382,6 @@ header {
   }
 }
 
-/* Footer */
-
-footer {
-    position:relative;
-    background-color: #2E2E2E; 
-    border-top: 5px solid #009EE0;
-    padding:2em 0 3em 0;
-}
-
-footer h3 a {
-    color: #009EE0;
-    font-size:24px;
-  	transition:0.3s all;
-}
-
-footer h3 a:hover {
-  	color:#FFFFFF;
-}
-
-.mobile_menu__container h4,
-footer h4 {
-    color: #009EE0;
-    font-size:18px;
-    margin-top:0;
-}
-
-.mobile_menu__container {
-  position: fixed;
-    top: -150vh; /*-100vh;*/
-    left: 0;
-    width: 100vw;
-    height: auto;
-    background: #002B54;
-    padding: 2.5em 2.5em 4em 2.5em;
-    border-radius: 0 0 100px 100px;
-    overflow-x: hidden;
-  transition:0.3s all;
-}
-
-@media (orientation: landscape) {
-	.mobile_menu__container {
-    	top: -600px;
-    	border-radius: 0 0 0 0;
-    }
-}
-
-.mobile_menu__container.open {
-  	top:0;
-  left: 0;
-  border-radius: 0 0 12px 12px;
-}
-
-@media (orientation: landscape) {
-	.mobile_menu__container.open {
-    	border-radius: 0 0 0 0;
-    }
-}
-
-.footer__list,
-.social__list {
-    list-style-type: none;
-    padding:0;
-    margin:0;
-}
-
-.footer__list a,
-.social__list a {
-    color:white;
-    -webkit-transition: 0.3s all;
-    transition:0.3s all;
-    font-size:17px;
-}
-
-.social__list a:hover,
-.footer__list a:hover {
-    color:#009EE0;
-}
-
-.footer__list li {
-    margin-bottom: 10px;
-}
-
-.social__list li {
-    display:inline-block;
-    margin-right:1em;
-}
-
-.social__list a {
-    font-size:26px;
-}
-
-#footerArrow{
-    width: 40px;
-    right: 4em;
-    top: -40px;
-    position: absolute;
-    cursor:pointer;
-}
-
-#footerImage{
-    width:200px;
-}
-
-.copyright {
-    font-size:16px;
-    color:white;
-    display:block;
-    margin-top:1em;
-}
 
 /* SECTIONS - CSS for each Content Type */
 
@@ -1032,7 +881,7 @@ footer h4 {
 
 #hero {
     height:77vh;  /*100vh*/
-    padding-top:calc(6em + 150px);
+    padding-top:calc(6em + -10px);
     padding-bottom:6em;
     background-size:cover;
     background-position:bottom left;
@@ -1067,11 +916,24 @@ footer h4 {
 }
 
 #hero h1 {
-    font-size:50px;
-    color:white;
-    margin-bottom:10px;
- 	  margin-top:0;
-  	font-family: AauxMedium;
+	display: inline-block;
+	margin-bottom: 10px;
+	color: #99F8D4 !important;
+	font-size: 5.825rem;
+	line-height: 6.375rem;
+	text-align: center;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+}
+#hero h2 {
+	display: inline-block;
+	margin-bottom: 10px;
+	color: #ffffff !important;
+	font-size: 1.825rem;
+	line-height: 2.575rem !important;
+	text-align: center;
+	font-weight: 500;
+	letter-spacing: 0.1em;
 }
 
 #hero p {
@@ -1121,9 +983,12 @@ footer h4 {
   }
   
   #hero h1 { 
-    font-size:40px;
+    font-size:5.825rem;
     white-space: inherit;
     float: left;
+  }
+  #hero h2 {
+	  font-size:1.825rem;
   }
   
   #hero p { 
@@ -1192,8 +1057,11 @@ footer h4 {
   }
   
   #hero h1 { 
-    font-size:40px;
+    font-size:4.0rem;
     white-space: unset; 
+  }
+  #hero h2 { 
+    font-size:1.0rem; 
   }
   
   #hero p { 
@@ -1260,7 +1128,7 @@ footer h4 {
     height:280px;
     width:280px;
     border-radius:50%;
-    border:8px solid #009EE0;
+    border:8px solid #00DDFF;
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
@@ -1278,8 +1146,9 @@ footer h4 {
     position:absolute;
     bottom:0;
     left:0;
-    background-image:url('/assets/suny-online-/images/testimonial.jpg');
+    /*background-image:url('/assets/suny-online-/images/testimonial.jpg');*/
     background-size:cover;
+	background-color:#f5f5f5;
     background-position:bottom left;
     background-repeat:no-repeat;
     z-index:0;
@@ -1295,10 +1164,18 @@ footer h4 {
 }
 
 .testimonial__content p {
-    font-size:30px;
+    font-size:31px;
     max-width:1000px;
     margin:0 auto;
+	color:#02235C;
+	font-weight: 300;
 } 
+.student-quote{
+    padding-top:17px;
+}
+.name{
+	padding-top:28px;
+}
 
 @media screen and (min-width:48em) and (max-width:63.938em) { 
 	.testimonial__photo {
@@ -1368,7 +1245,7 @@ footer h4 {
   }
   
   .testimonial__background {
-   	background: #2E2E2E;
+   	background: #f5f5f5;
     height:100%;
   }
   	
@@ -1380,6 +1257,8 @@ footer h4 {
 .about__form h3,
 .SO__general_form h3{
   font-size: 42px; /*45px*/
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
 }
 
 .about__desc h3{
@@ -1432,7 +1311,7 @@ footer h4 {
   box-sizing: border-box;
   border: 1px solid #edeff6;
   background-color: #edeff6;
-  border-radius: 8px;
+  border-radius: 3px;
   font-size: 20px; /*22px;*/
 }
 
@@ -1446,7 +1325,7 @@ footer h4 {
   box-sizing: border-box;
   border: 1px solid #edeff6;
   background-color: #edeff6;
-  border-radius: 8px;
+  border-radius: 3px;
   font-size:20px;
 }
 
@@ -1526,7 +1405,7 @@ footer h4 {
 .SO__general_form .action button,
 .about__form .action button{
   text-transform:uppercase;
-  border-radius: 8px;
+  border-radius: 3px;
   padding: 0 20px;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
@@ -1536,7 +1415,7 @@ footer h4 {
   display: inline-block;
   min-width: 300px; /*320px;*/
   text-align: center;
-  background-color: #009EE0;
+  background-color:  #034d8f;
   cursor:pointer;
   margin:1em auto;
   height:75px;
@@ -2284,9 +2163,9 @@ div.form_question {
 .program_description p {
   font-size: 22px; 
 }
-ul {
+/*ul {
   font-size: 22px; 
-}
+}*/
 
 .infobox_section {
   position:relative;
@@ -2986,12 +2865,25 @@ body[data-page="SUNY Online"] #formAbout .about__form,
 }
 
 
+.best{
+	font-size: 1.5rem;
+	color: #034d8f;
+}
 
 
+.best em{
+	font-size: 1.2rem;
+	color: #034d8f;
+}
 
-
-
-
+.achievements{
+	padding-top:30px;
+	padding-left:30px;
+	padding-right:30px;
+	font-size: 23px;
+	font-weight: 300;
+	margin-bottom:30px;
+}
 
 
 

@@ -976,7 +976,7 @@ margin-top: 34px;
     margin: auto;
 }
 
-body>footer {
+footer {
     display: flex;
     flex: 1;
     flex-flow: column nowrap;
@@ -988,10 +988,10 @@ body>footer {
     line-height: 1.25rem;
     color: #c5c5c5;
 }
-body>footer .navigation {
+footer .navigation {
     display: flex;
 }
-body>footer .navigation ul {
+footer .navigation ul {
     display: flex;
     flex-flow: column wrap;
     list-style-type: none;
@@ -1002,12 +1002,12 @@ body>footer .navigation ul {
     margin: 0;
     order: 1;
 }
-body>footer .navigation ul li {
+footer .navigation ul li {
     padding: 0;
     margin: 0 0 .3125rem 0;
     line-height: 1.25rem;
 }
-body>footer .navigation ul li a {
+footer .navigation ul li a {
     font-size: .875rem;
     font-weight: 300;
     line-height: 1.25rem;
@@ -1015,7 +1015,7 @@ body>footer .navigation ul li a {
     text-decoration: none;
     trasition: color 200ms ease;
 }
-body>footer .navigation figure {
+footer .navigation figure {
     display: flex;
     position: relative;
     flex-flow: row nowrap;
@@ -1029,36 +1029,36 @@ figure {
     margin: 0;
 }
 
-body>footer{display:flex;flex:1;flex-flow:column nowrap;padding:2.5rem 0;width:100%;background-color:#444645;font-size:.875rem;font-weight:300;line-height:1.25rem;color:#c5c5c5}body>footer a.twitter-timeline{color:#fff important;text-indent:-5000px}
+footer{display:flex;flex:1;flex-flow:column nowrap;padding:2.5rem 0;width:100%;background-color:#444645;font-size:.875rem;font-weight:300;line-height:1.25rem;color:#c5c5c5}footer a.twitter-timeline{color:#fff important;text-indent:-5000px}
 
-body>footer .navigation{display:flex}@media screen and (max-width:820px){body>footer .navigation{flex-flow:column nowrap;width:100%}}
-
-
-@media screen and (max-width:820px){body>footer .navigation ul{flex-flow:column nowrap;width:100%;flex-basis:auto;margin-bottom:2.5rem;text-align:center;height:auto;align-self:center;order:1}}
-
-body>footer .navigation ul li{padding:0;margin:0 0 .3125rem 0;line-height:1.25rem}@media screen and (max-width:820px){body>footer .navigation ul li{line-height:1.75rem}}body>footer .navigation ul li a{font-size:.875rem;font-weight:300;line-height:1.25rem;color:#c5c5c5;text-decoration:none;trasition:color 200ms ease}body>footer .navigation ul li a:hover{color:#58adeb}
-
-@media screen and (max-width:820px){body>footer .navigation figure{display:inline-block;flex-flow:none;flex-basis:none;width:100%;margin:0;transform:none}}
-
-body>footer .navigation figure img{width:9.5625rem;height:4.6875rem;margin-right:.9375rem}@media screen and (max-width:820px){body>footer .navigation figure img{display:block;margin:0 auto;margin-bottom:.9375rem}}
+footer .navigation{display:flex}@media screen and (max-width:820px){footer .navigation{flex-flow:column nowrap;width:100%}}
 
 
+@media screen and (max-width:820px){footer .navigation ul{flex-flow:column nowrap;width:100%;flex-basis:auto;margin-bottom:2.5rem;text-align:center;height:auto;align-self:center;order:1}}
 
-body>footer aside,body>footer .social-media{display:flex;flex-flow:column nowrap;flex-basis:15.0625rem;height:15.0625rem;width:18.75rem;order:2}@media screen and (max-width:820px){body>footer aside,body>footer .social-media{align-self:center;margin-bottom:2.5rem}}
+footer .navigation ul li{padding:0;margin:0 0 .3125rem 0;line-height:1.25rem}@media screen and (max-width:820px){footer .navigation ul li{line-height:1.75rem}}footer .navigation ul li a{font-size:.875rem;font-weight:300;line-height:1.25rem;color:#c5c5c5;text-decoration:none;trasition:color 200ms ease}footer .navigation ul li a:hover{color:#58adeb}
 
-body>footer aside .twitter-feed,body>footer .social-media .twitter-feed{display:flex;align-self:flex-start;order:1;height:12.5rem;width:18.75rem}
+@media screen and (max-width:820px){footer .navigation figure{display:inline-block;flex-flow:none;flex-basis:none;width:100%;margin:0;transform:none}}
 
-body>footer aside ul,body>footer .social-media ul{display:flex;list-style-type:none;flex-flow:row nowrap;justify-content:center;order:2;width:100%;margin:.9375rem 0 0 0}@media screen and (max-width:820px){body>footer aside ul,body>footer .social-media ul{margin:1.875rem 0 0 0}}
+footer .navigation figure img{width:9.5625rem;height:4.6875rem;margin-right:.9375rem}@media screen and (max-width:820px){footer .navigation figure img{display:block;margin:0 auto;margin-bottom:.9375rem}}
 
-body>footer aside ul li,body>footer .social-media ul li{display:flex;height:1.625rem;width:1.625rem;margin:0 .9375rem 0 0;padding:0}@media screen and (max-width:820px){body>footer aside ul li,body>footer .social-media ul li{margin:0 1.875rem 0 0}}
 
-body>footer aside ul li:last-of-type,body>footer .social-media ul li:last-of-type{margin:0}
 
-body>footer aside ul li a:hover,body>footer .social-media ul li a:hover{background-color:#fff}
+footer aside,footer .social-media{display:flex;flex-flow:column nowrap;flex-basis:15.0625rem;height:15.0625rem;width:18.75rem;order:2}@media screen and (max-width:820px){footer aside,footer .social-media{align-self:center;margin-bottom:2.5rem}}
 
-body>footer .ranku-bar{display:flex;flex-flow:row nowrap;flex-basis:100%;align-self:flex-end;justify-content:center;margin:.9375rem 0 0 0;padding:.9375rem 0 0 0;border-top:1px solid rgba(255,255,255,.3);order:4}@media screen and (max-width:820px){body>footer .ranku-bar{align-self:auto}}body>footer 
+footer aside .twitter-feed,footer .social-media .twitter-feed{display:flex;align-self:flex-start;order:1;height:12.5rem;width:18.75rem}
 
-body>footer .navigation figure img {
+footer aside ul,footer .social-media ul{display:flex;list-style-type:none;flex-flow:row nowrap;justify-content:center;order:2;width:100%;margin:.9375rem 0 0 0}@media screen and (max-width:820px){footer aside ul,footer .social-media ul{margin:1.875rem 0 0 0}}
+
+footer aside ul li,footer .social-media ul li{display:flex;height:1.625rem;width:1.625rem;margin:0 .9375rem 0 0;padding:0}@media screen and (max-width:820px){footer aside ul li,footer .social-media ul li{margin:0 1.875rem 0 0}}
+
+footer aside ul li:last-of-type,footer .social-media ul li:last-of-type{margin:0}
+
+footer aside ul li a:hover,footer .social-media ul li a:hover{background-color:#fff}
+
+footer .ranku-bar{display:flex;flex-flow:row nowrap;flex-basis:100%;align-self:flex-end;justify-content:center;margin:.9375rem 0 0 0;padding:.9375rem 0 0 0;border-top:1px solid rgba(255,255,255,.3);order:4}@media screen and (max-width:820px){footer .ranku-bar{align-self:auto}}footer 
+
+footer .navigation figure img {
     width: 9.5625rem;
     height: 4.6875rem;
     margin-right: .9375rem;
@@ -1067,7 +1067,7 @@ img {
     border: 0;
     -ms-interpolation-mode: bicubic;
 }
-body>footer .navigation figure figcaption {
+footer .navigation figure figcaption {
     width: 100%;
     text-align: left;
     margin-top: 1.75rem;
@@ -1078,7 +1078,7 @@ body>footer .navigation figure figcaption {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
     display: block;
 }
-body>footer aside, body>footer .social-media {
+footer aside, footer .social-media {
     display: flex;
     flex-flow: column nowrap;
     flex-basis: 15.0625rem;
@@ -1086,14 +1086,14 @@ body>footer aside, body>footer .social-media {
     width: 18.75rem;
     order: 2;
 }
-body>footer aside .twitter-feed, body>footer .social-media .twitter-feed {
+footer aside .twitter-feed, footer .social-media .twitter-feed {
     display: flex;
     align-self: flex-start;
     order: 1;
     height: 12.5rem;
     width: 18.75rem;
 }
-body>footer aside ul, body>footer .social-media ul {
+footer aside ul, footer .social-media ul {
     display: flex;
     list-style-type: none;
     flex-flow: row nowrap;
@@ -1103,14 +1103,14 @@ body>footer aside ul, body>footer .social-media ul {
     margin: .9375rem 0 0 0;
 }
 
-body>footer aside ul li, body>footer .social-media ul li {
+footer aside ul li, footer .social-media ul li {
     display: flex;
     height: 1.625rem;
     width: 1.625rem;
     margin: 0 .9375rem 0 0;
     padding: 0;
 }
-body>footer aside ul li a, body>footer .social-media ul li a {
+footer aside ul li a, footer .social-media ul li a {
     display: block;
     height: 1.625rem;
     width: 1.625rem;
@@ -1121,30 +1121,30 @@ body>footer aside ul li a, body>footer .social-media ul li a {
     background-size: 26px 26px;
     transition: background-color 200ms ease;
 }
-body>footer aside .twitter-feed, body>footer .social-media .twitter-feed {
+footer aside .twitter-feed, footer .social-media .twitter-feed {
     display: flex;
     align-self: flex-start;
     order: 1;
     height: 12.5rem;
     width: 18.75rem;
 }
-body>footer aside ul li.youtube a, body>footer .social-media ul li.youtube a {
+footer aside ul li.youtube a, footer .social-media ul li.youtube a {
     background-image: url(/assets/youtube.png);
     text-indent: -5000px;
 }
-body>footer aside ul li.facebook a, body>footer .social-media ul li.facebook a {
+footer aside ul li.facebook a, footer .social-media ul li.facebook a {
     background-image: url(/assets/facebook.png);
     text-indent: -5000px;
 }
-body>footer aside ul li.linkedin a, body>footer .social-media ul li.linkedin a {
+footer aside ul li.linkedin a, footer .social-media ul li.linkedin a {
     background-image: url(/assets/linkedin.png);
     text-indent: -5000px;
 }
-body>footer aside ul li.twitter a, body>footer .social-media ul li.twitter a {
+footer aside ul li.twitter a, footer .social-media ul li.twitter a {
     background-image: url(/assets/twitter.png);
     text-indent: -5000px;
 }
-body>footer aside ul li.instagram a, body>footer .social-media ul li.instagram a {
+footer aside ul li.instagram a, footer .social-media ul li.instagram a {
     background-image: url(/assets/instagram.png);
     text-indent: -5000px;
 }
@@ -1299,7 +1299,7 @@ main {
 h2, .h2 {
     margin: 0 !important;
     padding: 0 !important;
-    font-size: 1.125rem !important;
+    font-size: 1.125rem;
     line-height: 1.5rem !important;
     font-weight: 600 !important;
     color: #545454 !important;
@@ -1307,10 +1307,10 @@ h2, .h2 {
 h3, .h3 {
        margin: 0 !important;
        padding: 0 !important;
-       font-size: 1rem !important;
+       font-size: 1rem;
        line-height: 1.25rem !important;
        font-weight: 300 !important;
-       color: #545454 !important;
+       color: #545454;
  
 }
 .result-header {
