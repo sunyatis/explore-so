@@ -401,7 +401,7 @@ h4 { font-size:35px; }
     height:222px;
     width:222px;
     border-radius:50%;
-    background:#004C93;
+    background:#F56600;
     position:relative;
     margin:0 auto;
     display:block;
@@ -412,7 +412,7 @@ h4 { font-size:35px; }
     height: 0; 
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid #004C93;
+    border-top: 20px solid #F56600;
     position:absolute;
     bottom:-15px;
     left:calc(50% - 20px);
@@ -432,7 +432,7 @@ h4 { font-size:35px; }
         height:180px;
         width:180px;
         border-radius:50%;
-        background:#004C93;
+        background:#F56600;
         position:relative;
         margin:0 auto;
         display:block;
@@ -1277,7 +1277,7 @@ h4 { font-size:35px; }
 
 .about__desc {
   padding:1em 2em;
-  background-color: #549e4b;
+  background-color: #781E7F;
   position:relative;
   padding-bottom: calc(2em + 45px);
 }
@@ -2885,7 +2885,9 @@ body[data-page="SUNY Online"] #formAbout .about__form,
 	margin-bottom:30px;
 }
 
-
+.m-color {
+	color:#ED058E;
+}
 
 
 
