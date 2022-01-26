@@ -2020,24 +2020,56 @@ dropdown-toggle {
   padding-top: 10px !important;
 }
 
-@media screen and (min-width: 47.939em) and (max-width: 63.938em) {
-  /* line 1422, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+@media screen and (max-width: 1000px) {
+  /* line 1423, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .pathways {
     position: absolute;
     top: 10px;
     left: 10px;
     padding: 5px;
     color: #ffff;
-    font-size: 1.125rem;
-    margin-right: 80px;
+    font-size: .8rem;
+    margin-right: 15px;
   }
 
-  /* line 1433, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1434, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .pathways h2 {
     color: #ffffff !important;
     font-size: 1.2rem !important;
+    padding-bottom: 2px !important;
+    padding-top: 0px !important;
+  }
+
+  /* line 1440, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  .jumbotron {
+    padding: 1.875rem 0 3.125rem 0 !important;
+    height: 425px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 1447, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  .pathways {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    color: #ffff;
+    font-size: 1.0rem;
+    margin-right: 80px;
+  }
+
+  /* line 1458, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  .pathways h2 {
+    color: #ffffff !important;
+    font-size: 1.3rem !important;
     padding-bottom: 20px !important;
     padding-top: 10px !important;
+  }
+
+  /* line 1464, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  .jumbotron {
+    padding: 1.875rem 0 3.125rem 0 !important;
+    height: 500px !important;
   }
 }
 /* ribbon style */
