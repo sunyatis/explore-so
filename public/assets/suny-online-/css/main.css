@@ -2893,52 +2893,6 @@ body[data-page="SUNY Online"] #formAbout .about__form,
 
 
    
-@media screen and (min-width: 47.939em) and (max-width:63.938em) {
-.pathways {
-   position: absolute;
-   top: 10px;
-   left: 10px; 
-   padding: 5px;
-   color: #ffff;
-   font-size: 1.125rem;
-   margin-right: 80px;
-}
-
-
-   .pathways h2 {
-       color: #ffffff !important;
-       font-size: 1.2rem !important;
-       padding-bottom: 20px !important;
-       padding-top: 10px !important;
-   }
-
-}
-.pathways {
-   position: absolute;
-   top: 10px;
-   left: 10px; 
-   padding: 5px;
-   color: #ffff;
-   font-size: 1.125rem;
-   margin-right: 80px;
-}
-
-
-   .pathways h2 {
-       color: #ffffff !important;
-       font-size: 1.8rem;
-       padding-bottom: 20px !important;
-       padding-top: 10px !important;
-   }
-
-
-
-
-
-
-
-
-
 
 
 

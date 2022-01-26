@@ -979,9 +979,10 @@ a {
   text-align: center;
   font-weight: 500;
   letter-spacing: 0.1em;
+  width: 575px;
 }
 
-/* line 751, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 752, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .jumbotron h2 {
   display: inline-block !important;
   width: 41.375rem !important;
@@ -994,12 +995,12 @@ a {
   font-weight: 300 !important;
 }
 
-/* line 763, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 764, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .hero-search {
   width: 100%;
 }
 
-/* line 765, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 766, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .hero-search form {
   display: flex;
   flex-direction: row;
@@ -1008,7 +1009,7 @@ a {
   flex-basis: auto;
 }
 
-/* line 767, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 768, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .hero-search select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1024,13 +1025,13 @@ a {
   border-radius: 3px 0 0 3px;
 }
 
-/* line 769, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 770, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .hero-search select:focus {
   border-color: #3898ec;
   outline: #3898ec solid 3px;
 }
 
-/* line 771, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 772, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .hero-search input {
   height: 3.125rem;
   width: 50%;
@@ -1040,18 +1041,18 @@ a {
   padding: .5rem .75rem;
 }
 
-/* line 773, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 774, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .hero-search input:focus {
   border-color: #3898ec;
   outline: #3898ec solid 3px;
 }
 
-/* line 775, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 776, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .hero-search input::-moz-placeholder, .hero-search input:-moz-placeholder {
   line-height: 30px;
 }
 
-/* line 777, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 778, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .hero-search button {
   height: 3.125rem;
   padding: .5rem .75rem;
@@ -1065,32 +1066,32 @@ a {
   cursor: pointer;
 }
 
-/* line 779, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 780, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .hero-search button:focus {
   border-color: #3898ec;
   outline: #3898ec solid 2px;
 }
 
-/* line 781, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 782, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .hero-search button:select, .hero-search button:hover, .hero-search button:active {
   outline: 0;
 }
 
 @media screen and (max-width: 820px) {
-  /* line 784, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 785, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .jumbotron form {
     display: flex !important;
     flex-flow: column nowrap !important;
     width: 100% !important;
   }
 
-  /* line 790, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 791, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .jumbotron {
     padding: 1.875rem 0 3.125rem 0 !important;
-    height: 425px !important;
+    /*height: 425px !important;*/
   }
 
-  /* line 794, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 795, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .row-search {
     padding-left: 1.25rem !important;
     padding-right: 1.25rem !important;
@@ -1099,7 +1100,7 @@ a {
     width: 100% !important;
   }
 
-  /* line 801, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 802, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .jumbotron h1 {
     display: inline-block;
     margin-bottom: 10px;
@@ -1111,7 +1112,7 @@ a {
     letter-spacing: 0.1em;
   }
 
-  /* line 812, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 813, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .jumbotron h2 {
     flex-basis: auto !important;
     width: 100% !important;
@@ -1119,14 +1120,14 @@ a {
     line-height: 1.3125rem !important;
   }
 }
-/* line 819, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 820, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .jumbotron select {
   margin: 0;
   border-radius: 3px 0 0 3px;
 }
 
 @media screen and (max-width: 820px) {
-  /* line 825, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 826, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .jumbotron select {
     flex-basis: auto !important;
     width: 100% !important;
@@ -1134,14 +1135,14 @@ a {
     border-radius: 3px !important;
   }
 }
-/* line 831, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 832, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .jumbotron input {
   margin: 0 0 5px 0;
   border-radius: 0;
 }
 
 @media screen and (max-width: 820px) {
-  /* line 834, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 835, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .jumbotron input {
     flex-basis: auto;
     width: auto;
@@ -1149,20 +1150,20 @@ a {
     width: 100% !important;
   }
 }
-/* line 841, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 842, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .jumbotron button {
   margin: 0;
 }
 
 @media screen and (max-width: 820px) {
-  /* line 843, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 844, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .jumbotron button {
     flex-basis: auto;
     border-color: transparent;
     border-radius: 3px;
   }
 }
-/* line 845, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 846, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .jumbotron form {
   display: flex;
   flex-direction: row;
@@ -1171,13 +1172,13 @@ a {
   flex-basis: auto;
 }
 
-/* line 853, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 854, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .jumbotron select {
   margin: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* line 857, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 858, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .jumbotron select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1205,13 +1206,13 @@ a {
   cursor: pointer;
 }
 
-/* line 883, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 884, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .jumbotron input {
   margin: 0 0 5px 0;
   border-radius: 0;
 }
 
-/* line 887, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 888, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .jumbotron input {
   height: 3.125rem;
   width: 70%;
@@ -1228,7 +1229,7 @@ a {
   background-color: #fff;
 }
 
-/* line 903, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 904, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .jumbotron button {
   height: 3.125rem;
   padding: .5rem .75rem;
@@ -1244,7 +1245,7 @@ a {
   width: 20%;
 }
 
-/* line 917, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 918, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .row-search {
   display: flex;
   flex-flow: row wrap;
@@ -1256,13 +1257,13 @@ a {
   justify-content: center;
 }
 
-/* line 927, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 928, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .row-filters {
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
 }
 
-/* line 932, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 933, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .well {
   background-color: #ffffff !important;
   border: 0px !important;
@@ -1271,25 +1272,25 @@ a {
   box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.05) !important;
 }
 
-/* line 941, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 942, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .service-div {
   float: left;
   width: 15%;
 }
 
-/* line 945, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 946, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .icon-div {
   float: left;
   width: 85%;
   padding-left: 5px;
 }
 
-/* line 951, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 952, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .landing-text-1 {
   padding-bottom: 25px;
 }
 
-/* line 954, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 955, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .iframe {
   align: center;
   width: 960px;
@@ -1302,24 +1303,24 @@ a {
   margin: auto;
 }
 
-/* line 966, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 967, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 #filterrific_with_school_id {
   width: 250px;
 }
 
-/* line 970, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 971, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .main-logo {
   float: left;
   padding: .625rem 0;
 }
 
-/* line 975, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 976, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .authform {
   width: 25%;
   margin: auto;
 }
 
-/* line 980, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 981, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer {
   display: flex;
   flex: 1;
@@ -1333,12 +1334,12 @@ footer {
   color: #c5c5c5;
 }
 
-/* line 992, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 993, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer .navigation {
   display: flex;
 }
 
-/* line 995, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 996, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer .navigation ul {
   display: flex;
   flex-flow: column wrap;
@@ -1351,14 +1352,14 @@ footer .navigation ul {
   order: 1;
 }
 
-/* line 1006, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1007, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer .navigation ul li {
   padding: 0;
   margin: 0 0 .3125rem 0;
   line-height: 1.25rem;
 }
 
-/* line 1011, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1012, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer .navigation ul li a {
   font-size: .875rem;
   font-weight: 300;
@@ -1368,7 +1369,7 @@ footer .navigation ul li a {
   trasition: color 200ms ease;
 }
 
-/* line 1019, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1020, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer .navigation figure {
   display: flex;
   position: relative;
@@ -1380,12 +1381,12 @@ footer .navigation figure {
   order: 3;
 }
 
-/* line 1029, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1030, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 figure {
   margin: 0;
 }
 
-/* line 1033, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1034, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer {
   display: flex;
   flex: 1;
@@ -1399,26 +1400,26 @@ footer {
   color: #c5c5c5;
 }
 
-/* line 1033, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1034, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer a.twitter-timeline {
   color: #fff important;
   text-indent: -5000px;
 }
 
-/* line 1035, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1036, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer .navigation {
   display: flex;
 }
 
 @media screen and (max-width: 820px) {
-  /* line 1035, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1036, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   footer .navigation {
     flex-flow: column nowrap;
     width: 100%;
   }
 }
 @media screen and (max-width: 820px) {
-  /* line 1038, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1039, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   footer .navigation ul {
     flex-flow: column nowrap;
     width: 100%;
@@ -1430,7 +1431,7 @@ footer .navigation {
     order: 1;
   }
 }
-/* line 1040, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1041, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer .navigation ul li {
   padding: 0;
   margin: 0 0 .3125rem 0;
@@ -1438,12 +1439,12 @@ footer .navigation ul li {
 }
 
 @media screen and (max-width: 820px) {
-  /* line 1040, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1041, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   footer .navigation ul li {
     line-height: 1.75rem;
   }
 }
-/* line 1040, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1041, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer .navigation ul li a {
   font-size: .875rem;
   font-weight: 300;
@@ -1453,13 +1454,13 @@ footer .navigation ul li a {
   trasition: color 200ms ease;
 }
 
-/* line 1040, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1041, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer .navigation ul li a:hover {
   color: #58adeb;
 }
 
 @media screen and (max-width: 820px) {
-  /* line 1042, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1043, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   footer .navigation figure {
     display: inline-block;
     flex-flow: none;
@@ -1469,7 +1470,7 @@ footer .navigation ul li a:hover {
     transform: none;
   }
 }
-/* line 1044, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1045, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer .navigation figure img {
   width: 9.5625rem;
   height: 4.6875rem;
@@ -1477,14 +1478,14 @@ footer .navigation figure img {
 }
 
 @media screen and (max-width: 820px) {
-  /* line 1044, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1045, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   footer .navigation figure img {
     display: block;
     margin: 0 auto;
     margin-bottom: .9375rem;
   }
 }
-/* line 1048, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1049, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside, footer .social-media {
   display: flex;
   flex-flow: column nowrap;
@@ -1495,13 +1496,13 @@ footer aside, footer .social-media {
 }
 
 @media screen and (max-width: 820px) {
-  /* line 1048, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1049, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   footer aside, footer .social-media {
     align-self: center;
     margin-bottom: 2.5rem;
   }
 }
-/* line 1050, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1051, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside .twitter-feed, footer .social-media .twitter-feed {
   display: flex;
   align-self: flex-start;
@@ -1510,7 +1511,7 @@ footer aside .twitter-feed, footer .social-media .twitter-feed {
   width: 18.75rem;
 }
 
-/* line 1052, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1053, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside ul, footer .social-media ul {
   display: flex;
   list-style-type: none;
@@ -1522,12 +1523,12 @@ footer aside ul, footer .social-media ul {
 }
 
 @media screen and (max-width: 820px) {
-  /* line 1052, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1053, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   footer aside ul, footer .social-media ul {
     margin: 1.875rem 0 0 0;
   }
 }
-/* line 1054, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1055, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside ul li, footer .social-media ul li {
   display: flex;
   height: 1.625rem;
@@ -1537,22 +1538,22 @@ footer aside ul li, footer .social-media ul li {
 }
 
 @media screen and (max-width: 820px) {
-  /* line 1054, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1055, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   footer aside ul li, footer .social-media ul li {
     margin: 0 1.875rem 0 0;
   }
 }
-/* line 1056, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1057, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside ul li:last-of-type, footer .social-media ul li:last-of-type {
   margin: 0;
 }
 
-/* line 1058, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1059, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside ul li a:hover, footer .social-media ul li a:hover {
   background-color: #fff;
 }
 
-/* line 1060, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1061, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer .ranku-bar {
   display: flex;
   flex-flow: row nowrap;
@@ -1566,12 +1567,12 @@ footer .ranku-bar {
 }
 
 @media screen and (max-width: 820px) {
-  /* line 1060, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1061, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   footer .ranku-bar {
     align-self: auto;
   }
 }
-/* line 1060, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1061, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer
 footer .navigation figure img {
   width: 9.5625rem;
@@ -1579,13 +1580,13 @@ footer .navigation figure img {
   margin-right: .9375rem;
 }
 
-/* line 1067, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1068, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 1071, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1072, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer .navigation figure figcaption {
   width: 100%;
   text-align: left;
@@ -1595,12 +1596,12 @@ footer .navigation figure figcaption {
   line-height: 1.25rem;
 }
 
-/* line 1079, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1080, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
 }
 
-/* line 1082, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1083, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside, footer .social-media {
   display: flex;
   flex-flow: column nowrap;
@@ -1610,7 +1611,7 @@ footer aside, footer .social-media {
   order: 2;
 }
 
-/* line 1090, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1091, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside .twitter-feed, footer .social-media .twitter-feed {
   display: flex;
   align-self: flex-start;
@@ -1619,7 +1620,7 @@ footer aside .twitter-feed, footer .social-media .twitter-feed {
   width: 18.75rem;
 }
 
-/* line 1097, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1098, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside ul, footer .social-media ul {
   display: flex;
   list-style-type: none;
@@ -1630,7 +1631,7 @@ footer aside ul, footer .social-media ul {
   margin: .9375rem 0 0 0;
 }
 
-/* line 1107, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1108, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside ul li, footer .social-media ul li {
   display: flex;
   height: 1.625rem;
@@ -1639,7 +1640,7 @@ footer aside ul li, footer .social-media ul li {
   padding: 0;
 }
 
-/* line 1114, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1115, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside ul li a, footer .social-media ul li a {
   display: block;
   height: 1.625rem;
@@ -1652,7 +1653,7 @@ footer aside ul li a, footer .social-media ul li a {
   transition: background-color 200ms ease;
 }
 
-/* line 1125, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1126, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside .twitter-feed, footer .social-media .twitter-feed {
   display: flex;
   align-self: flex-start;
@@ -1661,37 +1662,37 @@ footer aside .twitter-feed, footer .social-media .twitter-feed {
   width: 18.75rem;
 }
 
-/* line 1132, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1133, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside ul li.youtube a, footer .social-media ul li.youtube a {
   background-image: url(/assets/youtube.png);
   text-indent: -5000px;
 }
 
-/* line 1136, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1137, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside ul li.facebook a, footer .social-media ul li.facebook a {
   background-image: url(/assets/facebook.png);
   text-indent: -5000px;
 }
 
-/* line 1140, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1141, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside ul li.linkedin a, footer .social-media ul li.linkedin a {
   background-image: url(/assets/linkedin.png);
   text-indent: -5000px;
 }
 
-/* line 1144, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1145, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside ul li.twitter a, footer .social-media ul li.twitter a {
   background-image: url(/assets/twitter.png);
   text-indent: -5000px;
 }
 
-/* line 1148, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1149, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 footer aside ul li.instagram a, footer .social-media ul li.instagram a {
   background-image: url(/assets/instagram.png);
   text-indent: -5000px;
 }
 
-/* line 1152, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1153, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .nav-row {
   display: flex;
   flex-flow: row wrap;
@@ -1702,12 +1703,12 @@ footer aside ul li.instagram a, footer .social-media ul li.instagram a {
   box-sizing: border-box;
 }
 
-/* line 1161, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1162, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .search-filter {
   background-color: #f1f1f1;
 }
 
-/* line 1164, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1165, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .search-row {
   display: flex;
   flex-flow: row wrap;
@@ -1718,18 +1719,18 @@ footer aside ul li.instagram a, footer .social-media ul li.instagram a {
   box-sizing: border-box;
 }
 
-/* line 1174, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1175, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .resets {
   margin-top: 20px;
   font-size: 16px !important;
 }
 
-/* line 1178, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1179, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .search-filter form {
   flex-direction: column;
 }
 
-/* line 1181, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1182, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .search-filter form {
   /*display: flex;*/
   flex-direction: row;
@@ -1739,12 +1740,12 @@ footer aside ul li.instagram a, footer .social-media ul li.instagram a {
   padding: 1.25rem 0;
 }
 
-/* line 1189, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1190, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 form {
   margin: 0;
 }
 
-/* line 1193, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1194, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .search-filter form .form-row1 {
   margin-left: 0;
   margin-right: 0;
@@ -1752,7 +1753,7 @@ form {
   flex-flow: wrap;
 }
 
-/* line 1199, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1200, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .search-filter input {
   height: 3.125rem;
   width: 40%;
@@ -1764,7 +1765,7 @@ form {
   margin-bottom: 10px;
 }
 
-/* line 1210, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1211, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 input {
   display: block;
   height: 2.5rem;
@@ -1780,7 +1781,7 @@ input {
   background-color: #fff;
 }
 
-/* line 1224, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1225, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .search-filter button {
   height: 3.125rem;
   width: 5.625rem;
@@ -1812,7 +1813,7 @@ input {
     border-radius: 3px;
     cursor: pointer;
 }*/
-/* line 1254, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1255, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 select {
   display: block;
   position: relative;
@@ -1836,18 +1837,18 @@ select {
   cursor: pointer;
 }
 
-/* line 1277, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1278, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
 }
 
-/* line 1280, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1281, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 main {
   flex: 1 0 auto;
   width: 100%;
 }
 
-/* line 1284, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1285, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .row {
   display: flex;
   flex-flow: row wrap;
@@ -1860,13 +1861,13 @@ main {
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 1295, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1296, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .row {
     padding-left: 1.25rem !important;
     padding-right: 1.25rem !important;
   }
 }
-/* line 1300, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1301, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 h2, .h2 {
   margin: 0 !important;
   padding: 0 !important;
@@ -1876,7 +1877,7 @@ h2, .h2 {
   color: #545454 !important;
 }
 
-/* line 1308, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1309, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 h3, .h3 {
   margin: 0 !important;
   padding: 0 !important;
@@ -1886,7 +1887,7 @@ h3, .h3 {
   color: #545454;
 }
 
-/* line 1317, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1318, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .result-header {
   margin-top: 3px !important;
   padding: 1.25rem !important;
@@ -1894,7 +1895,7 @@ h3, .h3 {
   border-bottom: 1px solid #f5f5f5 !important;
 }
 
-/* line 1323, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1324, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .result {
   margin-top: 3px !important;
   padding: 1.25rem !important;
@@ -1902,31 +1903,31 @@ h3, .h3 {
   border-bottom: 1px solid #f5f5f5 !important;
 }
 
-/* line 1329, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1330, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .result:hover {
   background-color: #f5f5f5 !important;
   transform: translate(0, -3px);
 }
 
-/* line 1334, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1335, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .result h2 a {
   color: #545454 !important;
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1340, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1341, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .main {
     padding-right: 5px !important;
     padding-left: 5px !important;
   }
 
-  /* line 1344, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1345, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .results {
     padding-right: 5px !important;
     padding-left: 5px !important;
   }
 }
-/* line 1350, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1351, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .pull-right {
   float: right !important;
   display: flex !important;
@@ -1936,71 +1937,71 @@ h3, .h3 {
   display: flex !important;
 }
 
-/* line 1359, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1360, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .dropdown-menu {
   z-index: 10000 !important;
 }
 
 @media screen and (min-width: 820px) {
-  /* line 1363, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1364, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .mobile-menu {
     display: none !important;
   }
 
-  /* line 1366, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1367, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   dropdown a:visted {
     color: #fff !important;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 1371, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1372, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .dropdown a {
     color: #fff !important;
   }
 
-  /* line 1374, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1375, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .nav > li > a:hover, .nav > li > a:focus {
     background-color: #444 !important;
   }
 
-  /* line 1377, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  /* line 1378, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
   .caret {
     color: #fff !important;
   }
 }
-/* line 1382, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1383, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .dropdown a {
   color: #444 !important;
 }
 
-/* line 1385, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1386, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 dropdown-toggle {
   color: #444 !important;
 }
 
-/* line 1388, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1389, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .text-center {
   text-align: center;
   width: 100% !important;
 }
 
-/* line 1392, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1393, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .checkbox input[type="checkbox"] {
   height: 1rem !important;
 }
 
-/* line 1396, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1397, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 #user_remember_me {
   width: 35% !important;
   padding-right: 10px;
 }
 
-/* line 1400, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1401, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 #remember_me {
   display: inline !important;
 }
 
-/* line 1403, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1404, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .pathways {
   position: absolute;
   top: 10px;
@@ -2011,12 +2012,33 @@ dropdown-toggle {
   margin-right: 80px;
 }
 
-/* line 1414, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+/* line 1415, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .pathways h2 {
   color: #ffffff !important;
   font-size: 1.8rem !important;
   padding-bottom: 20px !important;
   padding-top: 10px !important;
+}
+
+@media screen and (min-width: 47.939em) and (max-width: 63.938em) {
+  /* line 1422, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  .pathways {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    color: #ffff;
+    font-size: 1.125rem;
+    margin-right: 80px;
+  }
+
+  /* line 1433, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+  .pathways h2 {
+    color: #ffffff !important;
+    font-size: 1.2rem !important;
+    padding-bottom: 20px !important;
+    padding-top: 10px !important;
+  }
 }
 /* ribbon style */
 
