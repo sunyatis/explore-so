@@ -1350,7 +1350,7 @@ h4 { font-size:35px; }
   padding-bottom: calc(2em + 45px);
 }
 .about__desc a{
-  color: #00DDFF;
+  color: #00DDFF !important;
 }
 
 #form__anchor {
