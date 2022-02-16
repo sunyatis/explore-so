@@ -90,7 +90,7 @@ ActiveAdmin.register Course do
  :catalog_id => nil,
  :school_id => nil,
  #:hint => "file will be imported with such header format: 'body','title','author'",
- :csv_headers => ["local_course_id", "course_area", "prefix", "code",  "section", "title",  "description", "prerequisites", "corequisites", "generaleducation_id", "level", "instructor", "credit", "start_date", "end_date", "books_url", "registration_url", "active", "course_method"]
+ :csv_headers => ["local_course_id", "course_area", "prefix", "code",  "section", "title",  "description", "prerequisites", "corequisites", "generaleducation_id", "level", "instructor", "credit", "start_date", "end_date", "books_url", "registration_url", "active", "course_method", "cat_id"]
   # mass import
 #:csv_headers => ["catalog_id", "local_course_id", "subjectarea_id", "school_id", "course_area", "prefix", "code", "section", "title",  "description", "prerequisites", "corequisites", "generaleducation_id", "level", "instructor", "credit", "start_date", "end_date", "books_url", "registration_url", "active", "course_method", "seats_available", "class_full"] 
  )
@@ -167,6 +167,7 @@ ActiveAdmin.register Course do
   f.input :course_area, :as => :select, :collection => Course.order(:course_area).pluck(:course_area).uniq
   f.input :level,  :as => :select,  :collection => ["Lower Level Undergraduate", "Upper Level Undergraduate", "Graduate"]
   f.input :generaleducation_id, as: :select, :collection => GeneralEducation.pluck(:name, :id)
+  f.input :cat_id, as: :select, :collection => Category.pluck(:name, :id)
   f.input :prefix
   f.input :code
   f.input :section
@@ -195,7 +196,7 @@ ActiveAdmin.register Course do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-   permit_params :catalog_id, :title, :code, :description, :credit, :start_date, :end_date, :local_course_id, :prefix, :section, :prerequisites, :corequisites, :books_url, :registration_url, :active, :level, :school_id, :subjectarea_id, :course_area, :generaleducation_id, :instructor, :course_method, :seats_available, :class_full, :cat_id
+   permit_params :catalog_id, :title, :code, :description, :credit, :start_date, :end_date, :local_course_id, :prefix, :section, :prerequisites, :corequisites, :books_url, :registration_url, :active, :level, :school_id, :subjectarea_id, :course_area, :generaleducation_id, :instructor, :course_method, :seats_available, :class_full, :cat_id, :course_registration_url, :bookstore_url
   #
   # or
   #

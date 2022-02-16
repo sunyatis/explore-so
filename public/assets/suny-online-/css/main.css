@@ -107,8 +107,14 @@ h4 { font-size:35px; }
 }
 
 .cta__blue {
-    background-color: #034d8f;
+    background-color: #00539B;
+	color: #ffffff !important;
 }
+.cta__white {
+    background-color: #ffffff;
+	color: #00539B !important;
+}
+
 .cta__blue_1 {
     background-color: #034d8f;
     min-width: 200px;
@@ -423,7 +429,7 @@ h4 { font-size:35px; }
     left:50%;
     -webkit-transform:translate(-50%, -50%);
     transform:translate(-50%, -50%);
-  	max-height: 100px;
+  	max-height: 140px;
   	width: auto !important
 }
 
@@ -925,6 +931,7 @@ h4 { font-size:35px; }
 	font-weight: 600;
 	letter-spacing: 0.1em;
 }
+
 #hero h2 {
 	display: inline-block;
 	margin-bottom: 10px;
@@ -942,6 +949,42 @@ h4 { font-size:35px; }
     font-size:30px;
     color:white;
 }
+
+#heropath h1 {
+	display: inline-block;
+	margin-bottom: 10px;
+	color: #99F8D4 !important;
+	font-size: 5.025rem;
+	line-height: 6.375rem;
+	text-align: center;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+}
+
+#heropath h2 {
+	display: inline-block;
+	margin-bottom: 10px !important;
+	color: #ffffff !important;
+	font-size: 1.825rem;
+	line-height: 2.575rem !important;
+	text-align: center;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+}
+
+#heropath h3 {
+	display: inline-block;
+	margin-bottom: 150px !important;
+	color: #ffffff !important;
+	font-size: 1.525rem;
+	line-height: 2.575rem !important;
+	text-align: center;
+	font-weight: 300 !important;
+	padding-left: 110px !important;
+	padding-right: 110px !important;
+	
+}
+
 
 @media screen and (min-width:47.939em) and (max-width:63.938em) {
   
@@ -1043,7 +1086,10 @@ h4 { font-size:35px; }
   #hero {
     height:auto;
   }
-  
+  #heropath section {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+  }
   .SO__logo > img {
    	margin: 1em auto 2em auto;
     display: block;
@@ -1060,8 +1106,20 @@ h4 { font-size:35px; }
     font-size:4.0rem;
     white-space: unset; 
   }
+  #heropath h1 {
+    font-size: 3.0rem;
+    white-space: unset;
+  }
   #hero h2 { 
     font-size:1.0rem; 
+  }
+  #heropath h2 {
+    font-size: 1.5rem;
+    white-space: unset;
+  }
+  #heropath h3 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
   
   #hero p { 
@@ -1264,11 +1322,20 @@ h4 { font-size:35px; }
 
 .about__desc h3{
   color: white;
+  font-size: 38px;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+  line-height: 2.7rem !important;
+  letter-spacing: .04em;
 }
 
 .about__form h3,
 .SO__general_form h3{
   text-align:center;
+}
+.about__form h3{
+	font-size:27px;
+	font-weight:450 !important;
 }
 
 .about__desc p{
@@ -1277,7 +1344,7 @@ h4 { font-size:35px; }
 }
 
 .about__desc {
-  padding:1em 2em;
+  padding:1em 3em;
   background-color: #781E7F;
   position:relative;
   padding-bottom: calc(2em + 45px);
@@ -1328,6 +1395,9 @@ h4 { font-size:35px; }
   background-color: #edeff6;
   border-radius: 3px;
   font-size:20px;
+}
+.about__form select {
+	width:80%;
 }
 
 .SO__general_form .form_responses,
@@ -1399,8 +1469,9 @@ h4 { font-size:35px; }
 }
 
 #formAbout{
-  background-color: #2E2E2E;
+  background-color: #ffffff;
   min-height: 661px;
+  display:inline;
 }
 
 .SO__general_form .action button,
@@ -1604,8 +1675,9 @@ h4 { font-size:35px; }
 
 #single__program_output .list [id*="program__metadata"] {
   display: block;
-    border-radius: 8px;
+    border-radius: 3px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1), -2px -2px 5px rgba(0,0,0,0.1), 2px -2px 5px rgba(0,0,0,0.1), -2px 2px 5px rgba(0,0,0,0.1);
+	padding-top: 30px;
 }
 
 #single__program_output .list {
@@ -1623,8 +1695,8 @@ h4 { font-size:35px; }
 #single__program_output .list.searched,
 #single__program_output .list {
     justify-content: start;
- 	left:-15px;
-    right:-15px;
+ 	//left:-15px;
+   // right:-15px;
   	//width: calc(100% + 30px);
   	position:relative;
 }
@@ -1633,8 +1705,8 @@ h4 { font-size:35px; }
     background-color: white;
     color: black;
     text-align: center;
-    border-radius: 8px;
-    width:calc(25% - 30px);
+    border-radius: 3px;
+    width:calc(33% - 55px);
     display:inline-block;
   	margin-bottom:30px;
   	position:relative;
@@ -1663,25 +1735,26 @@ h4 { font-size:35px; }
 #single__program_output .list.filtered .single__program_box,
 #single__program_output .list.searched .single__program_box,
 #single__program_output .list .single__program_box {
-  margin-left:15px;
-  margin-right:15px;
+	margin-left: 24px;
+	margin-right: 24px;
 }
 
 .single__program_box h4 {
-    background-color: #009EE0;
+    background-color: #02235C;;
     color: white;
     text-align: center;
     font-size:16px;
     text-transform: uppercase;
     padding:1em;
   margin-bottom:0;
+  margin-top: 20px;
 }
 
 .featured_program__box h5,
 .single__program_box h5 {
   color: white;
   font-size: 16px;
-    background: #549e4b;
+    background: #F56600;
     margin: 0 0 2em 0;
     padding: 10px;
 }
@@ -1695,7 +1768,7 @@ h4 { font-size:35px; }
 }
 .single__program_box .featured_program__image {
     width:100%;
-    height:200px;
+    height: 186px;
     background-size:auto 100%;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1712,7 +1785,7 @@ h4 { font-size:35px; }
 }
 
 #single__program_output {
-  margin-bottom: 2em;
+  //margin-bottom: 2em;
     width: 100%;
 }
 
@@ -1804,8 +1877,14 @@ h4 { font-size:35px; }
 
 #ourGradsTitle {
  	padding-bottom:2em; 
+	padding-top: 2em;
+	background-color:#781E7F;
 }
-
+#ourGradsTitle h3{
+ 	color:#ffffff;
+	font-weight: 400 !important;
+	margin-bottom: 40px!important;
+}
 .grads__list {
     width: 100%;
     display: flex;
@@ -1841,6 +1920,7 @@ h4 { font-size:35px; }
 .grad__description {
     font-size: 22px;
     font-weight: 600;
+	color:#ffffff;
 }
 
 @media screen and (min-width:47.939em) and (max-width:63.938em) { 
@@ -1907,14 +1987,15 @@ h4 { font-size:35px; }
 li.quote__container {
     width: 25%;
     margin-left: 1em;
-    background-color: #54b948;
-    padding: 0 2em;
+    background-color: #84D4B6;
+    padding: 2em 2em;
     border-radius: 8px;
     /*text-align: justify;*/
 }
 
 .quote__container p {
     font-size: 22px; /*24px;*/
+	color:#02235C;
 }
 
 .quote__container span {
@@ -1926,9 +2007,19 @@ li.quote__container {
 
 .SO__grad_quotes {
   position:relative;
-  padding-bottom:2em;
+  //padding-bottom:6em !important;
 }
-
+#SO__grad_quotes {
+  padding-bottom: 4em; 
+}
+.grad_qoutes {
+	padding-top: 4.5em !important;
+}
+.grad_qoutes h3{
+	padding-bottom:1.5em !important;
+	color:#02235C;
+	font-weight: 400 !important;
+}
 .quotes__background {
     position: absolute;
     top: 0;
@@ -2891,10 +2982,59 @@ body[data-page="SUNY Online"] #formAbout .about__form,
 	color:#ED058E;
 }
 
-
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	margin-top: 50px;
+	text-align: center;
+	margin-bottom: 25px;
+}
    
+.feat h3{
+	color: #02235C;
+	font-weight: 400 !important;
+	margin-bottom: 40px !important;
+	margin-top: 20px !important;
+}
 
+#industry_achievements {
+		background-image:url('../../../assets/suny-online-/images/Achievements_Photo_Bar.png');
+        padding-bottom: 5%;
+		padding-top: 5%;
+	}
+#industry_achievements h2{
+	color: #ffffff !important;
+	padding-bottom: 40px !important;
+}
+#learn_your_way h2{
+	color:#781E7F !important;
+	padding-top: 15px !important;
+	padding-bottom: 30px !important;
+	
+}
+#learn_your_way h3{
+	font-weight: 500 !important;
+	font-size: 36px;
+}
+#learn_your_way p{
+margin-left: auto !important;
+margin-right: auto !important;
+width: 80%;
+font-size: 1.3em;
+padding-top: 13px;
+}
 
-
-
-
+#best_fit h3{
+	padding-top: 50px !important;
+	padding-bottom: 50px !important;
+	color:#000000 !important;
+}
+#learn_more_box{
+	padding-top: 30px;
+	padding-bottom: 48px;
+}
+#learn_more_box p{
+	font-weight: 500;
+}

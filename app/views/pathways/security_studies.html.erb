@@ -43,18 +43,21 @@
           };
       </script>
       
-        <link rel="stylesheet" type="text/css" assets="" href="/assets/suny-online-/css/fonts.css" />
-        <link rel="stylesheet" type="text/css" assets="" href="/assets/suny-online-/css/main.css" />
-      	<link rel="stylesheet" type="text/css" assets="" href="/assets/suny-online-/css/triangle.css" />
+       <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+        <link rel="stylesheet" type="text/css" media="" href="/assets/suny-online-/css/fonts.css" />
+        <link rel="stylesheet" type="text/css" media="" href="/assets/suny-online-/css/main.css" />
+      	<link rel="stylesheet" type="text/css" media="" href="/assets/suny-online-/css/triangle.css" />
+
       	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
       
-				
-        <script type="text/javascript" src="/assets/suny-online-/js/jquery.js"></script>
+		
+        <!--script type="text/javascript" src="/assets/suny-online-/js/jquery.js"></script-->
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<script type="text/javascript" src="/assets/suny-online-/js/owl.carousel.js"></script>
         <script type="text/javascript" src="/assets/suny-online-/js/main.js"></script>
-				<script type="text/javascript" src="/assets/suny-online-/js/waypoint.js"></script>
-				<script type="text/javascript" src="/assets/suny-online-/js/counterup2-1.0.1.min.js"></script>
-				<script type="text/javascript" src="/assets/suny-online-/js/list.js"></script>
-      
+		<script type="text/javascript" src="/assets/suny-online-/js/waypoint.js"></script>
+		<script type="text/javascript" src="/assets/suny-online-/js/counterup2-1.0.1.min.js"></script>
+		<script type="text/javascript" src="/assets/suny-online-/js/list.js"></script> 
 	    <!-- Google Tag Manager -->
 	    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -97,25 +100,31 @@
       	<div style="display:none;" data-home="/" id="homeTag"></div>
 
         <!-- Header -->
-        <header class="tri full">
+	    <header class="navbar  bs-docs-nav">
+	
+	      <%= render '/layouts/navigation' %>
+	    </header>
+        <!--header class="tri full">
+		    
            <div class="tri">
                 <div class="ang le-full md-3" id="navLogo">
-                    <a class="SO__logo" href="/"><img id="headIMG" src="/assets/suny-online-/images/SUNYOnline-logowhite-silo.png" alt="Suny Logo"></a>
-                  	<a href="#" class="mobile_menu__toggle"><i class="fas fa-bars"></i></a>
+                    <a class="SO__logo" href="/"><img id="headIMG" src="/assets/suny-online-/images/SUNYOnline-logowhite-silo.png" alt="Suny Logo"></a-->
+                  	<!--a href="#" class="mobile_menu__toggle"><i class="fas fa-bars"></i></a>
                </div>
                 <div class="ang le-full md-21 hide-sm" id="navLinks">
                     <ul class="navigation__bar">
-                        <!--<li><a href="/programs/">Explore Online Degrees</a></li>-->
-                        <!--li><a href="../../contact-us/index.html" alt="Request Information">Request Info</a></li>
-                        <li><a href="../../tuition-at-suny/index.html" alt="Affordable Tuition">Affordable Tuition</a></li>
-												<li><a href="../../transfer/index.html" alt="Transfer">Transfer</a></li>
-                         <li><a href="../index.html" alt="Programs">Programs</a></li>
-                        <li><a href="../../faq/index.html" alt="FAQ">FAQs</a></li-->
+                        <li><a href="/programs/">Explore Online Degrees</a></li>-->
+                        <!--li><a href="contact-us/index.html" alt="Request Information">Request Info</a></li>
+                        <li><a href="tuition-at-suny/index.html" alt="Affordable Tuition">Affordable Tuition</a></li>
+												<li><a href="transfer/index.html" alt="Transfer">Transfer</a></li>
+                         <li><a href="programs/index.html" alt="Programs">Programs</a></li>
+                        <li><a href="faq/index.html" alt="FAQ">FAQs</a></li>
                         
                     </ul>
                 </div>
             </div>                
-        </header><div id="industry__metadata">
+        </header-->
+<div id="industry__metadata">
     <a href="#" alt="list close" class="category_list__close"><i class="fa fa-times" aria-hidden="true"></i></a>
     <img class="icon__home" alt="industry icon" src="../../assets/suny-online-/images/industries/Group-559@2x.png" />
     <img class="icon__list" alt="industry icon list" src="../../assets/suny-online-/images/industries/Group-649.png" />
@@ -147,7 +156,7 @@
 </div>
 <div class="tri full" id="formAbout">
     <div class="tri has__overlap">
-        <div class="ang le-full md-10 about__desc hide-sm" style="background-color: #54B948;">
+        <div class="ang le-full md-10 about__desc hide-sm">
             <h3><strong>About <%= pathway.title %></strong></h3>
 <p><%=raw pathway.description %></p>
           <a class="cta__blue scroll_me" id="about__desc" href="#single__program_list" data-title="Accounting" alt="scroll to form">See All Programs <i class="fas fa-chevron-down"></i></a>
@@ -197,7 +206,7 @@
 			  </div>
 			</div><a href="https://explore.suny.edu/programs/finger-lakes-community-college-networking-cybersecurity-associate-1552326711336" class="program__link"></a></li>
 			
-		<li id="single_program__2" class="single__program_box loaded"><div id="program__metadata_id5" class="filter__program filter__degree filter__campus" data-degree="Bachelor of Science" data-campus="Plattsburgh University">
+		<!--li id="single_program__2" class="single__program_box loaded"><div id="program__metadata_id5" class="filter__program filter__degree filter__campus" data-degree="Bachelor of Science" data-campus="Plattsburgh University">
 		  <div class="featured_program__image" style="background-image:url('/assets/suny-online-/images/campus/college_0004_Herkimer_College_icon-1000.jpg');"></div>
 		  <h4 class="filter__program_title">Cybersecurity and Digital Forensics AS</h4>
 		  <h5 class="filter__program_online">100% Online</h5>
@@ -209,7 +218,7 @@
 		      <p>Cost per credit: <span class="filter__program_cost">$189</span></p>
 		    </div>
 		  </div>
-		</div><a href="https://explore.suny.edu/programs/cybersecurity-digital-forensics" class="program__link"></a></li>
+		</div><a href="https://explore.suny.edu/programs/cybersecurity-digital-forensics" class="program__link"></a></li-->
 		
 		<li id="single_program__2" class="single__program_box loaded"><div id="program__metadata_id5" class="filter__program filter__degree filter__campus" data-degree="Bachelor of Science" data-campus="Plattsburgh University">
 		  <div class="featured_program__image" style="background-image:url('/assets/suny-online-/images/campus/college_0003_MonroeCC-icon-1000.jpg');"></div>
@@ -670,41 +679,10 @@ function shuffle(array) {
             
         </footer>
 
-				<div class="mobile_menu__container">
-          <div class="tri">
-            <div class="ang le-full">
-              <a class="SO__logo" href="../../index.html"><img id="headIMG" src="../../assets/suny-online-/images/SUNY-Online-Logo-Final-01.png" alt="Suny Logo"></a>
-              <a href="#" class="mobile_menu__close" style="display: inline;"><i class="fa fa-times" aria-hidden="true"></i></a>
-            </div>
-            <div class="ang le-full">
-              <ul class="navigation__bar">
-                <li><a href="../../index.html" alt="Home">Home</a></li>
-                <!--<li><a href="/programs/">Explore Online Programs</a></li>-->
-                <li><a href="../../contact-us/index.html" alt="Request Info">Request Info</a></li>
-                <li><a href="../../tuition-at-suny/index.html">Affordable Tuition</a></li>
-								<li><a href="../../faq/index.html">FAQs</a></li>
-              </ul>
-            </div>
-            <div class="ang le-full">
-              <h4>Follow us:</h4> 
-              <ul class="social__list">
-                <li><a href="http://www.instagram.com/suny" target="_blank" alt="Instagram, opens in new window"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="http://www.twitter.com/SUNY" target="_blank" alt="Twitter, opens in new window"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="http://www.facebook.com/generationSUNY" target="_blank" alt="Facebook, opens in new window"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="http://www.linkedin.com/company/state-university-of-new-york" target="framename" alt="Linkedin, opens in new window"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="http://www.youtube.com/generationsuny" target="_blank" alt="Request Info, opens in new window"><i class="fab fa-youtube" ></i></a></li>
-              </ul>
-              <div class="phone__number">
-                <a href="tel:+518-445-4140"><img src="../../assets/suny-online-/images/phone.png" alt="An icon depiction a telephone" style="width : 27px; height : 27px;     " />Call 518-445-4140</a>
-              </div>
-            </div>
-          </div>
-				</div>
-			
-                
+<%= render 'layouts/footer' %>
+
 
     </body>
 </html>
-
 
 <%end%>

@@ -117,7 +117,7 @@ class Course < ActiveRecord::Base
 #  }
 
   scope :with_subject_area_id, lambda { |subjectarea_ids|
-     where(:subjectarea_id => [*subjectarea_ids])
+     where(:subjectarea_id => [*subjectarea_ids] )
    }
    scope :with_course_area, lambda { |course_areas|
      puts clean_course_area(course_areas)
@@ -174,7 +174,8 @@ class Course < ActiveRecord::Base
       Course.order(:credit).pluck(:credit).uniq
    end
    def self.options_for_course_area_select
-      Course.order(:course_area).pluck(:course_area).uniq
+      #Course.order(:course_area).pluck(:course_area).uniq
+      Course.joins(:catalog).select('courses.course_area').where('catalogs.active = TRUE').order(:course_area).pluck(:course_area).uniq
    end
 
    def self.options_for_school_select
