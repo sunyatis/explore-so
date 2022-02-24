@@ -1407,7 +1407,7 @@ dropdown-toggle{
    padding: 5px;
    color: #ffff;
    font-size: 1.125rem;
-   margin-right: 80px;
+   margin-right: 35px;
 }
 
 
@@ -1436,6 +1436,9 @@ dropdown-toggle{
        padding-bottom: 2px !important;
        padding-top: 0px !important;
 }
+   .pathways p {
+       font-size: .8rem !important;
+}
 	.jumbotron {
 	    padding: 1.875rem 0 3.125rem 0 !important;
 		height: 425px !important;
@@ -1451,6 +1454,9 @@ dropdown-toggle{
    color: #ffff;
    font-size: 1.0rem;
    margin-right: 80px;
+}
+   .pathways p {
+       font-size: 1.0rem !important;
 }
 
 

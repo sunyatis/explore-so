@@ -1,0 +1,120 @@
+<div class="tri full SO_grey " id="industry_achievements">
+    <div class="tri">
+        <div class="ang le-full txtC">
+            <h2>Our Achievements</h2>            
+            <p></p>
+        </div>
+        <div class="tri">
+            <style>@assets screen and (max-width: 48em){
+  .acheve{
+  	padding-top: 12.5%;
+  } 
+}
+</style>
+<div class="ang le-half md-third lg-fifth txtC">
+  <div class="counter__image">
+  	<img src="../../assets/suny-online-/images/achievements/Students.png" alt="Suny online achievements"/>
+  </div>
+  <div class="counter__description acheve" style="">
+  </div>
+  <div class="counter__container">
+  
+  	<span class="pre__counter"></span><span class="counter">4000</span><span class="post__counter"></span>
+  </div>
+  <div class="counter__description">Graduates Per Year</div>
+</div><style>@assets screen and (max-width: 48em){
+  .acheve{
+  	padding-top: 12.5%;
+  } 
+}
+</style>
+<div class="ang le-half md-third lg-fifth txtC">
+  <div class="counter__image">
+  	<img src="../../assets/suny-online-/images/achievements/Degrees.png" alt="Suny online achievements"/>
+  </div>
+  <div class="counter__description acheve" style="">
+  </div>
+  <div class="counter__container">
+  
+  	<span class="pre__counter"></span><span class="counter">41</span><span class="post__counter"></span>
+  </div>
+  <div class="counter__description">Degrees</div>
+</div><style>@assets screen and (max-width: 48em){
+  .acheve{
+  	padding-top: 12.5%;
+  } 
+}
+</style>
+<div class="ang le-half md-third lg-fifth txtC">
+  <div class="counter__image">
+  	<img src="../../assets/suny-online-/images/achievements/Completion.png" alt="Suny online achievements"/>
+  </div>
+  <div class="counter__description acheve" style="">
+  </div>
+  <div class="counter__container">
+  
+  	<span class="pre__counter"></span><span class="counter">89%</span><span class="post__counter"></span>
+  </div>
+  <div class="counter__description">Completion</div>
+</div><style>@assets screen and (max-width: 48em){
+  .acheve{
+  	padding-top: 12.5%;
+  } 
+}
+</style>
+<div class="ang le-half md-third lg-fifth txtC">
+  <div class="counter__image">
+  	<img src="../../assets/suny-online-/images/achievements/Years.png" alt="Suny online achievements"/>
+  </div>
+  <div class="counter__description acheve" style="">
+  </div>
+  <div class="counter__container">
+  
+  	<span class="pre__counter"></span><span class="counter">2.5</span><span class="post__counter"></span>
+  </div>
+  <div class="counter__description">Years to Graduate</div>
+</div><style>@assets screen and (max-width: 48em){
+  .acheve{
+  	padding-top: 12.5%;
+  } 
+}
+</style>
+<div class="ang le-half md-third lg-fifth txtC">
+  <div class="counter__image">
+  	<img src="../../assets/suny-online-/images/achievements/Awards.png" alt="Suny online achievements"/>
+  </div>
+  <div class="counter__description acheve" style="">
+  </div>
+  <div class="counter__container">
+  
+  	<span class="pre__counter"></span><span class="counter">39</span><span class="post__counter"></span>
+  </div>
+  <div class="counter__description">Awards</div>
+</div>        </div>
+    </div>
+</div>
+
+<script>
+    jQuery( document ).ready( function($) {
+        "use strict";
+        var counterUp = window.counterUp["default"];
+        var $counters = $(".counter");
+        $counters.each(function (ignore, counter) {
+			var waypoint = new Waypoint( {
+				element: $(this), 
+				handler: function() { 
+                    var txt = $(counter).text(),
+                        num = parseInt(txt,10),
+                        dur = 3000, delay = 16;
+                    if (num < 10) { dur = 2000; delay = 8; }
+					counterUp(counter, {
+						duration: dur,
+						delay: delay
+					}); 
+					this.destroy();
+				},
+				offset: 'bottom-in-view',
+			} );
+		});
+	});
+</script>

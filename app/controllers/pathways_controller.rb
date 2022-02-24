@@ -14,8 +14,7 @@ end
 
 def business
   @pathways = Pathway.where(:landing_page => 'business').uniq
-  render 'business', layout: false
-  
+  render 'business', layout: false  
 end
 
 def computerscience_it

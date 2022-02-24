@@ -144,32 +144,41 @@
   background-color: white;
   }
 </style>
-<div class="tri full" id="hero" style="background-image:url('../../assets/suny-online-/images/industries/engineering.jpg');background-position: center;" alt="Suny hero image">
-    <div class="tri" id="BC">
-        <div class="ang le-full md-third-2">
-            <h1><%= pathway.title %></h1>
-            <p><%=raw pathway.headline %></p>
-            
+<div class="tri full" id="heropath" style="background-image:url('../../assets/suny-online-/images/headers/Engineering.png');background-position: center;" alt="Suny hero image">
+  <section class="row-search">
+  	   <div class="center">
+  			   <img src="https://explore.suny.edu/assets/suny-online-/images/SUNYOnline-logowhite-silo.png">
+  		   </div>
+		   
+  	   <h1><%= pathway.title.upcase %></h1>
+	   
+  	   <h2>Learn your way with SUNY.</h2>
+	   
+  	    <h3><%=raw pathway.headline %></h3>
+	   
+  	  </section>
 
-	      </div>
-	  </div>
-    </div>
-</div>
-</div>
+  	  </div>
+          </div>
+          <!--div class="ang le-full md-half">
+              <a href="#form__anchor" class="scroll__me cta__ghost hide-md hide-lg" alt="contact us">Contact Us For More Info <i class="fas fa-chevron-right"></i></a>
+          </div-->
+
+  </div>
 <div class="tri full" id="formAbout">
     <div class="tri has__overlap">
         <div class="ang le-full md-10 about__desc hide-sm">
-            <h3><strong>About <%= pathway.title %></strong></h3>
+            <h3><strong>ABOUT <%= pathway.title.upcase %></strong></h3>
 <p><%=raw pathway.description %></p>
-          <a class="cta__blue scroll_me" id="about__desc" href="#single__program_list" data-title="Accounting" alt="scroll to form">See All Programs <i class="fas fa-chevron-down"></i></a>
+          <a class="cta__white scroll_me" id="about__desc" href="#single__program_list" data-title="Engineering" alt="scroll to form">See All Programs <i class="fas fa-chevron-down"></i></a>
         </div>
         <div class="ang le-full md-14 about__form">
         	<a href="#" id="form__anchor" alt="form anchor"></a>
-            <h3>I want to study <%= pathway.title.downcase %></h3>
+            <h3>I WANT TO STUDY <%= pathway.title.upcase %></h3>
            <div id="form_fa6380d3-ad64-40de-a3eb-79bda0189db8">Loading...</div><script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src = 'https://engage.suny.edu/register/?id=fa6380d3-ad64-40de-a3eb-79bda0189db8&output=embed&div=form_fa6380d3-ad64-40de-a3eb-79bda0189db8' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</script>
         </div>
         <div class="ang le-full md-10 about__desc hide-md hide-lg">
-            <h3><strong>About <%= pathway.title %></strong></h3>
+            <h3><strong>ABOUT <%= pathway.title %></strong></h3>
 <p><%=raw pathway.description %></p>
             <a alt="contact us" href="#program__list" class="cta__blue">See All Programs <i class="fas fa-chevron-down"></i></a>
         </div>
@@ -181,10 +190,10 @@
 </style><style>.program__list > ul { display:none; }
 </style>
 
-<div class="program__list" id="single__program_list"></div>
+<div class="program__list" id="single__program_list"><ul><li><a href="../index.html">Programs</a></div>
 
 
-<div class="tri full content SO_grey" id="single__program_output" data-industry="Accounting">
+<div class="tri full content SO_grey" id="single__program_output" data-industry="Engineering">
 	<div class="tri">
     <div class="ang le-full txtC">
         <h3>Featured <%= pathway.title %> Programs</h3>
@@ -265,35 +274,35 @@ function shuffle(array) {
             <h3>Our Graduates Work As</h3>            
         	<ul class="grads__list"><li>
   <div class="grad__image">
-    <img src="/assets/suny-online-/images/programs/icons/engineerrole3.png" alt="engineer role" style="width : 174px; height : 174px;     ">
+    <img src="/assets/suny-online-/images/graduate-roles/MechanicalEngineer (rev).png" alt="engineer role" style="width : 174px; height : 174px;     ">
   </div>
   <div class="grad__description">
     Mechanical Engineer
   </div>
 </li><li>
   <div class="grad__image">
-    <img src="/assets/suny-online-/images/programs/icons/engineerrole5.png" alt="engineer role" style="width : 176px; height : 160px;     ">
+    <img src="/assets/suny-online-/images/graduate-roles/ElectricalEngineer (rev).png" alt="engineer role" style="width : 176px; height : 160px;     ">
   </div>
   <div class="grad__description">
     Electrical Engineer
   </div>
 </li><li>
   <div class="grad__image">
-    <img src="/assets/suny-online-/images/programs/icons/engineerrole1.png" alt="engineer role" style="width : 180px; height : 175px;     ">
+    <img src="/assets/suny-online-/images/graduate-roles/BiomedicalEngineer (rev).png" alt="engineer role" style="width : 180px; height : 175px;     ">
   </div>
   <div class="grad__description">
     Biomedical Engineer
   </div>
 </li><li>
   <div class="grad__image">
-    <img src="/assets/suny-online-/images/programs/icons/engineerrole4.png" alt="hvac" style="width : 141px; height : 141px;     ">
+    <img src="/assets/suny-online-/images/graduate-roles/HVAC (rev).png" alt="hvac" style="width : 141px; height : 141px;     ">
   </div>
   <div class="grad__description">
     HVAC Engineer
   </div>
 </li><li>
   <div class="grad__image">
-    <img src="/assets/suny-online-/images/programs/icons/engineerrole2.png" alt="engineer role" style="width : 171px; height : 163px;     ">
+    <img src="/assets/suny-online-/images/graduate-roles/AerospaceEngineering (rev).png" alt="engineer role" style="width : 171px; height : 163px;     ">
   </div>
   <div class="grad__description">
     Aerospace Engineering
@@ -303,151 +312,10 @@ function shuffle(array) {
 </div>
 </div>
 
-<div class="tri full SO__grad_quotes SO_grey" 
-     id="SO__grad_quotes">
-  	<div class="tri">
-      <div class="ang le-half hide-sm"></div>
-      <div class="ang le-full md-half hide-sm">
-          <h3>What Our Graduates Say</h3>
-      </div>
-      <div class="ang le-full">
-          <ul class="quotes__list">
-              <li class="quote__container" 
-                  data-content="&ldquo;I have an amazing success coach who has checked in on me academically, and friendly reminders about registrations, events, etc.&rdquo; ">
-                <p>
-                    &ldquo;I have an amazing success coach who has checked in on me academically, and friendly reminders about registrations, events, etc.&rdquo; 
-                    <span class="quote__name">
-                        - Travell, Empire State College
-                    </span>
-                </p>
-              </li>
-              <li class="quote__container" 
-                  data-content="&ldquo;Between learning so much from my teachers from their online lectures and the activities available to me, most would have no clue that I am an online-only student.&quot;">
-                <p>
-                    &ldquo;Between learning so much from my teachers from their online lectures and the activities available to me, most would have no clue that I am an online-only student.&quot;
-                    <span class="quote__name">
-                        - Monica, SUNY Canton 
-                    </span>
-                </p>
-              </li>
-              <li class="quote__container" 
-                  data-content="&ldquo;One of the reasons I choose SUNY ESC was the flexibility it provided me to continue working full time and finish my degree.  It was one of the best decisions I have made in a long time.&rdquo; ">
-                <p>
-                    &ldquo;One of the reasons I choose SUNY ESC was the flexibility it provided me to continue working full time and finish my degree.  It was one of the best decisions I have made in a long time.&rdquo; 
-                    <span class="quote__name">
-                        - Nicole, Empire State College 
-                    </span>
-                </p>
-              </li>
-          </ul>
-      </div>
-	</div>
+<%= render '/pathways/quotes' %>
       
-	       <div class="quotes__background" style="background-image:url('../../assets/suny-online-/images/Brian_Styk_ESC Student Life - Lindsay Decker 10.jpg');"></div> <!--gradsSayIMG.png-->
-	 </div>
-  
-<style>
-  
-</style><style>#industry_achievements {
-		background-image:url('../../assets/suny-online-/images/Group-4@2x.png');
-        padding-bottom: 5%;
-	}
-</style>
-<div class="tri full SO_grey " id="industry_achievements">
-    <div class="tri">
-        <div class="ang le-full txtC">
-            <h2>Our Achievements</h2>            
-            <p></p>
-        </div>
-        <div class="tri">
-            <style>@assets screen and (max-width: 48em){
-  .acheve{
-  	padding-top: 12.5%;
-  } 
-}
-</style>
-<div class="ang le-half md-third lg-fifth txtC">
-  <div class="counter__image">
-  	<img src="../../assets/suny-online-/images/achievements/industryAcheive1.png" alt="Suny online achievements"/>
-  </div>
-  <div class="counter__description acheve" style="">
-  </div>
-  <div class="counter__container">
-  
-  	<span class="pre__counter"></span><span class="counter">4000</span><span class="post__counter"></span>
-  </div>
-  <div class="counter__description">Graduates Per Year</div>
-</div><style>@assets screen and (max-width: 48em){
-  .acheve{
-  	padding-top: 12.5%;
-  } 
-}
-</style>
-<div class="ang le-half md-third lg-fifth txtC">
-  <div class="counter__image">
-  	<img src="../../assets/suny-online-/images/achievements/industryAcheive2.png" alt="Suny online achievements"/>
-  </div>
-  <div class="counter__description acheve" style="">
-  </div>
-  <div class="counter__container">
-  
-  	<span class="pre__counter"></span><span class="counter">41</span><span class="post__counter"></span>
-  </div>
-  <div class="counter__description">Degrees</div>
-</div><style>@assets screen and (max-width: 48em){
-  .acheve{
-  	padding-top: 12.5%;
-  } 
-}
-</style>
-<div class="ang le-half md-third lg-fifth txtC">
-  <div class="counter__image">
-  	<img src="../../assets/suny-online-/images/achievements/industryAcheive3.png" alt="Suny online achievements"/>
-  </div>
-  <div class="counter__description acheve" style="">
-  </div>
-  <div class="counter__container">
-  
-  	<span class="pre__counter"></span><span class="counter">89%</span><span class="post__counter"></span>
-  </div>
-  <div class="counter__description">Completion</div>
-</div><style>@assets screen and (max-width: 48em){
-  .acheve{
-  	padding-top: 12.5%;
-  } 
-}
-</style>
-<div class="ang le-half md-third lg-fifth txtC">
-  <div class="counter__image">
-  	<img src="../../assets/suny-online-/images/achievements/industryAcheive4.png" alt="Suny online achievements"/>
-  </div>
-  <div class="counter__description acheve" style="">
-  </div>
-  <div class="counter__container">
-  
-  	<span class="pre__counter"></span><span class="counter">2.5</span><span class="post__counter"></span>
-  </div>
-  <div class="counter__description">Years to Graduate</div>
-</div><style>@assets screen and (max-width: 48em){
-  .acheve{
-  	padding-top: 12.5%;
-  } 
-}
-</style>
-<div class="ang le-half md-third lg-fifth txtC">
-  <div class="counter__image">
-  	<img src="../../assets/suny-online-/images/achievements/industryAcheive5.png" alt="Suny online achievements"/>
-  </div>
-  <div class="counter__description acheve" style="">
-  </div>
-  <div class="counter__container">
-  
-  	<span class="pre__counter"></span><span class="counter">39</span><span class="post__counter"></span>
-  </div>
-  <div class="counter__description">Awards</div>
-</div>        </div>
-    </div>
-</div>
+
+<%= render '/pathways/achievements' %>
 
 <script>
     jQuery( document ).ready( function($) {
@@ -473,11 +341,14 @@ function shuffle(array) {
 		});
 	});
 </script>
+	<style>.featured_program__list > ul { display:none; }
+		</style>
 	
 	<div class="tri full content SO_white_grey" id="BC">
 	    <div class="tri">
-	        <div class="ang le-full txtC">
-	            <h3><%= pathway.title %> Degree Pathway - Learn Your Way</h3>
+	        <div id="learn_your_way" class="ang le-full txtC">
+	            <h2><%= pathway.title.upcase %> DEGREE PATHWAY</h2>
+				<h3>Learn your way with SUNY.</h3>
 	<p><%=raw pathway.learn_your_way_text %></p>
 	        </div>
        
@@ -490,108 +361,71 @@ function shuffle(array) {
 			</div>
 		</div>
 	</div>
-	
-	<div class="tri full content SO_grey_lite" id="BC">
-	    <div class="tri">
-	        <div class="ang le-full txtC">
-	            <h3>Find the Best Fit for You.</h3>
-	        </div>
-	    </div>
-	</div>
+
 
 	<style>
   
 	</style><style>.featured_program__list > ul { display:none; }
 	</style>
 
+<div class="tri full content SO_grey" id="single__program_output" data-industry="Engineering">
+	<div class="tri">
+    <div id="best_fit" class="ang le-full txtC">
+        <h3>Find the Best Fit for You.</h3>
+    </div>
 
 
-<div class="tri full scroll_me" id="featuredPrograms_1">
-	    <div class="featured_program__list" ></div>
-	 
-	  <div id="featured_program__output" class="featured_programs tri">
-			<div id="featured_program__0" class="featured_program__box"><div id="program__metadata_id1" class="filter__program filter__degree filter__campus"><div class="featured_program__image" style="background-image:url('/assets/suny-online-/images/laptopman.png');"></div>
-			  
+		    <div class="ang le-full">
+				<ul class="list" data-num="2">
+			
+					<li id="single_program__1" class="single__program_box loaded">
+					<div id="program__metadata_id4" class="filter__program filter__degree filter__campus">
+				  <div class="featured_program__image" style="background-image:url('/assets/suny-online-/images/laptopman.png');"></div>
 			  <h4 class="filter__program_title">General Studies Degrees</h4>
 			  <h5 class="filter__program_online">100% Online</h5>
 			  <div class="tri">
-		        <div class="ang le-full txtC">
-		            <a href="<%= pathway.best_fit_link_1%>" class="cta__blue_1" alt="See All General Studies Degrees" title="See All General Studies Degrees">Learn More</a>
+		        <div id="learn_more_box" class="ang le-full txtC">
+					<p>LEARN MORE</p>
 		        </div>
 			  </div>
-			</div></div>
-			<div id="featured_program__1" class="featured_program__box"><div id="program__metadata_id1" class="filter__program filter__degree filter__campus"><div class="featured_program__image" style="background-image:url('/assets/suny-online-/images/atom.png');"></div>
-			  
+			  </div><a href="<%= pathway.best_fit_link_1%>" class="program__link"></a></li>
+	  		<li id="single_program__2" class="single__program_box loaded">
+	  			<div id="program__metadata_id5" class="filter__program filter__degree filter__campus">
+	  		  	  <div class="featured_program__image" style="background-image:url('/assets/suny-online-/images/atom.png');"></div>			  
 			  <h4 class="filter__program_title">Science and Technology Degrees</h4>
 			  <h5 class="filter__program_online">100% Online</h5>
-			  <div class="tri">
-		        <div class="ang le-full txtC">
-		            <a href="<%= pathway.best_fit_link_2%>" class="cta__blue_1" alt="See All Science and Technology Degrees" title="See All Science and Technology Degrees">Learn More</a>
-		        </div>
-			  </div>
-			</div></div>
-			<div id="featured_program__2" class="featured_program__box"><div id="program__metadata_id1" class="filter__program filter__degree filter__campus" ><div class="featured_program__image" style="background-image:url('/assets/suny-online-/images/graduate.png');"></div>
+  		  		<div class="tri">
+  	        		<div id="learn_more_box" class="ang le-full txtC">
+  	         		   <p>LEARN MORE</p>
+  	        	   </div>
+  		  	 	</div>
+  			</div><a href="<%= pathway.best_fit_link_2%>" class="program__link"></a></li>
+			
+			<li id="single_program__2" class="single__program_box loaded">
+				<div id="program__metadata_id5" class="filter__program filter__degree filter__campus">
+			  	  <div class="featured_program__image" style="background-image:url('/assets/suny-online-/images/graduate.png');"></div>
 			  
 			  <h4 class="filter__program_title">Graduate Degrees in Science and Technology</h4>
 			  <h5 class="filter__program_online">100% Online</h5>
-			  <div class="tri">
-		        <div class="ang le-full txtC">
-		            <a href="<%= pathway.best_fit_link_3%>" class="cta__blue_1" alt="See All Graduate Degrees in Science and Technology" title="See All Graduate Degrees in Science and Technology">Learn More</a>
-		        </div>
-			  </div>
-			</div></div>
+ 		  		<div class="tri">
+ 	        		<div id="learn_more_box" class="ang le-full txtC">
+ 	         		   <p>LEARN MORE</p>
+ 	        	   </div>
+ 		  	 	</div>
+ 			</div><a href="<%= pathway.best_fit_link_2%>" class="program__link"></a></li>
 	  
-			
-	
+		</ul>
 	
 	    </div>
-	    <div class="tri">
-	        <div class="ang le-full txtC">
-	            <a href="https://explore.suny.edu/" class="cta__blue" alt="See All Programs" title="See All Programs">See All Programs</a>
-	        </div>
-	    </div>
-	</div>
-	
-	
-	
-
+    <!--div class="ang le-full txtC">
+        <ul class="pagination"></ul><br>
+   	
+    </div-->
+<%= render 'pathways/all_programs' %>
 </div>
-<style>
-	
-</style>
 
-<script>    
-	var filterList = $('.program_filter__list > ul > li > ul > li'), filterList_count = filterList.length, i = 0;
-    
-    filterList.each(function() {
-        
-        var indid = $("a:first", this).text(), indurl = $("a:first", this).attr('href'), indslug = indid.replace(/\s+/g, '_').toLowerCase();
-        
-        $('#hero_filter__industry > .hero_filter__select > .hero_filter__options').append(
-            '<span data-value="'+indslug+'" tabindex="0">'+indid+'</span>'
-        );
-        
-        $(this).find('li').each(function() {
-            var url = $(this).find('a').attr('href'), name = $(this).find('a').text();
-            $('#hero_filter__program > .hero_filter__select > .hero_filter__options').append(
-                '<span data-href="'+url+'" data-industry="'+indslug+'" tabindex="0" class="heroItems">'+name+'</span>'
-            );
-        }).promise().done( function(){
-          $('#hero_filter__program > .hero_filter__select > .hero_filter__options').append(
-              '<span data-href="'+indurl+'" data-industry="'+indslug+'" tabindex="0">View All Programs</span>'
-          );
-        });
-        
-        i++; if (i == filterList_count) { $('#hero_filter').removeClass('loading'); }
-    });
-  
-   $(document).on("click", ".hero_filter__options span", function (e) {
-     setTimeout(function(){
-	  	$( ".hero_filter__select" ).last().addClass( "open" ); 
-     }, 300);
-     e.stopPropagation();
- 	});
-</script>	
+</div>	
+		
 <%= render 'layouts/footer' %>
 
 
