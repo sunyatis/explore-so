@@ -98,27 +98,6 @@
     <!--/main-->
 		</main>
 
-<%= render(
-  partial: 'programs/rfi_modal',
-  #locals: { programs: @programs }
-) %>
 
 		
 <%= render 'layouts/footer' %>
-<input id="reloadValue" type="hidden" name="reloadValue" value="" />
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  </body>
-  
-</html>
-
-<script>
-    $(document).ready(function () {
-        $('.dropdown-toggle').dropdown();
-			
-    });
-	$(window).on('popstate', function(event) {
-	 location.reload();
-	});
-	
-
-</script>

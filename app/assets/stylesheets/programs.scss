@@ -238,7 +238,7 @@ body>header{
 }
 .program-content>header nav ul li.selected{
     color:#545454;
-    border-bottom:5px solid #ffe512;
+    border-bottom:5px solid #D44572;
     cursor:default
 }
  .info-block{
@@ -783,7 +783,7 @@ body>header{
     margin:0;
     padding:1.5625rem;
     background-color:#f5f5f5;
-    border-top:5px solid #ffe512;
+    border-top:5px solid #D44572;
     border-radius:3px
 }
 @media screen and (max-width:820px){
@@ -1009,7 +1009,7 @@ body>header{
     font-size:.9375rem;
     font-weight:500;
     line-height:1.25rem;
-    color:#295c23 !important;
+    color:#00539B !important;
     text-decoration:none;
     background-color:transparent;
     border:0
@@ -1022,9 +1022,9 @@ body>header{
     display:flex;
     flex-flow:column nowrap;
     width:100%;
-    background-color:#004c93;
+    background-color:#781E7F;
     padding:1.5625rem 0;
-    border-bottom:2px solid #004c93
+    border-bottom:2px solid #781E7F
 }
 #program-display header .stats ul{
     flex-flow:row nowrap;
@@ -1086,7 +1086,7 @@ body>header{
     align-items:center;
     padding:2.5rem 0;
     color:#fff;
-    background-color:#004c93
+    background-color:#781E7F
 }
 #program-display .rfi-banner h4{
     font-size:1rem;
