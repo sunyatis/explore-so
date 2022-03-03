@@ -84,6 +84,7 @@ ActiveAdmin.register Course do
                },
                after_batch_import: ->(importer) {
                   Course.where(local_course_id: "Course ID").delete_all
+                  Course.where(local_course_id: "Course ID").delete_all
                   Course.where(local_course_id: nil).delete_all
                },
  :template_object => ActiveAdminImport::Model.new(

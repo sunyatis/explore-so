@@ -1887,6 +1887,7 @@ h4 { font-size:35px; }
  	color:#ffffff;
 	font-weight: 400 !important;
 	margin-bottom: 40px!important;
+	line-height: 1.75rem !important;
 }
 .grads__list {
     width: 100%;
@@ -2940,6 +2941,17 @@ body[data-page="SUNY Online"] #formAbout .about__form,
   .mobile_menu__container h4 {
  		margin-top:4em; 
 	}
+	#single__program_output .list.filtered .single__program_box, #single__program_output .list.searched .single__program_box, #single__program_output .list .single__program_box {
+	  margin-left: 0px;
+	  margin-right: 24px;
+	}
+	#learn_your_way h3{
+		font-weight: 500 !important;
+		font-size: 30px !important;
+	}
+	#BC{
+		padding-bottom:0px !important;
+	}
 }
 
 /* Smaller than Max Width CSS */
@@ -3000,6 +3012,7 @@ body[data-page="SUNY Online"] #formAbout .about__form,
 	font-weight: 400 !important;
 	margin-bottom: 40px !important;
 	margin-top: 20px !important;
+	line-height: 1.75rem !important;
 }
 
 #industry_achievements {
@@ -3015,6 +3028,7 @@ body[data-page="SUNY Online"] #formAbout .about__form,
 	color:#781E7F !important;
 	padding-top: 15px !important;
 	padding-bottom: 30px !important;
+	line-height: 1.75rem !important;
 	
 }
 #learn_your_way h3{

@@ -7474,6 +7474,7 @@ body > footer .ranku-bar a {
   display: flex;
   list-style-type: none;
   flex-flow: row nowrap;
+  padding-inline-start: 0px !important;
 }
 
 @media screen and (max-width: 820px) {
@@ -7652,7 +7653,7 @@ body > footer .ranku-bar a {
 /* line 386, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl {
   display: inline-block !important;
-  margin: 0 0 .3125rem 0 !important;
+  margin: 0 .5rem .3125rem .5rem !important;
   padding: 0 !important;
   font-size: 1.375rem !important;
   font-weight: 600 !important;
@@ -7661,22 +7662,22 @@ body > footer .ranku-bar a {
   text-align: center !important;
 }
 
-/* line 397, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 396, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 #owl-demo {
   margin: 1.5625rem 0;
 }
 
-/* line 400, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 399, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-carousel.owl-loaded {
   /*margin: 1.5625rem 0;*/
 }
 
-/* line 404, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 403, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .row.carousel {
   padding: 2.5rem 0 3.125rem 0 !important;
 }
 
-/* line 408, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 407, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 #owl-demo .item {
   display: block;
   /*padding: 30px 0px;*/
@@ -7688,7 +7689,7 @@ body > footer .ranku-bar a {
   text-align: left;
 }
 
-/* line 418, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 417, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 #owl-demo2 .item {
   display: block;
   /*padding: 30px 0px;*/
@@ -7700,7 +7701,7 @@ body > footer .ranku-bar a {
   text-align: left;
 }
 
-/* line 428, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 427, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 #owl-demo3 .item {
   display: block;
   /*padding: 30px 0px;*/
@@ -7712,68 +7713,68 @@ body > footer .ranku-bar a {
   text-align: left;
 }
 
-/* line 439, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 438, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-theme .owl-controls .owl-buttons div {
   padding: 5px 9px;
 }
 
-/* line 443, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 442, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-theme .owl-buttons i {
   margin-top: 2px;
 }
 
-/* line 446, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 445, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-theme .owl-dots {
   /*display:none;*/
 }
 
-/* line 452, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 451, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-theme .owl-controls .owl-buttons div {
   position: absolute;
 }
 
-/* line 456, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 455, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-theme .owl-controls .owl-buttons .owl-prev {
   left: -45px;
   top: 55px;
 }
 
-/* line 461, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 460, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-theme .owl-controls .owl-buttons .owl-next {
   right: -45px;
   top: 55px;
 }
 
-/* line 465, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 464, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-nav.disabled {
   display: none;
 }
 
-/* line 468, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 467, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .carousel-wrap {
   width: 1000px;
   margin: auto;
   position: relative;
 }
 
-/* line 473, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 472, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-carousel .owl-nav {
   overflow: hidden;
   height: 0px;
 }
 
-/* line 478, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 477, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
   background: #2caae1;
 }
 
-/* line 484, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 483, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-carousel .item {
   text-align: center;
 }
 
-/* line 487, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 486, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-carousel .nav-btn {
   height: 47px;
   position: absolute;
@@ -7782,36 +7783,36 @@ body > footer .ranku-bar a {
   top: 100px !important;
 }
 
-/* line 495, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 494, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-carousel .owl-prev.disabled,
 .owl-carousel .owl-next.disabled {
   pointer-events: none;
   opacity: 0.2;
 }
 
-/* line 501, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 500, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-carousel .prev-slide {
   background: url(nav-icon.png) no-repeat scroll 0 0;
   left: -33px;
 }
 
-/* line 505, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 504, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-carousel .next-slide {
   background: url(nav-icon.png) no-repeat scroll -24px 0px;
   right: -33px;
 }
 
-/* line 509, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 508, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-carousel .prev-slide:hover {
   background-position: 0px -53px;
 }
 
-/* line 512, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 511, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-carousel .next-slide:hover {
   background-position: -24px -53px;
 }
 
-/* line 516, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 515, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 span.img-text {
   text-decoration: none;
   outline: none;
@@ -7826,37 +7827,37 @@ span.img-text {
   text-transform: capitalize;
 }
 
-/* line 529, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 528, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 span.img-text:hover {
   color: #2caae1;
 }
 
-/* line 533, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 532, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 539, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 538, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 body, button {
   font-family: 'Helvetica Neue', arial, sans-serif;
 }
 
-/* line 543, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 542, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .controls {
   padding: 2%;
   background: #333;
   color: #eee;
 }
 
-/* line 549, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 548, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 label {
   font-weight: 300;
   margin: 0 .4em 0 0;
 }
 
-/* line 554, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 553, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 button {
   display: inline-block;
   padding: .4em .8em;
@@ -7868,17 +7869,17 @@ button {
   cursor: pointer;
 }
 
-/* line 566, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 565, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 button:focus {
   outline: 0 none;
 }
 
-/* line 570, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 569, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 button + label {
   margin-left: 1em;
 }
 
-/* line 574, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 573, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .container {
   padding: 2% 2% 0;
   text-align: justify;
@@ -7887,21 +7888,21 @@ button + label {
   -webkit-backface-visibility: hidden;
 }
 
-/* line 583, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 582, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .container:after {
   content: '';
   display: inline-block;
   width: 100%;
 }
 
-/* line 589, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 588, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .container .mix,
 .container .gap {
   display: inline-block;
   width: 49%;
 }
 
-/* line 595, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 594, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .container .mix {
   text-align: left;
   background: #03899c;
@@ -7909,17 +7910,17 @@ button + label {
   display: none;
 }
 
-/* line 602, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 601, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .container .mix.category-1 {
   border-top: 2px solid limegreen;
 }
 
-/* line 606, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 605, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .container .mix.category-2 {
   border-top: 2px solid yellow;
 }
 
-/* line 610, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 609, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .container .mix:after {
   content: attr(data-myorder);
   color: white;
@@ -7930,7 +7931,7 @@ button + label {
   font-weight: 700;
 }
 
-/* line 620, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 619, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .container .mix:before {
   content: '';
   display: inline-block;
@@ -7938,20 +7939,20 @@ button + label {
 }
 
 @media all and (min-width: 420px) {
-  /* line 627, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+  /* line 626, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
   .container .mix,
   .container .gap {
     width: 32%;
   }
 }
 @media all and (min-width: 640px) {
-  /* line 634, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+  /* line 633, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
   .container .mix,
   .container .gap {
     width: 23.5%;
   }
 }
-/* line 640, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 639, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .field-grid button {
   justify-content: center;
   padding: .4375rem 1.25rem .875rem 1.25rem;
@@ -7965,29 +7966,29 @@ button + label {
   padding-bottom: 31px;
 }
 
-/* line 652, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 651, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 button.active {
   border-bottom: 5px solid #D44572;
 }
 
-/* line 655, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 654, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 #field-grid-list {
   margin-left: 19px;
   height: 100px;
 }
 
-/* line 659, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 658, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 #level_filter {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-/* line 663, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 662, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .filter.adv.active {
   padding-bottom: 4px !important;
 }
 
-/* line 667, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 666, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .info-block {
   align-items: center;
   padding-top: 2.5rem;
@@ -7997,34 +7998,34 @@ button.active {
   border-left: 0px solid #ffe512;
 }
 
-/* line 675, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 674, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .campuses {
   padding-top: 2.5rem;
   background-color: #f5f5f5;
 }
 
-/* line 679, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 678, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .home.rounded-button.small {
   width: 10%;
 }
 
-/* line 683, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 682, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 blockquote {
   border-left: 0px solid #eee !important;
 }
 
-/* line 687, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 686, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 button:focus {
   background-color: #ffffff !important;
   color: #000000 !important;
 }
 
-/* line 692, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 691, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 dl, menu, ol, ul {
   margin: 0;
 }
 
-/* line 695, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
+/* line 694, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 dl {
   margin-top: 0;
   margin-bottom: 0px !important;
