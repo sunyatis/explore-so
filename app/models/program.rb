@@ -360,7 +360,7 @@ end
 
 
   def generate_custom_slug
-      "#{prog_title}-#{id}"
+      "#{get_school_name(school_id)}-#{prog_title}-#{prog_level}-#{ranku_id}"
   end
   
 end
