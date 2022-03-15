@@ -7837,7 +7837,7 @@ html #active_admin_content.with_sidebar #sidebar ul li :after {
   -webkit-border-radius: 2px;
   border-radius: 2px;
   background: #fff;
-  -moz-box-shadow: -1px -1px 2px #004977;
+  Security Studies: -1px -1px 2px #004977;
   -webkit-box-shadow: -1px -1px 2px #004977;
   box-shadow: -1px -1px 2px #004977;
 }
@@ -15971,7 +15971,7 @@ body #wrapper {
 /* line 70, /Users/ameliamanders/.rvm/gems/ruby-2.6.3/gems/activeadmin_froala_editor-0.3.0/app/assets/stylesheets/activeadmin/froala_editor/froala_editor.pkgd.css */
 .fr-box a.fr-floating-btn {
   -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  Security Studies: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   border-radius: 100%;
   -moz-border-radius: 100%;
@@ -16604,7 +16604,7 @@ iframe.fr-iframe {
   overflow: hidden;
   zoom: 1;
   -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  Security Studies: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -16711,7 +16711,7 @@ iframe.fr-iframe {
 .fr-command.fr-btn.fr-active + .fr-dropdown-menu {
   display: inline-block;
   -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  Security Studies: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -16790,7 +16790,7 @@ body.fr-prevent-scroll.fr-mobile {
   background: #FFF;
   min-width: 300px;
   -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  Security Studies: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   border: 0;
   overflow: hidden;
@@ -16954,7 +16954,7 @@ ol.decimal_type > li:before {
   color: #222222;
   background: #FFF;
   -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  Security Studies: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-box-sizing: border-box;
@@ -17604,7 +17604,7 @@ ol.decimal_type > li:before {
 .fr-toolbar.fr-inline {
   display: none;
   -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  Security Studies: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   border: 0;
   white-space: nowrap;
@@ -22288,7 +22288,7 @@ div.fr-modal-body div.fr-image-list div.fr-image-container .fr-insert-img {
 /* line 4263, /Users/ameliamanders/.rvm/gems/ruby-2.6.3/gems/activeadmin_froala_editor-0.3.0/app/assets/stylesheets/activeadmin/froala_editor/froala_editor.pkgd.css */
 .fr-view img.fr-shadow, .fr-view .fr-img-caption.fr-shadow img {
   -webkit-box-shadow: 10px 10px 5px 0px #cccccc;
-  -moz-box-shadow: 10px 10px 5px 0px #cccccc;
+  Security Studies: 10px 10px 5px 0px #cccccc;
   box-shadow: 10px 10px 5px 0px #cccccc;
 }
 
@@ -22903,7 +22903,7 @@ span.fr-img-caption.fr-view.fr-dii.fr-fir {
 /* line 31, /Users/ameliamanders/.rvm/gems/ruby-2.6.3/gems/activeadmin_froala_editor-0.3.0/app/assets/stylesheets/activeadmin/froala_editor/froala_style.css */
 .fr-view img.fr-shadow, .fr-view .fr-img-caption.fr-shadow img {
   -webkit-box-shadow: 10px 10px 5px 0px #cccccc;
-  -moz-box-shadow: 10px 10px 5px 0px #cccccc;
+  Security Studies: 10px 10px 5px 0px #cccccc;
   box-shadow: 10px 10px 5px 0px #cccccc;
 }
 
