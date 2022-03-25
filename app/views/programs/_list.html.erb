@@ -1,3 +1,11 @@
+
+		 <% if @filterrific.with_school_id %> <% @unique_names = @programs.map{|t| t.school.name}.uniq.join(", ") %> <% title "#{@unique_names} Online"  %>
+		 <% meta_desc "SUNY colleges with degrees and certificates listed in the SUNY Online catalog. Search by campus for the online programs offered." %>
+		 <% else %>
+		 <% title "Online Programs"  %>
+		 <% meta_desc "Complete list 750+ online programs from SUNY colleges and universities. Explore certificates, associate, bachelor's, master's and doctorate degrees online." %>
+		 <%end%>
+
 <div id="filterrific_results">
 
 <section class="degree-results row">
@@ -43,7 +51,8 @@
 				</dd>
 			</dl>
 		</div>
-		 <% @programs.each do |programs| %>
+		<% @programs.each do |programs| %>
+		 
 		<li class="full-width">
 			<div class="result">
 				<div class="program">

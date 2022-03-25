@@ -29,6 +29,9 @@ class School < ActiveRecord::Base
      def any_progs(id)
        @progs = Program.where(school_id: id).count
      end
+     def any_courses(id)
+       @courses =  Course.where(id: id).count
+     end
      def list_progs(id)
        @list_progs = Program.where(school_id: id).pluck(:prog_level).uniq
        result = @list_progs.join(" ")
@@ -51,6 +54,9 @@ class School < ActiveRecord::Base
      end
      def doctorate(id)
        @doctorate = Program.where(school_id: id, prog_level: "doctorate").count
+     end
+     def sch(id)
+       @sch = Course.where(school_id: id).count
      end
   
      def self.options_for_school_select

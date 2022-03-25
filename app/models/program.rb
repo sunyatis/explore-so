@@ -362,5 +362,8 @@ end
   def generate_custom_slug
       "#{get_school_name(school_id)}-#{prog_title}-#{prog_level}-#{ranku_id}"
   end
+  def get_name(id)
+     School.find(id).name
+  end
   
 end

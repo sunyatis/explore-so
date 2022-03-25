@@ -3045,8 +3045,14 @@ padding-top: 13px;
 
 #best_fit h3{
 	padding-top: 50px !important;
+	/*padding-bottom: 50px !important;*/
+	color:#000000 !important;
+}
+#best_fit h4{
+	padding-top: 20px !important;
 	padding-bottom: 50px !important;
 	color:#000000 !important;
+	font-weight: 300 !important;
 }
 #learn_more_box{
 	padding-top: 30px;
