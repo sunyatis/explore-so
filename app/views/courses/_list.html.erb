@@ -1,6 +1,10 @@
-<% title "Online Courses"  %>
-<% meta_desc "Search thousands of online courses at SUNY. Find a course by semester, level, school, and start date" %>
-
+<% if @filterrific.with_school_id %> <% @unique_names = @courses.map{|t| t.school.name}.uniq.join(", ") %> <% title "#{@unique_names} Courses Online"  %>
+		 <% meta_desc "Search thousands of online courses at SUNY. Find a course by semester, level, school, and start date" %>
+		 
+<% else %>
+		 <% title "Online Courses" %>
+		 <% meta_desc "Search thousands of online courses at SUNY. Find a course by semester, level, school, and start date" %>
+		 <%end%>
 		 
 <div id="filterrific_results">
 
