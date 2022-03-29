@@ -25,6 +25,8 @@ get '/robots.:format', to: 'home#robots'
   get "/courses/schools", :to => "courses#schools"
   get "/programs/my_programs", :to => "programs#my_programs"
   get "programs/open_suny_programs", :to => "programs#open_suny_programs"
+  get "/construction-supervision", :to => "programs#alfred-state-college-construction-supervision-bachelor-of-technology-1700000000013"
+  
   get "programs/subject_areas", :to => "programs#subject_areas"
   get "programs/schools", :to => "programs#schools"
   get "programs/levels", :to => "programs#levels"
