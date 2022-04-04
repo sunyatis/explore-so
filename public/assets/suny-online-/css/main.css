@@ -3019,6 +3019,7 @@ body[data-page="SUNY Online"] #formAbout .about__form,
 		background-image:url('../../../assets/suny-online-/images/Achievements_Photo_Bar.png');
         padding-bottom: 5%;
 		padding-top: 5%;
+		background-size: cover;
 	}
 #industry_achievements h2{
 	color: #ffffff !important;
