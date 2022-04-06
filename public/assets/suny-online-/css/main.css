@@ -3006,6 +3006,10 @@ body[data-page="SUNY Online"] #formAbout .about__form,
 	text-align: center;
 	margin-bottom: 15px;
 }
+
+.suny_pathways_logo{
+	height:175px;
+}
    
 .feat h3{
 	color: #02235C;
