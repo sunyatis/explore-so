@@ -1052,10 +1052,7 @@ h4 { font-size:35px; }
   .hero_filter__box { 
    	margin-bottom:10px; 
   }
-  #heropath h3 {
-  	display: inline-block;
-  	margin-bottom: 65px !important;
-}
+
 }
 
 
@@ -1124,6 +1121,7 @@ h4 { font-size:35px; }
   #heropath h3 {
     padding-left: 0px !important;
     padding-right: 0px !important;
+    margin-bottom: 65px !important;
   }
   
   #hero p { 
