@@ -59,7 +59,7 @@
 								<div class="description"> 
 									<%= @course.description.html_safe %>
 								</div>
-								<% if @course.cat_id == "3" %>	
+								<% if @course.category.name == "Language Consortium" %>	
 								<div class="description"><i>This online course is part of the <strong>SUNY Language Consortium</strong>. 
 								Before you register for the course, you will be asked to consult with the language department chair on your own <a href="https://online.suny.edu/languagesconsortium/campus-contacts/">campus</a> to be sure that this is the best choice for you. Please consult the <a href="https://online.suny.edu/languagesconsortium/">Language Consortium website</a> to see whether you are on a participating campus.</i></div>
 								<%end%>
