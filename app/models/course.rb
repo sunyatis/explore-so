@@ -23,7 +23,8 @@ class Course < ActiveRecord::Base
                  :with_course_area,
                  :with_level,
                  :with_credit,
-                 :with_category
+                 :with_category,
+                 :with_cat_id
                ]
 
    # default for will_paginate
@@ -130,31 +131,34 @@ class Course < ActiveRecord::Base
   scope :with_credit, lambda { |credits|
     where(:credit => [*credits])
   }
-  scope :with_category, ->(categories){ 
-     return nil  if categories.blank?
-
-     # condition query, parse into individual keywords
-     terms = categories.join(" ").split(/\s+/)
-
+  scope :with_category, lambda { |cat_id|
+    where(:cat_id => [*cat_id])
+  }
+# scope :with_category, ->(categories){ 
+#    return nil  if categories.blank?
+#
+#    # condition query, parse into individual keywords
+#    terms = categories.join(" ").split(/\s+/)
+#
 #    # configure number of OR conditions for provision
 #    # of interpolation arguments. Adjust this if you
 #    # change the number of OR conditions.
-    num_or_conditions = 1
-  #  Course.where("courses.cat_id IN ('2')")
-
-   where(
-    terms.map { |e|
-      or_clauses = [
-         "courses.cat_id IN ('#{e}')"#, 
-        # "courses.cat_id LIKE \'%, #{e}\'", 
-        # "courses.cat_id LIKE \'#{e},%\'", 
-        # "courses.cat_id LIKE \'%, #{e},%\'"
-       ].join(' OR ')
-       "(#{ or_clauses })"
-     }.join(' AND '),
-     *terms.map { |e| [e] * num_or_conditions }.flatten
-   )
-  }
+#   num_or_conditions = 1
+# #  Course.where("courses.cat_id IN ('2')")
+#
+#  where(
+#   terms.map { |e|
+#     or_clauses = [
+#        "courses.cat_id IN ('#{e}')"#, 
+#       # "courses.cat_id LIKE \'%, #{e}\'", 
+#       # "courses.cat_id LIKE \'#{e},%\'", 
+#       # "courses.cat_id LIKE \'%, #{e},%\'"
+#      ].join(' OR ')
+#      "(#{ or_clauses })"
+#    }.join(' AND '),
+#    *terms.map { |e| [e] * num_or_conditions }.flatten
+#  )
+# }
 
    def self.options_for_sorted_by
      [
