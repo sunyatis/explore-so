@@ -263,6 +263,7 @@ class Program < ActiveRecord::Base
        ['Arts & Humanities', 'arts'],
        ['Behavioral Science', 'behavioral_science'],
        ['Business', 'business'],
+       ['Climate & Sustainability', 'climate--sustainability'],
        ['Computer Science', 'computer-science'],
        ['Criminal Justice & Law', 'criminal-justice-law'],
        ['Education', 'education'],
