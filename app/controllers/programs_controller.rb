@@ -124,9 +124,9 @@ def index
 
 
   end
-  #def get_school_name(id)
+ # def get_school_name(id)
   #  School.friendly.find(params[:school_id]).name
-  #end
+ # end
 
 
 

@@ -358,7 +358,9 @@ end
    def should_generate_new_friendly_id?
      new_record? || slug.blank?
    end
-
+   def get_school_name(id)
+     School.friendly.find(id).name
+   end
 
   def generate_custom_slug
       "#{get_school_name(school_id)}-#{prog_title}-#{prog_level}-#{ranku_id}"
