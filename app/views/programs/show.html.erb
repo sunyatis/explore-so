@@ -1,5 +1,5 @@
 <% title "#{@program.prog_title} - #{@program.prog_level.titleize} - #{@program.school.abbv}"  %>
-<link rel="canonical" href="https://explore.suny.edu/<% #{@program.slug} %>" />
+<link rel="canonical" href="https://explore.suny.edu/<%= "#{@program.slug}" %>" />
 <% meta_key "#{@program.meta_keywords}" %>
 <% meta_desc "#{@program.meta_desc}" %>
 <style>
