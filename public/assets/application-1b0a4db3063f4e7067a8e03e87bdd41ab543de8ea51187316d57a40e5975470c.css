@@ -7950,12 +7950,10 @@ blockquote {
   border-left: 0px solid #eee !important;
 }
 
-/* line 686, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
-button:focus {
-  background-color: #ffffff !important;
-  color: #000000 !important;
-}
-
+/*button:focus{
+	background-color: #ffffff !important;
+	color: #000000 !important;
+}*/
 /* line 691, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 dl, menu, ol, ul {
   margin: 0;
