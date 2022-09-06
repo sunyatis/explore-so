@@ -91,7 +91,7 @@ ActiveAdmin.register Course do
  :catalog_id => nil,
  :school_id => nil,
  #:hint => "file will be imported with such header format: 'body','title','author'",
- :csv_headers => ["local_course_id", "course_area", "prefix", "code",  "section", "title",  "description", "prerequisites", "corequisites", "generaleducation_id", "level", "instructor", "credit", "start_date", "end_date", "books_url", "registration_url", "active", "course_method", "cat_id"]
+ :csv_headers => ["local_course_id", "course_area", "prefix", "code",  "section", "title",  "description", "prerequisites", "corequisites", "generaleducation_id", "level", "instructor", "credit", "start_date", "end_date", "active", "course_method", "cat_id"]
   # mass import
 #:csv_headers => ["catalog_id", "local_course_id", "subjectarea_id", "school_id", "course_area", "prefix", "code", "section", "title",  "description", "prerequisites", "corequisites", "generaleducation_id", "level", "instructor", "credit", "start_date", "end_date", "books_url", "registration_url", "active", "course_method", "seats_available", "class_full"] 
  )
