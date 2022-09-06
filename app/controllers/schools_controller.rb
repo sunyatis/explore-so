@@ -20,7 +20,7 @@ end
   #private
 
     def school_params
-      params.require(:school).permit(:name, :address1, :address2, :city, :state, :zip, :school_url, :registration_url, :tuition_url, :financial_aid_url, :campus_type, :registrar_phone, :abbv, :course_registration_url, :bookstore_url)
+      params.require(:school).permit(:name, :address1, :address2, :city, :state, :zip, :school_url, :registration_url, :tuition_url, :financial_aid_url, :campus_type, :registrar_phone, :abbv, :course_registration_url, :bookstore_url, :grad_course_reg_url)
     end
 end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_03_143648) do
+ActiveRecord::Schema.define(version: 2022_08_25_125939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -192,6 +192,7 @@ ActiveRecord::Schema.define(version: 2022_02_03_143648) do
     t.string "abbv"
     t.string "course_registration_url"
     t.string "bookstore_url"
+    t.string "grad_course_reg_url"
     t.index ["slug"], name: "idx_58429_index_schools_on_slug", unique: true
   end
 

@@ -8,7 +8,7 @@ menu parent: 'Manage Navigator', label: 'School'
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :name, :address1, :address2, :city, :state, :zip, :school_url, :registration_url, :tuition_url, :financial_aid_url, :image, :campus_type, :registrar_phone, :abbv, :course_registration_url, :bookstore_url
+  permit_params :name, :address1, :address2, :city, :state, :zip, :school_url, :registration_url, :tuition_url, :financial_aid_url, :image, :campus_type, :registrar_phone, :abbv, :course_registration_url, :bookstore_url, :grad_course_reg_url
   #
   # or
   #
@@ -44,6 +44,9 @@ menu parent: 'Manage Navigator', label: 'School'
       end
       row :bookstore_url do |school|
         link_to school.bookstore_url, school.bookstore_url
+      end
+      row :grad_course_reg_url do |school|
+        link_to school.grad_course_reg_url, school.grad_course_reg_url
       end
       row :created_at
       row :updated_at
@@ -85,6 +88,7 @@ menu parent: 'Manage Navigator', label: 'School'
      f.input :tuition_url, :input_html => { :class => 'single_line'}  
      f.input :financial_aid_url, :input_html => { :class => 'single_line'}
      f.input :course_registration_url, :input_html => { :class => 'single_line'}
+     f.input :grad_course_reg_url, :input_html => { :class => 'single_line'}
      f.input :bookstore_url, :input_html => { :class => 'single_line'} 
      f.input :slug, :input_html => { :class => 'single_line'}
      f.input :abbv, :input_html => { :class => 'single_line'}
