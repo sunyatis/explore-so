@@ -755,7 +755,7 @@ a {
 }
 .jumbotron h2 {
     display: inline-block !important;
-    width: 41.375rem !important;
+    /*width: 41.375rem !important;*/
     margin-bottom: 15px !important;
     text-align: center;
     font-size: 1.125rem !important;
@@ -1477,4 +1477,23 @@ dropdown-toggle{
 	}
 
 
+}
+.buttons-container{
+margin-top:50px;
+}
+
+div.buttons-container button {
+  border: 1px solid #2C9B9B;
+  background: #33A7AC;
+  margin: 5px; 
+  width: 100px;
+  padding: 0.7rem 0.625rem !important;
+  font-weight: 400 !important;
+  line-height: 1.25rem !important;
+  border-radius:0px;
+}
+div.buttons-container button.btn-pressed {
+ border: 1px solid #2E74B0;
+ background: #1E6DAD;
+ 
 }

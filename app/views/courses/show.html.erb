@@ -103,19 +103,19 @@
 											<%= image_tag(@course.school.image.url(:large), :align=> "center" ) %>
 											<figcaption>
 												
-						<% if @program.school.campus_type == "Community College"%>	
+						<% if @course.school.campus_type == "Community College"%>	
 						<h4>About our Community College</h4>
 							<p>As a SUNY Community College, we respond to the educational need of all people and their local, state, and global communities. We offer certificate programs and associate degrees, as well as transfer and career services. You will benefit from flexible course scheduling and affordable career exploration.</p>
 						<% end%>
-						<% if @program.school.campus_type == "Technology College"%>	
+						<% if @course.school.campus_type == "Technology College"%>	
 						<h4>About our Technology College</h4>
 							<p>Cutting-edge, hands-on training for in-demand careers is the focus of our technology college. We offer academic programs and degrees in technical, as well as traditional, disciplines. Excellent support services complement the classroom instruction. Internships and on-the-job training provide students with hands-on experience that is sought after by employers.</p>
 						<% end%>
-						<% if @program.school.campus_type == "University Center"%>	
+						<% if @course.school.campus_type == "University Center"%>	
 						<h4>About our University Center</h4>
 							<p>Undergraduate teaching, research and advanced graduate and professional studies are top priorities for the University Centers and Doctoral Degree Granting Institutions. All campuses are research institutions and offer bachelor's, master's and doctoral degrees through a broad range of academic programs. Undergraduate research and honors programs provide students with opportunities to interact one-on-one with renowned national and international faculty.</p>
 						<% end%>
-						<% if @program.school.campus_type == "University College"%>	
+						<% if @course.school.campus_type == "University College"%>	
 						<h4>About our University College</h4>
 							<p>Our university college is a leader in undergraduate instruction. We provide bachelor’s and master’s degrees in liberal arts and sciences and professional disciplines. Student success is our primary focus as evidenced by faculty and staff interactions through honors programs, independent study opportunities, research and study abroad.</p>
 						<% end%>
@@ -149,7 +149,7 @@
 					</li>
 					
 					<li>
-						<dl class="fully-online">
+						<dl class="search-courses">
 							<dt>Search</dt>
 							<dd>Search for an online course by keyword, semester, campus, area, or a combination of each. </dd>
 						</dl>
@@ -157,35 +157,35 @@
 				
 						
 					<li>
-						<dl class="synchronous">
+						<dl class="select-courses">
 							<dt>Select Course</dt>
 							<dd>Select a course from the results list that fits your needs.</dd>
 						</dl>
 					</li>
 						
 					<li>
-						<dl class="asynchronus">
+						<dl class="visit">
 							<dt>Visit College Website</dt>
 							<dd>Click “register now” to visit the college website to register as a “non-credit” or “non-matriculated” student if you are not enrolled at the campus.</dd>
 						</dl>
 					</li>
 					
 					<li>
-						<dl class="tutoring">
+						<dl class="contact-reg">
 							<dt>Contact Registrar</dt>
 							<dd>Contact the registrar’s office or enrollment office to register for the course. Make sure you have the course name and course ID when you register. </dd>
 						</dl>
 					</li>
 					
 					<li>
-						<dl class="concierge">
+						<dl class="transfer">
 							<dt>Transfer Credits</dt>
 							<dd>If you plan to transfer credit for the course, make sure you have reviewed the course with the advisor at your current college to ensure the credits will transfer to your degree program. </dd>
 						</dl>
 					</li>
 					
 					<li>
-						<dl class="experimental-learning">
+						<dl class="locate">
 							<dt>Locate Course Materials</dt>
 							<dd>Once you register for the course, visit the campus bookstore to find the books and materials for the course. You will need the course ID to find the books.</dd>
 						</dl>

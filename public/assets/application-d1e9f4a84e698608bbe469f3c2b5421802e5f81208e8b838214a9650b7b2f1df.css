@@ -6181,18 +6181,54 @@ ul {
     margin-left: 10px;
   }
 }
+/* line 1103, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
+.online-learning ul dl.search-courses:before {
+  background: url("/assets/search_.png") no-repeat top left;
+  background-size: contain;
+}
+
+/* line 1107, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
+.online-learning ul dl.select-courses:before {
+  background: url("/assets/select.png") no-repeat top left;
+  background-size: contain;
+}
+
+/* line 1111, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
+.online-learning ul dl.visit:before {
+  background: url("/assets/collegewebsite.png") no-repeat top left;
+  background-size: contain;
+}
+
+/* line 1115, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
+.online-learning ul dl.contact-reg:before {
+  background: url("/assets/contact.png") no-repeat top left;
+  background-size: contain;
+}
+
+/* line 1119, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
+.online-learning ul dl.transfer:before {
+  background: url("/assets/transfer_credit.png") no-repeat top left;
+  background-size: contain;
+}
+
+/* line 1123, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
+.online-learning ul dl.locate:before {
+  background: url("/assets/locate.png") no-repeat top left;
+  background-size: contain;
+}
+
 @media screen and (max-width: 600px) {
-  /* line 1106, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
+  /* line 1131, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
   .subject_area_cell {
     display: none;
   }
 }
-/* line 1110, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
+/* line 1135, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
 .school_image img {
   width: 3.125rem;
 }
 
-/* line 1114, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
+/* line 1139, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
 .credits_cells {
   text-align: right;
 }

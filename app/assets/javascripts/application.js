@@ -39,6 +39,57 @@ function myFunction() {
 	  
 	}
 	
+	function myFunction2() {
+
+	  var ctext = document.getElementById('c').value
+		  if (ctext=="")
+		  {
+		  	window.location =  "/courses?" + "filterrific[search_query]=" + ctext;
+		  }else
+		  window.location = "/courses?" + "filterrific[search_query]=" + ctext;
+	  
+		}
+	
+	
+  function toggleDiv(divid)
+    {
+ 
+      varon = divid + 'on';
+      varoff = divid + 'off';
+ 
+      if(document.getElementById(varoff).style.display == 'block')
+      {
+      document.getElementById(varoff).style.display = 'none';
+      document.getElementById(varon).style.display = 'block';
+	  var v = document.getElementById("progbutton");
+	         v.className += "btn-pressed";
+			 
+	  var element = document.getElementById("courbutton");
+	  element.classList.remove("btn-pressed");
+      }
+   
+
+  } 
+	
+function toggleDiv2(divid)
+  {
+
+    varon = divid + 'on';
+    varoff = divid + 'off';
+
+    if(document.getElementById(varon).style.display == 'block')
+    {
+    document.getElementById(varon).style.display = 'none';
+    document.getElementById(varoff).style.display = 'block';
+    var v = document.getElementById("courbutton");
+         v.className += "btn-pressed";
+   	  var element = document.getElementById("progbutton");
+   	  element.classList.remove("btn-pressed");
+
+    }
+}
+
+
 
 
 	

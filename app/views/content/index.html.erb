@@ -1,27 +1,65 @@
+		
 		<div class="jumbotron jumbotron-fluid">
+	
+	<div id="mydivon" style="display:block">
+		  			   <section class="row-search">
+						   
+			  		   <h1>750+ SUNY DEGREES AND CERTIFICATES &mdash; ONLINE</h1>
+		   
+			  		   <h2>Same Degree as On Campus. Same Faculty. Low SUNY Tuition. Start Your Search.</h2>
+		   
+		   
+			  		   <form action="<%= '/programs' %>" id="main_search">
+			  			   <select aria-label="Search Degree Filter" id="degree">
+			  				   <option value="" selected="">Degree Level</option>
+			  				   <option value="filterrific[with_prog_level]=certificate">Certificate</option>
+			  				   <option value="filterrific[with_prog_level]=associate">Associate</option>
+			  				   <option value="filterrific[with_prog_level]=bachelor">Bachelor's</option>
+			  				   <option value="filterrific[with_prog_level]=master">Master's</option>
+			  				   <option value="filterrific[with_prog_level]=advanced-certificate">Advanced Certificate</option>
+			  				   <option value="filterrific[with_prog_level]=doctorate">Doctorate</option>
+			  			   </select>
+			  			   <input type="text" id="s" placeholder="What do you want to learn?" aria-label="Search SUNY Online Degree Programs">
+			  			   <input id="searchButton" type="button" onclick="myFunction()" class="home rounded-button pink rounded-button small" value="Search">
+			  		   </form>  
+						   </div>
+						    </section>
+							
+							
+						   
+						    <div id="mydivoff" style="display:none">
+								<section class="row-search">
+		  		   <h1>SUNY UNDERGRADUATE AND GRADUATE COURSES - ONLINE</h1>
+		   
+		  		   <h2>Multiple start dates and levels. Learn a skill or transfer the credits. Start your course search.</h2>
+		   
+		  		   <form action="<%= '/courses' %>" id="main_search">
+		  			   <input type="text" id="c" placeholder="What do you want to learn?" aria-label="Search SUNY Online Degree Programs">
+		  			   <input id="searchButton" type="button" onclick="myFunction2()" class="home rounded-button pink rounded-button small" value="Search">
+		  		   </form>
+				   
+				   </div>
+		  		  </section>
 
-			   <section class="row-search">
-		   <h1>750+ SUNY DEGREES AND CERTIFICATES &mdash; ONLINE</h1>
-		   
-		   <h2>Same Degree as On Campus. Same Faculty. Low SUNY Tuition. Start Your Search.</h2>
-		   
-		   
-		   <form action="<%= '/programs' %>" id="main_search">
-			   <select aria-label="Search Degree Filter" id="degree">
-				   <option value="" selected="">Degree Level</option>
-				   <option value="filterrific[with_prog_level]=certificate">Certificate</option>
-				   <option value="filterrific[with_prog_level]=associate">Associate</option>
-				   <option value="filterrific[with_prog_level]=bachelor">Bachelor's</option>
-				   <option value="filterrific[with_prog_level]=master">Master's</option>
-				   <option value="filterrific[with_prog_level]=advanced-certificate">Advanced Certificate</option>
-				   <option value="filterrific[with_prog_level]=doctorate">Doctorate</option>
-			   </select>
-			   <input type="text" id="s" placeholder="What do you want to learn?" aria-label="Search SUNY Online Degree Programs">
-			   <input id="searchButton" type="button" onclick="myFunction()" class="home rounded-button pink rounded-button small" value="Search">
-		   </form>
-		  </section>
-
+<section class="row-search">
+	
+	<div class="buttons-container">
+	  <button name="action1" id="progbutton" class="btn-pressed" onclick="toggleDiv('mydiv');">Programs</button>
+	  <button name="action2" id="courbutton" onclick="toggleDiv2('mydiv');">Courses</button>
+	 
+	</div>
+	
+	
+	
+		 
+</section>
+		  
+		  
 		  </div>
+		  
+		  
+		  
+
 
 
 <section id="home">
