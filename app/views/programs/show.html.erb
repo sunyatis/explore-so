@@ -8,15 +8,10 @@
 	}
 	</style>
 	
-<% if @program.open_suny == 'SUNY Online'%>
-	<%= render(
-	  partial: 'programs/das',
-	  locals: { programs: @programs }
-	) %>
-<% else %>
+
 	<%= render(
 	  partial: 'programs/regshow',
 	  locals: { programs: @programs }
 	) %>
-<% end %>
+
 
