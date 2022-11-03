@@ -118,24 +118,21 @@ ActiveAdmin.register Program do
         f.li "<li><div class='aa_label_level'><h3>List program courses</h3</div></li>".html_safe 
         f.input :prog_courses, as: :froala_editor
       end
-      tab 'DaS Information', {class: 'ui-tabs-active'} do
-        f.li "<li><div class='aa_label_level'><h3>What is the application URL?</h3</div></li>".html_safe 
-        f.input :apply_now_url
-        f.hr
-        f.li "<li><div class='aa_label_level'><h3>What is the appointment URL?</h3</div></li>".html_safe 
-        f.input :prog_appt_link
-        f.hr
-         f.li "<li><div class='aa_label'><h3>Does this program belongs to a pathway?</h3</div></li>".html_safe
-         f.input :das_area, as: :select, collection: Program.options_for_das_area
-         f.hr
-          f.li "<li><div class='aa_label'><h3>Instate resident cost of courses?</h3</div></li>".html_safe
-          f.input :prog_cost_inst
-          f.hr
-           f.li "<li><div class='aa_label'><h3>Out of state resident cost for course?</h3</div></li>".html_safe
-           f.input :prog_cost_outst
- 
-      end
        tab 'Additional Info', {class: 'ui-tabs-active'} do
+         f.li "<li><div class='aa_label_level'><h3>What is the application URL?</h3</div></li>".html_safe 
+         f.input :apply_now_url
+         f.hr
+         #f.li "<li><div class='aa_label_level'><h3>What is the appointment URL?</h3</div></li>".html_safe 
+         #f.input :prog_appt_link
+         #f.hr
+          #f.li "<li><div class='aa_label'><h3>Does this program belongs to a pathway?</h3</div></li>".html_safe
+          #f.input :das_area, as: :select, collection: Program.options_for_das_area
+          #f.hr
+           f.li "<li><div class='aa_label'><h3>Instate resident cost of courses?</h3</div></li>".html_safe
+           f.input :prog_cost_inst
+           f.hr
+            f.li "<li><div class='aa_label'><h3>Out of state resident cost for course?</h3</div></li>".html_safe
+            f.input :prog_cost_outst
          f.li "<li><div class='aa_label_level'><h3>Course Delivery</h3</div></li>".html_safe 
          f.li "<li><div class='aa_label_level'><h4>What percentage of this degree is online?</h4</div></li>".html_safe 
          f.input :delivery_method, :as => :radio, collection: Program.options_for_delivery_method

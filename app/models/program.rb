@@ -300,8 +300,7 @@ class Program < ActiveRecord::Base
   end
     def self.options_for_open_suny
       [
-         ['SO Signature', 'SUNY Online'],
-         ['SO Plus', 'Open SUNY'],
+         ['SUNY Online Plus', 'Open SUNY'],
          ['No', 'No'],
       ]
     
