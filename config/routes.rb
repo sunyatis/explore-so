@@ -27,7 +27,21 @@ get '/robots.:format', to: 'home#robots'
   get "programs/open_suny_programs", :to => "programs#open_suny_programs"
   get "programs/construction-supervision", :to => "programs#alfred-state-college-construction-supervision-bachelor-of-technology-1700000000013"
   
-  get "pathways/", :to => "programs#index"
+  #pathways redirects
+  get '/pathways', to: redirect('/programs')
+  get '/pathways/healthcare', to: redirect('/programs?filterrific[with_subject_area]=health-sciences') 
+  get '/pathways/general_studies', to: redirect('/programs?filterrific[with_subject_area]=bachelor-of-general-studies')
+  get '/pathways/business', to: redirect('/programs?filterrific[with_subject_area]=business') 
+  get '/pathways/healthcare', to: redirect('/programs?filterrific[with_subject_area]=health-sciences')
+  get '/pathways/engineering', to: redirect('/programs?filterrific[with_subject_area]=science--technology')
+  get '/pathways/accounting', to: redirect('/programs?filterrific[with_subject_area]=business')
+  get '/pathways/computerscience_it', to: redirect('https://explore.suny.edu/programs?filterrific[with_subject_area]=computer-science')
+  get '/pathways/graduate_degrees', to: redirect('https://explore.suny.edu')
+  get '/pathways/security_studies', to: redirect('https://explore.suny.edu/programs?filterrific[with_subject_area]=criminal-justice-law')
+  get '/pathways/education', to: redirect('https://explore.suny.edu/programs?filterrific[with_subject_area]=education')
+  get '/pathways/psychology', to: redirect('https://explore.suny.edu/programs?filterrific[with_subject_area]=social-sciences')
+
+  
   get "programs/subject_areas", :to => "programs#subject_areas"
   get "programs/schools", :to => "programs#schools"
   get "programs/levels", :to => "programs#levels"
