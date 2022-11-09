@@ -40,6 +40,8 @@ get '/robots.:format', to: 'home#robots'
   get '/pathways/security_studies', to: redirect('https://explore.suny.edu/programs?filterrific[with_subject_area]=criminal-justice-law')
   get '/pathways/education', to: redirect('https://explore.suny.edu/programs?filterrific[with_subject_area]=education')
   get '/pathways/psychology', to: redirect('https://explore.suny.edu/programs?filterrific[with_subject_area]=social-sciences')
+  
+  get '/pathways/criminal_justice', to: redirect('https://explore.suny.edu/programs?filterrific[with_subject_area]=criminal-justice-law')
 
   
   get "programs/subject_areas", :to => "programs#subject_areas"
