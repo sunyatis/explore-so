@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.6.3'
+#ruby '2.6.3'
+ruby '3.1.3'
 #gem 'rails', '4.2.0'
 gem 'rails', '6.0.3'
 gem 'sass-rails', '~> 5.0'
@@ -11,7 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise' #user management
 gem 'activeadmin', github: 'activeadmin/activeadmin'  #admin dashboard
 gem 'cancancan' #user permissions
-gem "active_admin_import", github: "Fivell/active_admin_import"   #file import for active admin
+gem "active_admin_import" , github: "activeadmin-plugins/active_admin_import"   #file import for active admin
 gem 'paper_trail' #version and tracking
 gem 'filterrific' #filtering
 gem 'chardinjs-rails' #adds js and css
@@ -30,6 +31,11 @@ gem 'high_voltage', '~> 3.1'
 gem 'activeadmin_froala_editor'
 gem 'owlcarousel-rails'
 gem "mixitup-rails"
+gem 'psych', '< 4'
+gem 'webrick'
+gem 'net-smtp', require: false
+gem 'net-imap', require: false
+gem 'net-pop', require: false
 
 ###commnet
 
@@ -47,7 +53,7 @@ group :development do
   #gem 'spring-commands-rspec'
 end
 group :development, :test do
-  gem 'factory_girl_rails'
+  #gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
   gem 'sqlite3'

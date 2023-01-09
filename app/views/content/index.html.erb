@@ -197,7 +197,7 @@
 		<div id="owl-demo" class="owl-carousel owl-theme">
 		
 			<% @schools.each do |school| %>
-			 <div class="item"><%= link_to image_tag(school.image.url(:large), :align=> "center" ), "/programs?filterrific[with_school_id]=#{school.id}"  %></div>
+			 <div class="item"><%= link_to image_tag(school.image.url(:large), :align=> "center" ), '/programs?filterrific[with_school_id]=#{school.id}' %></div>
 	<%end%>
 
 		</div>
