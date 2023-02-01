@@ -32,6 +32,7 @@ gem 'activeadmin_froala_editor'
 gem 'owlcarousel-rails'
 gem "mixitup-rails"
 gem 'psych', '< 4'
+gem 'faker' #coookie warning
 gem 'webrick'
 gem 'net-smtp', require: false
 gem 'net-imap', require: false

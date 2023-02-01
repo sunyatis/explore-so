@@ -2,7 +2,9 @@
   partial: 'programs/rfi_modal',
   #locals: { programs: @programs }
 ) %>
-
+<% if cookies[:allow_cookies].blank? %>
+  <%= render 'layouts/cookies_bar' %>
+<% end %>
 <footer>
 	<div class="navigation nav-row">
 		<ul>

@@ -1497,3 +1497,74 @@ div.buttons-container button.btn-pressed {
  background: #1E6DAD;
  
 }
+
+//cookie bar
+
+.interior {
+  display: table-cell;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.m-content {
+  padding: 0.8em;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.m-content h5 {
+  margin-bottom: 0.3em !important;
+  color: #ffffff;
+  font-size: 1.8em;
+}
+.m-content p {
+  margin-bottom: 0.0em !important;
+  color: #ffffff;
+  font-size: 1.1em;
+}
+.m-content p a {
+  color: #00ddff !important;
+  border-bottom: 1px #00ddff solid;
+}
+
+.cookies-bar {
+  background: #1d1d1d;
+  opacity: 0.9;
+  text-align: center;
+  padding: 1.5em 0em;
+  border: 1px solid #fff;
+  border-radius: 0.2em;
+  box-shadow: 0px 0px 2px 1px #444444;
+  position: fixed;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%,-10%);
+  display: none;
+  z-index: 555555;
+  width: 83.3%;
+  display: block;
+
+  .btn {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  background-color: #c00 !important;
+  margin: 0.5em !important;
+  border: 1px #fff solid;
+  cursor: pointer;
+  color: #fff !important;
+  display: table;
+  border-radius: 0.4em;
+
+
+    &.accept:hover {
+      background-color: #047857;
+    }
+    &.reject:hover {
+      background-color: #B91C1C;
+    }
+  }
+
+
+}
