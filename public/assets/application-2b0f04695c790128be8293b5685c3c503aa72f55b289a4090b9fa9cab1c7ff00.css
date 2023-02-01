@@ -966,7 +966,7 @@ a {
 /* line 735, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .jumbotron {
   color: white;
-  background-image: url("/assets/suny-online-/images/SUNY_Online_Header_12_2000x500.jpg");
+  background-image: url(/assets/suny-online-/images/SUNY_Online_Header_12_2000x500.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -992,7 +992,7 @@ a {
 /* line 757, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
 .jumbotron h2 {
   display: inline-block !important;
-  width: 41.375rem !important;
+  /*width: 41.375rem !important;*/
   margin-bottom: 15px !important;
   text-align: center;
   font-size: 1.125rem !important;
@@ -2026,6 +2026,105 @@ dropdown-toggle {
     height: 500px !important;
   }
 }
+/* line 1482, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+.buttons-container {
+  margin-top: 50px;
+}
+
+/* line 1486, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+div.buttons-container button {
+  border: 1px solid #2C9B9B;
+  background: #33A7AC;
+  margin: 5px;
+  width: 100px;
+  padding: 0.7rem 0.625rem !important;
+  font-weight: 400 !important;
+  line-height: 1.25rem !important;
+  border-radius: 0px;
+}
+
+/* line 1496, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+div.buttons-container button.btn-pressed {
+  border: 1px solid #2E74B0;
+  background: #1E6DAD;
+}
+
+/* line 1504, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+.interior {
+  display: table-cell;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* line 1511, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+.m-content {
+  padding: 0.8em;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 1517, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+.m-content h5 {
+  margin-bottom: 0.3em !important;
+  color: #ffffff;
+  font-size: 1.8em;
+}
+
+/* line 1522, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+.m-content p {
+  margin-bottom: 0.0em !important;
+  color: #ffffff;
+  font-size: 1.1em;
+}
+
+/* line 1527, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+.m-content p a {
+  color: #00ddff !important;
+  border-bottom: 1px #00ddff solid;
+}
+
+/* line 1532, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+.cookies-bar {
+  background: #1d1d1d;
+  opacity: 0.9;
+  text-align: center;
+  padding: 1.5em 0em;
+  border: 1px solid #fff;
+  border-radius: 0.2em;
+  box-shadow: 0px 0px 2px 1px #444444;
+  position: fixed;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  display: none;
+  z-index: 555555;
+  width: 83.3%;
+  display: block;
+}
+/* line 1549, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+.cookies-bar .btn {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  background-color: #c00 !important;
+  margin: 0.5em !important;
+  border: 1px #fff solid;
+  cursor: pointer;
+  color: #fff !important;
+  display: table;
+  border-radius: 0.4em;
+}
+/* line 1562, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+.cookies-bar .btn.accept:hover {
+  background-color: #047857;
+}
+/* line 1565, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/application.css.scss */
+.cookies-bar .btn.reject:hover {
+  background-color: #B91C1C;
+}
 /* ribbon style */
 
 
@@ -2357,7 +2456,7 @@ dropdown-toggle {
   height: 3.125rem;
   width: 5.625rem;
   text-indent: -5000px;
-  background: url("//d2brwuimzb4ax4.cloudfront.net/sites/suny/logos/open-suny.png") no-repeat center center;
+  background: url(//d2brwuimzb4ax4.cloudfront.net/sites/suny/logos/open-suny.png) no-repeat center center;
   background-size: contain;
 }
 
@@ -3013,74 +3112,74 @@ body > header {
 
 /* line 592, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/programs.scss */
 .online-learning ul dl.fully-online:before {
-  background: url("/assets/100_online_blue.svg") no-repeat top left;
+  background: url(/assets/100_online_blue.svg) no-repeat top left;
   background-size: contain;
 }
 
 /* line 596, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/programs.scss */
 .online-learning ul dl.synchronous:before {
-  background: url("/assets/synchronous_blue.svg") no-repeat top left;
+  background: url(/assets/synchronous_blue.svg) no-repeat top left;
   background-size: contain;
 }
 
 /* line 600, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/programs.scss */
 .online-learning ul dl.asynchronus:before {
-  background: url("/assets/asynchronus_blue.svg") no-repeat top left;
+  background: url(/assets/asynchronus_blue.svg) no-repeat top left;
   background-size: contain;
 }
 
 /* line 604, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/programs.scss */
 .online-learning ul dl.same-faculty:before {
-  background: url("/assets/faculty_blue.svg") no-repeat top left;
+  background: url(/assets/faculty_blue.svg) no-repeat top left;
   background-size: contain;
 }
 
 /* line 608, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/programs.scss */
 .online-learning ul dl.concierge:before {
-  background: url("/assets/concierge_blue.svg") no-repeat top left;
+  background: url(/assets/concierge_blue.svg) no-repeat top left;
   background-size: contain;
 }
 
 /* line 612, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/programs.scss */
 .online-learning ul dl.experimental-learning:before {
-  background: url("/assets/experimental_learning_blue.svg") no-repeat top left;
+  background: url(/assets/experimental_learning_blue.svg) no-repeat top left;
   background-size: contain;
 }
 
 /* line 616, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/programs.scss */
 .online-learning ul dl.prior-learning:before {
-  background: url("/assets/prior_learning_assessment_blue.svg") no-repeat top left;
+  background: url(/assets/prior_learning_assessment_blue.svg) no-repeat top left;
   background-size: contain;
 }
 
 /* line 620, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/programs.scss */
 .online-learning ul dl.accelerated-degree:before {
-  background: url("/assets/accelerated_degree_blue.svg") no-repeat top left;
+  background: url(/assets/accelerated_degree_blue.svg) no-repeat top left;
   background-size: contain;
   fill: #00f;
 }
 
 /* line 625, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/programs.scss */
 .online-learning ul dl.tutoring:before {
-  background: url("/assets/tutoring_blue.svg") no-repeat top left;
+  background: url(/assets/tutoring_blue.svg) no-repeat top left;
   background-size: contain;
 }
 
 /* line 629, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/programs.scss */
 .online-learning ul dl.open-suny-plus:before {
-  background: url("/assets/Blue_Ribbon.png") no-repeat top left;
+  background: url(/assets/Blue_Ribbon.png) no-repeat top left;
   background-size: contain;
 }
 
 /* line 633, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/programs.scss */
 .online-learning ul dl.open-suny-plus-diploma:before {
-  background: url("/assets/open_suny_plus_blue.png") no-repeat top left;
+  background: url(/assets/open_suny_plus_blue.png) no-repeat top left;
   background-size: contain;
 }
 
 /* line 637, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/programs.scss */
 .online-learning ul dl.suny-online:before {
-  background: url("/assets/SO_logo.png") no-repeat top left;
+  background: url(/assets/SO_logo.png) no-repeat top left;
   background-size: contain;
 }
 
@@ -6183,37 +6282,37 @@ ul {
 }
 /* line 1103, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
 .online-learning ul dl.search-courses:before {
-  background: url("/assets/search_.png") no-repeat top left;
+  background: url(/assets/search_.png) no-repeat top left;
   background-size: contain;
 }
 
 /* line 1107, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
 .online-learning ul dl.select-courses:before {
-  background: url("/assets/select.png") no-repeat top left;
+  background: url(/assets/select.png) no-repeat top left;
   background-size: contain;
 }
 
 /* line 1111, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
 .online-learning ul dl.visit:before {
-  background: url("/assets/collegewebsite.png") no-repeat top left;
+  background: url(/assets/collegewebsite.png) no-repeat top left;
   background-size: contain;
 }
 
 /* line 1115, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
 .online-learning ul dl.contact-reg:before {
-  background: url("/assets/contact.png") no-repeat top left;
+  background: url(/assets/contact.png) no-repeat top left;
   background-size: contain;
 }
 
 /* line 1119, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
 .online-learning ul dl.transfer:before {
-  background: url("/assets/transfer_credit.png") no-repeat top left;
+  background: url(/assets/transfer_credit.png) no-repeat top left;
   background-size: contain;
 }
 
 /* line 1123, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/courses.scss */
 .online-learning ul dl.locate:before {
-  background: url("/assets/locate.png") no-repeat top left;
+  background: url(/assets/locate.png) no-repeat top left;
   background-size: contain;
 }
 
@@ -7764,13 +7863,13 @@ body > footer .ranku-bar a {
 
 /* line 500, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-carousel .prev-slide {
-  background: url(nav-icon.png) no-repeat scroll 0 0;
+  background: url(/nav-icon.png) no-repeat scroll 0 0;
   left: -33px;
 }
 
 /* line 504, /Users/ameliamanders/Documents/Code and Graphics/Code/explore-so-local-new-theme/app/assets/stylesheets/content.scss */
 .owl-carousel .next-slide {
-  background: url(nav-icon.png) no-repeat scroll -24px 0px;
+  background: url(/nav-icon.png) no-repeat scroll -24px 0px;
   right: -33px;
 }
 
@@ -9449,8 +9548,8 @@ th {
 @font-face {
   font-family: 'Glyphicons Halflings';
 
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url(/../fonts/glyphicons-halflings-regular.eot);
+  src: url(/../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'), url(/../fonts/glyphicons-halflings-regular.woff2) format('woff2'), url(/../fonts/glyphicons-halflings-regular.woff) format('woff'), url(/../fonts/glyphicons-halflings-regular.ttf) format('truetype'), url(/../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg');
 }
 .glyphicon {
   position: relative;
@@ -15924,7 +16023,7 @@ button.close {
   top: 50%;
   margin-left: -40px;
   margin-top: -40px;
-  background: url("owl.video.play.png") no-repeat;
+  background: url(/assets/owl.video.play-0436045686fddf10ccbbe2568e0cbffb457e7de7d43d1115c0056e81e97149ff.png) no-repeat;
   cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;
